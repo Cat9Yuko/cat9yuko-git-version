@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-3.4.1.js" ></script>
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+			$(document).ready(function () {
+				alert("Hello World");
+			});
+			/*wondow.onload与$(document).ready()的对比
+			 window.onload
+			 执行时机:
+			 	必须等待网页中所有的内容加载完毕后(包括图片)才能执行
+			 编写个数:
+			 	不能同时编写多个
+			 	以下代码无法正确执行:
+			 	window.onload = function(){
+			 		alert("test1")
+			 	};
+			 	window.onload = function(){
+			 		alert("test2")
+			 	};
+			 	结果只会输出test2
+			 简化写法:
+			 	无
+			 	
+			 $(document).ready()
+			 执行时机:
+			 	网页中所有DOM结构回执完毕之后就执行,可能DOM元素关联的东西并没有加载完
+			 编写个数:
+			 	能同时编写多个
+			 	以下代码正确执行:
+			 	$(document).ready(function(){
+			 		alert("Hello World!");
+			 	});
+			 	$(document).ready(function(){
+			 		alert("Hello again!");
+			 	});
+			 	结果两次都输出
+			 简化写法
+			 	$(function{
+			 		
+			 	});
+			 * */
+		</script>
+	</body>
+</html>

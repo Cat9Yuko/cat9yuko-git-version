@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑";
+}
+
+a {
+    text-decoration: none;
+}
+
+/* 清除浮动 */
+.clearfix {
+    *zoom: 1;/* ie6,ie7清除浮动 */
+}
+.clearfix::after,
+.clearfix::before {
+    content: "";
+    display: table;
+}
+.clearfix::after {
+    clear: both;
+}
+
+/* Banner */
+
+.banner {
+    width: 100%;
+    height: 500px;
+    background: url("20191225_banner.jpg") center center;
+    background-size: cover;
+    min-width: 1200px;
+}
+
+.center_block {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.section1 {
+    height: 360px;
+    margin-top: 80px;
+}
+
+.sec1l,
+.sec1r {
+    width: 600px;
+    float: left;
+}
+
+.pdlef40 {
+    padding-left: 40px;
+}
+.sec1r .title {
+    font-size: 26px;
+    color: #1b1b1b;
+}
+
+.sec1r .time {
+    font-size: 14px;
+    color: #333333;
+    margin: 30px 0;
+}
+
+.sec1r .abstract {
+    width: 560px;
+    height: 155px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 16px;
+    color: #1b1b1b;
+    line-height: 31px;
+    margin-bottom: 30px;
+}
+
+.more {
+    width: 204px;
+    height: 52px;
+    color: #ffffff;
+    font-size: 24px;
+    line-height: 52px;
+    text-align: center;
+    background-color: #3d49c6;
+}
+/* 标题在横线之中 */
+.order {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+.order .line {
+    display: inline-block;
+    width: 100px;
+    border-top: 2px solid #313131 ;
+}
+.order .txt {
+    font-size: 42px;
+    color: #1b1b1b;
+    vertical-align: -13px;
+    margin: 0 30px;
+}
+/* 标题在横线之中 end */
+
+.order_container {
+    position: relative;
+    height: 50px;
+    margin-top: 70px;
+    margin-bottom: 73px;
+}
+.sec2 {
+    width: 380px;
+    height: 466px;
+    float: left;
+    box-shadow: 0 0 10px lightgray;
+}
+.section2 .sec2:first-child {
+    margin-right: 30px;
+}
+.section2 .sec2:last-child {
+    float: right;
+}
+
+.bottom .title {
+    font-size: 26px;
+    color: #1b1b1b;
+    padding-top: 22px;
+    padding-left: 17px;
+}
+
+.bottom .time {
+    font-size: 14px;
+    color: #5b5e66;
+    padding-left: 17px;
+    margin-top: 16px;
+}
+
+.bottom .abstract {
+    font-size: 14px;
+    padding: 0 12px;
+    margin-top: 22px;
+    width: 356px;
+    height: 95px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.sec2:hover,
+.lost:hover {
+    background: #f1f1f1;
+    border-bottom: 5px solid #3d49c6;
+    box-sizing: border-box;
+}
+
+.lmore {
+    width: 204px;
+    margin: 0 auto;
+    margin-top: 38px;
+    margin-bottom: 78px;
+}
+
+.lost {
+    width: 808px;
+    height: 238px;
+    float: left;
+    box-shadow: 0 0  10px lightgray;
+}

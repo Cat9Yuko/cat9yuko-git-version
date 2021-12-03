@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>北京信息科技大学本科招生网</title>
+    <meta name="description" content="北京信息科技大学本科招生网">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/global.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="fixed">
+        <div class="blue-bg">
+            <div class="container">
+                <div class=" clearfix">
+                    <button type="button" class="navbar-toggle pull-left menu-switch" data-toggle="collapse"
+                        data-target="#appnav">
+                        <img class="on" src="img/app/app-nav.png" alt="" width="21px" height="19px">
+                        <img class="off" src="img/app/app-close.png" alt="" width="19px" height="19px">
+                    </button>
+                    <a href="#" class="navbar-brand"><img class="hidden-sm hidden-md hidden-lg" src="img/logo.svg"
+                            alt=""><img class="hidden-xs" src="img/logo.svg" alt="pclogo"></a>
+                    <!-- <a class="navbar-brand"><img class="hidden-xs logo2" src="img/logo-2.png" alt="pclogo"></a> -->
+                    <form action="">
+                        <!-- 电脑版搜索 -->
+                        <div class="hidden-xs pull-right pc-search">
+                            <div class=""><input type="text" placeholder="请输入搜索关键词"><input type="image"
+                                    src="img/searchicon.png"></div>
+                        </div>
+                        <div class="pull-right app-search visible-xs" data-toggle="modal" data-target="#search"><img
+                                src="img/app/app-searchicon.png" alt="" width="21px" height="21px"></div>
+                        <!-- 手机版搜索 -->
+                        <div class="modal fade" id="search" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal"
+                                            aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title" id="myModalLabel"></h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <input type="text" class="form-control" name="searchword"
+                                            placeholder="请输入关键词搜索">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary"
+                                            onclick="$('#appSearchform').submit()">搜索</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="white-bg">
+            <div class="container">
+                <nav id="appnav" class="collapse navbar-collapse">
+                    <ul class="nav nav-justified">
+                        <li class="dropdown"><a href="">网站首页</a></li>
+                        <li class="dropdown"><a href="">学校概况</a></li>
+                        <li class="dropdown"><a href="">政策咨询</a></li>
+                        <li class="dropdown"><a href="">报考指南</a></li>
+                        <li class="dropdown"><a href="">资料下载</a></li>
+                        <li class="dropdown"><a href="">最新动态</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        </div>
+        
+        <div class="banner">
+            <div class="slick-mod4">
+                <div class="slick-item">
+                    <img src="img/banner-01.png" class="hidden-sm hidden-md hidden-lg" alt="" width="100%">
+                    <div class="pcbanner hidden-xs" style="background: url(img/banner-01.png) center center no-repeat;"></div>
+                </div>
+                <div class="slick-item">
+                    <img src="img/banner-02.png" class="hidden-sm hidden-md hidden-lg" alt="" width="100%">
+                    <div class="pcbanner hidden-xs" style="background: url(img/banner-02.png) center center no-repeat;"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="main">
+        <section>
+            <div class="container-fluid hidden-sm hidden-md hidden-lg ">
+                <div class="slick-mod">
+                    <div class="slick-item">
+                        <div class="">
+                            <a href=""><img src="img/app/link1.png" alt="" width="70px">
+                                <p>招生计划</p>
+                            </a>
+                        </div>
+                        <div class="">
+                            <a href=""><img src="img/app/link2.png" alt="" width="70px">
+                                <p>历年分数</p>
+                            </a>
+                        </div>
+                        <div class="">
+                            <a href=""><img src="img/app/link3.png" alt="" width="70px">
+                                <p>录取查询</p>
+                            </a>
+                        </div>
+                        <div class="">
+                            <a href=""><img src="img/app/link4.png" alt="" width="70px">
+                                <p>录取进程</p>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="slick-item">
+                        <div class="">
+                            <a href=""><img src="img/app/link5.png" alt="" width="70px">
+                                <p>智能咨询</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bggray"></div>
+            </div>
+
+            <div class="container hidden-xs">
+                <div class="s1">
+                    <div class="link">
+                        <span><a href="" target="_blank"><img src="img/link1.svg" alt="">招生计划</a></span>
+                    </div>
+                    <div class="link">
+                        <span><a href=""><img src="img/link2.svg" alt="">历年分数</a></span>
+                    </div>
+                    <div class="link">
+                        <span><a href=""><img src="img/link3.svg" alt="">录取查询</a></span>
+                    </div>
+                    <div class="link">
+                        <span><a href=""><img src="img/link4.svg" alt="">录取进程</a></span>
+                    </div>
+                    <div class="link">
+                        <span><a href=""><img src="img/link5.svg" alt="">智能咨询</a></span>
+                    </div>
+                </div>
+            </div>
+            <div class="container s2">
+                <div class="clearfix padding30">
+                    <div class="">
+                        <div class="padding0 col-xs-12 col-md-6 col-sm-6 pull-right">
+                            <div class="more pull-left hidden-xs hidden-md hidden-sm"><a href="" class="more-pc">MORE</a></div>
+                            <div class="app-chnl hidden-md hidden-sm hidden-lg">
+                                <i></i><span class="act">最新动态</span><span>报考指南</span><a href=""
+                                    class="pull-right more-app">MORE</a>
+                            </div>
+                            <div class="slick-mod2">
+                                <div class="slick-item">
+                                    <div class="hidden-lg hidden-md hidden-sm"
+                                        style="background-image: url(img/demo.jpg);"></div><img class="hidden-xs"
+                                        src="img/demo.jpg" alt="">
+                                </div>
+                                <div class="slick-item">
+                                    <div class="hidden-lg hidden-md hidden-sm"
+                                        style="background-image: url(img/demo.jpg);"></div><img class="hidden-xs"
+                                        src="img/demo.jpg" alt="">
+                                </div>
+                            </div>
+
+                            <div class="app-list hidden-md hidden-sm hidden-lg">
+                                <ul class="act">
+                                    <li class="clearfix"><a href="">
+                                            <div class="date">
+                                                <div>26</div>
+                                                <div>2020/03</div>
+                                            </div>
+                                            <p class="text-nowrap">1邓云锋检查我省夏季高考外语听力考试工作</p>
+                                        </a></li>
+                                    <li class="clearfix"><a href="">
+                                            <div class="date">
+                                                <div>26</div>
+                                                <div>2020/03</div>
+                                            </div>
+                                            <p class="text-nowrap">邓云锋检查我省夏季高考外语听力考试工作</p>
+                                        </a></li>
+                                    <li class="clearfix"><a href="">
+                                            <div class="date">
+                                                <div>26</div>
+                                                <div>2020/03</div>
+                                            </div>
+                                            <p class="text-nowrap">邓云锋检查我省夏季高考外语听力考试工作</p>
+                                        </a></li>
+                                    <li class="clearfix"><a href="">
+                                            <div class="date">
+                                                <div>26</div>
+                                                <div>2020/03</div>
+                                            </div>
+                                            <p class="text-nowrap">邓云锋检查我省夏季高考外语听力考试工作</p>
+                                        </a></li>
+                                </ul>
+                                <ul>
+                                    <li class="clearfix"><a href="">
+                                            <div class="date">
+                                                <div>26</div>
+                                                <div>2020/03</div>
+                                            </div>
+                                            <p class="text-nowrap">2邓云锋检查我省夏季高考外语听力考试工作</p>
+                                        </a></li>
+                                    <li class="clearfix"><a href="">
+                                            <div class="date">
+                                                <div>26</div>
+                                                <div>2020/03</div>
+                                            </div>
+                                            <p class="text-nowrap">邓云锋检查我省夏季高考外语听力考试工作</p>
+                                        </a></li>
+                                    <li class="clearfix"><a href="">
+                                            <div class="date">
+                                                <div>26</div>
+                                                <div>2020/03</div>
+                                            </div>
+                                            <p class="text-nowrap">邓云锋检查我省夏季高考外语听力考试工作</p>
+                                        </a></li>
+                                    <li class="clearfix"><a href="">
+                                            <div class="date">
+                                                <div>26</div>
+                                                <div>2020/03</div>
+                                            </div>
+                                            <p class="text-nowrap">邓云锋检查我省夏季高考外语听力考试工作</p>
+                                        </a></li>
+                                </ul>
+                            </div>
+                            <div class="bggray visible-xs"></div>
+                        </div>
+                        <div class="pull-left hidden-xs col-md-6 col-sm-6">
+                            <div class="chnl-tabs">
+                                <a href="#1" class="act">最新动态</a><span>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;</span><a
+                                    href="#2">报考指南</a>
+                            </div>
+                            <ul class="list act">
+                                <li><a href=""><span>2020-08-10</span>1北京信息科技大学2020高招录取时间表及录取结果查询方式</a></li>
+                                <li><a href=""><span>2020-08-10</span>我校在全国高校机器人竞赛指数排行中名列第一</a></li>
+                                <li><a href=""><span>2020-08-10</span>北京信息科技大学2020高招录取时间表及录取结果查询方式</a></li>
+                                <li><a href=""><span>2020-08-10</span>北京信息科技大学2020高招录取时间表及录取结果查询方式</a></li>
+                            </ul>
+                            <ul class="list">
+                                <li><a href=""><span>2020-08-10</span>2北京信息科技大学2020高招录取时间表及录取结果查询方式</a></li>
+                                <li><a href=""><span>2020-08-10</span>北京信息科技大学2020高招录取时间表及录取结果查询方式</a></li>
+                                <li><a href=""><span>2020-08-10</span>北京信息科技大学2020高招录取时间表及录取结果查询方式</a></li>
+                                <li><a href=""><span>2020-08-10</span>北京信息科技大学2020高招录取时间表及录取结果查询方式</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container s3 hidden-xs hidden-sm">
+                <div class="s3-t">
+                    <div class="syzl s-1"><div class="sbg"></div><div class="sword"><a href="">学院纵览</a></div></div>
+                    <div class="syzl sanj"></div>
+                    <div class="syzl s-2"><div class="syword"><a href="">机电工程学院</a></div><div class="sybg"></div><div class="syfilter"></div></div>
+                    <div class="syzl s-3"><div class="syword"><a href="">仪器科学与光电工程学院 </a></div><div class="sybg"></div><div class="syfilter"></div></div>
+                    <div class="syzl s-4"><div class="syword"><a href="">自动化学院</a></div><div class="sybg"></div><div class="syfilter"></div></div>
+                    <div class="syzl s-5"><div class="syword"><a href="">信息与通信工程学院</a></div><div class="sybg"></div><div class="syfilter"></div></div>
+                    <div class="syzl s-6"><div class="syword"><a href="">计算机学院</a></div><div class="sybg"></div><div class="syfilter"></div></div>
+                    <div class="syzl s-7"><div class="syword"><a href="">经济管理学院</a></div><div class="sybg"></div><div class="syfilter"></div></div>
+
+                    <div class="syzl s-8"><div class="syword"><a href="">经济管理学院</a></div><div class="sybg"></div><div class="syfilter"></div></div>
+                    <div class="syzl s-9"><div class="syword"><a href="">经济管理学院</a></div><div class="sybg"></div><div class="syfilter"></div></div>
+                    <div class="syzl s-10"><div class="syword"><a href="">经济管理学院</a></div><div class="sybg"></div><div class="syfilter"></div></div>
+                    <div class="syzl s-11"><div class="syword"><a href="">经济管理学院</a></div><div class="sybg"></div><div class="syfilter"></div></div>
+                </div>
+                <div class="s3-b"></div>
+            </div>
+
+            <div class="container visible-xs visible-sm">
+                <div class="row">
+                    <div class="app-chnl nobt hidden-md hidden-lg">
+                        <i></i><span class="act">院系纵览</span><a href="" class="pull-right">MORE</a>
+                    </div> 
+                    <div class="appxy">
+                        <div class="slick-mod3">
+                            <div class="slick-item"><a href=""><img src="img/app/xyzl1.png" alt=""><p>机电工程学院</p></a></div>
+                            <div class="slick-item"><img src="img/app/xyzl2.png" alt=""><p>仪器科学与光电 …</p></div>
+                            <div class="slick-item"><img src="img/app/xyzl3.png" alt=""><p>信息与通信工程…</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bggray hidden-sm"></div>
+            </div>
+        </section>
+        <section>
+            <div class="container s4">
+                <div class="chnl-tabs hidden-xs">
+                    <a href="" class="act">校园视频</a><a href="" class="pull-right more2">MORE</a>
+                </div>
+                <div class="video hidden-sm hidden-xs clearfix">
+                    <div class="vfl pull-left clearfix">
+                        <div class="vid v1" ><a href=""><div class="vid-bg" style="background-image: url(img/demo-video3.png);"></div><div class="vid-btn"><img src="img/video-icon.png" alt=""></div></a></div>
+                        <div class="vid v2" ><a href=""><div class="vid-bg" style="background-image: url(img/demo-video.png);"></div><div class="vid-btn"><img src="img/video-icon.png" alt=""></div></a></div>
+                        <div class="vid v3" ><a href=""><div class="vid-bg" style="background-image: url(img/demo-video4.png);"></div><div class="vid-btn"><img src="img/video-icon.png" alt=""></div></a></div>
+                        <div class="vid v4" ><a href=""><div class="vid-bg" style="background-image: url(img/demo-video5.png);"></div><div class="vid-btn"><img src="img/video-icon.png" alt=""></div></a></div>
+                    </div>
+                    <div class="vfr pull-right clearfix">
+                        <div class="vid v5"><a href=""><div class="vid-bg" style="background-image: url(img/demo-video2.png);"></div><div class="vid-btn"><img src="img/video-icon.png" alt=""></div></a></div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 visible-xs visible-sm app-video">
+                    <div class="app-chnl nobt hidden-md hidden-sm hidden-lg">
+                        <i></i><span class="act">校园视频</span><a href="" class="pull-right">MORE</a>
+                    </div> 
+                    <div class="slick-mod2">
+                        <div class="slick-item">
+                            <div class=""
+                                style="background-image: url();">
+                            <video src="img/video/bg.mp4" width="100%" height="100%" class="vid1"></video>
+                            <div class="video-play-btn"><img src="img/app/app-videoplay-icon.png" alt=""></div>
+                            </div>
+                        </div>
+                        <div class="slick-item">
+                            <div class=""
+                                style="background-image: url();">
+                            <video src="img/video/bg.mp4" width="100%" height="100%" class="vid1"></video>
+                            <div class="video-play-btn"><img src="img/app/app-videoplay-icon.png" alt=""></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bggray"></div>
+                </div>
+
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="s4 s5">
+                    <div class="chnl-tabs hidden-xs">
+                        <a href="" class="act">校园风采</a><a href="" class="pull-right more2">MORE</a>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="app-chnl nobt hidden-md hidden-sm hidden-lg">
+                                <i></i><span class="act">校园风采</span><a href="" class="pull-right">MORE</a>
+                            </div> 
+                            <ul class="fc-list">
+                                <li><a href="">
+                                    <p class="hidden-xs"><span>2020-10-01</span></p>
+                                    <p>我校毛江一等四位老师荣获“2020年北京市高校毕业生就业工作先我校毛江一等四位老师荣获“2020年北京市高校毕业生就业工作先</p>
+                                    <p class="app-time visible-xs"><i class="aptime-icon">2019-11-11</i><i class="aptime-icon view-icon">110</i></p>
+                                </a></li>
+                                <li><a href="">
+                                    <p class="hidden-xs"><span>2020-10-01</span></p>
+                                    <p>我校毛江一等四位老师荣获“2020年北京市高校毕业生就业工作先我校毛江一等四位老师荣获“2020年北京市高校毕业生就业工作先</p>
+                                    <p class="app-time visible-xs"><i class="aptime-icon">2019-11-11</i><i class="aptime-icon view-icon">110</i></p>
+                                </a></li>
+                                <li><a href="">
+                                    <p class="hidden-xs"><span>2020-10-01</span></p>
+                                    <p>我校毛江一等四位老师荣获“2020年北京市高校毕业生就业工作先我校毛江一等四位老师荣获“2020年北京市高校毕业生就业工作先</p>
+                                    <p class="app-time visible-xs"><i class="aptime-icon">2019-11-11</i><i class="aptime-icon view-icon">110</i></p>
+                                </a></li>
+                            </ul>
+                            <div class="bggray visible-xs"></div>
+                        </div>
+                        <div class="col-md-6 hidden-xs">
+                            <div class="row">
+                                <div class="fc-r pull-left">
+                                    <div class="fc-img orangebg">
+                                        <img src="img/demo5.jpg" alt="">
+                                        <div class="padding">
+                                            <p><a href="">2020年少数民族预科生录取通知书EMS快递单号</a></p>
+                                            <p>2020-10-10</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="fc-r pull-right">
+                                    <div class="fc-img bluebg">
+                                        <img src="img/demo6.jpg" alt="">
+                                        <div class="padding">
+                                            <p><a href="">2020年少数民族预科生录取通知书EMS快递单号</a></p>
+                                            <p>2020-10-10</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <!-- 手机版footer -->
+        <div class="container text-center afooter hidden-sm hidden-md hidden-lg">
+            <p>电话：010-82426126<br>邮箱: 提供一个招办邮箱<br>北京市海淀区清河小营东路12号</p>
+        </div>
+        <!-- 电脑版footer -->
+        <div class="container hidden-xs fqrcode">
+            <div class="row">
+                <div class="pull-left f1">
+                    <h4>&nbsp;</h4>
+                    <p><img src="img/flogo.svg" alt="" width="199px"></p>
+                </div>
+                <div class="pull-left f2">
+                    <h4>相关链接</h4>
+                    <div class="br">
+                        <p><a href="">辽宁招生考试之窗</a></p>
+                        <p><a href="">中国教育科研计算机网</a></p>
+                        <p><a href="">教育部阳光高考平台</a></p>
+                        <p><a href="">中华人民共和国教育部 </a></p>
+                    </div>
+                </div>
+                <div class="pull-left f3">
+                    <h4>联系方式</h4>
+                    <div class="br">
+                        <p>电话：010-82426126</p>
+                        <p>传真：010-62914528</p>
+                        <p>邮箱：可提供一个招办邮箱</p>
+                        <p>地址：北京市海淀区清河小营东路12号</p>
+                    </div>
+                </div>
+                <div class="pull-left f4">
+                    <h4>&nbsp;</h4>
+                    <div class="br">
+                        <div class="pull-left">
+                            <img src="img/wx-qrcode.png" alt="">
+                            <p>微信</p>
+                        </div>
+                        <div class="pull-right">
+                            <img src="img/tt-qrcode.png" alt="">
+                            <p>头条</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="pull-left f4">
+                    <h4>&nbsp;</h4>
+                    <div class="br no-brl">
+                        <div class="pull-left">
+                            <img src="img/ks-qrcode.png" alt="">
+                            <p>快手</p>
+                        </div>
+                        <div class="pull-right">
+                            <img src="img/dy-qrcode.png" alt="">
+                            <p>抖音</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="fcopyright hidden-xs">
+            <p>COPYRIGHT @2005-2012 BISTU EDU.CN 北京信息科技大学版权所有</p>
+        </div>
+    </footer>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/common.js"></script>
+    <script>
+        $(".menu-switch").on("click", function () {
+            $(this).toggleClass("act");
+            // $(".main").toggleClass("blur");
+            // $(".footer").toggleClass("blur");
+        })
+        $(".s2 .chnl-tabs a").hover(function () {
+            $(this).addClass("act").siblings().removeClass("act");
+            console.log($(this).attr("href"))
+            $(".more-pc").attr("href", $(this).attr("href"));
+            $(".list").eq($(this).index(".chnl-tabs a")).addClass("act").siblings().removeClass("act");
+        })
+        $(".app-chnl span").click(function () {
+            // console.log($(this).index());
+            $(this).addClass("act").siblings().removeClass("act");
+            $(".more-app").attr("href", $(this).attr("data-href"));
+            $(".app-list ul").eq($(this).index(".app-chnl span")).addClass("act").siblings().removeClass("act");
+        })
+        $(document).ready(function () {
+            $(".slick-mod").slick({
+                dots: true,
+                autoplay: false
+            });
+
+            $(".slick-mod2").slick({
+                dots: false,
+                autoplay: false,
+                arrows: false,
+                infinite: false
+            });
+
+            $('.slick-mod3').slick({
+                dots: false,
+                infinite: false,
+                speed: 300,
+                slidesToShow: 1,
+                centerMode: false,
+                variableWidth: true
+            });
+
+            $(".slick-mod4").slick({
+                dots: false,
+                autoplay: true,
+                autoplaySpeed: 5000
+            });
+        })
+        
+        // var video = document.getElementsByClassName("vid1");
+        
+        // $(".video-play-btn").click(function (e) {
+        //     e.preventDefault();
+        //     video[0].play();
+        //     console.log('object');
+        //     console.log($(this).index());
+        //     $(this).hide();
+        //     $(this).parent().find(".vid1").attr("controls",true);
+            
+        // });
+    </script>
+</body>
+
+</html>

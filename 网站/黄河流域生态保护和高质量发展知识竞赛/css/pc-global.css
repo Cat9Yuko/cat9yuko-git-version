@@ -1,0 +1,228 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "微软雅黑";
+}
+/* user style */
+/* idnex */
+.index {
+  background: url(../img/hhlyzsjs-202109-indexbgnoword.jpg) center center
+    no-repeat;
+  height: 1088px;
+  background-size: cover;
+}
+.jsword {
+  width: 1417px;
+  height: 368px;
+  background: url(../img/hhlyzsjs-202109-word.png) center center no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+}
+.desc {
+  width: 1379px;
+  height: 508px;
+  margin: 0 auto;
+  margin-top: 66px;
+}
+/* register */
+
+.index.register {
+  background: url(../img/hhlyzsjs-202109-registerbgnoword.jpg) center center
+    no-repeat;
+  height: 1203px;
+  background-size: cover;
+}
+
+.register .desc {
+  width: 1298px;
+  height: 669px;
+  background: #ffffff;
+  border-radius: 10px;
+}
+.login .desc,
+.score .desc {
+  width: 1298px;
+  height: 468px;
+  background: #ffffff;
+  border-radius: 10px;
+}
+.answer .desc {
+  width: 1298px;
+  background: #ffffff;
+  border-radius: 10px;
+  height: auto;
+  margin-top: -400px;
+  padding: 48px 55px;
+  box-sizing: border-box;
+}
+
+/*register*/
+.register {
+  width: 100%;
+  height: 1191px;
+  background: url(../img/sfg_2020_register.jpg) center center;
+  background-size: cover;
+}
+
+.register .box {
+  height: 685px;
+}
+.register .bt {
+  height: 520px;
+  width: 100%;
+}
+.register .welcom,
+.login .welcom {
+  font-size: 24px;
+  color: #034c91;
+  text-indent: 75px;
+  padding-top: 24px;
+}
+
+.register input,
+.register select,
+.login input {
+  border: 1px solid #00b7ee;
+  border-radius: 5px;
+  outline: none;
+  font-size: 20px;
+}
+.register select {
+  float: left;
+  width: 100%;
+  height: 50px;
+}
+
+.register span,
+.login span {
+  display: block;
+  width: 201px;
+  height: 51px;
+  background: #00b7ee;
+  color: #ffffff;
+  font-size: 24px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.zhuyi-center {
+  width: 840px;
+  height: 50px;
+  text-indent: 2rem;
+  margin: 0 auto;
+  color: #034c91;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+.sub-tij,
+.sub-tij button,
+.sub-dl button {
+  width: 165px;
+  height: 50px;
+  background: #4accfc;
+  border-radius: 5px;
+  font-size: 24px;
+  color: #014b7f;
+  border: none;
+  /* cursor: pointer; */
+}
+.sub-tij {
+  margin: 0 auto;
+}
+
+.index.login,
+.index.score {
+  height: 1034px;
+  background: url(../img/hhlyzsjs-202109-loginbgnoword.jpg) center center
+    no-repeat;
+  background-size: cover;
+}
+
+.banner {
+  background: url(../img/hhlyzsjs-202109-answerbgnoword.jpg) center center;
+  height: 854px;
+  background-size: cover;
+}
+.footer.gray {
+  background: #cbcbcb;
+}
+
+.answer {
+  width: 100%;
+  /*min-height: 1780px;*/
+  /*background: url(../img/sfg_2020_answer_bg.jpg) center center no-repeat;
+	background-size: cover;*/
+}
+.answer .bt {
+  width: 100%;
+  height: 501px;
+  /* background: url(../img/sfg_2020_answer_bg.jpg) center center; */
+  background-size: cover;
+}
+.answer .box {
+  width: 100%;
+  height: auto;
+  /* background: #84cff0; */
+  padding-bottom: 25px;
+}
+
+.answer_t {
+  font-size: 24px;
+  /* color: #023f6a; */
+}
+.xuanxiang {
+  margin: 20px 0 45px 0;
+  font-size: 16px;
+}
+.xx_ul li {
+  line-height: 30px;
+  list-style: none;
+}
+
+.answer input[type="radio"],
+.answer input[type="checkbox"] {
+  margin-right: 5px;
+}
+.border {
+  height: 2px;
+  background: #e3e3e3;
+  margin-bottom: 30px;
+}
+
+.score2 {
+  width: 913px;
+  height: 166px;
+  background: url(../img/hhlyzsjs-202109-scorebg.png) center center;
+  background-size: cover;
+  margin: 0 auto;
+}
+
+.score .desc {
+  padding-top: 100px;
+}
+.twi {
+  width: 420px;
+  height: 50px;
+  margin-top: 50px;
+  background: none;
+}
+
+
+.score2 {
+	width: 913px;
+	height: 165px;
+	margin: 0 auto;
+	color: #FFFFFF;
+	font-size: 30px;
+	text-align: center;
+	line-height: 165px;
+}
+.score2 .fenshu {
+	font-size: 50px;
+}
+.closepage {
+	float: right;
+}

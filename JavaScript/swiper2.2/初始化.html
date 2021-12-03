@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link ignoreapd="1" rel="stylesheet" type="text/css" href="images/idangerous.swiper-2-x.css" />
+		<script ignoreapd="1" src="images/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script ignoreapd="1" src="images/idangerous.swiper-2-x.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="images/banner-style-of-jieyueyongshui.css"/>
+	</head>
+
+	<body>
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide"><a href="#"><img src="images/jyysdt-banner.jpg" /></a></div>
+				<div class="swiper-slide"><a href="#"><img src="images/jyysdt-banner.jpg" /></a></div>
+			</div>
+			<div class="pagination"></div>
+		</div>
+		<script>
+			var mySwiper = new Swiper('.swiper-container', {
+				pagination: '.pagination',
+				paginationClickable :true,
+				autoplay: 3000, //可选选项，自动滑动
+				loop: true, //可选选项，开启循环
+			})
+		</script>
+	</body>
+
+</html>

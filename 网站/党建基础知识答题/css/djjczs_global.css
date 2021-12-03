@@ -1,0 +1,214 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "微软雅黑";
+}
+body {
+  height: 100vh;
+  background: url(../img/djjczsdt_202007_bg.jpg) center center;
+  background-size: cover;
+}
+img {
+  border: none;
+  display: block;
+}
+a {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-user-select: none;
+  -moz-user-focus: none;
+  -moz-user-select: none;
+  text-decoration: none;
+}
+label {
+  font-weight: normal;
+}
+li {
+  list-style: none;
+}
+.index {
+  width: 100%;
+}
+
+.index .bt {
+  height: 100%;
+}
+
+.index .box {
+  position: relative;
+  height: 50px;
+}
+.index .box img {
+  position: absolute;
+}
+.btn_g {
+  position: absolute;
+  width: 100%;
+}
+.btn_g a {
+  display: block;
+  width: 50%;
+  height: 50px;
+  float: left;
+}
+
+.login .bt {
+  height: 55vh;
+}
+.login .tips {
+  font-size: 14.5px;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+/*register login*/
+.register .bt {
+    height: 50vh;
+}
+.register option {
+  /*font-size: 10px;*/
+  width: 100%;
+}
+.register .box,
+.login .box {
+  /* background: #00a0e9; */
+  padding-bottom: 25px;
+}
+
+.login-app li {
+  list-style: none;
+  margin-bottom: 15px;
+}
+
+.login-app input {
+  border: 1px solid #00b7ee;
+}
+
+.login-app .row {
+  padding-left: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.login-app .qianzui {
+  margin: 0 auto;
+  text-align: center;
+  height: 30px;
+  line-height: 2;
+  font-size: 15px;
+  border-radius: 5px;
+  background: #fff;
+  color: #a80404;
+  font-weight: bold;
+}
+
+.login-app .houzhui input,
+.login-app .houzhui select {
+  width: 100%;
+  height: 30px;
+  border-radius: 5px;
+  outline: none;
+}
+
+.login-content {
+  padding-top: 20px;
+}
+
+.hei2-btn button,
+.hei2-btn a {
+  display: inline-block;
+  text-align: center;
+  width: 96.5px;
+  height: 29px;
+  color: #a80404;
+  background: #f6cd69;
+  border: none;
+  border-radius: 5px;
+  line-height: 29px;
+  outline: none;
+  font-weight: bold;
+}
+
+select {
+  border: 1px solid #00b7ee;
+  width: 98%;
+}
+.login .box {
+  overflow: auto;
+}
+
+/*answer*/
+.answer .box {
+  padding: 0 20px;
+  background: url(../img/djjczsdt_202007_ansbg.jpg);
+  /* background-size: cover; */
+  padding-bottom: 25px;
+  color: #ffffff;
+}
+
+.answer_t {
+  font-size: 18px;
+  font-weight: bold;
+  color: #f6cd69;
+}
+.timu {
+  line-height: 1.8;
+}
+.xuanxiang {
+  margin: 16px 0;
+  font-size: 18px;
+  color: #ffffff;
+}
+.xx_ul li {
+  line-height: 30px;
+}
+.xx_ul input {
+  margin-right: 5px;
+}
+/*score*/
+.score .bt {
+    height: 60vh;
+}
+.score .box {
+  /* height: 300px; */
+  /* background: #00a1e9; */
+  background-size: 100% 100%;
+  margin: 0 auto;
+  color: #ffffff;
+  font-size: 23px;
+  text-align: center;
+}
+.twi {
+  width: 100%;
+  height: 94px;
+  background: #d0ecef;
+}
+.twi .center-block {
+  padding-top: 33px;
+  width: 250px;
+}
+.closepage {
+  float: right;
+}
+
+.footer {
+  width: 100%;
+  padding: 0 -20px;
+}
+.pos {
+  position: absolute;
+  bottom: 0;
+}
+
+.color button {
+  background: #bbe2f1;
+  color: #05568f;
+}
+
+@media screen and (max-width: 320px) {
+    .login .bt {
+        height: 50vh;
+      }
+    #auth_code {
+        width: 80px!important;
+    }
+}

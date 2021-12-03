@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html ng-app="">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/angular.js" ></script>
+	</head>
+	<body ng-init="arr=[{user:'blue',age:23},{user:'blue',age:23},{user:'red',age:33},{user:'zhangsan',age:12}]">
+		<!--AngularJS出于性能的考虑使用$index来解决问题-->
+		<ul>
+			<li ng-repeat="json in arr">姓名:{{json.user}},年龄:{{json.age}}</li>
+		</ul>
+	</body>
+</html>

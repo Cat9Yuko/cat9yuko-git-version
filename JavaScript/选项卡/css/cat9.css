@@ -1,0 +1,38 @@
+
+/*给div加边框*/
+#tab{
+	border: 2px solid;
+	width: 400px;
+	margin: 0 auto;/*居中设置*/
+}
+#tab h3{
+	border: 1px solid #cccccc;
+}
+#tab div{
+	border: 1px solid #CCCCCC;
+	clear: both;
+	height: 100px;
+	font-size: 14px;
+	padding: 20px 0px 0px 20px;
+	display: none;/*隐藏div*/
+}
+/**/
+
+#tab h3{
+	margin: 2px 1px 0px 1px;
+	padding: 0px;
+	font-size: 14px;
+	float: left;
+	right: 5px;
+	width: 60px;
+	height: 24px;
+	line-height: 24px;
+	text-align: center;
+}
+#tab div.content{
+	display: block;
+	background: paleturquoise;
+}
+#tab h3.active{
+	background: #ccaacc;
+}

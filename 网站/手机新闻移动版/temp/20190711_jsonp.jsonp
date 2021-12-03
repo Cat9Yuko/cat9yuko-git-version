@@ -1,0 +1,26 @@
+mobileListHandler({
+    "msgCode": 2,
+    "msg": {
+    "chnlid": "<TRS_Channel id='owner' Field='channelid'>7047</TRS_Channel>",
+    "chnlname": "<TRS_Channel id='owner' Field='chnldesc' autolink='false'>人才培养</TRS_Channel>",
+    "chnldoccount": "<TRS_CONDITION REFERENCE='学校要闻~文化活动' CONDITION='@CHNLDESC' OPERATOR='contain' NOT='false'>1000</TRS_CONDITION><TRS_CONDITION REFERENCE='学校要闻~文化活动' CONDITION='@CHNLDESC' OPERATOR='contain' NOT='true'><TRS_Channel Field='_DataCount'>123123</TRS_Channel></TRS_CONDITION>",
+    "doclist": [
+        <TRS_Documents ID="owner" PAGESIZE="5" startpos=5><TRS_Record NUM='1'>{
+        "docid": "<TRS_Document FIELD='docid'>12323</TRS_Document>",
+        "doctitle": "<TRS_Document FIELD='doctitle' AUTOLINK='false' CODEFILTERED='true'>标题</TRS_Document>",
+        "docpubtime": "<TRS_DOCUMENT FIELD='docreltime' DATEFORMAT='yyyy-MM-dd HH:mm'>2015-12-15 12:13</TRS_DOCUMENT>",
+  "docsource": "<TRS_Document FIELD='docsource'>来源</TRS_Document>",
+        "docpuburl": "<TRS_Document FIELD='_RecUrl' UrlisABS='true'>http://newsfeed.bistu.edu.cn/ibistu/xxyw/201811/t20181130_3238.json</TRS_Document>",
+  "docpic": "<TRS_Appendix mode='pic' INDEX='0' field='_RecUrl' UrlisABS='true' upload='true'>http://newsfeed.bistu.edu.cn/ibistu/xxyw/201811/wo123213123.jpg</TRS_Appendix>"
+        }</TRS_Record><TRS_Record NUM='9'>,   
+        {
+        "docid": "<TRS_Document FIELD='docid'>12323</TRS_Document>",
+        "doctitle": "<TRS_Document FIELD='doctitle' AUTOLINK='false' CODEFILTERED='true'>标题</TRS_Document>",
+        "docpubtime": "<TRS_DOCUMENT FIELD='docreltime' DATEFORMAT='yyyy-MM-dd HH:mm'>2015-12-15 12:13</TRS_DOCUMENT>",
+        "docpuburl": "<TRS_Document FIELD='_RecUrl' UrlisABS='true'>http://newsfeed.bistu.edu.cn/ibistu/xxyw/201811/t20181130_3238.json</TRS_Document>",
+        "docsource": "<TRS_Document FIELD='docsource'>来源</TRS_Document>",
+  "docpic": "<TRS_Appendix mode='pic' INDEX='0' field='_RecUrl' UrlisABS='true' upload='true'>http://newsfeed.bistu.edu.cn/ibistu/xxyw/201811/wo123213123.jpg</TRS_Appendix>"
+        }</TRS_Record></TRS_Documents>
+    ]
+    }
+})

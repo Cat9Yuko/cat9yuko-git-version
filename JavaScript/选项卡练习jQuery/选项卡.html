@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.xxk {
+				width: 347px;
+				height: 179px;
+
+				line-height: 1.5;
+				border: 1px solid lightgray;
+			}
+			.atitle {
+				font-weight: bold;
+				
+				border-bottom: 1px solid lightgray;
+				
+			}
+			.atitle.name {
+				float: left;
+				width: 80%;
+			}
+			.atitle.site {
+				float: left;
+				width: 20%;
+			}
+			li {
+				list-style: none;
+				
+			}
+			a {text-decoration: none;}
+			.topa {
+				overflow: hidden;
+				background: #E0E0E0;
+			}
+			.con {
+				float: left;
+				width: 100%;
+				display: none;
+			}
+			.p8 {
+				line-height: 30px;
+				float: left;
+				width: 80%;
+			}
+			.p2{
+				line-height: 30px;
+				float: left;
+				width: 20%;
+			}
+			
+			.con li {
+				overflow: hidden;
+				border-bottom: 1px solid lightgray;
+			}
+			.yy {
+				display: inline-block;
+				color: #000;
+				cursor: pointer;
+				width: 25px;
+				height: 25px;
+				text-align: center;
+				border: 1px solid lightgray;
+			}
+			.yy.cur {
+				background: orange;
+				color: #FFFFFF;
+			}
+			.con.active {
+				display: block;
+			}
+			.yema {
+				margin-top: 5px;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div class="xxk">
+			<div class="topa"><div class="atitle name">名称</div>
+			<div class="atitle site">座位</div>
+			</div>
+			<ul class="con active">
+				<li><div class="p8">401电子技术实验室（1）</div><div class="p2">42/42</div></li>
+				<li><div class="p8">407综合电子技术实验室</div><div class="p2">40/40</div></li>
+				<li><div class="p8">415sopc技术实验室</div><div class="p2">36/36</div></li>
+				<li><div class="p8">406电子技术实验室（2）</div><div class="p2">40/40</div></li>
+				<li><div class="p8">414EDA实验室</div><div class="p2">36/36</div></li>
+			</ul>
+			<ul class="con">
+				<li><div class="p8">104 电子技术实验室（2）</div><div class="p2">35/35</div></li>
+				<li><div class="p8">103电 路 实验室</div><div class="p2">40/40</div></li>
+				<li><div class="p8">102综合电子技术实验室</div><div class="p2">35/35</div></li>
+				<li><div class="p8">101电子技术实验室（1）</div><div class="p2">35/35</div></li>
+				<li><div class="p8">105工程训练实验室</div><div class="p2">20/20</div></li>
+			</ul>
+	</div>
+	<div class="yema">
+				<span class="yy cur">1</span>
+				<span class="yy">2</span>
+			</div>
+		
+		<script src="js/jquery-1.8.3.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			
+			$(function () {
+				$(".yy").hover(function () {
+					$(this).addClass("cur");
+					$(this).siblings().removeClass("cur")
+					var ind = $(this).index();
+					$(".con").eq(ind).addClass("active").siblings().removeClass("active");
+				})
+			})
+			
+		</script>
+	</body>
+</html>

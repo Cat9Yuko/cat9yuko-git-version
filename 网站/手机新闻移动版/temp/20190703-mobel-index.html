@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="../site8/jquery1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="../site8/swiper.min.css" />
+		<link rel="stylesheet" type="text/css" href="../site8/20190703_base.css" />
+		<script src="../site8/201900703_idangerous.swiper2.7.6.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			
+			$(function () {
+				$(".search-icon").click(function () {
+					$(".search-input").toggle();
+					$(".title").toggle();
+                                        $(".search-icon>img").toggle();
+				});
+			});
+		</script>
+                <style type="text/css">
+	a{
+		text-decoration: none;
+		color: black;
+                
+		font-size:16px ;
+	}
+
+.review-imag{
+				padding: 10px;
+				height: 100%;
+				width: 100%;}
+
+
+.fy {
+text-align: center;
+	width:200px;
+	height: 30px;
+	margin:0 auto;
+	
+}
+.fy .pages a {
+	color: #333;
+	padding: 3px 8px;
+	border: 1px solid #d7d7d7;
+	margin-right: 5px;
+*display:inline-block;
+}
+.fy .pages a.on, .fy .pages a:hover {
+	background: #3582c4;
+	color: #fff;
+}
+.fy a {
+	color: #333;
+	
+	text-decoration: none;
+}
+.fy a:hover {
+	color: #3582c4;
+}
+.fy span, .fy button {
+	margin: 0 3px;
+}
+.fy button {
+	background: #3582c4;
+	border: 1px solid #d7d7d7;
+	padding: 3px 12px;
+*padding:2px 12px 0;
+	_padding: 6px 12px 0;
+	color: #fff;
+}
+.fy input {
+	width: 36px;
+	padding: 3px 0;
+	border: 1px solid #333;
+	text-indent: 4px;
+	margin: 0 4px;
+}
+</style>
+		
+	</head>
+
+	<body>
+		<header>
+			<div class="title">新闻资讯</div>
+			<div class="search-icon"><img src="../site8/search-icon.jpg" width="20px" height="20px" /></div>
+			<div class="search-input"><div class="sousuo">
+			<form action="http://zhannei.baidu.com/cse/search" method="get" target="_blank" class="bdcs-search-form" autocomplete="off" id="bdcs-search-form">
+				<input type="hidden" name="s" value="3391556175664846959" />
+				<input type="hidden" name="entry" value="1" />
+				<input type="text" name="q" class="bdcs-search-form-input" id="bdcs-search-form-input" placeholder="请输入关键词" style="width:80%; height:30px;border-radius:5px;" />
+				<input type="submit" class="bdcs-search-form-submit" id="bdcs-search-form-submit" value="搜索" />
+			</form>
+			</div></div>
+		</header>
+
+		<!-- 轮播图开始-->
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<TRS_DOCUMENTS ID="校闻联播手机版" NUM="3" WHERE="exists(select APPDOCID from WCMAppendix where AppFlag=20 and WCMAppendix.AppDocId=WCMChnlDoc.DocId)">
+				<div class="swiper-slide">
+					<a href="<TRS_DOCUMENT FIELD="_RECURL"></TRS_DOCUMENT>"><img src="<TRS_APPENDIX INDEX="0" FIELD="_RECURL" TARGET="_blank" MODE="PIC" UPLOAD="TRUE"></TRS_APPENDIX>" width="100%" height="100%" /></a>
+					<div class="desc"><TRS_DOCUMENT AUTOFORMAT="TRUE" FIELD="DOCABSTRACT" NUM="30">摘要</TRS_DOCUMENT></div>
+				</div>
+				</TRS_DOCUMENTS>
+			</div>
+			<div class="swiper-pagination swiper-pagination-white">&nbsp;</div>
+		</div>
+		<script src="../site8/swiper.min.js"></script>
+		<script>
+			var swiper = new Swiper('.swiper-container', {
+				speed: 300, //切换速度
+				autoplay: {
+					delay: 3000 //自动切换速度
+				},
+				loop: true,
+				pagination: {
+					el: '.swiper-pagination',
+				},
+			});
+		</script>
+
+		<!--轮播图结束-->
+
+		<div class="container-news">
+			<TRS_DOCUMENTS PAGESIZE="5" ID="校闻联播手机版">
+			<section>
+			<div class="image-news-container">
+				<div class="image-news">
+					<div class="review-imag">
+						<a href="<TRS_DOCUMENT FIELD="_RECURL"></TRS_DOCUMENT>">
+<img src="<TRS_APPENDIX INDEX="0" FIELD="_RECURL" TARGET="_blank" MODE="PIC" UPLOAD="TRUE"></TRS_APPENDIX>" width="90%" height="80%" /></a>
+						</div>
+				</div>
+			</div>
+			<div class="title-news-container">
+				<div class="title-news">
+					<div class="desc-container1"><a href="<TRS_DOCUMENT FIELD="_RECURL"></TRS_DOCUMENT>"><TRS_DOCUMENT FIELD="DOCTITLE"></TRS_DOCUMENT></a></div>
+					<div class="desc-container2">
+						<span class="title-date"><TRS_DOCUMENT FIELD="CRTIME" DATEFORMAT="yyyy-MM-dd">2019年7月3日</TRS_DOCUMENT></span>
+						<span class="title-source"><TRS_DOCUMENT FIELD="DOCSOURCE"></TRS_DOCUMENT></span>
+					</div>
+				</div>
+			</div>
+			</section>
+			</TRS_DOCUMENTS>
+<div class="fy"> <TRS_TEMPLATE TEMPNAME="20190705_分页"><span><a href="">首页</a></span><span><a href="">上一页</a></span><span class="pages"><a class="on" href="">1</a><a href="">2</a><a href="">3</a><a href="">4</a><a href="">5</a><a href="">6</a><a href="">下一页</a></span></TRS_TEMPLATE></div>
+		</div>
+
+                </div>
+		
+	</body>
+
+</html>

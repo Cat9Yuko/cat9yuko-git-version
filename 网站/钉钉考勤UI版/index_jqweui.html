@@ -1,0 +1,1820 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+		<link rel="stylesheet" href="css/weui.css">
+		<link rel="stylesheet" href="css/jquery-weui.css">
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
+		<link rel="stylesheet" type="text/css" href="css/mystyleJqueryweui.css" />
+		<script src="js/highcharts.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+
+		</style>
+	</head>
+
+	<body ontouchstart>
+
+		<div class="weui-tab">
+			<div class="weui-tab__bd">
+
+				<!--在京状态-->
+				<div id="zaijingzhuangtai" class="weui-tab__bd-item weui-tab__bd-item--active">
+					<!--在京状态顶部navbar-->
+					<div class="weui-navbar">
+						<a class="weui-navbar__item weui-bar__item--on" href="#zaijingzhuangtai1">
+							当天统计
+						</a>
+						<a class="weui-navbar__item" href="#zaijingzhuangtai2">
+							月视图
+						</a>
+						<a class="weui-navbar__item" href="#zaijingzhuangtai3">
+							人员列表
+						</a>
+					</div>
+					<!--在京状态顶部navbar end-->
+
+					<!--在京状态navbar对应页面-->
+					<div class="weui-tab__bd paddingTop47">
+						<!--当天统计-->
+						<div id="zaijingzhuangtai1" class="weui-tab__bd-item weui-tab__bd-item--active">
+							<!--更新时间-->
+							<div class="weui-flex">
+								<div class="weui-flex__item">
+									<div class="updateTime">考勤数据更新时间：2019年10月12日 <span class="redColor">09:30:00</span></div>
+								</div>
+							</div>
+							
+							<!--弹出日历-->
+							<div class="weui-flex">
+								<div class="weui-flex__item">
+									<div class="input-group margin-bottom-sm">
+										<input type="text" readonly="readonly" class="todayCalendar" placeholder="2019.10.10" />
+										<span class="input-group-addon"><i class="fa fa-chevron-down updown" aria-hidden="true"></i></span>
+									</div>
+
+								</div>
+							</div>
+							<!--饼图-->
+							<div class="weui-flex">
+								<div class="weui-flex__item">
+									<div id="bingtu" style="height: 300px;"></div>
+								</div>
+							</div>
+
+							<!--选项卡-->
+							<!--在京-->
+							<div class="weui-flex padding015 myslide_btn">
+								<div class="weui-flex__item">
+									<div class="options_1_1 options_active">在京(30)</div>
+								</div>
+								<div class="weui-flex__item">
+									<div class="options_1_2">正常(30)</div>
+								</div>
+								<div class="weui-flex__item">
+									<div class="options_1_3">请假(30)</div>
+								</div>
+								<div class="weui-flex__item">
+									<div class="options_1_4">外出(30)</div>
+								</div>
+							</div>
+
+							<div class="weui-flex myslide">
+								<div class="options_1_title bg_fbfbfb">因公:</div>
+								<div class="weui-flex__item bg_fbfbfb">
+									<div class="weui-flex">
+										<div class="weui-flex__item">
+											<div class="weui-cells">
+												<div class="weui-cell padding0 bg_fbfbfb">
+													<div class="weui-cell__hd"><img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="100%"></div>
+													<div class="weui-cell__bd">
+														<p style="font-size: 12px;">姓名</p>
+														<p style="font-size: 12px;">部门</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="weui-flex__item">
+											<div class="weui-cells">
+												<div class="weui-cell padding0 bg_fbfbfb">
+													<div class="weui-cell__hd"><img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="100%"></div>
+													<div class="weui-cell__bd">
+														<p style="font-size: 12px;">姓名</p>
+														<p style="font-size: 12px;">部门</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="weui-flex__item">
+											<div class="weui-cells">
+												<div class="weui-cell padding0 bg_fbfbfb">
+													<div class="weui-cell__hd"><img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="100%"></div>
+													<div class="weui-cell__bd">
+														<p style="font-size: 12px;">姓名</p>
+														<p style="font-size: 12px;">部门</p>
+													</div>
+												</div>
+											</div>
+										</div>
+
+									</div>
+									<div class="weui-flex">
+										<div class="weui-flex__item">
+											<div class="weui-cells">
+												<div class="weui-cell padding0 bg_fbfbfb">
+													<div class="weui-cell__hd"><img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="100%"></div>
+													<div class="weui-cell__bd">
+														<p style="font-size: 12px;">姓名</p>
+														<p style="font-size: 12px;">部门</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="weui-flex__item">
+											<div class="weui-cells">
+												<div class="weui-cell padding0 bg_fbfbfb">
+													<div class="weui-cell__hd"><img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="100%"></div>
+													<div class="weui-cell__bd">
+														<p style="font-size: 12px;">姓名</p>
+														<p style="font-size: 12px;">部门</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="weui-flex__item">
+											<div class="weui-cells">
+												<div class="weui-cell padding0 bg_fbfbfb">
+													<div class="weui-cell__hd"><img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="100%"></div>
+													<div class="weui-cell__bd">
+														<p style="font-size: 12px;">姓名</p>
+														<p style="font-size: 12px;">部门</p>
+													</div>
+												</div>
+											</div>
+										</div>
+
+									</div>
+
+								</div>
+							</div>
+
+							<div class="weui-flex">
+								<div class="weui-flex__item bg_fbfbfb">
+									<div class="xian2"></div>
+								</div>
+							</div>
+
+							<div class="weui-flex myslide">
+								<div class="options_1_title bg_fbfbfb">因私:</div>
+								<div class="weui-flex__item bg_fbfbfb">
+									<div class="weui-flex">
+										<div class="weui-flex__item">
+											<div class="weui-cells">
+												<div class="weui-cell padding0 bg_fbfbfb">
+													<div class="weui-cell__hd"><img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="100%"></div>
+													<div class="weui-cell__bd">
+														<p style="font-size: 12px;">姓名</p>
+														<p style="font-size: 12px;">部门</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="weui-flex__item">
+											<div class="weui-cells">
+												<div class="weui-cell padding0 bg_fbfbfb">
+													<div class="weui-cell__hd"><img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="100%"></div>
+													<div class="weui-cell__bd">
+														<p style="font-size: 12px;">姓名</p>
+														<p style="font-size: 12px;">部门</p>
+													</div>
+												</div>
+											</div>
+										</div>
+
+									</div>
+
+								</div>
+							</div>
+
+							<!--离京-->
+							<div class="weui-flex padding015 myslide_btn2">
+								<div class="weui-flex__item">
+									<div class="options_1_1 options_active">离京(30)</div>
+								</div>
+								<div class="weui-flex__item">
+									<div class="options_1_2">因公(30)</div>
+								</div>
+								<div class="weui-flex__item">
+									<div class="options_1_3">因私(30)</div>
+								</div>
+								<div class="weui-flex__item">
+									<div class="options_1_4">正常(30)</div>
+								</div>
+							</div>
+
+							<div class="weui-flex myslide2">
+								<div class="options_1_title bg_fbfbfb">因公:</div>
+								<div class="weui-flex__item bg_fbfbfb">
+									<div class="weui-flex">
+										<div class="weui-flex__item">
+											<div class="weui-cells">
+												<div class="weui-cell padding0 bg_fbfbfb">
+													<div class="weui-cell__hd"><img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="100%"></div>
+													<div class="weui-cell__bd">
+														<p style="font-size: 12px;">姓名</p>
+														<p style="font-size: 12px;">部门</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="weui-flex__item">
+											<div class="weui-cells">
+												<div class="weui-cell padding0 bg_fbfbfb">
+													<div class="weui-cell__hd"><img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="100%"></div>
+													<div class="weui-cell__bd">
+														<p style="font-size: 12px;">姓名</p>
+														<p style="font-size: 12px;">部门</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="weui-flex__item">
+											<div class="weui-cells">
+												<div class="weui-cell padding0 bg_fbfbfb">
+													<div class="weui-cell__hd"><img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="100%"></div>
+													<div class="weui-cell__bd">
+														<p style="font-size: 12px;">姓名</p>
+														<p style="font-size: 12px;">部门</p>
+													</div>
+												</div>
+											</div>
+										</div>
+
+									</div>
+									<div class="weui-flex">
+										<div class="weui-flex__item">
+											<div class="weui-cells">
+												<div class="weui-cell padding0 bg_fbfbfb">
+													<div class="weui-cell__hd"><img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="100%"></div>
+													<div class="weui-cell__bd">
+														<p style="font-size: 12px;">姓名</p>
+														<p style="font-size: 12px;">部门</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="weui-flex__item">
+											<div class="weui-cells">
+												<div class="weui-cell padding0 bg_fbfbfb">
+													<div class="weui-cell__hd"><img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="100%"></div>
+													<div class="weui-cell__bd">
+														<p style="font-size: 12px;">姓名</p>
+														<p style="font-size: 12px;">部门</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="weui-flex__item">
+											<div class="weui-cells">
+												<div class="weui-cell padding0 bg_fbfbfb">
+													<div class="weui-cell__hd"><img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="100%"></div>
+													<div class="weui-cell__bd">
+														<p style="font-size: 12px;">姓名</p>
+														<p style="font-size: 12px;">部门</p>
+													</div>
+												</div>
+											</div>
+										</div>
+
+									</div>
+
+								</div>
+							</div>
+
+							<div class="weui-flex">
+								<div class="weui-flex__item bg_fbfbfb">
+									<div class="xian1"></div>
+								</div>
+							</div>
+
+							<div class="weui-flex myslide2">
+								<div class="options_1_title bg_fbfbfb">因私:</div>
+								<div class="weui-flex__item bg_fbfbfb">
+									<div class="weui-flex">
+										<div class="weui-flex__item">
+											<div class="weui-cells">
+												<div class="weui-cell padding0 bg_fbfbfb">
+													<div class="weui-cell__hd"><img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="100%"></div>
+													<div class="weui-cell__bd">
+														<p style="font-size: 12px;">姓名</p>
+														<p style="font-size: 12px;">部门</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="weui-flex__item">
+											<div class="weui-cells">
+												<div class="weui-cell padding0 bg_fbfbfb">
+													<div class="weui-cell__hd"><img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="100%"></div>
+													<div class="weui-cell__bd">
+														<p style="font-size: 12px;">姓名</p>
+														<p style="font-size: 12px;">部门</p>
+													</div>
+												</div>
+											</div>
+										</div>
+
+									</div>
+
+								</div>
+							</div>
+
+							<!--离境-->
+							<div class="weui-flex padding015 myslide_btn3">
+								<div class="weui-flex__item">
+									<div class="options_1_1 options_active">离境(30)</div>
+								</div>
+								<div class="weui-flex__item">
+									<div class="options_1_2">因公(30)</div>
+								</div>
+								<div class="weui-flex__item">
+									<div class="options_1_3">因私(30)</div>
+								</div>
+								<div class="weui-flex__item">
+									<div class="options_1_4"></div>
+								</div>
+							</div>
+
+							<div class="weui-flex myslide3">
+								<div class="options_1_title bg_fbfbfb">因公:</div>
+								<div class="weui-flex__item bg_fbfbfb">
+									<div class="weui-flex">
+										<div class="weui-flex__item">
+											<div class="weui-cells">
+												<div class="weui-cell padding0 bg_fbfbfb">
+													<div class="weui-cell__hd"><img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="100%"></div>
+													<div class="weui-cell__bd">
+														<p style="font-size: 12px;">姓名</p>
+														<p style="font-size: 12px;">部门</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="weui-flex__item">
+											<div class="weui-cells">
+												<div class="weui-cell padding0 bg_fbfbfb">
+													<div class="weui-cell__hd"><img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="100%"></div>
+													<div class="weui-cell__bd">
+														<p style="font-size: 12px;">姓名</p>
+														<p style="font-size: 12px;">部门</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="weui-flex__item">
+											<div class="weui-cells">
+												<div class="weui-cell padding0 bg_fbfbfb">
+													<div class="weui-cell__hd"><img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="100%"></div>
+													<div class="weui-cell__bd">
+														<p style="font-size: 12px;">姓名</p>
+														<p style="font-size: 12px;">部门</p>
+													</div>
+												</div>
+											</div>
+										</div>
+
+									</div>
+									<div class="weui-flex">
+										<div class="weui-flex__item">
+											<div class="weui-cells">
+												<div class="weui-cell padding0 bg_fbfbfb">
+													<div class="weui-cell__hd"><img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="100%"></div>
+													<div class="weui-cell__bd">
+														<p style="font-size: 12px;">姓名</p>
+														<p style="font-size: 12px;">部门</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="weui-flex__item">
+											<div class="weui-cells">
+												<div class="weui-cell padding0 bg_fbfbfb">
+													<div class="weui-cell__hd"><img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="100%"></div>
+													<div class="weui-cell__bd">
+														<p style="font-size: 12px;">姓名</p>
+														<p style="font-size: 12px;">部门</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="weui-flex__item">
+											<div class="weui-cells">
+												<div class="weui-cell padding0 bg_fbfbfb">
+													<div class="weui-cell__hd"><img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="100%"></div>
+													<div class="weui-cell__bd">
+														<p style="font-size: 12px;">姓名</p>
+														<p style="font-size: 12px;">部门</p>
+													</div>
+												</div>
+											</div>
+										</div>
+
+									</div>
+
+								</div>
+							</div>
+							<!--选项卡 end-->
+
+						</div>
+						<!--月视图-->
+						<div id="zaijingzhuangtai2" class="weui-tab__bd-item">
+							<!--更新时间-->
+							<div class="weui-flex">
+								<div class="weui-flex__item">
+									<div class="updateTime">考勤数据更新时间：2019年10月12日 <span class="redColor">09:30:00</span></div>
+								</div>
+							</div>
+							<!--内联日历-->
+							<div class="weui-flex">
+								<div class="weui-flex__item">
+									<div class="input-group margin-bottom-sm">
+										<input type="text" readonly="readonly" id="date3" class="weui-input inline_rili" />
+										<span class="input-group-addon"><i class="fa fa-chevron-down updown" aria-hidden="true"></i></span>
+									</div>
+								</div>
+							</div>
+							<div class="weui-flex" style="margin-bottom: 30px;">
+								<div class="weui-flex__item">
+									<div id="inline-calendar"></div>
+								</div>
+							</div>
+							<!--选项卡-->
+							<!--在京-->
+							<div class="weui-flex padding015 myslide_btn">
+								<div class="weui-flex__item">
+									<div class="options_1_1 options_active">在京(30)</div>
+								</div>
+								<div class="weui-flex__item">
+									<div class="options_1_2">正常(30)</div>
+								</div>
+								<div class="weui-flex__item">
+									<div class="options_1_3">请假(30)</div>
+								</div>
+								<div class="weui-flex__item">
+									<div class="options_1_4">外出(30)</div>
+								</div>
+							</div>
+
+							<div class="weui-flex myslide">
+								<div class="options_1_title bg_fbfbfb">因公:</div>
+								<div class="weui-flex__item bg_fbfbfb">
+									<div class="weui-flex">
+										<div class="weui-flex__item">
+											<div class="weui-cells">
+												<div class="weui-cell padding0 bg_fbfbfb">
+													<div class="weui-cell__hd"><img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="100%"></div>
+													<div class="weui-cell__bd">
+														<p style="font-size: 12px;">姓名</p>
+														<p style="font-size: 12px;">部门</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="weui-flex__item">
+											<div class="weui-cells">
+												<div class="weui-cell padding0 bg_fbfbfb">
+													<div class="weui-cell__hd"><img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="100%"></div>
+													<div class="weui-cell__bd">
+														<p style="font-size: 12px;">姓名</p>
+														<p style="font-size: 12px;">部门</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="weui-flex__item">
+											<div class="weui-cells">
+												<div class="weui-cell padding0 bg_fbfbfb">
+													<div class="weui-cell__hd"><img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="100%"></div>
+													<div class="weui-cell__bd">
+														<p style="font-size: 12px;">姓名</p>
+														<p style="font-size: 12px;">部门</p>
+													</div>
+												</div>
+											</div>
+										</div>
+
+									</div>
+									<div class="weui-flex">
+										<div class="weui-flex__item">
+											<div class="weui-cells">
+												<div class="weui-cell padding0 bg_fbfbfb">
+													<div class="weui-cell__hd"><img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="100%"></div>
+													<div class="weui-cell__bd">
+														<p style="font-size: 12px;">姓名</p>
+														<p style="font-size: 12px;">部门</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="weui-flex__item">
+											<div class="weui-cells">
+												<div class="weui-cell padding0 bg_fbfbfb">
+													<div class="weui-cell__hd"><img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="100%"></div>
+													<div class="weui-cell__bd">
+														<p style="font-size: 12px;">姓名</p>
+														<p style="font-size: 12px;">部门</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="weui-flex__item">
+											<div class="weui-cells">
+												<div class="weui-cell padding0 bg_fbfbfb">
+													<div class="weui-cell__hd"><img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="100%"></div>
+													<div class="weui-cell__bd">
+														<p style="font-size: 12px;">姓名</p>
+														<p style="font-size: 12px;">部门</p>
+													</div>
+												</div>
+											</div>
+										</div>
+
+									</div>
+
+								</div>
+							</div>
+
+							<div class="weui-flex">
+								<div class="weui-flex__item bg_fbfbfb">
+									<div class="xian2"></div>
+								</div>
+							</div>
+
+							<div class="weui-flex myslide">
+								<div class="options_1_title bg_fbfbfb">因私:</div>
+								<div class="weui-flex__item bg_fbfbfb">
+									<div class="weui-flex">
+										<div class="weui-flex__item">
+											<div class="weui-cells">
+												<div class="weui-cell padding0 bg_fbfbfb">
+													<div class="weui-cell__hd"><img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="100%"></div>
+													<div class="weui-cell__bd">
+														<p style="font-size: 12px;">姓名</p>
+														<p style="font-size: 12px;">部门</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="weui-flex__item">
+											<div class="weui-cells">
+												<div class="weui-cell padding0 bg_fbfbfb">
+													<div class="weui-cell__hd"><img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="100%"></div>
+													<div class="weui-cell__bd">
+														<p style="font-size: 12px;">姓名</p>
+														<p style="font-size: 12px;">部门</p>
+													</div>
+												</div>
+											</div>
+										</div>
+
+									</div>
+
+								</div>
+							</div>
+
+							<!--离京-->
+							<div class="weui-flex padding015 myslide_btn2">
+								<div class="weui-flex__item">
+									<div class="options_1_1 options_active">离京(30)</div>
+								</div>
+								<div class="weui-flex__item">
+									<div class="options_1_2">因公(30)</div>
+								</div>
+								<div class="weui-flex__item">
+									<div class="options_1_3">因私(30)</div>
+								</div>
+								<div class="weui-flex__item">
+									<div class="options_1_4">正常(30)</div>
+								</div>
+							</div>
+
+							<div class="weui-flex myslide2">
+								<div class="options_1_title bg_fbfbfb">因公:</div>
+								<div class="weui-flex__item bg_fbfbfb">
+									<div class="weui-flex">
+										<div class="weui-flex__item">
+											<div class="weui-cells">
+												<div class="weui-cell padding0 bg_fbfbfb">
+													<div class="weui-cell__hd"><img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="100%"></div>
+													<div class="weui-cell__bd">
+														<p style="font-size: 12px;">姓名</p>
+														<p style="font-size: 12px;">部门</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="weui-flex__item">
+											<div class="weui-cells">
+												<div class="weui-cell padding0 bg_fbfbfb">
+													<div class="weui-cell__hd"><img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="100%"></div>
+													<div class="weui-cell__bd">
+														<p style="font-size: 12px;">姓名</p>
+														<p style="font-size: 12px;">部门</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="weui-flex__item">
+											<div class="weui-cells">
+												<div class="weui-cell padding0 bg_fbfbfb">
+													<div class="weui-cell__hd"><img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="100%"></div>
+													<div class="weui-cell__bd">
+														<p style="font-size: 12px;">姓名</p>
+														<p style="font-size: 12px;">部门</p>
+													</div>
+												</div>
+											</div>
+										</div>
+
+									</div>
+									<div class="weui-flex">
+										<div class="weui-flex__item">
+											<div class="weui-cells">
+												<div class="weui-cell padding0 bg_fbfbfb">
+													<div class="weui-cell__hd"><img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="100%"></div>
+													<div class="weui-cell__bd">
+														<p style="font-size: 12px;">姓名</p>
+														<p style="font-size: 12px;">部门</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="weui-flex__item">
+											<div class="weui-cells">
+												<div class="weui-cell padding0 bg_fbfbfb">
+													<div class="weui-cell__hd"><img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="100%"></div>
+													<div class="weui-cell__bd">
+														<p style="font-size: 12px;">姓名</p>
+														<p style="font-size: 12px;">部门</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="weui-flex__item">
+											<div class="weui-cells">
+												<div class="weui-cell padding0 bg_fbfbfb">
+													<div class="weui-cell__hd"><img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="100%"></div>
+													<div class="weui-cell__bd">
+														<p style="font-size: 12px;">姓名</p>
+														<p style="font-size: 12px;">部门</p>
+													</div>
+												</div>
+											</div>
+										</div>
+
+									</div>
+
+								</div>
+							</div>
+
+							<div class="weui-flex">
+								<div class="weui-flex__item bg_fbfbfb">
+									<div class="xian1"></div>
+								</div>
+							</div>
+
+							<div class="weui-flex myslide2">
+								<div class="options_1_title bg_fbfbfb">因私:</div>
+								<div class="weui-flex__item bg_fbfbfb">
+									<div class="weui-flex">
+										<div class="weui-flex__item">
+											<div class="weui-cells">
+												<div class="weui-cell padding0 bg_fbfbfb">
+													<div class="weui-cell__hd"><img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="100%"></div>
+													<div class="weui-cell__bd">
+														<p style="font-size: 12px;">姓名</p>
+														<p style="font-size: 12px;">部门</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="weui-flex__item">
+											<div class="weui-cells">
+												<div class="weui-cell padding0 bg_fbfbfb">
+													<div class="weui-cell__hd"><img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="100%"></div>
+													<div class="weui-cell__bd">
+														<p style="font-size: 12px;">姓名</p>
+														<p style="font-size: 12px;">部门</p>
+													</div>
+												</div>
+											</div>
+										</div>
+
+									</div>
+
+								</div>
+							</div>
+
+							<!--离境-->
+							<div class="weui-flex padding015 myslide_btn3">
+								<div class="weui-flex__item">
+									<div class="options_1_1 options_active">离境(30)</div>
+								</div>
+								<div class="weui-flex__item">
+									<div class="options_1_2">因公(30)</div>
+								</div>
+								<div class="weui-flex__item">
+									<div class="options_1_3">因私(30)</div>
+								</div>
+								<div class="weui-flex__item">
+									<div class="options_1_4"></div>
+								</div>
+							</div>
+
+							<div class="weui-flex myslide3">
+								<div class="options_1_title bg_fbfbfb">因公:</div>
+								<div class="weui-flex__item bg_fbfbfb">
+									<div class="weui-flex">
+										<div class="weui-flex__item">
+											<div class="weui-cells">
+												<div class="weui-cell padding0 bg_fbfbfb">
+													<div class="weui-cell__hd"><img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="100%"></div>
+													<div class="weui-cell__bd">
+														<p style="font-size: 12px;">姓名</p>
+														<p style="font-size: 12px;">部门</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="weui-flex__item">
+											<div class="weui-cells">
+												<div class="weui-cell padding0 bg_fbfbfb">
+													<div class="weui-cell__hd"><img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="100%"></div>
+													<div class="weui-cell__bd">
+														<p style="font-size: 12px;">姓名</p>
+														<p style="font-size: 12px;">部门</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="weui-flex__item">
+											<div class="weui-cells">
+												<div class="weui-cell padding0 bg_fbfbfb">
+													<div class="weui-cell__hd"><img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="100%"></div>
+													<div class="weui-cell__bd">
+														<p style="font-size: 12px;">姓名</p>
+														<p style="font-size: 12px;">部门</p>
+													</div>
+												</div>
+											</div>
+										</div>
+
+									</div>
+									<div class="weui-flex">
+										<div class="weui-flex__item">
+											<div class="weui-cells">
+												<div class="weui-cell padding0 bg_fbfbfb">
+													<div class="weui-cell__hd"><img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="100%"></div>
+													<div class="weui-cell__bd">
+														<p style="font-size: 12px;">姓名</p>
+														<p style="font-size: 12px;">部门</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="weui-flex__item">
+											<div class="weui-cells">
+												<div class="weui-cell padding0 bg_fbfbfb">
+													<div class="weui-cell__hd">
+														<img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="100%">
+													</div>
+													<div class="weui-cell__bd">
+														<p style="font-size: 12px;">姓名</p>
+														<p style="font-size: 12px;">部门</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="weui-flex__item">
+											<div class="weui-cells">
+												<div class="weui-cell padding0 bg_fbfbfb">
+													<div class="weui-cell__hd"><img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="100%"></div>
+													<div class="weui-cell__bd">
+														<p style="font-size: 12px;">姓名</p>
+														<p style="font-size: 12px;">部门</p>
+													</div>
+												</div>
+											</div>
+										</div>
+
+									</div>
+
+								</div>
+							</div>
+							<!--选项卡 end-->
+						</div>
+						<!--人员列表-->
+						<div id="zaijingzhuangtai3" class="weui-tab__bd-item">
+							<!--更新时间-->
+							<div class="weui-flex">
+								<div class="weui-flex__item">
+									<div class="updateTime">考勤数据更新时间：2019年10月12日 <span class="redColor">09:30:00</span></div>
+								</div>
+							</div>
+							<!-- start-->
+							<div class="weui-flex">
+								<div class="weui-flex__item dept">
+									<span>党委办公室（校长办公室）<i  class="fa fa-chevron-down updown" aria-hidden="true"></i></span>
+								</div>
+							</div>
+							<div class="weui-flex dept_list">
+								<div class="weui-flex__item">
+									<div class="dept_pList_bg">
+										<div class="dept_pList_h">
+											<img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="35">
+										</div>
+										<div class="dept_pList_n">姓名</div>
+										<div class="clearfix"></div>
+									</div>
+								</div>
+								<div class="weui-flex__item">
+									<div class="dept_pList_bg ">
+										<div class="dept_pList_h">
+											<img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="35">
+										</div>
+										<div class="dept_pList_n">姓名</div>
+										<div class="clearfix"></div>
+									</div>
+								</div>
+								<div class="weui-flex__item">
+									<div class="dept_pList_bg">
+										<div class="dept_pList_h">
+											<img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="35">
+										</div>
+										<div class="dept_pList_n">姓名</div>
+										<div class="clearfix"></div>
+									</div>
+								</div>
+								<div class="weui-flex__item">
+									<div class="dept_pList_bg">
+										<div class="dept_pList_h">
+											<img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="35">
+										</div>
+										<div class="dept_pList_n">姓名</div>
+										<div class="clearfix"></div>
+									</div>
+								</div>
+							</div>
+
+							<!--日历-->
+							<div class="weui-flex">
+								<div class="weui-flex__item">
+									<input type="text" class="rli3" style="display: none;" />
+									<div class="rili_3"></div>
+								</div>
+							</div>
+
+							<!-- end -->
+
+							<!-- start-->
+							<div class="weui-flex">
+								<div class="weui-flex__item dept2">
+									<span>党委组织部（人事处）<i  class="fa fa-chevron-down updown" aria-hidden="true"></i></span>
+								</div>
+							</div>
+							<div class="weui-flex dept_list">
+								<div class="weui-flex__item">
+									<div class="dept_pList_bg">
+										<div class="dept_pList_h">
+											<img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="35">
+										</div>
+										<div class="dept_pList_n">姓名</div>
+										<div class="clearfix"></div>
+									</div>
+								</div>
+								<div class="weui-flex__item">
+									<div class="dept_pList_bg ">
+										<div class="dept_pList_h">
+											<img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="35">
+										</div>
+										<div class="dept_pList_n">姓名</div>
+										<div class="clearfix"></div>
+									</div>
+								</div>
+								<div class="weui-flex__item">
+									<div class="dept_pList_bg">
+										<div class="dept_pList_h">
+											<img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="35">
+										</div>
+										<div class="dept_pList_n">姓名</div>
+										<div class="clearfix"></div>
+									</div>
+								</div>
+								<div class="weui-flex__item">
+									<div class="dept_pList_bg">
+										<div class="dept_pList_h">
+											<img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="35">
+										</div>
+										<div class="dept_pList_n">姓名</div>
+										<div class="clearfix"></div>
+									</div>
+								</div>
+							</div>
+
+							<!--日历-->
+							<div class="weui-flex">
+								<div class="weui-flex__item">
+									<input type="text" class="rli3_2" style="display: none;" />
+									<div class="rili_3_2"></div>
+								</div>
+							</div>
+
+							<!-- end -->
+							<!-- start-->
+							<div class="weui-flex">
+								<div class="weui-flex__item dept3">
+									<span>党群工作部（纪委办公室）<i  class="fa fa-chevron-down updown" aria-hidden="true"></i></span>
+								</div>
+							</div>
+							<div class="weui-flex dept_list">
+								<div class="weui-flex__item">
+									<div class="dept_pList_bg">
+										<div class="dept_pList_h">
+											<img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="35">
+										</div>
+										<div class="dept_pList_n">姓名</div>
+										<div class="clearfix"></div>
+									</div>
+								</div>
+								<div class="weui-flex__item">
+									<div class="dept_pList_bg ">
+										<div class="dept_pList_h">
+											<img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="35">
+										</div>
+										<div class="dept_pList_n">姓名</div>
+										<div class="clearfix"></div>
+									</div>
+								</div>
+								<div class="weui-flex__item">
+									<div class="dept_pList_bg">
+										<div class="dept_pList_h">
+											<img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="35">
+										</div>
+										<div class="dept_pList_n">姓名</div>
+										<div class="clearfix"></div>
+									</div>
+								</div>
+								<div class="weui-flex__item">
+									<div class="dept_pList_bg">
+										<div class="dept_pList_h">
+											<img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="35">
+										</div>
+										<div class="dept_pList_n">姓名</div>
+										<div class="clearfix"></div>
+									</div>
+								</div>
+							</div>
+
+							<!--日历-->
+							<div class="weui-flex">
+								<div class="weui-flex__item">
+									<input type="text" class="rli3_3" style="display: none;" />
+									<div class="rili_3_3"></div>
+								</div>
+							</div>
+
+							<!-- end -->
+							<!-- start-->
+							<div class="weui-flex">
+								<div class="weui-flex__item dept4">
+									<span>习近平新时代中国特色社会主义思想教研部<i  class="fa fa-chevron-down updown" aria-hidden="true"></i></span>
+								</div>
+							</div>
+							<div class="weui-flex dept_list">
+								<div class="weui-flex__item">
+									<div class="dept_pList_bg">
+										<div class="dept_pList_h">
+											<img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="35">
+										</div>
+										<div class="dept_pList_n">姓名</div>
+										<div class="clearfix"></div>
+									</div>
+								</div>
+								<div class="weui-flex__item">
+									<div class="dept_pList_bg ">
+										<div class="dept_pList_h">
+											<img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="35">
+										</div>
+										<div class="dept_pList_n">姓名</div>
+										<div class="clearfix"></div>
+									</div>
+								</div>
+								<div class="weui-flex__item">
+									<div class="dept_pList_bg">
+										<div class="dept_pList_h">
+											<img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="35">
+										</div>
+										<div class="dept_pList_n">姓名</div>
+										<div class="clearfix"></div>
+									</div>
+								</div>
+								<div class="weui-flex__item">
+									<div class="dept_pList_bg">
+										<div class="dept_pList_h">
+											<img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="35">
+										</div>
+										<div class="dept_pList_n">姓名</div>
+										<div class="clearfix"></div>
+									</div>
+								</div>
+							</div>
+
+							<!--日历-->
+							<div class="weui-flex">
+								<div class="weui-flex__item">
+									<input type="text" class="rli3_4" style="display: none;" />
+									<div class="rili_3_4"></div>
+								</div>
+							</div>
+
+							<!-- end -->
+
+							<!-- start-->
+							<div class="weui-flex">
+								<div class="weui-flex__item dept5">
+									<span>习近平青年工作思想教研部<i  class="fa fa-chevron-down updown" aria-hidden="true"></i></span>
+								</div>
+							</div>
+							<div class="weui-flex dept_list">
+								<div class="weui-flex__item">
+									<div class="dept_pList_bg">
+										<div class="dept_pList_h">
+											<img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="35">
+										</div>
+										<div class="dept_pList_n">姓名</div>
+										<div class="clearfix"></div>
+									</div>
+								</div>
+								<div class="weui-flex__item">
+									<div class="dept_pList_bg ">
+										<div class="dept_pList_h">
+											<img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="35">
+										</div>
+										<div class="dept_pList_n">姓名</div>
+										<div class="clearfix"></div>
+									</div>
+								</div>
+								<div class="weui-flex__item">
+									<div class="dept_pList_bg">
+										<div class="dept_pList_h">
+											<img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="35">
+										</div>
+										<div class="dept_pList_n">姓名</div>
+										<div class="clearfix"></div>
+									</div>
+								</div>
+								<div class="weui-flex__item">
+									<div class="dept_pList_bg">
+										<div class="dept_pList_h">
+											<img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="35">
+										</div>
+										<div class="dept_pList_n">姓名</div>
+										<div class="clearfix"></div>
+									</div>
+								</div>
+							</div>
+
+							<!--日历-->
+							<div class="weui-flex">
+								<div class="weui-flex__item">
+									<input type="text" class="rli3_5" style="display: none;" />
+									<div class="rili_3_5"></div>
+								</div>
+							</div>
+
+							<!-- end -->
+							<!-- start-->
+							<div class="weui-flex">
+								<div class="weui-flex__item dept6">
+									<span>马克思主义学院<i  class="fa fa-chevron-down updown" aria-hidden="true"></i></span>
+								</div>
+							</div>
+							<div class="weui-flex dept_list">
+								<div class="weui-flex__item">
+									<div class="dept_pList_bg">
+										<div class="dept_pList_h">
+											<img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="35">
+										</div>
+										<div class="dept_pList_n">姓名</div>
+										<div class="clearfix"></div>
+									</div>
+								</div>
+								<div class="weui-flex__item">
+									<div class="dept_pList_bg ">
+										<div class="dept_pList_h">
+											<img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="35">
+										</div>
+										<div class="dept_pList_n">姓名</div>
+										<div class="clearfix"></div>
+									</div>
+								</div>
+								<div class="weui-flex__item">
+									<div class="dept_pList_bg">
+										<div class="dept_pList_h">
+											<img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="35">
+										</div>
+										<div class="dept_pList_n">姓名</div>
+										<div class="clearfix"></div>
+									</div>
+								</div>
+								<div class="weui-flex__item">
+									<div class="dept_pList_bg">
+										<div class="dept_pList_h">
+											<img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="35">
+										</div>
+										<div class="dept_pList_n">姓名</div>
+										<div class="clearfix"></div>
+									</div>
+								</div>
+							</div>
+
+							<!--日历-->
+							<div class="weui-flex">
+								<div class="weui-flex__item">
+									<input type="text" class="rli3_6" style="display: none;" />
+									<div class="rili_3_6"></div>
+								</div>
+							</div>
+
+							<!-- end -->
+							<!-- start-->
+							<div class="weui-flex">
+								<div class="weui-flex__item dept7">
+									<span>党的群众工作教研部<i  class="fa fa-chevron-down updown" aria-hidden="true"></i></span>
+								</div>
+							</div>
+							<div class="weui-flex dept_list">
+								<div class="weui-flex__item">
+									<div class="dept_pList_bg">
+										<div class="dept_pList_h">
+											<img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="35">
+										</div>
+										<div class="dept_pList_n">姓名</div>
+										<div class="clearfix"></div>
+									</div>
+								</div>
+								<div class="weui-flex__item">
+									<div class="dept_pList_bg ">
+										<div class="dept_pList_h">
+											<img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="35">
+										</div>
+										<div class="dept_pList_n">姓名</div>
+										<div class="clearfix"></div>
+									</div>
+								</div>
+								<div class="weui-flex__item">
+									<div class="dept_pList_bg">
+										<div class="dept_pList_h">
+											<img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="35">
+										</div>
+										<div class="dept_pList_n">姓名</div>
+										<div class="clearfix"></div>
+									</div>
+								</div>
+								<div class="weui-flex__item">
+									<div class="dept_pList_bg">
+										<div class="dept_pList_h">
+											<img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="35">
+										</div>
+										<div class="dept_pList_n">姓名</div>
+										<div class="clearfix"></div>
+									</div>
+								</div>
+							</div>
+
+							<!--日历-->
+							<div class="weui-flex">
+								<div class="weui-flex__item">
+									<input type="text" class="rli3_7" style="display: none;" />
+									<div class="rili_3_7"></div>
+								</div>
+							</div>
+
+							<!-- end -->
+
+							<!-- start-->
+							<div class="weui-flex">
+								<div class="weui-flex__item dept8">
+									<span>青年发展研究院<i  class="fa fa-chevron-down updown" aria-hidden="true"></i></span>
+								</div>
+							</div>
+							<div class="weui-flex dept_list">
+								<div class="weui-flex__item">
+									<div class="dept_pList_bg">
+										<div class="dept_pList_h">
+											<img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="35">
+										</div>
+										<div class="dept_pList_n">姓名</div>
+										<div class="clearfix"></div>
+									</div>
+								</div>
+								<div class="weui-flex__item">
+									<div class="dept_pList_bg ">
+										<div class="dept_pList_h">
+											<img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="35">
+										</div>
+										<div class="dept_pList_n">姓名</div>
+										<div class="clearfix"></div>
+									</div>
+								</div>
+								<div class="weui-flex__item">
+									<div class="dept_pList_bg">
+										<div class="dept_pList_h">
+											<img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="35">
+										</div>
+										<div class="dept_pList_n">姓名</div>
+										<div class="clearfix"></div>
+									</div>
+								</div>
+								<div class="weui-flex__item">
+									<div class="dept_pList_bg">
+										<div class="dept_pList_h">
+											<img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="35">
+										</div>
+										<div class="dept_pList_n">姓名</div>
+										<div class="clearfix"></div>
+									</div>
+								</div>
+							</div>
+
+							<!--日历-->
+							<div class="weui-flex">
+								<div class="weui-flex__item">
+									<input type="text" class="rli3_8" style="display: none;" />
+									<div class="rili_3_8"></div>
+								</div>
+							</div>
+
+							<!-- end -->
+							<!-- start-->
+							<div class="weui-flex">
+								<div class="weui-flex__item dept9">
+									<span>轮训部<i class="fa fa-chevron-down updown" aria-hidden="true"></i></span>
+								</div>
+							</div>
+							<div class="weui-flex dept_list">
+								<div class="weui-flex__item">
+									<div class="dept_pList_bg">
+										<div class="dept_pList_h">
+											<img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="35">
+										</div>
+										<div class="dept_pList_n">姓名</div>
+										<div class="clearfix"></div>
+									</div>
+								</div>
+								<div class="weui-flex__item">
+									<div class="dept_pList_bg ">
+										<div class="dept_pList_h">
+											<img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="35">
+										</div>
+										<div class="dept_pList_n">姓名</div>
+										<div class="clearfix"></div>
+									</div>
+								</div>
+								<div class="weui-flex__item">
+									<div class="dept_pList_bg">
+										<div class="dept_pList_h">
+											<img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="35">
+										</div>
+										<div class="dept_pList_n">姓名</div>
+										<div class="clearfix"></div>
+									</div>
+								</div>
+								<div class="weui-flex__item">
+									<div class="dept_pList_bg">
+										<div class="dept_pList_h">
+											<img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="35">
+										</div>
+										<div class="dept_pList_n">姓名</div>
+										<div class="clearfix"></div>
+									</div>
+								</div>
+							</div>
+
+							<!--日历-->
+							<div class="weui-flex">
+								<div class="weui-flex__item">
+									<input type="text" class="rli3_9" style="display: none;" />
+									<div class="rili_3_9"></div>
+								</div>
+							</div>
+
+							<!-- end -->
+
+						</div>
+					</div>
+					<!--在京状态navbar对应页面 end-->
+				</div>
+				<!--在京状态end-->
+
+				<!--考勤系统-->
+				<div id="kaoqinxitong" class="weui-tab__bd-item">
+					<!-- 考勤 navbar -->
+					<div class="weui-tab" style="padding-bottom: 55px;">
+						<div class="weui-navbar">
+							<a class="weui-navbar__item weui-bar__item--on" href="#kaoqinxitong_1">
+								当天统计
+							</a>
+							<a class="weui-navbar__item" href="#kaoqinxitong_2">
+								周月统计
+							</a>
+						</div>
+						<!--考勤navbar对应页面-->
+						<div class="weui-tab__bd" style="padding-top: 45px!important;">
+							<div id="kaoqinxitong_1" class="weui-tab__bd-item weui-tab__bd-item--active">
+								<!--更新时间-->
+								<div class="weui-flex">
+									<div class="weui-flex__item">
+										<div class="updateTime">考勤数据更新时间：2019年10月12日 <span class="redColor">09:30:00</span></div>
+									</div>
+								</div>
+								<!--弹出日历-->
+								<div class="weui-flex">
+									<div class="weui-flex__item">
+										<div class="input-group margin-bottom-sm">
+											<input type="text" readonly="readonly" class="todayCalendar" placeholder="2019.10.10" />
+											<span class="input-group-addon"><i class="fa fa-chevron-down updown" aria-hidden="true"></i></span>
+										</div>
+
+									</div>
+								</div>
+
+								<!--环形图-->
+								<div class="weui-flex">
+									<div class="weui-flex__item">
+										<div id="circleMap" style="height: 200px;"></div>
+									</div>
+								</div>
+
+								<!-- 未打卡,迟到,早退 -->
+								<div class="weui-flex">
+									<div class="weui-flex__item" style="padding: 0 0 0 10%;">
+										<div class="weidaka">
+											<p class="eZero">14</p>
+											<p>未打卡</p>
+										</div>
+									</div>
+									<div class="weui-flex__item" style="">
+										<div class="chidao">
+											<p class="eZero">1</p>
+											<p>迟到</p>
+										</div>
+									</div>
+									<div class="weui-flex__item" style="padding: 0 10% 0 0;">
+										<div class="zaotui">
+											<p class="eZero eqZero">0</p>
+											<p>早退</p>
+										</div>
+									</div>
+								</div>
+								<!--列表-->
+								<div class="weui-flex" style="padding: 0 10px;margin-top: 47px;margin-bottom: 20px;">
+									<div class="weui-flex__item">
+										<div class="todayList">正常(17)</div>
+									</div>
+									<div style="width: 15px;"></div>
+									<div class="weui-flex__item">
+										<div class="todayList">外出(2)</div>
+									</div>
+									<div style="width: 15px;"></div>
+									<div class="weui-flex__item">
+										<div class="todayList">出差(8)</div>
+									</div>
+									<div style="width: 15px;"></div>
+									<div class="weui-flex__item">
+										<div class="todayList">请假(2)</div>
+									</div>
+								</div>
+
+								<div class="weui-flex">
+									<div class="weui-flex__item">
+										<div class="weui-flex margin_botomo15">
+											<div class="width25">外出(2)</div>
+											<div class="weui-flex__item">
+												<div class="weui-flex">
+													<div class="weui-flex__item">
+														<div class="dept_pList_bg">
+															<div class="dept_pList_h">
+																<img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="35">
+															</div>
+															<div class="dept_pList_n">姓名</div>
+															<div class="clearfix"></div>
+														</div>
+													</div>
+													<div class="weui-flex__item">
+														<div class="dept_pList_bg">
+															<div class="dept_pList_h">
+																<img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="35">
+															</div>
+															<div class="dept_pList_n">姓名</div>
+															<div class="clearfix"></div>
+														</div>
+													</div>
+													<div class="weui-flex__item">
+													</div>
+
+												</div>
+											</div>
+										</div>
+										<div class="weui-flex margin_botomo15">
+											<div class="width25">出差(8)</div>
+											<div class="weui-flex__item">
+												<div class="weui-flex">
+													<div class="weui-flex__item">
+														<div class="dept_pList_bg">
+															<div class="dept_pList_h">
+																<img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="35">
+															</div>
+															<div class="dept_pList_n">姓名</div>
+															<div class="clearfix"></div>
+														</div>
+													</div>
+													<div class="weui-flex__item">
+														<div class="dept_pList_bg">
+															<div class="dept_pList_h">
+																<img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="35">
+															</div>
+															<div class="dept_pList_n">姓名</div>
+															<div class="clearfix"></div>
+														</div>
+													</div>
+													<div class="weui-flex__item">
+														<div class="dept_pList_bg">
+															<div class="dept_pList_h">
+																<img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="35">
+															</div>
+															<div class="dept_pList_n">姓名</div>
+															<div class="clearfix"></div>
+														</div>
+													</div>
+												</div>
+												<div class="weui-flex">
+													<div class="weui-flex__item">
+														<div class="dept_pList_bg">
+															<div class="dept_pList_h">
+																<img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="35">
+															</div>
+															<div class="dept_pList_n">姓名</div>
+															<div class="clearfix"></div>
+														</div>
+													</div>
+													<div class="weui-flex__item">
+														<div class="dept_pList_bg">
+															<div class="dept_pList_h">
+																<img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="35">
+															</div>
+															<div class="dept_pList_n">姓名</div>
+															<div class="clearfix"></div>
+														</div>
+													</div>
+													<div class="weui-flex__item">
+														<div class="dept_pList_bg">
+															<div class="dept_pList_h">
+																<img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="35">
+															</div>
+															<div class="dept_pList_n">姓名</div>
+															<div class="clearfix"></div>
+														</div>
+													</div>
+												</div>
+												<div class="weui-flex">
+													<div class="weui-flex__item">
+														<div class="dept_pList_bg">
+															<div class="dept_pList_h">
+																<img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="35">
+															</div>
+															<div class="dept_pList_n">姓名</div>
+															<div class="clearfix"></div>
+														</div>
+													</div>
+													<div class="weui-flex__item">
+														<div class="dept_pList_bg">
+															<div class="dept_pList_h">
+																<img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="35">
+															</div>
+															<div class="dept_pList_n">姓名</div>
+															<div class="clearfix"></div>
+														</div>
+													</div>
+													<div class="weui-flex__item">
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="weui-flex margin_botomo15">
+											<div class="width25">请假(2)</div>
+											<div class="weui-flex__item">
+												<div class="weui-flex">
+													<div class="weui-flex__item">
+														<div class="dept_pList_bg">
+															<div class="dept_pList_h">
+																<img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="35">
+															</div>
+															<div class="dept_pList_n">姓名</div>
+															<div class="clearfix"></div>
+														</div>
+													</div>
+													<div class="weui-flex__item">
+														<div class="dept_pList_bg">
+															<div class="dept_pList_h">
+																<img style="border-radius: 50%;" src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="35" height="35">
+															</div>
+															<div class="dept_pList_n">姓名</div>
+															<div class="clearfix"></div>
+														</div>
+													</div>
+													<div class="weui-flex__item">
+													</div>
+												</div>
+											</div>
+										</div>
+
+									</div>
+								</div>
+
+							</div>
+
+							<div id="kaoqinxitong_2" class="weui-tab__bd-item">
+								<!--更新时间-->
+								<div class="weui-flex">
+									<div class="weui-flex__item">
+										<div class="updateTime">考勤数据更新时间：2019年10月12日 <span class="redColor">09:30:00</span></div>
+									</div>
+								</div>
+								<!--周月-->
+								<div class="weui-flex">
+									<div class="weui-flex__item">
+										<div class="wm_bg">
+											<div class="weui-flex">
+												<div class="weui-flex__item">
+													<div class="week">周</div>
+												</div>
+												<div class="weui-flex__item">
+													<div class="month wm_active">月</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="weui-flex__item">
+										<div class="weui-flex">
+											<div class="weui-flex__item"></div>
+											<div class="weui-flex__item">
+												<div class="zhouyueCalendar"><input type="text" readonly="readonly" class="weekMCalendar" placeholder="2019.10" /></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="weui-cells__title">205人出勤</div>
+								<div class="weui-cells">
+									<a class="weui-cell weui-cell_access" href="列表细览.html">
+										<div class="weui-cell__bd">
+											<p>平均工时</p>
+										</div>
+										<div class="weui-cell__ft">
+											6.2小时
+										</div>
+									</a>
+									<a class="weui-cell weui-cell_access" href="列表细览.html">
+										<div class="weui-cell__bd">
+											<p>迟到</p>
+										</div>
+										<div class="weui-cell__ft">
+											5人
+										</div>
+									</a>
+									<a class="weui-cell weui-cell_access" href="javascript:;">
+										<div class="weui-cell__bd">
+											<p>早退</p>
+										</div>
+										<div class="weui-cell__ft">
+											2人
+										</div>
+									</a>
+									<a class="weui-cell weui-cell_access" href="javascript:;">
+										<div class="weui-cell__bd">
+											<p>缺卡</p>
+										</div>
+										<div class="weui-cell__ft">
+											4人
+										</div>
+									</a>
+									<a class="weui-cell weui-cell_access" href="javascript:;">
+										<div class="weui-cell__bd">
+											<p>旷工</p>
+										</div>
+										<div class="weui-cell__ft">
+											2人
+										</div>
+									</a>
+									<a class="weui-cell weui-cell_access" href="javascript:;">
+										<div class="weui-cell__bd">
+											<p>外勤</p>
+										</div>
+										<div class="weui-cell__ft">
+											0人
+										</div>
+									</a>
+									<a class="weui-cell weui-cell_access" href="javascript:;">
+										<div class="weui-cell__bd">
+											<p>加班</p>
+										</div>
+										<div class="weui-cell__ft">
+											0人
+										</div>
+									</a>
+									<a class="weui-cell weui-cell_access" href="javascript:;">
+										<div class="weui-cell__bd">
+											<p>出差</p>
+										</div>
+										<div class="weui-cell__ft">
+											9人
+										</div>
+									</a>
+									<a class="weui-cell weui-cell_access" href="javascript:;">
+										<div class="weui-cell__bd">
+											<p>外出</p>
+										</div>
+										<div class="weui-cell__ft">
+											23人
+										</div>
+									</a>
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<!--考勤系统  end-->
+
+			</div>
+
+			<!--底部tabbar导航-->
+			<div class="weui-tabbar">
+				<a href="#zaijingzhuangtai" class="weui-tabbar__item weui-bar__item--on img_change1">
+					<div class="weui-tabbar__icon">
+						<img class="img_change1_img" src="img/bottom-nav1.png" alt="">
+					</div>
+					<p class="weui-tabbar__label">在京状态</p>
+				</a>
+				<a href="#kaoqinxitong" class="weui-tabbar__item img_change2">
+					<div class="weui-tabbar__icon">
+						<img class="img_change2_img" src="img/bottom-nav2.png" alt="">
+					</div>
+					<p class="weui-tabbar__label">考勤统计</p>
+				</a>
+			</div>
+
+			<!--底部tabbar导航end-->
+		</div>
+
+		<script src="js/jquery-2.1.4.js"></script>
+		<script src="js/fastclick.js"></script>
+		<script>
+			$(function() {
+				FastClick.attach(document.body);
+			});
+		</script>
+
+		<script src="js/jquery-weui.js"></script>
+		<script src="js/myJs.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			//饼图
+			Highcharts.chart('bingtu', {
+				chart: {
+					type: 'pie'
+				},
+				credits: {
+					//去掉水印
+					enabled: false
+				},
+				title: {
+					text: null
+				},
+				plotOptions: {
+					series: {
+						dataLabels: {
+							enabled: true,
+							format: '{point.name}: {point.y}人'
+						}
+					}
+				},
+
+				//饼图颜色
+				colors: ["#93c3f4", "#a9cef3", "#c5ddf2", "#d4e8e9", "f3f3e4", "#18A088", "#9C59BA"],
+				//				数据
+				series: [{
+					name: "当天统计",
+					colorByPoint: true,
+					data: [{
+							name: "在京",
+							y: 30
+
+						},
+						{
+							name: "离京",
+							y: 3
+						},
+						{
+							name: "离境",
+							y: 5
+						}
+					]
+				}]
+			});
+
+			//环形图
+			var chart = Highcharts.chart('circleMap', {
+				chart: {
+					spacing: [0, 0, 0, 0],
+					margin: [10, 0, 0, 0]
+				},
+				title: {
+					floating: true,
+					text: '<span class="c_title">打卡人数/应到人数</span>',
+					useHTML: true
+				},
+				subtitle: {
+					text: '<span class="c_number">182/196</span>',
+					useHTML: true
+				},
+				credits: {
+					//去掉水印
+					enabled: false
+				},
+				tooltip: {
+					pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+				},
+				plotOptions: {
+					pie: {
+						allowPointSelect: true,
+						cursor: 'pointer',
+						dataLabels: {
+							enabled: false,
+							//							format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+							style: {
+								color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+							}
+						},
+						point: {
+							events: {
+								//								mouseOver: function(e) { // 鼠标滑过时动态更新标题
+								//									// 标题更新函数，API 地址：https://api.hcharts.cn/highcharts#Chart.setTitle
+								//									chart.setTitle({
+								//										text: e.target.name + '\t' + e.target.y + ' %'
+								//									});
+								//								}
+								//, 
+								// click: function(e) { // 同样的可以在点击事件里处理
+								//     chart.setTitle({
+								//         text: e.point.name+ '\t'+ e.point.y + ' %'
+								//     });
+								// }
+							}
+						},
+					}
+				},
+				colors: ["#1d92ff", "#eeeeee", "#c5ddf2", "#d4e8e9", "f3f3e4", "#18A088", "#9C59BA"],
+				series: [{
+					type: 'pie',
+					innerSize: '90%',
+					/*中心空白大小*/
+					name: '当天统计',
+					data: [{
+						name: '打卡人数',
+						y: 182 / 196
+					}, {
+						name: '应到人数',
+						y: 14 / 196
+					}]
+				}]
+			}, function(c) { // 图表初始化完毕后的会掉函数
+				// 环形图圆心
+				var centerY = c.series[0].center[1],
+					titleHeight = parseInt(c.title.styles.fontSize);
+				// 动态设置标题位置
+				c.setTitle({
+					y: centerY + titleHeight / 2 - 20
+				});
+				c.setSubtitle({
+					y: centerY + titleHeight / 2
+				})
+			});
+		</script>
+	</body>
+
+</html>

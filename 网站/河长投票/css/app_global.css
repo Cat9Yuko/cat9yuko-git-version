@@ -1,0 +1,384 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "微软雅黑";
+}
+/*mobile*/
+.m-top {
+  margin-bottom: 25px;
+}
+.btn-primary,
+.btn-primary:active:hover {
+  background-color: #0068b7 !important;
+  border-color: #0068b7 !important;
+}
+
+.m-bottom li {
+  list-style: none;
+  width: 100%;
+  margin-bottom: 38px;
+}
+
+.wrap {
+  width: 100%;
+}
+
+.method-1-wrap {
+  position: relative;
+  border: 1px solid #0068b7;
+  padding: 19px;
+  box-sizing: border-box;
+  overflow: inherit;
+}
+
+.method-1-wrap .title {
+  position: absolute;
+  top: -13px;
+  left: 6%;
+  line-height: 1em;
+  padding: 0 2em;
+  background-color: #fff;
+  color: #0068b7;
+  font-size: 16px;
+  border-left: 3px solid #0068b7;
+  border-right: 3px solid #0068b7;
+}
+
+.m-content {
+  width: 100%;
+}
+
+.m-touxiang {
+  border: 1px solid #0068b7;
+  float: left;
+  width: 39%;
+  margin-top: 1.5rem;
+}
+
+.m-word {
+  width: 50%;
+  float: right;
+  margin-top: 7px;
+  font-size: 13px;
+  line-height: 2;
+  text-align: justify;
+  font-weight: bold;
+}
+
+.m-word a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.x-weizhi input {
+  margin-right: 5px;
+}
+.m-input-container input {
+  width: 178px;
+  height: 47px;
+  text-align: center;
+  color: #ffffff;
+  background: #0068b7;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.i-center {
+  width: 178px;
+  margin: 0 auto;
+}
+
+.m-input-container {
+  padding-bottom: 30px;
+}
+
+.u-list {
+  display: none;
+}
+
+.show-check .sc-bg {
+	/* background: #FFFFFF; */
+	padding: 10px;
+	text-align: center;
+}
+.show-check .sc-name {
+	width: 193px;
+	background: #0075a9;
+	color: #FFFFFF;
+	text-align: center;
+	line-height: 39px;
+	display: inline-block;
+	font-size: 14px;
+}
+.sc-img {
+	width: 35px;
+	height: 37px;
+	vertical-align: middle;
+	border: 1px solid #abafb1;
+	display: inline-block;
+	/* float: left; */
+	margin-right: 4px;
+	margin-top: -3px;
+}
+.sc-bg .items:not(:last-child) {
+	margin-bottom: 15px;
+}
+.sc-bg .items {
+	text-align: center;
+}
+.m-input-container button{
+	width: 178px;
+}
+.wcolor input{
+  background: #ffffff;
+  border: 1px solid #0068B7;
+}
+.filter-option-inner-inner,.text {
+  font-size: 16px;
+}
+.caret {
+    border-top: 8px dashed;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+}
+.m-bottom {
+  display: none;
+}
+
+/* 详情修改 */
+.m-article {
+  display: none;
+}
+
+/* 媒体适配 */
+@media only screen and (max-width: 320px) {
+  .m-word {
+    font-size: 10px;
+  }
+}
+
+.main {
+  padding-bottom: 20px;
+}
+.wechatshare {
+  z-index: 999;
+}
+@media only screen and (min-width: 100px) and (max-width: 320px) {
+  .header {
+    background: url(../img/moblid_20200421_banner.png);
+    background-size: 100% 100%;
+    height: 200px;
+  }
+  .d-title {
+    font-size: 24px;
+    margin-top: 30px;
+  }
+  .article img:nth-of-type(2) {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 640px) {
+  .d-title {
+    font-size: 29px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  .header {
+    background: url(../img/moblid_20200421_banner.png);
+    background-size: 100% 100%;
+    height: 200px;
+  }
+  .article {
+    font-size: 16px;
+  }
+  .article img {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+  }
+  .article img:nth-of-type(2) {
+    width: 100%;
+  }
+  .source-time {
+    margin: 0 auto;
+    height: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .time {
+    margin-right: 10px;
+  }
+  .wechat,
+  .sina {
+    line-height: 2.1;
+    position: absolute;
+  }
+  .wechat {
+    margin-left: 10px;
+  }
+  .sina {
+    margin-left: 46px;
+  }
+}
+
+@media only screen and (min-width: 640px) and (max-width: 768px) {
+  .header {
+    background: url(../img/moblid_20200421_banner.png) no-repeat;
+    height: 400px;
+    background-size: 100% 100%;
+  }
+  .d-title {
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  .time,
+  .d-time {
+    font-size: 16px;
+  }
+  .source,
+  .d-source {
+    font-size: 16px;
+  }
+  .article {
+    font-size: 16px;
+  }
+  .article img {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /*width: 100%;*/
+  }
+  /*日期分享来源*/
+  .source-time {
+    margin: 0 auto;
+    height: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .time {
+    margin-right: 10px;
+  }
+  .wechat,
+  .sina {
+    position: absolute;
+    line-height: 2.1;
+  }
+  .wechat {
+    margin-left: 10px;
+  }
+  .sina {
+    margin-left: 46px;
+  }
+  .my-article {
+    font-size: 20px;
+    line-height: 2;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .header {
+    background: url(../img/moblid_20200421_banner.png) no-repeat;
+    height: 400px;
+    background-size: 100% 100%;
+  }
+  .d-title {
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  .time,
+  .d-time {
+    font-size: 16px;
+  }
+  .source,
+  .d-source {
+    font-size: 16px;
+  }
+  .article {
+    font-size: 16px;
+  }
+  .article img {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /*width: 100%;*/
+  }
+  /*日期分享来源*/
+  .source-time {
+    margin: 0 auto;
+    height: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .time {
+    margin-right: 10px;
+  }
+  .wechat,
+  .sina {
+    position: absolute;
+    line-height: 2.1;
+  }
+  .wechat {
+    margin-left: 10px;
+  }
+  .sina {
+    margin-left: 46px;
+  }
+  .my-article {
+    font-size: 20px;
+    line-height: 2;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .header {
+    background: url(../img/moblid_20200421_banner.png);
+    background-size: 100% 100%;
+  }
+  .d-title {
+    font-size: 24px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  .time,
+  .d-time {
+    font-size: 16px;
+  }
+  .source,
+  .d-source {
+    font-size: 16px;
+  }
+  .article {
+    font-size: 16px;
+  }
+  /*日期分享来源*/
+  .source-time {
+    margin: 0 auto;
+    height: 30px;
+    text-align: center;
+    margin-bottom: 10px;
+    position: relative;
+  }
+  .time {
+    margin-right: 10px;
+  }
+  .wechat,
+  .sina {
+    position: absolute;
+    line-height: 2.1;
+  }
+  .wechat {
+    margin-left: 10px;
+  }
+  .sina {
+    margin-left: 46px;
+  }
+  .my-article {
+    font-size: 20px;
+    line-height: 2;
+  }
+}

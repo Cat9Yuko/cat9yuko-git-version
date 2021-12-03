@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/swiper.css" />
+		<script src="js/swiper.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.swiper-wrapper {
+				height: 400px;
+				width: 600px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide"><img src="img/bg_1.jpg" width="100%" /></div>
+				<div class="swiper-slide"><img src="img/bg_1.jpg" width="100%" /></div>
+				<div class="swiper-slide"><img src="img/bg_1.jpg" width="100%" /></div>
+			</div>
+			<div class="swiper-pagination"></div>
+			<div class="swiper-button-prev"></div>
+			<!--左箭头。如果放置在swiper-container外面，需要自定义样式。-->
+			<div class="swiper-button-next"></div>
+			<!--右箭头。如果放置在swiper-container外面，需要自定义样式。-->
+		</div>
+		<script>
+			var mySwiper = new Swiper('.swiper-container', {
+				autoplay: true, //可选选项，自动滑动
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				},
+				pagination: {
+					el: '.swiper-pagination',
+				},
+			})
+		</script>
+	</body>
+
+</html>

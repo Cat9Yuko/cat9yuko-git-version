@@ -1,0 +1,347 @@
+body,
+html {
+	height: 100%;
+	-webkit-tap-highlight-color: transparent;
+}
+::-webkit-scrollbar { width: 0 !important }
+.weui-cells {
+	margin-top: 0;
+	margin: 20px 0;
+}
+.fa-chevron-up {
+	color: #7aa6dd;
+}
+.paddingTop47 {
+	padding-top: 47px!important;
+	padding-bottom: 55px;
+}
+.weui-tabbar__item {
+	background: #FFFFFF;
+}
+
+.weui-navbar__item {
+	padding: 10px 0!important;
+	background: #FFFFFF;
+	color: #000000;
+	border-bottom: 2px solid lightgray;
+}
+.weui-bar__item--on {
+	background-color: #FFFFFF!important;
+	color: #3790ea!important;
+	border-bottom: 2px solid #3790ea;
+}
+
+.updateTime {
+	background: #e6f2fe;
+	/*line-height: 1rem;*/
+	text-align: center;
+	font-size: .8rem;
+	line-height: 2rem;
+}
+.redColor {
+	color: #c75d50;
+}
+
+.todayCalendar,
+.inline_rili {
+	color: #7aa6dd;
+	width: 70px;
+	border: none;
+	padding-left: 10px;
+}
+.inline_rili {
+	color: #7aa6dd;
+	width: 80px;
+	border: none;
+	padding-left: 10px;
+}
+.todayCalendar::-webkit-input-placeholder {
+	color: #7aa6dd;
+}
+.fa-chevron-down {
+	color: #7aa6dd;
+}
+
+
+.padding0 {
+	padding: 0;
+}
+.padding015 {
+	padding: 0 15px;
+}
+
+.options_1_1,
+.options_1_2,
+.options_1_3,
+.options_1_4 {
+	color: #8f9094;
+	text-align: center;
+	border-radius: 5px;
+	padding: 10px 0;
+}
+
+.options_active {
+	color: #000000;
+	background: #efefef;
+}
+
+.bg_fbfbfb {
+	background: #fbfbfb;
+}
+.options_1_title {
+	width: 15%;
+	text-align: center;
+}
+
+.xian,
+.xian1,
+.xian2 {
+	margin: 10px;
+	border: 1px solid #dcdfe1;
+}
+
+.myslide,
+.myslide2,
+.myslide3 {
+	    justify-content: center;
+    align-items: center;
+
+}
+.myslide_btn2,
+.myslide_btn3 {
+	margin-top: 5px;
+}
+
+.peopleList{
+	background: #f2f4f5;
+	border-radius: 25px;
+}
+
+.dept_list {
+	padding: 0 5px;
+}
+.dept_pList_bg {
+	background: #f2f4f5;
+	margin: 5px 5px;
+	padding: 5px;
+	height: 35px;
+	border-radius: 20px;
+}
+.dept_pList_h,
+.dept_pList_n {
+	height: 40px;
+	line-height: 35px;
+	text-align: center;
+	float: left;
+	font-size: 0.7rem;
+}
+
+.dept_pList_n {
+	margin-left: 4%;
+}
+
+.rili_3,
+.rili_3_2,
+.rili_3_3,
+.rili_3_4,
+.rili_3_5,
+.rili_3_6,
+.rili_3_7,
+.rili_3_8,
+.rili_3_9,
+.rili_3_10 {
+	margin-top: 5px;
+	display: none;
+}
+
+.dept_active {
+	background: #3790ea;
+	color: #FFFFFF;
+}
+
+.dept,
+.dept2,
+.dept3,
+.dept4,
+.dept5,
+.dept6,
+.dept7,
+.dept8,
+.dept9,
+.dept10 {
+	height: 40px;
+}
+.dept span,
+.dept2 span,
+.dept3 span,
+.dept4 span,
+.dept5 span,
+.dept6 span,
+.dept7 span,
+.dept8 span,
+.dept9 span,
+.dept10 span{
+	margin-left: 10px;
+	line-height: 40px;
+	color: #3790ea;
+}
+
+.c_title {
+	color: #969696;
+	font-size: 12px;
+}
+.c_number {
+	color: #1885f3;
+	font-size: 30px;
+}
+
+/*未打卡,迟到,早退*/
+.weidaka,
+.chidao,
+.zaotui {
+	text-align: center;
+}
+.weidaka p:nth-child(1),
+.chidao p:nth-child(1),
+.zaotui p:nth-child(1) {
+	font-size: 30px;
+}
+.weidaka p:nth-child(2),
+.chidao p:nth-child(2),
+.zaotui p:nth-child(2) {
+	font-size: 14px;
+}
+.eqZero {
+	color: #878a8d;
+}
+
+.todayList {
+	text-align: center;
+	border-radius: 5px;
+	background: #efefef;
+	padding: 10px 0;
+	font-size: 17px;
+	color: #a9a9a9;
+}
+
+.width25 {
+	width: 25%;
+	text-align: center;
+	line-height: 45px;
+	color: #a7a7a7;
+}
+
+.margin_botomo15 {
+	margin-bottom: 15px;
+}
+
+.wm_bg {
+	width: 100px;
+	border: 1px solid #3396fb;
+	border-radius: 5px;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+.week,
+.month {
+	text-align: center;
+	color: #3396fb;
+}
+
+.wm_active {
+	background: #3396fb;
+	color: #FFFFFF;
+}
+.zhouyueCalendar {
+	margin-top: 10px;
+	margin-right: 10px;
+}
+.weekMCalendar {
+	text-align: center;
+	width: 100px;
+	font-size: 17px;
+	border: none;
+}
+.weui-cells__title {
+	background: #f8f8f8;
+	margin-bottom: 0;
+	height: 30px;
+	line-height: 30px;
+}
+
+.weui-tabbar__item.weui-bar__item--on .weui-tabbar__label {
+	color: #2a8ced;
+}
+.weekMCalendar::-webkit-input-placeholder {
+	color: #000000;
+}
+
+
+
+.list_title {
+	margin-top: 0;
+	height: 40px;
+	line-height: 40px;
+}
+.list_hd {
+	width: 60px;
+}
+
+.list_bd {
+	border-bottom: 1px solid #f3f3f3;
+	line-height: 30px;
+}
+.list_cell {
+	padding: 0 15px;
+}
+.list_cells {
+	margin: 0;
+}
+.weui-cell:before {
+	border-top: none;
+}
+.weui-cells:after {
+	border-bottom: none;
+}
+
+.font_10 {
+	font-size: 10px;
+}
+.font_12 {
+	font-size: 12px;
+}
+.chuchai {
+	display: block;
+	width: 25%;
+	font-size: 12px;
+	float: left;
+	line-height: 30px;
+	justify-content: center;
+}
+.chuchai_con {
+	text-align: justify;
+	font-size: 12px;
+	width: 75%;
+	float: left;
+}
+.list_item {
+	border-bottom: 1px solid #e5e5e5;
+	padding: 5px 0 10px 0;
+}
+.list_item2 {
+	padding: 5px 0 10px 0;
+}
+.weui-cells:before {
+	border-top: none;
+}
+.list_detail {
+	display: none;
+}
+@media only screen and (max-width: 320px) {
+	.dept_pList_n {
+    margin-left: 1%;
+}
+.dept_pList_bg {
+	padding: 0;
+}
+}

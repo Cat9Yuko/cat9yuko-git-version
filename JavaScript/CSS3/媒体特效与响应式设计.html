@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style media="screen">
+    /* Media Type设备类型 */
+    /*
+    All: 所有设备;
+    Braille: 盲人用点字法触觉回馈设备;
+    Embossed: 盲文打印机;
+    Handheld: 便携设备;
+    Projection: 各种 投影设备;
+    Screen: 电脑显示器;
+    Speech: 语音或音频合成器;
+    Tv: 电视机类型设备;
+    Tty: 使用固定密度字母栅格的媒介,比如电传打字机和终端
+     */
+
+    /*  3.@import方式  */
+    @import url(reset.css) screen;
+    @import url(print.css) print;
+
+    /* 4.@media方式(推荐) */
+    /* @media是CSS3中新引进的一个特性,称为媒体查询 */
+    @media screen {
+
+    }
+    /* 媒体特性
+      Media Query 是CSS3对媒体类型(Media Type)的增强版,其实可以将Media Query 看成 "Media Type(判断条件) + CSS(符合条件的样式规则)"
+     */
+    /* Media Query 只接受单个的逻辑表达式作为其值, 或者没有值 */
+    /* CSS属性用于声明如何表现页面的信息; 而Media Query 是一个用于判断输出设备是否满足某种条件的表达式 */
+    /* Media Query 中的大部分接受min/max前缀, 用来表达其逻辑关系, 便是应用于大于等于或小于等于某个值的情况 */
+    /* CSS属性要求必须有属性值, Media Query可以没有值, 因为其表达式返回的只有真或假两种 */
+    @media screen and (max-width: 600px) {
+
+    }
+    /* 最大宽度max-width,max-width是指媒体类型小于等于指定的宽度 */
+    @media screen and (max-width: 480px) {
+
+    }
+    /* 最小宽度min-width,min-width是指媒体类型大于或等于指定宽度 */
+    @media screen and (min-width: 900px) {
+
+    }
+
+    /* 多个媒体特性使用,Media Queries可以使用关键词 "and" 将多个媒体特性结合在一起 */
+    @media screen and (min-width: 600px) and (max-width: 900px) {
+
+    }
+    /* 关键字:
+    1.not
+    2.only */
+    @media not print and (max-width: 1200px) {
+
+    }
+  </style>
+  <!-- /* 在Media Query 中如果没有明确指定Media Type, 其默认为all */ -->
+  <link rel="stylesheet" media="(min-width: 710px) and (max-width: 900px)" href="/css/master.css">
+  <!-- 多条语句 -->
+  <link rel="stylesheet" media="handheld and (max-width: 480px), screen and (min-width: 960px)" href="/css/master.css">
+  <!-- only关键字 -->
+  <link rel="stylesheet" media="only screen and (max-device-width: 240px)" href="/css/master.css">
+  <!-- 简单的实例 -->
+  <link rel="stylesheet" media="screen and (max-width: 600px)" href="/css/master.css">
+
+  <!--  媒体类型引用的方法 */
+  /* 1.link方法(推荐)  -->
+  <link rel="stylesheet" type="text/css" href="/css/master.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="/css/master.css" media="print">
+  <!-- 2.xml方式 -->
+  <?xml-stylesheet rel="stylesheet" media="screen" href="/css/master.css" ?>
+
+
+</head>
+<body>
+
+
+</body>
+</html>

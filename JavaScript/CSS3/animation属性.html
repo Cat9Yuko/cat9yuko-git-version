@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style media="screen">
+    /*
+    animation: [<animation-name> || <animation-duration> || <animation-timing-function> ||
+                <animation-delay> || <animation-iteration-count> || <animation-direction> ||
+                <animation-play-state> || <animation-fill-mode>] *
+     */
+    /*
+    CSS3动画属性有8个:
+    animation-name: 主要用来指定一个关键帧动画的名字, 这个动画名必须对应一个@keyframes规则,CSS加载时会应用animation-name指定的动画,从而执行动画
+    animation-duration: 主要用来设置动画播放所需时间,一般以秒为单位
+    animation-timing-function: 主要用来设置动画的播放方式
+    animation-delay: 主要用来指定动画开始时间,一般以秒为单位
+    animation-iteration-count: 主要用来指定动画播放的循环次数(infinite无限次)
+    animation-direction: 主要用来指定动画的播放方向(默认:normal,alternate:偶数向前播放,奇数向反方向播放)
+    animation-play-state: 主要用来控制动画的播放状态(running,paused)
+    animation-fill-mode: 主要用来设置动画的时间外属性
+     */
+
+    /* 定义动画 */
+    @keyframes wobble {
+      0% {
+        margin-left: 100px;
+        background: green;
+      }
+      40% {
+        margin-left: 150px;
+        background: orange;
+      }
+      60% {
+        margin-left: 75px;
+        background: blue;
+      }
+      100% {
+        margin-left: 100px;
+        background: red;
+      }
+    }
+
+    /* 调用 动画 */
+    .demo {
+      height: 100px;
+      width: 100px;
+      margin-left: 100px;
+      background: blue;
+      -webkit-animation: wobble .2s ease-in;
+      animation: wobble 5s ease-in;
+    }
+  </style>
+</head>
+<body>
+<div class="demo"></div>
+</body>
+</html>

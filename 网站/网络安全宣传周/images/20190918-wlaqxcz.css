@@ -1,0 +1,317 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "微软雅黑";
+}
+
+/*banner样式*/
+
+header {
+	position: relative;
+	width: 100%;
+	background: url(20190918-banner-bg.jpg) no-repeat center center;
+	background-size: cover;
+	height: 341px;
+}
+img {
+    			border: none;
+    		}
+/*header {
+	position: relative;
+	width: 100%;
+	background: url(20190628_cat_banner.jpg) no-repeat center center;
+	background-size: cover;
+	height: 395px;
+}*/
+
+body {
+	min-width: 1200px;
+}
+.banner {
+	width: 1200px;
+	height: 340px;
+	margin: 0 auto;
+}
+.gddt {
+	width: 1200px;
+	height: 110px;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+
+.section-content:nth-child(3) {
+	height: 311px;
+}
+
+/*各个标题边框*/
+
+.section-title {
+	position: relative;
+	width: 544px;
+	height: 96px;
+	margin: 0 auto;
+	border-bottom: 4px solid transparent;
+	border-image: url(border-img.jpg) 30 30 round;
+}
+
+.section-title p {
+	position: absolute;
+	left: 50%;
+	top: 70%;
+	transform: translate(-50%, -50%);
+	font-size: 28px;
+}
+
+.section-content {
+	width: 1200px;
+	height: 435px;
+	margin: 0 auto;
+}
+
+.left,
+.right {
+	margin-top: 40px;
+	height: 336px;
+	width: 600px;
+	float: left;
+	box-sizing: border-box;
+}
+
+
+/*轮播图*/
+
+.swiper-container {
+	position: relative;
+	height: 336px;
+	width: 570px;
+}
+
+
+/*轮播图*/
+
+.swiper-container2 {
+	overflow: hidden;
+	position: relative;
+	height: 336px;
+	width: 570px;
+	margin-left: 16px;
+}
+
+.swiper-container3 {
+	width: 1200px;
+	height: 110px;
+	overflow: hidden;
+}
+
+/*分页器2*/
+
+.pagination2 {
+	position: absolute;
+	z-index: 20;
+	right: 30px;
+	bottom: 5px;
+	width: 100%;
+	text-align: right;
+}
+
+
+/*分页器1*/
+
+.pagination {
+	position: absolute;
+	z-index: 20;
+	right: 30px;
+	bottom: 5px;
+	width: 100%;
+	text-align: right;
+}
+
+.swiper-pagination-switch {
+	display: inline-block;
+	width: 23px;
+	height: 5px;
+	/*border-radius: 8px;*/
+	background: #ababab;
+	margin: 0 3px;
+	opacity: 0.8;
+	border: 1px solid #fff;
+	cursor: pointer;
+}
+
+.swiper-active-switch {
+	background: #012ab3;
+}
+
+a {
+	text-decoration: none;
+}
+
+.top {
+	width: 589px;
+	height: 171px;
+	border-bottom: 1px dashed black;
+}
+
+.top P:nth-child(1) {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	text-align: center;
+	color: #022cb5;
+	font-size: 26px;
+	margin-bottom: 43px;
+}
+
+.top p:nth-child(2) {
+	font-size: 18px;
+	line-height: 1.5;
+}
+
+.top p:nth-child(2) a {
+	color: #1e89e4;
+}
+
+.myul {
+	padding-top: 30px;
+}
+.myul a {
+	color: #000000;
+}
+.myul li {
+	list-style: none;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+
+.myul li:before {
+	display: inline-block;
+	content: "·";
+	padding-left: 10px;
+	width: 10px;
+}
+
+.restyle {
+	padding-top: 10px;
+}
+.restyle li {
+	margin-bottom: 12px;
+}
+
+#gddt li {
+	margin-bottom: 12px;
+	width: 48%;
+	float: left;
+}
+#gddt li:nth-child(even) {
+	margin-left: 4%;
+}
+.left-1,
+.left-2,
+.right-1,
+.right-2
+ {
+ 	position: relative;
+ 	width: 289px;
+ 	height: 178px;
+	float: left;
+}
+.left-2,
+.right-2 {
+	margin-left: 10px;
+}
+.title {
+	background: #000000;
+	opacity: 0.7;
+	position: absolute;
+	bottom: 4px;
+	height: 31px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	line-height: 2;
+	text-indent: 1em;
+	width: 280px;
+	color: #FFFFFF;
+	
+}
+.title2 {
+	font-size: 16px;
+	background: #000000;
+	opacity: 0.6;
+	position: absolute;
+	bottom: 0;
+	height: 30px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	padding-top: 10px;
+	text-indent: 1em;
+	width: 570px;
+	color: #FFFFFF;
+}
+.title2 a {
+	color: #FFFFFF;
+}
+.last-content {
+	width: 1200px;
+	height: 110px;
+	margin: 0 auto;
+	padding-top: 25px;
+}
+.c1 {
+	float: left;
+	width: 386px;
+	height: 79px;
+}
+.c2 {
+	float: left;
+	width: 386px;
+	height: 79px;
+	margin-left: 20px;
+}
+
+.c3 {
+	float: right;
+	width: 386px;
+	height: 79px;
+}
+
+.footer {
+	height: 136px;
+	background: #072d9d;
+}
+.f-main {
+	background: #072d9d;
+	color: #FFFFFF;
+	width: 960px;
+	height: 65px;
+	margin: 0 auto;
+	font-size: 16px;
+	padding-top: 40px;
+}
+
+.f1 {
+	float: left;
+	width: 800px;
+	line-height: 2;
+	height: 61px;
+}
+.f2 {
+	width: 160px;
+	float: left;
+}
+
+.pic{
+  width: 1200px;
+  height: 180px;
+  margin-top: 40px;
+  border: none;
+}
+
+.pic .swiper-slide{
+      margin-right: 12px;
+      width: 280px!important;
+}

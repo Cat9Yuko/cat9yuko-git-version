@@ -1,0 +1,276 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "微软雅黑";
+}
+body {
+	min-width: 1200px;
+	background: #FDFDFD;
+}
+img {
+	border: none;
+	outline: none;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+.center_block {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+/*banner*/
+.banner {
+	width: 100%;
+	height: 703px;
+	background: url(../img/xjzxzl_20200414_banner.jpg) center center;
+	background-size: cover;
+}
+.qianyan {
+	height: 89px;
+	margin-bottom: 40px;
+	background: url(../img/xjzxzl_20200414_qy.png) center center;
+	background-size: cover;
+}
+.qy_w {
+	font-size: 16px;
+	text-indent: 2rem;
+	line-height: 40px;
+}
+
+/*巡展*/
+.xunzhan {
+	height: 90px;
+	background: url(../img/xjzxzl_20200414_xz.png) center center;
+	background-size: cover;
+	margin-bottom: 45px;
+}
+
+.xian {
+	position: relative;
+	height: 208px;
+	background: url(../img/xjzxzl_20200414_xian.jpg) center center;
+	background-size: cover;
+}
+
+.dian {
+	position: absolute;
+	width: 23px;
+	height: 23px;
+}
+.dianc {
+	display: none;
+	position: absolute;
+	width: 32px;
+	height: 32px;
+}
+.d1,.d1-1 {
+	left: 164px;
+	top: 131px;
+}
+.d1-1 {
+	left: 159px;
+	top: 127px;
+}
+.d2,.d2-1 {
+	left: 303px;
+	top: 55px;
+}
+.d2-1 {
+	left: 298px;
+	top: 51px;
+}
+.d3,.d3-1 {
+	left: 455px;
+	top: 131px;
+}
+.d3-1 {
+	left: 450px;
+	top: 127px;
+}
+.d4,.d4-1 {
+	left: 600px;
+	top: 55px;
+}
+.d4-1 {
+	left: 595px;
+	top: 51px;
+}
+
+.d5,.d5-1 {
+	right: 444px;
+	top: 131px;
+}
+.d5-1 {
+	right: 440px;
+	top: 127px;
+}
+.d6,.d6-1 {
+	right: 313px;
+	top: 55px;
+}
+.d6-1 {
+	right: 309px;
+	top: 51px;
+}
+.d7,.d7-1 {
+	right: 164px;
+	top: 131px;
+}
+.d7-1 {
+	right: 160px;
+	top: 127px;
+}
+.top,.bottom {
+	overflow: hidden;
+	font-size: 18px;
+}
+.t {
+	float: left;
+}
+
+.top .t1 {
+	margin-left: 289px;
+}
+.top .t2 {
+	margin-left: 242px;
+}
+.top .t3 {
+	margin-left: 147px;
+}
+
+.t.act {
+	color: #7d2612;
+	font-weight: bold;
+}
+
+.bottom .t1 {
+	margin-left: 125px;
+}
+.bottom .t2 {
+	margin-left: 228px;
+}
+
+.bottom .t3 {
+	margin-left: 200px;
+}
+
+.bottom .t4 {
+	margin-left: 138px;
+}
+
+/*部分参展*/
+.bufen {
+	height: 89px;
+	background: url(../img/xjzxzl_20200414_bfcz.png) center center;
+	background-size: cover;
+	margin: 73px 0 45px 0;
+}
+
+.slick-slide {
+      margin: 0px 10px;
+      outline: none;
+      height: 311px;
+}
+.slick-slide img {display: inline;}
+
+.footer {
+	height: 196px;
+	background: #573e38;
+	/*margin-top: 88px;*/
+}
+.wenzi {
+    position: relative;
+    padding-top: 45px;
+}
+.wenzi_cont {
+    color: #fff;
+    font-size: 16px;
+    width: 695px;
+    float: left;
+}
+.wenzi_cont p {
+    line-height: 34px;
+}
+
+.w_pic {
+    padding-top: 20px;
+    width: 250px;
+    height: 94px;
+    float: right;
+}
+
+.w_pic img {
+    padding-left: 5px;
+    cursor: pointer;
+}
+/* 清除浮动 */
+.clearfix {
+    *zoom: 1;/* ie6,ie7清除浮动 */
+}
+.clearfix::after,
+.clearfix::before {
+    content: "";
+    display: table;
+}
+.clearfix::after {
+    clear: both;
+}
+.tab {
+	width: 391px;
+	margin: 0 auto;
+	margin-bottom: 43px;
+}
+.item {
+	float: left;
+	font-size: 18px;
+	color: #FFFFFF;
+	background: #ababab;
+	border-radius: 20px;
+	padding: 9px 32px;
+	text-align: center;
+	display: inline-block;
+	margin-right: 16px;
+	-moz-box-shadow: 0 0 7px #ccc;
+    -ms-box-shadow: 0 0 7px #ccc;
+    -o-box-shadow: 0 0 7px #ccc;
+    -webkit-box-shadow: 0 0 7px #ccc;
+    box-shadow: 0 0 7px #ccc;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=5, Direction=120, Color='#D6D6D6')";
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=5, Direction=120, Color='#D6D6D6');
+}
+.tab .item:nth-child(3) {
+	margin-right: auto;
+}
+
+.item.act {
+	background: #7d2612;
+}
+
+.swiper-container {
+	display: none;
+}
+.swiper-container.act {
+	display: block;
+}
+.fbg {
+	/*background: url(../img/xjzxzl_20200414_footer.jpg);*/
+	padding-bottom: 88px;
+}
+
+.xunzhan a,
+.bufen a {
+	display: block;
+	height: 100%;
+	width: 130px;
+	margin: 0 auto;
+}
+
+.bufen a {
+	width: 344px;
+}
+.er_li {
+    padding: 15px 26px;
+    min-height: 710px;
+}

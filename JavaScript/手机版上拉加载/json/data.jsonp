@@ -1,0 +1,80 @@
+"mobileListHandler"({
+    "msgCode": 2,
+    "msg": {
+    "chnlid": "322",
+    "chnlname": "新闻资讯",
+    "doclist": [
+        {
+        "docid": "1162",
+        "doctitle": "江西水土保持生态科技园",
+        "docpubtime": "2019-07-01 10:15",
+  "docsource": "水利部",
+        "docpuburl": "http://192.168.25.1:8080/pub/sjxw/xwzx/201907/t20190701_1162.html",
+  "docpic": "/preview/sjxw/xwzx/201907/W020190708500730942628.jpg"
+        },   
+        {
+        "docid": "1161",
+        "doctitle": "新疆坎儿井研究会吐鲁番坎儿井乐园",
+        "docpubtime": "2019-07-01 10:14",
+        "docpuburl": "http://192.168.25.1:8080/pub/sjxw/xwzx/201907/t20190701_1161.html",
+  "docpic": "/preview/sjxw/xwzx/201907/W020190708500727114519.jpg"
+        },   
+        {
+        "docid": "1160",
+        "doctitle": "太湖溇港文化展示馆",
+        "docpubtime": "2019-07-01 10:14",
+        "docpuburl": "http://192.168.25.1:8080/pub/sjxw/xwzx/201907/t20190701_1160.html",
+  "docpic": "/preview/sjxw/xwzx/201907/W020190708500725015799.jpg"
+        },   
+        {
+        "docid": "1159",
+        "doctitle": "寻源水文化研学基地（农夫山泉）",
+        "docpubtime": "2019-07-01 10:13",
+        "docpuburl": "http://192.168.25.1:8080/pub/sjxw/xwzx/201907/t20190701_1159.html",
+  "docpic": "/preview/sjxw/xwzx/201907/W020190708500722723830.jpg"
+        },   
+        {
+        "docid": "1158",
+        "doctitle": "汉城湖",
+        "docpubtime": "2019-07-01 10:11",
+        "docpuburl": "http://192.168.25.1:8080/pub/sjxw/xwzx/201907/t20190701_1158.html",
+  "docpic": "/preview/sjxw/xwzx/201907/W020190708500719030452.jpg"
+        },   
+        {
+        "docid": "1157",
+        "doctitle": "三峡试验坝陆水水利枢纽工程",
+        "docpubtime": "2019-07-01 10:11",
+        "docpuburl": "http://192.168.25.1:8080/pub/sjxw/xwzx/201907/t20190701_1157.html",
+  "docpic": "/preview/sjxw/xwzx/201907/W020190708500712772623.jpg"
+        },   
+        {
+        "docid": "1156",
+        "doctitle": "黄河三盛公水利枢纽",
+        "docpubtime": "2019-07-01 10:10",
+        "docpuburl": "http://192.168.25.1:8080/pub/sjxw/xwzx/201907/t20190701_1156.html",
+  "docpic": "/preview/sjxw/xwzx/201907/W020190708500707262570.jpg"
+        },   
+        {
+        "docid": "1155",
+        "doctitle": "槐房再生水厂",
+        "docpubtime": "2019-07-01 10:07",
+        "docpuburl": "http://192.168.25.1:8080/pub/sjxw/xwzx/201907/t20190701_1155.html",
+  "docpic": "/preview/sjxw/xwzx/201907/W020190708500704260078.jpg"
+        },   
+        {
+        "docid": "1154",
+        "doctitle": "韶山灌区",
+        "docpubtime": "2019-07-01 10:04",
+        "docpuburl": "http://192.168.25.1:8080/pub/sjxw/xwzx/201907/t20190701_1154.html",
+  "docpic": "/preview/sjxw/xwzx/201907/W020190708500700562107.jpg"
+        },   
+        {
+        "docid": "1153",
+        "doctitle": "长渠（白起渠）",
+        "docpubtime": "2019-07-01 10:04",
+        "docpuburl": "http://192.168.25.1:8080/pub/sjxw/xwzx/201907/t20190701_1153.html",
+  "docpic": "/preview/sjxw/xwzx/201907/W020190708500696248067.jpg"
+        }
+    ]
+    }
+})

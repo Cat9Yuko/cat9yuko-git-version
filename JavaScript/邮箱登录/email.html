@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="render" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>邮箱登录</title>
+    <script src="image/jquery-1.8.3.js" type="text/javascript" charset="utf-8"></script>
+    
+    <style>
+        html{
+            height: 100%;
+        }
+        body{
+            min-height: 100%;
+            padding: 0;
+            margin: 0;
+            font-family: PingFang-SC-Medium, "Microsoft Yahei", sans-serif;
+            font-size: 16px;
+            background-color: #153e7e;
+        }
+        .wrapper{
+            margin: 0 auto;
+            width: 945px;
+        }
+        .header{
+            margin-bottom: 60px;
+            padding-top: 60px;
+        }
+        .help{
+            margin-top: 20px;
+            font-size: 18px;
+            color: #fff;
+            text-decoration: none;
+        }
+        .logo{
+            display: inline-block;
+        }
+        .main{
+            margin-bottom: 60px;
+            padding: 30px 30px 42px 615px;
+            color: #999999;
+            background: #fff url("./image/left.png") left center/585px auto no-repeat;
+            box-sizing: border-box;
+        }
+        .login_title{
+            margin: 0;
+            font-size: 24px;
+            font-weight: normal;
+            color: #333333;
+        }
+        .fr{
+            float: right;
+        }
+        .input{
+            padding: 0 40px;
+            line-height: 40px;
+            height: 40px;
+            border: 1px #cccccc solid;
+            box-sizing: border-box;
+        }
+        .input:focus{
+            outline: 1px #0f0f0f solid;
+        }
+        .login_user .input{
+            width: 50%;
+            padding: 0 0 0 40px;
+            background: url("./image/user.png") 18px center no-repeat;
+            vertical-align: top;
+        }
+        .postfix{
+        	float: right;
+            width: 50%;
+            display: inline-block;
+            line-height: 40px;
+            height: 40px;
+            border: 1px #cccccc solid;
+            border-left-color: transparent;
+            box-sizing: border-box;
+            text-align: center;
+            vertical-align: top;
+        }
+        .login_psw .input{
+            width: 100%;
+            background: url("./image/paw.png") 18px center no-repeat;
+        }
+        .mb10{
+            margin-bottom: 25px;
+        }
+        .footer p{
+            color: rgba(255, 255, 255, 0.45);
+            text-align: center;
+        }
+        .submit{
+            width: 100%;
+            color: #fff;
+            border: none;
+            line-height: 40px;
+            height: 40px;
+            background-color: #063f98;
+        }
+        .forgot_pwd{
+            font-size: 14px;
+            color: #063F98;
+            text-decoration: none;
+        }
+        .login_select span{
+            display: inline-block;
+            width: 50%;
+            line-height: 40px;
+            height: 40px;
+            color: #333333;
+            text-align: center;
+            background-color: rgba(6, 63, 152, 0.15);
+            cursor: default;
+        }
+        .login_select span.active{
+            color: #ffffff;
+            background: #063f98;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="logo">
+                <img src="./image/logo.svg">
+            </div>
+            
+            <a class="fr help" href="https://service.exmail.qq.com/cgi-bin/help">帮助</a>
+        </div>
+        <div class="main">
+            <form action="https://exmail.qq.com/cgi-bin/login"  runat="server">
+            	            
+            <form id="subform" action="https://exmail.qq.com/cgi-bin/login"  runat="server">
+		    <input type="hidden" name="firstlogin" value="false">
+		    <input type="hidden" name="errtemplate" value="dm_loginpage">
+		    <input type="hidden" name="aliastype" value="other">
+		    <input type="hidden" name="dmtype" value="bizmail">
+		    <input type="hidden" name="p" value="">
+		    <input type="hidden" id="domain" name="domain" value="@bistu.edu.cn">
+		    
+            
+            
+			    
+                <h1 class="login_title mb10">用户登录</h1>
+                <div class="login_select mb10"><!--去除幽灵空白-->
+                    <span class="left active">教师</span><span class="right">学生</span>
+                </div>
+                <div class="login_user mb10">
+                	<input type="text" name="uin" class="emailInput input required" id="inputEmail" placeholder="账户名/别名" />
+                    <span class="postfix">@bistu.edu.cn</span>
+                </div>
+                <div class="login_psw mb10">
+                	<input type="Password" name="pwd" class="input emailInput required" id="innputPassword" placeholder="密码" />
+                </div>
+                <input type="submit" id="btnLogin" class="submit  mb10 btn btn-info btn-block" value="登录" />
+                <a class="forgot_pwd fr" href="http://exmail.qq.com/cgi-bin/readtemplate?check=false&t=biz_rf_portal#recovery">忘记密码</a>
+            </form>
+        </div>
+        <div class="footer">
+            <p>北京信息科技大学邮件系统由信息与网络管理中心维护，腾讯企业邮箱提供技术支持</p>
+            <p>@2005-2018北京信息科技大学 京公网安备110402430033号 京ICP备17006670号-1</p>
+        </div>
+    </div>
+    <script type="text/javascript">
+    var $teacher =	$(".main .left");
+    var $student = $(".main .right");
+	var $postfix = $(".main .postfix");
+	var $domain = $("#domain");
+	console.log($domain.val());
+	$student.click(function () {
+		$(this).addClass("active");
+		$teacher.removeClass("active");
+		$postfix.html("@mail.bistu.edu.cn");
+		var $domain = $("#domain");
+		$domain.attr("value","@mail.bistu.edu.cn");
+	});
+	$teacher.click(function () {
+		$(this).addClass("active");
+		$student.removeClass("active");
+		
+		$postfix.html("@bistu.edu.cn");
+		var $domain = $("#domain");
+		$domain.attr("value","@bistu.edu.cn");
+	});
+
+/*验证*/
+	$(function () {
+				
+				//验证表单
+				
+				$("form :input").blur(function () {//为表单元素添加失去焦点事件
+					
+					var $parent = $(this).parent();
+					//删除以前的提示元素
+					$parent.find(".formtips").remove();
+					
+					//验证邮箱
+					if($(this).is("#inputEmail")){
+						$post = $postfix.html();
+						this.value
+						if(this.value ==""){
+							var errorMsg = "请输入E-Mail地址.";
+							$(this).attr("placeholder","");
+							$(this).attr("placeholder",errorMsg);
+						}else{
+							$(this).attr("placeholder","");
+						}
+					}
+					
+					//验证密码
+					if($(this).is("#innputPassword")){
+						if(this.value ==""){
+							var errorMsg = "请输入密码";
+							$(this).attr("placeholder","");
+							$(this).attr("placeholder",errorMsg);
+						}else{
+							$(this).attr("placeholder","");
+						}
+					}
+				}).keyup(function () {
+					
+					//trigger("blur")不仅会触发为元素绑定的blur事件,也会触发浏览器默认的blur事件
+					//triggerHandler("blur")只会茶法为元素绑定的blur事件,而不触发浏览器默认的blur事件
+					$(this).triggerHandler('blur');
+				}).focus(function () {
+					$(this).triggerHandler('blur');
+				});
+				//提交验证
+				$("#btnLogin").click(function () {
+					$("form .required:input").trigger('blur');
+					var $inputEmail = $("#inputEmail").attr("placeholder");
+					var innputPassword = $("#innputPassword").attr("placeholder");
+					if($inputEmail!=""||innputPassword!=""){
+						return false;
+					}
+				});
+				
+			});
+    </script>
+</body>
+</html>

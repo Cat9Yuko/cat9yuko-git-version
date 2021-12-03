@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+		<title></title>
+
+		<!-- Bootstrap core CSS -->
+		<link href="images/bootstrap.css" rel="stylesheet">
+		<script src="images/jquery-1.9.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="images/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	</head>
+
+	<body>
+		<button type="button" id="myButton" data-loading-text="Loading..." class="btn btn-primary" autocomplete="off">
+			Loading state
+		</button>
+		
+		<button type="button" id="myButton" data-toggle="button" class="btn btn-primary" aria-pressed="false" autocomplete="off">Loading state</button>
+		
+		<!--作为按钮的复选框-->
+		<div class="btn-group" data-toggle="buttons">
+			<label class="btn btn-primary active">
+				<input type="checkbox" autocomplete="off" checked="checked"/>Dandelions!
+			</label>
+			<label class="btn btn-primary">
+				<input type="checkbox" autocomplete="off" />Orchids
+			</label>
+		</div>
+		
+		<!-- 可撤销警告框 -->
+		<div class="alert alert-warning alert-dismissable" role="alert">
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+			Warning! Learning about dandelions can be addictive.
+		</div>
+		
+		<!-- 进度条 -->
+		<div class="progress">
+			<div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 1%; min-width: 2em;">
+				20% Read
+			</div>
+		</div>
+		
+		<!-- 堆叠的进度条 -->
+		<div class="progress">
+			<div class="progress-bar progress-bar-warning progress-bar-striped active" style="width: 54%;">
+				54% love dandelions
+			</div>
+			<div class="progress-bar progress-bar-danger progress-bar-striped active" style="width: 13%;">
+				13% love roses
+			</div>
+			<div class="progress-bar progress-bar-info progress-bar-striped active" style="width: 30%;">
+				30% love orchids
+			</div>
+		</div>
+		<script type="text/javascript">
+			$('#myButton').on('click',function () {
+				var $btn = $(this);
+				$btn.button('loading');
+			})
+		</script>
+	</body>
+
+</html>

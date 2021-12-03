@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="icon" href="img/favicon.ico"/> 
+	</head>
+	<body>
+		<figure>
+			<figcaption>PRC</figcaption>
+			<p>这是一段内容</p>
+		</figure>
+		
+		<br />
+		<video src="" controls="controls">video元素</video>
+		
+		<br />
+		<audio src="" controls="controls">audio元素</audio>
+		<br />
+		<!--用来插入各种多媒体-->
+		<embed src="" />
+		<mark>突出显示或高亮显示的文字</mark>
+		<br />
+		<progress>表示运行中的进程</progress>
+		<br />
+		<meter>表示度量衡</meter>
+		<br />
+		<time>表示日期或时间</time>
+		<!--ruby元素表示注释-->
+		<!--rt元素表示字符的解释或者发音-->
+		<!--rp元素在ruby注释中使用,以定义不支持ruby元素的浏览器所显示的内容-->
+		<ruby>汉字<rt><rp>(</rp>这是音标<rp>)</rp></rt></ruby>
+		<ruby>-_-||<rt>无语</rt></ruby>
+		<!--wbr元素表示软换行
+			wbr和br的区别是br是此处必须换行,而wbr元素意思就是浏览器窗口或父级元素的宽度不够时主动在此换行
+		-->
+		<p> To lear HTML5 , you must be fami<wbr>liar with the CSS3</wbr> Request Object.</p>
+		
+		<!--画布-->
+		<canvas id="myCanvas" width="200" height="200"></canvas>
+		<!--表示命令按钮,比如单选按钮,复选框或按钮-->
+		<command onclick="cut()" label="cut"></command>
+		<!--得到细节信息,可以与summary元素配合使用-->
+		<details>
+			This document teaches you everything you have to learn about HTML5.
+			<summary>HTML5</summary>
+			
+		</details>
+		
+		<!--可选数据的列表-->
+		<details>
+			
+		</details>
+		<!--以树形图表示数据的列表-->
+		<datagrid>
+			
+		</datagrid>
+		
+		<!--表示生成密钥-->
+		<keygen />
+		<menu>
+			<li><input type="checkbox"/>RED</li>
+			<li><input type="checkbox"/>BLUE</li>
+		</menu>
+		
+		邮箱:<input type="email" />
+		url:<input type="url" />
+		number:<input type="number" />
+		range:<input type="range" />
+		date:<input type="datetime-local" />
+		
+		<form id="myForm" action="" method="post">
+		必填:<input type="tex" name="" id="" value="" required="required"/>
+			<input type="submit" value="提交"/>
+			
+		</form>
+		<fieldset id="">
+			<legend>标题</legend>
+			
+			哈哈哈哈
+		</fieldset>
+		
+		<input type="checkbox" />
+		<a href="#" download=""></a>
+		<input type="text"  value="不可修改" disabled="disabled"/>
+		
+		<ul contenteditable="true">
+			<li>可修改</li>
+		</ul>
+		
+		<!--如果元素的readOnly属性或disable属性设为true,则不执行拼写检查-->
+		<textarea spellcheck="true" readonly="readonly">
+			appll
+		</textarea>
+		
+		<!--当tabindex为负数,仍然可以通过编程的方式让元素获得焦点,但不会被tab获得焦点-->
+		<a href="#" tabindex="-1">不为被聚焦</a>
+		<a href="#">会聚焦</a>
+		<a href="#myCanvas">会聚焦</a>
+	</body>
+</html>

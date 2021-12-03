@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="../site8/jquery-2.2.4.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="../site8/swiper.min.css" />
+		<link rel="stylesheet" type="text/css" href="../site8/20190703_base.css" />
+		<script src="../site8/201900703_idangerous.swiper2.7.6.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			
+			$(function () {
+				$(".search-icon").click(function () {
+					$(".search-input").toggle();
+					$(".title").toggle();
+				});
+			});
+		</script>
+                <style type="text/css">
+	a{
+		text-decoration: none;
+		color: black;
+                
+		font-size:16px ;
+	}
+
+.review-imag{
+				padding: 10px;
+				height: 100%;
+				width: 100%;}
+
+/*上拉加载*/
+			#wrapper {
+            height:400px;
+            width: 100%;
+            min-width: 320px;
+            position: absolute;
+            left: 0;
+            overflow: hidden;
+            z-index: 1;
+           
+ 
+            /* 防止本机Windows上的触摸事件 */
+            -ms-touch-action: none;
+ 
+            /* 防止callout tap-hold和文本的选择 */
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+ 
+            /* 防止文本调整取向变化对web应用程序很有用 */
+            -webkit-text-size-adjust: none;
+            -moz-text-size-adjust: none;
+            -ms-text-size-adjust: none;
+            -o-text-size-adjust: none;
+            text-size-adjust: none;
+        }
+        .pull-loading {
+            text-align: center;
+            height: 40px;
+            line-height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+.swiper-container {
+height:190px;
+}
+
+.desc-container1 {
+	overflow: inherit;
+}
+</style>
+		
+	</head>
+
+	<body>
+		<header>
+			<div class="title">新闻资讯</div>
+			<div class="search-icon"><img src="../site8/search-icon.jpg" width="20px" height="20px" /></div>
+			<div class="search-input"><input type="search" /></div>
+		</header>
+
+		<!-- 轮播图开始-->
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<TRS_DOCUMENTS ID="图片新闻" NUM="3">
+				<div class="swiper-slide">
+					<a href="<TRS_DOCUMENT FIELD="_RECURL"></TRS_DOCUMENT>">
+						<img src="<TRS_APPENDIX INDEX="0" FIELD="_RECURL" TARGET="_blank" MODE="PIC" UPLOAD="TRUE"></TRS_APPENDIX>" width="100%" height="100%" onerror="this.src='../site8/20190712default.jpg';this.onerror=null"/></a>
+					<div class="desc"><TRS_DOCUMENT AUTOFORMAT="TRUE" FIELD="DOCABSTRACT" NUM="30">摘要</TRS_DOCUMENT></div>
+				</div>
+				</TRS_DOCUMENTS>
+			</div>
+			<div class="swiper-pagination swiper-pagination-white">&nbsp;</div>
+		</div>
+		<script src="../site8/swiper.min.js"></script>
+		<script>
+			var swiper = new Swiper('.swiper-container', {
+				speed: 300, //切换速度
+				autoplay: {
+					delay: 3000 //自动切换速度
+				},
+				loop: true,
+				pagination: {
+					el: '.swiper-pagination',
+				},
+			});
+		</script>
+
+		<!--轮播图结束-->
+                <!--上拉加载开始-->
+		
+		<script src="../site8/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+		<div id="wrapper" class="container-news">
+			<div id="scroller">
+				<ul>
+				    <TRS_DOCUMENTS PAGESIZE="5" ID="OWNER">
+			<section>
+			<div class="image-news-container">
+				<div class="image-news">
+					<div class="review-imag">
+						<a href="<TRS_DOCUMENT FIELD="_RECURL"></TRS_DOCUMENT>">
+<img src="<TRS_APPENDIX INDEX="0" FIELD="_RECURL" TARGET="_blank" MODE="PIC" UPLOAD="TRUE"></TRS_APPENDIX>" width="90%" height="80%" onerror="this.src='../site8/20190712default.jpg';this.onerror=null"/></a>
+						</div>
+				</div>
+			</div>
+			<div class="title-news-container">
+				<div class="title-news">
+					<div class="desc-container1"><a href="<TRS_DOCUMENT FIELD="_RECURL"></TRS_DOCUMENT>"><TRS_DOCUMENT FIELD="DOCTITLE"></TRS_DOCUMENT></a></div>
+					<div class="desc-container2">
+						<span class="title-date"><TRS_DOCUMENT FIELD="CRTIME" DATEFORMAT="yyyy-MM-dd">2019年7月3日</TRS_DOCUMENT></span>
+						<span class="title-source"><TRS_DOCUMENT FIELD="DOCSOURCE"></TRS_DOCUMENT></span>
+					</div>
+				</div>
+			</div>
+			</section>
+			</TRS_DOCUMENTS>
+				</ul>
+				<div class="pull-loading">
+					上拉加载
+				</div>
+			</div>
+		</div>
+                <script type="text/javascript" src="../site8/iscroll.js"></script>
+<script type="text/javascript">
+    var myscroll = new iScroll("wrapper", {
+        onScrollMove: function () { //拉动时
+            //上拉加载
+            if (this.y < this.maxScrollY) {
+                $(".pull-loading").html("释放加载");
+                $(".pull-loading").addClass("loading");
+            } else {
+                $(".pull-loading").html("上拉加载");
+                $(".pull-loading").removeClass("loading");
+            }
+        },
+        onScrollEnd: function () { //拉动结束时
+            //上拉加载
+            if ($(".pull-loading").hasClass('loading')) {
+                $(".pull-loading").html("加载中...");
+                pullOnLoad();
+            }
+        }
+    });
+ 
+ //上拉加载函数,ajax
+			var page = 0; 
+
+			var _url = './list.jsonp'
+
+			function pullOnLoad() {
+
+				setTimeout(function() {
+					
+					if(page >= 1) {
+							_url = './list_' + page + '.jsonp'
+						}
+					$.ajax({
+						url: _url,
+                                                async: false,
+						type: "get",
+						dataType: 'jsonp',
+						jsonpCallback: "mobileListHandler",
+						success: function(res) {
+							page++
+							console.log(res)
+							var html = ''
+							var data_length = res.msg.doclist.length; //数据的总长度
+							for(var i = 0; i < res.msg.doclist.length; i++) {
+								if(!res.msg.doclist[i].docsource) {
+									html += '<section>'
+          +'<div class="image-news-container">'
+          +'<div class="image-news">'
+          +'<div class="review-imag">'
+          +'<a href="'+ res.msg.doclist[i].docpuburl +'">'
+          +'<img src="'+ res.msg.doclist[i].docpic +'" width="90%" height="80%" onerror="this.src="../site8/20190712default.jpg";this.onerror=null"/>'
+          +'</a>'
+          +'</div>'
+          +'</div>'
+          +'</div>'
+          +'<div class="title-news-container">'
+          +'<div class="title-news">'
+          +'<div class="desc-container1">'
+          +'<a href="'+ res.msg.doclist[i].docpuburl +'">'
+          + res.msg.doclist[i].doctitle
+          +'</a>'
+          +'</div>'
+          +'<div class="desc-container2">'
+          +'<span class="title-date">'
+          + res.msg.doclist[i].docpubtime
+          +'</span>'
+          +'<span class="title-source">'
+          + res.msg.doclist[i].docsource
+          +'</span>'
+          +'</div>'
+          +'</div>'
+          +'</div>'
+          +'</section>';
+                                                                        console.log("success")
+								} else {
+									html += '<section>'
+          +'<div class="image-news-container">'
+          +'<div class="image-news">'
+          +'<div class="review-imag">'
+          +'<a href="'+ res.msg.doclist[i].docpuburl +'">'
+          +'<img src="'+ res.msg.doclist[i].docpic +'" width="90%" height="80%" onerror="this.src="../site8/20190712default.jpg";this.onerror=null"/>'
+          +'</a>'
+          +'</div>'
+          +'</div>'
+          +'</div>'
+          +'<div class="title-news-container">'
+          +'<div class="title-news">'
+          +'<div class="desc-container1">'
+          +'<a href="'+ res.msg.doclist[i].docpuburl +'">'
+          + res.msg.doclist[i].doctitle
+          +'</a>'
+          +'</div>'
+          +'<div class="desc-container2">'
+          +'<span class="title-date">'
+          + res.msg.doclist[i].docpubtime
+          +'</span>'
+          +'<span class="title-source">'
+          + res.msg.doclist[i].docsource
+          +'</span>'
+          +'</div>'
+          +'</div>'
+          +'</div>'
+          +'</section>';
+                                                                         console.log("success2")
+								}
+
+							}
+							$("#scroller ul").append(html)
+$("img").attr("onerror","this.src='../site8/20190712default.jpg';this.onerror=null");
+							myscroll.refresh();
+
+						},
+						error: function() {
+                                                        $('.pull-loading').html("没有了哟");
+							console.log("NO  DATA!");
+						}
+					});
+					myscroll.refresh();
+                                        
+				}, 500);
+			}
+			
+</script>
+
+	</body>
+
+</html>

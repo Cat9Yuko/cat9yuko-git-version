@@ -1,0 +1,307 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑";
+}
+body{background: #D3D1D6;}
+a {text-decoration: none;color: inherit;outline: none;}
+li {list-style: none;}
+img {border: none;}
+.center_block {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.banner {
+    position: relative;
+    height: 185px;
+    background: url(../images/slbzhkf_202005_banner.jpg) center center;
+    background-size: cover;
+}
+.search-bar {
+    position: absolute;
+    right: 10px;
+    bottom: 9px;
+    height: 22px;
+}
+.search-bar .s1 {
+    height: 100%;
+    width: 190px;
+    border: none;
+    vertical-align: middle;
+    outline: none;
+
+}
+.search-bar .s2 {
+    vertical-align: middle;
+    outline: none;
+}
+.stime {
+    height: 20px;
+    font-size: 12px;
+    line-height: 25px;
+    color: #ffffff;
+    text-align: right;
+    padding-right: 5px;
+}
+.nav {
+    height: 34px;
+    background: url(../images/slbzhkf_202005_nav.jpg) center center;
+    background-size: cover;
+}
+
+.home {
+    width: 90px;
+    display: block;
+    float: left;
+    text-align: center;
+    color: #f4fa06;
+    font-size: 14px;
+    margin-left: 10px;
+    margin-top: -3px;
+}
+.nav ul {
+    height: 100%;
+    float: left;
+    font-size: 14px;
+    color: #ffffff;
+    line-height: 34px;
+    margin-left: 45px;
+    font-weight: bold;
+}
+.nav ul li {
+    float: left;
+    padding: 0 30px;
+}
+
+.navicon {
+    float: left;
+    height: 34px;
+}
+.navicon img {
+    vertical-align: middle;
+}
+
+
+.section1 {
+    margin-top: 17px;
+    /* padding-left: 10px; */
+    overflow: hidden;
+}
+/* 轮播图 */
+.carouse {
+    float: left;
+    width: 457px;
+    height: 305px;
+    background: url(../images/slzhkf_202005_bannerbg.png) center center;
+    background-size: cover;
+    margin-left: 10px;
+}
+.slick-mod {
+    position: relative;
+    width: 438px;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+.tit1 {
+    position: relative;
+    font-size: 12px;
+    background: #ffffff;
+    padding: 5px;
+    line-height: 1.5;
+    height: 35px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.c1 {
+    width: 505px;
+    height: 300px;
+    border-top: 1px solid #b7b7b7;
+    border-right: 1px solid #b7b7b7;
+    float: right;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+.cnlbg {
+    width: 298px;
+    height: 33px;
+    background: url(../images/slzhkf_202005_chnlbg.png);
+    background-size: cover;
+    margin-top: -16px;
+    margin-left: -1px;
+    line-height: 33px;
+    color: #ffffff;
+    font-weight: bold;
+    text-indent: 50px;
+}
+
+.list {
+    font-size: 12px;
+    padding-top: 25px;
+}
+.list li {
+    line-height: 23px;
+}
+.list li img {
+    /* vertical-align: middle; */
+    margin: 0 5px;
+}
+.list span {
+    float: right;
+    margin-right: 15px;
+}
+.section2 {
+    margin-top: 30px;
+    height: 321px;
+}
+.section2 .list li {
+    line-height: 26px;
+}
+.c2 {
+    width: 391px;
+    float: left;
+    border: 1px solid #b7b7b7;
+    border-bottom: none;
+}
+.c2 .list {
+    padding-top: 5px;
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+}
+.c2 .list li img {
+    /* vertical-align: middle; */
+    margin: 0 10px;
+}
+.section2 .c2:nth-child(1) {
+    margin-left: 10px;
+}
+.section2 .c2:nth-child(2) {
+    margin-left: 20px;
+}
+.c3,.c4 {
+    margin-right: 10px;
+}
+.section3 .c2 .list {
+    margin-bottom: auto;
+}
+
+.c3 {
+    width: 161px;
+    /* height: 290px; */
+    float: right;
+    /* background: #b7b7b7; */
+}
+.section3 {
+    height: 128px;
+    margin-top: 0;
+}
+.footer {
+    margin-top: 15px;
+}
+
+.link {
+    margin-bottom: 4px;
+}
+.link img{
+    width: 100%;
+    height: 57px;
+}
+.c3 .link:nth-child(5) {
+    margin-bottom: 0;
+}
+
+.c4 {
+    width: 160px;
+    height: 121px;
+    float: right;
+    background: url(../images/slzhkf_202005_link6.png);
+    background-size: cover;
+}
+
+.c4 select {
+    width: 137px;
+    font-size: 10px;
+}
+
+.sel1,.sel2,.sel3 {
+    width: 137px;
+    margin: 0 auto;
+    margin-bottom: 8px;
+}
+.sel1 {
+    margin-top: 29px;
+}
+
+.c1.revise {
+    width: 944px;
+    margin: 0 auto;
+    background-color: rgb(229, 229, 229);
+    float: none;
+    border: 1.2px solid #b7b7b7;
+    height: auto;
+}
+.revise ul {
+    padding-left: 47px;
+    padding-right: 47px;
+}
+.revise li {
+    line-height: 40px;
+}
+
+.fy {
+    width: 849px;
+    height: 40px;
+    margin: 20px auto;
+    background: #EBEBEB;
+    text-align: center;
+    line-height: 40px;
+    font-size: 12px;
+}
+
+.whitebg {
+    width: 1000px;
+    margin: 0 auto;
+    background: #ffffff;
+}
+
+.c1.jgjj {
+    width: 740px;
+    float: left;
+    margin-left: 10px;
+}
+.neirong {
+    font-size: 16px;
+    padding: 20px;
+}
+.c1.jgjj2 {
+    width: 230px;
+    height: auto;
+    border: none;
+    /*margin-right: auto;*/
+}
+
+.jgjj3 p{
+    font-size: 12px;
+    line-height: 25px;
+    font-weight: bold;
+}
+.cnlbglist{
+    width: 298px;
+    height: 33px;
+    background: url(../images/slzhkf_202005_chnlbg.png);
+    background-size: cover;
+    margin-top: -16px;
+    margin-left: -1px;
+    line-height: 33px;
+    color: #ffffff;
+    font-weight: bold;
+    text-indent: 50px;
+	/*box-shadow:15px 0px 20px;*/
+}
+.lmlist{
+width:700px;
+margin:0 auto 21px auto;
+}
+.lmtitle{
+height:55px
+}

@@ -1,0 +1,901 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "微软雅黑";
+}
+
+body,
+html {
+	height: 100%;
+	-webkit-tap-highlight-color: transparent;
+}
+
+li {
+	list-style: none;
+}
+/*普通用户*/
+.common_user {
+	padding-bottom: 10px!important;
+}
+::-webkit-scrollbar {
+	width: 0 !important
+}
+.max_width {
+	max-width: 677px;
+	margin: 0 auto;
+}
+
+.weui-tab__bd {
+	padding-bottom: 52px;
+}
+
+
+/*底部导航栏*/
+
+.weui-tabbar__item.weui-bar__item--on .weui-tabbar__label {
+	color: #3790ea;
+}
+
+.weui-tabbar__icon {
+	height: 24px;
+	width: 24px;
+}
+
+.weui-tabbar {
+	background-color: #ffffff;
+}
+
+.bottom_bar {
+	font-family: "微软雅黑";
+	/*font-size: ;*/
+}
+
+.weui-tabbar__label {
+	color: #6a6a6a;
+}
+
+
+/*隐藏我的*/
+
+.is_hidden {
+	display: none;
+}
+
+
+/*周日按钮处*/
+
+.week_day_btn {
+	margin-top: 20px;
+	margin-left: 13px;
+	float: left;
+	width: 106px;
+	height: 30px;
+	border: 1px solid #3790ea;
+	border-radius: 5px;
+}
+
+.week_day_btn span {
+	float: left;
+	font-size: 14.02px;
+	text-align: center;
+	display: inline-block;
+	width: 50%;
+	line-height: 30px;
+	height: 100%;
+	color: #3790ea;
+}
+
+.wdb_active {
+	background: #3790ea;
+	color: #FFFFFF!important;
+}
+
+
+/*周工作安排 周样式*/
+
+.week_slector,
+.day_slector,
+.week_slector2 {
+	margin-right: 13px;
+	margin-top: 20px;
+	float: right;
+	width: 190px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 14px;
+}
+
+.my_color {
+	color: #bfc1c2;
+}
+
+
+/*表格*/
+
+.biaoge {
+	margin-top: 21px;
+	border-top: 1px solid #e4e4e4;
+	padding: 0 6px;
+	padding-top: 9px;
+}
+
+.shijian {
+	color: #8d8d8d;
+	text-align: center;
+	line-height: 23px;
+	background: #f0f0f0;
+	font-size: 12px;
+	width: 10%;
+	height: 23px;
+	float: left;
+}
+
+.week_name {
+	width: 90%;
+	float: left;
+}
+
+.week_name li {
+	border-radius: 5px;
+	text-align: center;
+	font-size: 14px;
+	margin-left: 8px;
+	margin-right: 8px;
+	background: #f0f0f0;
+	list-style: none;
+	color: #555658;
+}
+
+.week_name li:first-child {
+	margin-left: 3px;
+}
+
+/*表格内容*/
+
+.mtop4 {
+	margin-top: 4px;
+}
+
+.week {
+	position: relative;
+	width: 10%;
+	
+	float: left;
+	background: #e4e4e4;
+}
+
+.week li {
+	font-size: 12px;
+	/*line-height: 61.5px;*/
+	text-align: center;
+	height: 50%;
+	color: #c1c1c1;
+}
+
+.days {
+	color: #7a7a7a;
+	width: 100%;
+	text-align: center;
+	position: absolute;
+	font-size: 7px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.one-day {
+	height: 100%;
+}
+
+.one-day li {
+	position: relative;
+	padding: 4px 0;
+	box-sizing: border-box;
+	border-top: 1px solid #e4e4e4;
+}
+
+.class_name {
+	box-sizing: border-box;
+	width: 90%;
+	border-right: 1px solid #e4e4e4;
+	border-bottom: 1px solid #e4e4e4;
+	min-height: 100px;
+}
+
+.class_name li {
+	font-size: 11.43px;
+}
+
+/**/
+.class_name .lp:last-child .b1 div{
+	border-right: none;
+}
+
+
+.b1,
+.b2,
+.b3,
+.b4,
+.b5 {
+	width: 100%;
+	height: 50%;
+	display: table;
+}
+
+.b1 div,
+.b2 div,
+.b3 div,
+.b4 div {
+	display: table-cell;
+	vertical-align: middle;
+	color: #8a8a8a;
+	text-align: justify;
+	height: 100%;
+	width: 100%;
+	padding: 0 4px;
+	border-right: 1px solid #e4e4e4;
+}
+
+
+.b2 div {
+	border-left: 1px solid #e4e4e4;
+	border-right: 1px solid #e4e4e4;
+}
+.b3 div {
+	border-right: 1px solid #e4e4e4;
+}
+.b4 div {
+	border-right: 1px solid #E4E4E4;
+}
+.b5 div {
+	display: table-cell;
+	vertical-align: middle;
+	color: #8a8a8a;
+	padding: 0 4px;
+}
+
+
+/*备注*/
+
+.mark {
+	margin: 6px 0;
+	padding: 0 6px;
+}
+
+.beizhu {
+	color: #767676;
+	border-top: 1px solid #e4e4e4;
+	border-bottom: 1px solid #e4e4e4;
+	font-size: 11.2px;
+}
+
+.beizhu span {
+	display: inline-block;
+	color: #b9c4d7;
+	min-width: 250px;
+}
+
+
+/*周工作安排 日样式*/
+
+.day_slector {
+	display: none;
+}
+
+.biaoge2 {
+	display: none;
+	margin-top: 21px;
+	border-top: 1px solid #e4e4e4;
+	padding: 0 7px;
+	padding-top: 9px;
+}
+
+.left_white {
+	width: 80px;
+}
+
+
+.d_people {
+	border: 1px solid #e5e5e5;
+	min-height: 68.5px;
+	padding: 6px 0;
+}
+
+.right_mf {
+	text-align: center;
+	font-size: 9.74px;
+	color: #464646;
+}
+
+.day_name {
+	position: relative;
+	width: 80px;
+	text-align: center;
+	min-height: 68.5px;
+}
+
+.day_name div {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%,-50%);
+	width: 60px;
+	background: #f0f0f0;
+	border-radius: 5px;
+	color: #555658;
+}
+
+.day_class_name {
+	border-left: 1px solid #e5e5e5;
+	/*display: table;*/
+	height: 100%;
+}
+
+.day_class_name div {
+	height: 100%;
+	width: 100%;
+	padding: 0 16px;
+	color: #8a8a8a;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: justify;
+}
+.day_bj {
+	margin-bottom: 7.5px;
+}
+
+
+
+.color_bar {
+	height: 9px;
+	background: #f8f8f8;
+	margin-top: 15px;
+}
+/*校长我的*/
+.s_master_1 {
+	border-top: 1px solid #e3e3e3;
+}
+.paddlr {
+	padding-left: 13.5px;
+	padding-right: 10.5px;
+}
+
+.left,
+.s_week,
+.s_day {
+	height: 100%;
+	float: left;
+}
+.right {
+	height: 100%;
+	float: right;
+}
+.s_master_top {
+	width: 100%;
+	height: 47.5px;
+}
+.s_week {
+	color: #3b3b3d;
+	font-size: 14.5px;
+	line-height: 47.5px;
+	margin-right: 8.5px;
+}
+.s_day {
+	color: #cacaca;
+	font-size: 12.43px;
+	line-height: 47.5px;
+	
+}
+
+.s_btn_container {
+	margin-top: 12px;
+	width: 80.5px;
+	height: 20px;
+	border: 1px solid #3790ea;
+	border-radius: 5px;
+	box-sizing: border-box;
+	color: #3790ea;
+	font-size: 10.36px;
+}
+.sxw,
+.qt {
+	line-height: 20px;
+	text-align: center;
+	float: left;
+	width: 50%;
+}
+
+
+.s_active  {
+	color: #FFFFFF;
+	background: #3790ea;
+}
+
+.s_master_bottom {
+	margin-left: 5px;
+	margin-right: 3px;
+	background: #f8f8f8;
+}
+.paddingleft7 {
+	width: 98%;
+	display: table;
+	padding-left: 7px;
+	border-bottom: 1px solid #ededed;
+	min-height: 55px;
+}
+.shangwu,
+.xiawu {
+	display: table-cell;
+	vertical-align: middle;
+	width: 44px;
+	color: #aeaeae;
+	font-size: 12.43px;
+	
+}
+.sw_content,
+.xw_content {
+	color: #323334;
+	font-size: 13.8px;
+	display: table-cell;
+	vertical-align: middle;
+	min-width: 111px;
+}
+.s_master_submit_container {
+	width: 343px;
+	height: 46px;
+	margin: 0 auto;
+}
+.s_master_submit {
+	
+	width: 343px;
+	height: 46px;
+	background: #0089ff;
+	color: #FFFFFF;
+	border: 1px solid #0089ff;
+	border-radius: 5px;
+	margin-top: 20px;
+	margin-bottom: 15px;
+}
+
+.bottom_bianju {
+	
+	height: 15px;
+}
+
+.xmtijiao_container {
+	padding-left: 17px;
+	padding-right: 17px;
+
+}
+.xian {
+	border-bottom: 1px solid #f4f4f4;
+	padding-bottom: 17px;
+}
+.xm_tijiao_top {
+	margin-bottom: 15px;
+	padding-left: 4px;
+}
+.xm_tijiao_top span:first-of-type {
+	color: #3b3b3d;
+	font-size: 14.3px;
+}
+.xm_tijiao_top span:last-of-type {
+	padding-top: 6px;
+	color: #BBBBBB;
+	float: right;
+	font-size: 10.2px;
+}
+.xm_tijiao_mid {
+	margin-bottom: 9px;
+	padding-left: 4px;
+}
+.xm_tijiao_mid p {
+	font-size: 12.3px;
+	color: #ababab;
+}
+
+.xm_tijiao_btom {
+	padding-left: 4px;
+	font-size: 12.32px;
+}
+.is_wram {
+	color: #e8a54c;
+}
+.is_succes {
+	color: #17c295;
+}
+.is_defeated {
+	color: #c21717;
+}
+.qt1_2,
+.qt2_2,
+.qt3_2,
+.qt4_2,
+.qt5_2,
+.qt6_2,
+.qt7_2 {
+	display: none;
+}
+
+/*校长录入页面样式*/
+.color_div {
+	height: 9.5px;
+	background: #f8f8f8;
+	border-bottom: 1px solid #ebebeb;
+	margin-top: 19px;
+}
+
+.riqi {
+	float: left;
+	font-size: 14px;
+	color: #7d8082;
+	position: absolute;
+	bottom: 0;
+	padding-left: 3px;
+}
+.myposr {
+	position: relative;
+	padding-left: 9px;
+	padding-right: 7px;
+	margin-top: 17.5px;
+}
+.switch_btn {
+	width: 100px;
+	height: 25px;
+	float: right;
+	border: 1px solid #3790ea;
+	border-radius: 5px;
+}
+.switch_btn span {
+	display: block;
+	text-align: center;
+	float: left;
+	width: 50%;
+	height: 100%;
+	color: #70aaee;
+	font-size: 15px;
+	line-height: 25px;
+}
+.switch_btn_active {
+	background: #3790ea;
+	color: #FFFFFF!important;
+}
+
+.riqi_val {
+	font-size: 18.21px;
+	margin-left: 9px;
+	margin-right: 5px;
+	width: 100%;
+	border-bottom: 1px solid #dddedf;
+	padding-bottom: 21px;
+}
+
+.input_container,
+.input_container2 {
+	padding-left: 9px;
+	padding-right: 7px;
+}
+.input_container2 {
+	display: none;
+}
+.inc_top,
+.inc_bom {
+	font-size: 15px;
+	color: #7d8082;
+}
+.inc_top {
+	padding-top: 16px;
+}
+.inc_bom {
+	padding-bottom: 15px;
+	border-bottom: 1px solid #dddedf;
+}
+.inc_bom input {
+	border: none;
+	height: 30px;
+	width: 100%;
+	outline: none;
+	font-size: 15px;
+}
+.foucolor {
+	color: #47a1fb;
+}
+.inc_bom input:focus {
+	font-size: 18px;
+}
+
+.inc_bom textarea:focus {
+	font-size: 18px;
+}
+
+.inc_bom textarea {
+	outline: none;
+	border: none;
+	width: 100%;
+	height: 80px;
+	resize: none;
+}
+
+/*校长我的按钮*/
+.h_master_btn,
+.xm__btn {
+	position: relative;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	margin-top: 72.5px;
+	width: 344px;
+	height: 46px;
+	background: #0089ff;
+	color: #FFFFFF;
+	border: none;
+	border-radius: 5px;
+}
+
+
+/*校秘样式*/
+
+.xm_active {
+	background: #3790ea!important;
+	color: #FFFFFF!important;
+}
+.weui-navbar {
+	background: none;
+}
+.weui-navbar__item {
+	color: #000000;
+	font-size: 12.5px;
+	line-height: 40px;
+	height: 40px;
+	padding: 0;
+}
+.weui-navbar__item:after {
+	border-right: none;
+}
+.weui-navbar:after {
+	border-bottom: 1px solid #e0e5e9;
+}
+.weui-navbar__item.weui-bar__item--on {
+	background: none;
+	color: #3790ea;
+	border-bottom: 1px solid #3790ea;
+}
+.xm_pdbotm0 {
+	padding-bottom: 0;
+}
+.mtop0 {
+	margin-top: 0;
+}
+
+/*新提交未审核样式*/
+
+.xm_color {
+	background: #ee9488;
+	color: #FFFFFF!important;
+}
+.xm_btn_container {
+	width: 346px;
+	height: 47px;
+	margin: 0 auto;
+}
+.xm_btn {
+	width: 346px;
+	height: 47px;
+	background: #0089ff;
+	color: #FFFFFF;
+	border: none;
+	border-radius: 5px;
+	margin-top: 7px;
+}
+
+
+/*主任按钮*/
+.btn_group  {
+	padding-top: 21.5px;
+	width: 242.5px;
+	margin: 0 auto;
+}
+.btn_group button {
+	width: 116.5px;
+	height: 44.5px;
+	font-size: 16.7px;
+	color: #0089ff;
+	border: 1px solid #0089ff;
+	background: #FFFFFF;
+	border-radius: 5px;
+}
+.btn_group button:last-of-type {
+	color: #FFFFFF;
+	background: #0089ff;
+}
+.toplip {
+	font-size: 11.1px;
+	color: #bcbcbc;
+	margin-top: 23px;
+	padding-left: 17px;
+	padding-right: 17px;
+}
+.option_content {
+	padding: 0 17px;
+
+}
+.approval_option {
+	font-size: 15.3px;
+	border: none;
+	outline: none;
+	height: 188px;
+	resize: none;
+	width: 100%;
+	border-bottom: 1px solid #dddedf;
+}
+.sub_container {
+	width: 344.5px;
+	margin: 0 auto;
+	margin-top: 61.5px;
+}
+.sub_container button{
+	border: none;
+	border-radius: 5px;
+	height: 44px;
+	width: 100%;
+	color: #FFFFFF;
+	background: #0089ff;
+}
+
+#monitor {
+	display: none;
+}
+
+.xm_luru {
+	padding-top: 32.5px;
+}
+
+/*表格*/
+.table_week {
+	margin-top: 20px;
+	border: 1px solid #e4e4e4;
+	border-radius: 5px;
+}
+/*周一周二...border*/
+.table_title th{
+	border-bottom: 1px solid #e4e4e4;
+	border-right: 1px solid #e4e4e4;
+}
+.table_title th:last-child{
+	border-right: none;
+}
+.table_title th:first-child{
+	border-right: none;
+}
+.table_noon td:first-child {
+	border-top: 1px solid #E4E4E4;
+	border-bottom: 1px solid #E4E4E4;
+}
+
+
+.table_content td {
+	border-left: 1px solid #e4e4e4;
+}
+.table_content td:first-child {
+	border-left: none;
+}
+.table_padding {
+	padding: 0 2px;
+}
+.table_title {
+	font-size: 12px;
+	color: #8a8a8a;
+}
+.table_noon {
+	font-size: 10px;
+	text-align: center;
+	background: #e4e4e4;
+	color: #c1c1c1;
+}
+
+.table_content {
+	font-size: 12px;
+	text-align: center;
+	color: #8a8a8a;
+}
+.table_content td {
+	padding: 5px 0;
+}
+
+.bz_title {
+	display: inline-block;
+	width: 10%;
+	text-align: right;
+}
+
+.xm_content {
+	user-modify: read-write-plaintext-only;
+	-webkit-user-modify: read-write-plaintext-only
+}
+
+
+/*20191225 校秘右上角切换按钮*/
+
+.one-day,.lp {
+	position: relative;
+	overflow: hidden;
+}
+
+.change_button {
+	cursor: pointer;
+	z-index: 999;
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 25px;
+	width: 25px;
+	background: #c1c1c1;
+	display: none;
+	color: #FFF;
+	transform:rotate(45deg);
+	-ms-transform:rotate(45deg); /* Internet Explorer */
+	-moz-transform:rotate(45deg); /* Firefox */
+	-webkit-transform:rotate(45deg); /* Safari 和 Chrome */
+	-o-transform:rotate(45deg); /* Opera */
+	right: -12.5px;
+	top: -12.5px;
+}
+
+
+/*按钮固定底部*/
+.fixbto {
+	position: absolute;
+	left: 50%;
+	bottom: 72px;
+	transform: translate(-50%,-50%);
+}
+
+.mbotm {
+	height: 105px;
+}
+
+@media only screen and (max-width: 767px) {
+	.s_btn_container {display: none;}
+	.b5 {
+		min-height: 60px!important;
+	}
+	
+	.fixbto {
+	left: 50%;
+	bottom: 72px;
+	transform: translate(-50%,-50%);
+}
+}
+@media only screen and (min-width: 100px) and (max-width: 320px) {
+	.week_day_btn {
+		width: 70px;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	
+	.b5 {
+		min-height: 60px!important;
+	}
+	.week_day_btn {
+		display: none;
+	}
+	.week_name li {
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	.week_name li:first-child {
+		margin-left: 8px;
+	}
+	.table_content td {
+	padding: 5px 2px;
+	}
+	
+	/*控制pc端显示*/
+	.lp:hover .change_button{
+	display: block;
+}
+	
+	
+}

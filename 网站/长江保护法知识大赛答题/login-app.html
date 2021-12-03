@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/cjbhf-202102-mobile.css">
+    <title>长江保护法知识大赛</title>
+</head>
+<body>
+    <div class="app-bg"><img src="img/cjbhf-202102-mmainbg.jpg" alt="" width="100%" class="mainbg">
+    <div class="whitebg-p">
+        <div class="whitebg-c">
+            <div class="login">
+                <p class="welcome">欢迎您登录</p>
+                <div class="box">
+                    <form class="layui-form" id="form_login">
+                        <ul class="login-app">
+                            <li class="row">
+                                <div class="qianzui col-xs-4 col-md-4">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名:</div>
+                                <div class="houzhui col-xs-8 col-md-8"><input id="userName" type="text" class="layui-input" autocomplete="off" lay-verify="required" /></div>
+                            </li>
+                            <li class="row">
+                                <div class="qianzui col-xs-4 col-md-4">身份证号:</div>
+                                <div class="houzhui col-xs-8 col-md-8"><input id="idCard" type="text" class="layui-input" autocomplete="off" lay-verify="required|identity" /></div>
+                            </li>
+                            <li class="row">
+                                <div class="qianzui col-xs-4 col-md-4">验&nbsp;&nbsp;证&nbsp;&nbsp;码:</div>
+                                <div class="houzhui col-xs-8 col-md-8"><input id="auth_code" type="text" style="width: 100px;" class="layui-input" autocomplete="off" />
+                                    <img id="authCode" src="<%=path %>/getAuthCode" width="50" height="29" class="middle" onclick="changeAuthCode();" style="cursor: pointer;display: inline-block;" /></div>
+                            </li>
+                        </ul>
+                        <div class="hei2-btn center-block" style="width:68px;">
+                            <button class="layui-btn" lay-submit lay-filter="login">登&nbsp;&nbsp;录</button></div>
+    
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

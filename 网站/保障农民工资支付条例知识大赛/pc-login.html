@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <link rel="stylesheet" href="css/bznmgdt_global.css">
+    <title>保障农民工工资支付条例知识大赛</title>
+</head>
+<body>
+    <div class="index login">
+        <!-- <div class="link"><a href="#" title="维权中心"></a></div>
+        <div class="link link2"><a href="#" title="民工服务大厅"></a></div> -->
+        <div class="divh"></div>
+        <div class="box center_block">
+            <div class="welcom">欢迎您登录：</div>
+            <table cellspacing="0" cellpadding="0" style="width: 841px;margin: 26px auto;">
+                <tr>
+                    <td width="20%" align="right"><span style="width:200px;text-align:center;display:inline-block;">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名</span></td>
+                    <td width="64%">
+                        <input id="userName" type="text" class="layui-input" autocomplete="off" style="width: 622px; height: 50px;" lay-verify="required"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="16px">
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right"><span style="width:200px;text-align:center;display:inline-block;">身份证号</span></td>
+                    <td><input id="idCard" type="text" class="layui-input" autocomplete="off" style="width: 622px; height: 50px;" lay-verify="required|identity"/></td>
+                </tr>
+                <tr>
+                    <td height="16px">
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right"><span style="width:200px;text-align:center;display:inline-block;">验&nbsp;&nbsp;证&nbsp;&nbsp;码</span></td>
+                    <td><input id="auth_code" type="text" class="layui-input" autocomplete="off"
+                               style="width: 400px; height: 50px; display: inline;"/>
+                        <img id="authCode" src="<%=path %>/getAuthCode" width="83" height="50"
+                             class="middle"
+                             onclick="changeAuthCode();" style="cursor: pointer;float: right;"/></td>
+                </tr>
+                 <tr>
+                    <td height="30px">
+                        
+                    </td>
+                </tr>
+                <tr>
+                    
+                    <td colspan="2" align="center">
+                        <div class="sub-dl">
+                        <button class="layui-btn" lay-submit lay-filter="login" onclick="javascript:alert('登陆了');">登录</button></div>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        </div>
+            
+        
+    </div>
+    <div class="footer">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="#7c0015">
+            <tbody>
+                <tr>
+                    <td align="center">
+                        <!--底部 start-->
+                        <table width="1200" border="0" cellspacing="0" cellpadding="0" bgcolor="" align="center" style="margin:0px auto; border-top:0px solid #cccccc">
+                            <tbody>
+                                <tr>
+                                    <td height="116" align="center" valign="">
+
+                                        <table border="0" cellspacing="0" cellpadding="0" align="center">
+                                            <tbody>
+                                                <tr>
+                                                    <td height="20">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="font-size:16px; line-height:28px; color:#ffffff">
+                                                        京ICP备14010557号 主办：水利部水利工程建设司 网站联系电话：010-63462112
+                                                        <br>政府网站标识码：bm20000001
+                                                        <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11040102700040" style="text-decoration: none;font-size:16px; color:#ffffff" target="_blank"><img src="http://www.mwr.gov.cn/images_zt/20190906-guohui.png" border="0" style="display:inline"> 京公网安备11040102700040号</a>
+                                                    </td>
+                                                    <td style="padding-left:20px; padding-right:10px">
+                                                        <a href="http://bszs.conac.cn/sitename?method=show&amp;id=0726B189C5F03282E053012819ACDB52" target="_blank"><img src="http://www.mwr.gov.cn/images_zt/20190906-dzjg.png" width="44" height="56" border="0"></a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="http://121.43.68.40/exposure/jiucuo.html?site_code=bm20000001&amp;url=http%3A%2F%2Fwww.mwr.gov.cn%2F" target="_blank"><img src="http://www.mwr.gov.cn/images_zt/20190906-jiucuo.png" width="119" height="56" border="0"></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td height="20">&nbsp;</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!--底部 end-->
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="js/jquery-1.9.1.js"></script>
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script>
+
+        $(".tab").hover(function () { 
+            $(this).addClass("act").siblings().removeClass("act");
+            $(".tab-item").eq($(this).index()).addClass("act").siblings().removeClass("act");
+         })
+
+         
+    </script>
+</body>
+</html>

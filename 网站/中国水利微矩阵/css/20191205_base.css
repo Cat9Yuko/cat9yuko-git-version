@@ -1,0 +1,99 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body {
+	background: #FBFBFB;
+}
+.main-container {
+	max-width: 677px;
+	margin: 0 auto;
+}
+
+/*省级水行政主管部门*/
+.content_img_container {
+	padding: 25px 11px 0;
+}
+.weui-grids:before {
+	border-top: none;
+}
+.weui-grids:after {
+	border-left: none;
+}
+.weui-grid:before {
+	border-right: none;
+}
+.weui-grid:after {
+	border-bottom: none;
+}
+.content_img {
+	/*margin-top: 15px;*/
+	padding-top: 20px;
+	background: #eef0ef;
+	/*height: 500px;*/
+}
+.weui-flex__item {
+	padding: 0 10px;
+}
+.section1,
+.section2,
+.section3 {
+	position: relative;
+}
+.section2,
+.section3 {
+	margin-top: 35px;
+}
+.title_img1,
+.title_img2,
+.title_img3 {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.weui-grid {
+	width: 25%;
+	padding: 5px;
+}
+
+@media only screen /*and (min-width: 321px)*/ and (max-width: 767px) {
+	.title_img1 img {
+		width: 175px;
+		height: 45px;
+	}
+	.title_img3 img {
+		width: 150px;
+		height: 45px;
+	}
+	.title_img2 img {
+		width: 150px;
+		height: 45px;
+	}
+	.province_img img{
+		width: 100%;
+		height: 100%;
+	}
+	.province_img {
+		margin-right: 15px;
+	}
+	
+	.weui-grid.js_grid img {
+		height: 70px!important;
+	} 
+}
+
+@media only screen and (min-width: 768px) {
+	.content_img {
+		padding-top: 72px;
+	}
+	
+	.content_img_container {
+		padding: 50px 11px 0;
+	}
+	.content_img {
+		padding-top: 50px;
+	}
+	.weui-grid.js_grid img {
+		height: 144px!important;
+	} 
+}

@@ -1,0 +1,65 @@
+/*****************************************************
+全站使用
+*****************************************************/
+
+body {/*网站背景*/
+	background-color: #FFFFFF;
+	text-align: center;
+	margin: 0px;
+	padding: 0px;
+	color: #000;
+	line-height: 20px;
+	font-family: "微软雅黑";
+	background: url(20190725_banner.jpg) no-repeat top center; 
+}
+table{/*表格无边框，无边距*/
+border-collapse: collapse;
+border-style: none;
+}
+td {/*基本字体*/
+	font-size: 12px;
+	line-height: 35px;
+	color: #000000;
+	/*vertical-align:top;*//*表格元素靠上对齐*/
+}
+a {
+	color: #000;
+	text-decoration: none;/*默认链接样式*/
+}
+a:hover  {
+	color: inherit;/*默认链接样式*/
+}
+td.search {/*搜索*/
+	color: #fff;
+	vertical-align : middle;
+}
+a.search {
+	color: #fff;
+	text-decoration: none;
+}
+#daohang{
+	background-color: #fff;
+	width:1002px;
+	background-color: #fff;
+	border:1px solid #B2B2B2;
+}
+td.daohang {/*导航*/
+	color: #b40c01;
+	padding-left: 5px;
+}
+a.daohang {
+	color: #012083;
+	text-decoration: none;
+}
+a.font13 {
+	color: #000;
+	text-decoration: none;/*默认链接样式*/
+}
+
+td.ftable{/*中栏框架*/
+	width="980"!important;
+	text-align:center;
+}
+#contents{/*正文框架*/
+	width="980"!important;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS3变形</title>
+  <style media="screen">
+    /* transform: none | <transform-function> [<transform-function>] */
+    /* 设置动画效果 */
+    #socialicons img,
+    #socialicons2 img {
+      transition: all 0.8s ease-in-out;
+    }
+    /* 设置变形, 顺时针旋转360度放大1.5倍 */
+    #socialicons img:hover {
+      transform: rotate(360deg) scale(1.5);
+    }
+    /* 设置变形, 逆时针旋转360度, 缩小0.7倍 */
+    #socialicons2 img:hover {
+      transform: rotate(-360deg) scale(.7);
+    }
+  </style>
+</head>
+<body>
+<h1>顺时针旋转360度放大1.2倍</h1>
+<ul id="socialicons">
+    <li><a href="#"><img src="images/16685-2.jpg" alt=""></a></li>
+</ul>
+<h1>逆时针旋转360度缩小0.7倍</h1>
+<ul id="socialicons2">
+    <li><a href="#"><img src="images/16685-2.jpg" alt=""></a></li>
+</ul>
+</body>
+</html>

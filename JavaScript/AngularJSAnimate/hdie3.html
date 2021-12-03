@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			/*开始时的样式*/
+			.fade.ng-enter{
+				transition: 5s linear all;/*当使用css transition实现动画效果时,开始的样式必须包含transition的设置*/
+				opacity: 0;
+			}
+			/*结束时的样式*/
+			.fade.ng-enter.ng-enter-active{
+				opacity: 1;
+			}
+		</style>
+		<script type="text/javascript" src="js/angular.js" ></script>
+		<script type="text/javascript" src="js/angular-animate.js" ></script>
+		<script type="text/javascript">
+			(function () {
+				var app = angular.module('cssBasedAnimationTest',['ngAnimate']);
+			})();
+		</script>
+	</head>
+	<body ng-app="cssBasedAnimationTest">
+		<div ng-if="bool" class="fade">
+			Fade me in out
+		</div>
+		<button ng-click="bool=true">In</button>
+		<button ng-click="bool=false">out</button>
+	</body>
+</html>

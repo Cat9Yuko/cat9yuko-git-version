@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="js/jquery-1.9.1.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+
+		<a class="a">无链接</a>
+
+		<script type="text/javascript">
+			$(function() {
+				var $width = $(window).width();
+				if($width < 1024) {
+						$(".ddjs-link").attr("href", "<trs_channel id='党的建设' field='_recurl'/>");
+					}else {
+						$(".ddjs-link").removeAttr("href");
+					}
+				$(window).resize(function() {
+					
+					if($width < 1200) {
+						$(".ddjs-link").attr("href", "<trs_channel id='党的建设' field='_recurl'/>");
+					}else {
+						$(".ddjs-link").removeAttr("href");
+					}
+				})
+
+				
+			});
+		</script>
+	</body>
+
+</html>

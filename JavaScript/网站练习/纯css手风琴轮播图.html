@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.container {
+				display: flex;
+				width: 1200px;
+				padding: 4% 2%;
+				box-sizing: border-box;
+				height: 100vh;
+			}
+			
+			.box {
+				flex: 1;
+				overflow: hidden;
+				transition: .5s;
+				margin: 0 0;
+				border: 1px solid lightgray;
+				box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+				line-height: 0;
+			}
+			
+			.box>img {
+				width: 800px;
+				height: calc(100% - 10vh);
+				-o-object-fit: cover;
+				object-fit: cover;
+				transition: .5s;
+			}
+			
+			.box>span {
+				font-size: 3.8vh;
+				display: block;
+				text-align: center;
+				border-top: 1px solid lightgray;
+				height: 10vh;
+				line-height: 2.6;
+			}
+			
+			.box:hover {
+				flex: 1 1 50%;
+			}
+			
+			.box:hover>img {
+				width: 800px;
+				height: 482px;
+			}
+		</style>
+	</head>
+
+	<body>
+		
+		<div class="container">
+	<div class="box">
+		<img src="img/20191122_ban1999.jpg">
+		<span>1999</span>
+	</div>
+	<div class="box">
+		<img src="img/20191122_ban2000.jpg">
+		<span>2000</span>
+	</div>
+	<div class="box">
+		<img src="img/20191122_ban2004.jpg">
+		<span>2004</span>
+	</div>
+	<div class="box">
+		<img src="img/20191122_ban2006.jpg">
+		<span>2006</span>
+	</div>
+	<div class="box">
+		<img src="img/20191122_ban2009.jpg">
+		<span>2009</span>
+	</div>
+	<div class="box">
+		<img src="img/20191122_ban2017.jpg">
+		<span>2017</span>
+	</div>
+</div>
+
+		
+	</body>
+
+</html>

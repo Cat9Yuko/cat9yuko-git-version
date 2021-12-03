@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <link rel="stylesheet" href="css/202006_pcglobal.css">
+    <title>档案知识网络答题</title>
+</head>
+
+<body>
+    <div class="score_bg">
+        <div class="divh"></div>
+        <div class="center_block score">
+            <div style="height: 100px;"></div>
+            <div class="fens">您的得分是 <span>55</span> 分，<span class="zhengshu">未能获得证书</span>，谢谢您的参与。</div>
+
+            <div class="btn-group clearfix">
+                <div class="btn mr"><button>再答一次</button></div>
+                <div class="btn closepage"><button>关闭页面</button></div>
+            </div>
+            
+        </div>
+    </div>
+    <script src="js/jquery-1.9.1.js"></script>
+    <script>
+        $(".closepage").click(function() {
+					window.opener = null;
+					window.open('', '_self');
+					window.close();
+				})
+    </script>
+</body>
+
+</html>

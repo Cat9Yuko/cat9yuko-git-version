@@ -1,0 +1,32 @@
+#tab div{
+	font-family: "微软雅黑";
+	color: #C0C0C0;
+	font-size: 20px;
+	line-height: 15px;
+	text-align: center;
+	margin: 30px;
+	float: left;
+}
+
+#tab span{
+	border-top: 1px solid silver;
+	height: 89%;
+	clear: both;
+	display: none;
+}
+#tab{
+	width: 320px;
+	height: 690px;
+	margin: 0 auto;
+	border: 1px solid silver;
+}
+#tab .content{
+	background: antiquewhite;
+	display: block;
+	
+}
+#tab .active{
+	color: aqua;
+	margin-bottom: 0px;
+	border-bottom-color: #C0C0C0;
+}

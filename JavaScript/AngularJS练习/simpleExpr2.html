@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/angular.js" ></script>
+	</head>
+	<body ng-app="" ng-init="domain='yyn.com';name='月月鸟'">
+		{{'我们的网站是:'+domain}}<br />
+		{{'我们的名称是:'+name}}<br />
+		<p ng-bind="'我们的网站是:'+domain"></p>
+		<div ng-init="num=5">
+			{{num*num}}<br />
+			{{num*num*num}}
+			<span ng-bind="num*num*num"></span>
+		</div>
+	</body>
+</html>

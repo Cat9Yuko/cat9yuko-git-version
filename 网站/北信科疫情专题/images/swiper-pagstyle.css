@@ -1,0 +1,56 @@
+.swiper-container {
+	position: relative;
+	height: 365px;
+	width: 590px;
+	float: left;
+}
+
+.swiper-slide {
+	position: relative;
+}
+.swiper-slide img {
+	width: 100%;
+	height: 100%;
+}
+/*分页器*/
+
+.pagination {
+	position: absolute;
+	z-index: 20;
+	right: 13px;
+	bottom: 18px;
+	width: 200px;
+	text-align: right;
+}
+
+.swiper-pagination-switch {
+	display: inline-block;
+	width: 11px;
+	height: 3px;
+	border-radius: 10px;
+	background: #FFFFFF;
+	margin: 0 3px;
+	opacity: 0.8;
+	/*border: 1px solid #fff;*/
+	cursor: pointer;
+}
+
+.swiper-active-switch {
+	display: inline-block;
+	width: 25px;
+	height: 4px;
+	background: #b40814;
+	border-radius: 10px;
+}
+.swiper-title {
+	width: 590px;
+	height: 48px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	background: rgba(0,0,0,.5);
+	color: #FFFFFF;
+	line-height: 48px;
+	font-size: 15px;
+	text-indent: 1rem;
+}

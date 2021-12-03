@@ -1,0 +1,35 @@
+.desc1 {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.dg {
+	margin: 0 auto;
+}
+
+
+.details {
+	height: auto;
+	display: block;
+}
+
+.details-title1 {
+	text-align: center;
+	padding-top: 20px;
+	display: block;
+	font-size: 30px;
+	margin-block-start: 0.83em;
+	margin-block-end: 0.83em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	font-weight: bold;
+}
+
+
+.details-article {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.details-article >p{
+	font-size: 24px;
+}

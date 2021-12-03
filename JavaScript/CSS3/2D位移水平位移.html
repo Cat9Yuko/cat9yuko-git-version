@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <style media="screen">
+    /* translate(tx) 或 translate(tx,ty)
+      tx代表x轴(横坐标)移动的向量长度,右正左负
+      ty代表y轴(众坐标)移动的向量长度,下正上负
+      水平移动:向右移动translate(tx,0)和向左移动translate(-tx,0)
+      垂直移动:向上移动translate(0,-ty)和向下移动translate(0,ty)
+      对角移动:右下角移动translate(tx,ty)、右上角移动translate(tx,-ty)、左下角移动translate(-tx,-ty)
+      和左下角移动translate(-tx,ty)
+     */
+    div {
+      width: 500px;
+      height: 300px;
+      margin:30px auto;
+      position: relative;
+    }
+    div img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -35px;
+      margin-top: -50px;
+    }
+
+    div img:nth-child(1) {
+      opacity: .5;
+      z-index: 1;
+    }
+    div img:nth-child(2) {
+      opacity: 1;
+      z-index: 2;
+      transform: translate(100px,0);
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <img src="images/timg.png" alt="" width="70px" height="100px">
+    <img src="images/timg.png" alt="" width="70px" height="100px">
+  </div>
+</body>
+</html>

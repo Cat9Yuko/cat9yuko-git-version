@@ -1,0 +1,80 @@
+<DOCTYPE html>
+    <html>
+    <head>
+        <title>Tab选项卡</title>
+        <meta charset="utf-8">
+        <style type="text/css">
+            body{
+                font-size: 0;
+            }
+            .box{
+                text-align: center;
+            }
+            .box .tab{
+                display: inline-block;
+                width: 120px;
+                height: 44px;
+                border-left: 5px solid #CCCCCC;
+               	border-top: 5px solid #CCCCCC;
+               	border-right: 5px solid #CCCCCC;
+            }
+            .box .tab:hover{
+               	background: #fff;
+               	border-left: 5px solid #CCCCCC;
+               	border-top: 5px solid #CCCCCC;
+               	border-right: 5px solid #CCCCCC;
+            }
+            .con{
+                width: 800px;
+                height: 400px;
+                margin:0 auto;
+                z-index: -999;
+                border: 5px solid #ccc;
+                margin-top: -5px;
+            }
+            .con .list{
+                width: 800px;
+                height: 400px;
+                
+                padding: 10px;
+                position: absolute;/*堆一起*/
+                z-index: 1;
+                box-sizing:border-box;
+            }
+            .list img{
+                height: 300px;
+                width: auto;
+                margin: 40px auto;
+            }
+            .box>.tab:nth-child(1):hover~.con>.list:nth-child(1),
+            .box>.tab:nth-child(2):hover~.con>.list:nth-child(2),
+            .box>.tab:nth-child(3):hover~.con>.list:nth-child(3),
+            .box>.tab:nth-child(4):hover~.con>.list:nth-child(4),
+            .list:hover{
+                z-index: 3;
+            }
+        </style>
+    </head>
+    <body>
+    <div class="box">
+        <span class="tab">哇咔咔</span>
+        <span class="tab">太棒了</span>
+        <span class="tab">纳尼</span>
+        <span class="tab">不要听</span>
+        <div class="con">
+            <div class="list">
+            	1
+            </div>
+            <div class="list">
+            	2
+            </div>
+            <div class="list">
+            	3
+            </div>
+            <div class="list">
+            	4
+            </div>
+        </div>
+    </div>
+    </body>
+    </html>

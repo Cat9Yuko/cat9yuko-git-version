@@ -1,0 +1,118 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "微软雅黑";
+}
+
+
+
+.container-fluid {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+/* 底部导航 在京状态 */
+.b-nav {
+	height: 72px;
+	padding-top: 13px;
+	background: #FFFFFF;
+	border-top: 2px solid #e0e5e9;
+}
+
+.b-nav-title1,
+.b-nav-title2 {
+	line-height: 1.5;
+	font-size: 13.48px;
+}
+
+
+.b-nav-title1-1,
+.b-nav-title1-2,
+.b-nav-title1-3 {
+	border-bottom: 3px solid #e0e5e9;
+	font-size: 17.97px;
+	height: 44px;
+}
+
+.t-nav {
+	background: #FFFFFF;
+}
+.active {
+	border-bottom: 3px solid #3790ea;
+	color: #3790ea;
+}
+
+.updateTime {
+	height: 53px;
+	background: #e6f2fe;
+	font-family: "黑体";
+	text-align: center;
+	padding-left: 0;
+	padding-right: 0;
+	padding-top: 17px;
+}
+.redword {
+	color: #c75d50;
+}
+
+.bingtu {
+	height: 360px;
+}
+
+
+/*折叠面板*/
+.zaijing,
+.zhengchang,
+.qingjia,
+.waichu {
+	text-align: center;
+	padding-top: 12px;
+	height: 42px;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.zaijing {
+	border-radius: 5px;
+	background-color: #efefef;
+}
+
+.mianbanBody {
+	padding-left: 0;
+	padding-right: 0;
+	background: #fbfbfb;
+}
+.touxiang,
+.word {
+	padding-left: 0;
+	padding-right: 0;
+	height: 194px;
+	
+}
+
+.touxiang li{
+	list-style: none;
+	padding-left: 0;
+	padding-right: 0;
+	height: 58px;
+}
+
+
+.yuan {
+	width: 58px;
+	height: 58px;
+	border-radius: 50%;
+	background: #e5e5e5;
+}
+
+.dayStatistical {
+	
+}
+
+.monthView {
+	
+}
+
+.personList {
+	
+}

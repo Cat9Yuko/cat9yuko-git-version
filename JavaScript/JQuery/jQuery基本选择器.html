@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-3.4.1.js" ></script>
+		<style type="text/css">
+			div.span.p{
+				width: 140px;
+				height: 140px;
+				margin: 5px;
+				background: #aaa;
+				border: #000 1px solid;
+				float: left;
+				font-size: 17px;
+				font-family: verdana;
+			}
+			div.mini{
+				width: 55px;
+				height: 55px;
+				background-color: #aaa;
+				font-size: 12px;
+			}
+			div.hide{
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="one" id="one">
+			<h1>这是H1标签</h1>
+			id为one.class为one的div
+			<div class="mini">class为mini</div>
+		</div>
+		<div class="one" id="two" title="test">
+			id为two.class为one.title为test的div
+			<div class="mini" title="other">class为mini.title为other</div>
+			<div class="mini" title="test">class为mini.title为test</div>
+		</div>
+		<div class="one">
+			<div class="mini">class为mini</div>
+			<div class="mini">class为mini</div>
+			<div class="mini">class为mini</div>
+			<div class="mini"></div>
+		</div>
+		<div class="one">
+			<div class="mini">class为mini</div>
+			<div class="mini">class为mini</div>
+			<div class="mini">class为mini</div>
+			<div class="mini" title="tesst">class为mini,title为tesst</div>
+		</div>
+		<div style="display: none;" class="one">
+			style的display为"none"的div
+		</div>
+		<div class="hide">class为"hide"的div</div>
+		<div>
+			包含input的type为"hidden"的div <input type="hidden" size="8" />
+		</div>
+		<span id="mover">正在执行动画的span元素.</span>
+		
+		<script type="text/javascript">
+			
+			/*基本选择器*/
+			$("#one").css("background","aqua"); //改变id为one的元素的背景色
+			
+			$(".mini").css("background","#bbffaa"); //改变class为mini的所有元素的背景色
+			
+			$("div").css("background","#bbffaa"); //改变元素名是div的所有元素的背景色
+			
+			$("*").css("background","#AAAAAA");	//改变所有元素的背景色
+			
+			/*层次选择器*/
+			$("span,#two").css("background","#bbffaa"); //改变所有的span元素和id为two的元素的背景色
+			
+			$("body div").css("background","aquamarine");	//改变body内所有div的背景色
+			
+			$("body > div").css("background","#bbffaa");	//改变body内子div元素的背景色
+			
+			$(".one + div").css("background","#aaccaa"); //改变class为one的下一个div同辈元素背景色
+			$(".one").next("div").css("background","lightblue");//同上
+			
+			$("#two ~ div").css("background","bisque"); //改变id为two的元素后面的所有div同辈元素的背景色
+			$("#two").nextAll("div").css("background","plum");//同上
+			
+			$("#two").siblings("div").css("background","#fff");	//选取#two所有的同辈div元素,无论前后位置
+			
+			/*过滤选择器*/
+			$("div:first").css("background","aqua");//改变第1个div元素的背景色
+			$("div:last").css("background","cyan");//改变最后一个div元素的背景色
+			$("div:not(.one)").css("background","#bbffaa");//改变class不为one的div元素的背景色
+			$("div:even").css("background","mediumpurple");//改变索引值为偶数的div元素的背景色
+			$("div:odd").css("background","#bbffaa");//改变索引值为技术的div元素的背景色
+			$("div:eq(3)").css("background","darkblue");//改变索引值等于3的div元素的背景色
+			$("div:gt(3)").css("background","blue");//改变索引值大于3的div元素的背景色
+			$("div:lt(3)").css("background","lightskyblue");//改变索引值小于3的div元素的背景色
+			$(":header").css("background","#bbffaa");//改变所有的标题元素,例如h1,h2,h3整个写元素的背景色
+			$(":animated").css("background","#bbffaa");//改变当前正在执行动画的元素的背景色
+			$(":focus").css("background","#bbffaa");//改变当前获取聚焦点的元素的背景色
+			
+			/*内容过滤器*/
+			
+		</script>
+	</body>
+</html>

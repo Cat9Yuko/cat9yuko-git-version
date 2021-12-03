@@ -1,0 +1,356 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑";
+    font-size: 16px;
+}
+a{
+    text-decoration: none;
+}
+li {
+	list-style: none;
+}
+.index {
+    width: 100%;
+    /* height: 1352px;
+    background: url(../img/bznmgzdt_202006_pcbg.jpg) center center;
+    background-size: cover; */
+    position: relative;
+}
+.center_block {
+    width: 1200px;
+    margin: 0 auto;
+}
+img {
+    border: none;
+}
+.clearfix::after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.clearfix {
+    *zoom: 1;
+}
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+.divh {height: 623px;
+background: url(../img/slqngbdt-202009-topbanner.jpg) center center;
+background-size: cover;
+}
+.tab-container {
+    height: 606px;
+    background: #ffffff;
+}
+.box-shadow {
+    box-shadow: 0 0 7px #c2c2c2;
+}
+
+.tab-lef {
+    width: 250px;
+    background: #f1f1f1;
+    height: 100%;
+}
+.tab {
+    width: 100%;
+    height: 100px;
+    font-size: 28px;
+    text-align: center;
+    line-height: 100px;
+    color: #ababab;
+    cursor: pointer;
+}
+.tab img {
+    vertical-align: middle;
+}
+.tab:not(:last-child) {
+    border-bottom: 1px solid #bfbfbf;
+}
+.icon {
+    display: none;
+}
+
+.tab.act .icon-1 {
+    display: none;
+}
+.tab.act .icon {
+    display: inline;
+}
+.tab.act {
+    color: #ffffff;
+    background: #b00a0a;
+}
+
+.tab-item {
+    width: 950px;
+    height: 606px;
+    display: none;
+}
+.tab-item.act {
+    display: block;
+}
+.tab-item .content {
+    padding: 60px 41px;
+}
+.tab-item .content p {
+    font-size: 19px;
+    line-height: 44px;
+    text-indent: 2rem;
+}
+.tab-item .content p span {
+    color: #b00a0a;
+    font-size: 19px;
+}
+
+.btn {
+    width: 610px;
+    margin: 0 auto;
+    margin-top: 70px;
+}
+.btn a{
+    display: block;
+    height: 75px;
+    width: 289px;
+    background: #b00a0a;
+    color: #ffffff;
+    font-size: 30px;
+    text-align: center;
+    line-height: 75px;
+    border-radius: 50px;
+}
+
+.link {
+    position: absolute;
+    width: 278px;
+    height: 38px;
+    right: 0;
+    bottom: 247px;
+    /* background: #ffffff; */
+}
+.link a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.link2 {
+    bottom: 150px;
+}
+
+/*  */
+/* .login {
+    background: url(../img/bznmgzdt_202006_pcloginbg.jpg) center center;
+    height: 966px;
+} */
+
+.login .divh {
+    height: 609px;
+}
+
+.register .welcom,
+.login .welcom {
+	font-size: 24px;
+	color: #ffffff;
+}
+
+.register input ,
+.register select,
+.login input{
+	border: 1px solid #ffffff;
+	border-radius: 5px;
+	outline: none;
+    font-size: 20px;
+    background: transparent;
+    color: #ffffff;
+}
+.register select {
+	float: left;
+	width: 310px;
+	height: 50px;
+}
+
+.register span,
+.login span {
+	display: block;
+	width: 203px;
+	height: 50px;
+	background: #0468bd;
+	color: #FFFFFF;
+	font-size: 24px;
+	text-align: center;
+	line-height: 50px;
+	border-radius: 5px;
+	margin-right: 10px;
+}
+.login span {
+    background: #00b7ee;
+}
+
+
+.zhuyi-center {
+	width: 840px;
+	height: 50px;
+	text-indent: 2rem;
+	margin: 0 auto;
+	color: #ffffff;
+	font-size: 16px;
+	line-height: 25px;
+}
+
+.sub-tij ,.sub-tij button,
+.sub-dl button {
+	width: 165px;
+	height: 50px;
+	background: #4accfc;
+	border-radius: 5px;
+	font-size: 24px;
+	color: #014b7f;
+	border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+.sub-tij {	margin: 0 auto;}
+.answer_t {
+	font-size: 24px;
+	color: #ffffff;
+}
+.xuanxiang {
+	margin:  20px 0 45px 0;
+    font-size: 16px;
+    color: #ffffff;
+}
+.xx_ul li {
+	line-height: 30px;
+}
+
+.answer {
+    height: auto;
+}
+.astop {
+    background: url(../img/bznmgzdt_202006_pcanswertopbg.jpg) center center;
+    background-size: cover;
+    width: 100%;
+    height: 938px;
+    margin-bottom: -300px;
+}
+
+.asbotm {
+    background: url(../img/bznmgzdt_202006_pcanswerbotmbg.jpg) center center;
+    background-size: cover;
+    width: 100%;
+    height: 590px;
+    margin-top: -557px;
+}
+.xx_ul input {
+    margin-right: 5px;
+}
+
+.timu {
+    line-height: 33px;
+    margin-bottom: 10px;
+}
+
+.score {
+    height: 966px;
+    background: url(../img/bznmgzdt_202006_pcscorebg.jpg) center center;
+}
+
+.score-bg {
+    background: url(../img/202006nmgdt_scorebg.png) center center;
+    background-size: cover;
+    width: 890px;
+    height: 596px;
+    margin: 0 auto;
+}
+.score .divh {
+    height: 275px;
+}
+
+.score .btn {
+    width: 360px;
+    margin-top: 26px;
+}
+.score .btn a{
+    font-size: 19.5px;
+    width: 155px;
+    height: 44px;
+    line-height: 44px;
+    border-radius: 10px;
+}
+
+.fenshu {
+    text-align: center;
+    padding-top: 379px;
+    color: #ffffff;
+}
+
+/* 注册页背景 */
+.registerbg {
+    height: 728px;
+    background: url(../img/slqngbdt-202009-pcregbg.jpg);
+    background-size: cover;
+}
+
+.center_block.box {
+    padding: 30px;
+}
+
+/* 登录背景 */
+.loginbg {
+    height: 448px;
+    background: url(../img/slqngbdt-202009-pclogbg.jpg);
+    background-size: cover;
+}
+
+/* 答题背景 */
+.answerbg {
+    background: #00a3d2;
+    padding: 33px 0;
+    border-top: 1px solid #ffffff;
+}
+
+/* 分数背景 */
+/*score*/
+.score {
+	width: 100%;
+	height: 1071px;
+	background: url(../img/slqngbdt-202009-pcscoregbg.jpg) center center;
+	background-size: cover;
+}
+.score  .bt {
+	height: 624px;
+	width: 100%;
+}
+.score  .box {
+	width: 913px;
+	height: 165px;
+	margin: 0 auto;
+	color: #FFFFFF;
+	font-size: 30px;
+	text-align: center;
+    line-height: 165px;
+    margin-top: 136px;
+}
+.score .box .fenshu {
+	font-size: 50px;
+}
+
+.twi {
+	width: 420px;
+	height: 50px;
+	margin-top: 50px;
+	background: none;
+}
+.closepage {
+	float: right;
+}
+
+span.dec {
+    font-size: 30px;
+}

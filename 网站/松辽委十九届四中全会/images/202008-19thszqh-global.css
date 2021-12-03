@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "微软雅黑";
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+img {border: none;}
+li {
+  list-style: none;
+}
+.clearfix {
+  *zoom: 1;
+}
+.clearfix::after {
+  content: "";
+  height: 0;
+  visibility: hidden;
+  display: block;
+  clear: both;
+}
+
+.center-block {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.banner {
+  width: 100%;
+  height: 603px;
+  background: url(/images/202008-19thszqh-banner.jpg) center center no-repeat;
+  background-size: cover;
+}
+.nav {
+  background: url(/images/202008-19thszqh-navbg.jpg) center center;
+  background-size: cover;
+}
+.nav-p {
+  display: table;
+}
+.nav-c {
+  display: table-cell;
+  table-layout: fixed;
+  text-align: center;
+  line-height: 47px;
+  font-size: 20px;
+  color: #ffffff;
+}
+.nav-p .nav-c:last-child {
+  text-align: right;
+}
+.nav-p .nav-c:first-child {
+  text-align: left;
+}
+
+.main {
+  background: url(/images/202008-19thszqh-bg.jpg) top center;
+  background-size: cover;
+  min-height: 500px;
+}
+
+.s-item {
+  width: 585px;
+  height: 400px;
+  background-color: #ffffff;
+  margin-top: 30px;
+}
+
+.section .s-item:first-child {
+  float: left;
+}
+.section .s-item:last-child {
+  float: right;
+}
+
+/* carousel */
+.slick-mod {
+  width: 554px;
+  height: 369px;
+  margin: 15px;
+}
+.slick-item {
+  position: relative;
+}
+.slick-item img {
+  width: 100%;
+  height: 100%;
+}
+.tit1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 18px;
+  color: #ffffff;
+  height: 45px;
+  line-height: 45px;
+  text-indent: 20px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.slick-mod .slick-dots,
+.slick-mod2 .slick-dots {
+  position: absolute;
+  right: 10px;
+  bottom: 15px;
+}
+.slick-mod2 .slick-dots {
+  bottom: 36px;
+}
+
+.slick-mod .slick-arrow,
+.slick-mod2 .slick-arrow {
+  width: 28px;
+  height: 51px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 42px;
+  z-index: 3;
+  cursor: pointer;
+}
+/* .slick-mod .slick-next {
+    right: 15px;
+    background: url(../img/next-1.png) no-repeat center;
+  }
+  .slick-mod .slick-prev {
+    left: 15px;
+    background: url(../img/prev-1.png) no-repeat center;
+  } */
+.slick-mod .slick-dots li,
+.slick-mod2 .slick-dots li {
+  width: 14px;
+  height: 14px;
+  background: #ffffff;
+  border-radius: 50%;
+  margin: 0 5px 0 0;
+}
+.slick-mod .slick-dots li.slick-active,
+.slick-mod2 .slick-dots li.slick-active {
+  width: 14px;
+  height: 14px;
+  background: #e50012;
+  border-radius: 50%;
+}
+/* --- */
+
+.c-title h1 {
+  font-size: 28px;
+  color: #c10816;
+  line-height: 58px;
+  padding: 0 15px;
+  border-bottom: 2px solid #c10816;
+}
+.more {
+  font-size: 14px;
+  color: #c10816;
+  float: right;
+  font-weight: normal;
+}
+
+.list {
+  padding: 0 13px;
+  color: #333333;
+}
+.list li {
+  width: 554px;
+  line-height: 48px;
+}
+.list li:not(:last-child) {
+  border-bottom: 1px solid #d4d4d4;
+}
+
+.list img {
+  vertical-align: middle;
+  margin-right: 7px;
+}
+.docTitle {
+  float: left;
+  width: 80%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.list span.time {
+  font-size: 14px;
+  float: right;
+}
+
+.c-title h2 {
+  height: 105px;
+  background: url(/images/202008-19thszqh-icon2.jpg) center center;
+  background-size: cover;
+  line-height: 105px;
+  text-indent: 70px;
+  font-size: 28px;
+  color: #c10816;
+  position: relative;
+}
+
+.c-title h2 .more {
+  line-height: initial;
+  position: absolute;
+  right: 3%;
+  top: 46%;
+}
+
+.footer {
+  border-top: 3px solid #c10816;
+  text-align: center;
+  padding: 30px 0;
+  margin-top: 31px;
+}
+.footer p {
+  font-size: 14px;
+  color: #666666;
+  line-height: 30px;
+}

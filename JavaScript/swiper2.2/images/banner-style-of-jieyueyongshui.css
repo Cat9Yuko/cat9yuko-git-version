@@ -1,0 +1,33 @@
+.swiper-container {
+	position: relative;
+	height: 110px;
+	width: 1200px;
+}
+
+
+/*分页器*/
+
+.pagination {
+	position: absolute;
+	z-index: 20;
+	right: 30px;
+	bottom: 5px;
+	width: 100%;
+	text-align: right;
+}
+
+.swiper-pagination-switch {
+	display: inline-block;
+	width: 23px;
+	height: 5px;
+	/*border-radius: 8px;*/
+	background: #555;
+	margin: 0 3px;
+	opacity: 0.8;
+	border: 1px solid #fff;
+	cursor: pointer;
+}
+
+.swiper-active-switch {
+	background: #3a91db;
+}

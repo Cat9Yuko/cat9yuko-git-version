@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>水利部_首页</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/app-global.css">
+</head>
+
+<body>
+    <!-- 右侧固定 -->
+    <div class="fix-right">
+        <a href="http://zxzj.mwr.gov.cn/irp/html/index.html"><img src="img/l-yjfk.png" alt=""></a>
+        <a href="http://supe.mwr.gov.cn/#/"><img src="img/l-wyjb.png" alt=""></a>
+    </div>
+    <header class="header">
+        <div class="logo">
+            <div class="block">
+                <img src="img/mobile/app-logo.png" alt="">
+                <div class="in-nav">
+                    <img src="img/mobile/app-nav.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="block search-container">
+            <div class="search-placeholder">
+                欢迎使用<span>水利易SOU</span>
+            </div>
+            <form action="http://search.mwr.gov.cn/jrobot/search.do" method="get">
+                <input name="webid" type="hidden" value="1">
+                <input name="od" type="hidden" value="1">
+                <input type="text" class="search-input" name="q" autocomplete="off">
+                <input type="image" src="img/mobile/search-icon3.png" alt="">
+
+            </form>
+        </div>
+
+        <!-- 导航菜单 -->
+        <div class="fixed-bg">
+            <div class="fiexd-zz"></div>
+            <div class="user-info-tab user-tab">
+                <div class="in-nav">
+                    <img src="img/mobile/app-nav2.png" alt="">
+                </div>
+                <div class="user-image">
+                    <img src="img/user.png" alt="">
+                    <h1>用户名</h1>
+                    <!-- <span class="color-tab">管理员</span> -->
+                </div>
+
+                <div class="user-link-tabs text-center">
+                    <div class="user-link-tab"><a href=""><img class="tab-icon" src="img/icon1.png" alt="">我的主页</a>
+                    </div>
+                    <div class="user-link-tab wdwz"><a href="javascript:;"><img class="tab-icon" src="img/icon2.png"
+                                alt="">我的问政</a>
+                    </div>
+                    <div class="user-link-tabchild">
+                        <div class="tabchild"><a href="">我的咨询</a>
+                        </div>
+                        <div class="tabchild"><a href="">我的答题</a>
+                        </div>
+                    </div>
+                    <div class="user-link-tab"><a href=""><img class="tab-icon" src="img/icon3.png" alt="">我的办事</a>
+                    </div>
+                    <div class="user-link-tab"><a href=""><img class="tab-icon" src="img/icon4.png" alt="">我的收藏</a>
+                    </div>
+                    <div class="user-link-tab"><a href=""><img class="tab-icon" src="img/icon5.png" alt="">我的订阅</a>
+                    </div>
+                    <div class="user-link-tab"><a href=""><img class="tab-icon" src="img/icon6.png" alt="">我的足迹</a>
+                    </div>
+                    <div class="user-link-tab">
+                        <span><a href="">修改密码</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a
+                                href="">退出登录</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <!-- main -->
+    <div class="main">
+        <div class="chnl-name">
+            通知公告 <span class="fr"><a href="http://www.mwr.gov.cn/zw/tzgg/tzgs/">查看全部</a></span>
+        </div>
+        <!-- 轮播图 -->
+        <div class="slick-mod"></div>
+
+        <ul class="list" id="data_notice">
+            <!-- <li><a href=""><img src="img/mobile/list-icon.png" alt="">海河水利委员会召开永定河生态水量调度水量监测工作会商会</a></li>
+            <li><a href=""><img src="img/mobile/list-icon.png" alt="">海河水利委员会召开永定河生态水量调度水量监测工作会商会</a></li>
+            <li><a href=""><img src="img/mobile/list-icon.png" alt="">海河水利委员会召开永定河生态水量调度水量监测工作会商会</a></li>
+            <li><a href=""><img src="img/mobile/list-icon.png" alt="">海河水利委员会召开永定河生态水量调度水量监测工作会商会</a></li>
+            <li><a href=""><img src="img/mobile/list-icon.png" alt="">海河水利委员会召开永定河生态水量调度水量监测工作会商会</a></li> -->
+        </ul>
+
+        <!--  -->
+        <div class="tabs clearfix">
+            <div class="tab">
+                <span>
+                    <i>1314</i><br>
+                    我的问政
+                </span>
+            </div>
+            <div class="tab">
+                <span>
+                    <i>152</i><br>
+                    我的办事
+                </span>
+            </div>
+            <div class="tab">
+                <span>
+                    <i>12</i><br>
+                    我的收藏
+                </span>
+            </div>
+            <div class="tab">
+                <span>
+                    <i>14</i><br>
+                    我的订阅
+                </span>
+            </div>
+        </div>
+
+        <div class="chnl-name">
+            热点资讯 <span class="fr"><a href="http://www.mwr.gov.cn/xw/slyw/">查看全部</a></span>
+        </div>
+        <ul class="list" id="data_news">
+            <!-- <li><a href=""><img src="img/mobile/list-icon.png" alt="">海河水利委员会召开永定河生态水量调度水量监测工作会商会</a></li>
+            <li><a href=""><img src="img/mobile/list-icon.png" alt="">海河水利委员会召开永定河生态水量调度水量监测工作会商会</a></li>
+            <li><a href=""><img src="img/mobile/list-icon.png" alt="">海河水利委员会召开永定河生态水量调度水量监测工作会商会</a></li>
+            <li><a href=""><img src="img/mobile/list-icon.png" alt="">海河水利委员会召开永定河生态水量调度水量监测工作会商会</a></li>
+            <li><a href=""><img src="img/mobile/list-icon.png" alt="">海河水利委员会召开永定河生态水量调度水量监测工作会商会</a></li> -->
+        </ul>
+        <!-- 图标 -->
+        <div class="fw-tabs">
+            <div class="fw-tab"><a href="http://spjc.mwr.gov.cn/spjc/userlogin.do?ltype=nmLogin"><img src="img/fw1.png"
+                        alt="">
+                    <h1>审批服务<br>大厅</h1>
+                </a></div>
+            <div class="fw-tab"><a href="http://www.mwr.gov.cn/fw/#xzspsx"><img src="img/fw2.png" alt="">
+                    <h1>行政审批<br>事项</h1>
+                </a></div>
+            <div class="fw-tab"><a href="http://www.mwr.gov.cn/fw/spgg/"><img src="img/fw3.png" alt="">
+                    <h1>审批公告<br></h1>
+                </a></div>
+            <div class="fw-tab"><a href="http://www.mwr.gov.cn/fw/slgs/"><img src="img/fw4.png" alt="">
+                    <h1>受理公示<br></h1>
+                </a></div>
+            <div class="fw-tab"><a href="http://www.mwr.gov.cn/fw/slxf/"><img src="img/fw5.png" alt="">
+                    <h1>水利信访<br></h1>
+                </a></div>
+            <div class="fw-tab"><a href="http://www.hfc.gov.cn/"><img src="img/fw6.png" alt="">
+                    <h1>水情预警<br></h1>
+                </a></div>
+            <div class="fw-tab"><a href="http://xxfb.mwr.cn/"><img src="img/fw7.png" alt="">
+                    <h1>实时水情<br></h1>
+                </a></div>
+            <div class="fw-tab"><a href="http://search.mwr.gov.cn/jrobot/index.do"><img src="img/fw8.png" alt="">
+                    <h1>水利易SOU<br></h1>
+                </a></div>
+            <div class="fw-tab"><a href="http://www.mwr.gov.cn/fw/fwxt/"><img src="img/fw9.png" alt="">
+                    <h1>服务系统<br></h1>
+                </a></div>
+            <div class="fw-tab"><a href="http://www.mwr.gov.cn/fw/cjwt/201807/t20180724_1043734.html"><img
+                        src="img/fw10.png" alt="">
+                    <h1>常见问题<br></h1>
+                </a></div>
+        </div>
+
+        <!-- 猜你喜欢 -->
+        <div class="chnl-name">
+            猜你喜欢
+            <!-- <span class="fr"><a href=""><img src="img/ref.png" alt="">换一批</a></span> -->
+        </div>
+        <ul class="list" id="qrqwcnxh">
+            <!-- <li><a href=""><img src="img/mobile/list-icon.png" alt="">海河水利委员会召开永定河生态水量调度水量监测工作会商会</a></li>
+            <li><a href=""><img src="img/mobile/list-icon.png" alt="">海河水利委员会召开永定河生态水量调度水量监测工作会商会</a></li>
+            <li><a href=""><img src="img/mobile/list-icon.png" alt="">海河水利委员会召开永定河生态水量调度水量监测工作会商会</a></li>
+            <li><a href=""><img src="img/mobile/list-icon.png" alt="">海河水利委员会召开永定河生态水量调度水量监测工作会商会</a></li>
+            <li><a href=""><img src="img/mobile/list-icon.png" alt="">海河水利委员会召开永定河生态水量调度水量监测工作会商会</a></li> -->
+        </ul>
+        <!-- 大家都在搜 -->
+        <div class="chnl-name">
+            大家都在搜
+        </div>
+        <ul class="list circle" id="qrqwdjdzs">
+            <!-- <li><a href="">水利政策<span class="fr">323,234</span></a></li>
+            <li><a href="">每日水雨情<span class="fr">323,234</span></a></li>
+            <li><a href="">灾害预报<span class="fr">323,234</span></a></li>
+            <li><a href="">地方水利法规<span class="fr">323,234</span></a></li>
+            <li><a href="">水利新闻<span class="fr">323,234</span></a></li> -->
+        </ul>
+
+        <div class="chnl-name">
+            行为分析
+            <!-- <span class="fr"><a href="">查看全部</a></span> -->
+        </div>
+        <div id="container" style="width: 100%;"></div>
+        <div class="chnl-name">
+            我的关键字
+        </div>
+        <div id="img"></div>
+    </div>
+    <!-- footer -->
+    <div class="footer clearfix">
+        <div class="yqlj">
+            <div class="chnl-name">
+                友情链接
+            </div>
+            <ul class="link">
+                <li><a href="http://spjc.mwr.gov.cn/">水利部政务服务平台</a></li>
+                <li><a href="http://supe.mwr.gov.cn/">水利部12314监督举报平台</a></li>
+                <li><a href="http://xypt.mwr.gov.cn/">水利建设市场监管平台</a></li>
+            </ul>
+        </div>
+
+        <div class="clearfix">
+
+            <div class="imglink">
+                <div class="qrco fl">
+                    <img src="img/qrcode.png" alt="" width="113">
+                    <div>水利部官方微信</div>
+                </div>
+                <div class="qrco fr">
+                    <img src="img/qrcode2.png" alt="" width="113">
+                    <div>水利部官网</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="footer2">
+        京ICP备14010557号 ©中华人民共和国水利部版权所有<br>主办：水利部办公厅 承办：水利部信息中心<br>水利部总机：010-63202114<br>网站联系电话：010-63202558 <br><br>
+        政府网站标识码：bm20000001<br><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11040102700040"
+            target="_blank"><img src="http://www.mwr.gov.cn/images_zt/20190906-guohui.png" border="0"
+                style="display:inline"> 京公网安备11040102700040号</a>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/highcharts.js"></script>
+    <script src="js/wordcloud.js"></script>
+    <script src="js/tagcloud-app.js"></script>
+    <script src="js/page-app.js"></script>
+    <script>
+        $(".search-placeholder").click(function () {
+            $(this).hide();
+            $(".search-input").focus();
+        });
+        $(".in-nav").click(function () {
+            $(".fixed-bg").stop().slideToggle("act");
+            $(".fiexd-zz").stop().fadeToggle("act");
+        });
+        $(".fiexd-zz").click(function () {
+            $(".fixed-bg").stop().slideToggle("act");
+            $(".fiexd-zz").stop().fadeToggle("act");
+        });
+
+        $.ajax({
+            type: "post",
+            url: "/handle/home/statisCount",
+            data: "data",
+            dataType: "json",
+            success: function (result) {
+                console.log(result);
+            }
+        });
+    </script>
+</body>
+
+</html>

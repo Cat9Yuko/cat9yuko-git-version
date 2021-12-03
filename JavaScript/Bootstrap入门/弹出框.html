@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+		<title></title>
+
+		<!-- Bootstrap core CSS -->
+		<link href="images/bootstrap.css" rel="stylesheet">
+		<script src="images/jquery-1.9.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="images/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	</head>
+
+	<body>
+		<button type="button" class="btn btn-default" data-toggle="popover" title="Popovers are fun" data-content="You can add titles and they stick.">
+			Click to see a Popover
+		</button>
+		
+		<!--下次单击时消失的弹出框-->
+		<a href="#" class="btn btn-default" role="button" data-toggle="popover" data-trigger="focus" title="Make this Popover Disappear" data-contant="Click anywhere and the popover will leave." tabindex="0">
+			This is a Dismissable Popover
+		</a>
+		
+		<script type="text/javascript">
+			$(document).ready(function () {
+				$(function(){
+					$('[data-toggle="popover"]').popover();
+				});
+			});
+		</script>
+			
+	</body>
+
+</html>

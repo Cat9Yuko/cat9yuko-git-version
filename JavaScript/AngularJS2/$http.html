@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/angular.js" ></script>
+	</head>
+	<body ng-app="myApp" ng-controller="myCtrl">
+		<script type="text/javascript">
+			var app = angular.module('myApp',[]);
+			app.controller('myCtrl',function ($scope,$http) {
+				//向服务器发送请求的
+				$http.get('welcome.html').then(function (response) {
+					//将response响应数据赋值给$scope中的属性
+					$http.myWelcome = response.data;
+				});
+			});
+		</script>
+		<h4>{{myWelcome}}</h4>
+		<!--和springmvc交互的通用方式-->
+		<script type="text/javascript">
+			$http({
+				method:"post",
+				url:item.do,
+				headers:{'Content-Type':'application/x-www-form-urlencode'}
+				data:$param($scope.FormData).success(function (result) {
+					//成功执行的代码					
+				}).error(function (result) {
+					//失败执行的代码
+				});
+				
+				//快捷方式
+				$http.post(url,$scope.formData).success(function () {
+					
+				}).error(function () {
+					
+				});
+			});
+		</script>
+	</body>
+</html>

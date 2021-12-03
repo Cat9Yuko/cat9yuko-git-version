@@ -1,0 +1,281 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.center-block-1200 {
+  width: 1200px;
+  margin: 0 auto;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.clearfix::after {
+  content: " ";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+
+/* 每周一书 */
+.bok-nav {
+  background-color: #ffffff;
+  color: #7e7a7a;
+}
+
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.week-main {
+  box-shadow: 0px 0px 7px #ccc;
+  -moz-box-shadow: 0px 0px 7px #ccc;
+  -ms-box-shadow: 0px 0px 7px #ccc;
+  -o-box-shadow: 0px 0px 7px #ccc;
+  -moz-box-shadow: 0px 0px 7px #ccc;
+}
+.bnav-bar {
+  font-size: 22px;
+  padding: 9px 0 9px 40px;
+}
+.mywqhg {
+  padding: 20px 16px 0 0;
+}
+.colo-014598 {
+  font-weight: bold;
+  color: #014598;
+}
+.nav-btn {
+  padding: 0 10px;
+  height: 45px;
+  display: inline-block;
+  text-align: center;
+  line-height: 45px;
+}
+.nav-btn.act {
+  width: 150px;
+  background-color: #1b6db7;
+  color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 5px 5px rgba(192, 192, 192, 0.5);
+}
+
+.mywqhg {
+  user-select: none;
+}
+.mywqhg span {
+  display: inline-block;
+  /* height: 23px; */
+  line-height: 23px;
+}
+
+.mywqhg span + span {
+  border: 1px solid #b7b7b8;
+}
+
+.mywqhg-year,
+.mywqhg-month {
+  box-sizing: border-box;
+  position: relative;
+  width: 95px;
+  text-indent: 12px;
+  cursor: pointer;
+  margin-right: 17px;
+  background: url(../images/202012-mzys-sjicon.jpg) right 8px center no-repeat;
+}
+.mywqhg-month {
+  text-indent: 12px;
+}
+.mywqhg-go {
+  width: 30px;
+  text-align: center;
+  background-color: #81befb;
+  color: #ffffff;
+  cursor: pointer;
+}
+.slect-options {
+  display: none;
+  position: absolute;
+  left: -1px;
+  top: 21px;
+  width: 95px;
+  box-sizing: border-box;
+  background: #ffffff;
+  border-left: 1px solid #b7b7b8;
+  border-right: 1px solid #b7b7b8;
+  border-bottom: 1px solid #b7b7b8;
+}
+.slect-options.act {
+  display: block;
+}
+.slect-option {
+  width: 95px;
+  height: 25px;
+}
+
+.slect-option:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.week-bg {
+  height: 735px;
+  background: url(../images/202012-mzys-bg.jpg) center center no-repeat;
+  background-size: cover;
+}
+
+/* 轮播图样式 */
+.week-top {
+  height: 523px;
+}
+.w-show p {
+  width: 520px;
+  color: #ffffff;
+  text-indent: 2rem;
+  font-size: 18px;
+  line-height: 38px;
+  text-align: justify;
+  padding: 80px 0 0 60px;
+}
+.w-show img {
+  margin: 46px 103px 0 0;
+  border: 1px solid #b7b7b8;
+  width: 370px;
+  height: 434px;
+}
+.wb-bg {
+  width: 990px;
+  margin: 0 auto;
+  height: 213px;
+  background: rgba(128, 128, 128, 0.3);
+}
+.img-nav {
+  width: 155px;
+  height: 182px;
+  background: #ffffff;
+  border: 1px solid #b9b9ba;
+  margin: 15px auto;
+  font-size: 16px;
+  cursor: pointer;
+}
+.img-nav img {
+  width: 100%;
+  height: 100%;
+}
+/*  */
+.slick-mod {
+  width: 768px;
+  margin: 0 auto;
+}
+.slick-mod .slick-arrow {
+  width: 36px;
+  height: 84px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 3;
+  cursor: pointer;
+}
+.slick-mod .slick-next {
+  right: -60px;
+  background: url(../images/202012-mzys-right.jpg) no-repeat center;
+}
+.slick-mod .slick-prev {
+  left: -60px;
+  background: url(../images/202012-mzys-left.jpg) no-repeat center;
+}
+
+
+/* 每周一学 */
+
+.mzyxue {
+  width: 980px;
+  margin: 0 auto;
+}
+.chnltitle img {
+  display: block;
+}
+.carousel-content {
+  padding: 50px 0;
+  background: #ffffff;
+}
+
+.slick-mod3 {
+  width: 782px;
+  margin: 0 auto;
+  font-size: 16px;
+}
+
+.slick-mod3 .slick-arrow {
+  width: 36px;
+  height: 84px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 3;
+  cursor: pointer;
+}
+.slick-mod3 .slick-next {
+  right: -60px;
+  background: url(../images/202012-mzys-right.jpg) no-repeat center;
+}
+.slick-mod3 .slick-prev {
+  left: -60px;
+  background: url(../images/202012-mzys-left.jpg) no-repeat center;
+}
+div.ctitle {
+  font-size: 24px;
+  text-align: center;
+  border-bottom: 1px solid #d7d7d7;
+  padding-bottom: 24px;
+  line-height: 1.5;
+  color: #525353;
+}
+div.cart {
+  font-size: 16px;
+  padding-top: 20px;
+  line-height: 43px;
+  /* height: 226px; */
+  overflow: hidden;
+  color: #525353;
+}
+div.cart.act {
+  height: auto;
+}
+div.zheide {
+  width: 80px;
+  height: 26px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.moreart {
+  width: 920px;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  margin-top: 10px;
+}
+.m1 {
+  padding: 0 5px;
+  width: calc(25% - 10px);
+  float: left;
+  line-height: 50px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.m1::before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #ffffff;
+  vertical-align: middle;
+  margin: 0 10px;
+}

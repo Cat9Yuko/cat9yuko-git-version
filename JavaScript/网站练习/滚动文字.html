@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>滚动文字</title>
+		<script src="js/jquery-1.9.1.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			#scrollDiv {
+				width: 500px;
+				height: 25px;
+				line-height: 25px;
+				margin: 50px auto;
+				overflow: hidden;
+				background: lightblue;
+			}
+			
+			#scrollDiv li {
+				height: 25px;
+				cursor: pointer;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div id="scrollDiv">
+			<ul>
+				<li>这是第一行</li>
+				<li>这是第二行</li>
+				<li>这是第三行</li>
+				<li>这是第四行</li>
+				<li>这是第五行</li>
+				<li>这是第六行</li>
+				<li>这是第七行</li>
+			</ul>
+		</div>
+		<script type="text/javascript">
+			function autoscroll(obj) {
+				$(obj).find("ul:first").animate({
+					marginTop: "-25px"
+				}, 1000, function() {
+					$(this).css("margin-top", "0px").find("li:first").appendTo(this)
+				})
+			}
+			$(document).ready(function() {
+				setInterval('autoscroll("#scrollDiv")', 1500)
+			})
+		</script>
+	</body>
+
+</html>

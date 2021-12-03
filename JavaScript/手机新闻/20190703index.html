@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="images/jquery1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="images/swiper.min.css" />
+		<link rel="stylesheet" type="text/css" href="images/20190703_base.css"/>
+		<script src="images/201900703_idangerous.swiper2.7.6.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			
+			$(function () {
+				$(".search-icon").click(function () {
+					$(".search-input").toggle();
+					$(".title").toggle();
+				});
+			});
+		</script>
+		
+		
+	</head>
+
+	<body>
+		<header>
+			<div class="title">新闻资讯</div>
+			<div class="search-icon"><img src="images/search-icon.jpg" width="20px" height="20px"/></div>
+			<div class="search-input"><input type="search"></div>
+		</header>
+
+		<!-- 轮播图开始-->
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<trs_documents id="图片新闻" NUM="3">
+				<div class="swiper-slide blue-slide">
+					<div class="desc"><TRS_DOCUMENT FIELD="DOCABSTRACT" AUTOFORMAT="TRUE">摘要</TRS_DOCUMENT></div>
+				</div>
+				</trs_documents>
+			</div>
+			<div class="swiper-pagination swiper-pagination-white">&nbsp;</div>
+		</div>
+		<script src="images/swiper.min.js"></script>
+		<script>
+			var swiper = new Swiper('.swiper-container', {
+				speed: 300, //切换速度
+				autoplay: {
+					delay: 3000 //自动切换速度
+				},
+				loop: true,
+				pagination: {
+					el: '.swiper-pagination',
+				},
+			});
+		</script>
+
+		<!--轮播图结束-->
+
+		<div class="container-news">
+			<TRS_DOCUMENTS ID="新闻资讯">
+			<section>
+			<div class="image-news-container">
+				<div class="image-news">
+					<img src="<TRS_APPENDIX field='_RECURL' mode='PIC' index='0' target='_blank' upload='TRUE'/>" width="80%" height="80%" />
+				</div>
+			</div>
+			<div class="title-news-container">
+				<div class="title-news">
+					<div class="desc-container1"><TRS_DOCUMENT FIELD="DOCTITLE">标题</TRS_DOCUMENT></div>
+					<div class="desc-container2"><span class="title-date"><TRS_DOCUMENT FIELD="CRTIME" DATAFORMAT="yyyy-MM-dd">2019年7月3日15:29:07</TRS_DOCUMENT></span>
+						<span class="title-source"><TRS_DOCUMENT FIELD="DOCSOURCE ">来源</TRS_DOCUMENT></span></div>
+				</div>
+			</div>
+			</section>
+			</TRS_DOCUMENTS>
+		</div>
+		
+		
+		
+		
+	</body>
+
+
+
+</html>

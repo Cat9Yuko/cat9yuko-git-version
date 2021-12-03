@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../js/angular.min.js" ></script>
+	</head>
+	<body ng-app="">
+		<form action="">
+			选择一个选项
+			<select ng-model="myVar">
+				<option value=""></option>
+				<option value="羊">羊</option>
+				<option value="鹏">鹏</option>
+				<option value="鲲">鲲</option>
+			</select>
+		</form>
+		<div ng-switch="myVar">
+			<div ng-switch-when="羊">羊</div>
+			<div ng-switch-when="鹏">鹏</div>
+			<div ng-switch-when="鲲">鲲</div>
+		</div>
+	</body>
+</html>

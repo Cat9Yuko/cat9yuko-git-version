@@ -1,0 +1,73 @@
+<DOCTYPE html>
+    <html>
+    <head>
+        <title>Tab选项卡</title>
+        <meta charset="utf-8">
+        <style type="text/css">
+            body{
+                font-size: 0;
+            }
+            .box{
+                text-align: center;
+            }
+            .box .tab{
+                display: inline-block;
+                width: 120px;
+                height: 44px;
+                padding: 7px;
+                border: 1px solid #ccc;
+                border-bottom: 0px;
+                box-sizing:border-box;
+                background: #fff;
+                font-size: 16px;
+                line-height: 26px;
+                color: #555;
+                transition: all 0.5s linear;
+            }
+            .box .tab:hover{
+                background: #eee;
+                transition: all 0.5s linear;
+            }
+            .con{
+                width: 800px;
+                height: 400px;
+                margin:0 auto;
+            }
+            .con .list{
+                width: 800px;
+                height: 400px;
+                border: 1px solid #ccc;
+                padding: 10px;
+                position: absolute;/*堆一起*/
+                z-index: 1;
+                box-sizing:border-box;
+            }
+            .list img{
+                height: 300px;
+                width: auto;
+                margin: 40px auto;
+            }
+            .box>.tab:nth-child(1):hover~.con>.list:nth-child(1),
+            .box>.tab:nth-child(2):hover~.con>.list:nth-child(2),
+            .box>.tab:nth-child(3):hover~.con>.list:nth-child(3),
+            .box>.tab:nth-child(4):hover~.con>.list:nth-child(4),
+            .list:hover{
+                z-index: 3;
+            }
+        </style>
+    </head>
+    <body>
+    <div class="box">
+        <a class="tab">哇咔咔</a>
+        <a class="tab">太棒了</a>
+        <a class="tab">纳尼</a>
+        <a class="tab">不要听</a>
+        <div class="con">
+            <div class="list"><img src="img/20191122_ban1999.jpg"></div>
+            <div class="list"><img src="img/20191122_ban2000.jpg"></div>
+            <div class="list"><img src="img/20191122_ban2004.jpg"></div>
+            <div class="list"><img src="img/20191122_ban2006.jpg"></div>
+        </div>
+    </div>
+    </body>
+    </html>

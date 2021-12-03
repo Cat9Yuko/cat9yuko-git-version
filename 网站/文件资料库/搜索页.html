@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <title>文件资料库</title>
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/search-filelib.css">
+    <link rel="stylesheet" href="css/filelib-global.css">
+    <!-- app样式 -->
+    <link rel="stylesheet" href="css/filelib-app.css">
+</head>
+
+<body>
+    <header class="header no-bg">
+        <iframe src="http://www.mwr.gov.cn/inc/iframewjzlk/" frameborder="0" height="290px" width="100%" scrolling="no"></iframe>
+    </header>
+    <main class="main no-bg">
+        <div class="center-block-1200 search-content">
+
+            <div class="curpage"><a href="">首页</a> &gt; <a href="">文件检索</a></div>
+            <h1 class="htitle blue-ftcolor">文件资料库</h1>
+
+            <div class="search-container-bg br">
+                <div class="search-container br">
+
+                    <div class="container br">
+                        <div class="input">
+                            <div class="picker fl">全部</div>
+                            <ul class="picker-list">
+                                <li th:value="0">全部</li>
+                                <li th:value="1">水利部文件</li>
+                                <li th:value="2">水利部部门文件</li>
+                                <li th:value="3">政策解读</li>
+                            </ul>
+                            <input type="text" placeholder="搜索关键词" autocomplete="off" id="search-input" class="fl">
+
+                            <!-- <div class="hot-list"></div> -->
+                        </div>
+                        <div class="search"></div>
+                    </div>
+                    <!-- 高级搜索按钮 -->
+                    <button class="heisearch btn-blue"
+                        onclick="window.location.href='http:/\/www.mwr.gov.cn'">高级搜索</button>
+                </div>
+            </div>
+
+            <!-- 文件展示区 -->
+            <div class="file-show clearfix">
+                <div class="fl">
+                    <div class="dhml-title">
+                        导航目录
+                    </div>
+                    <div class="dhml-tabs">
+                        <div class="tree">
+                            <!-- 主题分类 -->
+                            <div class="parent_title">&nbsp;&nbsp;主题分类(2978)&nbsp;</div>
+                            <div class="childs">
+                                <div class="child">
+                                    <a href="javascript:;">
+                                        <div class="child_title clearfix"><span class="fr80">基本信息</span></div>
+                                    </a>
+                                </div>
+                                <div class="child">
+                                    <a href="javascript:;">
+                                        <div class="child_title clearfix"><span class="fr80">行政审批</span></div>
+                                    </a>
+                                </div>
+                                <div class="child">
+                                    <div class="child_title clearfix"><a href="javascript:;"><span class="jia"></span><span class="fr80">政策法规(322)</span></a></div>
+                                    <div class="childs2">
+                                        <div class="child2"><a href="javascript:;">法律法规(27)</a></div>
+                                        <div class="child2"><a href="javascript:;">部门规章(53)</a></div>
+                                        <div class="child2"><a href="javascript:;">规范性文件(237)</a></div>
+                                        <div class="child2"><a href="javascript:;">权责清单(5)</a></div>
+                                    </div>
+                                </div>
+                                <div class="child">
+                                    <a href="javascript:;">
+                                        <div class="child_title clearfix"><span class="fr80">规划计划(151)</span></div>
+                                    </a>
+                                </div>
+                                <div class="child">
+                                    <a href="javascript:;">
+                                        <div class="child_title clearfix"><span class="fr80">水资源管理与保护(173)</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="child">
+                                    <a href="javascript:;">
+                                        <div class="child_title clearfix"><span class="fr80">节约用水(29)</span></div>
+                                    </a>
+                                </div>
+                                <div class="child">
+                                    <div class="child_title clearfix"><a href="javascript:;"><span class="jia"></span><span class="fr80">水利工程建设与运行管理(238)</span></a>
+                                    </div>
+                                    <div class="childs2">
+
+                                        <div class="child2"><a href="javascript:;">建设管理(93)</a></div>
+
+                                        <div class="child2"><a href="javascript:;">市场监督管理(81)</a></div>
+
+                                        <div class="child2"><a href="javascript:;">运行管理(64)</a></div>
+
+                                    </div>
+                                </div>
+                                <div class="child">
+                                    <a href="javascript:;">
+                                        <div class="child_title clearfix"><span class="fr80">河湖管理(59)</span></div>
+                                    </a>
+                                </div>
+                                <div class="child">
+                                    <a href="javascript:;">
+                                        <div class="child_title clearfix"><span class="fr80">水土保持(692)</span></div>
+                                    </a>
+                                </div>
+                                <div class="child">
+                                    <a href="javascript:;">
+                                        <div class="child_title clearfix"><span class="fr80">农村水利水电(134)</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="child">
+                                    <a href="javascript:;">
+                                        <div class="child_title clearfix"><span class="fr80">水利移民管理与水利扶贫(53)</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="child">
+                                    <a href="javascript:;">
+                                        <div class="child_title clearfix"><span class="fr80">监督管理(110)</span></div>
+                                    </a>
+                                </div>
+                                <div class="child">
+                                    <a href="javascript:;">
+                                        <div class="child_title clearfix"><span class="fr80">水旱灾害防御(49)</span></div>
+                                    </a>
+                                </div>
+                                <div class="child">
+                                    <a href="javascript:;">
+                                        <div class="child_title clearfix"><span class="fr80">水文管理(33)</span></div>
+                                    </a>
+                                </div>
+                                <div class="child">
+                                    <a href="javascript:;">
+                                        <div class="child_title clearfix"><span class="fr80">三峡工程(0)</span></div>
+                                    </a>
+                                </div>
+                                <div class="child">
+                                    <a href="javascript:;">
+                                        <div class="child_title clearfix"><span class="fr80">南水北调工程(4)</span></div>
+                                    </a>
+                                </div>
+                                <div class="child">
+                                    <div class="child_title clearfix"><a href="javascript:;"><span class="jia"></span><span class="fr80">国际合作与科技(217)</span></a>
+                                    </div>
+                                    <div class="childs2">
+                                        <div class="child2"><a href="javascript:;">科技与外事管理(34)</a></div>
+                                        <div class="child2"><a href="javascript:;">水利标准(183)</a></div>
+                                    </div>
+                                </div>
+                                <div class="child">
+                                    <a href="javascript:;">
+                                        <div class="child_title clearfix"><span class="fr80">财务管理(144)</span></div>
+                                    </a>
+                                </div>
+                                <div class="child">
+                                    <a href="javascript:;">
+                                        <div class="child_title clearfix"><span class="fr80">人事管理(97)</span></div>
+                                    </a>
+                                </div>
+                                <div class="child">
+                                    <a href="javascript:;">
+                                        <div class="child_title clearfix"><span class="fr80">综合政务(113)</span></div>
+                                    </a>
+                                </div>
+                                <div class="child">
+                                    <a href="javascript:;">
+                                        <div class="child_title clearfix"><span class="fr80">建议提案(209)</span></div>
+                                    </a>
+                                </div>
+                                <div class="child">
+                                    <a href="javascript:;">
+                                        <div class="child_title clearfix"><span class="fr80">其他(23)</span></div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- 体裁分类 -->
+                            <div class="parent_title">&nbsp;&nbsp;体裁分类(2978)&nbsp;</div>
+                            <div class="childs">
+                                <div class="child">
+                                    <a href="javascript:;">
+                                        <div class="child_title clearfix"><span class="fr80">法律法规(27)</span></div>
+                                    </a>
+                                </div>
+                                <div class="child">
+                                    <a href="javascript:;">
+                                        <div class="child_title clearfix"><span class="fr80">决定(3)</span></div>
+                                    </a>
+                                </div>
+                                <div class="child">
+                                    <a href="javascript:;">
+                                        <div class="child_title clearfix"><span class="fr80">命令（令）(123)</span></div>
+                                    </a>
+                                </div>
+                                <div class="child">
+                                    <a href="javascript:;">
+                                        <div class="child_title clearfix"><span class="fr80">公报(3)</span></div>
+                                    </a>
+                                </div>
+                                <div class="child">
+                                    <a href="javascript:;">
+                                        <div class="child_title clearfix"><span class="fr80">公告(325)</span></div>
+                                    </a>
+                                </div>
+                                <div class="child">
+                                    <a href="javascript:;">
+                                        <div class="child_title clearfix"><span class="fr80">通告(17)</span></div>
+                                    </a>
+                                </div>
+                                <div class="child">
+                                    <a href="javascript:;">
+                                        <div class="child_title clearfix"><span class="fr80">意见(75)</span></div>
+                                    </a>
+                                </div>
+                                <div class="child">
+                                    <a href="javascript:;">
+                                        <div class="child_title clearfix"><span class="fr80">通知(1254)</span></div>
+                                    </a>
+                                </div>
+                                <div class="child">
+                                    <a href="javascript:;">
+                                        <div class="child_title clearfix"><span class="fr80">通报(69)</span></div>
+                                    </a>
+                                </div>
+                                <div class="child">
+                                    <a href="javascript:;">
+                                        <div class="child_title clearfix"><span class="fr80">报告(7)</span></div>
+                                    </a>
+                                </div>
+                                <div class="child">
+                                    <a href="javascript:;">
+                                        <div class="child_title clearfix"><span class="fr80">批复(482)</span></div>
+                                    </a>
+                                </div>
+                                <div class="child">
+                                    <a href="javascript:;">
+                                        <div class="child_title clearfix"><span class="fr80">议案复文(216)</span></div>
+                                    </a>
+                                </div>
+                                <div class="child">
+                                    <a href="javascript:;">
+                                        <div class="child_title clearfix"><span class="fr80">函(301)</span></div>
+                                    </a>
+                                </div>
+                                <div class="child">
+                                    <a href="javascript:;">
+                                        <div class="child_title clearfix"><span class="fr80">其他(74)</span></div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- 公开年份 -->
+                            <div class="parent_title">&nbsp;&nbsp;公开年份(3448)&nbsp;</div>
+                            <div class="childs">
+                                <div class="child">
+                                    <a href="javascript:;">
+                                        <div class="child_title clearfix"><span class="fr80">2020年(4)</span></div>
+                                    </a>
+                                </div>
+                                <div class="child"><a href="javascript:;">
+                                        <div class="child_title clearfix"><span class="fr80">2019年(3)</span></div>
+                                    </a>
+                                </div>
+                                <div class="child"><a href="javascript:;">
+                                        <div class="child_title clearfix"><span class="fr80">2018年(4)</span></div>
+                                    </a>
+                                </div>
+                                <div class="child"><a href="javascript:;">
+                                        <div class="child_title clearfix"><span class="fr80">2017年(169)</span></div>
+                                    </a>
+                                </div>
+                                <div class="child"><a href="javascript:;">
+                                        <div class="child_title clearfix"><span class="fr80">2016年(17)</span></div>
+                                    </a>
+                                </div>
+                                <div class="child"><a href="javascript:;">
+                                        <div class="child_title clearfix"><span class="fr80">2015年(17)</span></div>
+                                    </a>
+                                </div>
+                                <div class="child"><a href="javascript:;">
+                                        <div class="child_title clearfix"><span class="fr80">2014年(17)</span></div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- 特色分类 -->
+                            <div class="parent_title">&nbsp;&nbsp;特色分类(3448)&nbsp;</div>
+                            <div class="childs">
+                                <div class="child"><a href="javascript:;">
+                                        <div class="child_title clearfix"><span class="fr80">复工复产(4)</span></div>
+                                    </a>
+                                </div>
+                                <div class="child"><a href="javascript:;">
+                                        <div class="child_title clearfix"><span class="fr80">营商环境(3)</span></div>
+                                    </a>
+                                </div>
+                                <div class="child"><a href="javascript:;">
+                                        <div class="child_title clearfix"><span class="fr80">“放管服”改革(4)</span></div>
+                                    </a>
+                                </div>
+                                <div class="child"><a href="javascript:;">
+                                        <div class="child_title clearfix"><span class="fr80">政务服务(169)</span></div>
+                                    </a>
+                                </div>
+                                <div class="child"><a href="javascript:;">
+                                        <div class="child_title clearfix"><span class="fr80">政务公开(17)</span></div>
+                                    </a>
+                                </div>
+                                <div class="child"><a href="javascript:;">
+                                        <div class="child_title clearfix"><span class="fr80">河长制湖长制(17)</span></div>
+                                    </a>
+                                </div>
+                                <div class="child"><a href="javascript:;">
+                                        <div class="child_title clearfix"><span class="fr80">节水供水(17)</span></div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="parent_title">&nbsp;&nbsp;政策解读(3448)&nbsp;</div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="fr">
+                    <div class="parent-width">
+                        <div class="search-iword">
+                            <span>排 序：</span><a href="#" class="act">按相关度</a> <a href="#">按时间</a>
+                            <span>位 置：</span> <a href="#">全文</a><a href="" class="act">标题</a>
+                        </div>
+                        <div class="search-iword">
+                            <span>日 期：</span> <a href="#" class="act">一周内</a> <a href="#">一月内</a> <a href="#">一年内</a> <a
+                                href="#">不限</a>
+                        </div>
+
+                        <div class="show-list">
+                            <div class="show-h">
+                                <a href="#">全 部</a> <a href="#" class="act">水利部文件（20）</a> <a href="#">水利部部门文件（20）</a><a
+                                    href="#">政策解读（20）</a>
+                            </div>
+                            <div class="show-l">
+
+                                <div class="show-l-c">
+                                    <div class="s-t"><a href="">习近平在全国<span>生态环境保护</span>大会上强调 坚决打好污染防治攻坚战</a></div>
+                                    <div class="s-m">
+                                        全国<span>生态环境保护</span>大会5月18日至19日在北京召开。中共中央总书记、国家主席、中央军委主席习近平出席会议并发表重要讲话。他强调，要自觉把经济社会发展同生态阶...
+                                    </div>
+                                    <div class="s-b">
+                                        <a>部门文件</a>
+                                        <a>2020-09-23</a>
+                                    </div>
+                                </div>
+                                <div class="show-l-c">
+                                    <div class="s-t"><a href="">习近平在全国<span>生态环境保护</span>大会上强调 坚决打好污染防治攻坚战</a></div>
+                                    <div class="s-m">
+                                        全国<span>生态环境保护</span>大会5月18日至19日在北京召开。中共中央总书记、国家主席、中央军委主席习近平出席会议并发表重要讲话。他强调，要自觉把经济社会发展同生态阶...
+                                    </div>
+                                    <div class="s-b">
+                                        <a>部门文件</a>
+                                        <a>2020-09-23</a>
+                                    </div>
+                                </div>
+                                <div class="show-l-c">
+                                    <div class="s-t"><a href="">习近平在全国<span>生态环境保护</span>大会上强调 坚决打好污染防治攻坚战</a></div>
+                                    <div class="s-m">
+                                        全国<span>生态环境保护</span>大会5月18日至19日在北京召开。中共中央总书记、国家主席、中央军委主席习近平出席会议并发表重要讲话。他强调，要自觉把经济社会发展同生态阶...
+                                    </div>
+                                    <div class="s-b">
+                                        <a>部门文件</a>
+                                        <a>2020-09-23</a>
+                                    </div>
+                                </div>
+                                <div class="show-l-c">
+                                    <div class="s-t"><a href="">习近平在全国<span>生态环境保护</span>大会上强调 坚决打好污染防治攻坚战</a></div>
+                                    <div class="s-m">
+                                        全国<span>生态环境保护</span>大会5月18日至19日在北京召开。中共中央总书记、国家主席、中央军委主席习近平出席会议并发表重要讲话。他强调，要自觉把经济社会发展同生态阶...
+                                    </div>
+                                    <div class="s-b">
+                                        <a>部门文件</a>
+                                        <a>2020-09-23</a>
+                                    </div>
+                                </div>
+                                <div class="show-l-c">
+                                    <div class="s-t"><a href="">习近平在全国<span>生态环境保护</span>大会上强调 坚决打好污染防治攻坚战</a></div>
+                                    <div class="s-m">
+                                        全国<span>生态环境保护</span>大会5月18日至19日在北京召开。中共中央总书记、国家主席、中央军委主席习近平出席会议并发表重要讲话。他强调，要自觉把经济社会发展同生态阶...
+                                    </div>
+                                    <div class="s-b">
+                                        <a>部门文件</a>
+                                        <a>2020-09-23</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="fy">
+                                <span><a href=""><i class="fa fa-angle-left" aria-hidden="true"></i></a></span>
+                                <span><a href="">1</a>
+                                    <a href="" class="cur">2</a>
+                                    <a href="">3</a>
+                                    <a href="">4</a>
+                                    <a href="">5</a>
+                                    <a href="">6</a>
+                                    <a href="">7</a>
+                                    <a href="">8</a>
+                                    <a href="">9</a>
+                                </span>
+                                <span><a href=""><i class="fa fa-angle-right" aria-hidden="true"></i></a></span>
+                                <span>
+                                    <input type="text" value="10条/页" disabled>
+                                </span>
+                                <span class="fy-tz">
+                                    跳至<input type="text" value="5">页
+                                </span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <iframe src="http://www.mwr.gov.cn/inc/iframebot/" frameborder="0" scrolling="no" width="1200px" height="170px"></iframe>
+    </footer>
+    <footer class="mfooter">
+        <p>京ICP备14010557号&nbsp;&nbsp;&nbsp;&nbsp;©中华人民共和国水利部版权所有</p>
+
+        <p>政府网站标识码：bm20000001&nbsp;&nbsp;&nbsp;&nbsp;水利部总机：010-63202114</p>
+        <p>京公网安备11040102700040号</p>
+        <p>地址：北京市西城区白广路二条2号</p>
+    </footer>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.qrcode.min.js"></script>
+    <script src="js/search-filelib.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            helangSearch.init();
+        })
+
+        // 
+        // $(".dhml-tab").on("click", function () {
+        //     $(this).addClass("act").siblings().removeClass("act");
+        // })
+    </script>
+</body>
+
+</html>

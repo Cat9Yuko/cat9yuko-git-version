@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!--
+      可视区域meta标签的content属性值
+      width: 可视区域的宽度,其值可以是一个具体数字或关键词device-width
+      height: 可视区域的高度,其值可以是一个具体数字或关键词device-height
+      initial-scale: 页面首次被显示时可视区域的缩放级别,取值为1.0时将使页面按实际尺寸显示,无任何缩放
+      minimun-scale: 可视区域的最小缩放级别,表示用户可以将页面缩小的程度,取值为1.0时将禁止用户缩小至实际尺寸以下
+      maximun-scale: 可视区域的最大缩放级别,表示用户可以将页面放大的程度,取值为1.0时将禁止用户放大至实际尺寸以上
+      user-scalable: 指定用户是否可以对页面进行缩放,设置为yes将允许缩放,no为禁止缩放
+
+ -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>响应式设计</title>
+  <style media="screen">
+    @media screen and (min-width: 1200px) {
+      img[data-src-600px] {
+        content: attr(data-src-600px,url);
+      }
+    }
+    @media (min-width: 800px) {
+      img[data-src-800px] {
+        content: attr(data-src-800px,url);
+      }
+    }
+  </style>
+  <!-- ie6~ie8支持CSS3的 Media Queries -->
+  <!--[if lt IE9]>
+  <<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <img src="images/b1.jpg" data-src-600px="images/b2.jpg" data-src-800px="/images/b3.jpg" alt="">
+</body>
+</html>

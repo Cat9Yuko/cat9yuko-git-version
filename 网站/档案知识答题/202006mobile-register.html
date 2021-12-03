@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/202006_mobileblobal.css">
+    <title>档案知识网络答题</title>
+    <style type="text/css">
+    	::-webkit-input-placeholder { /* WebKit browsers */ 
+color: #FFFFFF; 
+} 
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */ 
+color: #FFFFFF; 
+} 
+::-moz-placeholder { /* Mozilla Firefox 19+ */ 
+color: #FFFFFF; 
+} 
+:-ms-input-placeholder { /* Internet Explorer 10+ */ 
+color: #FFFFFF; 
+} 
+    </style>
+</head>
+<body>
+    <div class="register">
+        <div class="bt"><img src="img/202006-mobile-register.jpg" width="100%" height="100%" /></div>
+        <div class="box">
+            <form class="layui-form reg-font">
+
+            <ul class="login-app">
+                <li class="row">
+                    <div class="qianzui col-xs-4">姓　　名：</div>
+                    <div class="houzhui col-xs-8"><input id="userName" type="text" class="layui-input" lay-verify="required|username" autocomplete="off" required /></div>
+                </li>
+                <!--<li class="row">
+                    <div class="qianzui col-xs-4">单　　位：</div>
+                    <div class="houzhui col-xs-8"><input id="userName" type="text" class="layui-input" lay-verify="required|username" autocomplete="off" required /></div>
+                </li>-->
+                 <li class="row">
+                    <div class="qianzui col-xs-4">单　　位：</div>
+                    <div class="houzhui col-xs-8">
+                        <div class="layui-input-inline" style="width: 100%;float: left;margin-bottom: 5px;">
+                            <select id="p_dept" class="middle" lay-filter="dept_filter" lay-search>
+                                <option value="">请选择</option>
+                                <option value ="volvo">Volvo</option>
+                                  <option value ="saab">Saab</option>
+                                  <option value="opel">Opel</option>
+                                  <option value="audi">Audi</option>
+                            </select>
+                        </div>
+                        <div class="layui-input-inline" style="width: 100%; float: left;">
+                            <select id="c_dept" class="middle" lay-search>
+                                <option value="">请选择</option>
+                                <option value ="volvo">水利部综合事业局</option>
+                              <option value ="saab">水利部宣传教育中心</option>
+                              <option value="opel">Opel</option>
+                              <option value="audi">Audi</option>
+                            </select>
+                        </div>
+                    </div>
+                </li> 
+                <li class="row">
+                    <div class="qianzui col-xs-4">单位名称：</div>
+                    <div class="houzhui col-xs-8">
+                        <input id="deptName" type="text" class="layui-input" autocomplete="off" />
+                    </div>
+                </li>
+                <li class="row">
+                    <div class="qianzui col-xs-4">身份证号：</div>
+                    <div class="houzhui col-xs-8">
+                        <input id="idCard" type="text" class="layui-input" lay-verify="required|idCard" autocomplete="off" required/>
+                    </div>
+                </li>
+                <li class="row">
+                    <div class="qianzui col-xs-4">手机号码：</div>
+                    <div class="houzhui col-xs-8">
+                        <input id="telphone" type="text" class="layui-input" lay-verify="required|phone" required/>
+                    </div>
+                </li>
+                <li class="row">
+                    <div class="qianzui col-xs-4">所在地区：</div>
+                    <div class="houzhui col-xs-8">
+                        <div data-toggle="distpicker">
+                            <div class="layui-input-inline" style="width: 49%;float: left;">
+                                <select lay-filter="p" id="province" lay-verify="required">
+                                    <option value="">北京</option>
+                                </select>
+                            </div>
+                            <div class="layui-input-inline" style="width: 49%;float: right;">
+                                <select lay-filter="c" id="city" lay-verify="required">
+                                    <option value="">北京</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!--<li class="row">
+                    <div class="qianzui col-xs-4">职　　业：</div>
+                    <div class="houzhui col-xs-8">
+                        <div class="layui-input-inline" style="width: 100%">
+                            <select id="profession" lay-verify="required">
+                                <option value=""></option>
+                                <option value="1">行政事业</option>
+                                <option value="2">企业商业</option>
+                                <option value="3">学生</option>
+                                <option value="4">军人</option>
+                                <option value="5">农民</option>
+                                <option value="6">水利</option>
+                                <option value="7">其他</option>
+                            </select>
+                        </div>
+                    </div>
+                </li>
+                <li class="row">
+                    <div class="qianzui col-xs-4">学　　历：</div>
+                    <div class="houzhui col-xs-8">
+                        <div class="layui-input-inline" style="width:100%">
+                            <select id="educational" lay-verify="required">
+                                <option value=""></option>
+                                <option value="1">小学</option>
+                                <option value="2">中学</option>
+                                <option value="3">大学及以上</option>
+                            </select>
+                        </div>
+                    </div>
+                </li>-->
+                <li class="row">
+                    <div class="qianzui col-xs-4 col-md-4">验&nbsp;证&nbsp;码：</div>
+                    <div class="houzhui col-xs-8 col-md-8"><input id="auth_code" type="text" style="width: 65%;" class="layui-input" autocomplete="off" />
+                        <img id="authCode" src="<%=path %>/getAuthCode" width="30%" height="29" class="middle" onclick="changeAuthCode();" style="cursor: pointer;display: inline-block;" /></div>
+                </li>
+            </ul>
+
+            <div class="hei2-btn text-center">
+                <button class="button" lay-submit lay-filter="submit" style="border:none;">提交</button>
+                <!-- <button type="reset" class=" layui-btn-primary button" style="border:none;">重置</button> -->
+            </div>
+        </form>
+        </div>
+    </div>
+</body>
+</html>

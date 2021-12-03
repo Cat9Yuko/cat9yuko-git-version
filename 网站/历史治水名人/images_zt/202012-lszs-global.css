@@ -1,0 +1,179 @@
+/* 基础样式 */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "微软雅黑", Microsoft YaHei;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clearfix::after {
+  content: " ";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+.center-block-1200 {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/* 定义样式 */
+.index-main {
+  width: 100%;
+  height: 1034px;
+  background: url(../images_zt/202012-lszs-indexbg.jpg) center 100% no-repeat;
+  background-size: cover;
+}
+.h330 {
+  height: 330px;
+}
+.circle {
+  width: 1144px;
+  margin: 0 auto;
+}
+.circle li {
+  float: left;
+  width: 63px;
+  height: 63px;
+  background: #15499f;
+  color: #ffffff;
+  font-size: 20px;
+  border-radius: 50%;
+  border: 4px solid #f5d007;
+  text-align: center;
+  line-height: 63px;
+}
+.circle li:hover {
+  background: #01a6fd;
+  cursor: pointer;
+}
+.circle li + li {
+  margin-left: 26px;
+}
+.circle li:nth-child(1) {
+  margin-top: 22px;
+}
+.circle li:nth-child(2) {
+  margin-top: 17px;
+}
+.circle li:nth-child(3) {
+  margin-top: 40px;
+}
+.circle li:nth-child(4) {
+  margin-top: 84px;
+}
+.circle li:nth-child(5) {
+  margin-top: 95px;
+}
+.circle li:nth-child(6) {
+  margin-top: 95px;
+}
+.circle li:nth-child(7) {
+  margin-top: 84px;
+}
+.circle li:nth-child(8) {
+  margin-top: 60px;
+}
+.circle li:nth-child(9) {
+  margin-top: 32px;
+}
+.circle li:nth-child(10) {
+  margin-top: 10px;
+}
+.circle li:nth-child(11) {
+  margin-top: 0px;
+}
+.scroll-parent {
+  width: 806px;
+  height: 493px;
+  overflow: hidden;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  margin-top: 25px;
+  margin-left: 195px;
+}
+#his_con {
+  width: 21000px;
+}
+#his_con li {
+  width: 806px;
+  float: left;
+}
+.top {
+  font-size: 24px;
+  text-align: center;
+  font-weight: bold;
+  padding: 45px 0 40px 0;
+}
+.bottom .fl img {
+  margin-left: 27px;
+  width: 346px;
+  height: 336px;
+  border: 1px solid #cdaa76;
+}
+.bottom .fr {
+  width: 400px;
+}
+.mrjs tr td:first-child{
+    width: 62px;
+    padding: 0;
+}
+.lchnl {
+    width: 60px;
+    font-size: 20px;
+    font-weight: 700;
+}
+.rchnl {
+    line-height: 25px;
+    width: calc(100% - 60px);
+}
+.m10 {
+    margin: 10px 0;
+}
+.more {
+    text-align: right;
+    margin-top: 20px;
+    margin-right: 10px;
+    font-weight: bold;
+}
+.more a {
+    display: inline-block;
+}
+
+.detailbg {
+    width: 100%;
+    height: 1034px;
+    background: url(../images_zt/202012-lszs-detailbg.jpg) center center no-repeat;
+    background-size: cover;
+}
+.h344 {
+    height: 344px;
+}
+
+.whitebg {
+    background: url(../images_zt/20201211-zsmr-detailbg.png) 100% 100%;
+    background: rgb(255, 255, 255, 0.5);
+
+    /* height: 658px; */
+    border-radius: 10px;
+    padding: 5px 20px 15px;
+    box-sizing: border-box;
+    filter:progid:DXImageTransform.Microsoft.gradient(startcolorstr=#7F000000,endcolorstr=#7F000000);
+}
+.doctitle {
+    font-size: 20px;
+    text-align: center;
+    padding: 10px 0;
+    font-weight: bold;
+}

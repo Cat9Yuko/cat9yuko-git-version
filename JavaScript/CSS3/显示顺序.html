@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>显示顺序order</title>
+  <style media="screen">
+    /* 默认状态下, 元素是按照文档流的结构顺序排列
+order: <number>
+ */
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      height: 100%;
+      color: #fff;
+    }
+    body {
+      min-width: 100%;
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: start;
+    }
+    header,
+    section,
+    nav,
+    aside,
+    footer {
+      display: block;
+    }
+    header {
+      background-color: hsla(200, 10%, 70%, .5);
+      min-height: 100px;
+      padding: 10px 20px;
+      width: 100%;
+      order: 1;
+    }
+    section {
+      min-width: 100%;
+      margin: 20px 0;
+      display: flex;
+      order: 2;
+      flex: 1;
+    }
+    nav {
+      background-color: hsla(300, 60%, 20%, .9);
+      padding: 1%;
+      width: 200px;
+      order: 1;
+    }
+    article {
+      background-color: hsla(120, 50%, 50%, .9);
+      padding: 1%;
+      margin-left: 2%;
+      margin-right: 2%;
+      flex: 1;
+      order: 2;
+    }
+    aside {
+      background-color: hsla(20, 80%, 80%, .9);
+      padding: 1%;
+      width: 220px;
+      order: 3;
+    }
+    footer {
+      background-color: hsla(250, 50%, 80%, .9);
+      min-height: 60px;
+      padding: 1%;
+      min-width: 100%;
+      order: 3;
+    }
+  </style>
+</head>
+
+<body>
+  <header>header</header>
+  <section>
+    <article>
+      article
+    </article>
+    <nav>nav</nav>
+    <aside>aside</aside>
+  </section>
+  <footer>footer</footer>
+</body>
+
+</html>

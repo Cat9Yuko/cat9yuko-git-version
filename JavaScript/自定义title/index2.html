@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>卡片效果</title>
+        <!--<link href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">-->
+        <style>
+            .tipbox {
+                position: absolute;
+                color: whitesmoke;
+                font-size: 15px;
+                padding: 8px 12px;
+                border-radius: 4px;
+                background-color: rgba(50, 50, 50, .9);
+                z-index: 1000;
+                display: none;
+                white-space: nowrap;
+                line-height: 20px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="tipbox"></div>
+        <div id="tipr" class="itemr_con">
+								<div class="itemr">
+									<a href=""title="<b>应为:WTT000423</b></br><b>实为:WTT000423</b></br><b>工装编号:000000168</b></br><b>周转卡编号:W201807291834123394</b></br><b>上料时间:2018-07-30 12:51:06</b></br><b>剩余数量:29.325</b>">水利部办公厅关于进一步推进水利工程质量检测单位乙级资质认定改革工作的意见 2019-12-03</a>
+								</div>
+								<div class="itemr">
+									<a href="">水利部办公厅关于印发在自由贸易试验区开展“证照分离”改革全覆盖试点水利.... 2019-11-29</a>
+								</div>
+								<div class="itemr">
+									<a href="">水利部关于印发水利建设市场主体信用信息管理办法的通知 2019-11-25</a>
+								</div>
+								<div class="itemr">
+									<a href="">水利部关于印发水利建设市场主体信用信息管理办法的通知 2019-11-25</a>
+								</div>
+								<div class="itemr">
+									<a href="">水利部关于甲级水利工程质量检测单位撤销行政许可决定书 2019-11-19</a>
+								</div>
+								<div class="itemr">
+									<a href="">水利部关于公布2019—2020年度黄河水量调度责任人名单的公告 2019-11-13</a>
+								</div>
+								<div class="itemr">
+									<a href="">水利部关于公布第二批节水型社会建设达标县（区）名单的公告 2019-11-12</a>
+								</div>
+								<div class="itemr">
+									<a href="">水利部办公厅关于开展示范河湖建设的通知 2019-11-11</a>
+								</div>
+								<div class="itemr">
+									<a href="">水利部办公厅关于印发水系连通及农村水系综合整治试点县实施方案编制指南的... 2019-11-11</a>
+								</div>
+								<div class="itemr">
+									<a href="">水利部办公厅 国家发展改革委办公厅关于做好永定河综合治理与生态修复河道... 2019-10-31</a>
+								</div>
+								<div class="more">更多</div>
+							</div>
+        <!-- Javascript Libraries -->
+        <!-- jQuery -->
+        <script src="js/jquery-1.9.1.min.js"></script>
+
+        <script type="text/javascript">
+        	$(function() {
+    $('#tipr').bind('mouseover mouseout mousemove', function(event) {
+        if(event.originalEvent.type == 'mouseover') {
+            if(event.target.title && event.target.title.length > 0) {
+                $('.tipbox').css('display', 'block');
+                $('.tipbox').html(event.target.title);
+                event.target.title = '';
+            }
+        } else if(event.originalEvent.type == 'mouseout') {
+            if($('.tipbox').html() && $('.tipbox').html().length > 0) {
+                event.target.title = $('.tipbox').html();
+                $('.tipbox').html('');
+                $('.tipbox').css('display', 'none');
+            }
+        } else if(event.originalEvent.type == 'mousemove') {
+            var width = $('.tipbox').width();
+            if((width + event.pageX) > $(window).width()) {
+                $('.tipbox').css({
+                    top: event.pageY + 10,
+                    left: event.pageX + 10 - width
+                })
+            } else {
+                $('.tipbox').css({
+                    top: event.pageY + 10,
+                    left: event.pageX + 10
+                })
+            }
+        }
+    })
+})
+        </script>
+    </body>
+
+</html>

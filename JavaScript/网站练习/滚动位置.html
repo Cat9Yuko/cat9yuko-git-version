@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-1.9.1.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.kd{
+				height: 1000px;
+			}
+		</style>
+	</head>
+	<body background="img/1.jpg">
+		<div class="kd"></div>
+		<p>Hello</p>
+		<p>2nd Pargraph</p>
+		
+		<script type="text/javascript">
+			var p = $("p:first");
+			$("p:last").text("scrollTop: "+p.scrollTop());
+		</script>
+	</body>
+</html>

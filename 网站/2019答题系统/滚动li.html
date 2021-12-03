@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="images/jquery-1.8.3.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#maincontent{
+				width: 1161px;
+				border: 1px solid #0FC;
+				height: 71px;
+				overflow: hidden;
+				float: left;
+			}
+			
+			#ul1{
+				list-style-type:none ;
+				width: 3000px;
+				height: 100px;
+			}
+			#ul1 li{
+				float: left;
+				margin-left: 20px;
+				width: 114px;
+				height: 38px;
+				border-radius: 5px;
+				background: #078fc7;
+			}
+			.leftmove{
+				cursor: pointer;
+				float: left;
+				height: 100px;
+				line-height: 100px;
+				text-align: center;
+				margin-right: 10px;
+			}
+			.rightmove{
+				cursor: pointer;
+				float: left;
+				height: 100px;
+				line-height: 100px;
+				text-align: center;
+				margin-left: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div style="position: absolute;left: 200px;top: 100px;width: 1262px;">
+			<div class="leftmove" onclick="moveleft()"><img src="images/arrow-left.png"/></div>
+			<div id="maincontent">
+				<ul id="ul1">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+			<div class="rightmove" onclick="moveright()"><img src="images/arrow-right.png"/></div>
+		</div>
+		<script type="text/javascript">
+			function moveleft() {
+				var scrleft = $("#maincontent").scrollLeft();
+				if(scrleft>0){
+					$("#maincontent").animate({"scrollLeft":(scrleft-82)},500);
+				}
+			}
+			function moveright() {
+				var licount = $("#ul1").children("li").size(); //li个数
+				var perwidth = 20+ 62; //每个li宽度和左控的和
+				var liwidths = licount * perwidth; //所有li的总宽度
+				var targetScrol = liwidths - 300; //li总宽度减去外层div的宽度,得到滚动条的长度
+				var scrleft = $("#maincontent").scrollLeft();//目前滚动条长度
+				if(!isNaN(targetScrol) && (scrleft < targetScrol)){
+					$("#maincontent").animate({"scrollLeft":scrleft+perwidth},500);//若目前的滚动条的长度小于最终需要的滚动条长度,则向左拉动滚动条,拉动距离为一个li的宽度和它的左外空距离
+				}
+			}
+		</script>
+	</body>
+</html>

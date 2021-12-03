@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>background-clip使用方法</title>
+  <style type="text/css">
+      div {
+        width: 200px;
+        height: 100px;
+        border: 30px dashed rgba(25, 25, 125, 0.5);
+        background: orange url(images/bg.jpg) no-repeat;
+        margin: 20px;
+        padding: 30px;
+      }
+      .border-box {
+        /* 默认值, 从左上角padding内部开始至右下角边框外边缘止,
+        当然背景图片为repeat时,元素div的背景图片会铺满整个元素 */
+        background-clip: border-box;
+      }
+      .padding-box {
+        /* 整个背景(背景色和背景图片) 在超过padding外边缘的部分全部给裁剪掉了,
+        此时并不是成比例裁剪,而是直接超过padding边缘的背景减掉*/
+        background-clip: padding-box;
+      }
+      .content-box {
+        /* 元素div的背景只在内容区域显示,超过内容边缘的背景直接被裁减 */
+        background-clip: content-box;
+      }
+  </style>
+</head>
+<body>
+  <div class="border-box"></div>
+  <div class="padding-box"></div>
+  <div class="content-box"></div>
+</body>
+</html>

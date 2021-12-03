@@ -1,0 +1,131 @@
+<html>
+<head>
+		<script src="js/jquery-1.9.1.min.js"></script>
+<style>
+        body{
+            background-color: #ccc;
+            text-align: center;
+            padding-top: 200px;
+        }
+        a{
+            text-decoration: none;
+            color: #555;
+        }
+        [deta-title]{
+            position: relative;
+            margin: 0 20px;
+        }
+        [deta-title]:after{
+            content: attr(deta-title);
+            position: absolute;
+            left: 50%;
+            bottom: 100%;
+            transform: translate(-50%,0);
+            color: #fff;
+            text-shadow: 0 -1px 0px black;
+            box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+            background: #383838;
+            border-radius: 2px;
+            padding: 3px 10px;
+            font-size: 12px;
+            white-space: nowrap;
+            transition:all .3s;
+            opacity: 0;
+            visibility: hidden;
+        }
+        [deta-title]:hover:after{
+            transition-delay: 100ms;
+            visibility: visible;
+            transform: translate(-50%,-6px);
+            opacity: 1;
+        }
+    </style>
+<script type="text/javascript">
+/*function detaTitle(){
+    var deta_title = document.querySelectorAll("[deta-title]");
+    for (var i = 0; i < deta_title.length; i++){
+        deta_title[i].setAttribute("deta-title",deta_title[i].getAttribute("title"));
+        deta_title[i].removeAttribute("title");
+    }
+}
+detaTitle();*/
+$(document).ready(function(){
+   $("div").bind('mouseover mouseout mousemove', function (event) {
+            var left = event.pageX, top = event.pageY;
+            var ele = event.target;
+            var title = ele.getAttribute('deta-title');
+            if(title=="" || title==null ){
+                title= ele.parentElement.getAttribute('deta-title');
+            }
+            if(title=="" || title==null){
+                title= ele.parentElement.parentElement.getAttribute('deta-title');
+            }
+             event.stopPropagation();
+            var type = event.originalEvent.type;
+            if (type == 'mouseover'&& title!="" && title!=null) {
+              
+                if (title != null && title!="" && title!="null") {
+                    var showEle = $('<div></div>', {text: title, class: 'showTitleBox'}).css({
+                        'position': 'absolute',
+                        'top': top-10,
+                        'left': left+15,
+                        'border': '0px solid #CCC',
+                        'border-radius': '3px',
+                        'background-color': "#333333ba",
+                        'font-size': '14px',
+                        'fontFamily': 'Arial',
+                        'padding': '5px 5px 5px 5px',
+                        'color':'#FFF'
+                    })
+                    showEle.appendTo('body');
+                }else{
+ 
+                }
+            } else if (type == 'mouseout') {
+                // ele.title = oldTitle;
+                $('.showTitleBox').remove();
+            } else if (type == 'mousemove') {
+                 $('.showTitleBox').css({
+                     top: top - 10,
+                     left: left + 15
+                 })
+            }
+        })
+});
+</script>
+</head>
+<body>
+<div>
+<p style="background-color:#E9E9E4;height: 50px;" deta-title="111">111</p>
+<p style="background-color:#E9E9E4;height: 50px;" deta-title="222">222</p>
+<p style="background-color:#E9E9E4;height: 50px;" deta-title="333">333</p>
+<p style="background-color:#E9E9E4;height: 50px;" deta-title="444">444</p>
+<p style="background-color:#E9E9E4;height: 50px;" deta-title="555">555</p>
+<p style="background-color:#E9E9E4;height: 50px;" deta-title="666">666</p><p style="background-color:#E9E9E4;height: 50px;" deta-title="111">111</p>
+<p style="background-color:#E9E9E4;height: 50px;" deta-title="222">222</p>
+<p style="background-color:#E9E9E4;height: 50px;" deta-title="333">333</p>
+<p style="background-color:#E9E9E4;height: 50px;" deta-title="444">444</p>
+<p style="background-color:#E9E9E4;height: 50px;" deta-title="555">555</p>
+<p style="background-color:#E9E9E4;height: 50px;" deta-title="666">666</p>
+<p style="background-color:#E9E9E4;height: 50px;" deta-title="111">111</p>
+<p style="background-color:#E9E9E4;height: 50px;" deta-title="222">222</p>
+<p style="background-color:#E9E9E4;height: 50px;" deta-title="333">333</p>
+<p style="background-color:#E9E9E4;height: 50px;" deta-title="444">444</p>
+<p style="background-color:#E9E9E4;height: 50px;" deta-title="555">555</p>
+<p style="background-color:#E9E9E4;height: 50px;" deta-title="666">666</p><p style="background-color:#E9E9E4;height: 50px;" deta-title="111">111</p>
+<p style="background-color:#E9E9E4;height: 50px;" deta-title="222">222</p>
+<p style="background-color:#E9E9E4;height: 50px;" deta-title="333">333</p>
+<p style="background-color:#E9E9E4;height: 50px;" deta-title="444">444</p>
+<p style="background-color:#E9E9E4;height: 50px;" deta-title="555">555</p>
+<p style="background-color:#E9E9E4;height: 50px;" deta-title="666">666</p><p style="background-color:#E9E9E4;height: 50px;" deta-title="111">111</p>
+<p style="background-color:#E9E9E4;height: 50px;" deta-title="222">222</p>
+<p style="background-color:#E9E9E4;height: 50px;" deta-title="333">333</p>
+<p style="background-color:#E9E9E4;height: 50px;" deta-title="444">444</p>
+<p style="background-color:#E9E9E4;height: 50px;" deta-title="555">555</p>
+<p style="background-color:#E9E9E4;height: 50px;" deta-title="666">666</p><p style="background-color:#E9E9E4;height: 50px;" deta-title="111">111</p>
+<p style="background-color:#E9E9E4;height: 50px;" deta-title="222">222</p>
+<p style="background-color:#E9E9E4;height: 50px;" deta-title="333">333</p>
+<p style="background-color:#E9E9E4;height: 50px;" deta-title="444">444</p>
+</div>
+</body>
+</html>

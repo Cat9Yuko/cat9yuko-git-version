@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+ 
+    <style>
+ 
+        section {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-color: antiquewhite;
+        }
+ 
+        div {
+            width: 100%;
+            height: 100%;
+            background-color:azure;
+        }
+    </style>
+</head>
+ 
+<body>
+    <section>
+        <div id="refreshContainer">滑动</div>
+    </section>
+</body>
+ 
+</html>
+ 
+<script>
+    let _ele = document.getElementById('refreshContainer'),
+        _startPos = 0;
+ 
+    _ele.addEventListener('touchstart', function (e) {
+        console.log('touch start')
+        console.log(e.touches[0].clientY)
+ 
+        _ele.style.transition = 'transform 0s'
+        _startPos = e.touches[0].clientY
+    })
+ 
+    _ele.addEventListener('touchmove', function (e) {
+        console.log('touch move')
+        console.log(e.touches[0].clientY)
+ 
+        let movePos = e.touches[0].clientY - _startPos
+        
+ 
+        if (movePos > 0) {
+            // 下拉
+            movePos >= 100 ? console.log('下拉最大距离') : _ele.style.transform = `translateY(${movePos}px)`
+            
+        } else {
+            // 上拉
+            movePos <= -100 ? console.log('上拉最大距离') : _ele.style.transform = `translateY(${movePos}px)`
+        }
+ 
+        e.preventDefault()
+    })
+ 
+    _ele.addEventListener('touchend', function (e) {
+        console.log('touch end')
+ 
+        _ele.style.transition = 'transform 0.5s ease 1s'
+        _ele.style.transform = 'translateY(0px)'
+    })
+</script>

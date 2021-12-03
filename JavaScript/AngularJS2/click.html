@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/angular.js" ></script>
+	</head>
+	<body>
+		<div ng-app="myApp" ng-controller="myCtrl">
+			<button ng-click="content = content + 1">点我</button>
+			<p>{{content}}</p>
+		</div>
+		<script type="text/javascript">
+			var app = angular.module('myApp',[]);
+			app.controller('myCtrl',function ($scope) {
+				$scope.content = 0;
+			})
+		</script>
+	</body>
+</html>

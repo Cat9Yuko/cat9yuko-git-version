@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <link rel="stylesheet" href="css/202006_pcglobal.css">
+    <title>档案知识网络答题</title>
+</head>
+
+<body>
+    <div class="index_bg">
+        <div class="divh"></div>
+        <div class="center_block login">
+            <div style="height: 100px;"></div>
+            <table cellspacing="0" cellpadding="0" style="width: 841px;margin: 26px auto;">
+                <tr>
+                    <td width="20%" align="right"><span style="width:200px;text-align:center;display:inline-block;">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</span></td>
+                    <td width="64%">
+                        <input id="userName" type="text" class="layui-input" autocomplete="off" style="width: 622px; height: 43px;" lay-verify="required"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="16px">
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right"><span style="width:200px;text-align:center;display:inline-block;">身份证号：</span></td>
+                    <td><input id="idCard" type="text" class="layui-input" autocomplete="off" style="width: 622px; height: 43px;" lay-verify="required|identity"/></td>
+                </tr>
+                <tr>
+                    <td height="16px">
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right"><span style="width:200px;text-align:center;display:inline-block;">验&nbsp;&nbsp;证&nbsp;&nbsp;码：</span></td>
+                    <td><input id="auth_code" type="text" class="layui-input" autocomplete="off"
+                               style="width: 400px; height: 43px; display: inline;"/>
+                        <img id="authCode" src="<%=path %>/getAuthCode" width="83" height="43"
+                             class="middle"
+                             onclick="changeAuthCode();" style="cursor: pointer;float: right;"/></td>
+                </tr>
+                 <tr>
+                    <td height="30px">
+                        
+                    </td>
+                </tr>
+                <tr>
+                    
+                    <td colspan="2">
+                        <div class="sub-dl">
+                            <button class="layui-btn" lay-submit lay-filter="login" onclick="cl();">登&nbsp;&nbsp;录</button></div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="js/jquery-1.9.1.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+    	function cl() {
+    		console.log('helo');
+    	}
+    </script>
+    
+</body>
+
+</html>

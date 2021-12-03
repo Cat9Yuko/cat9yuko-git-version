@@ -1,0 +1,274 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "微软雅黑";
+}
+img {
+  border: none;
+  display: block;
+}
+a {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-user-select: none;
+  -moz-user-focus: none;
+  -moz-user-select: none;
+}
+
+li {
+  list-style: none;
+}
+.index {
+  width: 100%;
+}
+
+.index .bt {
+  height: 100%;
+}
+
+.index .box {
+  position: relative;
+  height: 50px;
+}
+.index .box img {
+  position: absolute;
+}
+.btn_g {
+  position: absolute;
+  width: 100%;
+}
+.btn_g a {
+  display: block;
+  width: 50%;
+  height: 50px;
+  float: left;
+}
+
+/*register login*/
+
+.register option {
+  font-size: 10px;
+  width: 100%;
+}
+.register .box,
+.login .box {
+  /* background: #d0ecef; */
+  padding-bottom: 25px;
+}
+
+.login-app li {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.login-app input {
+  border: 1px solid #feae01;
+}
+
+.login-app .row {
+  padding-left: 15px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.login-app .qianzui {
+  margin: 0 auto;
+  text-align: center;
+  height: 30px;
+  line-height: 2;
+  font-size: 14px;
+  border-radius: 5px;
+  background: #feae01;
+  color: #fff;
+}
+.houzhui {
+  padding-left: 5px;
+}
+.login-app .houzhui input,
+.login-app .houzhui select {
+  width: 100%;
+  height: 30px;
+}
+.login-app .houzhui select {
+  font-size: 12px;
+}
+.login-content {
+  padding-top: 20px;
+}
+
+.hei2-btn button {
+  width: 100px;
+  height: 30px;
+  font-size: 15px;
+  color: #ffffff;
+  background: #911015;
+  border: none;
+  border-radius: 5px;
+  line-height: 1.5;
+  outline: none;
+}
+.hei2-btn a {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  line-height: 30px;
+  width: 100px;
+  height: 30px;
+  font-size: 15px;
+  color: #ffffff;
+  background: #911015;
+  border-radius: 5px;
+}
+
+select {
+  border: 1px solid #feae01;
+  width: 98%;
+}
+.login .box {
+  overflow: auto;
+}
+
+/*answer*/
+.answer .box {
+  padding: 25px 20px 25px;
+  
+}
+
+.answer_t {
+  font-size: 18px;
+  font-weight: bold;
+  /* color: #00285d; */
+}
+
+.xuanxiang {
+  margin: 16px 0;
+  font-size: 14px;
+  /* color: #00285d; */
+}
+.xx_ul li {
+  line-height: 25px;
+}
+.xx_ul input {
+  margin: 0;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+.xx_ul label{
+    font-weight: normal;
+}
+/*score*/
+.score .box {
+  /* height: 103px; */
+  /* background: url(../img/sfg_2020_score2_app.jpg); */
+  background-size: 100% 100%;
+  margin: 0 auto;
+  color: #ffffff;
+  font-size: 12px;
+  text-align: center;
+  padding: 20px 0;
+  /* line-height: 10; */
+}
+.score p {
+    color: #670006;
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 0;
+}
+.score p span {
+    /* color: red; */
+}
+.twi {
+  width: 100%;
+  height: 94px;
+  /* background: #d0ecef; */
+}
+.twi .center-block {
+  padding-top: 33px;
+  width: 250px;
+}
+.closepage {
+  float: right;
+}
+
+.my-btn {
+  width: 100%;
+  text-align: center;
+  margin-top: 35px;
+  /* margin-bottom: 10px; */
+  height: 76px;
+}
+.my-btn a {
+  font-size: 15px;
+  color: #ffffff;
+  background: #00558d;
+  padding: 7px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.my-btn a + a {
+  margin-left: 30px;
+}
+
+.app-bg {
+  width: 100%;
+  padding-top: 310px;
+}
+.mainbg {
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.whitebg-p {
+  padding: 5px;
+  background: #dfdede;
+  box-sizing: border-box;
+  margin-left: 15px;
+  margin-right: 15px;
+  border-radius: 5px;
+}
+.whitebg-c {
+  background: rgba(255, 255, 255, 1);
+  /* min-height: 865px; */
+  /* padding: 52px 54px 60px; */
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.welcome {
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  color: #911015;
+  padding: 15px 0 6px 0;
+}
+.zhuyi {
+  text-align: center;
+  font-size: 10px;
+}
+footer {
+  margin-top: -50px;
+  position: relative;
+  z-index: -1;
+}
+.m-desc {
+  font-family: "微软雅黑";
+  color: #8a0207;
+  padding: 15px;
+  box-sizing: border-box;
+}
+.m-desc h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.m-desc p {
+  text-indent: 2rem;
+  font-size: 14px;
+}
+.bgyellow[class] {
+  background: #f8ab25;
+}
+@media only screen and (min-width: 100px) and (max-width: 640px) {
+}

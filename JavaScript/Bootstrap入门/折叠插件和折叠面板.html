@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+		<title></title>
+
+		<!-- Bootstrap core CSS -->
+		<link href="images/bootstrap.css" rel="stylesheet">
+		<script src="images/jquery-1.9.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="images/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	</head>
+
+	<body>
+		<a class="btn btn-default" data-toggle="collapse" href="#myCollapsedSection" aria-expanded="false" aria-controls="myCollapsedSection">Show the Content</a>	
+		<article id="myCollapsedSection" class="collapse">
+			<h2>My Collapsed Section</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing  elit.Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.</p>
+		</article>
+		
+		
+		<article>
+			<p>Taraxacum  is a large genus of flowering plants in the family Asteraceae. They are native to Eurasia and North and South America, And two species, T.officiinale and T.</p>
+			<section id="moreDandelions" class="collapse">
+			<p>Taraxacum  is a large genus of flowering plants in the family Asteraceae. They are native to Eurasia and North and South America, And two species, T.officiinale and T.</p>
+			</section>
+			<p><a href="#moreDandelions" class="btn btn-link" id="moreLink" data-toggle="collapse" aria-expanded="false" aria-controls="moreDandelions">Read More...</a></p>
+		</article>
+		<script type="text/javascript">
+			$(document).ready(function () {
+				$('a#moreLink').click(function () {
+					$(this).text($(this).text()=='Read More...'?'Hide' :'Read More...')
+				})
+			})
+		</script>
+	</body>
+	
+
+</html>

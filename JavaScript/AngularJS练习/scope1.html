@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/angular.js" ></script>
+	</head>
+	<body>
+		<div ng-app="fkApp" ng-controller="fkCtrl">
+		<input type="number" ng-model="price" /><br />
+		<input type="number" ng-model="num" /><br />
+		{{price* num}}
+		</div>
+		<script type="text/javascript">
+			var mod = angular.module("fkApp",[]);
+			mod.controller("fkCtrl",function ($scope) {
+				$scope.price = 10;
+				$scope.num=4;
+			})
+		</script>
+	</body>
+	
+</html>

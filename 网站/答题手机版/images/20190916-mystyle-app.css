@@ -1,0 +1,130 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "微软雅黑";
+}
+
+.banner {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.banner img {
+	/*首页 banner图*/
+	width: 100%;
+	min-height: 100%;
+	max-width: 100%;
+}
+
+.instruct {
+	/*大赛须知文字*/
+	font-size: 14px;
+	line-height: 1.7;
+	height: 240px;
+	overflow: auto;
+	overflow-y: scroll;
+}
+
+.instruct-img img {
+	/*大赛动态,答题须知,答题专区 图标*/
+	max-width: 100%;
+}
+
+
+/*轮播图*/
+
+.swiper-container {
+	height: 230px;
+}
+
+.swiper-slide {
+	position: relative;
+}
+
+
+
+.title {
+	height: 30px;
+	bottom: 0;
+	width: 100%;
+	background-color: rgb(0, 0, 0, .3);
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-size: 16px;
+	line-height: 1.7;
+	color: #FFF;
+	position: absolute;
+}
+
+.my-list {
+	margin-top: 19px;
+	margin-bottom: 0;
+	padding-left: 0;
+	padding-right: 0;
+	min-height: 132px;
+}
+
+.my-list li {
+	font-size: 14px;
+	text-align: left;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	line-height: 30px;
+}
+
+
+/*登录页面样式*/
+
+.login-app li {
+	list-style: none;
+	margin-bottom: 20px;
+}
+
+.login-app input {
+	border: 1px solid #00b7ee;
+}
+
+.login-app .row {
+	padding-left: 15px;
+}
+
+.login-app .qianzui {
+	margin: 0 auto;
+	text-align: center;
+	height: 30px;
+	line-height: 2;
+	font-size: 15px;
+	border-radius: 5px;
+	background: #00b7ee;
+	color: #fff;
+}
+
+.login-app .houzhui input {
+	width: 100%;
+}
+
+.login-content {
+	padding-top: 20px;
+}
+
+.hei2-btn button {
+	width: 100px;
+	height: 29px;
+	color: #FFFFFF;
+	background: #00B7EE;
+	border: none;
+	border-radius: 5px;
+	line-height: 1.5;
+}
+
+#auth_code {
+	display: inline-block;
+}
+@media only screen and (max-width: 320px) {
+	/*验证码宽度适配*/
+	#authCode {
+		width: 45px;
+	}
+}

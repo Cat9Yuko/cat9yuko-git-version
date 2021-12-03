@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑";
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+
+/* 清除浮动 */
+.clearfix {
+    *zoom: 1;
+}
+.clearfix::after {
+    content: "";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+}
+.center_block {
+    width: 1200px;
+    margin: 0 auto;
+}
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+.shadow-g {
+    box-shadow: 0 0 7px #d2d2d2;
+}
+.header {
+    width: 100%;
+    height: 521px;
+    background: url(../images/slgcglkh-202008-banner.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.content {
+    margin-top: 30px;
+}
+.w330-container {
+    padding: 10px;
+}
+.w330 {
+    width: 330px;
+}
+.w817 {
+    width: 817px;
+    min-height: 500px;
+}
+.w330.title {
+    font-size: 22px;
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+    background: #0859a5;
+    line-height: 60px;
+    margin-bottom: 10px;
+}
+.tab-p {
+    line-height: 45px;
+    font-size: 18px;
+    color: #343434;
+    text-indent: 2rem;
+    background: #d2d2d2;
+    cursor: pointer;
+}
+.tab-c {
+    background: #ffffff;
+    font-size: 16px;
+    cursor: initial;
+}
+.tab-c img {
+    margin-right: 10px;
+}
+.tab-p:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.tab-p img {
+    vertical-align: middle;
+}
+
+.tab-p span {
+    margin-right: 30px;
+}
+.tab-c-s {
+    display: none;
+}
+.tab-c-s.act {
+    display: block;
+}
+.footer {
+    border-top: 3px solid #00479d;
+    margin-top: 30px;
+}

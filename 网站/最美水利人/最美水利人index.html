@@ -1,0 +1,234 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>ScrollPic.js图片左右滚动 鼠标经过暂停</title>
+    <style type="text/css">
+                .picCenter {
+                    width: 1127px;
+                    margin: 15px auto;
+                }
+
+                .xinxiIcon {
+                    margin:0 0 -20px auto;
+                }
+
+                .xinxiIcon img {
+                    width: 100%;
+                    height: auto;
+                    object-fit: cover;
+                }
+
+                .photo_img img {box-sizing: border-box;border: 1px solid #fff;transition:all .7s ease 0s; height: 700px;
+
+                }
+                .photo_img img:hover {box-sizing: border-box;border: 1px solid #023246;
+                  box-shadow: 1px 0px 15px -3px rgba(0,0,0,0.53);
+        -webkit-box-shadow: 1px 0px 15px -3px rgba(0,0,0,0.53);
+        -moz-box-shadow: 1px 0px 15px -3px rgba(0,0,0,0.53);
+                }
+
+                .photo_nr {
+                    display: flex;
+                    align-items: center;
+                    width: 1127px;
+                    margin: 15px auto;
+                }
+
+                .informationText {
+                    width: 888px;
+                    margin: 15px auto;
+                    text-align: center;
+                }
+
+                .informationText span {
+
+                    background: #ffffff;
+                    color: #1C1F86;
+                }
+
+                ul {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                }
+
+                .photo_nr ul li {
+                    float: left;
+                    margin: 0 8px;
+                    line-height: 30px;
+                    text-align: center;
+                }
+
+                .photo_nr p {
+                    padding: 0;
+                    margin: 0;
+                }
+
+
+                #LeftArr {
+                    background: url(img/e_left.png) no-repeat;
+                    width: 40px;
+                    height: 40px;
+                    margin-left: -15px;
+                    text-decoration: none;
+                    color: #323232;
+                }
+
+                #RightArr {
+                    background: url(img/e_right.png) no-repeat;
+                    width: 40px;
+                    height: 40px;
+                    margin-right: -15px;
+                    text-decoration: none;
+                    color: #323232;
+                }
+                .listRotation{
+                    border: 1px solid #023246;
+                }
+    </style>
+</head>
+<body>
+    <div class="picCenter">
+        <div class="listRotation">
+            <div class="informationText">
+                <span>ScrollPic.js图片左右滚动 鼠标经过暂停</span>
+            </div>
+            <div class="photo_nr">
+                <a href="javascript:;" id="LeftArr"></a>
+                <ul id="picList1" style="width: 888px;overflow: hidden;">
+                    <li>
+                        <div class="photo_img"><img src="img/spic-head.jpg" alt="" /></div>
+                        <!-- <p>image1</p> -->
+                    </li>
+                    <li>
+                        <div class="photo_img"><img src="img/spic-7.2-1.jpg" alt="" /></div>
+                        <!-- <p>image2</p> -->
+                    </li>
+                    <li>
+                        <div class="photo_img"><img src="img/spic-7.2-2.jpg" alt="" /></div>
+                        <!-- <p>image3</p> -->
+                    </li>
+                    <li>
+                        <div class="photo_img"><img src="img/spic-7.2-1.jpg" alt="" /></div>
+                        <!-- <p>image4</p> -->
+                    </li>
+                    <li>
+                        <div class="photo_img"><img src="img/spic-7.2-2.jpg" alt="" /></div>
+                        <!-- <p>image5</p> -->
+                    </li>
+                    <li>
+                        <div class="photo_img"><img src="img/spic-7.2-1.jpg" alt="" /></div>
+                        <!-- <p>image4</p> -->
+                    </li>
+                    <li>
+                        <div class="photo_img"><img src="img/spic-7.2-2.jpg" alt="" /></div>
+                        <!-- <p>image5</p> -->
+                    </li>
+                    <li>
+                        <div class="photo_img"><img src="img/spic-7.2-1.jpg" alt="" /></div>
+                        <!-- <p>image4</p> -->
+                    </li>
+                    <li>
+                        <div class="photo_img"><img src="img/spic-7.2-2.jpg" alt="" /></div>
+                        <!-- <p>image5</p> -->
+                    </li>
+                    <li>
+                        <div class="photo_img"><img src="img/spic-7.2-1.jpg" alt="" /></div>
+                        <!-- <p>image4</p> -->
+                    </li>
+                    <li>
+                        <div class="photo_img"><img src="img/spic-7.2-2.jpg" alt="" /></div>
+                        <!-- <p>image5</p> -->
+                    </li>
+                    <li>
+                        <div class="photo_img"><img src="img/spic-7.2-1.jpg" alt="" /></div>
+                        <!-- <p>image4</p> -->
+                    </li>
+                    <li>
+                        <div class="photo_img"><img src="img/spic-7.2-2.jpg" alt="" /></div>
+                        <!-- <p>image5</p> -->
+                    </li>
+                    <li>
+                        <div class="photo_img"><img src="img/spic-7.2-1.jpg" alt="" /></div>
+                        <!-- <p>image4</p> -->
+                    </li>
+                    <li>
+                        <div class="photo_img"><img src="img/spic-7.2-2.jpg" alt="" /></div>
+                        <!-- <p>image5</p> -->
+                    </li>
+                    <li>
+                        <div class="photo_img"><img src="img/spic-7.2-1.jpg" alt="" /></div>
+                        <!-- <p>image4</p> -->
+                    </li>
+                    <li>
+                        <div class="photo_img"><img src="img/spic-7.2-2.jpg" alt="" /></div>
+                        <!-- <p>image5</p> -->
+                    </li>
+                    <li>
+                        <div class="photo_img"><img src="img/spic-7.2-1.jpg" alt="" /></div>
+                        <!-- <p>image4</p> -->
+                    </li>
+                    <li>
+                        <div class="photo_img"><img src="img/spic-7.2-2.jpg" alt="" /></div>
+                        <!-- <p>image5</p> -->
+                    </li>
+                    <li>
+                        <div class="photo_img"><img src="img/spic-7.2-1.jpg" alt="" /></div>
+                        <!-- <p>image4</p> -->
+                    </li>
+                    <li>
+                        <div class="photo_img"><img src="img/spic-7.2-2.jpg" alt="" /></div>
+                        <!-- <p>image5</p> -->
+                    </li>
+                    <li>
+                        <div class="photo_img"><img src="img/spic-7.2-1.jpg" alt="" /></div>
+                        <!-- <p>image4</p> -->
+                    </li>
+                    <li>
+                        <div class="photo_img"><img src="img/spic-7.2-2.jpg" alt="" /></div>
+                        <!-- <p>image5</p> -->
+                    </li>
+                    <li>
+                        <div class="photo_img"><img src="img/spic-7.2-1.jpg" alt="" /></div>
+                        <!-- <p>image4</p> -->
+                    </li>
+                    <li>
+                        <div class="photo_img"><img src="img/spic-7.2-2.jpg" alt="" /></div>
+                        <!-- <p>image5</p> -->
+                    </li>
+                    <li>
+                        <div class="photo_img"><img src="img/spic-7.2-1.jpg" alt="" /></div>
+                        <!-- <p>image4</p> -->
+                    </li>
+                    <li>
+                        <div class="photo_img"><img src="img/spic-7.2-2.jpg" alt="" /></div>
+                        <!-- <p>image5</p> -->
+                    </li>
+                    <div style="clear: both;"></div>
+                </ul>
+                <a href="javascript:;" id="RightArr"></a>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-1.9.1.js"></script>
+    <script src="js/picscroll.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+        $(function () {
+            var cc1 = new ScrollPic();
+            cc1.scrollContId = "picList1"; // 内容容器ID,picList1加到容器上，
+            cc1.arrLeftId = "LeftArr";//左箭头ID
+            cc1.arrRightId = "RightArr"; //右箭头ID
+            cc1.frameWidth = 1127; //显示框的宽度
+            cc1.pageWidth = 1; //翻页宽度
+            cc1.speed = 10; //移动速度(单位毫秒，越小越快)
+            cc1.space = 10; //每次移动像素(单位px，越大越快)
+            cc1.autoPlay = true; //自动播放
+            cc1.autoPlayTime = 0.03; //自动播放间隔时间(秒)
+            cc1.initialize(); //初始化
+        });
+    </script>
+</body>
+</html>

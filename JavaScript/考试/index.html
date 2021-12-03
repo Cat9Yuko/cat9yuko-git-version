@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<script src="js/jquery-1.8.3.js" type="text/javascript" charset="utf-8"></script>
+	<style type="text/css">
+	
+		body{
+			background-image: url(img/背景图.gif);
+		}
+		
+		#top{
+			background-image: url(img/品牌LOGO.png);
+			height: 205px;
+			width: 600px;
+			background-repeat: no-repeat;
+			margin: 0 auto;
+		}
+		#top2{
+			background-image: url(img/导航条.png);
+			height: 200px;
+			width: 600px;
+			background-repeat: no-repeat;
+			margin: 0 auto;
+		}
+		
+		#left{
+			position: absolute;
+			padding-top: 50px;
+			height: 200px;
+			width: 200px;
+			margin: 0 auto;
+		}
+		
+		
+
+/*给div加边框*/
+#tab{
+	position: absolute;
+	border: 2px solid;
+	width: 290px;
+	right: 350px;
+	top: 260px;
+}
+#tab h3{
+	border: 1px solid #cccccc;
+}
+#tab div{
+	border: 1px solid #CCCCCC;
+	clear: both;
+	height: 140px;
+	font-size: 14px;
+	padding: 20px 0px 0px 20px;
+	display: none;/*隐藏div*/
+}
+/**/
+
+#tab h3{
+	margin: 2px 1px 0px 1px;
+	padding: 0px;
+	font-size: 14px;
+	float: left;
+	right: 5px;
+	width: 60px;
+	height: 24px;
+	line-height: 24px;
+	text-align: center;
+}
+#tab div.content{
+	overflow: scroll;
+	display: block;
+	background: paleturquoise;
+}
+#tab h3.active{
+	background: #ccaacc;
+}
+#footer{
+	position: absolute;
+	clear: both;
+	   width: 100%;
+    height:100px;   /* footer的高度一定要是固定值*/ 
+    bottom:0px;
+    left:0px;
+    text-align: center;
+}		
+
+.cll{
+	clear: both;
+}
+	</style>
+	<script type="text/javascript">
+
+		var sz=new Array('img/1.png','img/2.png','img/3.png','img/4.png');
+				var i=0;
+				i++;
+				function hs(){
+					var a=document.getElementById('tp');
+					       a.src=sz[i]
+						   i=(i+1)%sz.length;
+					}
+					window.setInterval(hs,1000);
+
+			/**/
+			
+		
+$(function(){
+	var $hh3 = $(":header");
+	var $ddiv = $("#tab div");
+	for (var i=0;i<$hh3.length;i++) {
+		
+		$hh3[i].index=i;
+		$($hh3).click(function(){
+			
+			for (var i=0;i<$hh3.length;i++) {
+				$hh3[i].className="";
+				$($ddiv[i]).css("display","none");
+				$ddiv[i].className="";
+				$ddiv[i].className="content";
+			}
+			this.className="active";
+			$($ddiv[this.index]).css("display","block");
+			
+		});
+			
+	}
+	
+});
+
+	</script>
+	<body>
+		<div id="top"></div>
+		<div id="top2">
+			<div id="left">
+			<img  src="img/1.png" id="tp"/>
+		</div>
+		</div>
+		
+		<div id="right">
+		<div id="tab">
+
+			<h3 class="active">公司简介</h3>
+			<h3>标志设计</h3>
+			<h3>服务领域</h3>
+			<div class="content">1.爱旅行是国内首家提供限时特价旅游产品的网络平台，产品包括旅游套餐，折扣机票，度假酒店。爱旅行通过分布在全国的1000多家供应商，为用户提供全球100多个国家与地区超过5000条的精品特价旅游线路。致力成为国内最大的旅游度假平台，为不同需求的用户提供专业、及时、高效的旅游度假服务。</div>
+			<div>2.
+精选行程：独特的产品质量筛选体系，保证了爱旅行的每一条度假产品的品质。说走就走：所售80%产品均为2-10天之内出发。繁杂的签证手续我们来办，背上行囊、说走就走。多重保障：爱旅行所有度假产品均为全资质的国际旅行社提供服务, 爱旅行并对所有客户的售中、售后跟踪服务及质检，旅途中出现任何质量问题都会帮助用户维权到底，使用户的权益得到切实保障。爱旅行 ~ 给你一次说走就走的旅行！
+</div>
+			<div>3.
+1 爱旅行专注于旅游服务业，全球互联网用户提供签证、酒店、机票、保险、度假产品等信息和预订服务。继500万的天使投资后，目前有多家风投机构联系爱旅行合作，不久前爱旅行接受比特币首富李笑来数百个比特币投资，估值数百万，成为国内第一家接受比特币投资的公司。早在去年10月红杉资本就给爱旅行出了Term Sheet。2 2014年1月7日，爱旅行收购做千团旅游，该公司的创始人刘扬已进入爱旅行担任CTO。3 2014年2月14日左右，爱旅行正在进行A轮融资，并已获得中国比特币首富李笑来用比特币以“保底增值”方式投资的几百万资金。融资和收购的同步进行，将使爱旅行的盘子迅速扩大。爱旅行已开始在广州组建北京、上海外的第三支采购团队。袁伟表示，华南地区有广州、深圳、香港、澳门四大口岸，未来业务必然会在这片区域发力。爱旅行正在准备为上游供应商打造ERP系统，到2014年6月左右信息就能对接起来，从而实现主动获取产品信息。</div>
+		</div>
+		
+		</div>
+		<div class="cll">
+			
+		<div id="footer">
+				意见反馈|常见问题|关于我们|联系我们<br />
+				copyright@旅游网版权所有
+			
+			
+			<div id="footer1">
+
+				<script>
+				function hs(){
+				var now=new Date()
+				var nian=now.getFullYear();
+				var yue=now.getMonth();
+				var ri=now.getDate();
+				var xingqi=now.getDay();
+				var hours=now.getHours();
+				var minutes=now.getMinutes();
+				var seconds=now.getSeconds();
+				var hao=now.getMilliseconds();
+				var sz=new Array('星期日','星期一','星期二','星期三','星期四','星期五','星期六');
+				var str='';
+				var str=str+nian+'/'+(yue+1)+'/'+ri+','+sz[xingqi]+','+hours+'时'+minutes+'分'+seconds+'秒'
+					var a=document.getElementById('footer1');
+					a.innerHTML=str;
+				}
+				    setInterval(hs,1)
+				</script>
+			</div>
+			
+				</div>
+			</div>
+	</body>
+</html>

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-CN">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="css/rss2020_mobile.css" />
+		<script src="js/jquery1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+	      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+	      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    	<![endif]-->
+	</head>
+
+	<body>
+		<div class="login">
+			<div class="bt"><img src="img/rssdt_20200320_index.jpg" width="100%" height="100%" /></div>
+			<div class="box">
+				<form class="layui-form col-xs-12" id="form_login">
+					<ul class="login-app">
+						<li class="row">
+							<div class="qianzui col-xs-4 col-md-4">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名:</div>
+							<div class="houzhui col-xs-8 col-md-8"><input id="userName" type="text" class="layui-input" autocomplete="off" lay-verify="required" /></div>
+						</li>
+						<li class="row">
+							<div class="qianzui col-xs-4 col-md-4">身份证号:</div>
+							<div class="houzhui col-xs-8 col-md-8"><input id="idCard" type="text" class="layui-input" autocomplete="off" lay-verify="required|identity" /></div>
+						</li>
+						<li class="row">
+							<div class="qianzui col-xs-4 col-md-4">验&nbsp;&nbsp;证&nbsp;&nbsp;码:</div>
+							<div class="houzhui col-xs-8 col-md-8"><input id="auth_code" type="text" style="width: 100px;" class="layui-input" autocomplete="off" />
+								<img id="authCode" src="<%=path %>/getAuthCode" width="50" height="29" class="middle" onclick="changeAuthCode();" style="cursor: pointer;display: inline-block;" /></div>
+						</li>
+					</ul>
+					<div class="hei2-btn center-block" style="width:205px;">
+						<button class="layui-btn" lay-submit lay-filter="login">登&nbsp;&nbsp;录</button>
+						<button type="button" class="tores">新用户注册</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!--footer-->
+		<div class="footer pos"></div>
+		<script type="text/javascript">
+			$(function() {
+				$(".tores").click(function() {
+					window.location.href = "";
+				})
+			})
+			var win_h = $(window).height(); //关键代码
+			window.addEventListener('resize', function() {
+				if($(window).height() < win_h) {
+					$('.footer').hide();
+				} else {
+					$('.footer').show();
+				}
+			});
+		</script>
+	</body>
+
+</html>

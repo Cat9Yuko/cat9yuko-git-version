@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-ch">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/vue.js"></script>
+    <title>vue</title>
+</head>
+<body>
+
+    <div id="app">
+        {{message}}
+    </div>
+
+    <div id="app-2">
+        <span v-bind:title="message">
+            鼠标悬停几秒钟查看此处动态绑定的信息!
+        </span>
+    </div>
+    <!-- 
+        v-bind attribute被称为'指令';指令带有前缀v-,以表示它们是Vue提供的特殊attribute;
+     -->
+
+     <div id="app-3">
+         <p v-if="seen">
+             现在你看到我了
+         </p>
+     </div>
+    
+     <div id="app-4">
+         <ol>
+             <li v-for="todo in todos">
+                 {{todo.text}}
+             </li>
+         </ol>
+     </div>
+     <!-- app4.todos.push({text:'新项目'}) -->
+
+     <div id="app-5">
+         <p>
+             {{message}}
+         </p>
+         <button v-on:click="reverseMessage">反转消息</button>
+     </div>
+
+    <div id="app-6">
+        <p>{{message}}</p>
+        <input v-model="message">
+    </div>
+    
+    <!-- 组件 -->
+    <div id="app-7">
+    <ol>
+        <todo-item
+        v-for="item in groceryList"
+        v-bind:todo="item"
+        v-bind:key="item.id"
+        ></todo-item>
+        </ol>
+    </div>
+    <script>
+        // <!-- 声明式渲染 -->
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message: 'Cat9 Yu!'
+            }
+        })
+
+        // 除了文本值, 我们还可以像这样来绑定元素attribute
+        var app2 = new Vue({
+            el: '#app-2',
+            data: {
+                message: '页面加载于 '+ new Date().toLocaleString()
+            }
+        })
+
+        // 条件与循环
+        var app3 = new Vue({
+            el: '#app-3',
+            data: {
+                seen: true
+            }
+        })
+
+        // 绑定数组的数据来渲染一个项目列表
+        var app4 = new Vue({
+            el: '#app-4',
+            data: {
+                todos:[
+                    {text: '学习 JavaScript'},
+                    {text: '学习 Vue'},
+                    {text: '整个牛项目'}
+                ]
+            }
+        })
+
+        // 处理用户输入
+        var app5 = new Vue({
+            el: '#app-5',
+            data: {
+                message: 'Hello World!'
+            },
+            methods: {
+                reverseMessage: function (){
+                    this.message = this.message.split('').reverse().join('')
+                }
+            }
+        })
+
+        // v-model指令, 实现表单输入和应用状态之间的双向绑定
+        var app6 = new Vue({
+            el: '#app-6',
+            data: {
+                message: 'Hello World'
+            }
+        })
+        
+        // 组件
+        // 定义名为 todo-item的新组件
+        Vue.component('todo-item',{
+            // todo-item 组件现在接受一个
+            // prop,类似一个自定义attribute
+            props: ['todo'],
+            template: '<li>{{todo.text}}</li>'
+        })
+        var app7 = new Vue({
+            el: '#app-7',
+            data: {
+                groceryList:[
+                    {id:8,text:'蔬菜'},
+                    {id:7,text:'奶酪'},
+                    {id:2,text:'随便其他什么吃的东西'}
+                ]
+            }
+        })
+    </script>
+</body>
+</html>

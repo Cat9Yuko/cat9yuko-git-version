@@ -1,0 +1,65 @@
+.pic_bl {
+    width: 1128px;
+    overflow: hidden;
+    position: relative;
+    height: 700px;
+    margin: 0 auto;
+}
+
+.pic_bl ul {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 700px;
+}
+
+.pic_bl ul li {
+    float: left;
+    border: 1px solid #c6c5c5;
+    height: 700px;
+    margin-right: 10px;
+}
+
+.pic_bl ul li a {
+    display: block;
+}
+
+.pic_bl ul li a img {
+    height: 700px;
+}
+.section1 {
+    position: relative;
+    height: 804px;
+}
+.pic_bl .pic_l,.section1 .pic_l {
+    display: block;
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    background: url(../img/20200313_left.png) no-repeat;
+    width: 18px;
+    height: 51px;
+    margin-top: -38px;
+    cursor: pointer;
+}
+
+.pic_bl .pic_r,.section1 .pic_r {
+    display: block;
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    background: url(../img/20200313_right.png) no-repeat;
+    width: 20px;
+    height: 51px;
+    margin-top: -38px;
+    cursor: pointer;
+}
+
+.pic_bg {
+    width: 10px;
+    height: 278px;
+    background: #cde7f3;
+    position: absolute;
+    right: 0;
+    top: 0;
+}

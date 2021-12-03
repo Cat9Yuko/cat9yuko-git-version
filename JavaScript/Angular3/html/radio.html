@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../js/angular.min.js" ></script>
+	</head>
+	<body ng-app="">
+		<form action="">
+			选中一个选项
+			<input type="radio" ng-model="myVar" value="dog"/>dog
+			<input type="radio" ng-model="myVar" value="cat"/>cat
+			<input type="radio" ng-model="myVar" value="kun"/>kun
+		</form>
+		<div ng-switch="myVar">
+			<div ng-switch-when="dog">
+				<h3>dog</h3>
+			</div>
+			<div ng-switch-when="cat">
+				<h3>cat</h3>
+			</div>
+			<div ng-switch-when="kun">
+				<h3>kun</h3>
+			</div>
+			
+		</div>
+	</body>
+</html>

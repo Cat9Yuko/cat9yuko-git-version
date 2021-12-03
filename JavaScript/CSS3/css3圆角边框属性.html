@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS3圆角边框属性</title>
+  <style type="text/css">
+    .myborder {
+      height: 100px;
+      width: 100px;
+      border: 1px solid;
+      /* '/'前面是圆角的水平方向半径
+          '/'后面是圆角的垂直方向半径 */
+      border-radius: 60px 40px 30px 20px / 30px 20px 10px 5px;
+      /* 分开设置元素各个顶角的圆角水平和垂直半径圆角效果时,不需要'/' */
+      border-top-left-radius: 10px 50px;
+
+      /* 特殊应用
+        border-radius还有一个内半径和外半径的区别,
+        元素边框值较大时,效果就很明显。
+        当border-radius半径小于或等于border的厚度时,
+        元素边框内部就不具有圆角效果.
+       */
+    }
+    .my-border-radius {
+      width: 350px;
+      height: 100px;
+      border: 30px solid orange;
+      border-radius: 30px;
+    }
+    /* 当元素相邻边有不同的宽度,这个角将会从宽的边平滑过渡到窄的边
+      其中一条边甚至可以是0,元素相邻转角是由大向小转
+     */
+    .radius1 {
+      width: 350px;
+      height: 100px;
+      border: 30px solid orange;
+      border-width: 20px 5px 30px 60px;
+      border-radius: 100px;
+    }
+    .radius2 {
+      width: 350px;
+      height: 100px;
+      border: 30px solid orange;
+      border-width: 35px 35px 60px 30px;
+      border-color: orange red green blue;
+      border-radius: 80px;
+    }
+    .img-radius img {
+      border: 5px solid red;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="myborder"></div>
+  <div class="my-border-radius"></div>
+  <div class="radius1"></div>
+  <div class="radius2"></div>
+  <div class="img-radius"><img src="images/bg.jpg" width="500px" height="500px"></div>
+  <script type="text/javascript">
+    // 解决ie不支持圆角
+    // 需要导入jquery
+    $("img").load(function () {
+      $(this).wrap(function(){
+        return '<span class="'+ $(this).attr('class') +'" style="background:url(' +
+              $(this).attr('src') +') no-repeat center center;width:'+
+              $(this).width() +'px; height:' + $(this).height() + 'px; "></span>';
+      });
+      $(this).css("opacity","0");
+    })
+  </script>
+</body>
+</html>

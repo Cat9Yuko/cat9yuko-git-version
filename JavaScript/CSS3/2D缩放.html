@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style media="screen">
+    div {
+      width: 500px;
+      height: 500px;
+      margin: 30px auto;
+      position: relative;
+    }
+
+    div img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -35px;
+      margin-top: -35px;
+    }
+    div img:nth-child(1) {
+      opacity: .8;
+      z-index: 2;
+      border: 1px solid red;
+    }
+    div img:nth-child(2) {
+      z-index: 1;
+      transform: scale(1.5);
+      /* 相同效果 */
+      /* transform: scale(1.5,1.5); */
+    }
+    div img:nth-child(3) {
+      z-index: 2;
+      transform: scale(.5,.5);
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <img src="images/bg.jpg" alt="" width="500px" height="300px">
+    <img src="images/bg.jpg" alt="" width="500px" height="300px">
+    <img src="images/bg.jpg" alt="" width="500px" height="300px">
+  </div>
+</body>
+</html>

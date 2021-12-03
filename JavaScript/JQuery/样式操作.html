@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-3.4.1.js" ></script>
+		<style type="text/css">
+			.high{
+				font-weight: bold;/*粗体字*/
+				color: red;
+			}
+			.another{
+				font-style: italic;/*斜体*/
+				color: blue;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<p class="myClass" title="你最喜欢的水果"><i>这是i</i>你最喜欢的水果是?</p>
+		<div class="high another">移除样式</div>
+		<script type="text/javascript">
+			var p_class = $("p").attr("class");//获取p元素的class
+			$("p").attr("class","high");
+			$("p").addClass("another");//给p元素追加another类
+			
+			/*
+			 * 方法			|		addClass()		 		 |		attr()		
+			 用途				|追加样式					 		 |设置样式
+			 对同意网页元素操作	|		<p>test</p>			
+			 第1次使用方法		|$("p").addClass("high");		 |$("p").attr("class","high");
+			 第一次结果			|		<p class="high">test</p>
+			 再次使用方法		|$("p").addClass("another");	 |$("p").attr("class"."another");
+			 最终结果			|<p class="high another">test</p>|<p class="another">test</p>
+			 * 
+			 * */
+			
+			//移除样式
+			$("div").removeClass("another");//删除单个class
+			$("div").removeClass("another high");//删除多个class用空格隔开
+			$("div").removeClass();//移除div中所有class
+			
+			//切换样式
+			/*$toggleBtn.toggle(function () {//toggle(),交替一组动作
+			
+			},function () {
+				
+			});*/
+			
+			$("div").toggleClass("another");
+			//判断是否含有某个样式
+			$("p").hasClass("another");//true or false;
+			
+			//设置和获取HTML,文本和值
+			var p_html = $("p").html();
+//			alert(p_html);//<i>这是i</i>你最喜欢的水果是?
+			$("p").html("<strong>月月鸟</strong>");
+			
+			var p_text = $("p").text();
+//			alert(p_text);
+			$("p").text("粤语鸟");
+		</script>
+		
+		<input type="text" id="address" value="请输入邮箱地址" /><br />
+		<input type="text" id="password" value="请输入邮密码" /><br />
+		<input type="submit" value="登录" />
+		
+		<script type="text/javascript">
+			
+			//this值当前文本框,
+			$("#address").focus(function () {//聚集焦点
+				var text_value = $(this).val();//获取地址文本框的值
+				if(text_value == this.defaultValue){
+					$(this).val("");
+				}
+			});
+			$("#address").blur(function () {//失去焦点
+				var text_value = $(this).val();
+				if(text_value == ""){
+					$(this).val(this.defaultValue);//this.defaultValue就是当前文本框的默认值
+				}
+			});
+			
+			$("#password").focus(function () {
+				var text_value = $(this).val();//获取地址文本框的值
+				if(text_value == this.defaultValue){
+					$(this).val("");
+				}
+			});
+			$("#password").blur(function () {
+				var text_value = $(this).val();
+				if(text_value == ""){
+					$(this).val(this.defaultValue);
+				}
+			});
+		</script>
+		
+		<br />
+		<select id="single">
+			<option>选择1号</option>
+			<option>选择2号</option>
+			<option>选择3号</option>
+		</select>
+		<br />
+		<select id="multiple" multiple="multiple" style="height: 120px;">
+			<option selected="selected">选择1号</option>
+			<option>选择2号</option>
+			<option>选择3号</option>
+			<option>选择4号</option>
+			<option selected="selected">选择5号</option>
+		</select>
+		<br />
+		<input type="checkbox" value="check1" />多选1
+		<input type="checkbox" value="check2" />多选2
+		<input type="checkbox" value="check3" />多选3
+		<input type="checkbox" value="check4" />多选4
+		<br />
+		<input type="radio" name="radio" value="radio1" />单选1
+		<input type="radio" name="radio" value="radio2" />单选2
+		<input type="radio" name="radio" value="radio3" />单选3
+		
+		<script type="text/javascript">
+			$("#single").val("选择2号");
+			
+			$("#multiple").val(["选择2号","选择3号"]);
+			$(":checkbox").val(["check2","check3"]);
+//			$(":radio").val(["radio2"]);
+			//同上
+			$("#single option:eq(1)").attr("selected",true);
+			$("[value=radio2]:radio").attr("checked",true);
+		</script>
+	</body>
+</html>

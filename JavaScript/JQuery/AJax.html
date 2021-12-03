@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" value="Ajax提交" onclick="Ajax();"/>
+		<div id="resText">
+			
+		</div>
+		
+		<script type="text/javascript">
+//			js的方式
+			function Ajax() {
+				//声明一个空对象用来装入XMLHTTPRequest对象
+				var xmlHttpReq = null;
+				if(window.ActiveXObject){//IE5 IE6是以ActiveXObject的方式
+					//引入XMLHTTPRequest对象的
+					xmlHttpReq = new ActiveXObject("Microsoft.XMLHTTP");
+				}else if(window.XMLHttpRequest){//除IE5 IE6以外的浏览器
+					//XMLHttpRequest是window的子对象
+					xmlHttpReq = new XMLHttpRequest();//实例化一个XMLHttpRequest对象
+				}
+				
+				xmlHttpReq.open("GET","url",true);//调用open()方法并采用异步方式
+				xmlHttpReq.onreadystatechange = RequestCallBack;//设置回调函数
+				xmlHttpReq.send(null);//因为使用GET方法提交,所以可以使用null作为参数调用
+				
+				function RequestCallBack() {//一旦readyState值改变,将会调用该函数
+				
+				if(xmlHttpReq.readyState == 4){
+					if(xmlHttpReq.status == 200){
+						//将xmlHttpReq.responseText的值赋予id为resText的元素
+						document.getElementById("resText").innerHTML = xmlHttpReq.responseText;
+					}
+				}
+				
+			}
+			}
+			
+		</script>
+	</body>
+</html>

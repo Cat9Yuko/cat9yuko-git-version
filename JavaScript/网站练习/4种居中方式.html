@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.div1,.div2,.div3,.div4{
+				height: 200px;
+				width: 300px;
+				border: 1px solid black;
+				margin-bottom: 5px;
+			}
+			/*第一种 Flex layout*/
+			.div1{
+				/*垂直居中*/
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.div1-1,.div2-1,.div3-1,.div4-1{
+				height: 150px;
+				width: 150px;
+				background: lightgray;
+			}
+			/*第二种 Margin auto*/
+			.div2-1{
+				/*左右居中*/
+				margin: 0 auto;
+			}
+			/*第三种 Text-align和inline-block*/
+			.div3{
+				text-align: center;
+			}
+			.div3-1{
+				display: inline-block;
+			}
+			/*第三种 2D Transfrom*/
+			.div4-1{
+				/*左右上下居中*/
+				position: relative;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="div1">
+			
+			<div class="div1-1"></div>
+		</div>
+		<div class="div2">
+			<div class="div2-1"></div>
+		</div>
+		<div class="div3">
+			<div class="div3-1"></div>
+		</div>
+		<div class="div4">
+			<div class="div4-1"></div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,151 @@
+/*****************************************************
+全站使用
+*****************************************************/
+
+* {
+	outline: none;
+}
+
+body {
+	/*网站背景*/
+	background-color: #FFFFFF;
+	text-align: center;
+	margin: 0px;
+	padding: 0px;
+	line-height: 20px;
+	height: 25px;
+}
+
+table {
+	/*表格无边框，无边距*/
+	border-collapse: collapse;
+	border-style: none;
+}
+
+td {
+	/*基本字体*/
+	font-size: 16px;
+	line-height: 35px;
+	color: #000000;
+	/*vertical-align:top;*/
+	/*表格元素靠上对齐*/
+}
+
+.t-td {
+	min-height: 250px;
+}
+
+.t-td tr {
+	white-space: nowrap;
+	display: block;
+	height: 41px;
+}
+
+a {
+	color: #000;
+	text-decoration: none;
+	/*默认链接样式*/
+}
+
+a:hover {
+	color: blue;
+	/*默认链接样式*/
+}
+
+td.search {
+	/*搜索*/
+	color: #fff;
+	vertical-align: middle;
+}
+
+a.search {
+	color: #fff;
+	text-decoration: none;
+}
+
+#daohang {
+	background-color: #fff;
+	width: 1002px;
+	background-color: #fff;
+	border: 1px solid #B2B2B2;
+}
+
+td.daohang {
+	/*导航*/
+	color: #b40c01;
+	padding-left: 5px;
+}
+
+a.daohang {
+	color: #012083;
+	text-decoration: none;
+}
+
+a.font13 {
+	color: #000;
+	text-decoration: none;
+	/*默认链接样式*/
+}
+
+td.ftable {
+	/*中栏框架*/
+	width="980"!important;
+	text-align: center;
+}
+
+#contents {
+	/*正文框架*/
+	width="980"!important;
+}
+
+.center {
+	width: 1208px;
+	margin: 0 auto;
+}
+
+.swiper-container {
+	position: relative;
+	/*width: 584px;
+				height: 363px;*/
+}
+
+.title {
+	background-color: rgba(0, 0, 0, 0.5);
+	height: 40px;
+	width: 584px;
+	color: #FFFFFF;
+	position: absolute;
+	bottom: 0;
+	font-size: 16px;
+	/*line-height: 2;*/
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	text-indent: 23px;
+}
+
+.swiper-wrapper {
+	width: 584px!important;
+	height: 363px;
+	overflow: hidden;
+}
+
+.myul {
+	list-style: none;
+	height: 217px;
+}
+.myul li {
+	height: 36px;
+}
+.myul .STYLE2::before {
+	content: "";
+	background: url(swhz_20190828_dian.jpg);
+	text-align: center;
+	float: left;
+	line-height: 2;
+	position: relative;
+	/*定义为block元素*/
+	display: block;
+	height: 25px;
+	width: 25px;
+}

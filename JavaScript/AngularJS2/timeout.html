@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/angular.js" ></script>
+		
+	</head>
+	<body ng-app="myApp" ng-controller="myCtrl">
+		<script type="text/javascript">
+			var app = angular.module('myApp',[]);
+			app.controller('myCtrl',function ($scope,$timeout) {
+				$scope.myHeader = "hello $timeout";
+				$timeout(function () {
+					$scope.myHeader = "How are you !";
+				},5000);
+			})
+		</script>
+		<h4>{{myHeader}}</h4>
+	</body>
+</html>

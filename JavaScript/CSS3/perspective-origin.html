@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>perspective-origin属性的基本使用</title>
+  <style media="screen">
+    .wrapper {
+      width: 30%;
+      display: inline-block;
+      padding-bottom: 1em;
+    }
+    .wrapper h1 {
+      text-align: center;
+      font-size: 1.5em;
+    }
+    .cube {
+      font-size: 2em;
+      width: 2em;
+      height: 2em;
+      margin: .5em auto;
+      transform-style: preserve-3d;
+      perspective: 250px;
+    }
+    .w1 .cube {
+      perspective-origin: top left;
+    }
+    .w2 .cube {
+      perspective-origin: top;
+    }
+    .w3 .cube {
+      perspective-origin: top right;
+    }
+    .w4 .cube {
+      perspective-origin: left;
+    }
+    .w5 .cube {
+      perspective-origin: center;
+    }
+    .w6 .cube {
+      perspective-origin: right;
+    }
+    .w7 .cube {
+      perspective-origin: bottom left;
+    }
+    .w8 .cube {
+      perspective-origin: bottom;
+    }
+    .w9 .cube {
+      perspective-origin: bottom right;
+    }
+    .side {
+      position: absolute;
+      width: 2em;
+      height: 2em;
+      background: rgba(255, 99, 71, 0.6);
+      border: 1px solid rgba(0, 0, 0, 0.5);
+      color: white;
+      text-align: center;
+      line-height: 2em;
+    }
+  </style>
+</head>
+<body>
+
+</body>
+</html>

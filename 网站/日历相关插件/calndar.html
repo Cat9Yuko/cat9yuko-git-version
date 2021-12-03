@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-1.9.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/moment.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/underscore-min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/clndr.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.days-of-the-week,
+			.days {
+				overflow: auto;
+			}
+			.header-day {
+				width: 50px;
+				float: left;
+				text-align: center;
+			}
+			.days-of-the-week,
+			.days {
+				position: relative;
+				width: 350px;
+			}
+			.last-month,
+			.next-month {
+				color: #e3e5e6;
+			}
+			.days-of-the-week {
+				position: relative;
+				color: #a2a6ab;
+			}
+			
+			.day-number {
+				z-index: 11;
+				width: 50px;
+				height: 50px;
+				line-height: 50px;
+				float: left;
+				text-align: center;
+			}
+			.p_num {
+				font-size: 12px;
+			}
+			.red_bg {
+				background: #fb602d;
+				border-radius:50%;
+				color: #FFFFFF;
+			}
+			.bg {
+				width: 350px;
+				background: url(img/123.jpg);
+				background-size:cover;
+			}
+			.wenzi {
+				z-index: -999;
+				width: 350px;
+				height: 100%;
+				color: #e2f1ff;
+				text-align: center;
+				font-size: 210px;
+				line-height: 220px;
+				position: absolute;
+				
+			}
+			
+			/*事件背景样式*/
+			
+			.today span {
+				background: #aacff4;
+				color: #FFFFFF;
+				border-radius: 50%;
+			}
+			.event span {
+				/*background: #fb602d;*/
+				border-radius: 50%;
+				/*color: #FFFFFF;*/
+			}
+			.event_name {
+				display: none;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		 <div id="clndr-3">
+          <script type="text/template" id="clndr-3-template">
+            <div class="">
+              <div class="days-of-the-week">
+                <% _.each(daysOfTheWeek, function(day) { %>
+                  <div class="header-day"><%= day %></div>
+                <% }); %>
+              </div>
+              <div class="days">
+                <% _.each(days, function(day) { %>
+                  <div class="<%= day.classes %>" id="<%= day.id %>"><span class="day-number"><%= day.day %></span>
+                   <%if(day.events.length >0){%>
+                  <span class="event_name"><%=day.events[0].name%></span>
+                    <%}%>
+                  </div>
+                <% }); %>
+                <div class="wenzi"><%= month %></div>
+              </div>
+            </div>
+          </script>
+        </div>
+		<script type="text/javascript">
+			$(function () {
+				//判断event值,根据值改变span样式
+				
+				$(".event_name").each(function () {
+					console.log($(this).text());
+					if($(this).text() =='1'){
+						$(this).prev().css("background","#fb602d");
+					}
+					if($(this).text() =='2'){
+						$(this).prev().css("background","#0089ff");
+					}
+					if($(this).text() =='3'){
+						$(this).prev().css("background","#00b853");
+					}
+					if($(this).text() =='4'){
+						$(this).prev().css("background","#ff9f00");
+					}
+					$(this).prev().css("color","#ffffff");
+				})
+			})
+			
+			
+			var myClendar = $("#clndr-3").clndr({
+				 template: $('#clndr-3-template').html(),
+//				startWithMonth: "2018-01-10",//开始日期
+				daysOfTheWeek: ['日','一','二','三','四','五','六'],
+//				showAdjacentMonths: false,//不显示上个月和下个月的日期
+				//添加事件
+				events:[
+				{ date:'2019-10-04',title:'京内请假',name:'1',color:'#fb602d'},
+				{ date:'2019-10-14',title: '京内外出',name:'2',color:'#0089ff'},
+				{ date:'2019-10-23',title:'离京',name:'3' ,color:'#00b853'},
+				{ date:'2019-10-10',title:'离境',name:'4',color:'#ff9f00' }
+				],
+				
+				clickEvents:{
+				//点击事件	
+					click: function (target) {
+						var dom = $(target.element);
+						var d_style = target.element.children;
+						
+						console.log(d_style);
+					}
+				}
+			})
+		</script>
+	</body>
+
+</html>

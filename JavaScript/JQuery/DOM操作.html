@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-3.4.1.js" ></script>
+	</head>
+	<body>
+		
+		<strong title="你最喜欢的水果是什么.">你最喜欢的水果是什么</strong><br />
+		<strong title="你最喜欢的水果是什么.">你最喜欢的水果是什么</strong><br />
+		<ul>
+			<li title="苹果">苹果</li>
+			<li title="橘子">橘子</li>
+			<li title="菠萝">菠萝</li>
+		</ul>
+	<br />
+		
+		<p title="选择你最喜欢的水果.">你最喜欢的水果是?</p>
+		<ul>
+			<li title="苹果">苹果</li>
+			<li title="橘子">橘子</li>
+			<li title="菠萝">菠萝</li>
+		</ul>
+		
+		<div title="节点属性">节点属性</div>
+		<script type="text/javascript">
+			//查找元素节点
+			var $li = $("ul li:eq(1)");//获取ul里第二个li节点
+			var li_text = $li.text();//后去第二个li元素节点的文本内容
+//			alert(li_text);
+			//查询属性节点
+			var $para = $("p");
+			var p_text = $para.attr("title");
+//			alert(p_text);
+			//创建节点
+			var $li_1 = $("<li>香蕉</li>");//创建第一个li元素
+			var $li_2 = $("<li>菠萝</li>");//创建第二个li元素
+			var $li_3 = $("<li>其他</li>");//创建第三个li元素
+			var $parent = $("ul");
+			var $two_li = $("ul li:eq(1)");
+			$parent.append($li_1);
+			$parent.prepend($li_2);
+			$li_3.insertAfter($two_li);
+			
+			//移动节点
+			var $one_li = $("ul li:eq(2)");//获取ul节点中第2个li元素节点
+			var $two_li = $("ul li:eq(3)");//获取ul节点中第3个li节点
+			$two_li.insertBefore($one_li);//移动节点
+			
+			//删除节点
+			$li = $("ul li:eq(1)").remove();//删除后的节点的返回值指向已被删除的节点的引用
+			$li.appendTo("ul li:eq(1)");
+			
+//			detach
+			$("ul li").click(function () {
+				alert($(this).html());
+			})
+			var $li = $("ul li:eq(1)").detach();//删除元素,所绑定的事件附加的数据会保留下来
+			$li.append("ul");
+			
+			$("ul li:eq(1)").empty();//获取第2个li元素节点后,清空此元素里的内容,注意是元素里
+			
+			//复制节点
+			$("ul li").click(function () {
+				$(this).clone().appendTo("ul");//复制当前单击的节点并将它最佳到ul元素中
+//				$(this).clone(true).appendTo("body");//注意true,表示复制元素的同时复制元素中绑定的事件
+			});
+			
+			//替换节点
+//			$("p").replaceWith("<strong>你最不喜欢的水果是?</strong>");//替换后绑定事件会消失
+			$("<strong>你最不喜欢的水果是?</strong>").replaceAll("p");
+			
+			//包裹节点wrap()
+//			$("strong").wrap("<i></i>");//用i标签把strong元素包裹起来
+//			$("strong").wrapAll("<i></i>");//把所有的strong元素都包裹在一个i标签中,如果包裹多个元素其他元素放到包裹元素之后
+			$("strong").wrapInner("<i></i>");//放到strong元素的里面
+			
+			//属性操作
+			var $para = $("div");//获取div节点
+			var p_txt = $para.attr("title");//获取p元素节点属性title
+			console.log(p_txt);
+//			$p_text = $para.attr("title","更改过的属性");
+			//添加多个属性
+			$para.attr({"title":"第一个属性","name":"test"});
+			//删除属性
+			$para.removeAttr("title");
+		</script>
+	</body>
+</html>

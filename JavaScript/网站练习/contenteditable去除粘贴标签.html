@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.xm_content::-webkit-scrollbar {
+				display: none;
+			}
+			
+			.xm_content {
+				color: #FFFFFF;
+				background: lightblue;
+				margin: 0 auto;
+				height: 100px;
+				width: 200px;
+				/*user-modify: read-write-plaintext-only;
+				-webkit-user-modify: read-write-plaintext-only;*/
+				overflow-y: scroll;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="xm_content" contenteditable="true" read-write-plaintext-only></div>
+		<div class="xm_content" contenteditable="true" read-write-plaintext-only></div>
+
+		<script type="text/javascript">
+			
+			var llen = document.getElementsByClassName("xm_content").length;
+			
+			for (var i =0; i<llen; i++) {
+				document.querySelectorAll('.xm_content')[i].addEventListener("paste", function(e) {
+				e.stopPropagation();
+				e.preventDefault();
+				var text = '',
+					event = (e.originalEvent || e);
+				if(event.clipboardData && event.clipboardData.getData) {
+					text = event.clipboardData.getData('text/plain');
+				} else if(window.clipboardData && window.clipboardData.getData) {
+					text = window.clipboardData.getData('Text');
+				}
+				if(document.queryCommandSupported('insertText')) {
+					document.execCommand('insertText', false, text);
+				} else {
+					document.execCommand('paste', false, text);
+				}
+			});
+			}
+			
+		</script>
+	</body>
+
+</html>

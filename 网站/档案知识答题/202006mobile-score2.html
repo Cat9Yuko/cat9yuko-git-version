@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <link rel="stylesheet" href="css/202006_mobileblobal.css">
+    <title>档案知识网络答题</title>
+    <style>
+        body {
+            height: 100vh;
+            background: #24add7;
+        }
+    </style>
+</head>
+<body>
+    <div class="index">
+        <div class="bt">
+            <img src="img/202006-mobile-score.jpg" width="100%" height="100%" />
+            <div class="score_bg">
+                <p>您的得分是 55 分，未能获得证书，<br>谢谢您的参与。</p>
+            </div>
+        </div>
+        <div class="box"><img src="img/202006dazsdt_scorebtn2.png" width="100%" />
+            <div class="btn_g">
+                <a href="#再答一次"></a>
+                <a class="closepage" href="javascript:;"></a>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-1.9.1.js"></script>
+    <script>
+        $(".closepage").click(function() {
+					window.opener = null;
+					window.open('', '_self');
+					window.close();
+				})
+
+    </script>
+</body>
+</html>

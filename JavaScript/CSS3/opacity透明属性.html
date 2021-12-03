@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>opacity制作过度色块</title>
+  <style type="text/css">
+      /*
+      opacity: alphavalue || inherit
+        alphavalue: 默认值为1, 可以取 0 ~ 1任意浮点数。
+        其中取值为1时，元素是完全不透明的;反之,取值为0时,元素是完全透明不可见的
+        其值不可以是负值
+       */
+      .row {
+        overflow: hidden;
+      }
+      .row div {
+        width: 80px;
+        height: 80px;
+        line-height: 80px;
+        text-align: center;
+        float: left;
+      }
+      .row:nth-of-type(1) div {
+        background: #000;
+        color: #fff;
+      }
+      .row:nth-child(2) div {
+        background: red;
+      }
+      .row:nth-of-type(3) div {
+        background: green;
+      }
+      .row:nth-of-type(4) div {
+        background: blue;
+      }
+      .row div:nth-child(1) {
+        background: #000;
+        color: #fff;
+      }
+      .row div:nth-child(2) {
+        opacity: 1;
+      }
+      .row div:nth-child(3) {
+        opacity: 0.8;
+      }
+      .row div:nth-child(4) {
+        opacity: 0.6;
+      }
+      .row div:nth-child(5) {
+        opacity: 0.4;
+      }
+      .row div:nth-child(6) {
+        opacity: 0.2;
+      }
+      .row:nth-of-type(1) div {
+        opacity: 1;
+      }
+  </style>
+</head>
+<body>
+  <div class="demo">
+    <div class="row">
+      <div></div>
+      <div>1</div>
+      <div>0.8</div>
+      <div>0.6</div>
+      <div>0.4</div>
+      <div>0.2</div>
+    </div>
+  </div>
+</body>
+</html>

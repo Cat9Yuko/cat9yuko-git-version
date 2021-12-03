@@ -1,0 +1,359 @@
+/* 列表页, 细览页样式 */
+
+.list-nav {
+  width: 260px;
+  margin-top: -50px;
+  position: relative;
+  margin-bottom: 67px;
+  float: left;
+  z-index: 10;
+}
+.list-nav a {
+  color: inherit;
+  text-decoration: none;
+}
+.list-nav ul {
+  margin: 0;
+  padding: 0;
+}
+.list-nav li {
+  list-style: none;
+  font-size: 18px;
+  text-align: center;
+  color: #333333;
+  background-color: #f5f5f5;
+  padding-top: 1px;
+}
+.list-nav li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 19px 0;
+  border-left: 3px solid #f5f5f5;
+}
+.list-nav--title {
+  font-size: 24px;
+  color: #ffffff;
+  background-color: #004098;
+  text-align: center;
+  font-weight: bold;
+  padding: 33px 0;
+}
+.list-nav li.--act a,
+.list-nav li:hover a {
+  background-color: #dde1e8;
+  color: #004098;
+  border-left: 3px solid #004098;
+}
+
+.list-container {
+  float: right;
+  width: 890px;
+  float: right;
+}
+.cur-page {
+  padding: 29px 0;
+}
+.cur-page a {
+  display: inline-block;
+  line-height: 24px;
+}
+.cur-page img {
+  vertical-align: text-bottom;
+  margin-right: 6px;
+}
+
+.video-list-item {
+  position: relative;
+  width: 270px;
+  height: 200px;
+  float: left;
+  margin-right: 38px;
+  margin-bottom: 39px;
+}
+.video-list-item:nth-child(3n) {
+  margin-right: 0;
+}
+.bt-text {
+  line-height: 45px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.video--icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 59px;
+  height: 59px;
+  background: url(../img/video-list-icon.png);
+}
+.video-list-item:hover .video--icon {
+  background: url(../img/video-list-icon2.png);
+}
+.video-list-item a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+/*分页*/
+.fy {
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -webkit-align-items: center;
+  width: 100%;
+  height: 30px;
+  font-size: 12px;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+.sa {
+  color: #333;
+  padding: 10px 10px;
+  border: 1px solid #d7d7d7;
+  margin-right: 5px;
+  background: #f9f9f9;
+  *display: inline-block;
+  border-radius: 5px;
+}
+.fy .pages a {
+  color: #333;
+  padding: 10px 12px;
+  border: 1px solid #d7d7d7;
+  margin-right: 5px;
+  background: #f9f9f9;
+  *display: inline-block;
+  border-radius: 5px;
+}
+
+.fy .pages a.on,
+.fy .pages a:hover {
+  background: #004098;
+  color: #fff;
+}
+
+.fy a {
+  color: #333;
+  padding: 10px 12px;
+  text-decoration: none;
+}
+
+.fy a:hover {
+  color: #004098;
+}
+
+.fy span,
+.fy button {
+  margin: 0 3px;
+}
+
+.fy button {
+  background: #3582c4;
+  border: 1px solid #d7d7d7;
+  padding: 3px 12px;
+  *padding: 2px 12px 0;
+  _padding: 6px 12px 0;
+  color: #fff;
+}
+
+.fy input {
+  width: 36px;
+  padding: 3px 0;
+  border: 1px solid #333;
+  text-indent: 4px;
+  margin: 0 4px;
+}
+
+.video-detail h1 {
+  margin: 0;
+  color: #045487;
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 24px;
+}
+.detail {
+  text-align: center;
+  font-size: 18px;
+  color: #999999;
+}
+.article-content {
+  padding: 30px 0;
+}
+.article-content video {
+  display: block;
+  max-width: 800px;
+  /* width: 500px; */
+  margin: 0 auto;
+}
+.detail a {
+  color: inherit;
+  text-decoration: none;
+}
+.article-content {
+  font-size: 16px;
+}
+.article-content p {
+  margin: 0;
+}
+.article-list {
+  padding: 0;
+}
+.article-list li {
+  list-style: none;
+  font-size: 16px;
+  border-bottom: 1px dashed #cbcbcb;
+  padding: 16px 0;
+}
+.article-list a {
+  color: inherit;
+  text-decoration: none;
+}
+.article-list span {
+  margin-right: 11px;
+}
+.article-content p {
+  line-height: 37px;
+}
+.article-content img {
+  max-width: 100%;
+}
+@media (max-width: 1199px) {
+    .list-nav {
+        display: none;
+    }
+    .list-container {
+        float: none;
+        margin: 0 auto;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .list-container {
+        width: 100%;
+    }
+    .video-list-item {
+        width: 45%;
+        margin-right: 0;
+    }
+    .video-list-item {
+        background-size: cover!important;
+    }
+    .video-list-item:nth-child(odd) {
+        float: left;
+    }
+    .video-list-item:nth-child(even) {
+        float: right;
+    }
+    .article-content video {
+      max-width: 100%;
+    }
+
+}
+@media (max-width: 767px) {
+    .scroll-channel {
+        line-height: 40px;
+        width: 100%;
+        white-space: nowrap;
+        overflow-x: scroll;
+    }
+    .scroll-channel::-webkit-scrollbar {
+        height: 0;
+    }
+    .scroll-channel a {
+        font-size: 15px;
+        color: #666666;
+        margin-right: 34px;
+        text-decoration: none;
+    }
+    .scroll-channel a:last-child {
+        margin-right: 47px;
+    }
+    .scroll-channel a.act {
+        color: #0000de;
+        font-weight: bold;
+    }
+    .scroll-channel a.act::after  {
+        content: "";
+        display: inline-block;
+        width: 5.5px;
+        height: 5.5px;
+        border-radius: 50%;
+        vertical-align: text-top;
+        margin-left: 5px;
+        background: #0000de;
+    }
+    .chnl-more {
+        right: 15px;
+        position: absolute;
+        background-color: #ffffff;
+        box-shadow: -5px 0 8px -9px rgba(27, 27, 27, 1);
+    }
+    .chnl-more img {
+        height: 40px;
+    }
+    .video-list-item {
+        width: 165px;
+        height: 105px;
+    }
+    .bt-text {
+        line-height: 27.5px;
+        font-size: 9px;
+    }
+    .video-list-container {
+        padding-top: 22.5px;
+    }
+    .video-list-item {
+        margin-bottom: 22.5px;
+    }
+
+    .video-detail h1 {
+      margin: 30px 0;
+      font-size: 18px;
+      text-align: left;
+      line-height: 27px;
+      font-weight: bold;
+      color: #004098;
+    }
+    .detail {
+      font-size: 12px;
+      margin: 0;
+    }
+    .app-detail img {
+      width: 16px;
+      height: 16px;
+      vertical-align: text-top;
+      margin-right: 7px;
+    }
+    
+    .article-list li {
+      border-bottom: none;
+      padding: 15px 0;
+    }
+    .article-list .app-detail {
+      margin-bottom: 0;
+      margin-top: 14px;
+    }
+
+    .article-content {
+      padding-top: 10px;
+      font-size: 15px;
+    }
+    .article-content p {
+      line-height: 23px;
+      /* margin: 0 0 10px; */
+    }
+}

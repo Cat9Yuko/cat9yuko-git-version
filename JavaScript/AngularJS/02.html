@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="">
+	<head>
+		<meta charset="utf-8" />
+		<title>使用AngularJS</title>
+		<style>
+			#div1{
+				width: 200px;
+				height: 200px;
+				color: white;
+				background: black;
+			}
+		</style>
+		<script type="text/javascript" src="js/angular.js" ></script>
+	</head>
+	<body>
+		<input type="text" ng-model="a"/>		
+		<div id="div1" ng-bind="a"></div>
+	</body>
+</html>

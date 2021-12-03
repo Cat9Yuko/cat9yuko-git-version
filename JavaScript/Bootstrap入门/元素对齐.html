@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+		<title></title>
+
+		<!-- Bootstrap core CSS -->
+		<link href="images/bootstrap.css" rel="stylesheet">
+		<script src="images/jquery-1.9.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="images/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.container{
+				background-color: lightblue;
+			}
+			.container div{
+				width: 200px;
+				border: 1px solid black; 
+			}
+		</style>
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	</head>
+
+	<body>
+		<div class="container">
+			<p class="text-left">text-left</p>
+			<p class="text-center">text-center</p>
+			<p class="text-right">text-right</p>
+			<p class="text-justify">text-justify</p>
+			<p class="text-nowrap">text-nowrap</p>
+			<div class="pull-left">pull-left</div>
+			<div class="center-block">center-block</div>
+			<div class="pull-right">pull-right</div>
+			
+			
+			<p class="text-capitalize">abcd efgh ijklm nopq rstu vwxy z <small>(每个单词的第一个字母大写)</small></p>
+			<p class="text-lowercase">abcd efgh ijklm nopq rstu vwxy z <small>(每个字没有都小写)</small></p>
+			<p class="text-uppercase">abcd efgh ijklm nopq rstu vwxy z <small>(每个字母都大写)</small></p>
+			
+			<!--样式转换-->
+			<p class="text-muted">这是一段测试文字</p>
+			<p class="text-primary">这是一段测试文字</p>
+			<p class="text-success">这是一段测试文字</p>
+			<p class="text-info">这是一段测试文字</p>
+			<p class="text-warning">这是一段测试文字</p>
+			<p class="text-danger">这是一段测试文字</p>
+			
+			<div class="bg-primary">这是一个背景颜色测试</div>
+			<div class="bg-success">这是一个背景颜色测试</div>
+			<div class="bg-info">这是一个背景颜色测试</div>
+			<div class="bg-warning">这是一个背景颜色测试</div>
+			<div class="bg-danger">这是一个背景颜色测试</div>
+			
+			<!--其他文本块-->
+			<code>定义文本段落内的内联代码示例(code)</code><br />
+			<kbd>定义用户输入, 一般通过键盘输入(kbd)</kbd><br />
+			<pre class="pre-scrollable">定义独立成块的多行代码(pre)</pre><br />
+			<samp>定义计算机代码中的示例输出(samp)</samp><br />
+			<var>定义变量(var)</var><br />
+			
+			<!--如果需要指明引用语的来源,将引用于放在一个段落中,然后在<blockquote>内的<footer>标记总指明来源。用<cite>标记保卫实际来源-->
+				<blockquote>
+				<p>`Twas brillig, and the slithy toves<br />
+				Did gyre and gimble in the wabe:<br />
+				All mimsy were the borogoves,<br />
+				And the mome rahts outgrabe.</p>
+				<footer>by Lewis Carroll from <cite title="The Jabberwocky">"The Jabberwocky"</cite></footer>
+			</blockquote>
+				<!--添加 .blockquote-reverse右对齐-->
+			<blockquote class="blockquote-reverse">
+				<p>`Twas brillig, and the slithy toves<br />
+				Did gyre and gimble in the wabe:<br />
+				All mimsy were the borogoves,<br />
+				And the mome rahts outgrabe.</p>
+				<footer>by Lewis Carroll from <cite title="The Jabberwocky">"The Jabberwocky"</cite></footer>
+			</blockquote>
+			
+			
+			<!--列表-->
+			<ul class="list-unstyled">
+				<li>list-unstyle 删除列表项的默认样式和左外边距</li>
+				<li>list-unstyle 删除列表项的默认样式和左外边距</li>
+				<li>list-unstyle 删除列表项的默认样式和左外边距</li>
+				<li>list-unstyle 删除列表项的默认样式和左外边距</li>
+				<li>list-unstyle 删除列表项的默认样式和左外边距</li>
+			</ul>
+			
+			<ul class="list-inline">
+				<li>list-inline将所有列表放在一行中,列表项之间有较小的内边距</li>
+				<li>list-inline将所有列表放在一行中,列表项之间有较小的内边距</li>
+				<li>list-inline将所有列表放在一行中,列表项之间有较小的内边距</li>
+				<li>list-inline将所有列表放在一行中,列表项之间有较小的内边距</li>
+				<li>list-inline将所有列表放在一行中,列表项之间有较小的内边距</li>
+				<li>list-inline将所有列表放在一行中,列表项之间有较小的内边距</li>
+				<li>list-inline将所有列表放在一行中,列表项之间有较小的内边距</li>
+				<li>list-inline将所有列表放在一行中,列表项之间有较小的内边距</li>
+				<li>list-inline将所有列表放在一行中,列表项之间有较小的内边距</li>
+				<li>list-inline将所有列表放在一行中,列表项之间有较小的内边距</li>
+			</ul>
+			
+			<dl class="dl-horizontal">
+				<dt>标题</dt>
+				<dd>将定义列表项和描述并排显示</dd>
+				<dt>标题</dt>
+				<dd>将定义列表项和描述并排显示</dd>
+				<dt>标题</dt>
+				<dd>将定义列表项和描述并排显示</dd>
+			</dl>
+			
+			<!--缩略语
+				使用.initialism类可以使缩略语字体稍小些
+			-->
+			<p>I wrote a book on 
+				<abbr title="HyperText Markup Language 5">HTML5</abbr> and another on 
+				<abbr title="Responsive Web Design" class="initialism">RWD</abbr>.</p>
+				
+				<address>辽宁省 抚顺市 望花区 高阳路</address>
+		</div>
+	</body>
+
+</html>

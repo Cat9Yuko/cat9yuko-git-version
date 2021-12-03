@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Demo</title>
+		<link rel="stylesheet" href="images/idangerous.swiper.css">
+		<style>
+			.swiper-container {
+				width: 500px;
+				height: 500px;
+				background-color: lightgray;
+			}
+			
+			.pagination {
+				position: absolute;
+				z-index: 20;
+				bottom: 10px;
+				width: 100%;
+				text-align: right;
+				right: 5px;
+			}
+			
+			.swiper-pagination-switch {
+				display: inline-block;
+				width: 2px;
+				height: 2px;
+				border-radius: 8px;
+				background: lightgray;
+				margin: 0 2px;
+				/*opacity: 0.8;*/
+				border: 1px solid #fff;
+				cursor: pointer;
+			}
+			
+			.swiper-active-switch {
+				width: 3px;
+				height: 3px;
+				background: #fff;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide"> <img src="images/123.jpg"> </div>
+				<div class="swiper-slide"> <img src="images/123.jpg"> </div>
+				<div class="swiper-slide">
+					<div class="content-slide">
+						<p class="title">Slide with HTML</p>
+						<p>You can put any HTML inside of slide with any layout, not only images, even another Swiper!</p>
+					</div>
+				</div>
+			</div>
+			<div class="pagination"></div>
+		</div>
+		
+		<script src="images/jquery-1.10.1.min.js"></script>
+		<script src="images/idangerous.swiper.js"></script>
+		<script>
+			var mySwiper = new Swiper('.swiper-container', {
+				pagination: '.pagination',
+				loop: true,
+				paginationClickable: true
+			})
+		</script>
+	</body>
+
+</html>

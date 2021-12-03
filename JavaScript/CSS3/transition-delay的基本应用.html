@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style media="screen">
+    .transition {
+      background: #8ec63f;
+      width: 100px;
+      height: 100px;
+      border-radius: .5em;
+      transition-property: background,border-radius;
+      transition-duration: 2s, 2s;
+      transition-timing-function: linear, ease-in;
+      transition-delay: 2s, 4s;
+    }
+    .transition:hover {
+      background: #f7941d;
+      border-radius: 50%;
+    }
+    input {
+      background-color: green;
+      width: 100px;
+      transition: background-color 2s ease .5s,width 2s ease .5s;
+    }
+    input:focus {
+      background-color: orange;
+      width: 200px;
+    }
+  </style>
+</head>
+<body>
+  <div class="transition"></div>
+
+  <input type="text" name="" value="">
+</body>
+</html>

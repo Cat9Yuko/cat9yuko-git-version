@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>表格的圆角应用</title>
+  <style type="text/css">
+    table {
+      margin: 10px;
+      border: 5px solid orange;
+      border-radius: 10px;
+    }
+    .table1 {
+      border-collapse: collapse;
+    }
+    .table2 {
+      border-collapse: separate;
+    }
+  </style>
+</head>
+<body>
+<!-- 表格样式属性border-collapse是collapse时,表格不能正常显示,
+  只有border-collapse属性值为separate时,表格圆角才能正常显示
+   -->
+
+   <table class="table1">
+     <tr>
+       <td>border-collapse:collapse</td>
+     </tr>
+   </table>
+   <table class="table2">
+      <tr>
+        <td>border-collapse:separate</td>
+      </tr>
+   </table>
+
+</body>
+</html>

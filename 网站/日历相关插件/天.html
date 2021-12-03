@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		
+		<div id="J_ShowDate" data-start="2019-11-20">11-20</div>
+<input type="button" value="前一天" id="J_DayDown">
+<script>
+(function() {
+    var show = document.getElementById('J_ShowDate');
+    var btn = document.getElementById('J_DayDown');
+    // replace是为了解决new Date的兼容性问题
+    var date = new Date(show.getAttribute('data-start').replace(/-/g, '/'));
+    btn.onclick = function() {
+        var showStr, year, month, day;
+        date.setDate(date.getDate() - 1);
+        year = date.getFullYear();
+        // getMonth() 的范围是[0, 11]，所以显示值需+1
+        month = (date.getMonth() + 1) < 10 ? '0' + (date.getMonth() + 1) : (date.getMonth() + 1);
+        day = date.getDate() < 10 ? '0' + date.getDate() : date.getDate();
+ 
+        showStr = year + '-' + month + '-' + day;
+        show.innerHTML = showStr;
+    };
+})();
+</script>
+	</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>在表达式中添加过滤器</title>
+		<script type="text/javascript" src="js/angular.js" ></script>
+		<script type="text/javascript" src="js/personController.js" ></script>
+	</head>
+	<body>
+		<div ng-app="myApp" ng-controller="myCtrl">
+			
+			姓:{{lastName|uppercase}}<!--转化为大写-->
+			名:{{firstName|lowercase}}<!--转换为小写-->
+		</div>
+	</body>
+</html>

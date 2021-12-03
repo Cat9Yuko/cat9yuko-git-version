@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html ng-app="">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/angular.js" ></script>
+	</head>
+	<body ng-init="arr=[12,2,5,51,51]">
+		<!--AngularJS出于性能的考虑使用$index来解决问题-->
+		<ul>
+			<li ng-repeat="item in arr track by $index">{{item}}</li>
+		</ul>
+	</body>
+</html>

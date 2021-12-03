@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="render" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=1200">
+		<title>三峡工程管理</title>
+		<link rel="stylesheet" href="images/base.css" OLDSRC="base.css" OLDID="23490" RELATED="1">
+		<link rel="stylesheet" href="images/home.css" OLDSRC="home.css" OLDID="23491" RELATED="1">
+		<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+		
+	</head>
+
+	<body>
+		<div class="wrapper">
+			
+	
+			<TRS_TEMPLATE tempname="头部" ></TRS_TEMPLATE>	
+				<div class="main layout">
+					
+					
+				</div>
+			<TRS_TEMPLATE tempname="底部" ></TRS_TEMPLATE>
+		</div>
+	</body>
+	<script src="jquery1.12.4.min.js" OLDSRC="jquery1.12.4.min.js" OLDID="23492" RELATED="1"></script>
+	<script>
+     
+		
+		$(function() {
+			$("#time")
+			var myDate = new Date;
+			var year = myDate.getFullYear(); //获取当前年
+			var mon = myDate.getMonth() + 1; //获取当前月
+			var date = myDate.getDate(); //获取当前日
+			var week = myDate.getDay();
+			var weeks = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
+			console.log(year, mon, date, weeks[week])
+			$("#time").html("欢迎您来到三峡工程管理网站！   " + year + "年" + mon + "月" + date + "日" + weeks[week]);
+			$(".selected").click(function() {
+				console.log($(this).siblings(".option"))
+				$(this).siblings(".option").slideToggle();
+			})
+
+			$("body").click(function(e) {
+				console.log(e.target.className.indexOf("selected"))
+				if(e.target.className.indexOf("selected") <= -1) {
+					$(".selected").siblings(".option").slideUp();
+				}
+			});
+			$(".option li").click(function() {
+				var optioninner = $(this).text();
+				// $(this).parent(".option").siblings(".selected").text(optioninner);
+				// $(this).parent(".option").children("li").hide();
+				// $(this).siblings(".option").slideUp();
+				// $(this).parent(".option").slideUp();
+			})
+			$(".option li").mousemove(function() {
+				var numb = $(".option li").index(this);
+				$(".option li").removeClass("actbg").eq(numb).addClass("actbg");
+			})
+		});
+	</script>
+
+</html>

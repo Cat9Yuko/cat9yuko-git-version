@@ -1,0 +1,164 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "微软雅黑";
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+li {
+	list-style: none;
+}
+
+.center_block {
+	position: relative;
+	width: 1200px;
+	margin: 0 auto;
+}
+
+/* 清除浮动 */
+.clearfix {
+    *zoom: 1;/* ie6,ie7清除浮动 */
+}
+.clearfix::after,
+.clearfix::before {
+    content: "";
+    display: table;
+}
+.clearfix::after {
+    clear: both;
+}
+
+
+/*topnav*/
+
+.topnav {
+	height: 53px;
+	background: url(20200106_topbar_bg.jpg) center center;
+	background-size: cover;
+}
+
+.topnav img {
+	float: left;
+}
+
+.topnav_fr {float: right;}
+.topnav_fr ul li {
+	float: left;
+	margin-right: 35px;
+	font-size: 20px;
+}
+.topnav_fr ul li:last-of-type {
+	margin-right: 14px;
+}
+.topnav_fr a{
+	font-weight: bold;
+	line-height: 53px;
+	color: #dd0701!important;
+}
+
+.mbg {
+	position: absolute;
+	width: 100%;
+	height: 1330px;
+	min-width: 1200px;
+	background: url(20200106bg.png) center top;
+	background-size: cover;
+	z-index: -10;
+}
+.mbg2 {
+	position: absolute;
+	width: 100%;
+	height: 1330px;
+	min-width: 1200px;
+	background: url(bg1.png) center top;
+	background-size: cover;
+	z-index: -10;
+}
+
+.mbody {
+	margin-top: 650px;
+}
+.hnews {
+	height: 385px;
+}
+
+.hnews_1,
+.hnews_2 {
+	width: 581px;
+	height: 385px;
+	float: left;
+}
+.hnews_2 {
+	float: right;
+	background: rgba(136, 0, 0, 0.5);
+}
+
+
+.hnews_2 .title {
+	font-size: 30px;
+	color: #FFFFFF;
+	text-align: center;
+	padding-top: 30px;
+}
+
+.hnews_2 .abstract {
+	padding: 20px 10px 0 10px;
+	font-size: 16px;
+	color: #FFFFFF;
+	line-height: 35px;
+	text-align: justify;
+}
+.hnews_2 .abstract a {
+	color: #FFFFFF;
+}
+
+.section1 {
+	margin-top: 40px;
+}
+
+.section1_1,
+.section1_2 {
+	width: 585px;
+	/*height: 180px;*/
+	float: left;
+	
+}
+.section1_2 {
+	float: right;
+}
+
+.section1_1 li,
+.section1_2 li {
+	line-height: 35px;
+}
+
+.section1 li:before,
+.section2 li:before {
+	display: inline-block;
+	vertical-align: middle;
+	content: "";
+	width: 7px;
+	height: 7px;
+	background: url(20200106_listicon.png);
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.section2 {
+	margin-bottom: 32px;
+}
+.section2 li {
+	width: 590px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	float: left;
+	line-height: 35px;
+}
+
+.section2 li:nth-child(odd) {
+	float: right;
+}

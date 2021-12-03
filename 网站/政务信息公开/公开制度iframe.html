@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="政府信息公开" />
+		<meta name="description" content="政府信息公开" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+		<meta name="viewport" content="width=1200">
+		<title>政府信息公开</title>
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+	      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+	      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    	<![endif]-->
+
+		<link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.css" />
+		<link rel="stylesheet" type="text/css" href="css/20200312_zwgk_global.css" />
+		<script src="js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.mCustomScrollbar.concat.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div class="roll">
+						<div class="gkzd_pd">
+							<div class="scroll">
+								<div class="gkzd_title">
+									<div>政府信息公开制度</div>
+								</div>
+								<div class="item_con">
+									<div class="itemz">
+										<a href="#">中华人民共和国政府信息公开条例&nbsp;&nbsp;2019-04-15</a>
+									</div>
+									<div class="itemz">
+										<a href="#">关于印发《水利部政务公开暂行规定》的通知&nbsp;&nbsp;2009-12-22</a>
+									</div>
+								</div>
+
+								<div class="gkzd_title">
+									<div>政务公开年度实施方案</div>
+								</div>
+								<div class="item_con">
+									<div class="itemz">
+										<a href="#">中华人民共和国政府信息公开条例&nbsp;&nbsp;2019-04-15</a>
+									</div>
+									<div class="itemz">
+										<a href="#">关于印发《水利部政务公开暂行规定》的通知&nbsp;&nbsp;2009-12-22</a>
+									</div>
+								</div>
+								<div class="gkzd_title">
+									<div>政务公开年度实施方案</div>
+								</div>
+								<div class="item_con">
+									<div class="itemz">
+										<a href="#">中华人民共和国政府信息公开条例&nbsp;&nbsp;2019-04-15</a>
+									</div>
+									<div class="itemz">
+										<a href="#">关于印发《水利部政务公开暂行规定》的通知&nbsp;&nbsp;2009-12-22</a>
+									</div>
+								</div>
+								<div class="gkzd_title">
+									<div>政务公开年度实施方案</div>
+								</div>
+								<div class="item_con">
+									<div class="itemz">
+										<a href="#">中华人民共和国政府信息公开条例&nbsp;&nbsp;2019-04-15</a>
+									</div>
+									<div class="itemz">
+										<a href="#">关于印发《水利部政务公开暂行规定》的通知&nbsp;&nbsp;2009-12-22</a>
+									</div>
+								</div>
+
+								<div class="gkzd_title">
+									<div>政务公开年度实施方案</div>
+								</div>
+								<div class="item_con">
+									<div class="itemz">
+										<a href="#">中华人民共和国政府信息公开条例&nbsp;&nbsp;2019-04-15</a>
+									</div>
+									<div class="itemz">
+										<a href="#">关于印发《水利部政务公开暂行规定》的通知&nbsp;&nbsp;2009-12-22</a>
+									</div>
+								</div>
+								<div class="gkzd_title">
+									<div>政务公开年度实施方案</div>
+								</div>
+								<div class="item_con">
+									<div class="itemz">
+										<a href="#">中华人民共和国政府信息公开条例&nbsp;&nbsp;2019-04-15</a>
+									</div>
+									<div class="itemz">
+										<a href="#">关于印发《水利部政务公开暂行规定》的通知&nbsp;&nbsp;2009-12-22</a>
+									</div>
+								</div>
+								<div class="gkzd_title">
+									<div>政务公开年度实施方案</div>
+								</div>
+								<div class="item_con">
+									<div class="itemz">
+										<a href="#">中华人民共和国政府信息公开条例&nbsp;&nbsp;2019-04-15</a>
+									</div>
+									<div class="itemz">
+										<a href="#">关于印发《水利部政务公开暂行规定》的通知&nbsp;&nbsp;2009-12-22</a>
+									</div>
+								</div>
+								<div class="gkzd_title">
+									<div>政务公开年度实施方案</div>
+								</div>
+								<div class="item_con">
+									<div class="itemz">
+										<a href="#">中华人民共和国政府信息公开条例&nbsp;&nbsp;2019-04-15</a>
+									</div>
+									<div class="itemz">
+										<a href="#">关于印发《水利部政务公开暂行规定》的通知&nbsp;&nbsp;2009-12-22</a>
+									</div>
+								</div>
+
+							</div>
+						</div>
+						</div>
+
+		<script type="text/javascript">
+			$("#tipr .itemr a").bind('mouseover mouseout mousemove', function (event) {
+            var left = event.pageX, top = event.pageY;
+            var ele = event.target;
+            var title = ele.getAttribute('deta-title');
+            if(title=="" || title==null ){
+                title= ele.parentElement.getAttribute('deta-title');
+            }
+            if(title=="" || title==null){
+                title= ele.parentElement.parentElement.getAttribute('deta-title');
+            }
+             event.stopPropagation();
+            var type = event.originalEvent.type;
+            if (type == 'mouseover'&& title!="" && title!=null) {
+              
+                if (title != null && title!="" && title!="null") {
+                    var showEle = $('<div class="showTitleBox"></div>', {text: title}).css({
+                        'position': 'absolute',
+                        'top': top-10,
+                        'left': left+15,
+                        'border': '1px solid #2d699b',
+                        'border-radius': '3px',
+                        'background-color': "#fff",
+                        'padding': '10px 20px',
+                        'width':'235px',
+                        'min-height':'83px',
+                        'line-height':'25px'
+                    })
+                    showEle.appendTo('body');
+					$('.showTitleBox').html(title);
+                    console.log(showEle)
+                }else{
+ 
+                }
+            } else if (type == 'mouseout') {
+                // ele.title = oldTitle;
+                $('.showTitleBox').remove();
+            } else if (type == 'mousemove') {
+                 $('.showTitleBox').css({
+                     top: top - 10,
+                     left: left + 15
+                 })
+            }
+        })
+			//tab 切换
+			$(".left .item").on("click", function() {
+				var index = $(this).index(".item");
+				console.log(index);
+				if(index != 3) {
+					$(".my_tree").removeClass("act");
+					$(".switchx").attr("src", "img/20200312icon7_3.png");
+				}
+				$(this).addClass("cor").siblings().removeClass("cor");
+				$(".right .item2").eq(index).addClass("act").siblings().removeClass("act");
+
+			});
+			//滚动插件
+			(function($) {
+				$(window).load(function() {
+					$(".scroll").mCustomScrollbar({
+						//axis:"yx",  //垂直和水平滚动
+						//theme: "dark", //主题
+					});
+
+				});
+			})(jQuery);
+			//字体大小切换
+			$(".l").click(function() {
+				$(".gknb_content").css("font-size", "18px");
+			})
+			$(".m").click(function() {
+				$(".gknb_content").css("font-size", "16px");
+			})
+			$(".s").click(function() {
+				$(".gknb_content").css("font-size", "14px");
+			})
+			
+			var switchx = function () {
+				
+					$(".switchx").attr("src", "img/20200312icon7_2.png");
+					$(".my_tree").addClass("act");
+				
+			}
+			//			公开内容
+			$(".switchx").click(function(event) {
+				if($(this).attr("src").search("img/20200312icon7_3.png") != -1) {
+					$(".switchx").attr("src", "img/20200312icon7_2.png");
+					$(".my_tree").removeClass("act");
+				} else {
+					$(".switchx").attr("src", "img/20200312icon7_3.png");
+					$(".my_tree").removeClass("act");
+					event.stopPropagation();
+				}
+			})
+			
+			$(".parent_title").on("click", function() {
+				$(this).addClass("act").siblings().removeClass("act");
+				var span = $(this).find(".jia");
+				span.toggleClass("jian");
+				$(".parent_title span").not(span).removeClass("jian");
+				var next = $(this).next();
+				$(".childs").not(next).hide();
+				next.toggle();
+			})
+
+			$(".child_title").on("click", function() {
+				$(this).addClass("act").siblings().removeClass("act");
+				var span = $(this).find(".jia");
+				span.toggleClass("jian");
+				$(".child_title span").not(span).removeClass("jian");
+				var next = $(this).next();
+				$(".childs2").not(next).hide();
+				next.toggle();
+			})
+
+			$(".child").on("click", function() {
+				$(this).addClass("act").siblings().removeClass("act");
+			})
+			$(".child2").on("click", function() {
+				$(this).addClass("act").siblings().removeClass("act");
+			})
+			$("#gknr").click(function () {
+				switchx();
+			})
+
+			
+		</script>
+	</body>
+
+</html>

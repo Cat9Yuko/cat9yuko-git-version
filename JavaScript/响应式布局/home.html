@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+		<title></title>
+		<!--jquery-->
+		<script src="js/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+		<!--bootstrap-->
+		<script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+		<!--swiper-->
+		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper.animate.min.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/animate.min.css" />
+		<!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+		<!--
+    	col-xs <768px 手机
+    	col-sm >=768px 平板
+    	col-md >=992px 正常屏幕
+    	col-lg >=1200px 超大屏幕
+    -->
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			/*背景轮播图*/
+			
+			.swiper-container {
+				left: 0;
+				top: 0;
+				right: 0;
+				position: fixed;
+				height: 100%;
+				width: 100%;
+				z-index: 1;
+			}
+			/*分页器颜色*/
+			
+			.swiper-pagination-bullet-active {
+				background: white;
+			}
+			/*分页器点大小*/
+			
+			.swiper-pagination-bullet {
+				width: 10px;
+				height: 10px;
+			}
+			
+			.swiper-slide {
+				min-width: 100%;
+				min-height: 100%;
+			}
+			
+			.swiper-button-next {
+				width: 40px;
+				height: 106px;
+				background: url(img/next.png);
+			}
+			
+			.swiper-button-prev {
+				width: 40px;
+				height: 106px;
+				background: url(img/prev.png);
+			}
+			
+			.blue-slide {
+				background: url(img/banner1-1499-999.jpg) center center no-repeat;
+				background-size: cover;
+				/*background: blue;*/
+			}
+			
+			.orange-slide {
+				background: url(img/banner2-1499-999.jpg) center center no-repeat;
+				background-size: cover;
+				/*background: orange;*/
+			}
+			
+			.gray-slide {
+				background: url(img/banner2-1499-999.jpg) center center no-repeat;
+				background-size: cover;
+				/*background: gray;*/
+			}
+			
+			.swiper-slide h2 {
+				position: absolute;
+				bottom: 0;
+				right: 10px;
+				color: white;
+			}
+			/*背景轮播图结束*/
+			.bg1{
+				width: 100%;
+				position: absolute;
+				bottom: -100%;
+				z-index: 1;
+				background-color: #FFFFFF;
+			}
+			
+		</style>
+	</head>
+
+	<body>
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expaned="false">
+						<span class="sr-only"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+			</div>
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				
+				<ul class="nav navbar-nav">
+					<li><a href="#">English</a></li>
+					<li><a href="#">信息门户</a></li>
+					<li><a href="#">电子邮件</a></li>
+					<li><a href="#">学生</a></li>
+					<li><a href="#">教职工</a></li>
+					<li><a href="#">校友</a></li>
+				</ul>
+			</div>
+		</nav>
+		
+
+		<!--背景轮播图-->
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide blue-slide">
+					<h2>这是一段话</h2>
+				</div>
+				<div class="swiper-slide orange-slide">
+					<h2>这是一段话</h2>
+				</div>
+				<div class="swiper-slide gray-slide">
+					<h2>这是一段话</h2>
+				</div>
+			</div>
+			<div class="swiper-button-next">&nbsp;</div>
+			<div class="swiper-button-prev">&nbsp;</div>
+			<div class="swiper-pagination">&nbsp;</div>
+		</div>
+		<script>
+			var swiper = new Swiper('.swiper-container', {
+				//  	autoplay: true, //可选项,自动滑动, 注意 冒号后面有空格
+				//  	direction: 'vertical', //垂直切换,
+				//  	direction: 'horizontal' //横向切换(默认)
+				loop: true,
+				speed: 300, //切换速度
+				autoplay: {
+					delay: 3000 //自动切换速度
+				},
+				//				grabCursor: true, //鼠标变成小手
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				},
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
+				}
+
+			});
+		</script>
+		<!--背景轮播图结束-->
+		
+		<div class="container bg1">
+			
+		</div>
+		
+		</div>
+		
+	</body>
+
+</html>

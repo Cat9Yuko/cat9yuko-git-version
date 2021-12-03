@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>混合版本的Flexbox</title>
+  <style media="screen">
+  /* IE10 */
+    /* display: flexbox | inlnie-flexbox
+    flexbox: 设置元素为块级伸缩容器
+    inline-flexbox: 设置元素为内联块伸缩容器
+     */
+     /* flex-direction 伸缩流方向
+        -ms-flex-direction: row | row-reverse | column | column-reverse
+        row: 此值是flex-direction的初始值, 其中文本书写模式直接影响了文档流的方向 ltr|rtl
+        row-reverse: 此值与row值效果相反
+        column: 伸缩项目按照它们在文档流出现的顺序按列从上到下排列
+        column-reverse: 与column值效果相反
+      */
+     /* flex-pack: start | end | cneter | justify | distribute
+        distribute: 伸缩项目会平均分布在同一行里, 两端保留一半的空间(这里的一半是指中间相邻伸缩项目之间间距的一半)。
+        如果伸缩容器没有足够空间或者只有一个伸缩项目的时候就会遵循cente方式
+      */
+     /* flex-align: start | end | center | baseline | stretch
+        stretch: 伸缩项目拉伸填充整个伸缩容器, 如果伸缩容器没有足够的空间, 将以start方式显示
+      */
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .flexbox-container {
+      padding: 10px;
+      border: 1px solid hsla(10, 80%, 10%, 0.2);
+      margin: 50px;
+      background-color: hsla(10, 80%, 10%, 0.2);
+    }
+
+    .flexbox-container > div {
+      width: 100px;
+      height: 100px;
+      border: 1px solid hsla(120, 30%, 50%, 0.8);
+      margin: 5px;
+      font-size: 20px;
+      text-align: center;
+      line-height: 100px;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .flexbox-container > div:nth-child(1) {
+      background-color: hsla(120, 30%, 50%, 0.8);
+    }
+    .flexbox-container > div:nth-child(2) {
+      background-color: hsla(120, 30%, 10%, 0.8);
+    }
+    .flexbox-container > div:nth-child(3) {
+      background-color: hsla(20, 30%, 50%, 0.8);
+    }
+    .flexbox-container > div:nth-child(4) {
+      background-color: hsla(20, 80%, 50%, 0.8);
+    }
+    .flexbox-container > div:nth-child(5) {
+      background-color: hsla(320, 80%, 50%, 0.8);
+    }
+    .flexbox-container > div:nth-child(6) {
+      background-color: hsla(320, 80%, 80%, 0.8);
+    }
+/* 声明伸缩容器 */
+    .flexbox-container {
+      display: flex;
+      flex-direction: row;
+      /* flex-direction: column; */
+      /* flex-direction: row-reverse; */
+      /* flex-direction: column-reverse; */
+      flex-wrap: wrap;
+      /* flex-flow: row wrap; */
+      -ms-flex-align: start;
+      flex: 2;
+      
+    }
+
+    /* flex-wrap: nowrap | wrap |wrap-reverse */
+  </style>
+</head>
+<body>
+  <div class="flexbox-container">
+    <div>Box1</div>
+    <div>Box2</div>
+    <div>Box3</div>
+    <div>Box4</div>
+    <div>Box5</div>
+    <div>Box6</div>
+  </div>
+
+</body>
+</html>

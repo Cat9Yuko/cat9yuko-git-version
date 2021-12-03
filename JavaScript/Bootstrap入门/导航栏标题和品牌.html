@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+		<title></title>
+
+		<!-- Bootstrap core CSS -->
+		<link href="images/bootstrap.css" rel="stylesheet">
+		<script src="images/jquery-1.9.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="images/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	</head>
+
+	<body>
+
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a href="#" class="navbar-brand">Miku</a>
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsedNav">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<p class="navbar-text">
+						We love <a href="#" class="navbar-link">Weeds</a>
+					</p>
+					<button class="btn btn-default navbar-btn" type="button">Click Me</button>
+				</div>
+				<!--切换导航开关-->
+		<!--
+			data-toggle="collapse" 这个数据字段告诉js,该元素是折叠的,脚本用这个字段知道何时折叠和展开菜单
+			data-target="#collapsedNav" 这个数据字段告诉js哪些元素折叠,哪些元素展开,
+			在这后的菜单中,将有一个id为collapsedNav的容器元素.这个元素在导航切换为开和关时出现和小时
+		-->
+
+		<div class="collapse navbar-collapse" id="collapsedNav">
+			<ul class="nav navbar-nav">
+				<li class="active">
+					<a href="#">Link</a>
+				</li>
+				<li>
+					<a href="#">Link</a>
+				</li>
+				<li>
+					<a href="#">Link</a>
+				</li>
+			</ul>
+		</div>
+				
+			</div>
+		</nav>
+		
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="collapse navbar-collapse" id="collapsedNav">
+					<form action="#" class="navbar-form navbar-right" role="search">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Search" />
+						</div>
+					</form>
+					<button class="btn btn-default navbar-btn navbar-right" type="button">
+						Contact Us
+					</button>
+				</div>
+			</div>
+		</nav>
+		
+	</body>
+
+</html>

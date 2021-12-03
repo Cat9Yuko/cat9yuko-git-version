@@ -1,0 +1,175 @@
+@media screen and (max-width: 768px) {
+  body {
+    background-color: #ffffff;
+  }
+  .center-block-1200,
+  .search-criteria,
+  .criteria-content {
+    width: 100%;
+  }
+  .search-content {
+    padding: 20px 15px 20px 15px;
+    box-sizing: border-box;
+  }
+  .footer {
+    display: none;
+  }
+  .file-show .fl,
+  .fy {
+    display: none;
+  }
+  .curpage {
+    display: none;
+  }
+  .search-container,
+  .search-container-bg,
+  .container .input > input {
+    width: auto;
+  }
+  .container .input .picker {
+    padding: 0 15px 0 5px;
+    font-size: 12px;
+    line-height: 22px;
+  }
+  .container .input > input {
+    padding: 0 5px 0 10px;
+    height: 22px;
+    font-size: 16px;
+  }
+  .container .search {
+    width: 21px;
+    height: 21px;
+    background-size: cover;
+  }
+  .container .input {
+    height: 22px;
+  }
+  .search-container {
+    height: 32px;
+  }
+  .container .input .picker-list {
+    top: 34px;
+  }
+  .file-show .fr {
+    width: 100%;
+    padding: 0;
+    border-left: none;
+  }
+  .nav {
+    padding: 10px 0;
+    overflow-x: scroll;
+  }
+  .nav::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  .nav-table {
+    white-space: nowrap;
+  }
+  .nav-tablecell {
+    display: inline-block;
+    height: 21px;
+    line-height: 21px;
+    text-align: center;
+    list-style-type: none;
+    padding: 0 8px;
+    position: relative;
+    width: auto;
+  }
+  .search-iword {
+    font-size: 16px;
+  }
+  .search-iword span {
+    margin-right: 5px;
+  }
+  .search-iword a {
+    font-size: 14px;
+  }
+  .search-iword span:nth-of-type(2) {
+    margin-left: 0;
+  }
+  .show-h a:first-child {
+    padding: 5px 10px;
+  }
+  .show-h a {
+    font-size: 14px;
+  }
+  .show-h a + a {
+    padding: 5px 5px;
+  }
+  .show-l-c .s-t {
+    font-size: 16px;
+  }
+  .show-l-c .s-b a {
+    font-size: 14px;
+  }
+  .mfooter {
+    display: block;
+    background-color: #3582c4;
+    color: #ffffff;
+    font-size: 12px;
+    padding: 10px 15px;
+  }
+  .mfooter p {
+    line-height: 2;
+  }
+  .logo button {
+    display: none;
+  }
+  .logo {
+    background: url(../img/filelib-logo.png) no-repeat;
+    background-size: cover;
+    height: 50px;
+    margin-left: 15px;
+    width: calc(100% - 15px);
+    background-color: #ffffff;
+  }
+  .heisearch {
+    top: 50px;
+    /* left: 0; */
+    right: 0;
+    /* transform: translate(50%,0); */
+    height: auto;
+    width: auto;
+    padding: 5px 10px;
+  }
+  .criteria-list2 li {
+    width: 105px;
+  }
+  .search-criteria input[type="text"] {
+    width: 105px;
+  }
+  .btn-cont input {
+    width: 80px;
+    height: 30px;
+  }
+  .tit_s01 {
+    font-size: 14px;
+  }
+  .tit_s01 {
+    height: 34px;
+  }
+  .tit_s01 .tabg {
+    height: 34px;
+    line-height: 34px;
+  }
+  .datetime {
+    margin-left: 10px;
+  }
+  .show-h {
+    white-space: nowrap;
+    overflow: scroll;
+  }
+  .show-h::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  .search-criteria {
+    font-size: 12px;
+  }
+
+  .info-error {
+    margin-top: 100px;
+    height: 180px;
+  }
+}

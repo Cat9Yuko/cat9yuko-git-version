@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="checkbox" value="1" name="check" checked="checked"/>
+		<input type="checkbox" value="2" name="check"/>
+		<input type="checkbox" value="3" name="check" checked="checked"/>
+		<input type="button" value="你选中的个数" id="btn"/>
+		
+		<!--
+			1)新建一个空数组
+			2)获取所有name为check的多选框
+			3)循环判断多选框是否被选中,如果被选中则添加到数组里
+			4)获取输出按钮,然后按钮添加onclick事件,输出数组的长度即可
+		-->
+		
+		<script type="text/javascript">
+			var btn = document.getElementById("btn");		//获取id为btn的元素(button)
+			btn.onclick = function () {						//给元素添加onclick事件
+				var arrays = new Array();					//创建一个数组对象
+				var items = document.getElementsByName("check");
+															//获取name为check的一组元素(checkbox)
+				for (var i=0;i<items.length;i++) {			//循环这组数据
+					if (items[i].checked) {					//判断是否选中
+						arrays.push(items[i].value);		//把复合条件的数据添加到数组中
+					}										//push()是JavaScript数组中的方法
+				}
+				
+				alert("选中的个数为: "+arrays.length);
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,116 @@
+  		.banner {
+  			text-align: center;
+  			margin-top: 58px;
+  		}
+  		
+  		.banner img {
+  			max-width: 100%;
+  		}
+  		
+  		.ullist {
+  			margin-top: 22px;
+  			background: #f8f2e2;
+  		}
+  		
+  		.mypadding {
+  			min-height: 550px;
+  			padding: 70px 90px;
+  		}
+  		
+  		.myul,
+  		.mybanner {
+  			padding-left: 0;
+  			padding-right: 0;
+  		}
+  		
+  		.myul li {
+  			height: 90px;
+  			list-style: none;
+  			border-top: 1px solid lightgray;
+  			padding-top: 22px;
+  			line-height: 1.5;
+  		}
+  		
+  		.myul li:last-child {
+  			border-bottom: 1px solid lightgray;
+  		}
+  		
+  		.myul li {
+  			overflow: hidden;
+  			white-space: nowrap;
+  			text-overflow: ellipsis;
+  			font-size: 34px;
+  		}
+  		
+  		.myul a {
+  			color: #000;
+  			text-decoration: none;
+  		}
+  		.myul li:before {
+  			content: url(20190912-start.png);
+  			width: 12px;
+  			height: 12px;
+  			margin: 0 46px;
+  		}
+  		@media only screen and (max-width: 320px) {
+  			
+  			body {
+  				margin: 0 10px;
+  			}
+  			.banner {
+  				margin-top: 0;
+  				padding-left: 0;
+  				padding-right: 0;
+  			}
+  			.mypadding {
+  				padding: 17px 9px;
+  			}
+  			.myul li {
+  				height: 80px;
+  				font-size: 24px;
+  			}
+  			.myul li:before {
+  				margin: 0 13px;
+  			}
+  		}
+  		
+  		@media only screen and (min-width: 321px) and (max-width: 767px) {
+  			body {
+  				margin: 0 10px;
+  			}
+  			.banner {
+  				margin-top: 0;
+  				padding-left: 0;
+  				padding-right: 0;
+  			}
+  			.mypadding {
+  				padding: 17px 9px;
+  			}
+  			.myul li {
+  				height: 80px;
+  				font-size: 24px;
+  			}
+  			.myul li:before {
+  				margin: 0 13px;
+  			}
+  		}
+  		
+  		@media only screen and (min-width: 768px) {
+  			.banner {
+  				padding-left: 0;
+  				padding-right: 0;
+  			}
+  			.container {
+  				width: 1400px;
+  			}
+  		}
+  		
+  		@media only screen and (min-width: 1200px) {
+  			.banner {
+  				padding-left: 0;
+  				padding-right: 0;
+  			}
+  			.container {
+  				width: 1400px;
+  			}
+  		}

@@ -1,0 +1,233 @@
+* {
+				margin: 0;
+				padding: 0;
+				font-family: "微软雅黑";
+			}
+			.footer {
+				background-color: #fbf5ef;
+			}
+			.main {
+				padding-bottom: 20px;
+			}
+			.wechatshare {
+				z-index: 999;
+			}
+			@media only screen and (min-width: 100px) and (max-width: 320px) {
+				.header {
+					background: url(zstp20190823phone-header-bg.png);
+					background-size: 100% 100%;
+					height: 200px;
+				}
+				.d-title {
+					font-size: 24px;
+					margin-top: 30px;
+				}
+				.article img:nth-of-type(2) {
+					width: 100%;
+				}
+			}
+			
+			@media only screen and (min-width: 320px) and (max-width: 640px) {
+				.d-title {
+					font-size: 29px;
+					margin-top: 20px;
+					margin-bottom: 10px;
+				}
+				.header {
+					background: url(zstp20190823phone-header-bg.png);
+					background-size: 100% 100%;
+					height: 200px;
+				}
+				.article {
+					font-size: 16px;
+				}
+				.article img {
+					padding-top: 10px;
+					padding-bottom: 10px;
+					/*width: 100%;*/
+				}
+				.article img:nth-of-type(2) {
+					width: 100%;
+				}
+				.source-time {
+					margin: 0 auto;
+					height: 30px;
+					text-align: center;
+					margin-bottom: 20px;
+					position: relative;
+				}
+				.time {
+					margin-right: 10px;
+				}
+				.wechat,
+				.sina {
+					line-height: 2.1;
+					position: absolute;
+				}
+				.wechat {
+					margin-left: 10px;
+				}
+				.sina {
+					margin-left: 46px;
+				}
+			}
+			
+			@media only screen and (min-width: 640px) and (max-width: 768px) {
+				.header {
+					background: url(zstp20190823phone-header-bg.png)no-repeat;
+					height: 400px;
+					background-size: 100% 100%;
+				}
+				.d-title {
+					font-size: 24px;
+					margin-top: 20px;
+					margin-bottom: 10px;
+				}
+				.time,
+				.d-time {
+					font-size: 16px;
+				}
+				.source,
+				.d-source {
+					font-size: 16px
+				}
+				.article {
+					font-size: 16px;
+				}
+				.article img {
+					padding-top: 10px;
+					padding-bottom: 10px;
+					/*width: 100%;*/
+				}
+				/*日期分享来源*/
+				.source-time {
+					margin: 0 auto;
+					height: 30px;
+					text-align: center;
+					margin-bottom: 20px;
+					position: relative;
+				}
+				.time {
+					margin-right: 10px;
+				}
+				.wechat,
+				.sina {
+					position: absolute;
+					line-height: 2.1;
+				}
+				.wechat {
+					margin-left: 10px;
+				}
+				.sina {
+					margin-left: 46px;
+				}
+				.my-article {
+					font-size: 20px;
+					line-height: 2;
+				}
+			}
+			
+			@media only screen and (min-width:768px) and (max-width: 992px) {
+				.header {
+					background: url(zstp20190823phone-header-bg.png)no-repeat;
+					height: 400px;
+					background-size: 100% 100%;
+				}
+				.d-title {
+					font-size: 24px;
+					margin-top: 20px;
+					margin-bottom: 10px;
+				}
+				.time,
+				.d-time {
+					font-size: 16px;
+				}
+				.source,
+				.d-source {
+					font-size: 16px
+				}
+				.article {
+					font-size: 16px;
+				}
+				.article img {
+					padding-top: 10px;
+					padding-bottom: 10px;
+					/*width: 100%;*/
+				}
+				/*日期分享来源*/
+				.source-time {
+					margin: 0 auto;
+					height: 30px;
+					text-align: center;
+					margin-bottom: 20px;
+					position: relative;
+				}
+				.time {
+					margin-right: 10px;
+				}
+				.wechat,
+				.sina {
+					position: absolute;
+					line-height: 2.1;
+				}
+				.wechat {
+					margin-left: 10px;
+				}
+				.sina {
+					margin-left: 46px;
+				}
+				.my-article {
+					font-size: 20px;
+					line-height: 2;
+				}
+			}
+			
+			@media only screen and (min-width: 992px) {
+				.header {
+					background: url(zstp20190823pc-header.png);
+					background-size: 100% 100%;
+				}
+				.d-title {
+					font-size: 24px;
+					margin-top: 30px;
+					margin-bottom: 20px;
+				}
+				.time,
+				.d-time {
+					
+					font-size: 16px;
+				}
+				.source,
+				.d-source {
+					font-size: 16px
+				}
+				.article {
+					font-size: 16px;
+				}
+				/*日期分享来源*/
+				.source-time {
+					margin: 0 auto;
+					height: 30px;
+					text-align: center;
+					margin-bottom: 10px;
+					position: relative;
+				}
+				.time {
+					margin-right: 10px;
+				}
+				.wechat,
+				.sina {
+					position: absolute;
+					line-height: 2.1;
+				}
+				.wechat {
+					margin-left: 10px;
+				}
+				.sina {
+					margin-left: 46px;
+				}
+				.my-article {
+					font-size: 20px;
+					line-height: 2;
+				}
+			}

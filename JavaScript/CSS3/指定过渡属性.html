@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <!-- transition-property
+    none: 没有指定任何样式
+    all: 默认值. 表示指定元素所有支持transition-property属性的样式
+    <single-transition-property>: 指定样式,其等于all或者<IDENT>
+ -->
+
+ <!--
+ 设置一个属性过渡到另一个属性所需的时间,即从就属性过渡到新属性花费的时间
+  transition-duration:<time>[,<time>]
+  <time>为数值,单位s(秒)或ms(毫秒)
+ -->
+
+ <!--
+  transition-timing-function属性指定某种指代过渡"缓动函数"的属性
+  single-transition-timing-function指单一的过渡函数:
+  ease: 默认值,由快到慢, 逐渐变慢
+  linear: 恒速运动
+  ease-in: 速度越来越快,呈一种加速状态,这种效果称为渐显效果
+  ease-out: 速度越来越慢,呈一种减速状态,这种效果称为渐隐效果
+  ease-in-out: 先加速再减速,这种效果称为渐显渐隐效果
+ -->
+
+ <!-- 三次贝塞尔曲线
+  transition-timing-function: cubic-bezier(.85,0,1,1);
+ -->
+
+ <!--
+ transition-timing-function: step()
+   step(<integer>[,[strat|end]]?)
+   第一个参数指定step()函数间隔的数量,此值必须是一个大于0的正整数
+   第二个参数是可选的,是start或end,如果第二个参数忽略,则默认为end值
+ -->
+
+<!--
+  指定过渡延迟时间transition-delay
+ -->
+</body>
+</html>

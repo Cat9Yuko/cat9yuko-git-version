@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app="test">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/angular.js" ></script>
+		<script type="text/javascript">
+			let mod = angular.module("test",[]);
+			//$:依赖 $scope表示angularjs中的数据要依赖scope
+			mod.controller('main',function ($scope,$http,$timeout) {
+				console.log(arguments.length+"个参数")
+			})
+		</script>
+	</head>
+	<body ng-controller="main">
+	</body>
+</html>

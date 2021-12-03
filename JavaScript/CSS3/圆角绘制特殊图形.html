@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>制作特殊图形</title>
+
+  <style type="text/css">
+  div {
+    background: black;
+  }
+    .div1 {
+      /* 绘制圆形
+        1.元素的宽度和高度相同
+        2.圆角的半径为元素宽度或者宽度的一般或者直接设置圆角半径为50% */
+      width: 100px;
+      height: 100px;
+      background-color: orange;
+      border-radius: 50%;
+    }
+
+    .semicircle {
+      background-color: orange;
+      margin: 30px;
+    }
+
+    .top {
+      width: 100px;
+      /* 宽度为高度的2倍 */
+      height: 50px;
+      background-color: orange;
+      border-radius: 50px 50px 0 0;
+    }
+    .right {
+      height: 100px;
+      width: 50px;
+      border-radius: 0 50px 50px 0;
+    }
+    .bottom {
+      width: 100px;
+      height: 50px;
+      border-radius: 0 0 50px 50px;
+    }
+    .left {
+      width: 50px;
+      height: 100px;
+      border-radius: 50px 0 0 50px;
+    }
+    /* 绘制扇形 */
+    /* 遵循三同,一不同原则
+    三同指元素的宽度 高度 圆角半径相同
+    一不同指的是圆角位置的不同
+     */
+    .quarterCircle {
+      background-color: orange;
+      margin: 30px;
+    }
+    .top2 {
+      width: 100px;
+      height: 100px;
+      border-radius: 100px 0 0;
+    }
+    .right2 {
+      width: 100px;
+      height: 100px;
+      border-radius:  0 100px 0 0;
+    }
+    .bottom2 {
+      width: 100px;
+      height: 100px;
+      border-radius: 0 0 100px 0;
+    }
+    .left2 {
+      width: 100px;
+      height: 100px;
+      border-radius: 0 0 0 100px;
+    }
+    /* 椭圆 */
+    .oval {
+      background-color: orange;
+      margin: 30px;
+    }
+    .hov {
+      width: 100px;
+      height: 50px;
+      border-radius: 100px / 50px;
+    }
+    .ver {
+      width: 50px;
+      height: 100px;
+      border-radius: 50px / 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="div1"></div>
+  <div class="semicircle"></div>
+  <div class="top"></div>
+  <div class="right"></div>
+  <div class="bottom"></div>
+  <div class="left"></div>
+  <div class="quarterCircle"></div>
+  <div class="top2"></div>
+  <div class="right2"></div>
+  <div class="bottom2"></div>
+  <div class="left2"></div>
+  <div class="oval"></div>
+  <div class="hov"></div>
+  <div class="ver"></div>
+</body>
+
+</html>

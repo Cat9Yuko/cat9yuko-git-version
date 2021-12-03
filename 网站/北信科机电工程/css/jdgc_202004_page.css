@@ -1,0 +1,517 @@
+.container {
+  padding: 9px 27px 9px 7px;
+  /* min-height: 909px; */
+  overflow: hidden;
+  background-color: #f7f7f7;
+}
+.container .left {
+  width: 217px;
+  box-shadow: 0 0 7px #d4d4d4;
+  background-color: #ffffff;
+}
+.container .right {
+  width: 883px;
+  min-height: 518px;
+  box-shadow: 0 0 7px #d4d4d4;
+  background-color: #ffffff;
+}
+.color_gray {
+  color: #989898 !important;
+}
+.color_blue {
+  color: #1f4f84;
+}
+.tab {
+  width: 221px;
+  height: auto;
+  background: #EBEBEB;
+  font-size: 16px;
+  color: #000000;
+  letter-spacing: 0.94px;
+  line-height: 47px;
+  margin-bottom: 2px;
+  /* text-indent: 15px; */
+  text-align: center;
+}
+.tab a {
+  display: block;
+  border-bottom: 1px solid #ffffff;
+  box-sizing: border-box;
+}
+.tab.act {
+  background: #2891EC;
+  color: #ffffff;
+  /* font-weight: bold; */
+}
+
+.list_con {
+  /* text-indent: 2rem; */
+  font-size: 18px;
+  color: #464646;
+  letter-spacing: 1.06px;
+  text-align: justify;
+}
+.list_con li {
+  position: relative;
+  height: 52px;
+  line-height: 52px;
+  font-size: 14px;
+  color: #000000;
+  letter-spacing: 0.82px;
+  border-bottom: 1px dashed #e5e5e3;
+}
+.list_con li img {
+  display: inline;
+  vertical-align: middle;
+}
+.list_con li .time {
+  float: right;
+  font-size: 14px;
+  color: #000000;
+  letter-spacing: 0.82px;
+}
+
+.fy {
+  margin-top: 47px;
+  font-size: 12px;
+  color: #000000;
+  letter-spacing: 0.7px;
+  text-align: center;
+}
+/* 校长致辞 */
+.f1 {
+  position: relative;
+  z-index: 11;
+  text-indent: 131px;
+  font-size: 29px;
+  color: #000000;
+  letter-spacing: 1.7px;
+}
+.f2 {
+  position: relative;
+  text-indent: 184px;
+  font-size: 21px;
+  color: #1f4f84;
+  letter-spacing: 1.23px;
+  z-index: 11;
+}
+.bggray {
+  position: absolute;
+  width: 192px;
+  height: 79px;
+  background: #e5e5e5;
+  z-index: 10;
+}
+.zc {
+  position: relative;
+}
+.zc img {
+  text-align: left;
+}
+.zc_w {
+  text-indent: 2rem;
+  width: 625px;
+  height: 250px;
+  position: absolute;
+  left: 254px;
+  top: 35px;
+  font-size: 18px;
+  color: #464646;
+  letter-spacing: 1.06px;
+  text-align: justify;
+}
+.lk {
+  height: 41px;
+  line-height: 41px;
+}
+.lk .f1,
+.lk .f2 {
+  float: left;
+  text-indent: 0;
+}
+.lk .f1 {
+  text-indent: 14px;
+}
+.lk .f2 {
+  text-indent: 625px;
+}
+
+/* 学科设置 */
+table.dataintable {
+  margin-top: 10px;
+  border-collapse: collapse;
+  border: 1px solid #aaa;
+  width: 100%;
+}
+
+table.dataintable th {
+  vertical-align: baseline;
+  background-color: #d5d5d5;
+  border: 1px solid #aaa;
+  text-align: center;
+}
+
+table.dataintable td {
+/*  vertical-align: text-top;*/
+  background-color: #efefef;
+  border: 1px solid #aaa;
+  text-align: center;
+}
+
+table.dataintable p {
+  margin: 0 0 2px 0;
+}
+
+table.browsersupport {
+  margin-top: 15px;
+  border-collapse: collapse;
+  width: 70%;
+}
+
+table.browsersupport td {
+  padding: 3px;
+  height: 32px;
+/*  vertical-align: top;*/
+  background: #fff no-repeat center;
+  border: 1px solid #dadada;
+}
+/* --------- */
+.fy input[type="submit"] {
+  width: 43px;
+  border: none;
+  background: #1f4f84;
+  color: #fff;
+}
+
+.cnl {
+  font-size: 14px;
+  color: #000000;
+  letter-spacing: 0.82px;
+  margin-bottom: 17px;
+  font-weight: bold;
+}
+.cnlist {
+  border-bottom: 1px dashed #e5e5e3;
+  margin-bottom: 16px;
+}
+
+.cnlist li {
+  text-indent: 14px;
+  height: 20px;
+  line-height: 19px;
+  font-size: 14px;
+  color: #464646;
+  letter-spacing: 0.82px;
+  margin-bottom: 12px;
+  border-bottom: none;
+}
+
+.mrmy li {
+  color: #9c55dc;
+  white-space: normal;
+  height: auto;
+  line-height: 25px;
+  padding: 5px 0;
+  width: 60%;
+}
+.mrmy {
+  padding: 20px 0 0 20px;
+  width: 834px;
+  height: 231px;
+  background: url(../img/my_202004.jpg) no-repeat;
+  background-size: cover;
+  border-bottom: 1px dashed #e5e5e3;
+}
+
+/* 科研机构 */
+.litem {
+  /* height: 304px; */
+  border: 1px solid #e5e5e5;
+  margin-bottom: 30px;
+  /* padding-top: 22px;
+  padding-left: 29px; */
+  padding: 22px 29px;
+}
+
+.lt {
+  width: 209px;
+  height: auto;
+  float: left;
+}
+.lt img {
+  width: 100%;
+  /* height: 100%; */
+  display: block;
+}
+.rt {
+  float: left;
+  width: 529px;
+  margin-left: 59px;
+}
+
+.r1 {
+  font-size: 21px;
+  color: #1f4f84;
+  letter-spacing: 1.23px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 19px;
+}
+.r2 {
+  font-size: 14px;
+  color: #1f4f84;
+  letter-spacing: 0.82px;
+  text-align: center;
+}
+.r2 span {
+  font-size: 16px;
+  color: #000000;
+  letter-spacing: 0.94px;
+  font-weight: bold;
+}
+
+.r3 {
+  text-indent: 2rem;
+  font-size: 14px;
+  color: #464646;
+  letter-spacing: 0.82px;
+  text-align: justify;
+  line-height: 35px;
+}
+.bor2 {
+  width: 525px;
+  height: 0;
+  border: 1px dashed #e5e5e5;
+  margin-top: 22px;
+  margin-bottom: 16px;
+}
+
+/* 学院领导 */
+.xuld .lt {
+  width: 151px;
+  /* height: 210px; */
+  border: 1px solid #e5e5e5;
+}
+
+.x1 {
+  font-size: 16px;
+  color: #000000;
+  letter-spacing: 0.94px;
+  font-weight: bold;
+  margin-bottom: 23px;
+}
+.x1 span {
+  font-size: 21px;
+  color: #1f4f84;
+  letter-spacing: 1.23px;
+  margin: 0 41px 23px 20px;
+}
+
+.x2 {
+  font-size: 14px;
+  color: #1f4f84;
+  letter-spacing: 0.82px;
+  height: 20px;
+  line-height: 20px;
+}
+.x2 img {
+  display: inline;
+  vertical-align: middle;
+}
+.x2 span:nth-child(1) {
+  margin-left: 20px;
+}
+
+.xuld .bor2 {
+  margin: 19px 0 10px 0;
+}
+.ybl {
+  background: #fcd000;
+  width: 87px;
+  height: 37px;
+  line-height: 37px;
+  text-align: center;
+  font-size: 14px;
+  color: #000000;
+  letter-spacing: 0.82px;
+  margin-left: 20px;
+}
+
+.x3 {
+  text-indent: 2rem;
+  font-size: 14px;
+  color: #464646;
+  letter-spacing: 0.82px;
+  text-align: justify;
+  line-height: 35px;
+}
+
+
+.child_2s {
+	display: none;
+	line-height: 35px;
+	/* text-indent: 15px; */
+  font-weight: normal;
+  background-color: #6CBBFF ;
+  font-size: 14px;
+  color: #FFFFFF;
+  letter-spacing: 0.82px;
+  text-align: center;
+}
+
+.child2.act {
+  background-color: #2891EC;
+}
+
+.child2 a.act {
+  background-color: #2891EC;
+}
+/* .bk{
+	background: inherit;
+	width: 5px;
+	float: left;
+	height: 47px;
+}
+.tab.act .bk {
+	background: #0051A4;
+} */
+.tab.act .child_2s {
+	display: block;
+}
+
+/* .child_3s {
+  text-indent: 30px;
+} */
+
+.child_3s {
+  display: none;
+}
+.child3.act {
+  background-color: #2891EC;
+}
+.child_3s.act {
+  display: block;
+}
+div.list {
+  padding-bottom: 5px;
+}
+div.list .item {
+  position: relative;
+  padding-left: 93px;
+  min-height: 53px;
+  margin-top: 25px;
+}
+.item span {
+  padding: 10px 12px;
+  background: #bb945c;
+  color: #fff;
+  font-family: Arial;
+  position: absolute;
+  left: 0;
+  top: 0;
+  line-height: 1.2;
+  border-radius: 0 0 20px 0;
+}
+.item .h {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #666666;
+}
+.item .p {
+  font-size: 16px;
+  color: #9d9c9c;
+}
+.item .m {
+  font-size: 12px;
+  color: #0051A4;
+}
+.item:first-child {
+  margin-top: 0;
+}
+
+
+.zymc {
+  width: auto;
+  background: #f7f7f7;
+}
+
+/* 师资队伍 */
+.teacher-list {
+  margin-bottom: 10px;
+}
+.teacher-list p{
+  text-align: center;
+  color: #0051A4;
+}
+.name-container div {
+  display: table;
+  width: 100%;
+  line-height: 2;
+}
+.name-container span {
+  display: inline-block;
+  width: 20%;
+  text-align: center;
+  float: left;
+}
+
+
+/* 专题 */
+.l_con li {
+  width: 100%;
+  height: 131px;
+  padding: 12px 0;
+  margin: 0 auto;
+}
+.l_con li:not(:last-child) {
+  border-bottom: 1px dashed #c7c6c6;
+}
+
+.tit4 {
+  width: 720px;
+  padding: 10px;
+}
+.tit4>a {
+  font-size: 24px;
+  color: #666;
+  line-height: 30px;
+  width: 100%;
+}
+.tit4>a span {
+  font-size: 14px;
+  float: right;
+  color: #9c9c9c;
+}
+.tit4 p {
+  margin-top: 10px;
+}
+
+.tit4 p a {
+  font-size: 16px;
+  color: #9d9c9c;
+  line-height: 30px;
+}
+.videos {
+  display: table;
+  width: 100%;
+}
+
+.videos div {
+  display: table-cell;
+  table-layout: fixed;
+  padding: 5px;
+}
+.videos div div {
+  border: 1px dashed #bb945c;
+  width: 306px;
+  text-align: center;
+  font-size: 20px;
+}
+.videos div div:hover {
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid #bb945c;
+  transition: all 0.5s ease-in;
+}
+.videos div video {
+  width: 33.33%;
+}

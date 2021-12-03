@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/angular.js" ></script>
+	</head>
+	<body ng-app="myApp" ng-controller="customerCtrl">
+		<script>
+			var app = angular.module('myApp',[]);
+			app.controller('customerCtrl',function($scope,$location) {
+				$scope.myUrl = $location.absUrl();
+			});
+		</script>
+		该路径:{{myUrl}}
+	</body>
+</html>

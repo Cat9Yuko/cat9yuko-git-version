@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <title>文件资料库</title>
+    <link rel="stylesheet" href="css/search-filelib.css">
+    <link rel="stylesheet" href="css/filelib-global.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="center-block-1200 logo">
+
+            <div class="posre clearfix">
+                <button class="btn-blue" onclick="window.location.href='http:/\/www.mwr.gov.cn'">返回首页</button>
+                <button class="btn-blue sjb-qrcode">手机版</button>
+                <div class="qrcode">
+                    <div id="qrcode" style="padding:10px"></div>
+                </div>
+            </div>
+
+        </div>
+    </header>
+    <main class="main">
+        <div class="center-block-1200 search-box">
+            <h1 class="htitle">文件资料库</h1>
+
+            <div class="search-container-bg">
+                <div class="search-container">
+
+                    <div class="container">
+                        <div class="input">
+                            <div class="picker fl">全部</div>
+                            <ul class="picker-list">
+                                <li th:value="0">全部</li>
+                                <li th:value="1">水利部文件</li>
+                                <li th:value="2">水利部部门文件</li>
+                                <li th:value="3">政策解读</li>
+                            </ul>
+                            <input type="text" placeholder="搜索关键词" autocomplete="off" id="search-input" class="fl">
+
+                            <!-- <div class="hot-list"></div> -->
+                        </div>
+                        <div class="search"></div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="hot-search">
+                <div class="hotlist">
+                    <a href="http://10.1.196.38:8080/search?subCatName=全部&subCatValue=0&searchText=复工复产">复工复产</a>
+                    <a href="http://10.1.196.38:8080/search?subCatName=全部&subCatValue=0&searchText=营商环境">营商环境</a>
+                    <a href="http://10.1.196.38:8080/search?subCatName=全部&subCatValue=0&searchText=“放管服”改革">“放管服”改革</a>
+                    <a href="http://10.1.196.38:8080/search?subCatName=全部&subCatValue=0&searchText=政务服务">政务服务</a>
+                    <a href="http://10.1.196.38:8080/search?subCatName=全部&subCatValue=0&searchText=政务公开">政务公开</a>
+                    <a href="http://10.1.196.38:8080/search?subCatName=全部&subCatValue=0&searchText=河长制湖长制">河长制湖长制</a>
+                    <a href="http://10.1.196.38:8080/search?subCatName=全部&subCatValue=0&searchText=节水供水">节水供水</a>
+                </div>
+            </div>
+
+            <!-- <div class="block-5">
+                <a href=""><span>法律法规</span><span class="filenumber">1075项</span></a>
+                <a href=""><span>部门规章</span><span class="filenumber">1075项</span></a>
+                <a href=""><span>规范性文件</span><span class="filenumber">1075项</span></a>
+                <a href=""><span>权责清单</span><span class="filenumber">1075项</span></a>
+            </div> -->
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="">
+            <tbody>
+                <tr>
+                    <td align="center">
+                        <!--底部 start-->
+                        <table width="1200" border="0" cellspacing="0" cellpadding="0" bgcolor="" align="center"
+                            style="margin:0px auto; border-top:0px solid #cccccc">
+                            <tbody>
+                                <tr>
+                                    <td height="100" align="center" valign="">
+
+                                        <table border="0" cellspacing="0" cellpadding="0" align="center">
+                                            <tbody>
+
+                                                <tr>
+                                                    <td style="font-size:16px; line-height:28px; color:#000000">
+                                                        京ICP备14010557号 ©中华人民共和国水利部版权所有 主办：水利部办公厅 承办：水利部信息中心
+                                                        <br> 水利部总机：010-63202114 网站联系电话：010-63202558
+                                                        <br> 政府网站标识码：bm20000001
+                                                        <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11040102700040"
+                                                            style="text-decoration: none;font-size:16px; color:#000000"
+                                                            target="_blank"><img
+                                                                src="http://www.mwr.gov.cn/images_zt/20190906-guohui.png"
+                                                                border="0" style="display:inline">
+                                                            京公网安备11040102700040号</a>
+                                                    </td>
+                                                    <td style="padding-left:20px; padding-right:10px">
+                                                        <a href="http://bszs.conac.cn/sitename?method=show&amp;id=0726B189C5F03282E053012819ACDB52"
+                                                            target="_blank"><img
+                                                                src="http://www.mwr.gov.cn/images_zt/20190906-dzjg.png"
+                                                                width="44" height="56" border="0"></a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="http://121.43.68.40/exposure/jiucuo.html?site_code=bm20000001&amp;url=http%3A%2F%2Fwww.mwr.gov.cn%2F"
+                                                            target="_blank"><img
+                                                                src="http://www.mwr.gov.cn/images_zt/20190906-jiucuo.png"
+                                                                width="119" height="56" border="0"></a>
+                                                    </td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!--底部 end-->
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </footer>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.qrcode.min.js"></script>
+    <script src="js/search-filelib.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            helangSearch.init();
+        })
+    </script>
+</body>
+
+</html>

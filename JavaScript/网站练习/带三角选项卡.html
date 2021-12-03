@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>老技术新效果</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+				font-size: 12px;
+			}
+			
+			body {
+				padding: 30px;
+			}
+			
+			.tabsBox {
+				width: 400px;
+				margin: 20px auto;
+			}
+			
+			.tabs {
+				height: 20px;
+			}
+			
+			.tabs li {
+				width: 80px;
+				text-align: center;
+				padding-top: 2px;
+				line-height: 18px;
+				float: left;
+				background-color: #ccc;
+				margin-right: 5px;
+				list-style: none;
+				position: relative;
+				cursor: pointer;
+				color: #333;
+			}
+			
+			.tabs li span {
+				display: none;
+			}
+			
+			.tabs .cur {
+				background-color: #f0f0f0;
+			}
+			
+			.tabs .cur span {
+				display: block;
+				width: 1px;
+				height: 1px;
+				border: solid 8px;
+				border-color: #f0f0f0 #fff #fff #fff;
+				position: absolute;
+				top: 20px;
+				left: 32px;
+				overflow: hidden;
+				z-index: -1;
+			}
+			
+			.cons {
+				height: 120px;
+				padding: 8px 12px;
+				overflow: hidden;
+				border: 1px solid #f0f0f0;
+				position: relative;
+				z-index: 1;
+			}
+			
+			.cons ul li {
+				list-style: none;
+				line-height: 20px;
+			}
+			
+			.hidden {
+				display: none;
+			}
+			
+			.block {
+				display: block;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="tabsBox">
+			<ul id="Tabs" class="tabs">
+			
+				<li class="cur">国内新闻<span></span></li>
+			
+				<li>国际新闻<span></span></li>
+			
+				<li>社会新闻<span></span></li>
+			
+				<li>娱乐新闻<span></span></li>
+				</ul>
+		
+			<div id="TabsCon" class="cons">
+			
+				<ul>
+				
+					<li>[讨论] border老技巧书写的倒三角[仅供参考]1 </li>
+				
+					<li>[求助] 关于 Joomla 生成的 CSS</li>
+				
+					<li>[求助] css分隔线用什么好？ </li>
+				
+					<li>[求助] 一行两列显示时内容被截断了，该怎么办？ </li>
+				
+					<li>[讨论] 中英文混排时underline出现的问题</li>
+				
+					<li>[讨论] 关于CSS样式的书写顺序 </li>
+					</ul>
+			
+				<ul>
+				
+					<li>[讨论] border老技巧书写的倒三角[仅供参考] 2</li>
+				
+					<li>[求助] 关于 Joomla 生成的 CSS</li>
+				
+					<li>[求助] css分隔线用什么好？ </li>
+				
+					<li>[求助] 一行两列显示时内容被截断了，该怎么办？ </li>
+				
+					<li>[讨论] 中英文混排时underline出现的问题</li>
+				
+					<li>[讨论] 关于CSS样式的书写顺序 </li>
+					</ul>
+			
+				<ul>
+				
+					<li>[讨论] border老技巧书写的倒三角[仅供参考] 3</li>
+				
+					<li>[求助] 关于 Joomla 生成的 CSS</li>
+				
+					<li>[求助] css分隔线用什么好？ </li>
+				
+					<li>[求助] 一行两列显示时内容被截断了，该怎么办？ </li>
+				
+					<li>[讨论] 中英文混排时underline出现的问题</li>
+				
+					<li>[讨论] 关于CSS样式的书写顺序 </li>
+					</ul>
+			
+				<ul>
+				
+					<li>[讨论] border老技巧书写的倒三角[仅供参考] 4</li>
+				
+					<li>[求助] 关于 Joomla 生成的 CSS</li>
+				
+					<li>[求助] css分隔线用什么好？ </li>
+				
+					<li>[求助] 一行两列显示时内容被截断了，该怎么办？ </li>
+				
+					<li>[讨论] 中英文混排时underline出现的问题</li>
+				
+					<li>[讨论] 关于CSS样式的书写顺序 </li>
+					</ul>
+				</div>
+		</div>
+
+		<script type="text/javascript">
+			var lis = document.getElementById("Tabs").getElementsByTagName("li");
+			var uls = document.getElementById("TabsCon").getElementsByTagName("ul");
+			var order = 0;
+			for(var i = 0; i < lis.length; i++) {  
+				lis[i].value = i;  
+				lis[i].onclick = function() {   
+					ChangeTabs(this.value);  
+				};  
+				uls[i].className = "hidden";
+			}
+			lis[order].className = "cur";
+			uls[order].className = "block";
+
+			function ChangeTabs(nowTab) {  
+				lis[order].className = "";  
+				uls[order].className = "hidden";  
+				order = nowTab;
+				lis[nowTab].className = "cur";  
+				uls[nowTab].className = "block";
+			}
+		</script>
+	</body>
+
+</html>

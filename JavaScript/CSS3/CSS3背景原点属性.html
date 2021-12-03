@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS3背景原点属性(origin)</title>
+  <style type="text/css">
+    div {
+      width: 300px;
+      height: 200px;
+      border: 20px dashed rgba(0, 0, 0, 0.3);
+      background: orange url(images/bg.jpg) no-repeat left top;
+      padding: 20px;
+      margin: 30px;
+    }
+    .padding-box {
+      /* padding-box(padding) 默认值,
+      决定background-position起始位置从padding的外边缘(border的内边缘)开始显示背景图片 */
+      background-origin: padding-box;
+    }
+    .border-box {
+        /* border-box(border) 从border的外边缘开始显示背景图片 */
+      background-origin: border-box;
+    }
+    .content-box {
+        /* content-box(content) 从content的外边缘(padding的内边缘)开始显示背景图片 */
+      background-origin: content-box;
+      /* 当background-attachment为fixed时, background-origin将不起任何作用 */
+      background-attachment: fixed;
+    }
+  </style>
+</head>
+<body>
+<div class="padding-box"></div>
+<div class="border-box"></div>
+<div class="content-box"></div>
+</body>
+</html>

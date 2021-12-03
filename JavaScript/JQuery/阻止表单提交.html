@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-3.4.1.js" ></script>
+	</head>
+	<body>
+		<!--阻止默认行为
+			preventDefault()方法阻止元素的默认行为
+		-->
+		<script type="text/javascript">
+			
+			$(function () {
+				$("#sub").bind("click",function (event) {
+					var username = $("#username").val();//获取元素的值
+					if(username ==""){//判断值是否为空
+						$("#msg").html("<p>文本框的值不能为空.</p>");//提示信息
+						event.preventDefault();//阻止默认行为
+//						如果同时对事件对象停止冒泡和默认行为,可以在事件处理函数中返回false
+						return false;
+					}
+				})
+			})
+		</script>
+		
+		<form action="test.html">
+			用户:<input type="text" id="username" />
+			<input type="submit" value="提交" id="sub"/>
+		</form>
+		<div id="msg">
+			
+		</div>
+	</body>
+</html>

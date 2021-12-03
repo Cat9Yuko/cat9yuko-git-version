@@ -1,0 +1,44 @@
+
+.fy {
+	width: 580px;
+	height: 30px;
+	margin: 20px auto 0px;
+	font-size: 12px;
+}
+.fy .pages a {
+	color: #333;
+	padding: 3px 8px;
+	border: 1px solid #d7d7d7;
+	margin-right: 5px;
+*display:inline-block;
+}
+.fy .pages a.on, .fy .pages a:hover {
+	background: #3582c4;
+	color: #fff;
+}
+.fy a {
+	color: #333;
+	padding: 3px 8px;
+	text-decoration: none;
+}
+.fy a:hover {
+	color: #3582c4;
+}
+.fy span, .fy button {
+	margin: 0 3px;
+}
+.fy button {
+	background: #3582c4;
+	border: 1px solid #d7d7d7;
+	padding: 3px 12px;
+*padding:2px 12px 0;
+	_padding: 6px 12px 0;
+	color: #fff;
+}
+.fy input {
+	width: 36px;
+	padding: 3px 0;
+	border: 1px solid #333;
+	text-indent: 4px;
+	margin: 0 4px;
+}

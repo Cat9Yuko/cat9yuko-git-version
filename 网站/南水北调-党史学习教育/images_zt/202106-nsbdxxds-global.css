@@ -1,0 +1,242 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "微软雅黑";
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+li {
+  list-style: none;
+}
+img {
+  border: none;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clearfix {
+  *zoom: 1;
+}
+.clearfix::after {
+  content: " ";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+.center-block-1280 {
+  width: 1280px;
+  margin: 0 auto;
+}
+.w645 {
+  width: 645px;
+}
+.w605 {
+  width: 605px;
+}
+section + section {
+  margin-top: 45px;
+}
+/* user style */
+.banner {
+  height: 601px;
+  background: url(../images_zt/202106-nsbdxxds-banner.jpg) center center
+    no-repeat;
+  background-size: cover;
+}
+.nav {
+  background: #910205;
+  color: #fde905;
+}
+.nav ul {
+  display: table;
+}
+.nav li {
+  display: table-cell;
+  table-layout: fixed;
+  width: 1%;
+  text-align: center;
+  font-size: 25px;
+  line-height: 50px;
+}
+.main {
+  background: url(../images_zt/202106-nsbdxxds-mainbg.jpg) center center
+    repeat-y;
+  background-size: cover;
+  padding: 45px 0;
+  box-sizing: border-box;
+}
+
+/* carousel */
+.slick-mod,
+.slick-mod2 {
+  width: 606px;
+  height: 415px;
+}
+.slick-item {
+  position: relative;
+}
+.slick-item img {
+  width: 100%;
+}
+.tit1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 16px;
+  color: #ffffff;
+  line-height: 40px;
+  text-indent: 2rem;
+  background: rgba(0, 0, 0, 0.5);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.slick-mod .slick-dots,
+.slick-mod2 .slick-dots {
+  position: absolute;
+  right: 10px;
+  bottom: 15px;
+}
+.slick-mod2 .slick-dots {
+  bottom: 36px;
+}
+
+.slick-mod .slick-arrow,
+.slick-mod2 .slick-arrow {
+  width: 33px;
+  height: 57px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 3;
+  cursor: pointer;
+}
+/* .slick-mod .slick-next {
+  right: 0;
+  background: url(../images_zt/wlaq-202009-arrowrigh.png) no-repeat center;
+}
+.slick-mod .slick-prev {
+  left: 0;
+  background: url(../images_zt/wlaq-202009-arrowlef.png) no-repeat center;
+}
+
+.slick-mod2 .slick-next {
+  right: 0;
+  background: url(../images/wlaq-202009-arrowrigh.png) no-repeat center;
+}
+.slick-mod2 .slick-prev {
+  left: 0;
+  background: url(../images/wlaq-202009-arrowlef.png) no-repeat center;
+} */
+.slick-mod .slick-dots li,
+.slick-mod2 .slick-dots li {
+  width: 14px;
+  height: 14px;
+  background: #ffffff;
+  border-radius: 50%;
+  margin: 0 5px 0 0;
+}
+.slick-mod .slick-dots li.slick-active,
+.slick-mod2 .slick-dots li.slick-active {
+  width: 14px;
+  height: 14px;
+  background: #e50012;
+  border-radius: 50%;
+}
+/* --- */
+
+.starchnl {
+  /* width: 138px; */
+  height: 60px;
+  background: url(../images_zt/202106-nsbdxxds-chnlbgstar.png) left 0 top 0
+    no-repeat;
+  /* background-size: cover; */
+}
+.sl1 {
+  color: #870204;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 17px;
+  margin-left: 49px;
+  height: 25px;
+  border-right: 1px solid #870204;
+  padding-right: 24px;
+}
+.sl2 {
+  font-size: 14px;
+  color: #870204;
+  font-weight: bold;
+  margin-top: 25px;
+  margin-left: 10px;
+}
+
+.list {
+    
+}
+.list li {
+  font-size: 18px;
+  line-height: 50px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.list li::before {
+  content: " ";
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #000000;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.link + .link {
+  margin-left: 48px;
+}
+
+.link img {
+  box-shadow: 0 0 10px #cccccc;
+}
+
+.chnlline .t {
+  font-size: 26px;
+  color: #7f0202;
+  font-weight: bold;
+  line-height: 40px;
+}
+.p452g {
+  display: inline-block;
+  height: 3px;
+  width: 452px;
+  background: #ed7423;
+  margin: 0 10px 4px 17px;
+}
+.p452g.act {
+  width: 1091px;
+}
+.swiper-container {
+  margin-top: 30px;
+}
+
+.footer {
+  background: #510103;
+  text-align: center;
+  color: #ffffff;
+  padding: 30px 0;
+}
+.footer p {
+  line-height: 32px;
+}
+.boxs {
+  box-shadow: 0px 0px 3px 1px #ccc;
+}

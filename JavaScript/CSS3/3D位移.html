@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style media="screen">
+      .stage {
+        width: 300px;
+        height: 300px;
+        float: left;
+        margin: 15px;
+        position: relative;
+        background: url(images/bg.jpg) no-repeat center center;
+        background-size: 100% 100%;
+        /* 设置元素被查看位置的视图 */
+        perspective: 1200px;
+        -webkit-perspective: 1200px;/* Chrome和Safari */
+      }
+      .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        /* 使被转换的子元素保留其3D转换 */
+        transform-style: preserve-3d;
+        -webkit-transform-style: preserve-3d;/* Safari 和 Chrome */
+      }
+      .container img {
+        position: absolute;
+        margin-left: -35px;
+        margin-top: -50px;
+      }
+      .container img:nth-child(1) {
+        z-index: 1;
+        opacity: .6;
+      }
+      .s1 img:nth-child(2) {
+        z-index: 2;
+        transform: translate3d(30px, 30px, 200px);
+      }
+      
+  </style>
+</head>
+<body>
+<!-- translate3d(tx,ty,tz)
+tx: 代表横向坐标位移向量的长度
+ty: 代表纵向坐标位移向量的长度
+tz: 代表z轴位移向量的长度(不能取百分比值)
+-->
+
+<div class="stage s1">
+  <div class="container">
+  <img src="images/timg.png" alt="" width="70px" height="100px">
+  <img src="images/timg.png" alt="" width="70px" height="100px">
+  </div>
+</div>
+</body>
+</html>

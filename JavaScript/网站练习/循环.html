@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+
+		<div class="news swiper-container fl">
+
+			<div class="swiper-wrapper">
+					<a class="swiper-slide" href="<TRS_DOCUMENT FIELD='_RECURL'/>" style="background: url('<TRS_APPENDIX field='_RECURL' mode='PIC' index='0' target='_blank' upload='TRUE'/>') 0 0/100% 100%">
+						<h3 class="title"><TRS_DOCUMENT AUTOLINK="FALSE" AUTOFORMAT="FALSE" CODEFILTERED="true" NUM="50">标题</TRS_DOCUMENT></h3>
+					</a>
+					<a class="swiper-slide" href="<TRS_DOCUMENT FIELD='_RECURL'/>" style="background: url('<TRS_APPENDIX field='_RECURL' mode='PIC' index='0' target='_blank' upload='TRUE'/>') 0 0/100% 100%">
+						<h3 class="title"><TRS_DOCUMENT AUTOLINK="FALSE" AUTOFORMAT="FALSE" CODEFILTERED="true" NUM="50">标题</TRS_DOCUMENT></h3>
+					</a>
+					<a class="swiper-slide" href="<TRS_DOCUMENT FIELD='_RECURL'/>" style="background: url('<TRS_APPENDIX field='_RECURL' mode='PIC' index='0' target='_blank' upload='TRUE'/>') 0 0/100% 100%">
+						<h3 class="title"><TRS_DOCUMENT AUTOLINK="FALSE" AUTOFORMAT="FALSE" CODEFILTERED="true" NUM="50">标题</TRS_DOCUMENT></h3>
+					</a>
+			</div>
+			<div class="pagination"></div>
+
+		</div>
+		
+		<script type="text/javascript">
+			var $num = $(".news a").length;
+			console.log($num);
+		</script>
+	</body>
+
+</html>

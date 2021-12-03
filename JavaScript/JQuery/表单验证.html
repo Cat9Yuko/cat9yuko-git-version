@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-3.4.1.js" ></script>
+		
+		<style type="text/css">
+			.high{
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<form action="" method="post">
+			<div class="int">
+				<label for="usernaame">用户名:</label>
+				<input type="text" id="username" class="required" />
+			</div>
+			<div class="int">
+				<label for="email">邮箱:</label>
+				<input type="text" id="email" class="required"/>
+			</div>
+			<div class="int">
+				<label for="personinfo">个人资料:</label>
+				<input type="text" id="personinfo" />
+			</div>
+			<div class="sub">
+				<input type="submit" value="提交" id="send" /><input type="reset" id="res"/>
+			</div>
+		</form>
+		
+		<script type="text/javascript">
+			$(function () {
+				$("form :input.required").each(function () {
+				var $required = $("<strong class='high'> *</strong>");//创建元素
+				$(this).parent().append($required);//将它追加到文档中
+			})
+				//验证表单
+				/*
+				 1.判断当前失去焦点的元素是用户名还是邮箱,然后分别处理
+				 2.将提醒信息追加到当前父元素的最后
+				 * 
+				 * */
+				
+				$("form :input").blur(function () {//为表单元素添加失去焦点事件
+					
+					var $parent = $(this).parent();
+					//删除以前的提示元素
+					$parent.find(".formtips").remove();
+					//验证用户
+					if($(this).is("#username")){
+						if(this.value == ""||this.value.length < 6){
+							var errorMsg = "请输入至少6位的用户名.";
+							$parent.append('<span class="formtips onError">'+errorMsg+'</span>')
+						}else{
+							var okMsg = "输入正确";
+							$parent.append('<span class="formtips onSuccess">'+okMsg+'</span>')
+						}
+					}
+					
+					//验证邮箱
+					if($(this).is("#email")){
+						if(this.value ==""||(this.value!="" && !/.+@.+\.[a-zA-Z]{2,4}$/.test(this.value))){
+							var errorMsg = "请输入正确的E-Mail地址.";
+							$parent.append('<span class="formtips onError">'+errorMsg+'</span>');
+						}else{
+							var okMsg = "输入正确";
+							$parent.append('<span class="formtips onSuccess">'+okMsg+'</span>')
+						}
+					}
+					
+				}).keyup(function () {
+					
+					//trigger("blur")不仅会触发为元素绑定的blur事件,也会触发浏览器默认的blur事件
+					//triggerHandler("blur")只会茶法为元素绑定的blur事件,而不触发浏览器默认的blur事件
+					$(this).triggerHandler('blur');
+				}).focus(function () {
+					$(this).triggerHandler('blur');
+				});
+				//提交验证
+				$("#send").click(function () {
+					$("form .required:input").trigger('blur');
+					var numError = $("form .onError").length;
+					if(numError){
+						return false;
+					}
+					alert("注册成功,密码已发送到你的邮箱,请查收.");
+				});
+				
+			});
+		</script>
+	</body>
+</html>

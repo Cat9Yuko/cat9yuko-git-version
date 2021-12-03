@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <link rel="stylesheet" href="css/202006_mobileblobal.css">
+    <title>档案知识网络答题</title>
+    <style>
+        body {
+            height: 100vh;
+            background: #24add7;
+            
+        }
+        .app-btn {
+        	width: 93px;
+        	height: 85px;
+        	background: url(img/202006dazsdt_mbtn.png);
+        	background-size: cover;
+        	text-align: center;
+        	float: left;
+        } 
+        .app-btn a{
+        	display: block;
+        	width: 100%;
+        	height: 40px;
+        	border: none;
+        	line-height: 40px;
+        	text-decoration: none;color: inherit;
+        }
+        .btn_g {
+        	position: relative;
+        	width: 250px;
+        	margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="index">
+        <div class="bt">
+            <img src="img/202006-mobile-score.jpg" width="100%" height="100%" />
+            <div class="score_bg">
+                <p>您的得分是 85 分，请下载证书，<br>谢谢您的参与。</p>
+            </div>
+        </div>
+        <div class="box"><!--<img src="img/202006dazsdt_scorebtn1.png" width="100%" />-->
+            <div class="btn_g">
+                <div class="app-btn"><a href="">下载证书</a></div>
+                <div class="app-btn" style="float: right;"><a href="">下载证书</a></div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-1.9.1.js"></script>
+    <script>
+        $(".closepage").click(function() {
+					window.opener = null;
+					window.open('', '_self');
+					window.close();
+				})
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<link rel="stylesheet" href="css/weui.css">
+		<link rel="stylesheet" href="css/jquery-weui.css">
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
+		<link rel="stylesheet" href="css/my_style.css">
+	</head>
+
+	<body ontouchstart>
+
+		<div class="weui-tab max_width">
+			<div class="weui-tab__bd">
+				<!--周工作安排-->
+				
+
+				<!--我的-->
+				<div id="mine" class="weui-tab__bd-item weui-tab__bd-item--active">
+					<!--校长我的-->
+					<div class="weui-flex">
+						<div class="weui-flex__item sh_padd">
+							<div class="weui-flex">
+								<div class=" weui-flex__item color_div"></div>
+							</div>
+							<form  method="post" action="xiaozhang.html">
+							<div class="weui-flex">
+								<div class="weui-flex__item myposr">
+									<div class="riqi">日期</div>
+
+									<div class="switch_btn">
+										<span class="switch_btn_active">上下午</span>
+										<span>全天</span>
+									</div>
+								</div>
+							</div>
+							<div class="weui-flex">
+								<div class="riqi_val">2019.11.04 </div>
+							</div>
+							
+							<div class="weui-flex input_container">
+								<div class="weui-flex__item">
+									<div class="weui-flex inc_top ">上午  08:00-12:30</div>									
+									<div class="weui-flex inc_bom">
+										<input type="text" placeholder="在此录入内容"/>
+									</div>									
+								</div>
+							</div>
+							<div class="weui-flex input_container">
+								<div class="weui-flex__item">
+									<div class="weui-flex inc_top ">下午  08:00-12:30</div>									
+									<div class="weui-flex inc_bom">
+										<input type="text" placeholder="在此录入内容"/>
+									</div>									
+								</div>
+							</div>
+							
+							<div class="weui-flex input_container2">
+								<div class="weui-flex__item">
+									<div class="weui-flex inc_top ">全天  08:00-17:30</div>									
+									<div class="weui-flex inc_bom">
+										<textarea rows="10" cols="30" placeholder="在此录入内容"></textarea>
+									</div>									
+								</div>
+							</div>
+							
+							<div class="weui-flex">
+								<div class="weui-flex__item" style="position: relative;">
+									<button class="h_master_btn" type="button">
+										提交
+									</button>
+								</div>
+							</div>
+							</form>
+						</div>
+					</div>
+
+					<!--校长我的end-->
+				</div>
+			</div>
+
+			<div class="weui-tabbar bottom_bar">
+				<!--a标签跳转到页面-->
+				<a href="xiaozhang_week.html" class="weui-tabbar__item week_work">
+					<div class="weui-tabbar__icon">
+						<img class="ww_img" src="images/weekwork.png" alt="">
+					</div>
+					<p class="weui-tabbar__label">周工作安排</p>
+				</a>
+				<a href="#mine" class="weui-tabbar__item mine weui-bar__item--on">
+					<!--隐藏添加 is_hidden -->
+					<div class="">
+						<div class="weui-tabbar__icon">
+							<img class="mi_img" src="images/mine_active.png" alt="">
+						</div>
+						<p class="weui-tabbar__label">我的</p>
+					</div>
+				</a>
+			</div>
+		</div>
+
+		<script src="js/jquery-2.1.4.js"></script>
+		<script src="js/fastclick.js"></script>
+		<script>
+			$(function() {
+				FastClick.attach(document.body);
+			});
+		</script>
+		<script src="js/jquery-weui.js"></script>
+		<script src="js/myJs.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>

@@ -1,0 +1,255 @@
+
+.answer-container {
+	width: 100%;
+	
+}
+
+.hei {
+	height: 37px;
+}
+
+.answer-q {
+	border-radius: 10px;
+	margin: 0 auto;
+	width: 1200px;
+	background: #fafafa;
+	font-size: 16px;
+}
+
+.wenzi-container {
+	position: relative;
+	min-height: 554px;
+	padding-top: 30px;
+	padding-left: 45px;
+	padding-right: 45px;
+	padding-bottom: 15px;
+}
+
+.xian {
+	height: 0;
+	width: 100%;
+	border: 1px solid lightgray;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.xian2{
+	height: 1px;
+	/*width: 90%;*/
+	margin: 0 auto;
+	padding-bottom: 5px;
+	border-top: 1px solid lightgray;
+}
+.score-gt {
+	background: url(register-bg.png) no-repeat center center;
+	background-size: cover;
+	height: 696px;
+}
+
+.score-container {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.s-top {
+	width: 100%;
+	height: 153px;
+	text-align: center;
+}
+
+.s-top p {
+	padding-top: 40px;
+	font-size: 20px;
+	color: #FFFFFF;
+}
+
+.s-top p span {
+	font-size: 40px;
+}
+
+.s-midd {
+	height: 405px;
+	width: 1214px;
+	background: url(20190806-score-bg.png) no-repeat center center;
+	background-size: cover;
+}
+
+.s-midd p {
+	color: #FFFFFF;
+	font-size: 30px;
+	width: 740px;
+	padding-top: 120px;
+	padding-left: 48px;
+}
+
+.hei2 {
+	height: 73px;
+}
+
+.s-btom {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+input {
+	border: 1px solid lightgray;
+}
+
+#province,
+#city {
+	width: 310px;
+	height: 34px;
+}
+
+.s-center {
+	padding-top: 29px;
+	width: 435px;
+	margin: auto;
+}
+
+.rtavg {
+	border-radius: 10px;
+	width: 162px;
+	height: 51px;
+	font-size: 24px;
+	text-align: center;
+	line-height: 2;
+	color: #014b7f;
+	background-color: #4accfc;
+	position: relative;
+	float: left;
+	cursor: pointer;
+	border: none;
+}
+
+.c-title {
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.source-time {
+	margin: 0 auto;
+	height: 30px;
+	text-align: center;
+	margin-bottom: 20px;
+	position: relative;
+}
+
+.time {
+	margin-right: 10px;
+}
+
+.wechat,
+.sina {
+	position: absolute;
+}
+
+.wechat {
+	margin-left: 10px;
+}
+.sina {
+	margin-left: 46px;
+}
+.my-article {
+	font-size: 20px;
+	line-height: 2;
+}
+
+.i-width {
+	width: 10px
+}
+
+.weizhi a {
+	font-size: 18px;
+	text-decoration: none;
+	color: #000;
+}
+
+.chanl-title {
+	text-align: center;
+	width: 150px;
+	font-size: 30px;
+	border-bottom: 4px solid #078FC7;
+	margin-bottom: 10px;
+}
+
+.chanl-title a {
+	color: #000000;
+	text-decoration: none;
+}
+
+.title-list li {
+	margin-left: 25px;
+	margin-right: 25px;
+	text-indent: 1em;
+	line-height: 2;
+	/*width: 100%;*/
+	white-space: nowrap;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-bottom: #787063 1px dashed;
+}
+
+.title-list span {
+	float: right;
+}
+
+.title-list li a {
+	color: #000000;
+	text-decoration: none;
+	font-size: 20px;
+	overflow: hidden;
+}
+
+/*分页*/
+.fy {
+	width: 580px;
+	height: 30px;
+	margin: 10px auto 0px;
+	font-size: 12px;
+}
+
+.fy .pages a {
+	color: #333;
+	padding: 3px 8px;
+	border: 1px solid #d7d7d7;
+	margin-right: 5px;
+	*display: inline-block;
+}
+
+.fy .pages a.on,
+.fy .pages a:hover {
+	background: #3582c4;
+	color: #fff;
+}
+
+.fy a {
+	color: #333;
+	padding: 3px 8px;
+	text-decoration: none;
+}
+
+.fy a:hover {
+	color: #3582c4;
+}
+
+.fy span,
+.fy button {
+	margin: 0 3px;
+}
+
+.fy button {
+	background: #3582c4;
+	border: 1px solid #d7d7d7;
+	padding: 3px 12px;
+	*padding: 2px 12px 0;
+	_padding: 6px 12px 0;
+	color: #fff;
+}
+
+.fy input {
+	width: 36px;
+	padding: 3px 0;
+	border: 1px solid #333;
+	text-indent: 4px;
+	margin: 0 4px;
+}

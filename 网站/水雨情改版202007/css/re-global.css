@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
+.wraper {
+    background: url(../img/202007-bg.jpg) top center no-repeat;
+}
+
+.top {
+    height: 200px;
+    margin: 0 auto;
+    width: 1200px;
+    position: relative;
+}
+
+.form {
+    position: absolute;
+    top: 145px;
+    right: 30px;
+    min-width: 400px;
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    font-size: 20px;
+    font-family: "Adobe Fan Heiti Std B";
+    background-color: #0166b0;
+}
+
+.form span, .form a {
+    padding: 0 20px;
+}
+
+.form input {
+    width: 196px;
+    height: 34px;
+    line-height: 40px;
+    font-size: 20px;
+    background-color: #cff5ff;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    vertical-align: bottom;
+}
+
+.main {
+    margin: 0 auto;
+    padding: 25px 30px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    width: 1200px;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.8);
+
+    /* height: 1660px; */
+}
+
+.main .nav {
+    margin-left: -42px;
+    margin-bottom: 20px;
+    width: 1225px;
+    height: 71px;
+    line-height: 52px;
+    color: white;
+    font-size: 22px;
+    background: url(../img/202007-navbg.png) no-repeat top center;
+}
+
+.main .title {
+    margin-bottom: 30px;
+}
+.main .title h1 {
+    color: #0066b0;
+    font-size: 48px;
+    text-align: center;
+}
+
+.nav-item {
+    width: 480px;
+    margin: 0 auto;
+    display: table;
+}
+.nav-item .nav-child {
+    display: table-cell;
+    table-layout: fixed;
+    text-align: center;
+    width: 33.33%;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .main,.main .nav,.top {
+        width: 100%;
+    }
+}

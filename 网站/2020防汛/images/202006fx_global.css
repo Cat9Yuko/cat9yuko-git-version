@@ -1,0 +1,205 @@
+/* 通用样式 */
+*{margin: 0;padding: 0;font-family: "微软雅黑";}
+img { border: none;}
+a {text-decoration: none;color: inherit;}
+li {list-style: none;}
+.clearfix::after {content: "";display: block;height: 0;clear: both;visibility: hidden;}
+.clearfix {*zoom: 1;}
+.center_block {width: 1172px;margin: 0 auto;}
+.fl {float: left;}
+.fr {float: right;}
+/* 自定义样式 */
+.banner {
+    width: 100%;
+    height: 496px;
+    background: url(../images/202006fx_banner.jpg) center center;
+    background-size: cover;
+}
+.nav {
+    height: 66px;
+    background: #d4d9de;
+    margin-top: 4px;
+    border: 1px solid #c1c1c1;
+}
+.nav li {
+    height: 40px;
+    border-radius: 5px;
+    background: #0d72ab;
+    color: #ffffff;
+    font-size: 16.57px;
+    float: left;
+    border: 1px solid #03449a;
+    /* box-sizing: border-box; */
+    line-height: 40px;
+}
+.nav li:not(:last-child) {
+    margin-right: 18px;
+}
+.nav li a {
+    display: block;
+    height: 100%;
+    /* width: 100%; */
+    padding: 0 45px;
+}
+.nav .center {
+    width: 1280px;
+    margin: 10px auto;
+}
+.nav li.act {
+    background: url(../images/202006fx_navbg.png) center center;
+    background-size: cover;
+}
+
+.section1 {
+    margin-top: 34px;
+    margin-bottom: 34px;
+}
+.section2 {
+    margin-bottom: 24px;
+}
+.section3,.section4 {
+    margin-bottom: 40px;
+}
+.ywdt {
+    margin-left: 45px;
+    width: 450px;
+}
+.ywdt p {
+    margin: 10px 0;
+}
+.ywdt p a{
+    font-size: 25px;
+    color: #0c4c94;
+    font-weight: bold;
+}
+.list li{
+    font-size: 18px;
+    line-height: 47px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/* slick */
+.slick-mod {
+    width: 643px;
+    height: 432px;
+  }
+  .slick-item {
+    position: relative;
+  }
+  .slick-item img {
+    width: 100%;
+    height: 432px;
+  }
+  
+  .tit {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 18px;
+    color: #ffffff;
+    height: 45px;
+    line-height: 45px;
+    text-indent: 20px;
+    background: #b8b8b9;
+  }
+  
+  .slick-mod .slick-dots,
+  .slick-mod2 .slick-dots {
+    position: absolute;
+    right: 10px;
+    bottom: 15px;
+  }
+  .slick-mod2 .slick-dots {
+    bottom: 36px;
+  }
+  
+  .slick-mod .slick-arrow,
+  .slick-mod2 .slick-arrow {
+    width: 28px;
+    height: 51px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 3;
+    cursor: pointer;
+  }
+  /* .slick-mod2 .slick-next {
+    right: 9px;
+    background: url(../images/dzxsb_202005next.png) no-repeat center;
+  }
+  .slick-mod2 .slick-prev {
+    left: 9px;
+    background: url(../images/dzxsb_202005prev.png) no-repeat center;
+  } */
+  .slick-mod .slick-dots li,
+  .slick-mod2 .slick-dots li {
+    width: 14px;
+    height: 14px;
+    background: #ffffff;
+    border-radius: 50%;
+    margin: 0 5px 0 0;
+    border: 1px solid #ffffff;
+  }
+  .slick-mod .slick-dots li.slick-active,
+  .slick-mod2 .slick-dots li.slick-active {
+    width: 14px;
+    height: 14px;
+    background: #0d72ab;
+    border-radius: 50%;
+  }
+  /* slick end */
+
+
+  .syqbg {
+      width: 1172px;
+      height: 185px;
+      background: url(../images/202006fx_syqbg.png);
+      background-size: cover;
+      margin: 0 auto;
+  }
+
+.syqbg .p{
+    text-align: center;
+    font-size: 20.83px;
+    color: #ffffff;
+    line-height: 44px;
+    font-weight: bold;
+}
+.syqbg .word{
+    width: 1120px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 30px;
+    /* padding: 15px 0 0 0; */
+    margin-top: 15px;
+    text-indent: 2rem;
+    height: 96px;
+    overflow-y: scroll;
+}
+.chnlbg {
+    width: 561px;
+    height: 49px;
+    background: url(./202006fx_chnlbg.png);
+    background-size: cover;
+}
+.chnlbg {
+    font-size: 20px;
+    font-weight: bold;
+}
+.chnlbg span {
+    font-size: 28px;
+    margin-left: 69px;
+    margin-right: 5px;
+}
+.more {
+    font-size: 14px;
+    font-weight: normal;
+    margin-top: 15px;
+    margin-right: 20px;
+}
+.list_container {
+    width: 561px;
+}

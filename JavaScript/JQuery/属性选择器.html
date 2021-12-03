@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-3.4.1.js" ></script>
+		<style type="text/css">
+			div{
+				border: 1px solid black;
+				height: 100px;
+				width: 100px;
+				float: left;
+				margin: 5px;
+			}
+		</style>
+	</head>
+	<body>
+		<div title="en">title为en的div元素</div>
+		<div title="en-UK">title为en-UK</div>
+		<div title="english">title为english的</div>
+		<div title="en uk">title为en uk的div</div>
+		<div title="uken">title为uken的div元素</div>
+		
+		<script type="text/javascript">
+			$('div[title^="en"]').css("background","#bbffaa");//改变属性title值以en开始的div元素的背景色
+			$('div[title*="en"]').css("background","#AAAAAA");//改变属性title值含有en的div元素的背景色
+			$('div[title|="en"]').css("background","aqua");//改变睡醒title 等于en或以en为前缀或者带-的元素的背景色
+			$('div[title~="en"]').css("background","blanchedalmond");//改变title属性用空格分隔的值中包含字符uk的元素的背景色
+			
+		</script>
+	</body>
+</html>

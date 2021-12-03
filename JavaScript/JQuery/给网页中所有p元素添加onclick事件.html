@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-3.4.1.js" ></script>
+	</head>
+	<body>
+		
+		<p>测试1</p>
+		<p>测试2</p>
+		
+		<script type="text/javascript">
+			/*
+			 1)获取所有的p元素
+			 2)对p元素进行循环(因为获取的是数组对象)
+			 3)给每个p元素添加事件
+			 * */
+			
+			var items = document.getElementsByTagName("p");
+			for (var i=0;i<items.length;i++) {
+				items[i].onclick = function () {
+					alert("p");
+				}
+			}
+		</script>
+	</body>
+</html>

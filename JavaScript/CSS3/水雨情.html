@@ -1,0 +1,237 @@
+
+    $("#hdcontent").height($(document).height()-280);
+    $(document).ready(function(){
+        var flag = false;
+        $('.toggle').on('click', function(){
+            var heightT = $('#hdcontent_info').height()+'px';
+            $('#hdcontent_info').slideToggle();
+            if(flag){
+                $(this).animate({bottom: heightT});
+                $(this).text("隐藏列表");
+                $(this).addClass("toggle-block");
+            }else{
+                $(this).animate({bottom: '0px'});
+                $(this).text("展开列表详情");
+                $(this).removeClass("toggle-block");
+            }
+            flag = !flag;
+        })
+    });
+    var info_text= {};
+    var ftArr= [];
+    var tempTF = {id: '', line: '', point: []};
+    var linePoint = [];
+    var backColor = ["#FF6600","#FF0000","#FF3300","#FF9900","#99FF00","#33FF66","#66FF33","#CCFF99","#FF6633","#FFFF00"]
+    // 地图描点
+    var map;
+    var zoom = 4;
+    //初始化地图对象
+    map = new T.Map("hdcontent");
+    //设置显示地图的中心点和级别
+    map.centerAndZoom(new T.LngLat(133.70, 30.03), zoom);
+    loadData();
+    var definedOverlay = T.Overlay.extend({
+        initialize: function (lnglat, text2, options) {
+            this.lnglat = lnglat;
+            this.setOptions({});
+            this._overText = text2;
+            this._index = options;
+            pointObj = this;
+        },
+
+        onAdd: function (map) {
+            this.map = map;
+            var div = $('<div class="tf_points"></div>');
+
+            div.css({backgroundColor: backColor[this._index]});
+            var div_child = div.children();
+            this._div = div[0];
+            var that = this;
+            div.mouseenter(function(){
+                div.css({zIndex: '201'});
+                div.append(that._overText);
+                div.children().css({ backgroundColor: '#92c7fb',border: '1px solid rgba(255,255,255,0.8)',width:'140px',
+                    height: '205px',
+                    borderRadius: '0',
+                    lineHeight: '18px',
+                    zIndex: '111',
+                    opacity: 0.95
+                });
+            });
+            div.mouseleave(function(){
+                div.css({zIndex: '200'});
+                div.empty();
+            });
+
+            map.getPanes().overlayPane.appendChild(this._div);
+            this.update(this.lnglat);
+        },
+
+        onRemove: function () {
+            var parent = this.div.parentNode;
+            if (parent) {
+                parent.removeChild(this.div);
+                this.map = null;
+                this.div = null;
+            }
+        },
+
+        setLnglat: function (lnglat) {
+            this.lnglat = lnglat;
+            this.update();
+        },
+        getLnglat: function () {
+            return this.lnglat;
+        },
+        setPos: function (pos) {
+            this.lnglat = this.map.layerPointToLngLat(pos);
+            this.update();
+        },
+        /**
+         * 更新位置
+         */
+        update: function () {
+            var pos = this.map.lngLatToLayerPoint(this.lnglat);
+            this._div.style.top = ( pos.y-5) + "px";
+            this._div.style.left = (pos.x-5) + "px";
+
+        }
+    });
+
+    definedOverlay.prototype.hide = function(){
+        if (this._div){
+            this._div.style.display = "none";
+        }
+    };
+    definedOverlay.prototype.show = function(){
+        if (this._div){
+            this._div.style.display = "";
+        }
+    };
+    definedOverlay.prototype.serial = 0;
+    function loadData() {
+        $.ajax({
+            type: "GET",
+            url: "/floodDroughtWarning/typhoon",
+            data: null,
+            dataType: "json",
+            async: true,
+            success: function (json) {
+                if (json.code) {
+                    if (json.result.length>0) {
+                        $.each(json.result, function (i, v) {
+                            if(!info_text[v.stadt.slice(0,4)]){
+                                info_text[v.stadt.slice(0,4)] = "";
+                            }
+
+                            info_text[v.stadt.slice(0,4)] += "<tr><td class='a1'><input type='checkbox' class='showTF' id='"+v.tfcode+"' data=''>"+v.tfcode+ "　 <span class='cname'>"+v.cname+"</span>　 <span class='tfname'>"+v.tfname+"</span></td></tr>";
+                            tempTF.id = v.tfcode;
+                            var wayData = v.wayData;
+                            var points = [];
+
+                            $.each(wayData, function (index, n) {
+                                points.push(new T.LngLat(n.lgt, n.lati));
+
+                                var point = new T.LngLat(n.lgt, n.lati);
+
+                                var pdefinedOverlay = new definedOverlay(point, "<div class='tf'><p>中文名字：<span>"+v.cname+"</span><br>台风编号："+v.tfcode+"<br>英文名字：<span>"+v.tfname+"</span><br>最大风速："+v.maxwp+"<br>最低气压："+v.minp+"<br>生成时间："+v.stadt+"<br>结束时间："+v.enddt+"<hr>实测点经度："+n.lgt+"<br>实测点纬度："+n.lati+"<br>实测点气压："+n.enpre+"<br>实测点最大风力："+n.maxwp1+"</p></div>", i);
+                                map.addOverLay(pdefinedOverlay);
+
+
+                                tempTF.point.push(pdefinedOverlay);
+                                    pdefinedOverlay.serial++;
+
+                                pdefinedOverlay.hide();
+                            });
+                            var opts = {
+                                color: "blue",
+                                weight: 1.5,
+                                opacity: 0.3,
+                                lineStyle:"dashed",
+                                zIndex: 99
+                            };
+                            //创建线对象
+                            var line = new T.Polyline(points, opts);
+                            tempTF.line = line;
+                            //向地图上添加线
+                            map.addOverLay(line);
+                            linePoint.push(tempTF);
+                            tempTF = {id: '', line: '', point: []};
+                        });
+                        var options = "";
+                        for(var i in info_text){
+                            if(info_text.hasOwnProperty(i)){
+                                options += "<option value="+i+">"+i+"</option>";
+                            }
+                            if(!$("#tfList").attr("max-value") ||
+                                ($("#tfList").attr("max-value") && $("#tfList").attr("max-value") < i)){
+                                $("#tfList").attr("max-value", i)
+                            }
+                        }
+                        $("#tfList").append(options);
+                        $("#tfList").val($("#tfList").attr("max-value"));
+                        $("#content_table tbody").html(info_text[$("#tfList").val()]);
+                        $("#tfList").on('change', function(){
+                            $("#content_table tbody").html(info_text[$("#tfList").val()]);
+                        })
+                    } else{
+                        $("#content_table tbody").append("<p>暂无相关信息！</p>");
+                    }
+                    $('.toggle').css({bottom: "250px"});
+                    var showTF =  document.getElementsByClassName("showTF");
+
+                    //点击显示路径信息
+                    for(var i = 0; i<showTF.length;i++){
+                        showTF[i].index = i;
+                        showTF[i].onclick = function(){
+                            if(this.checked){
+                                linePoint[this.index].line.show();
+                                for(var j = 0; j< linePoint[this.index].point.length; j++){
+                                    linePoint[this.index].point[j].show();
+                                }
+                            }else{
+                                linePoint[this.index].line.hide();
+                                for(var j = 0; j< linePoint[this.index].point.length; j++){
+                                    linePoint[this.index].point[j].hide();
+                                }
+                            }
+                        }
+                    }
+
+
+                }
+
+
+                //如果中文名字为undefined，判断
+
+				$(".a1 >span").each(function(){
+
+				if($(this).text() == "undefined"){
+				var new_val = $(this).siblings().text();
+				$(this).text(new_val);
+				}
+				})
+
+            }, error: function (jqXHR, textStatus, errorThrown) {
+                console.log(textStatus);
+                console.log(errorThrown);
+            }
+        });
+    };
+
+    function addClickHandler(content,marker){
+                marker.addEventListener("click",function(e){
+                    openInfo(content,e)}
+                );
+            }
+    function openInfo(content,e){
+        var point = e.lnglat;
+        marker = new T.Marker(point);// 创建标注
+        var markerInfoWin = new T.InfoWindow(content,{offset:new T.Point(0,-30)}); // 创建信息窗口对象
+        map.openInfoWindow(markerInfoWin,point); //开启信息窗口
+    }
+
+	$(document).ready(function(){
+
+
+	})

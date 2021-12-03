@@ -1,0 +1,275 @@
+@charset "utf-8";
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+.header {
+	background-image: url(../images/bg.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	padding-top: 180px;
+	padding-bottom: 30px;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+	font-size: 12px;
+	font-family: "微软雅黑";
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.header .header_wz {
+	width: 60%;
+	background-color: #FFF;
+	opacity: 0.8;
+	padding: 3% 8%;
+	margin: 0 auto;
+	font-size: 1.2em;
+	line-height: 25px;
+	color: #2c2c2c;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+
+.header_wz p {
+	text-indent: 0.5cm;
+}
+
+.jbqk {
+	background-image: url(../images/biaoti_bg.png);
+	background-repeat: repeat-x;
+	background-position: center;
+	text-align: center;
+	margin-top: 40px;
+}
+
+.jbqk p {
+	font-size: 2em;
+	line-height: 2em;
+	background-color: #FFF;
+	padding-right: 20px;
+	padding-left: 20px;
+	max-width: 200px;
+	margin: 0 auto;
+}
+
+.timu {
+	font-size: 1.2em;
+	margin-left: 10px;
+	font-weight: bold;
+}
+
+.xuanxiang {
+	max-width: 1200px;
+	margin: 30px auto;
+}
+
+.danwei {
+	/* overflow-y: scroll;
+	height: 230px; */
+	
+}
+
+.xx_ul {
+	font-size: 1.2em;
+	line-height: 2em;
+	width: 90%;
+	margin: 10px auto;
+}
+
+.xx_ul li input {
+	margin-right: 10px;
+}
+
+.xx_ul li {
+	list-style-type: none;
+	float: left;
+	min-width: 240px;
+	margin-right: 10px;
+}
+
+.xuanxiang table {
+	margin: 20px auto;
+	font-size: 1.2em;
+	line-height: 1.6em;
+}
+
+.clear {
+	clear: both;
+}
+
+.srk {
+	border: 0px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #999;
+}
+
+.tijiao {
+	background-image: url(../images/anniu.png);
+	background-repeat: no-repeat;
+	width: 150px;
+	height: 52px;
+	color: #fff;
+	border: 0px;
+	margin: 50px auto;
+	display: block;
+}
+
+.footer {
+	background-color: #e81d08;
+	height: 70px;
+}
+
+/*-----------------jiming update ---------------------*/
+.error {
+	color: red;
+	margin: 5px auto auto 10px;
+	display: none;
+}
+/*-------------------- BEGIN 单位信息 下拉框 ----------------*/
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	text-align: left;
+	font-size: 12px;
+}
+
+h1 {
+	font-size: 16px;
+}
+
+#scrollbar {
+	width: 98%;
+	margin: 10px auto;
+}
+
+#scrollbar .scrollbar {
+	position: relative;
+	background-position: 0 0;
+	float: right;
+	width: 8px;
+}
+
+#scrollbar .viewport {
+	width: 100%;
+	height: 200px;
+	overflow: hidden;
+	position: relative;
+}
+
+#scrollbar .track {
+	background: #ccc;
+	height: 100%;
+	width: 8px;
+	position: relative;
+}
+
+#scrollbar .thumb {
+	background: #666;
+	height: 20px;
+	width: 8px;
+	cursor: pointer;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+}
+
+#scrollbar .viewport {
+	width: 95%;
+	height: 200px;
+	overflow: hidden;
+	position: relative;
+}
+
+#scrollbar .overview {
+	list-style: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	padding: 0;
+	margin: 0;
+}
+
+#scrollbar .overview p {
+	color: #999;
+	line-height: 200%;
+	text-indent: 2em;
+}
+
+#scrollbar2 {
+	margin: 10px auto;
+	width: 520px;
+}
+
+#scrollbar2 .scrollbar {
+	clear: both;
+	height: 8px;
+	margin: 0 0 5px;
+	position: relative;
+	background: #ccc;
+}
+
+#scrollbar2 .track {
+	background: #ccc;
+	height: 8x;
+	position: relative;
+	width: 100%;
+}
+
+#scrollbar2 .thumb {
+	background: #CC0071;
+	cursor: pointer;
+	height: 8px;
+	left: 0;
+	overflow: hidden;
+	position: absolute;
+}
+
+#scrollbar2 .viewport {
+	height: 125px;
+	overflow: hidden;
+	position: relative;
+	width: 520px;
+}
+
+#scrollbar2 .overview {
+	left: 0;
+	list-style: none outside none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	width: 3000px;
+}
+
+.use {
+	width: 500px;
+	height: auto;
+	margin: 30px auto;
+	color: #999;
+}
+
+.use p {
+	text-align: left;
+	color: #999;
+	line-height: 180%;
+	text-indent: 2em;
+}
+/*------------ END 单位信息 下拉框 ------------*/
+/*------------ Begin 二维码 ----------*/
+.ewm {
+	position: fixed;
+	top: 300px;
+	right: 5px;
+	display: block;
+	z-index: 10;
+}
+/*------------ END 二维码 ----------*/

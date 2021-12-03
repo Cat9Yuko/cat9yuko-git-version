@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>轮播图</title>
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+
+    <style type="text/css">
+
+        .mySlick {
+            width: 1200px;
+            height: 300px;
+            margin: 0 auto;
+        }
+        
+        .mySlick img {
+            width: 400px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="mySlick">
+        <div><div class="slickWraper>"><a href="#"><img src="images/img1.jpg" alt=""></a></div></div>
+        <div><div class="slickWraper>"><a href="#"><img src="images/img2.jpg" alt=""></a></div></div>
+        <div><div class="slickWraper>"><a href="#"><img src="images/img3.jpg" alt=""></a></div></div>
+        <div><div class="slickWraper>"><a href="#"><img src="images/img4.jpg" alt=""></a></div></div>
+    </div>
+    
+
+    <script src="js/jquery-1.9.1.js"></script>
+    <script src="js/slick.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            $(".mySlick").slick({
+                dots: true, // 指示点
+                // vertical: true, //垂直播放
+                autoplay: true, //自动播放
+                slidesToShow: 3,
+                customPaging: function(){
+                    
+                }
+            });
+
+        });
+    </script>
+</body>
+</html>

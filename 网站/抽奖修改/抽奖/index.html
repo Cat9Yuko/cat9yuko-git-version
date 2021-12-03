@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>2019年全国节约用水知识大赛抽奖</title>
+		<script src="js/jquery-1.9.1.js" type="text/javascript" charset="utf-8"></script>
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+      		<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    	<![endif]-->
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			.third button,
+			.second button {
+				/*三等奖 二等奖 按钮*/
+				margin-top: 128px;
+				height: 60px;
+				width: 150px;
+				color: #fff;
+				font-size: 24px;
+				border-radius: 10px;
+				background: #4accfc;
+				cursor: pointer;
+			}
+			.once button {
+				/*一等奖按钮*/
+				margin-top: 40px;
+				height: 60px;
+				width: 150px;
+				color: #fff;
+				font-size: 24px;
+				border-radius: 10px;
+				background: #4accfc;
+				cursor: pointer;
+			}
+			
+			.draw-container {
+				/*抽奖背景图*/
+				min-height: 600px;
+				background: url(img/register-bg.png);
+				background-size: cover;
+				padding-top: 70px;
+			}
+			
+			.third,
+			.second {
+				/*二等奖 三等奖*/
+				min-width: 1310px;
+				width: 1310px;
+				/*height: 310px;*/
+				position: relative;
+				margin: 0 auto;
+				padding-bottom: 50px;
+			}
+			
+			.once {
+				/*一等奖*/
+				min-width: 1310px;
+				width: 1310px;
+				/*height: 210px;*/
+				position: relative;
+				margin: 0 auto;
+				padding-bottom: 50px;
+			}
+			
+			.clearfix {
+				clear: both;
+			}
+			
+			.mingdan li {
+				/*名单*/
+				width: 1096px;
+				text-align: center;
+				list-style: none;
+				white-space: nowrap;
+				overflow-x: hidden;
+				text-overflow: ellipsis;
+				margin-bottom: 5px;
+			}
+			
+			.left {
+				float: left;
+				width: 15%;
+			}
+			
+			.right {
+				float: left;
+				width: auto;
+			}
+			
+			.myul1 {
+				height: 156px;
+				overflow-y: scroll;
+				font-size: 20px;
+				font-family: "微软雅黑";
+				color: #FFFFFF;
+			}
+			
+			.myul2 {
+				height: 310px;
+				overflow-y: scroll;
+				font-size: 20px;
+				font-family: "微软雅黑";
+				color: #FFFFFF;
+			}
+			
+			.myul3 {
+				height: 310px;
+				overflow-y: scroll;
+				font-size: 20px;
+				font-family: "微软雅黑";
+				color: #FFFFFF;
+			}
+			
+			.myul2 .def-w,
+			.myul3 .def-w {
+				/*二等奖 三等奖 默认显示*/
+				width: 1087.48px;
+				height: 310px;
+				font-size: 30px;
+				text-align: center;
+				display: table-cell;
+				vertical-align: middle;
+			}
+			.myul1 .def-w {
+				/*一等奖默认显示*/
+				width: 1087.48px;
+				height: 134px;
+				font-size: 30px;
+				text-align: center;
+				display: table-cell;
+				vertical-align: middle;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header>
+			<div align="center"><img src="img/20190805-nav-short.png" width="1200" border="0" usemap="#Map" hidefocus="true" />
+			</div>
+		</header>
+		<div class="draw-container">
+			<div class="third">
+				<div class="left"><button id="third">三等奖抽奖</button></div>
+				<div class="right">
+					<div class="mingdan">
+						<ul class="myul3">
+							<div class="def-w">三等奖中奖名单区</div>
+						</ul>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="second">
+				<div class="left"><button id="second">二等奖抽奖</button></div>
+				<div class="right">
+					<div class="mingdan">
+						<ul class="myul2">
+							<div class="def-w">二等奖中奖名单区</div>
+						</ul>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="once">
+				<div class="left"><button id="once">一等奖抽奖</button></div>
+				<div class="right">
+					<div class="mingdan">
+						<ul class="myul1">
+							<div class="def-w">一等奖中奖名单区</div>
+
+						</ul>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		<div class="footer">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="#bababa">
+				<tbody>
+					<tr>
+						<td align="center">
+							<!--底部 start-->
+							<table width="1200" border="0" cellspacing="0" cellpadding="0" bgcolor="" align="center" style="margin:0px auto; border-top:0px solid #cccccc">
+								<tbody>
+									<tr>
+										<td height="155" align="center" valign="">
+
+											<table border="0" cellspacing="0" cellpadding="0" align="center">
+												<tbody>
+													<tr>
+														<td height="57">&nbsp;</td>
+													</tr>
+													<tr>
+														<td style="font-size:16px; line-height:28px; color:black">
+															京ICP备14010557号 主办：全国节约用水办公室 网站联系电话：010-63205087
+															<br> 政府网站标识码：bm20000001
+															<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11040102700040" style="text-decoration: none;font-size:16px; color:black" target="_blank"><img src="img/ditu20190505_guohui.png" border="0" style="display:inline"> 京公网安备11040102700040号</a>
+														</td>
+														<td style="padding-left:20px; padding-right:10px">
+															<a href="http://bszs.conac.cn/sitename?method=show&amp;id=0726B189C5F03282E053012819ACDB52" target="_blank"><img src="img/ditu20190505_dzjg.png" width="44" height="56" border="0"></a>
+														</td>
+														<td>
+															<a href="http://121.43.68.40/exposure/jiucuo.html?site_code=bm20000001&amp;url=http%3A%2F%2Fwww.mwr.gov.cn%2F" target="_blank"><img src="img/ditu20190505_jiucuo.png" width="119" height="56" border="0"></a>
+														</td>
+													</tr>
+													<tr>
+														<td height="57">&nbsp;</td>
+													</tr>
+												</tbody>
+											</table>
+
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<!--底部 end-->
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<map name="Map">
+	        <area shape="rect" coords="105,23,211,122" href="#">
+	        <area shape="rect" coords="277,19,396,124" href="#dsjs">
+	        <area shape="rect" coords="459,19,564,122" href="#csxz">
+	        <area shape="rect" coords="626,13,739,125" href="#dsdt">
+	        <area shape="rect" coords="804,12,912,124" href="#zspj">
+	        <area shape="rect" coords="982,16,1107,129" href="#dtzq">
+		</map>
+		<script type="text/javascript">
+			$(function() {
+
+				if($(".myul1 > li").length == 0) {
+					$(".myul1").css("overflow-y","hidden");
+				}
+				if($(".myul2 > li").length == 0) {
+					$(".myul2").css("overflow-y","hidden");
+				}
+				if($(".myul3 > li").length == 0) {
+					$(".myul3").css("overflow-y","hidden");
+				}
+
+				$("#once").click(function() {
+
+					for(var i = 0; i < 5; i++) {
+						$(".myul1").prepend("<li>陈勇强"+i+" 210411199705051416X 水利部直属单位 长江水利委员会 15134128328 北京市 行政事业 大学及以上 </li>");
+					}
+					if($(".myul1 > li").length == 0) {
+						$(".myul1 .def-w").show();
+					}
+					if($(".myul1 > li").length > 0) {
+						$(".myul1 .def-w").hide();
+						$(".myul1").css("overflow-y","scroll");
+					}
+
+				});
+				$("#second").click(function() {
+
+					for(var i = 0; i < 10; i++) {
+						$(".myul2").prepend("<li>陈勇强"+i+" 210411199705051416X 水利部直属单位 长江水利委员会 15134128328 北京市 行政事业 大学及以上</li>");
+					}
+					if($(".myul2 > li").length == 0) {
+						$(".myul2 .def-w").show();
+					}
+					if($(".myul2 > li").length > 0) {
+						$(".myul2 .def-w").hide();
+						$(".myul2").css("overflow-y","scroll");
+					}
+
+				});
+				$("#third").click(function() {
+					for(var i = 0; i < 10; i++) {
+						$(".myul3").prepend("<li>陈勇强"+i+" 210411199705051416X 水利部直属单位 长江水利委员会 15134128328 北京市 行政事业 大学及以上</li>");
+					}
+					if($(".myul3 > li").length == 0) {
+						$(".myul3 .def-w").show();
+					}
+					if($(".myul3 > li").length > 0) {
+						$(".myul3 .def-w").hide();
+						$(".myul3").css("overflow-y","scroll");
+					}
+
+				});
+			});
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,48 @@
+
+/*给div加边框*/
+#tab{
+	
+	width: 851px;
+	margin: 0 auto;/*居中设置*/
+}
+
+.tab_container {
+	border: 5px solid #CCCCCC;
+	clear: both;
+	z-index: -999;
+	margin-top: -5px;
+}
+.tab_container div{
+	
+	height: 247px;
+	font-size: 14px;
+	padding: 20px 0px 0px 20px;
+	display: none;/*隐藏div*/
+}
+/**/
+
+#tab span{
+	margin: 2px 1px 0px 1px;
+	padding: 0px;
+	font-size: 14px;
+	float: left;
+	right: 5px;
+	width: 109px;
+	height: 29px;
+	line-height: 24px;
+	text-align: center;
+	background: #ffffff;
+	border-bottom: 0px;
+}
+#tab div.content{
+	display: block;
+	/*background: paleturquoise;*/
+}
+#tab span.active{
+	font-size: 22px;
+	color: #01325c;
+	border-left: 5px solid #cddde6;
+	border-top: 5px solid #cddde6;
+	border-right: 5px solid #cddde6;
+	z-index: 99;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/angular.js" ></script>
+	</head>
+	<body>
+		<div ng-app="myApp" ng-controller="myCtrl">
+			姓 <input type="text" ng-model="fName"/><br />
+			名<input type="text" ng-model="lName"/><br />
+			{{fullName()}}
+		</div>
+		<script type="text/javascript">
+			//定义模块
+			var app = angular.module('myApp',[]);
+			//定义controller
+			app.controller('myCtrl',function ($scope) {
+				$scope.fName = "月月鸟";
+				$scope.lName = "鸟月月";
+				$scope.fullName = function () {
+					return $scope.lName+"."+$scope.lName;
+				}
+			});
+		</script>
+	</body>
+</html>

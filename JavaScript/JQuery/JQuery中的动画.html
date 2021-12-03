@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-3.4.1.js" ></script>
+		<style type="text/css">
+			#pain1{
+				position: relative;
+				 height: 100px;
+				 width: 100px;
+				 border: 1px solid #0050D0;
+				 background: #96E555;
+				 cursor: pointer;
+				 
+			}
+		</style>
+	</head>
+	<body>
+		<div id="pain1">
+			
+		</div>
+		<!--
+			animate(params,speed,callback); 
+		-->
+		<script type="text/javascript">
+			$(function () {
+				$("#pain1").css("opacity","0.5");//设置不透明度
+				$("#pain1").click(function () {
+//					$(this).animate({left:"500px"},3000);//只能移动一次
+//					$(this).animate({left:"+=500px"},3000);//累加500px
+//					$(this).animate({left:"500px",height:"200px"},3000);
+					$(this).animate({left:"400px",height:"200px",opacity:"1"},3000,)
+					.animate({top:"200px",width:"200px"},3000,function () {//回调函数,把css加入到动画队列中
+						//效果完成后执行
+						$(this).css("border","5px solid blue");
+					})
+					.fadeOut("slow");
+				})
+				
+				//停止元素的动画
+				/*
+				 stop([clearQueue],[gotoEnd]);
+				 参数clearQueue和gotoEnd都是可选的参数,为Boolean值(true|false)
+				 clearQueue:是否要清空为执行完的动画队列
+				 gotoEnd:是否直接将正在执行的动画跳转到末状态
+				 * */
+				$("#pain1").hover(function () {
+					$(this).stop().animate({height:"150",width:"300"},200)
+				},function () {
+					$(this).stop().animate({height:"22",width:"60"},300);
+				})
+				
+				//判断元素是否处于动画状态
+				if(!$(element).is(":animated")){//判断元素是否处于动画状态
+					//如果当前没有进行动画,则添加新动画
+				}
+				
+				//延迟动画
+				$(this).animate({left:"400px",height:"200px",opacity:"1"},3000)
+				.delay(1000)
+				.animate({top:"200px",width:"200px"},3000)
+				.delay(2000)
+				.fadeOut("slow");
+				
+				/*
+				 其他交互动画
+				 
+				 * toggle();切换show和hidden
+				 * slideToggle();切换slideUp和slideDown
+				 * fadeTo();改变透明度
+				 * fadeToggle();fadeIn和fadeOut的切换
+				 * */
+			})
+			
+			/*动画队列
+			 
+			 * 一组元素上的动画效果
+			 * 1)当在一个animate()方法中应用多个属性时,动画是同时发生的俄
+			 * 2)当以链式的写法应用动画方法时,动画时按照顺序发生的
+			 * 
+			 * 多组元素上的动画效果
+			 * 1)默认情况下,动画都是同时发生的
+			 * 2)当以回调的形式应用动画方式时,动画时按照回调顺序发生的
+			 * */
+		</script>
+	</body>
+</html>

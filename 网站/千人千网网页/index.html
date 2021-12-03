@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1139">
+    <title>中华人民共和国水利部</title>
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/page.css">
+</head>
+
+<body>
+    <!-- 右侧固定 -->
+    <div class="fix-right">
+        <a href="http://zxzj.mwr.gov.cn/irp/html/index.html" target="_blank"><img src="img/l-yjfk.png" alt="我要咨询"></a><br>
+        <a href="http://supe.mwr.gov.cn/#/" target="_blank"><img src="img/l-wyjb.png" alt="我要举报"></a><br>
+    </div>
+    <!--  -->
+    <div class="bg">
+        <!-- 头部 -->
+        <div class="header center-block-1140">
+            <div class="logo fl">
+                <img src="img/logo2.png" alt="" height="40px"><img src="img/logo-grzx.png" alt="">
+            </div>
+            <form action="http://search.mwr.gov.cn/jrobot/search.do" method="get">
+                <input name="webid" type="hidden" value="1">
+                <input name="od" type="hidden" value="1">
+                <div class="search-box fl">
+                    <div class="search-placeholder">
+                        欢迎使用<span>水利易SOU</span>
+                    </div>
+                    <input type="text" class="search-input" value="" autocomplete="off" name="q" id="searchword">
+                    <input type="image" src="img/search-icon.png" alt="">
+                </div>
+
+                <div class="user-c fr">
+                    <span class="uname"><a href="">用户名</a></span>
+                    <span class="cpwd"><a href="">密码修改</a></span>
+                    <span class="lout"><a href="">退出登录</a></span>
+                </div>
+            </form>
+        </div>
+
+        <!-- 主体 -->
+        <div class="main center-block-1140 clearfix">
+
+            <!-- 左侧悬浮 -->
+            <div class="fl user-info-tab user-tab">
+                <div class="user-image">
+                    <img src="img/user.png" alt="">
+                    <h1>用户名</h1>
+                    <!-- <span class="color-tab">管理员</span> -->
+                </div>
+
+                <div class="user-link-tabs">
+                    <div class="user-link-tab"><a href=""><img class="tab-icon" src="img/icon1.png" alt=""><span>我的主页</span></a>
+                    </div>
+                    <div class="user-link-tab wdwz"><a href="javascript:;"><img class="tab-icon" src="img/icon2.png"
+                                alt=""><span>我的问政</span></a><i class="fa fa-chevron-down" aria-hidden="true"></i>
+                    </div>
+                    <div class="user-link-tab-childs">
+                        <div class="user-link-tab-child"><a href="">我的咨询</a></div>
+                        <div class="user-link-tab-child"><a href="">我的答题</a></div>
+                    </div>
+                    <div class="user-link-tab"><a href=""><img class="tab-icon" src="img/icon3.png" alt=""><span>我的办事</span></a>
+                    </div>
+                    <div class="user-link-tab"><a href=""><img class="tab-icon" src="img/icon4.png" alt=""><span>我的收藏</span></a>
+                    </div>
+                    <div class="user-link-tab"><a href=""><img class="tab-icon" src="img/icon5.png" alt=""><span>我的订阅</span></a>
+                    </div>
+                    <div class="user-link-tab"><a href=""><img class="tab-icon" src="img/icon6.png" alt=""><span>我的足迹</span></a>
+                    </div>
+                </div>
+            </div>
+            <!-- end -->
+            <div class="fr user-doc-tab user-tab">
+
+                <div class="section clearfix">
+
+                    <div class="fl">
+                        <!-- 动态添加轮播图 -->
+                        <div class="slick-mod"></div>
+                        <!-- end -->
+                    </div>
+                    <div class="fr">
+                        <div class="chnl-name tzgg">
+                            通知公告 <span class="fr"><a href="http://www.mwr.gov.cn/zw/tzgg/tzgs/">查看全部</a></span>
+                        </div>
+                        <ul class="list" id="data_notice">
+                            
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="section clearfix">
+                    <div class="tabs">
+                        <div class="tab">
+                            <span>
+                                <i>1314</i><br>
+                                我的问政
+                            </span>
+                        </div>
+                        <div class="tab">
+                            <span>
+                                <i>152</i><br>
+                                我的办事
+                            </span>
+                        </div>
+                        <div class="tab">
+                            <span>
+                                <i>12</i><br>
+                                我的收藏
+                            </span>
+                        </div>
+                        <div class="tab">
+                            <span>
+                                <i>14</i><br>
+                                我的订阅
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section clearfix">
+                    <div class="chnl-name">
+                        热点资讯 <span class="fr"><a href="http://www.mwr.gov.cn/xw/slyw/">查看全部</a></span>
+                    </div>
+                    <ul class="list" id="data_news">
+                        
+                    </ul>
+                </div>
+
+                <div class="section clearfix">
+                    <div class="fw-tabs">
+                        <div class="fw-tab"><a href="http://spjc.mwr.gov.cn/spjc/userlogin.do?ltype=nmLogin"><img src="img/fw1.png" alt="">
+                                <h1>审批服务<br>大厅</h1>
+                            </a></div>
+                        <div class="fw-tab"><a href="http://www.mwr.gov.cn/fw/#xzspsx"><img src="img/fw2.png" alt="">
+                                <h1>行政审批<br>事项</h1>
+                            </a></div>
+                        <div class="fw-tab"><a href="http://www.mwr.gov.cn/fw/spgg/"><img src="img/fw3.png" alt="">
+                                <h1>审批公告<br>&nbsp;</h1>
+                            </a></div>
+                        <div class="fw-tab"><a href="http://www.mwr.gov.cn/fw/slgs/"><img src="img/fw4.png" alt="">
+                                <h1>受理公示<br></h1>
+                            </a></div>
+                        <div class="fw-tab"><a href="http://www.mwr.gov.cn/fw/slxf/"><img src="img/fw5.png" alt="">
+                                <h1>水利信访<br></h1>
+                            </a></div>
+                        <div class="fw-tab"><a href="http://www.hfc.gov.cn/"><img src="img/fw6.png" alt="">
+                                <h1>水情预警<br></h1>
+                            </a></div>
+                        <div class="fw-tab"><a href="http://xxfb.mwr.cn/"><img src="img/fw7.png" alt="">
+                                <h1>实时水情<br></h1>
+                            </a></div>
+                        <div class="fw-tab"><a href="http://search.mwr.gov.cn/jrobot/index.do"><img src="img/fw8.png" alt="">
+                                <h1>水利易SOU<br></h1>
+                            </a></div>
+                        <div class="fw-tab"><a href="http://www.mwr.gov.cn/fw/fwxt/"><img src="img/fw9.png" alt="">
+                                <h1>服务系统<br></h1>
+                            </a></div>
+                        <div class="fw-tab"><a href="http://www.mwr.gov.cn/fw/cjwt/201807/t20180724_1043734.html"><img src="img/fw10.png" alt="">
+                                <h1>常见问题<br></h1>
+                            </a></div>
+                    </div>
+                </div>
+
+                <div class="section clearfix">
+
+                    <div class="fl cnxh">
+                        <div class="chnl-name">
+                            猜你喜欢
+                            <!-- <span class="fr"><a href=""><img src="img/ref.png" alt="">换一批</a></span> -->
+                        </div>
+                        <ul class="list" id="qrqwcnxh">
+                            
+                        </ul>
+                    </div>
+
+                    <div class="fr djdzs">
+                        <div class="chnl-name">
+                            大家都在搜
+                        </div>
+                        <ul class="list circle" id="qrqwdjdzs">
+                           
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                <div class="section clearfix">
+
+                    <div class="fl cnxh">
+                        <div class="chnl-name">
+                            行为分析
+                            <!-- <span class="fr"><a href="">查看全部</a></span> -->
+                        </div>
+                        <div id="container" style="min-width:400px;height:300px"></div>
+                    </div>
+
+                    <div class="fr djdzs">
+                        <div class="chnl-name">
+                            我的关键字
+                        </div>
+                        <div id="img"></div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer clearfix">
+            <div class="fl yqlj">
+                <div class="chnl-name">
+                    友情链接
+                </div>
+                <ul class="link">
+                    <li><a href="http://spjc.mwr.gov.cn/">水利部政务服务平台</a></li>
+                    <li><a href="http://supe.mwr.gov.cn/">水利部12314监督举报平台</a></li>
+                    <li><a href="http://xypt.mwr.gov.cn/">水利建设市场监管平台</a></li>
+                </ul>
+                <!-- <ul class="link">
+                    <li><a href="">农村红黑饮水榜</a></li>
+                    <li><a href="">全国实时水雨情预警信息</a></li>
+                    <li><a href="">河湖曝光台</a></li>
+                    <li></li>
+                </ul> -->
+            </div>
+
+            <div class="fl clearfix">
+
+                <div class="imglink">
+                <div class="qrco fl">
+                    <img src="img/qrcode.png" alt="">
+                    <div>水利部官方微信</div>
+                </div>
+                <div class="qrco fl">
+                    <img src="img/qrcode2.png" alt="">
+                    <div>水利部官网</div>
+                </div>
+            </div>
+            </div>
+
+        </div>
+        <div class="footer2">
+            京ICP备14010557号 ©中华人民共和国水利部版权所有  主办：水利部办公厅  承办：水利部信息中心    水利部总机：010-63202114  网站联系电话：010-63202558 <br>
+            政府网站标识码：bm20000001      <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11040102700040" target="_blank"><img src="http://www.mwr.gov.cn/images_zt/20190906-guohui.png" border="0" style="display:inline"> 京公网安备11040102700040号</a>
+        </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/highcharts.js"></script>
+    <script src="js/wordcloud.js"></script>
+    <script src="js/tagcloud.js"></script>
+    <script src="js/page.js"></script>
+    <script>
+        $(".search-placeholder").click(function () {
+            $(this).hide();
+            $(".search-input").focus();
+        });
+
+        // 导航吸顶
+        $(window).scroll(function () {
+            if (screen.width > 1024) {
+                var h = $(".header").height();
+                if ($(window).scrollTop() > h) {
+                    $(".user-info-tab").addClass("act");
+                } else {
+                    $(".user-info-tab").removeClass("act");
+                }
+            } else {
+                var h1 = 0;
+                if ($(window).scrollTop() > h1) {
+                    $(".user-info-tab").addClass("act");
+                } else {
+                    $(".user-info-tab").removeClass("act");
+                }
+            }
+        });
+
+        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-1.9.1.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<a class="ddjs-link" href="">无链接</a>
+		
+		
+		<script type="text/javascript">
+			$(window).resize(function () {
+				var $width = $(window).width();
+				console.log($width);
+				if($width < 1024px){
+					$(".ddjs-link").setAttribute("href","www.baidu.com");
+				}
+			})
+		
+		</script>
+	</body>
+</html>

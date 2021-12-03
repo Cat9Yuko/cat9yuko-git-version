@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
+  <style type="text/css">
+    /* background-size: auto || <length> || <perentage> || cover || contain */
+    /* background-size取值为固定数值和百分比时, 可以设置两个值, 也可以设置一个值, 只取2一个值时,
+    指定了背景图片的宽度, 第二值相当于 auto, auto值设定之后能让背景图片的高度自动的按照比例缩放 */
+    div {
+      float: left;
+      margin: 10px;
+    }
+  .one {
+      width: 320px;
+      height:270px;
+      border: 1px solid red;
+      background: url(images/bg.jpg) no-repeat;
+      background-size: auto;  /* auto的值就是使背景图片保持原样 */
+    }
+    .two {
+        width: 320px;
+        height:270px;
+        border: 1px solid red;
+        background: url(images/bg.jpg) no-repeat;
+        background-size: 280px 280px;  /* 固定值,也可以是百分值 */
+      }
+      .three {
+          width: 320px;
+          height:270px;
+          border: 1px solid red;
+          background: url(images/bg.jpg) no-repeat;
+          background-size: cover;  /* 整个背景图片放大填充了整个元素div ,背景图片过小在大屏幕下会失真*/
+          /* 有一个细节需要注意, 此时的背景图片放大后致使背景图片不是正中间, 为了让背景图片放大后再中间显示
+          需要在元素中设置background-position:center; */
+          background-position: center;
+        }
+
+        .four {
+            width: 50px;
+            height:50px;
+            border: 1px solid red;
+            background: url(images/bg.jpg) no-repeat;
+            background-size: contain;  /* 让背景图像保持本身的宽高比例,
+            将背景图片缩放到宽度或者高度正好适应所定义背景的区域 */
+
+
+          }
+  </style>
+</head>
+<body>
+  <div class="one"></div>
+  <div class="two"></div>
+  <div class="three"></div>
+  <div class="four"></div>
+</body>
+</html>

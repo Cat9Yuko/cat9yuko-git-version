@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="images/jquery1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="images/qrcode.js" type="text/javascript" charset="utf-8"></script>
+		<script src="images/jquery.qrcode.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			#qrcode2 {
+				width: 202px;
+				margin: 0 auto;
+			}
+			
+			.wechatshare2 {
+				position: fixed;
+				box-sizing: border-box;
+				margin: 0 auto;
+				display: block;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%,-50%);
+				height: 400px;
+				width: 300px;
+				background: #FFFFFF;
+				border: 1px solid #EEEEEE;
+				box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.20);
+			}
+			
+			.qrcode-top2 {
+				width: 280px;
+				height: 74px;
+				margin: 0 auto;
+				line-height: 24px;
+				margin-bottom: 20px;
+				
+				padding-top: 6px;
+				font-family: MicrosoftYaHei;
+				font-size: 18px;
+				color: #333333;
+				letter-spacing: 0.23px;
+				text-align: left;
+			}
+			
+			.close-fr2 {
+				float: right;
+				cursor: pointer;
+				padding-top: 5px;
+			}
+			
+			.qrcode-bottom2 {
+				width: 280px;
+				height: 48px;
+				margin: 0 auto;
+				opacity: 0.99;
+				font-family: MicrosoftYaHei;
+				font-size: 14px;
+				color: #999999;
+				letter-spacing: 0.18px;
+				
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<span class="wechat" style="cursor: pointer;"><img src="images/wchart.png"/></span>
+		<span class="sina" style="cursor: pointer;"><img src="images/sina.png"/></span>
+		<div class="wechatshare2" style="display: none;">
+			<div class="wecs-container">
+				<div class="qrcode-top2">
+					<p>分享到微信/朋友圈 <span><img class="close-fr2" src="images/colsewx.jpg" width="15px" height="15px"/></span></p>
+				</div>
+				<div id="qrcode2"></div>
+				<div class="qrcode-bottom2">
+					<p>打开微信,点击底部的“发现” ，
+					<br />使用 “扫一扫” 即可将网页分享至朋友圈</p>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+			var title, pic;
+			title = ""; //微博title
+			pic = ""; //微博图片
+			$(".wechat").click(function() {
+				$(".wechatshare2").toggle();
+			})
+			$(".close-fr2").click(function() {
+				$(".wechatshare2").toggle();
+			})
+			$(".sina").click(function() {
+				shareToXl(title, window.location.href, pic);
+			})
+			//分享到微博
+			function shareToXl(title, url, picurl) {
+				var sharesinastring = 'http://v.t.sina.com.cn/share/share.php?title=' + title + '&url=' + url + '&content=utf-8&sourceUrl=' + url + '&pic=' + picurl;
+				window.open(sharesinastring, 'newwindow', 'height=400,width=400,top=100,left=100');
+			}
+
+			var url = window.location.href;
+			//			var url = "中文";
+			//解决中文
+			function utf16to8(str) {
+				var out, i, len, c;
+				out = "";
+				len = str.length;
+				for(i = 0; i < len; i++) {
+					c = str.charCodeAt(i);
+					if((c >= 0x0001) && (c <= 0x007F)) {
+						out += str.charAt(i);
+					} else if(c > 0x07FF) {
+						out += String.fromCharCode(0xE0 | ((c >> 12) & 0x0F));
+						out += String.fromCharCode(0x80 | ((c >> 6) & 0x3F));
+						out += String.fromCharCode(0x80 | ((c >> 0) & 0x3F));
+					} else {
+						out += String.fromCharCode(0xC0 | ((c >> 6) & 0x1F));
+						out += String.fromCharCode(0x80 | ((c >> 0) & 0x3F));
+					}
+				}
+				return out;
+			}
+			//			var utf8 = utf16to8(url);
+			//
+			$("#qrcode2").qrcode({
+				text: url, //文本或url
+				width: 202, //宽度
+				height: 202, //高度
+				correctLevel: QRErrorCorrectLevel.M, //错误纠正级别 L:1,M:0,Q:3,H:2
+			})
+		</script>
+	</body>
+
+</html>

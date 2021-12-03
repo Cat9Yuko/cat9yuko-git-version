@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="images/idangerous.swiper-2-x.css" />
+		<link rel="stylesheet" type="text/css" href="images/mystyle.css" />
+	</head>
+
+	<body>
+		<header>
+			<div class="search-icon">
+				<a href="javascript:history.go(-1)" class="header-back jsBack"><img src="images/back.png" width="20px" height="20px" /></a>
+			</div>
+			<div class="title">新闻资讯</div>
+		</header>
+		<!-- 轮播图开始-->
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<img src="images/bg_1.jpg" />
+				</div>
+				<div class="swiper-slide">
+					<img src="images/bg_1.jpg" />
+				</div>
+				<div class="swiper-slide">
+					<img src="images/bg_1.jpg" />
+					<div class="abstract">这是摘要</div>
+				</div>
+				
+			</div>
+			<div class="pagination"></div>
+		</div>
+
+		<script src="images/jquery1.12.4.min.js"></script>
+		<script src="images/idangerous.swiper-2-x.js"></script>
+		<script>
+			var mySwiper = new Swiper('.swiper-container', {
+				pagination: '.pagination',
+				autoplay: 3000,
+				loop: true,
+				paginationClickable: true,
+			})
+		</script>
+
+	</body>
+
+</html>

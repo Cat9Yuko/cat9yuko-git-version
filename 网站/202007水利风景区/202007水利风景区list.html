@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <link rel="stylesheet" href="images/slick.css">
+    <link rel="stylesheet" href="images/202007_slfjq_global.css">
+    <title>水利风景区建设管理</title>
+</head>
+<body>
+    <div class="searchbg">
+        <div class="center_block">
+            <div class="fr">
+                <div class="jstime fl">
+                    <script type="text/javascript">
+                        var strdate = new Date();
+                        var stryear = strdate.getFullYear();
+                        var strmonth = strdate.getMonth() + 1;
+                        var strday = strdate.getDate();
+                        var strweek = strdate.getDay();
+                        var arr_week=new Array("星期日","星期一","星期二","星期三","星期四","星期五","星期六");
+                        document.write (stryear +"年"+ strmonth +"月"+ strday +"日 "+arr_week[strweek]);
+                    </script>
+                </div>
+                <div class="searchwbg fl">
+                    <form action="" method="get">
+                        <input type="text" class="searchinput" placeholder="请输入关键字">
+                        <input type="image" class="searchicon" src="./images/202007slfjq_searchicon.png">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="banner"></div>
+
+    <div class="content center_block">
+        <!-- 导航栏 -->
+        <div class="nav">
+            <ul class="center_block">
+                <li><a href="">首页</a></li>
+                <li><a href="">机构设置</a></li>
+                <li><a href="">政策法规</a></li>
+                <li><a href="">技术标准</a></li>
+                <li><a href="">地方新闻</a></li>
+                <li><a href="">景区动态</a></li>
+                <li><a href="">景区百科</a></li>
+                <li><a href="">资料下载</a></li>
+                <li><a href="">管理系统</a></li>
+                <li><a href="">乐水游</a></li>
+            </ul>
+        </div>
+        
+        <div class="center_block">
+            <div style="width: 100%;min-height: 380px;">
+                
+                <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td height="20"></td>
+                    </tr>
+                </table>
+                <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="" class="boxs">
+                    <tr>
+                        <td width="15">&nbsp;</td>
+                        <td>
+                            <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="">
+                                <tr>
+                                    <td align="left" height="40">&nbsp;&nbsp;<strong>当前位置：</strong>
+                                        <TRS_Curpage VALUE="--">当前位置</TRS_Curpage>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="">
+                                <TRS_Documents ID="owner" PAGESIZE="25">
+                                    <tr>
+                                        <td width="20" align="center" style="BORDER-BOTTOM: #787063 1px dashed; font-size:14px; padding-top:10px">
+                                            
+                                        </td>
+                                        <td align="left" width="796" style="BORDER-BOTTOM: #787063 1px dashed; font-size:14px; padding-top:10px">
+                                            <TRS_Document FIELD="doctitle" AUTOLINK="true">文档标题</TRS_Document>
+                                        </td>
+                                        <td width="88" align="center" style="BORDER-BOTTOM: #787063 1px dashed; font-size:14px; padding-top:10px">
+                                            <TRS_Document FIELD="docreltime" DATEFORMAT="yyyy-MM-dd">2010-08-28</TRS_Document>
+                                        </td>
+                                    </tr>
+                                </TRS_Documents>
+                            </table>
+                            <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="">
+                                <tr>
+                                    <td height="50" align="center">
+                                        <TRS_Template TEMPNAME="嵌套_概览分页脚本">嵌套_概览分页脚本</TRS_Template>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td width="15">&nbsp;</td>
+                    </tr>
+                </table>
+                <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td height="10"></td>
+                    </tr>
+                </table>
+                
+                </div>
+        </div>
+        <!-- list end -->
+    </div>
+    <div class="footer">
+        <p>中华人民共和国水利部版权所有</p>
+        <p>主办:水利部景区办　承办：水利部水利信息中心　地址：北京市西城区南线阁街58号</p>
+        <p>联系我们：010-63203451</p>
+    </div>
+    <script src="images/jquery-1.9.1.js"></script>
+    <script src="images/slick.js"></script>
+</body>
+</html>

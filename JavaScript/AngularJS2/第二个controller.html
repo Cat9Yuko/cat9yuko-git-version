@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="test">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/angular.js" ></script>
+		<script type="text/javascript">
+			let a = 12;
+			//声明模块
+			let mod = angular.module('test',[]);
+			//声明controller
+			//$scope:angularjs中的作用域,所有的数据都会保存在scope中
+			mod.controller('main',function($scope){
+				//代码
+				$scope.a=12;
+			})
+		</script>
+	</head>
+	<body ng-controller="main">
+		{{a}}
+	</body>
+	
+</html>

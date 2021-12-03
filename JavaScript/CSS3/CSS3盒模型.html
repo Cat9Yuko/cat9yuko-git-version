@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS3盒模型</title>
+  <style type="text/css">
+      /* CSS中主要有以下几种盒模型:
+      inline、inline-block、block、table、absolute position、float
+      每一个盒子模型是由以下几个属性组合所决定的：
+        display、position、float、width、height、margin、padding和border等
+       */
+      /* box-sizing: content-box | border-box | inherit
+        content-box: 默认值,让元素维持W3C的标准盒模型
+        element width/height = border + padding +content width/ height;
+
+        border-box: 让元素维持IE传统的盒模型, 元素的宽度或高度等于元素内容的宽度或高度
+        这里的内容弄宽度或高度包含了元素的border、padding、内容的宽度或高度(此处的内容宽度或高度=盒子的宽度或高度 - 边框 - 内距)
+       */
+        .content-box {
+          width: 208px;
+          padding: 32px;
+          border: 16px;
+          background: #ccc;
+          text-align: justify;
+          float: left;
+        }
+        .border-box {
+          width: 208px;
+          padding: 32px;
+          border: 16px;
+          float: left;      
+          background: orange;
+          text-align: justify;
+          box-sizing: border-box;
+        }
+  </style>
+</head>
+<body>
+    <div class="content-box">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+    <div class="border-box">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+</body>
+</html>

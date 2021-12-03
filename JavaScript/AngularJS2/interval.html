@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/angular.js" ></script>
+	</head>
+	<body ng-app="myApp" ng-controller="myCtrl">
+		<script type="text/javascript">
+			var app = angular.module('myApp',[]);
+			app.controller('myCtrl',function ($scope,$interval) {
+				$scope.theTime = new Date().toLocaleTimeString();
+				//每隔1秒执行一次
+				$interval(function () {
+					$scope.theTime = new Date().toLocaleTimeString();
+				},1000);
+			});
+		</script>
+		<h4>{{theTime}}</h4>
+	</body>
+</html>

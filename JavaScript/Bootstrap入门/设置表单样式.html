@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+		<title></title>
+
+		<!-- Bootstrap core CSS -->
+		<link href="images/bootstrap.css" rel="stylesheet">
+		<script src="images/jquery-1.9.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="images/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	</head>
+
+	<body>
+		<!--将每个标签和控件封装在form-group类中,
+			并对空间本身添加form-control类
+		-->
+		<div class="container">
+			<div class="form-group">
+				<label for="firstName">First Name:</label>
+				<input type="text" autofocus required="required" placeholder="First Name" class="form-control" />
+			</div>
+			
+			<!--水平表单-->
+				<form action="#" class="form-horizontal">
+					<div class="form-group">
+						<label for="firstName" class="col-sm-3 control-label">
+							First Name:
+						</label>
+						<div class="col-sm-9">
+							<input type="text" autofocus="autofocus" required="required" id="firstName"
+								placeholder="First Name" class="form-control" />
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="lastName" class="col-sm-3 control-label">
+							Last Name:
+						</label>
+						<div class="col-sm-9">
+							<input type="text" required="required" id="lastName" placeholder="Last Name" class="form-control"/>
+						</div>
+					</div>
+				</form>
+				
+				<!--内联表单-->
+				
+				<form action="#" class="form-inline">
+					<div class="form-group">
+						<label class="sr-only" for="emaiil">Email Address</label>
+						<input type="email" required="required" id="email" placeholder="Email Address" class="form-control input-lg" />
+					</div>
+					<div class="form-group">
+						<label class="sr-only" for="password">Password</label>
+						<input type="password" required="required" id="password" placeholder="Password" class="form-control input-sm" />
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" />Remember me
+					</div>
+					<button type="submit" class="btn btn-default">Login</button>
+				</form>
+				
+				<!--单选框和复选框-->
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" value="one" />
+						Option one
+					</label>
+				</div>
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" value="two"/>
+						Option two
+					</label>
+				</div>
+				<div class="checkbox disabled">
+					<label>
+						<input type="checkbox" value="three" disabled="disabled" />
+						Option three - disabled
+					</label>
+				</div>
+				
+				<div class="radio">
+					<label>
+						<input type="radio" value="one" />
+						First radio button
+					</label>
+				</div>
+				
+				<div class="radio">
+					<label>
+						<input type="radio" value="r-two" />
+						Second radio 
+					</label>
+				</div>
+				
+				<div class="radio disabled">
+					<label>
+						<input type="radio" value="r-three" disabled="disabled" />
+						Third radio - disabled
+					</label>
+				</div>
+				
+				<!--inline-->
+				<div class="checkbox-inline">
+					<label>
+						<input type="checkbox" value="one" />
+						Option one
+					</label>
+				</div>
+				<div class="checkbox-inline">
+					<label>
+						<input type="checkbox" value="two"/>
+						Option two
+					</label>
+				</div>
+				<div class="checkbox-inline disabled">
+					<label>
+						<input type="checkbox" value="three" disabled="disabled" />
+						Option three - disabled
+					</label>
+				</div>
+				
+				<div class="radio-inline">
+					<label>
+						<input type="radio" value="one" />
+						First radio button
+					</label>
+				</div>
+				
+				<div class="radio-inline">
+					<label>
+						<input type="radio" value="r-two" />
+						Second radio 
+					</label>
+				</div>
+				
+				<div class="radio-inline disabled">
+					<label>
+						<input type="radio" value="r-three" disabled="disabled" />
+						Third radio - disabled
+					</label>
+				</div>
+				
+				<div class="checkbox">
+					<input type="checkbox" id="soloCheckbox" value="value" aria-label="Label for assistive devices" />
+				</div>
+				
+				<select id="dropdown" class="form-control">
+					<option>pick one</option>
+					<option>one</option>
+					<option>two</option>
+					<option>three</option>
+				</select>
+				<input type="text" id="inputWithHelpBlock" class="form-control" aria-describeby="helpfield"/>
+				<span id="helpfield" class="help-block">
+					This is text describes a form field.
+				</span>
+		</div>
+	</body>
+
+</html>

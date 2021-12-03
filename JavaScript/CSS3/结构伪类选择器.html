@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>结构伪类选择器</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			ul{
+				list-style: none outside none;
+				padding: 10px;
+				background: green;
+				width: 400px;
+			}
+			li {
+				margin-bottom: 10px;
+				border: 1px solid orange;
+			}
+			div {
+				margin-bottom: 10px;
+				border: 1px solid blue;
+			}
+			/*li {
+				display: inline-block;
+				margin: 5px;
+				padding: 5px;
+				width: 50px;
+				height: 50px;
+				font: bold 30px arial;
+				background: #000;
+				color: #fff;
+				border-radius: 50px;
+				text-align: center;
+				line-height: 1.6;
+			}*/
+			
+			ul>li:first-child {
+				background-color: green;
+			}
+			ul>li:last-child {
+				background-color: blue;
+			}
+			ul>li:nth-child(3) {
+				/*第三个不会改变样式*/
+				background-color: yellow;
+			}
+			ul>li:nth-child(5) {
+				/*第三个li样式改变*/
+				background-color: yellow;
+			}
+			ul>li:nth-of-type(4) {
+				background-color: yellow;
+			}
+			ul>li:nth-child(n) {
+				/*参数n从0开始取值, 只能用n不能用其他字母代替*/
+				background-color: orange;
+			}
+			ul>li:nth-child(2n) {
+				/*或者把 2n替换成 even, 效果一样*/
+				background-color: blue;
+			}
+			ul>li:nth-child(2n+1) {
+				/*或者把 2n+1替换成 odd, 效果一样*/
+				background-color: gray;
+			}
+			ul>li:nth-child(n+5) {
+				/*从第5个元素开始选择*/
+				background-color: red;
+			}
+			ul>li:nth-child(-n+5) {
+				/*选择第1个到第5个元素*/
+				background-color: cyan;
+			}
+			ul>li:nth-child(4n+1) {
+				/*隔3选1*/
+				background-color: #FFC0CB;
+			}
+			ul>li:nth-last-child(4) {
+				/*从最后一个子元素开始计算来选择特定的元素*/
+				background-color: chocolate;
+			}
+			/*
+			 :nth-child(odd) 与 :nth-last-child(even) 选择的元素相同, 
+			 而 :nth-child(even) 与 :nth-last-child(odd) 选择的元素相同
+			 * */
+			ul>li:first-child {
+				background-color: purple;
+			}
+			ul>li:last-child {
+				background-color: mediumpurple;
+			}
+			
+			.post {
+				width: 300px;
+				margin: 20px auto;
+				padding: 5px;
+				border: 1px solid #ccc;
+			}
+			 p {
+			 	background: green;
+			 	color: #fff;
+			 	border: 1px solid orange;
+			 	padding: 5px;
+			 }
+			 .post>p:only-child {
+			 	border-width: 2px;
+			 	background-color: #000;
+			 }
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<div>div</div>
+			<div>div</div>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+			<li>7</li>
+			<li>8</li>
+			<li>9</li>
+			<li>10</li>
+		</ul>
+		
+		<div class="post">
+			<p>我是第一个段落</p>
+			<p>我是第二个段落</p>
+		</div>
+		<div class="post">
+			<p>我就一个段落</p>
+		</div>
+	</body>
+</html>

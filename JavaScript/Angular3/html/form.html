@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../js/angular.min.js" ></script>
+	</head>
+	<body>
+		<div ng-app="myApp" ng-controller="myCtrl">
+			<form novalidate="novalidate">
+				First name:<br />
+				<input type="text" ng-model="user.firstName" /><br />
+				Last name:<br />
+				<input type="text" ng-model="user.lastName" /><br />
+				<button ng-click="reset()">rest1</button>
+			</form>
+			<p>form={{user}}</p>
+			<p>master={{master}}</p>
+		</div>
+		<script type="text/javascript">
+			var app = angular.module('myApp',[]);
+			app.controller('myCtrl',function ($scope) {
+				$scope.master = {firstName:'三',lastName:'啊'};
+				$scope.reset1 = function () {
+					$scope.user = angular.copy($scope.master);
+				}
+				$scope.reset1();
+			});
+		</script>
+	</body>
+</html>

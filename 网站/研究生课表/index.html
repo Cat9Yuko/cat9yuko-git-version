@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<script src="js/jquery-1.9.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/Timetables.min.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/mystyle.css" />
+		<title>研究生课表</title>
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+      		<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    	<![endif]-->
+	</head>
+
+	<div class="c_date"><span class="pre"><img  src="img/jiantou.png" height="12px" width="12px" /></span> &nbsp;&nbsp;
+		<span class="years">2019</span>-<span class="next-years">2020</span>&nbsp;<span class="term ">第一学期</span>&nbsp;&nbsp;
+		<span class="next"><img  src="img/jiantou2.png" height="12px" width="12px" /></span>
+	</div>
+	<div id="courses_table"></div>
+
+	<script type="text/javascript">
+		$(function() {
+			var date = new Date();
+			var years = date.getFullYear();
+			//			$('.years').text(years)
+			//			$('.next-years').text(years+1)
+			//判断学期
+			
+			var term = ['第一学期', '第二学期'];
+			$('.pre').click(function() {
+				var $term = $('.term').text();
+				if($term == term[0]) {
+					console.log('1');
+					$('.term').text(term[1]);
+					var y = $('.years').text();
+					var yy = parseInt(y) - 1;
+					$('.years').text(yy)
+					$('.next-years').text(y)
+				} else {
+					$('.term').text(term[0]);
+				}
+
+			});
+			
+			$('.next').click(function () {
+				var $term2 = $('.term').text();
+				
+				if($term2 == term[1]) {
+					$('.term').text(term[0])
+					var y1 = $('.years').text();
+					var yy1 = parseInt(y1)+1;
+					var next_y = $('.next-years').text();
+					var yy2 = parseInt(next_y)+1;
+					$('.years').text(yy1);
+					$('.next-years').text(yy2);
+				}else {
+					$('.term').text(term[1])
+				}
+			});
+		})
+
+		var course_list = [
+			['', '', '', '', '', '', '', '', '', '', '', '', ''],
+			['', '', '03j0027青少年历奇辅导（ 中级）第1 - 12 周教学楼1104(专业硕士)', '03j0027青少年历奇辅导（ 中级）第1 - 12 周教学楼1104(专业硕士)', '03j0027青少年历奇辅导（ 中级）第1 - 12 周教学楼1104(专业硕士)', '', '03j0007自我成长第2-13周   教学楼1104(专业硕士)', '03j0007自我成长第2-13周   教学楼1104(专业硕士)', '03j0007自我成长第2-13周   教学楼1104(专业硕士)', '', '', '', ''],
+			['', '', '', '', '', '', '', '', '', '', '', ''],
+			['', '', '03j0032小组工作第2-7周 教学楼1104(专业硕士)', '03j0032小组工作第2-7周 教学楼1104(专业硕士)', '03j0032小组工作第2-7周 教学楼1104(专业硕士)', '', '', '', '', '', '', ''],
+			['', '', '', '', '', '', '', '', '', '', '', ''],
+		]; /*课表*/
+		var week = ['一', '二', '三', '四', '五']; /*星期*/
+		var day = new Date().getDay();
+		var course_type = [
+			[{
+				index: '08:00',
+				name: '08:45',
+			}, 1],
+			[{
+				index: '08:50',
+				name: '09:35',
+			}, 1],
+			[{
+				index: '09:45',
+				name: '10:30',
+			}, 1],
+			[{
+				index: '10:35',
+				name: '11:20',
+			}, 1],
+			[{
+				index: '11:25',
+				name: '12:10',
+			}, 1],
+			[{
+				index: '14:00',
+				name: '14:45',
+			}, 1],
+			[{
+				index: '14:50',
+				name: '15:35',
+			}, 1],
+			[{
+				index: '15:40',
+				name: '16:25',
+			}, 1],
+			[{
+				index: '16:35',
+				name: '17:20',
+			}, 1],
+			[{
+				index: '17:25',
+				name: '18:10',
+			}, 1],
+			[{
+				index: '19:00',
+				name: '19:45',
+			}, 1],
+			[{
+				index: '',
+				name: '',
+			}, 1],
+			[{
+				index: '',
+				name: '20:40',
+			}, 1]
+		];
+
+		var time_table = new Timetables({
+			el: '#courses_table',
+			timetables: course_list,
+			week: week,
+			timetableType: course_type,
+			//					highlightWeek: day,
+			gridOnClick: function(e) {
+				alert(e.name + '  ' + e.week + ', 第' + e.index + '节课, 课长' + e.length + '节');
+				console.log(e);
+			},
+			styles: {
+				Gheight: 40
+			}
+		})
+
+		$(".left-hand-TextDom").text("时间");
+		$(".left-hand-12").addClass("narrow_down");
+		$(".stage_12").addClass("narrow_down_ul");
+		
+		
+	</script>
+
+	<body>
+	</body>
+
+</html>

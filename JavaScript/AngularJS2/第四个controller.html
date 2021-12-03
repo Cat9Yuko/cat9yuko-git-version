@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="test">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/angular.js" ></script>
+		<script type="text/javascript">
+			let a = 12;
+			//声明模块
+			let mod = angular.module('test',[]);
+			//声明controller
+			//$scope:angularjs中的作用域,所有的数据都会保存在scope中
+			mod.controller('main',function($scope){
+				$scope.a=0;
+				$scope.b=0;
+				//打通ng和js环境
+				$scope.p = function (str) {
+				return window.parseInt(str);	
+				}
+			})
+		</script>
+	</head>
+	<body ng-controller="main">
+		<input type="text" ng-model="a"/>
+		<input type="text" ng-model="b" />
+		{{p(a)+p(b)}}
+	</body>
+	
+</html>

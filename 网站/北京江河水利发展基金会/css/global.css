@@ -1,0 +1,26 @@
+@charset "utf-8";
+/*  author happy  */
+/*5部分*/
+.col-lg-2dot4 {
+position: relative;
+min-height: 1px;
+padding-right: 15px;
+padding-left: 15px;
+}
+@media (min-width: 992px) {
+.col-md-2dot4 {
+float: left;
+}
+.col-md-2dot4 {
+width: 20%;
+}
+.col-md-pull-2dot4 {
+right: 20%;
+}
+.col-md-push-2dot4 {
+left: 20%;
+}
+.col-md-offset-2dot4 {
+margin-left: 20%;
+}
+}

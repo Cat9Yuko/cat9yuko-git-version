@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <title>水知识</title>
+    <link rel="stylesheet" href="http://xxfb.mwr.cn/css/base.css">
+    <style type="text/css">
+    .wrapper {
+        max-width: 1200px;
+        overflow: inherit;
+    }
+    .footer {
+        width: 1200px;
+        margin-top: 10px;
+    }
+        .boxs {
+            box-shadow: 0px 0px 3px 1px #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="top">
+                <span class="fr">欢迎您来到全国水雨情信息网站!</span>
+                <span id="date">2021年1月28日 星期五</span>
+            </div>
+            <img class="hidden-m" src="http://xxfb.mwr.cn/images/ysq_banner.png" width="100%">
+        </div>
+        <div class="center-block">
+            <div style="width: 100%;min-height: 380px;">
+                
+                <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td height="20"></td>
+                    </tr>
+                </table>
+                <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#ffffff" class="boxs">
+                    <tr>
+                        <td width="15">&nbsp;</td>
+                        <td>
+                            <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="">
+                                <tr>
+                                    <td align="left" height="40">&nbsp;&nbsp;<strong>当前位置：</strong>
+                                        <TRS_Curpage VALUE="--">当前位置</TRS_Curpage>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="">
+                                <TRS_Documents ID="owner" PAGESIZE="25">
+                                    <tr>
+                                        <td width="20" align="center" style="BORDER-BOTTOM: #787063 1px dashed; font-size:16px; padding-top:10px">
+                                            
+                                        </td>
+                                        <td align="left" width="796" style="BORDER-BOTTOM: #787063 1px dashed; font-size:16px; padding-top:10px">
+                                            <TRS_Document FIELD="doctitle" AUTOLINK="true">文档标题</TRS_Document>
+                                        </td>
+                                        <td width="88" align="center" style="BORDER-BOTTOM: #787063 1px dashed; font-size:16px; padding-top:10px">
+                                            <TRS_Document FIELD="docreltime" DATEFORMAT="yyyy-MM-dd">2010-08-28</TRS_Document>
+                                        </td>
+                                    </tr>
+                                </TRS_Documents>
+                            </table>
+                            <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="">
+                                <tr>
+                                    <td height="50" align="center">
+                                        <TRS_Template TEMPNAME="嵌套_概览分页脚本">嵌套_概览分页脚本</TRS_Template>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td width="15">&nbsp;</td>
+                    </tr>
+                </table>
+                <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td height="10"></td>
+                    </tr>
+                </table>
+                
+                </div>
+        </div>
+
+        <div class="footer">
+            <p>京ICP备19050848号 ▕ &nbsp;&nbsp;全国水雨情信息网版权所有，未经书面授权禁止使用</p>
+        </div>
+    </div>
+    
+
+    <script src="http://xxfb.mwr.cn/js/jquery-1.8.3.min.js"></script>
+    <script>
+        (function () {
+    var myDate = new Date;
+    var year = myDate.getFullYear();//获取当前年
+    var mon = myDate.getMonth()+1;//获取当前月
+    var date = myDate.getDate();//获取当前日
+    var week = myDate.getDay();
+    var weeks = ["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
+    $("#date").html(year+"年"+mon+"月"+date+"日 "+weeks[week]);
+})();
+    </script>
+</body>
+</html>

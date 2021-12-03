@@ -1,0 +1,342 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+section {
+	height: 75px;
+	border-bottom: 1px solid lightgray;
+}
+
+header {
+	width: 100%;
+	background-color: rgb(193, 0, 3);
+	color: #FFFFFF;
+	height: 30px;
+	text-align: center;
+	font-size: 14px;
+}
+
+
+/*文本垂直居中*/
+
+header {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+
+.title {
+	position: relative;
+}
+
+.A-icon {
+	position: absolute;
+	z-index: 999;
+	right: 15px;
+	float: right;
+}
+
+.search-icon {
+	position: absolute;
+	z-index: 999;
+	left: 15px;
+}
+
+.desc {
+	text-indent: 1em;
+	text-align: left;
+	height: 29px;
+	width: 100%;
+	position: absolute;
+	color: #FFFFFF;
+	background-color: rgba(178, 178, 178, 0.2);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#7F000000, endColorstr=#7F000000);
+	font-size: 15px;
+	bottom: 0;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.desc-contant {
+	margin-top: 5px;
+	overflow: hidden;
+	width: 16%;
+	text-overflow: ellipsis;
+}
+
+
+/*控制轮播点的大小*/
+
+.swiper-pagination {
+	bottom: 4px;
+	right: 10px;
+	width: auto;
+}
+
+.swiper-pagination-white {
+	text-align: right;
+}
+
+.container-news {}
+
+.image-news-container {
+	float: left;
+	width: 30%;
+}
+
+.title-news-container {
+	padding-top: 10px;
+	float: left;
+	width: 70%;
+}
+
+.title-news>div {
+	font-size: 15px;
+}
+
+.image-news {
+	width: 90%;
+	height: 100%;
+}
+
+.image-news>img {
+	padding: 10px;
+}
+
+.desc-container1 {
+	font-family: "微软雅黑";
+	height: 17px;
+	overflow: hidden;
+	white-space: pre-wrap;
+	text-overflow: ellipsis;
+}
+
+.desc-container2 {
+	color: #D3D3D3;
+	padding-top: 10%;
+	text-align: right;
+	padding-right: 5px;
+}
+
+.title-date {
+	font-size: 12px;
+	padding-right: 5px;
+}
+
+.title-source {
+	font-size: 12px;
+}
+
+.description-title {
+	padding-bottom: 10px;
+}
+
+.description-time {
+	position: relative;
+	float: left;
+}
+
+.description-source {
+	float: left;
+}
+
+.p1 {
+	font-size: 6px;
+	padding-right: 5px;
+}
+
+.container-news-description {
+	margin-top: 20px;
+	margin-right: 20px;
+	margin-left: 20px;
+}
+
+.xian {
+	padding-top: 30px;
+	border-bottom: 1px solid #D3D3D3;
+}
+
+.news-content {
+	margin-top: 30px;
+}
+
+
+/*正文图片大小*/
+
+
+/*修改*/
+
+.news-content img {
+	display: block;
+	width: 100%;
+	height: 200px;
+}
+
+
+/*input框*/
+
+.search-input {
+	display: none;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.search-input>input {
+	text-indent: 6px;
+	position: relative;
+	height: 40px;
+	width: 70%;
+	border-radius: 5px;
+}
+
+
+/*上拉加载*/
+
+#wrapper {
+	height: 70%;
+	width: 100%;
+	min-width: 320px;
+	position: absolute;
+	left: 0;
+	overflow: hidden;
+	z-index: 1;
+	/* 防止本机Windows上的触摸事件 */
+	-ms-touch-action: none;
+	/* 防止callout tap-hold和文本的选择 */
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	/* 防止文本调整取向变化对web应用程序很有用 */
+	-webkit-text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+	-o-text-size-adjust: none;
+	text-size-adjust: none;
+}
+
+.pull-loading {
+	text-align: center;
+	height: 40px;
+	line-height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.desc-container1 {
+	overflow: inherit;
+}
+
+li {
+	height: 76px;
+	border-bottom: 1px solid lightgray;
+}
+
+li img {
+	margin-top: 5px;
+	margin-left: 5px;
+}
+
+.left-img {
+	float: left;
+	height: 100%;
+	width: 26%;
+	/*border: 1px solid black;*/
+}
+
+.right-content {
+	float: right;
+	width: 72%;
+	height: 100%;
+	/*border: 1px solid red;*/
+}
+
+.content-top {
+	margin-top: 5px;
+	font-size: 12px;
+	overflow: hidden;
+	height: 65%;
+}
+
+.content-bottom {
+	margin-top: 5px;
+	text-align: right;
+	margin-right: 5px;
+	color: #D3D3D3;
+	font-size: 12px;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+
+
+.pagination {
+	position: absolute;
+	z-index: 20;
+	bottom: 10px;
+	width: 10%;
+	text-align: right;
+	right: 5px;
+}
+
+.swiper-pagination-switch {
+	display: inline-block;
+	width: 2px;
+	height: 2px;
+	border-radius: 8px;
+	background: lightgray;
+	margin: 0 2px;
+	/*opacity: 0.8;*/
+	border: 1px solid #fff;
+	cursor: pointer;
+}
+
+.swiper-active-switch {
+	width: 3px;
+	height: 3px;
+	background: #fff;
+}
+
+/*改版样式*/
+.swiper-slide {
+	text-align: center;
+}
+/**/
+.swiper-slide img{
+	max-width: 100%;
+}
+.abstract {
+	position: absolute;
+	color: #FFFFFF;
+	background: rgba(0,0,0,.5);
+	text-align: left;
+	bottom: 0;
+	width: 100%;
+}
+
+
+.swiper-container {
+	width: 100%;
+	height: 300px;
+	overflow: hidden;
+}
+
+
+
+}

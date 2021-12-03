@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			
+			//alert(23==23);
+			//alert('aaa'=='aaa');
+			//alert(new Array(1,2,3)==new Array(1,2,3));
+			//alert({a:qw,b:242}=={a:qw,b:242});
+			
+		</script>
+	</head>
+	<body ng-init="arr=[{user:'blue',age:23},{user:'blue',age:23},{user:'red',age:33},{user:'zhangsan',age:12}]">
+		<ul>
+			<li ng-repeat="json in arr">姓名:{{json.user}},年龄:{{json.age}}</li>
+		</ul>
+	</body>
+</html>

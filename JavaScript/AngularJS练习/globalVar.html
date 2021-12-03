@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/angular.js" ></script>
+	</head>
+	<body>
+		<div ng-app="fkApp" ng-controller="fkCtrl">
+			<input type="text" ng-model="name"/>
+			{{name}}			
+		</div>
+		<script type="text/javascript">
+			//根据名称创建模块
+			var app = angular.module("fkApp",[]);
+			app.value("name","月月鸟");
+			app.constant("MAX_AGE","100");
+			//注册名为fkCtrl的控制器
+			app.controller("fkCtrl",function (name,MAX_AGE) {
+				console.log(name);
+				console.log(MAX_AGE);
+			});
+		</script>
+	</body>
+</html>

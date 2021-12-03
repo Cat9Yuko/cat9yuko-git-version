@@ -1,0 +1,64 @@
+#zSlider {
+	margin:0px auto;
+	width:1200px;
+	height: 620px;
+}
+#picshow {
+	position:relative;
+}
+#picshow, #picshow_img {
+	width:900px;
+	height:620px;
+	overflow:hidden;
+	float:left;
+}
+#picshow_img li {
+	width:900px;
+	height:620px;
+	overflow:hidden;
+	float:left;
+	display:none;
+}
+#picshow_img img {
+	width:900px;
+	height:620px;
+}
+
+#select_btn {
+	width:300px;
+	height:620px;
+	color:#111;
+	float:right;
+	display:inline;
+	background-color:#17417a;
+	overflow: hidden;
+}
+#select_btn li {
+	width:300px;
+	height:71px;
+	text-align: center;
+	cursor:pointer;
+}
+#select_btn li:hover {
+	background-color:rgba(4, 157, 244, 0.5);
+}
+#select_btn li.current {
+	background-color:#049df4;
+}
+#select_btn li.current .select_text{
+	font-size: 20px;
+}
+
+#select_btn ul {
+	margin-top: 27px;
+}
+
+
+#select_btn .select_text {
+	height:71px;
+	font-size: 16px;
+	line-height: 71px;
+	color: #FFFFFF;
+	overflow:hidden;
+	display:block;
+}

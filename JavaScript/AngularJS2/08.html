@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app="">
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="angular.js"></script>
+	</head>
+	<!--AngularJs出于性能的考虑 使用$index来解决问题
+	-->
+	<body ng-init="arr=[14,34,45]">
+		<ul>
+			<li ng-repeat="(index,val) in arr">{{index}}:{{val}}</li>
+		</ul>
+		<ul>
+			<li ng-repeat="val in arr">{{$index}}:{{val}}</li>
+		</ul>
+	</body>
+</html>

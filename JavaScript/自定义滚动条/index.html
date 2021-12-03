@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>自定义滚动插件</title>
+		<link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.css" />
+		<script src="js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.mCustomScrollbar.concat.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.scroll {
+				width: 200px;
+				height: 100px;
+				margin: 0 auto;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="scroll">
+			Default scrollbar with scroll buttons Lorem ipsum dolor sit amet. Aliquam erat volutpat. Maecenas non tortor nulla, non malesuada velit. Aliquam erat volutpat. Maecenas non tortor nulla, non malesuada velit. Nullam felis tellus, tristique nec egestas in, luctus sed diam. Suspendisse potenti. Consectetur adipiscing elit. Nulla consectetur libero consectetur quam consequat nec tincidunt massa feugiat. Donec egestas mi turpis. Fusce adipiscing dui eu metus gravida vel facilisis ligula iaculis. Cras a rhoncus massa. Donec sed purus eget nunc placerat consequat.
+		</div>
+		<script type="text/javascript">
+			(function($) {
+				$(window).load(function() {
+					$(".scroll").mCustomScrollbar();
+				});
+			})(jQuery);
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#div1{
+				width: 200px;
+				height: 200px;
+				background: red;
+			}
+		</style>
+		<script type="text/javascript" src="js/angular.js" ></script>
+		
+	</head>
+	<body ng-app="">
+		<input type="text" ng-model="name"/>
+		<div id="div1">
+			你的名字是{{name}}
+		</div>
+		
+	</body>
+</html>

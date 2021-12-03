@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+		<title>榜样风采</title>
+
+		<!-- Bootstrap core CSS -->
+		<link rel="stylesheet" type="text/css" href="images/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="images/slick.css" />
+		<script src="images/jquery-1.9.1.js" type="text/javascript" charset="utf-8"></script>
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+	      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+	      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    	<![endif]-->
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			img {
+				margin-bottom: 15px;
+				width: 100%;
+			}
+			
+			/**/
+			.slick-mod .slick-arrow,
+				.slick-mod2 .slick-arrow {
+					width: 25px;
+					height: 46px;
+					margin: auto;
+					position: fixed;
+					top: 0;
+					bottom: 42px;
+					z-index: 3;
+					cursor: pointer;
+				}
+				.slick-mod .slick-next {
+					right: 15%;
+					/*background: url("images/") no-repeat center;*/
+					background: url(images/right-arrow-gray.png) no-repeat center;
+				}
+				.slick-mod .slick-next:hover {
+					background: url(images/right-arrow-red.png) no-repeat center;
+				}
+				.slick-mod .slick-prev {
+					left: 15%;
+					/*background: url(../img/prev-1.png) no-repeat center;*/
+					background: url(images/left-arrow-gray.png) no-repeat center;
+				}
+				.slick-mod .slick-prev:hover {
+					background: url(images/left-arrow-red.png) no-repeat center;
+				}
+			/**/
+			@media only screen and (min-width: 800px) {
+				.slick-mod .slick-next {
+					right: 2%;
+				}
+				.slick-mod .slick-prev {
+					left: 2%;
+				}
+			}
+			@media only screen and (min-width: 900px ) {
+				.slick-mod .slick-next {
+					right: 2%;
+				}
+				.slick-mod .slick-prev {
+					left: 2%;
+				}
+			}
+			@media only screen and (min-width: 1100px ) {
+				.slick-mod .slick-next {
+					right: 2%;
+				}
+				.slick-mod .slick-prev {
+					left: 2%;
+				}
+			}
+			@media only screen and (min-width: 1300px ) {
+				.slick-mod .slick-next {
+					right: 2%;
+				}
+				.slick-mod .slick-prev {
+					left: 2%;
+				}
+			}
+			
+			@media only screen and (min-width: 1400px ) {
+				.slick-mod .slick-next {
+					right: 5%;
+				}
+				.slick-mod .slick-prev {
+					left: 5%;
+				}
+			}
+			@media only screen and (min-width: 1600px ) {
+				.slick-mod .slick-next {
+					right: 11%;
+				}
+				.slick-mod .slick-prev {
+					left: 12%;
+				}
+			}
+			
+			@media only screen and (max-width: 830px) {
+				.slick-mod .slick-arrow,
+				.slick-mod2 .slick-arrow {
+					display: none!important;
+				}
+			}
+			
+			
+			
+			@media only screen and (min-width: 100px) and (max-width: 768px) {
+				.weizhi {
+					margin-top: 0px;
+					margin-bottom: 80px;
+				}
+				
+			}
+			
+			@media (min-width: 768px) {
+				.weizhi {
+					margin-top: 110px;
+					margin-bottom: 230px;
+				}
+				
+			}
+			
+		</style>
+	</head>
+
+	<body>
+		<div class="container weizhi">
+			<div class="row">
+				<div class="col-xs-12 col-md-12 col-lg-12 col-sm-12">
+
+					<div class="slick-mod">
+						<div class="slick-item">
+							<img src="images/20191015_guangrongbang_pc_01.png" />
+							<img src="images/20191015_guangrongbang_pc_03.png" />
+							<img src="images/20191015_guangrongbang_pc_05.png" />
+							<img src="images/20191015_guangrongbang_pc_07.png" />
+							<img src="images/20191015_guangrongbang_pc_09.png" />
+							<img src="images/20191015_guangrongbang_pc_11.png" />
+						</div>
+						<div class="slick-item">
+							<img src="images/20191015_guangrongbang_pc_13.png" />
+							<img src="images/20191015_guangrongbang_pc_15.png" />
+							<img src="images/20191015_guangrongbang_pc_17.png" />
+							<img src="images/20191015_guangrongbang_pc_19.png" />
+							<img src="images/20191015_guangrongbang_pc_21.png" />
+							<img src="images/20191015_guangrongbang_pc_23.png" />
+							<img src="images/幻灯片2.jpg" width="1280px" />
+						</div>
+
+					</div>
+				</div>
+				<!--<div class="col-xs-12 hidden-sm hidden-md hidden-lg"><img src="images/20190829-guangrongbang-mobile2.png" width="100%"/></div>-->
+			</div>
+
+		</div>
+		<script src="images/slick.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$(".slick-mod").slick({
+					autoplay: true,
+					dots: false,
+				});
+			});
+		</script>
+	</body>
+
+</html>

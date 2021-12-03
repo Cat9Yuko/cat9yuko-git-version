@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{margin:0;padding:0;}
+        .slider_wrap{width:800px;height:450px;position:relative;overflow:hidden;margin:20px auto;}
+        .slider_wrap .slider_content{width:4000px;height:100%;position:absolute;top:0;}
+        .slider_wrap .slider_item{width:800px;height:100%;float:left;}
+        .slider_wrap .slider_item img{width:100%;height:100%;}
+        .slider_wrap .slider_btn{position:absolute;padding:10px;background:#ccc;top:207px;}
+        .slider_wrap .slider_btn.slider_prev{left:0;}
+        .slider_wrap .slider_btn.slider_next{right:0;}
+        .slider_wrap .slider_btnList{width:100%;position:absolute;bottom:5px;left:0;text-align:center;}
+        .slider_wrap .btnList{width:10px;height:10px;display:inline-block;background:#fff;border-radius:50%;margin:0 3px;}
+        .slider_wrap .btnList.active{background:#ccc;}
+    </style>
+</head>
+<body>
+    <div class="slider_wrap">
+        <div class="slider_content">
+            <div class="slider_item">
+                <img src="http://img.pconline.com.cn/images/upload/upc/tx/wallpaper/1308/15/c6/24496455_1376533836899_800x600.jpg" alt="">
+            </div>
+            <div class="slider_item">
+                <img src="http://img.pconline.com.cn/images/upload/upc/tx/wallpaper/1308/17/c2/24561035_1376699709480_800x600.jpg" alt="">
+            </div>
+            <div class="slider_item">
+                <img src="http://desk.fd.zol-img.com.cn/t_s960x600c5/g5/M00/0F/0F/ChMkJ1ZpMZGIB4seAB2BJTKeeGUAAF_IwH1XDcAHYE9922.jpg" alt="">
+            </div>
+            <div class="slider_item">
+                <img src="http://img.pconline.com.cn/images/upload/upc/tx/wallpaper/1308/17/c2/24561037_1376699725171_800x600.jpg" alt="">
+            </div>
+            <div class="slider_item">
+                <img src="http://desk.fd.zol-img.com.cn/t_s960x600c5/g5/M00/02/03/ChMkJ1bKxo2IUKlMABBGn3PconAAALHnABsvKEAEEa3344.jpg" alt="">
+            </div>
+        </div>
+        <div class="slider_btn slider_prev">prev</div>
+        <div class="slider_btn slider_next">next</div>
+    </div>
+</body>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        var setting = {
+            'index':0,
+            'interval':3000,
+            'duration':500,
+            'autoPlay':true
+        };
+        var sliderWrap = $(".slider_wrap");
+        var sliderCont = sliderWrap.find(".slider_content");
+        var sliderItem = sliderWrap.find(".slider_item");
+        var sliderPrev = sliderWrap.find(".slider_prev");
+        var sliderNext = sliderWrap.find(".slider_next");
+ 
+        //创建点击按钮
+        
+        var btnListDom = '';
+        sliderItem.each(function(){
+            btnListDom += '<div class="btnList"></div>';
+        });
+        var sliderBtnList = '<div class="slider_btnList">'+btnListDom+'</div>';
+        sliderWrap.append(sliderBtnList);
+        var btnList = sliderWrap.find('.btnList');
+        var sliderWidth = sliderWrap.width();
+ 
+        //最后一张添加到第一张前面，第一张添加到最后一张后面
+        
+        var firstItem = sliderItem.first().clone();
+        var lastItem  = sliderItem.last().clone();
+        sliderCont.append(firstItem).prepend(lastItem);
+        sliderItem = sliderCont.children();
+        var index = 0 ;
+ 
+        //这里的长度是程序添加后的长度
+        
+        var length = sliderItem.length;
+        var timer = null;
+        var isTransition = true;
+        sliderCont.css({
+            'width':length*sliderWidth,
+            'left':-sliderWidth
+        });
+        showBtn();
+        sliderPrev.click(function(){
+            animateFn('prev');
+        });
+        sliderNext.click(function(){
+            animateFn('next');
+        });
+        btnList.on('click',function(){
+            index = $(this).index();
+            animateFn('list');
+        });
+        sliderWrap.hover(clearIntervalFn,setIntervalFn);
+        setIntervalFn();
+        
+        function showBtn(){
+            btnList.eq(index).addClass('active').siblings().removeClass('active');
+        }
+ 
+        function animateFn(dir){
+            //判断是否正在动画
+            if(isTransition){
+                isTransition = false;
+                var timer = null;
+                // 判断传入参数是否为上一张
+                if(dir === 'prev'){
+                    index -- ;
+                    //如果当前张是否为第一张 运动到添加的最后一张，运动结束回调left值为最后张
+                    if(index<0){
+                        sliderCont.css({
+                            'left':0,
+                            'transition':setting.duration+'ms'
+                        });
+                        setTimeout(function(){
+                            sliderCont.css({
+                                'left':-(length-2)*sliderWidth,
+                                'transition':'0ms'
+                            });
+                            isTransition = true;
+                        },setting.duration);
+                        index = length-3;
+                    }else{
+                        move();
+                    }
+                }else if(dir === 'next'){
+                    index ++ ;
+                    if(index>length-3){
+                        sliderCont.css({
+                            'left':-(length-1)*sliderWidth,
+                            'transition':setting.duration+'ms'
+                        });
+                        setTimeout(function(){
+                            sliderCont.css({
+                                'left':-sliderWidth,
+                                'transition':'0ms'
+                            });
+                            isTransition = true;
+                        },setting.duration);
+                        index = 0;
+                    }else{
+                        move();
+                    }
+                }else if(dir === 'list'){
+                    move();
+                }
+                showBtn();
+                function move(){
+                    sliderCont.css({
+                        'left':-(index+1)*sliderWidth,
+                        'transition':setting.duration+'ms'
+                    });
+                }
+                sliderCont.on('transitionend webkitTransitionEnd mozTransitionEnd OTransitionEnd',function(){
+                    isTransition = true;
+                });
+            }
+        }
+        function setIntervalFn(){
+            clearIntervalFn();
+            if(setting.autoPlay){
+                timer = setInterval(function(){
+                    animateFn('next');
+                },setting.interval);
+            }
+        }
+        function clearIntervalFn(){
+            clearInterval(timer)
+        }
+    });
+</script>
+</html>

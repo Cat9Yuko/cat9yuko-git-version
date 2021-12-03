@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "微软雅黑";
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+.center-block-1264 {
+  width: 1264px;
+  margin: 0 auto;
+}
+.center-block-1158 {
+  width: 1158px;
+  margin: 0 auto;
+}
+/* user style */
+nav {
+  height: 60px;
+  line-height: 60px;
+  background-color: #edf8ff;
+  font-size: 20px;
+  color: #8c0402;
+  box-shadow: 0px 0 10px #000000;
+}
+.logo {
+  margin-top: 12px;
+}
+
+div.nav a + a {
+  margin-left: 51px;
+}
+.banner {
+  height: 912px;
+  background: url(../images_zt/xxds-202108-banner.jpg) center center no-repeat;
+  background-size: cover;
+}
+
+.section1 {
+  width: 1000px;
+  margin: 0 auto;
+  height: 452px;
+  margin-top: -627px;
+  background: url(../images_zt/xxds-202108-chnlbar.png) center top 45px
+    no-repeat;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 30px 41px 0 41px;
+  box-sizing: border-box;
+}
+.section2 {
+  width: 1178px;
+  margin: 0 auto;
+  margin-top: 172px;
+}
+.chnltab {
+  font-size: 29px;
+  text-align: center;
+  color: #d0a7a6;
+  font-weight: bold;
+}
+.chnltab a.act {
+  color: #8c0402;
+}
+.chnltab a + a {
+  margin-left: 28px;
+}
+.list {
+  padding-top: 25px;
+  display: none;
+}
+.list.act {
+  display: block;
+}
+.list li {
+  font-size: 18px;
+  line-height: 46px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.list li::before {
+  content: "";
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #000000;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.chnlitem {
+  width: 1178px;
+  padding-top: 53px;
+}
+.chnl {
+  height: 49px;
+  background: url(../images_zt/xxds-202108-chnlbg1.png);
+  background-size: cover;
+  font-size: 35px;
+  color: #980400;
+  font-weight: bold;
+  text-indent: 65px;
+  line-height: 49px;
+}
+.chnl.chnlbg2 {
+  background: url(../images_zt/xxds-202108-chnlbg2.png);
+  background-size: cover;
+  text-indent: 50px;
+}
+
+.ode li:nth-child(odd) {
+  width: 45%;
+  float: left;
+}
+.ode li:nth-child(even) {
+  width: 45%;
+  float: right;
+}
+
+footer {
+  margin-top: 50px;
+}
+.boxs {
+  box-shadow: 0px 0px 3px 1px #ccc;
+}
+.banner2 {
+  height: 459px;
+  background: url(../images_zt/xxds-202108-banner2.jpg) center center no-repeat;
+  background-size: cover;
+}
+.source-time {
+  margin: 0 auto;
+  height: 35px;
+  text-align: center;
+  position: relative;
+  line-height: 35px;
+}
+
+.time {
+  margin-right: 10px;
+}
+
+.wechat,
+.sina {
+  position: absolute;
+  margin-top: 5px;
+}
+
+.wechat {
+  margin-left: 10px;
+}
+
+.sina {
+  margin-left: 46px;
+}

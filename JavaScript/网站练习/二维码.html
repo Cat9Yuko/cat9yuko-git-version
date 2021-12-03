@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+	</head>
+	<body>
+		<div id="qrcode_top"></div>
+		<script src="js/jquery-1.9.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.qrcode.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(document).ready(function () {
+				var _render;
+			if (document.getElementById("qrcode_top").getContext) {          
+					_render = "canvas";
+			}else{
+					_render = "table";
+			}
+			jQuery('#qrcode_top').qrcode({render:_render,width:205,height:205,text:window.location.href});
+			
+			})
+		</script>
+	</body>
+</html>

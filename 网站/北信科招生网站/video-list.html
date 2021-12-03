@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="北京信息科技大学本科招生网">
+    <title>北京信息科技大学本科招生网</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/page.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="fixed">
+        <div class="blue-bg">
+            <div class="container">
+                <div class=" clearfix">
+                    <button type="button" class="navbar-toggle pull-left menu-switch" data-toggle="collapse"
+                        data-target="#appnav">
+                        <img class="on" src="img/app/app-nav.png" alt="" width="21px" height="19px">
+                        <img class="off" src="img/app/app-close.png" alt="" width="19px" height="19px">
+                    </button>
+                    <a href="" class="navbar-brand"><img class="hidden-sm hidden-md hidden-lg" src="img/app/logo.png"
+                            alt=""><img class="hidden-xs" src="img/logo.png" alt=""></a>
+                    <form action="">
+                        <!-- 电脑版搜索 -->
+                        <div class="hidden-xs pull-right pc-search">
+                            <div class=""><input type="text" placeholder="请输入搜索关键词"><input type="image"
+                                    src="img/searchicon.png"></div>
+                        </div>
+                        <div class="pull-right app-search visible-xs" data-toggle="modal" data-target="#search"><img
+                                src="img/app/app-searchicon.png" alt="" width="21px" height="21px"></div>
+                        <!-- 手机版搜索 -->
+                        <div class="modal fade" id="search" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal"
+                                            aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title" id="myModalLabel"></h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <input type="text" class="form-control" name="searchword"
+                                            placeholder="请输入关键词搜索">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary"
+                                            onclick="$('#appSearchform').submit()">搜索</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="white-bg">
+            <div class="container">
+                <nav id="appnav" class="collapse navbar-collapse">
+                    <ul class="nav nav-justified">
+                        <li class="dropdown"><a href="">网站首页</a></li>
+                        <li class="dropdown"><a href="">学校概况</a></li>
+                        <li class="dropdown"><a href="">政策咨询</a></li>
+                        <li class="dropdown"><a href="">报考指南</a></li>
+                        <li class="dropdown"><a href="">资料下载</a></li>
+                        <li class="dropdown"><a href="">最新动态</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        </div>
+        
+        <div class="banner">
+            <img src="img/list-banner.jpg" class="hidden-xs" width="100%">
+        </div>
+    </header>
+
+    <div class="main">
+        <div class="container">
+            <div class="list-nav">
+                <div class="list-nav--title">
+                    招生信息
+                </div>
+                <ul>
+                    <li class="--act"><a href="">招生计划</a></li>
+                    <li><a href="">历年分数</a></li>
+                    <li><a href="">填报助手</a></li>
+                    <li><a href="">智能咨询</a></li>
+                    <li><a href="">成绩查询</a></li>
+                    <li><a href="">录取查询</a></li>
+                    <li><a href="">录取进程</a></li>
+                </ul>
+            </div>
+
+            <div class="list-container">
+                <div class="visible-xs">
+                    <div class="scroll-channel"><span class="chnl-more pull-right"><img src="img/app/chnl-more.png" alt=""></span><a href="" class="act">最新动态</a><a href="">新闻咨讯</a><a href="">招生政策</a><a href="">招生信息</a><a href="">最新动态</a><a href="">最新动态</a></div>
+                    <div class="bggray"></div>
+                </div>
+                <div class="cur-page hidden-xs">
+                    <img src="img/home.png" alt=""><a href="">首页</a> &gt; <a href="">招生信息</a> &gt; <a href="">招生计划</a>
+                </div>
+                <div class="video-list-container clearfix">
+                    <div class="video-list-item" style="background: url(img/video-demo.jpg) center center no-repeat;">
+                        <a href=""><div class="video--icon hidden-xs"></div>
+                        <div class="bt-text">1文字文字文字文字文字文字...</div></a>
+                    </div>
+                    <div class="video-list-item" style="background: url(img/video-demo.jpg) center center no-repeat;">
+                        <a href=""><div class="video--icon hidden-xs"></div>
+                        <div class="bt-text">1文字文字文字文字文字文字...</div></a>
+                    </div>
+                    <div class="video-list-item" style="background: url(img/video-demo.jpg) center center no-repeat;">
+                        <a href=""><div class="video--icon hidden-xs"></div>
+                        <div class="bt-text">1文字文字文字文字文字文字...</div></a>
+                    </div>
+                    <div class="video-list-item" style="background: url(img/video-demo.jpg) center center no-repeat;">
+                        <a href=""><div class="video--icon hidden-xs"></div>
+                        <div class="bt-text">1文字文字文字文字文字文字...</div></a>
+                    </div>
+                    <div class="video-list-item" style="background: url(img/video-demo.jpg) center center no-repeat;">
+                        <a href=""><div class="video--icon hidden-xs"></div>
+                        <div class="bt-text">1文字文字文字文字文字文字...</div></a>
+                    </div>
+                    <div class="video-list-item" style="background: url(img/video-demo.jpg) center center no-repeat;">
+                        <a href=""><div class="video--icon hidden-xs"></div>
+                        <div class="bt-text">1文字文字文字文字文字文字...</div></a>
+                    </div>
+                    <div class="video-list-item" style="background: url(img/video-demo.jpg) center center no-repeat;">
+                        <a href=""><div class="video--icon hidden-xs"></div>
+                        <div class="bt-text">1文字文字文字文字文字文字...</div></a>
+                    </div>
+                    <div class="video-list-item" style="background: url(img/video-demo.jpg) center center no-repeat;">
+                        <a href=""><div class="video--icon hidden-xs"></div>
+                        <div class="bt-text">1文字文字文字文字文字文字...</div></a>
+                    </div>
+                    <div class="video-list-item" style="background: url(img/video-demo.jpg) center center no-repeat;">
+                        <a href=""><div class="video--icon hidden-xs"></div>
+                        <div class="bt-text">1文字文字文字文字文字文字...</div></a>
+                    </div>
+                </div>
+                <div class="dist hidden-xs">
+					<div class="fy"> <trs_template tempname="20190816-分页"><span><a class="sa" href="">首页</a><a href="" class="sa">上页</a></span><span class="pages"><a class="on" href="">1</a><a href="">2</a><a href="">3</a><a href="">4</a><a href="">5</a><a href="">6</a></span><span><a href="" class="sa">下页</a><a class="sa" href="">尾页</a></span></trs_template></div>
+        		</div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <!-- 手机版footer -->
+        <div class="container text-center afooter hidden-sm hidden-md hidden-lg">
+            <p>电话：010-82426126<br>邮箱: 提供一个招办邮箱<br>北京市海淀区清河小营东路12号</p>
+        </div>
+        <!-- 电脑版footer -->
+        <div class="container hidden-xs fqrcode">
+            <div class="row">
+                <div class="pull-left f1">
+                    <h4>&nbsp;</h4>
+                    <p><img src="img/flogo.svg" alt="" width="199px"></p>
+                </div>
+                <div class="pull-left f2">
+                    <h4>相关链接</h4>
+                    <div class="br">
+                        <p><a href="">辽宁招生考试之窗</a></p>
+                        <p><a href="">中国教育科研计算机网</a></p>
+                        <p><a href="">教育部阳光高考平台</a></p>
+                        <p><a href="">中华人民共和国教育部 </a></p>
+                    </div>
+                </div>
+                <div class="pull-left f3">
+                    <h4>联系方式</h4>
+                    <div class="br">
+                        <p>电话：010-82426126</p>
+                        <p>传真：010-62914528</p>
+                        <p>邮箱：可提供一个招办邮箱</p>
+                        <p>地址：北京市海淀区清河小营东路12号</p>
+                    </div>
+                </div>
+                <div class="pull-left f4">
+                    <h4>&nbsp;</h4>
+                    <div class="br">
+                        <div class="pull-left">
+                            <img src="img/wx-qrcode.png" alt="">
+                            <p>微信</p>
+                        </div>
+                        <div class="pull-right">
+                            <img src="img/tt-qrcode.png" alt="">
+                            <p>头条</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="pull-left f4">
+                    <h4>&nbsp;</h4>
+                    <div class="br no-brl">
+                        <div class="pull-left">
+                            <img src="img/ks-qrcode.png" alt="">
+                            <p>快手</p>
+                        </div>
+                        <div class="pull-right">
+                            <img src="img/dy-qrcode.png" alt="">
+                            <p>抖音</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="fcopyright hidden-xs">
+            <p>COPYRIGHT @2005-2012 BISTU EDU.CN 北京信息科技大学版权所有</p>
+        </div>
+    </footer>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/common.js"></script>
+    <script>
+        $(".menu-switch").on("click", function () {
+            $(this).toggleClass("act");
+            // $(".main").toggleClass("blur");
+            // $(".footer").toggleClass("blur");
+        })
+        $(".s2 .chnl-tabs a").hover(function () {
+            $(this).addClass("act").siblings().removeClass("act");
+            $(".list").eq($(this).index(".chnl-tabs a")).addClass("act").siblings().removeClass("act");
+        })
+        
+    </script>
+</body>
+
+</html>

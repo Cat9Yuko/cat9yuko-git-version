@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-3.4.1.js" ></script>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//加载DOM
+			function one() {
+				alert("one");
+			}
+			function two() {
+				alert("two");
+			}
+//			window.onload = one;
+//			window.onload = two;
+			/*字符串one不会被弹出
+			 javaScript的onload事件一次只能保存对一个函数的引用
+			 它会自动用后面的函数覆盖前面的函数*/
+			
+			/*window.onload = function () {
+				one();
+				two();
+				
+				//只能重新创建一个onload函数来输出两个函数
+			}*/
+		</script>
+		<style type="text/css">
+			.head{
+				text-align: center;
+				width: 200px;
+				line-height: 20px;
+				font-size: 14px;
+				border: 1px solid black;
+			}
+			.content{
+				width: 200px;
+				border: 1px solid black;
+				display: none;
+			}
+			.highlight{
+				color: red;
+			}
+		</style>
+		
+		<div id="pane1">
+			<h5 class="head">什么是jQuery?</h5>
+			<div class="content">
+				巴洛克个按时到了空间爱好就是打了哈市领导和拉合得来哈卡看来是卡上看很快就安徽省卡上卡上客家话
+			</div>
+		</div>
+		<script type="text/javascript">
+			//绑定事件
+			$(function () {
+				/*$("#pane1 h5.head").bind("click",function () {
+					var $content = $(this).next();
+				if ($content.is(":visible")) {
+					$content.hide();
+				} else{
+					$content.show();
+				}
+				})*/
+				
+				/*$("#pane1 h5.head").bind("mouseover",function () {
+					$(this).next().show();
+				}).bind("mouseout",function () {
+					$(this).next().hide();
+				})*/
+				
+				//简写绑定事件
+				$("#pane1 h5.head").mouseover(function () {
+					$(this).next().show();
+				}).mouseout(function () {
+					$(this).next().hide();
+				})
+				
+				//hover(enter,leave);当光标悬停触发第一个函数,光标离开触发第二个函数
+				$("#pane1 h5.head").hover(function () {
+					$(this).next().show();
+				},function () {
+					$(this).next().hide();
+				})
+			})
+			
+			
+				
+		</script>
+	</body>
+</html>

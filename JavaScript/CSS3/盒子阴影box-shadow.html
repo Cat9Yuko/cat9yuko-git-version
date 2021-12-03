@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>box-shadow属性</title>
+  <style type="text/css">
+    /* 单边阴影 */
+    .box-shadow {
+        width: 200px;
+        height: 100px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        margin: 20px;
+    }
+    .top {
+      box-shadow: 0 -2px 5px -3px red;
+    }
+    .right {
+      box-shadow: 2px 0 5px -3px green;
+    }
+    .bottom {
+      box-shadow: 0 2px 5px -3px blue;
+    }
+    .left {
+      box-shadow: -2px 0 5px -3px orange;
+    }
+    /* 四边相同的阴影效果
+       第一种:
+     */
+      .box-shadow2 {
+        /* 只设置模糊半径和颜色 */
+        width: 200px;
+        height: 100px;
+        border-radius: 10px;
+        margin: 20px;
+        box-shadow: 0 0 10px 10px #06c;   /* 扩展半径加强阴影效果 */
+
+      }
+
+      .box-shadow3 {
+        /* 只设置扩展半径和阴影眼色 */
+        width: 200px;
+        height: 100px;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        margin: 20px;
+        box-shadow: 0 0 0 10px #06c;
+      }
+
+      .box-shadow4 {
+        width: 200px;
+        height: 100px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: inset 3px 3px 10px #06c;
+      }
+
+      .box-shadow5 {
+        display: inline-block; /* 这个很重要 */
+        box-shadow: inset 5px 5px 10px #06c;
+      }
+      img {
+        position: relative; /* 这个很重要 */
+        z-index: -1;/* 这个很重要 */
+        vertical-align: top;
+      }
+
+      /* 多层阴影 */
+      .box-shadow6 {
+        width: 200px;
+        height: 100px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: -5px 0 5px red, 0 5px 5px blue, 5px 0 5px green, 0 -5px 5px orange;
+      }
+
+      .box-shadow7 {
+        width: 200px;
+        height: 100px;
+        border: 1px solid #ccc;
+        margin: 30px;
+        box-shadow: 0 0 0 1px red,
+                      0 0 0 1px blue,
+                      0 0 0 8px green,
+                      0 0 0 12px yellow,
+                      0 0 0 16px #06c,
+                      0 0 0 24px lime;
+      }
+
+      /* 兼容IE低版本,可以使用IE的滤镜来模拟实现 */
+      .box-shadow8 {
+        filter: progid:DXImageTransform.Microsoft.Shadow(color='颜色值',Direction=阴影角度(数值),Strength=阴影半径(数值));
+      }
+  </style>
+</head>
+<body>
+  <!--           默认值   内阴影  水平偏移  垂直偏移  模糊半径   扩展半径      颜色 -->
+<!-- box-shadow: none | [inset x-offset y-offset blur-dadius spread-radius color],
+[inset x-offset y-offset blur-dadius spread-radius color]
+box-shadow属性可以使用一个或多个投影, 如果使用多个投影时必须用逗号 ","隔开
+ -->
+ <div class="box-shadow top"></div>
+ <div class="box-shadow right"></div>
+ <div class="box-shadow bottom"></div>
+ <div class="box-shadow left"></div>
+
+ <div class="box-shadow2"></div>
+ <div class="box-shadow3"></div>
+
+ <!-- 内阴影 -->
+ <div class="box-shadow4"></div>
+
+<!-- 给图片添加内阴影 -->
+ <div class="box-shadow5">
+   <img src="images/bg.jpg" width="500px" height="500px">
+ </div>
+
+ <!-- 多层阴影 -->
+ <div class="box-shadow6"></div>
+
+<!-- 多色边框 -->
+ <div class="box-shadow7"></div>
+</body>
+</html>

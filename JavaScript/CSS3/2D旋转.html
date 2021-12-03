@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style media="screen">
+    div {
+      width: 500px;
+      height: 300px;
+      margin: 30px auto;
+      position: relative;
+      background: lightgray;
+      background-size: 100% 100%;
+    }
+
+    div img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -70px;
+      margin-top: -100px;
+    }
+
+    div img:nth-child(1) {
+      z-index: 1;
+      opacity: .6;
+    }
+
+    div img:nth-child(2) {
+      /* 在默认情况下,rotate()函数旋转元素是相对于元素中心点进行旋转,
+      同样可以通过transform-origin属性重置元素的旋转原点 */
+      z-index: 2;
+      transform-origin: top left;
+      transform: rotate(45deg);
+    }
+  </style>
+</head>
+<body>
+  <div>
+  <img src="images/bg.jpg" alt="" width="200px" height="150px">
+  <img src="images/bg.jpg" alt="" width="200px" height="150px">
+  </div>
+</body>
+</html>

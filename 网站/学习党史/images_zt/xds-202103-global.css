@@ -1,0 +1,252 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "微软雅黑";
+}
+/* body {
+  background: #eedbdb;
+} */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  border: none;
+}
+li {
+  list-style: none;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clearfix {
+  *zoom: 1;
+}
+.clearfix::after {
+  content: " ";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+.center-block-1200 {
+  width: 1200px;
+  margin: 0 auto;
+}
+.w540 {
+  width: 540px;
+}
+/* user style */
+.logo {
+  background: #edf8ff;
+  /* border: 1px solid #b3b4b5; */
+}
+
+.banner {
+  height: 851px;
+  background: url(../images_zt/xds-202103-bg1.jpg) center center no-repeat;
+  background-size: cover;
+}
+
+nav.nav {
+  height: 39px;
+  background: #be2121;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+div.nav {
+  display: table;
+  font-size: 20px;
+  color: #ffffff;
+  line-height: 39px;
+  text-align: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+.nav-item {
+  display: table-cell;
+  width: 1%;
+  table-layout: fixed;
+}
+.mtop {
+  margin-top: 430px;
+}
+/* carousel */
+.slick-mod,
+.slick-mod2 {
+  width: 514px;
+  height: 348px;
+}
+.slick-item {
+  position: relative;
+}
+.slick-item img {
+  width: 100%;
+}
+.tit1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 16px;
+  color: #ffffff;
+  line-height: 31px;
+  text-indent: 2rem;
+  background: rgba(0, 0, 0, 0.5);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.slick-mod .slick-dots,
+.slick-mod2 .slick-dots {
+  position: absolute;
+  right: 10px;
+  bottom: 9px;
+}
+.slick-mod2 .slick-dots {
+  bottom: 36px;
+}
+
+.slick-mod .slick-arrow,
+.slick-mod2 .slick-arrow {
+  width: 33px;
+  height: 57px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 3;
+  cursor: pointer;
+}
+/* .slick-mod .slick-next {
+  right: 0;
+  background: url(../images_zt/wlaq-202009-arrowrigh.png) no-repeat center;
+}
+.slick-mod .slick-prev {
+  left: 0;
+  background: url(../images_zt/wlaq-202009-arrowlef.png) no-repeat center;
+}
+
+.slick-mod2 .slick-next {
+  right: 0;
+  background: url(../images/wlaq-202009-arrowrigh.png) no-repeat center;
+}
+.slick-mod2 .slick-prev {
+  left: 0;
+  background: url(../images/wlaq-202009-arrowlef.png) no-repeat center;
+} */
+.slick-mod .slick-dots li,
+.slick-mod2 .slick-dots li {
+  width: 25px;
+  height: 4px;
+  background: #ffffff;
+  border-radius: initial;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin: 0 5px 0 0;
+}
+.slick-mod .slick-dots li.slick-active,
+.slick-mod2 .slick-dots li.slick-active {
+  width: 25px;
+  height: 4px;
+  background: #e50012;
+  border-radius: initial;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+/* --- */
+
+.text-content {
+  width: 673px;
+  height: 347px;
+  background: rgba(216, 245, 255, 0.5);
+  padding: 30px 30px;
+  box-sizing: border-box;
+}
+.text-content h2 {
+  text-align: center;
+  color: #be2121;
+  margin-bottom: 30px;
+}
+.text-content p {
+  text-indent: 2rem;
+  line-height: 30px;
+}
+.text-content p a {
+  color: #be2121;
+}
+.list {
+  padding: 25px 0 25px 0;
+}
+.list li {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 37px;
+}
+.list li::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: #313131;
+  vertical-align: middle;
+  margin: 0 15px 0 6px;
+}
+
+.bgbt {
+  /* height: 1000px; */
+  background: url(../images_zt/xds-202103-bg3.jpg) center center no-repeat;
+  background-size: cover;
+  padding: 40px 0;
+  box-sizing: border-box;
+}
+
+.whitebg {
+  box-shadow: 0 0 7px #efefef;
+  padding: 25px 25px 0 25px;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.5);
+  /* height: 646px; */
+}
+.chnlbg {
+  width: 540px;
+  height: 34px;
+  background: url(../images_zt/xds-202103-chnlbg.jpg);
+  line-height: 34px;
+  color: #ffffff;
+  font-size: 20px;
+  text-indent: 48px;
+}
+.chnlbg .fr {
+  margin-right: 19px;
+}
+.chnlbg .fr img {
+  margin-top: 7px;
+}
+
+.mtf {
+  margin-top: -380px;
+}
+.text-content .list {
+  border-top: 1px dashed #7d7d7d;
+  margin-top: 20px;
+  padding: 20px 0 0 0;
+}
+
+.hchnl .chnlbg {
+  width: 1150px;
+  background: url(../images_zt/xds-202103-chnlbg2.jpg) center center no-repeat;
+  background-size: cover;
+}
+.hchnl .list li:nth-child(even) {
+  width: 540px;
+  float: right;
+}
+.hchnl .list li:nth-child(odd) {
+  width: 540px;
+  float: left;
+}

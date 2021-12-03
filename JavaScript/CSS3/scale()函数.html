@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style media="screen">
+    .wrapper {
+      width: 500px;
+      height:400px;
+      margin: 30px auto;
+      position: relative;
+      background: url(images/bg.jpg) no-repeat center center;
+      background-size: 100% 100%;
+    }
+    .wrapper>div {
+      position: absolute;
+      background-color: hsla(220, 20%, 20%, 0.3);
+      top: 50%;
+      left: 50%;
+      margin-left: -100px;
+      margin-top: -100px;
+      width: 198px;
+      height: 198px;
+      border: 1px solid dotted orange;
+      text-align: center;
+      line-height: 198px;
+      color: #fff;
+      font-size: 20px;
+      /* 取负值会让元素进行翻转再缩放 */
+      transform: scale(-1.5);
+    }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+  <div>Scale(-1.5)</div>
+</div>
+</body>
+</html>

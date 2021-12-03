@@ -1,0 +1,218 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "微软雅黑";
+}
+img {
+  border: none;
+}
+a {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-user-select: none;
+  -moz-user-focus: none;
+  -moz-user-select: none;
+  text-decoration: none;
+}
+a:focus{text-decoration: none}
+li {
+  list-style: none;
+}
+.index {
+  width: 100%;
+}
+
+.index .bt {
+  height: 100%;
+}
+
+.index .box {
+  position: relative;
+  height: 50px;
+}
+.index .box img {
+  position: absolute;
+}
+.btn_g {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 22%;
+}
+.btn_g a,.btn-tj a {
+  display: inline-block;
+  width: 99px;
+  height: 29px;
+  /* float: left; */
+  background: #b00a0a;
+  color: #ffffff;
+  text-align: center;
+  line-height: 29px;
+  border-radius: 5px;
+  border: none;
+}
+.btn_g button,.btn-tj button {
+  width: 99px;
+  height: 29px;
+  /* float: left; */
+  background: #b00a0a;
+  color: #ffffff;
+  text-align: center;
+  line-height: 29px;
+  border-radius: 5px;
+  border: none;
+}
+
+.footer {
+  position: relative;
+}
+
+
+/* login */
+
+.login,.score {
+    height: 100vh;
+    background: url(../img/bznmgzdt_202006_mobile_loginbg.jpg) center center;
+    background-size: cover;
+    margin: 0 auto;
+}
+.login .box {
+    background: #ffffff;
+    padding: 30px 0;
+}
+.box-shadow {
+    box-shadow: 0 0 7px #c2c2c2;
+}
+.welcome {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.m-ul {
+    width: 90%;
+    margin: 0 auto;
+}
+.m-ul li {
+    border: 1px solid #ececec;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    padding: 5px;
+}
+.m-ul li img {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.m-ul li input {
+    border: none;
+    /* border-left: 1px solid #d0d0d0; */
+    text-indent: 1rem;
+    outline: none;
+}
+.m-ul li span {
+    display: inline-block;
+    border-right: 1px solid #d0d0d0;
+}
+
+.btn-tj {
+    padding: 3px 0;
+}
+.wregister {
+    margin-bottom: 10px;
+}
+
+.register .m-ul li{
+    margin-bottom: 5px;
+}
+
+.register .box {
+    padding: 10px 0 10px 0;
+    height: auto;
+}
+
+.m-ul select {
+  width: 86%;
+  text-indent: 1rem;
+  border: none;
+  outline: none;
+}
+.m-ul select:not(:last-child) {
+  margin-right: 5px;
+}
+
+/*answer*/
+.answer .box {
+	padding: 0 15px;
+	/* background: #d0ecef; */
+	padding-bottom: 25px;
+}
+
+.answer_t{
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.xuanxiang {
+	margin: 16px 0;
+	font-size: 14.5px;
+	color: #000000;
+}
+.xx_ul li {
+	line-height: 25px;
+}
+.xx_ul input {
+  margin-right: 5px;
+}
+.answer .box {
+  position: relative;
+  z-index: 999;
+  margin-top: -118px;
+  margin-bottom: -160px;
+}
+
+.timu {
+  text-indent: 2rem;
+}
+
+label {
+  font-weight: normal;
+}
+.score .box {
+  height: 360px;
+  width: 100%;
+  background: url(../img/202006nmgdt_icon_scorebg.png) center center;
+  background-size: cover;
+}
+
+.score .btn_g {
+  position: inherit;
+  margin-top: 15px;
+}
+.wenzi {
+  text-align: center;
+  padding-top: 160px;
+  color: #ffffff;
+  font-size: 13px;
+}
+.score .divh {
+  height: 20%;
+}
+
+.score .btn_g button:not(:last-child) {
+  margin-right: 32px;
+}
+@media only screen and (min-width: 100px) and (max-width: 320px) {
+	.register .box {
+        padding: 10px 0;
+        height: auto;
+    }
+    .m-ul li {
+        padding: 2px;
+        line-height: 1.1;
+    }
+    .m-ul select {
+      width: 86%;
+    }
+    .score .divh {
+      height: 10%;
+    }
+}

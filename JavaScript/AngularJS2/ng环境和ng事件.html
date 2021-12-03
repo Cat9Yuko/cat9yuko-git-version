@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/angular.js" ></script>
+	</head>
+	<body ng-init="arr=[{name:'张三',content:'下午好'},{name:'粤语鸟',content:'呜呜好'},{name:'月月鸟',content:'晚上好'}]">
+		
+		名字:<input type="text" name="" value="" ng-model="name" /><br />
+		内容:<input type="text" name="" value="" ng-model="content" />
+		<!--ng事件和ng-click单击事件-->
+		<!--<input type="button" value="提交" ng-click="arr.push({name:name,content:content})" />-->
+		<!--让最新留言显示在最上方-->
+		<input type="button" value="提交" ng-click="arr.unshift({name:name,content:content})" />
+		<ul>
+			<li ng-repeat="json in arr">
+				<h4>{{json.name}}</h4>
+				<h4>{{json.content}}</h4>
+			</li>
+		</ul>
+	</body>
+</html>

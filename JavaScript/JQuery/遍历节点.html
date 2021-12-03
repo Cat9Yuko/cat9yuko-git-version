@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-3.4.1.js" ></script>
+		<script type="text/javascript">
+			$(function () {
+				//children方法只考虑元素而不考虑其他后代元素
+			
+			var $body = $("body").children();//2个
+			var $p = $("p").children();//0个
+			var $ul = $("ul").children();//3个
+//			alert($body.length)
+//			alert($p.length)
+//			alert($ul.length)
+			for (var i=0,len = $ul.length;i<len;i++) {
+				//alert($ul[i].innerHTML);//循环输出li元素的html内容
+			}
+			
+			//next()方法
+			var p1 = $("p").next();//取得紧邻p元素后的同辈元素
+			
+			var $ul = $("ul").prev();//紧邻ul元素前的同辈元素
+			
+			var $p2 = $("p").siblings();//取得p元素的同辈元素
+			
+			$(document).bind("click",function (e) {
+				$(e.target).closest("li").css("color","red");
+			})
+			
+			//CSSDOM
+			$("p").css("color");//获取p元素的样式颜色
+			$("p").css("color","red");//设置元素样式的颜色为红色
+			
+			$("p").css({"fontSize":"30px","backgroundColor":"yellow"});
+			$("p").css("opacity",".5");//设置透明度
+			
+			$("p").css("height");//获取元素高度
+			
+			$("p").height();//获取p元素高度
+			$("p").height(100);//设置高度
+			$("p").height("10em");//设置高度
+			
+			$("p").width();//获取元素的宽度
+			$("p").width("100px");//设置元素的宽度
+			
+			//offset
+			var offset = $("p").offset();//获取p元素的offse
+			
+			var left = offset.left;//获取左偏移
+			var top = offset.top;	//获取有偏移
+			//相对于最近一个position样式的偏移
+			var position = $("p").position();
+			var left = position.left;
+			var top = position.top;
+			
+			//获取元素的滚动条顶端和左侧距离
+			var $p = $("p");
+			var scrollTop = $p.scrollTop();//元素距离顶端
+			var scrollLeft = $p.scrollLeft();//元素距离左侧
+			
+			$("textarea").scrollTop(300);
+			$("textarea").scrollLeft(300);
+			
+			});
+			
+		</script>
+	</head>
+	<body>
+		
+		<p>这是p标签</p>
+		<ul>
+			<li>li1</li>
+			<li>li2</li>
+			<li>li3</li>
+		</ul>
+		<textarea>
+			
+		</textarea>
+		
+	</body>
+</html>

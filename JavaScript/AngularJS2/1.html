@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app="">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/angular.js" ></script>
+		<!--数组中的元素默认是不能重复的
+			原因：默认数组中的元素是没有下标的
+			AngularJS中默认每一个元素就是下表
+			所以当数组中有重复的数据时，会报错
+		-->
+	</head>
+	<body ng-init="arr=[12,2,6,62]">
+		<ul>
+			<li ng-repeat="item in arr">{{item}}</li>
+		</ul>
+	</body>
+</html>

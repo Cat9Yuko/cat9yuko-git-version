@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>skew()</title>
+  <style media="screen">
+      div {
+        width: 500px;
+        height: 300px;
+        margin: 30px auto;
+        position: relative;
+        background: lightgray;
+      }
+
+      div img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -250px;
+        margin-top: -120px;
+      }
+
+      div img:nth-child(1) {
+        z-index: 1;
+        opacity: .6;
+      }
+
+      div img:nth-child(2) {
+        z-index: 2;
+        transform: skew(30deg,10deg);
+      }
+  </style>
+</head>
+<body>
+<!-- skew(ax) 或者 skew(ax,ay),未设置默认为0 -->
+<div>
+  <img src="images/bg.jpg" alt="" width="500px" height="250px">
+  <img src="images/bg.jpg" alt="" width="500px" height="250px">
+</div>
+</body>
+</html>

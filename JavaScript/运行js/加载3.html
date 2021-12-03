@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="js/dropload.css"/>
+		<style type="text/css">
+			/* dropload插件样式 */
+			
+			.dropload-up,
+			.dropload-down {
+				position: relative;
+				height: 0;
+				overflow: hidden;
+				font-size: 12px;
+				/* 开启硬件加速 */
+				-webkit-transform: translateZ(0);
+				transform: translateZ(0);
+			}
+			
+			.dropload-down {
+				height: 50px;
+			}
+			
+			.dropload-refresh,
+			.dropload-update,
+			.dropload-load,
+			.dropload-noData {
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+			}
+			
+			.dropload-load .loading {
+				display: inline-block;
+				height: 15px;
+				width: 15px;
+				border-radius: 100%;
+				margin: 6px;
+				border: 2px solid #666;
+				border-bottom-color: transparent;
+				vertical-align: middle;
+				-webkit-animation: rotate 0.75s linear infinite;
+				animation: rotate 0.75s linear infinite;
+			}
+			
+			@-webkit-keyframes rotate {
+				0% {
+					-webkit-transform: rotate(0deg);
+				}
+				50% {
+					-webkit-transform: rotate(180deg);
+				}
+				100% {
+					-webkit-transform: rotate(360deg);
+				}
+			}
+			
+			@keyframes rotate {
+				0% {
+					transform: rotate(0deg);
+				}
+				50% {
+					transform: rotate(180deg);
+				}
+				100% {
+					transform: rotate(360deg);
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+			
+			<div class="assess">
+				<div class="assess1">
+					
+				</div>
+			</div>
+			<script src="js/jquery-3.4.1.js" type="text/javascript" charset="utf-8"></script>
+			<script src="js/dropload.min.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			$(document).ready(function() {     //加载分页
+				    
+				load();  
+			});  
+			function load() {      
+				var num = 4;      
+				var counter1 = 1;      
+				var dropload = $('.assess').dropload({      
+					scrollArea: window,
+					      loadDownFn: function(me) {         // 加载“推荐医生”的数据
+						        
+						$.ajax({          
+							url: 'getDAListByUserId?nowpage="+counter1+"pageSize="+num,          
+							type: 'GET',
+							          success: function(data) {            
+								var data = JSON.parse(data)             var datas = data.content.content;            
+								var html = "";            
+								var html3 = "";            
+								var length = datas.length;            
+								if(length == 0) {              
+									me.lock();               // 无数据
+									              
+									me.noData();              
+									me.resetload();              
+									if(counter1 == 1) {                
+										$(".dropload-down").css("display", "none"); //没有更多数据的文字
+										              
+									}            
+								} else {
+
+									              
+									$(".dropload-load").show();              
+									counter1++;              
+									for(var i = 0; i < length; i++) {                
+										var evaluate = '';                
+										if(datas[i].status == 1) {                  
+											evaluate = '<span class="right go" title="' + datas[i].id + '">去评价</span>';                  
+											html3 = '<ul class="add" title="' + datas[i].id + '">';
+
+											                
+										} else if(datas[i].status == 2) {                  
+											evaluate = '<span class="right right2" title="' + datas[i].id + '">已评价</span>';                  
+											html3 = '<ul class="detail" title="' + datas[i].id + '">';                
+										}
+
+										                
+										html += '<div class="assess-main">' +                     '<p class="time">' +                     '<span class="left">' + datas[i].dateCreate + '</span>' +                     evaluate +                     '</p>' +                     html3 +                     '<li><span>看诊医生：</span><span>' + datas[i].doctorName + '</span><span class="doctor">' + datas[i].doctorTitle + '</span></li>' +                     '<li><span>就诊机构：</span><span>' + datas[i].workUnit + '</span></li>' +                     '<li><span>就诊人：</span><span>' + datas[i].patientName + '</span></li>' +                     '</ul>' +                     '</div>'                
+										if(length < 4 &&  i == (length - 1)) { //表示一页未满已经没有数据
+											                   // 锁定
+											                  
+											me.lock();                   // 无数据
+											                  
+											me.noData();                  
+											break;                
+										}              
+									}              
+									$(".assess1").append(html)               // me.noData();
+									               //me.unlock();
+									               me.resetload();            
+								};          
+							},
+							          error: function(xhr, type) {             // 即使加载出错，也得重置
+								            
+								me.resetload();          
+							}        
+						});      
+					}    
+				});  
+			}
+		</script>
+
+	</body>
+
+</html>

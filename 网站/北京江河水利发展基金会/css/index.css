@@ -1,0 +1,25 @@
+.section-one{padding:30px 0;}
+.section-two{padding:60px 0;background: url(../images/bg1.jpg) no-repeat;background-size:cover;}
+.section-three{padding:50px 0;}
+.section-four{padding:20px 0;background-color:#eeeeee;}
+.commom-header{margin-bottom:40px;position:relative;}
+.commom-header .title{font-size:26px;color:#b8c0bb;margin:0;}
+.commom-header .title span{color:#025696;display:inline-block;margin-right:20px;padding:20px 0;position:relative;}
+.commom-header .title span:after{width:54px;height:6px;content:"";position:absolute;bottom:0;left:0;background:#025696;}
+.commom-header .more{margin-top:25px;margin-left:20px;}
+.commom-header .more a{width:19px;height:19px;display:block;float:left;font-size:0;background: url(../images/more2.png) no-repeat;}
+.page-box{padding:30px 20px;margin:20px 0;background-color: rgba(2,86,150,.72);}
+.page-box .page-header{border-bottom:0;margin-top:0;}
+.page-box .page-header .title{font-size:24px;color:#fff;font-weight:bold;padding-left:44px;background: url(../images/ico01.png) left center no-repeat;}
+.page-text p{color:#f0f7f2;line-height:32px;}
+.page-more a{width:29px;height:29px;display:inline-block;font-size:0;background: url(../images/more.png) no-repeat;}
+.link-list li{height:47px;line-height:45px;border:1px solid #025696;margin-bottom:10px;text-align:center;}
+.link-list li a{display:block;font-size:16px;color:#244a35;padding-left:66px;position:relative;}
+.link-list li a:before{width:66px;height:45px;display:block;content:'';position:absolute;top:0;left:0;background:#025696;}
+.link-list li a i{width:25px;height:25px;display:block;position:absolute;top:10px;left:18px;transition: all 0.5s ease-in-out;transform: rotateY(0deg);-ms-transform: rotateY(0deg);-moz-transform: rotateY(0deg);-webkit-transform: rotateY(0deg);-o-transform: rotateY(0deg);}
+.link-list li a i.lk01{background: url(../images/lk01.png) no-repeat;}
+.link-list li a i.lk02{background: url(../images/lk02.png) no-repeat;}
+.link-list li a i.lk03{background: url(../images/lk03.png) no-repeat;}
+.link-list li a i.lk04{background: url(../images/lk04.png) no-repeat;}
+.link-list li a i.lk05{background: url(../images/lk05.png) no-repeat;}
+.link-list li a:hover i{transform:rotateY(180deg);}

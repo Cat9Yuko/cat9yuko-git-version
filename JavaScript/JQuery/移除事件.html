@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-3.4.1.js" ></script>
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+			
+			/*
+			 * unbind([type].[data]);
+			 * 第一个参数是事件的类型,第二个参数是将要移除的函数
+			 * 1)如果没有参数,则删除所有绑定的事件
+			 * 2)如果提供了事件类型作为参数,则只删除该类型的绑定事件
+			 * 3)如果把绑定时传递的处理函数作为第二个参数,则只有这个特定的事件处理函数会被删除
+			 */
+			$(function () {
+				$("#btn").bind("click",myFun1 = function () {
+					$("#test").append("<p>我的绑定函数1</p>");
+				}).bind("click",myFun2 = function () {
+					$("#test").append("<p>我的绑定函数2</p>");
+				}).bind("myClick",myFun3 = function () {
+					$("#test").append("<p>我的绑定函数3</p>");
+				}).one("click",myFun4 = function () {
+					//使用one方法只在第一次单击按钮是处理函数才执行,之后的单击毫无作用
+					$("#test").append("<p>我的绑定函数4</p>");
+				});
+				
+				$("#delAll").bind("click",function () {
+					$("#btn").unbind("click");//删除元素的所有click事件
+				})
+				
+				$("#delTwo").click(function(){
+					$("#btn").unbind("click",myFun2);//删除绑定函数2
+				})
+				
+				//模拟操作
+				$("#btn").trigger("click");
+				$("#btn").click();
+				$("#btn").trigger("myClick",["我的自定义","事件"]);
+				
+				//绑定多个事件
+				$("div").bind("mouseover mouseout",function () {
+					//当光标划入div元素是,该元素的class切换为over,划出时切换为先前的值
+					$(this).toggleClass("over");
+				})
+			})
+		</script>
+		<button id="btn">单击我</button>
+		<button id="delAll">删除所有事件</button>
+		<button id="delTwo">删除绑定函数2</button>
+		<div id="test">
+			
+		</div>
+	</body>
+</html>

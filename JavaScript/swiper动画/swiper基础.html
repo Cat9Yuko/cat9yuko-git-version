@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Swiper demo</title>
+		<!--导入swiper.css-->
+		<link rel="stylesheet" href="css/swiper.min.css">
+
+		<!-- Demo styles -->
+		<style>
+			.swiper-container {
+				width: 500px;
+				height: 500px;
+			}
+			
+			.swiper-slide {
+				/* 文本垂直居中 */
+				/*display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;*/
+			}
+			
+			.blue-slide {
+				background: url(img/bg_1.jpg) center center no-repeat;
+				background-size: cover;
+				/*background: blue;*/
+			}
+			
+			.orange-slide {
+				background: url(img/bg_2.jpg) center center no-repeat;
+				background-size: cover;
+				/*background: orange;*/
+			}
+			
+			.gray-slide {
+				background: url(img/bg_3.jpg) center center no-repeat;
+				background-size: cover;
+				/*background: gray;*/
+			}
+		</style>
+	</head>
+
+	<body>
+		<!-- Swiper -->
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide blue-slide"></div>
+				<div class="swiper-slide orange-slide"></div>
+				<div class="swiper-slide gray-slide"></div>
+			</div>
+			<div class="swiper-button-next">&nbsp;</div>
+			<div class="swiper-button-prev">&nbsp;</div>
+			<div class="swiper-pagination">&nbsp;</div>
+		</div>
+
+		<!-- Swiper JS -->
+		<script src="js/swiper.min.js"></script>
+
+		<!-- Initialize Swiper -->
+		<script>
+			var swiper = new Swiper('.swiper-container', {
+				//  	autoplay: true, //可选项,自动滑动, 注意 冒号后面有空格
+				//  	direction: 'vertical', //垂直切换,
+				//  	direction: 'horizontal' //横向切换(默认)
+				speed: 300, //切换速度
+				autoplay: {
+					delay: 3000 //自动切换速度
+				},
+//				grabCursor: true, //鼠标变成小手
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				},
+				pagination: {
+					el: '.swiper-pagination',
+				},
+			});
+		</script>
+	</body>
+
+</html>

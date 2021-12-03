@@ -1,0 +1,262 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "微软雅黑";
+}
+body {
+  background-color: #000d5b;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+img {
+  border: none;
+}
+.clearfix {
+  *zoom: 1;
+}
+.clearfix::after {
+  content: " ";
+  height: 0;
+  display: block;
+  visibility: hidden;
+  clear: both;
+}
+
+.center-block {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+
+.banner {
+  width: 100%;
+  height: 932px;
+  background: url(../images_zt/wlaqz-202009-banner.jpg) top center;
+  background-size: cover;
+}
+.h439 {
+  height: 439px;
+}
+.nav-menu {
+  /* top: 439px; */
+  background-color: #03c0f6;
+}
+
+.nav-menu ul {
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+}
+.nav-menu li {
+  display: table-cell;
+  text-align: center;
+  font-size: 24px;
+  color: #003679;
+  line-height: 64px;
+}
+
+.hnews {
+  height: 463px;
+  background: url(../images_zt/wlaq-202009-word.png) center center;
+  background-size: cover;
+  margin-top: 37px;
+}
+
+.chnlbg img {
+  width: 100%;
+}
+
+/* carousel */
+.slick-mod,
+.slick-mod2 {
+  width: 600px;
+  height: 336px;
+}
+.slick-item {
+  position: relative;
+}
+.slick-item img {
+  width: 100%;
+}
+.tit1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 16px;
+  color: #ffffff;
+  line-height: 40px;
+  text-indent: 2rem;
+  background: rgba(0, 0, 0, 0.5);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.slick-mod .slick-dots,
+.slick-mod2 .slick-dots {
+  position: absolute;
+  right: 10px;
+  bottom: 15px;
+}
+.slick-mod2 .slick-dots {
+  bottom: 36px;
+}
+
+.slick-mod .slick-arrow,
+.slick-mod2 .slick-arrow {
+  width: 33px;
+  height: 57px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 3;
+  cursor: pointer;
+}
+.slick-mod .slick-next {
+  right: 0;
+  background: url(../images_zt/wlaq-202009-arrowrigh.png) no-repeat center;
+}
+.slick-mod .slick-prev {
+  left: 0;
+  background: url(../images_zt/wlaq-202009-arrowlef.png) no-repeat center;
+}
+
+.slick-mod2 .slick-next {
+  right: 0;
+  background: url(../images/wlaq-202009-arrowrigh.png) no-repeat center;
+}
+.slick-mod2 .slick-prev {
+  left: 0;
+  background: url(../images/wlaq-202009-arrowlef.png) no-repeat center;
+}
+.slick-mod .slick-dots li,
+.slick-mod2 .slick-dots li {
+  width: 14px;
+  height: 14px;
+  background: #ffffff;
+  border-radius: 50%;
+  margin: 0 5px 0 0;
+}
+.slick-mod .slick-dots li.slick-active,
+.slick-mod2 .slick-dots li.slick-active {
+  width: 14px;
+  height: 14px;
+  background: #e50012;
+  border-radius: 50%;
+}
+/* --- */
+
+.ablist {
+  box-sizing: border-box;
+  width: 580px;
+  height: 336px;
+  background-color: #004492;
+  padding: 0 16px;
+  color: #ffffff;
+}
+.ablist .top {
+  height: 178px;
+  border-bottom: 1px dashed #00b7ee;
+}
+.ablist h1 {
+  font-size: 30px;
+  text-align: center;
+  line-height: 70px;
+}
+.ablist p {
+  font-size: 16px;
+  line-height: 35px;
+}
+.list {
+  padding: 10px;
+}
+.list li {
+  line-height: 35px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.list img {
+  vertical-align: middle;
+  margin: -2px 10px 0 0;
+}
+
+.list-container {
+  height: 351px;
+  background-color: #004492;
+  color: #ffffff;
+}
+.list-container .list {
+  padding: 40px 25px;
+}
+.list-container li {
+  width: 47%;
+}
+.list-container li:nth-child(even) {
+  float: right;
+}
+.list-container li:nth-child(odd) {
+  float: left;
+}
+
+.video-list {
+  box-sizing: border-box;
+  height: 405px;
+  background-color: #004492;
+  padding: 30px 20px;
+}
+
+.video {
+  width: 210px;
+  height: 160px;
+  float: left;
+  background-color: #ffffff;
+}
+.video-list .video:not(:nth-child(5n)) {
+  margin-right: 26px;
+}
+.video-list .video:not(:nth-child(n + 6)) {
+  margin-bottom: 33px;
+}
+
+.video img {
+  display: block;
+}
+.v-tit {
+  position: relative;
+  text-align: center;
+}
+
+.link1 {
+  height: 322px;
+  background: url(../images_zt/wlaqz-202009-lbg.jpg);
+  background-size: cover;
+}
+
+.link1 .fl,
+.link1 .fr {
+  width: 50%;
+  height: 100%;
+}
+.link1 img {
+  display: block;
+  width: 550px;
+  margin: 43px auto;
+}
+
+.mb25 {
+  margin-bottom: 25px;
+}

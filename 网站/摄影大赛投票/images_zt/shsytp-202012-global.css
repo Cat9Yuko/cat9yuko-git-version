@@ -1,0 +1,479 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "微软雅黑";
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+img {
+  border: none;
+}
+li {
+  list-style: none;
+}
+.center-block-1200 {
+  width: 1200px;
+  margin: 0 auto;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clearfix {
+  *zoom: 1;
+}
+.clearfix::after {
+  content: " ";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+
+/* user style */
+.banner {
+  width: 100%;
+  height: 560px;
+  background: url(../images_zt/shsytp-202012-banner.jpg) center center no-repeat;
+  background-size: cover;
+}
+.banner img,.dtdec img {
+  display: none;
+  max-width: 100%;
+}
+.dtdec {
+  width: 100%;
+  height: 754px;
+  background: url(../images_zt/shsytp-202012-banner2.jpg) center center no-repeat;
+  background-size: cover;
+}
+
+.section {
+    padding-bottom: 26px;
+}
+.section:nth-child(even) {
+  background: #f1fcff;
+}
+.section:nth-child(odd) {
+  background: #ffffff;
+}
+.title {
+    margin-bottom: 40px;
+}
+
+.s-item {
+  float: left;
+  width: 230px;
+  margin-right: 12px;
+  font-size: 15px;
+  margin-bottom: 38px;
+}
+.s-item:nth-child(5n +5) {
+    margin-right: 0;
+}
+.show-10 .s-item img {
+    width: 230px;
+    height: 380px;
+    margin-bottom: 20px;
+}
+.show-12 .s-item img {
+    width: 295px;
+    height: 180px;
+    margin-bottom: 20px;
+}
+.show-12 .s-item {
+    width: 295px;
+    margin-right: 6px;
+}
+
+.show-12 .s-item:nth-child(4n +4) {
+    margin-right: 0;
+}
+.s-item p {
+    line-height: 27px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-weight: bold;
+}
+.tp-btn {
+    width: 100px;
+    margin: 0 auto;
+    line-height: 25px;
+    background: #57a2e1;
+    color: #f1fcff;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 15px;
+    margin-top: 15px;
+    box-shadow: 0 0 7px #cccccc;
+}
+.tp-btn label {
+    cursor: pointer;
+}
+.tp-btn.act {
+    background: #9c9d9d;
+}
+.tp-btn input[type="checkbox"] {
+    margin-right: 5px;
+    border: none;
+}
+.tp-btn label{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+/* 轮播图切换图标 */
+.slick-mod {
+    padding-bottom: 57px;
+}
+.slick-mod .slick-arrow,
+.slick-mod2 .slick-arrow {
+  width: 32px;
+  height: 54px;
+  margin: auto;
+  position: absolute;
+  /* top: 0; */
+  bottom: 0;
+  z-index: 3;
+  cursor: pointer;
+}
+.slick-mod .slick-next {
+  right: 512px;
+  background: url(../images_zt/shystp-202012-right-arrow.png) no-repeat center;
+}
+.slick-mod .slick-prev {
+  left: 512px;
+  background: url(../images_zt/shystp-202012-left-arrow.png) no-repeat center;
+}
+
+.subbtn {
+    text-align: center;
+    font-size: 28px;
+    margin-top: 82px;
+}
+.subbtn button{
+    display: inline;
+    text-align: center;
+    font-size: 28px;
+    color: #ffffff;
+    background: #3582c4;
+    border: none;
+    box-shadow: 0 0 7px #eeeeee;
+    padding: 10px 50px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.footer {
+  background-color: #3582c4;
+} 
+.rebg {
+  background: url(../images_zt/shsytp-202012-banner3.jpg) center center no-repeat;
+  background-size: cover;
+  height: 327px;
+}
+/* 手机端适配 */
+@media only screen and (min-width: 100px) and (max-width: 320px) {
+  .center-block-1200 {
+    width: auto;
+  }
+  .banner img,.dtdec img {
+    display: block;
+  }
+  .banner,.dtdec {
+    height: auto;
+    background: none;
+  }
+  .d-title {
+    font-size: 24px;
+    margin-top: 30px;
+  }
+  .article img:nth-of-type(2) {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 640px) {
+  .mnext {
+    right: calc(50% - 74px);
+    width: 60px!important;
+    height: 24px!important;
+    background: #cfe6f5;
+    color: #3c86c7;
+    text-align: center;
+    line-height: 24px;
+    border-radius: 5px;
+    border: 1px solid #e1ebed;
+  }
+  .mprev.slick-arrow.slick-disabled,.mnext.slick-arrow.slick-disabled {
+    background: #e4edef;
+    color: #000000;
+  }
+  .mprev {
+    left: calc(50% - 74px);
+    width: 60px!important;
+    height: 24px!important;
+    background: #cfe6f5;
+    color: #3c86c7;
+    text-align: center;
+    line-height: 24px;
+    border-radius: 5px;
+    box-shadow: 0 0 7px #eeeeee;
+  }
+  .s-item {
+    width: calc(33.33% - 6px);
+    margin-right: 6px;
+    font-size: 12px;
+    margin-bottom: 13px;
+  }
+  .s-item p {
+    margin: 0;
+    line-height: 24px;
+  }
+  .show-10 .s-item img {
+    width: 100%;
+    height: 196px;
+    margin-bottom: 10px;
+  }
+  .show-12 .s-item img {
+    width: 100%;
+    height: 110px;
+    margin-bottom: 10px;
+  }
+  .show-12 .s-item {
+    width: calc(50% - 4px);
+    margin-right: 4px;
+  }
+  .title {
+    margin-bottom: 12px;
+  }
+  .title img {
+    width: 104px;
+  }
+  .subbtn {
+    margin-top: 25px;
+  }
+  .subbtn button {
+    padding: 10px 25px;
+    font-size: 20px;
+  }
+  /*  */
+  .center-block-1200 {
+    width: auto;
+  }
+  .banner img,.dtdec img {
+    display: block;
+  }
+  .banner,.dtdec {
+    height: auto;
+    background: none;
+  }
+  .d-title {
+    font-size: 29px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  .article {
+    font-size: 16px;
+  }
+  .article img {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+  }
+  .article img:nth-of-type(2) {
+    width: 100%;
+  }
+  .source-time {
+    margin: 0 auto;
+    height: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .time {
+    /* margin-right: 10px; */
+  }
+  .wechat,
+  .sina {
+    /* line-height: 2.1; */
+    /* position: absolute; */
+  }
+  /* .wechat {
+    margin-left: 10px;
+  }
+  .sina {
+    margin-left: 46px;
+  } */
+}
+
+@media only screen and (min-width: 640px) and (max-width: 768px) {
+  .center-block-1200 {
+    width: auto;
+  }
+  .banner img,.dtdec img {
+    display: block;
+  }
+  .banner,.dtdec {
+    height: auto;
+    background: none;
+  }
+  .d-title {
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  .time,
+  .d-time {
+    font-size: 16px;
+  }
+  .source,
+  .d-source {
+    font-size: 16px;
+  }
+  .article {
+    font-size: 16px;
+  }
+  .article img {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /*width: 100%;*/
+  }
+  /*日期分享来源*/
+  .source-time {
+    margin: 0 auto;
+    height: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .time {
+    margin-right: 10px;
+  }
+  .wechat,
+  .sina {
+    position: absolute;
+    line-height: 2.1;
+  }
+  .wechat {
+    margin-left: 10px;
+  }
+  .sina {
+    margin-left: 46px;
+  }
+  .my-article {
+    font-size: 20px;
+    line-height: 2;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .center-block-1200 {
+    width: auto;
+  }
+  .banner img,.dtdec img {
+    display: block;
+  }
+  .banner,.dtdec {
+    height: auto;
+    background: none;
+  }
+  .d-title {
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  .time,
+  .d-time {
+    font-size: 16px;
+  }
+  .source,
+  .d-source {
+    font-size: 16px;
+  }
+  .article {
+    font-size: 16px;
+  }
+  .article img {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /*width: 100%;*/
+  }
+  /*日期分享来源*/
+  .source-time {
+    margin: 0 auto;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .time {
+    margin-right: 10px;
+  }
+  .wechat,
+  .sina {
+    position: absolute;
+    line-height: 2.1;
+  }
+  .wechat {
+    margin-left: 10px;
+  }
+  .sina {
+    margin-left: 46px;
+  }
+  .my-article {
+    font-size: 20px;
+    line-height: 2;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .d-title {
+    font-size: 24px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  .time,
+  .d-time {
+    font-size: 16px;
+  }
+  .source,
+  .d-source {
+    font-size: 16px;
+  }
+  .article {
+    font-size: 16px;
+  }
+  /*日期分享来源*/
+  .source-time {
+    margin: 0 auto;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin-bottom: 10px;
+    position: relative;
+  }
+  .time {
+    margin-right: 10px;
+  }
+  .wechat,
+  .sina {
+    position: absolute;
+    line-height: 2.1;
+  }
+  .wechat {
+    margin-left: 10px;
+  }
+  .sina {
+    margin-left: 46px;
+  }
+  .my-article {
+    font-size: 20px;
+    line-height: 2;
+  }
+}

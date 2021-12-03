@@ -1,0 +1,96 @@
+
+#featured-area {
+    height: 337px;
+    width: 1200px;
+    margin: 0px auto 0;
+}
+
+.roundabout-holder {
+    list-style: none;
+    width: 500px;
+    height: 300px;
+    margin: 0 auto
+}
+
+.roundabout-moveable-item {
+    font-size: 12px!important;
+    height: 382px;
+    width: 600px;
+    cursor: pointer;
+    padding: 5px;
+    border: 1px solid #aaa;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    background: #f9f9f9
+}
+
+.roundabout-moveable-item img {
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    margin: 0
+}
+
+.roundabout-in-focus {
+    cursor: auto
+}
+
+.roundabout-in-focus:hover {
+    -webkit-box-shadow: 0 0 20px #787878;
+    -moz-box-shadow: 0 0 20px #787878;
+    background: #f9f9f9
+}
+
+.roundabout-holder span {
+    display: none
+}
+
+.roundabout-in-focus:hover span {
+    display: inline;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    padding: 8px 20px;
+    background: #f9f9f9;
+    color: #36c;
+    z-index: 999;
+    -webkit-border-top-left-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    border-left: 1px solid #aaa;
+    border-top: 1px solid #aaa
+}
+
+.roundabout a:active,
+.roundabout a:focus,
+.roundabout a:visited {
+    outline: 0;
+    text-decoration: none
+}
+
+.roundabout li {
+    margin: 0
+}
+.arrow {
+    position: absolute;
+    top: 50%;
+}
+#arrowright {
+    right: 15px;
+}
+#arrowleft {
+    left: 15px;
+}
+.pp {
+    position: relative;
+}
+.tit {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    font-size: 20px;
+    color: #ffffff;
+    line-height: 44px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+}

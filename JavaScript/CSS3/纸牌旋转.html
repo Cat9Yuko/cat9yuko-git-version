@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>实战体验: 纸牌翻转</title>
+  <style media="screen">
+    div {
+      width: 500px;
+      height: 300px;
+      margin: 30px auto;
+      position: relative;
+      background: url(images/timg.png) no-repeat center center;
+      background-size: 100% 100%;
+    }
+    div img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -71px;
+      margin-top: -100px;
+      transform-origin: bottom;
+    }
+    div img:nth-child(1) {
+      opacity: .5;
+      z-index: 1;
+    }
+    div img:nth-child(2) {
+      z-index: 2;
+      transform: rotateX(45deg);
+    }
+    div:nth-of-type(2) {
+      perspective: 500px;
+    }
+  </style>
+</head>
+<body>
+<div><img src="images/timg.png" alt=""></div>
+</body>
+</html>

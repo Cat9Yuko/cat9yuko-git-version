@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-3.4.1.js" ></script>
+	</head>
+	<body>
+		
+		<!--event.type
+			该方法的作用是可以获取到事件的类型
+			
+			event.preventDefault
+			阻止默认的事件行为
+			
+			event.stopPropagation
+			阻止事件的冒泡
+			
+			event.target
+			获取到触发事件的元素
+			
+			event.relatedTarget
+			mouseover和mouseout所发的元素可以通过event.target来访问,相关元素通过event.relatedTarget来访问
+			
+			event.pageX和event.pageY
+			获取到光标相对于页面的x坐标和y坐标
+			
+			event.which
+			在鼠标单击事件中获取到鼠标的左中右键,在键盘事件中获取键盘的案件左中右
+			
+			event.metaKey
+			获取ctrl按键
+		-->
+		
+		<script type="text/javascript">
+			$(function () {
+				$("a").click(function (event) {
+				alert(event.type);//获取事件类型
+				return false;//阻止跳转连接
+			})
+				
+				
+				//event.target
+				$("a[href='http://google.com']").click(function (event) {
+					var tg = event.target;//获取事件对象
+					alert(tg.href);
+					return false;//阻止连接跳转
+				})
+			})
+			
+			//event.pageX和event.pageY
+			$("a").click(function (event) {
+				//获取鼠标当前相对于页面的坐标
+				alert("Current mouse position: "+event.pageX+","+event.pageY);
+				return false;//阻止连接跳转
+			})
+			
+		</script>
+		
+		
+		<a href="a.html">link</a>
+		<a href="http://google.com">Google</a>
+		<a href="xx.html">a</a>
+		<input type="text" />
+		<script type="text/javascript">
+			$("a").click(function (event) {
+				alert(event.which);//1 = 鼠标左键, 2 = 鼠标中键,3 = 鼠标右键
+			})
+			
+			$("input").keyup(function (event) {
+				alert(event.which);
+			})
+		</script>
+	</body>
+</html>

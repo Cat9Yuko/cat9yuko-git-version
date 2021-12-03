@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="images/bscroll.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="images/jquery-3.4.1.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			li {
+				text-align: center;
+				list-style: none;
+			}
+		</style>
+	</head>
+
+	<body>
+		<template>
+			<div class="shop_container">
+				<section>
+					<div>
+						12321312
+					</div>
+				</section>
+				<section class="menu_container">
+					<section class="menu_left" id="wrapper_menu" ref="wrapperMenu">
+						<ul>
+							<li v-for="(item,index) in menuList" :key="index" class="menu_left_li" :class="{activity_menu: index == menuIndex}" @click="chooseMenu(index)">
+
+								<img :src="getImgPath(item.icon_url)" v-if="item.icon_url">
+								<span>{{item.name}}</span>
+								<span class="category_num" v-if="categoryNum[index]&&item.type==1">{{categoryNum[index]}}</span>
+							</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<div v-for="i in 2">
+						{{i}}
+					</div>
+				</section>
+			</div>
+		</template>
+		<script>
+			import { Flexbox, FlexboxItem } from‘ vux‘
+			import BScroll from‘ better - scroll‘
+			export default {
+				data() {
+					return {
+						categoryNum: [],
+						menuList: [{
+								name: "热销榜",
+								type: ‘1‘,
+								is_selected: true,
+								id: 2,
+								description: "大家喜欢吃，才叫真好吃。",
+								restaurant_id: 1,
+								foods: [{
+									name: 1,
+									restaurant_id: 1,
+									month_sales: 622,
+									category_id: 2,
+									specfoods: [{
+										food_id: 3152,
+										name: 1,
+										price: 20,
+										sold_out: false,
+										specs_name: "默认"
+									}]
+								}]
+							},
+							{
+								name: "热销榜",
+								type: ‘1‘,
+								is_selected: true,
+								id: 2,
+								description: "大家喜欢吃，才叫真好吃。",
+								restaurant_id: 1,
+								foods: [{
+									name: 1,
+									restaurant_id: 1,
+									month_sales: 622,
+									category_id: 2,
+									specfoods: [{
+										food_id: 3152,
+										name: 1,
+										price: 20,
+										sold_out: false,
+										specs_name: "默认"
+									}]
+								}]
+							},
+							{
+								name: "热销榜",
+								type: ‘1‘,
+								is_selected: true,
+								id: 2,
+								description: "大家喜欢吃，才叫真好吃。",
+								restaurant_id: 1,
+								foods: [{
+									name: 1,
+									restaurant_id: 1,
+									month_sales: 622,
+									category_id: 2,
+									specfoods: [{
+										food_id: 3152,
+										name: 1,
+										price: 20,
+										sold_out: false,
+										specs_name: "默认"
+									}]
+								}]
+							},
+							{
+								name: "热销榜",
+								type: ‘1‘,
+								is_selected: true,
+								id: 2,
+								description: "大家喜欢吃，才叫真好吃。",
+								restaurant_id: 1,
+								foods: [{
+									name: 1,
+									restaurant_id: 1,
+									month_sales: 622,
+									category_id: 2,
+									specfoods: [{
+										food_id: 3152,
+										name: 1,
+										price: 20,
+										sold_out: false,
+										specs_name: "默认"
+									}]
+								}]
+							},
+							{
+								name: "热销榜",
+								type: ‘1‘,
+								is_selected: true,
+								id: 2,
+								description: "大家喜欢吃，才叫真好吃。",
+								restaurant_id: 1,
+								foods: [{
+									name: 1,
+									restaurant_id: 1,
+									month_sales: 622,
+									category_id: 2,
+									specfoods: [{
+										food_id: 3152,
+										name: 1,
+										price: 20,
+										sold_out: false,
+										specs_name: "默认"
+									}]
+								}]
+							},
+							{
+								name: "热销榜",
+								type: ‘1‘,
+								is_selected: true,
+								id: 2,
+								description: "大家喜欢吃，才叫真好吃。",
+								restaurant_id: 1,
+								foods: [{
+									name: 1,
+									restaurant_id: 1,
+									month_sales: 622,
+									category_id: 2,
+									specfoods: [{
+										food_id: 3152,
+										name: 1,
+										price: 20,
+										sold_out: false,
+										specs_name: "默认"
+									}]
+								}]
+							},
+							{
+								name: "热销榜",
+								type: ‘1‘,
+								is_selected: true,
+								id: 2,
+								description: "大家喜欢吃，才叫真好吃。",
+								restaurant_id: 1,
+								foods: [{
+									name: 1,
+									restaurant_id: 1,
+									month_sales: 622,
+									category_id: 2,
+									specfoods: [{
+										food_id: 3152,
+										name: 1,
+										price: 20,
+										sold_out: false,
+										specs_name: "默认"
+									}]
+								}]
+							},
+							{
+								name: "热销榜",
+								type: ‘1‘,
+								is_selected: true,
+								id: 2,
+								description: "大家喜欢吃，才叫真好吃。",
+								restaurant_id: 1,
+								foods: [{
+									name: 1,
+									restaurant_id: 1,
+									month_sales: 622,
+									category_id: 2,
+									specfoods: [{
+										food_id: 3152,
+										name: 1,
+										price: 20,
+										sold_out: false,
+										specs_name: "默认"
+									}]
+								}]
+							},
+							{
+								name: "热销榜",
+								type: ‘1‘,
+								is_selected: true,
+								id: 2,
+								description: "大家喜欢吃，才叫真好吃。",
+								restaurant_id: 1,
+								foods: [{
+									name: 1,
+									restaurant_id: 1,
+									month_sales: 622,
+									category_id: 2,
+									specfoods: [{
+										food_id: 3152,
+										name: 1,
+										price: 20,
+										sold_out: false,
+										specs_name: "默认"
+									}]
+								}]
+							},
+							{
+								name: "热销榜",
+								type: ‘1‘,
+								is_selected: true,
+								id: 2,
+								description: "大家喜欢吃，才叫真好吃。",
+								restaurant_id: 1,
+								foods: [{
+									name: 1,
+									restaurant_id: 1,
+									month_sales: 622,
+									category_id: 2,
+									specfoods: [{
+										food_id: 3152,
+										name: 1,
+										price: 20,
+										sold_out: false,
+										specs_name: "默认"
+									}]
+								}]
+							},
+							{
+								name: "热销榜",
+								type: ‘1‘,
+								is_selected: true,
+								id: 2,
+								description: "大家喜欢吃，才叫真好吃。",
+								restaurant_id: 1,
+								foods: [{
+									name: 1,
+									restaurant_id: 1,
+									month_sales: 622,
+									category_id: 2,
+									specfoods: [{
+										food_id: 3152,
+										name: 1,
+										price: 20,
+										sold_out: false,
+										specs_name: "默认"
+									}]
+								}]
+							},
+							{
+								name: "热销榜",
+								type: ‘1‘,
+								is_selected: true,
+								id: 2,
+								description: "大家喜欢吃，才叫真好吃。",
+								restaurant_id: 1,
+								foods: [{
+									name: 1,
+									restaurant_id: 1,
+									month_sales: 622,
+									category_id: 2,
+									specfoods: [{
+										food_id: 3152,
+										name: 1,
+										price: 20,
+										sold_out: false,
+										specs_name: "默认"
+									}]
+								}]
+							},
+
+							{
+								name: "热销榜",
+								type: ‘1‘,
+								is_selected: true,
+								id: 2,
+								description: "大家喜欢吃，才叫真好吃。",
+								restaurant_id: 1,
+								foods: [{
+									name: 1,
+									restaurant_id: 1,
+									month_sales: 622,
+									category_id: 2,
+									specfoods: [{
+										food_id: 3152,
+										name: 1,
+										price: 20,
+										sold_out: false,
+										specs_name: "默认"
+									}]
+								}]
+							},
+							{
+								name: "热销榜3",
+								type: ‘1‘,
+								is_selected: true,
+								id: 2,
+								description: "大家喜欢吃，才叫真好吃。",
+								restaurant_id: 1,
+								foods: [{
+									name: 1,
+									restaurant_id: 1,
+									month_sales: 622,
+									category_id: 2,
+									specfoods: [{
+										food_id: 3152,
+										name: 1,
+										price: 20,
+										sold_out: false,
+										specs_name: "默认"
+									}]
+								}]
+							},
+							{
+								name: "热销榜",
+								type: ‘1‘,
+								is_selected: true,
+								id: 2,
+								description: "大家喜欢吃，才叫真好吃。",
+								restaurant_id: 1,
+								foods: [{
+									name: 1,
+									restaurant_id: 1,
+									month_sales: 622,
+									category_id: 2,
+									specfoods: [{
+										food_id: 3152,
+										name: 1,
+										price: 20,
+										sold_out: false,
+										specs_name: "默认"
+									}]
+								}]
+							},
+							{
+								name: "热销榜",
+								type: ‘1‘,
+								is_selected: true,
+								id: 2,
+								description: "大家喜欢吃，才叫真好吃。",
+								restaurant_id: 1,
+								foods: [{
+									name: 1,
+									restaurant_id: 1,
+									month_sales: 622,
+									category_id: 2,
+									specfoods: [{
+										food_id: 3152,
+										name: 1,
+										price: 20,
+										sold_out: false,
+										specs_name: "默认"
+									}]
+								}]
+							},
+							{
+								name: "热销榜",
+								type: ‘1‘,
+								is_selected: true,
+								id: 2,
+								description: "大家喜欢吃，才叫真好吃。",
+								restaurant_id: 1,
+								foods: [{
+									name: 1,
+									restaurant_id: 1,
+									month_sales: 622,
+									category_id: 2,
+									specfoods: [{
+										food_id: 3152,
+										name: 1,
+										price: 20,
+										sold_out: false,
+										specs_name: "默认"
+									}]
+								}]
+							},
+							{
+								name: "热销榜",
+								type: ‘1‘,
+								is_selected: true,
+								id: 2,
+								description: "大家喜欢吃，才叫真好吃。",
+								restaurant_id: 1,
+								foods: [{
+									name: 1,
+									restaurant_id: 1,
+									month_sales: 622,
+									category_id: 2,
+									specfoods: [{
+										food_id: 3152,
+										name: 1,
+										price: 20,
+										sold_out: false,
+										specs_name: "默认"
+									}]
+								}]
+							},
+							{
+								name: "热销榜",
+								type: ‘1‘,
+								is_selected: true,
+								id: 2,
+								description: "大家喜欢吃，才叫真好吃。",
+								restaurant_id: 1,
+								foods: [{
+									name: 1,
+									restaurant_id: 1,
+									month_sales: 622,
+									category_id: 2,
+									specfoods: [{
+										food_id: 3152,
+										name: 1,
+										price: 20,
+										sold_out: false,
+										specs_name: "默认"
+									}]
+								}]
+							},
+							{
+								name: "热销榜",
+								type: ‘1‘,
+								is_selected: true,
+								id: 2,
+								description: "大家喜欢吃，才叫真好吃。",
+								restaurant_id: 1,
+								foods: [{
+									name: 1,
+									restaurant_id: 1,
+									month_sales: 622,
+									category_id: 2,
+									specfoods: [{
+										food_id: 3152,
+										name: 1,
+										price: 20,
+										sold_out: false,
+										specs_name: "默认"
+									}]
+								}]
+							},
+							{
+								name: "热销榜",
+								type: ‘1‘,
+								is_selected: true,
+								id: 2,
+								description: "大家喜欢吃，才叫真好吃。",
+								restaurant_id: 1,
+								foods: [{
+									name: 1,
+									restaurant_id: 1,
+									month_sales: 622,
+									category_id: 2,
+									specfoods: [{
+										food_id: 3152,
+										name: 1,
+										price: 20,
+										sold_out: false,
+										specs_name: "默认"
+									}]
+								}]
+							},
+							{
+								name: "热销榜",
+								type: ‘1‘,
+								is_selected: true,
+								id: 2,
+								description: "大家喜欢吃，才叫真好吃。",
+								restaurant_id: 1,
+								foods: [{
+									name: 1,
+									restaurant_id: 1,
+									month_sales: 622,
+									category_id: 2,
+									specfoods: [{
+										food_id: 3152,
+										name: 1,
+										price: 20,
+										sold_out: false,
+										specs_name: "默认"
+									}]
+								}]
+							},
+							{
+								name: "热销榜",
+								type: ‘1‘,
+								is_selected: true,
+								id: 2,
+								description: "大家喜欢吃，才叫真好吃。",
+								restaurant_id: 1,
+								foods: [{
+									name: 1,
+									restaurant_id: 1,
+									month_sales: 622,
+									category_id: 2,
+									specfoods: [{
+										food_id: 3152,
+										name: 1,
+										price: 20,
+										sold_out: false,
+										specs_name: "默认"
+									}]
+								}]
+							},
+						]
+					}
+				},
+				created() {
+
+				},
+				mounted() {
+					setTimeout(() => {
+						this.$nextTick(() => {
+							this.initScroll()
+						})
+					}, 20)
+				},
+				methods: {
+					initScroll() {
+						if(!this.scroll) {
+							this.scroll = new BScroll(this.$refs.wrapperMenu, {
+								click: true
+							});
+						} else {
+							this.scroll.refresh();
+						}
+						console.log(this.scroll)
+					}
+				},
+				components: {
+					Flexbox,
+					FlexboxItem
+				}
+			}
+		</script>
+		<style lang="less">
+			.shop_container {
+				display: flex;
+				flex-direction: column;
+				position: absolute;
+				right: 0;
+				left: 0;
+				height: 100%;
+			}
+			
+			.menu_container {
+				display: flex;
+				flex: 1;
+				overflow-y: hidden;
+				position: relative;
+				.menu_left {
+					width: 3.8rem;
+					.menu_left_li {
+						padding: .7rem .3rem;
+						border-bottom: 0.025rem solid #ededed;
+						box-sizing: border-box;
+						border-left: 0.15rem solid #f8f8f8;
+						position: relative;
+						.category_num {
+							position: absolute;
+							top: .1rem;
+							right: .1rem;
+							background-color: #ff461d;
+							line-height: .6rem;
+							text-align: center;
+							border-radius: 50%;
+							border: 0.025rem solid #ff461d;
+							min-width: .6rem;
+							height: .6rem;
+							font-family: Helvetica Neue, Tahoma, Arial;
+						}
+					}
+					.activity_menu {
+						border-left: 0.15rem solid #3190e8;
+						background-color: #fff;
+						span:nth-of-type(1) {
+							font-weight: bold;
+						}
+					}
+				}
+			}
+		</style>
+	</body>
+
+</html>

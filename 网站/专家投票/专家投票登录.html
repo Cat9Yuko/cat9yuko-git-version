@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1203">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <title>专家投票</title>
+    <link rel="stylesheet" href="/css/zjtp-202008-global.css">
+</head>
+
+<body>
+    <div class="main-bg">
+        <div class="h550"></div>
+        <div class="center-block white-bg">
+            <p class="welcome">欢迎您登录</p>
+
+            <div class="login">
+                <form action="">
+                    <div class="item clearfix">
+                        <div class="qianzhui">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名</div>
+                        <div class="houzhui"><input type="text"></div>
+                    </div>
+                    <div class="item clearfix">
+                        <div class="qianzhui">身份证号</div>
+                        <div class="houzhui"><input type="text"></div>
+                    </div>
+                    <div class="item clearfix">
+                        <div class="qianzhui">验证码</div>
+                        <div class="houzhui"><input id="auth_code" type="text" class="layui-input" autocomplete="off"
+                                style="width: 400px; height: 43px; display: inline;" />
+                            <img id="authCode" src="<%=path %>/getAuthCode" width="" height="45" class="middle"
+                                onclick="changeAuthCode();" style="cursor: pointer;float: right;" /></div>
+                    </div>
+                    <div class="button-c"><a href="#">登&nbsp;&nbsp;&nbsp;&nbsp;录</a></div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="#cdcece">
+            <tbody>
+                <tr>
+                    <td align="center">
+                        <!--底部 start-->
+                        <table width="1200" border="0" cellspacing="0" cellpadding="0" bgcolor="" align="center"
+                            style="margin:0px auto; border-top:0px solid #cccccc">
+                            <tbody>
+                                <tr>
+                                    <td height="" align="center" valign="">
+
+                                        <table border="0" cellspacing="0" cellpadding="0" align="center">
+                                            <tbody>
+                                                <tr>
+                                                    <td height="20">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="font-size:16px; line-height:28px; color:#000">
+                                                        京ICP备14010557号 主办：水利部河湖管理司 网站联系电话：010-63202686
+                                                        <br> 政府网站标识码：bm20000001
+                                                        <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11040102700040"
+                                                            style="text-decoration: none;font-size:16px; color:#000"
+                                                            target="_blank"><img
+                                                                src="http://www.mwr.gov.cn/images_zt/20190906-guohui.png"
+                                                                border="0" style="display:inline">
+                                                            京公网安备11040102700040号</a>
+                                                    </td>
+                                                    <td style="padding-left:20px; padding-right:10px">
+                                                        <a href="http://bszs.conac.cn/sitename?method=show&amp;id=0726B189C5F03282E053012819ACDB52"
+                                                            target="_blank"><img
+                                                                src="http://www.mwr.gov.cn/images_zt/20190906-dzjg.png"
+                                                                width="44" height="56" border="0"></a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="http://121.43.68.40/exposure/jiucuo.html?site_code=bm20000001&amp;url=http%3A%2F%2Fwww.mwr.gov.cn%2F"
+                                                            target="_blank"><img
+                                                                src="http://www.mwr.gov.cn/images_zt/20190906-jiucuo.png"
+                                                                width="119" height="56" border="0"></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td height="20">&nbsp;</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!--底部 end-->
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="/js/jquery-1.9.1.js"></script>
+    <script>
+
+    </script>
+</body>
+
+</html>

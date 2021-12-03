@@ -1,0 +1,50 @@
+.swiper-container {
+	position: relative;
+	height: 385px;
+	width: 581px;
+}
+.swiper-slide {
+	position: relative;
+}
+
+.swiper-title {
+	height: 45px;
+	line-height: 45px;
+	font-size: 16px;
+	padding: 0 0 0 10px;
+	color: #FFFFFF;
+	width: 581px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	background: rgba(219,0 ,14,0.5);
+}
+
+
+
+/*分页器*/
+
+.pagination {
+	position: absolute;
+	z-index: 20;
+	right: 14px;
+	bottom: 16px;
+	width: 100%;
+	text-align: right;
+}
+
+.swiper-pagination-switch {
+	display: inline-block;
+	width: 13px;
+	height: 13px;
+	border-radius: 50%;
+	background: #fff;
+	margin: 0 3px;
+	opacity: 0.8;
+	border: 1px solid #fff;
+	cursor: pointer;
+}
+
+.swiper-active-switch {
+	background: #f60b05;
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-3.4.1.js" ></script>
+		<style type="text/css">
+			input:focus , textarea:focus{
+				border: 1px solid #f00;
+				background: #cc;
+				outline: none;
+			}
+		</style>
+	</head>
+	<body>
+		<!--单行文本框应用-->
+		
+		<form action="#" method="post" id="regForm">
+			<fieldset id="">
+				<legend>个人基本信息</legend>
+				<div>
+					<label for="username">名称:</label>
+					<input type="text" id="username"/>
+				</div>
+				<div>
+					<label for="pass">密码:</label>
+					<input id="pass" type="password" />
+				</div>
+				<div>
+					<label for="msg">详细信息:</label>
+					<textarea id="msg"></textarea>
+				</div>
+			</fieldset>
+		</form>
+		
+		<!--多行文本框应用-->
+		
+		<form>
+			<div class="msg">
+				<div class="msg_caption">
+					<span class="bigger">放大</span>
+					<span class="smaller">缩小</span>
+					<span class="up">向上</span>
+					<span class="down">向下</span>
+				</div>
+				<div>
+					<textarea id="comment" rows="8" cols="20">
+						多行文本框高度变化,多行文本框高度变化,多行文本框高度变化,多行文本框高度变化,多行文本框高度变化,多行文本框高度变化,
+						多行文本框高度变化,多行文本框高度变化,多行文本框高度变化,多行文本框高度变化,多行文本框高度变化,多行文本框高度变化,
+						多行文本框高度变化,多行文本框高度变化.
+					</textarea>
+				</div>
+			</div>
+		</form>
+		
+		<script type="text/javascript">
+			$(function () {
+				
+				var $comment = $("#comment");
+				
+				//放大
+				$(".bigger").click(function () {
+					if(!$comment.is(":animated")){//判断是否处于动画
+						if($comment.height()<500){
+						//重新设置高度,在原有的基础上加50
+//						$comment.height($comment.height()+50);
+//						$comment.width($comment.width()+50);
+						//自定义动画
+						$comment.animate({height:"+=50",width:"+=50"},400);
+					}
+					}
+				});
+				//缩小
+				$(".smaller").click(function () {
+					if(!$comment.is(":animated")){
+						if($comment.height()>50){
+						//重新设置高度在原有基础上减50
+//						$comment.height($comment.height()-50);
+//						$comment.width($comment.width()-50);
+						$comment.animate({height:"-=50",width:"-=50"},400);
+					}
+					}
+				});
+//				向上
+				$(".up").click(function () {
+					if($comment.is(":animated")){
+						$comment.animate({scrollTop:"-=50"},400);
+					}
+				});
+				//向下
+				$(".down").click(function () {
+					if($comment.is(":animated")){
+						$comment.animate({scrollTop:"+=50"},400);
+					}
+				});
+				
+			})
+		</script>
+	</body>
+</html>

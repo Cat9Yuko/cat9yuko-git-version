@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>第三批国家水情教育基地展示</title>
+		<link rel="stylesheet" type="text/css" href="images/20190728-base.css" />
+		<link rel="stylesheet" type="text/css" href="images/idangerous.swiper.3dflow.css" />
+		<link rel="stylesheet" type="text/css" href="images/idangerous.swiper.css" />
+		<script src="images/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="images/idangerous.swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="images/idangerous.swiper.3dflow.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			table{
+				text-align: center;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="bg">
+			<div class="kb"></div>
+			<div class="main-content">
+				<div class="arrow-left">
+					<a href="#"><img src="images/arrow-left.png" /></a>
+				</div>
+				<div class="arrow-right">
+					<a href="#"><img src="images/arrow-right.png" /></a>
+				</div>
+
+				<!--<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<p class="s-p">江都水利枢纽工程</p>
+						<img src="images/20190727-bg-wenzi.jpg" width="100%" height="100%" style="border-radius: 10px;"/>
+					</div>
+					<div class="swiper-slide">
+						<p class="s-p">江都水利枢纽工程</p>
+						<img src="images/20190727-bg-wenzi.jpg" width="100%" height="100%" style="border-radius: 10px;"/>
+					</div>
+					<div class="swiper-slide">
+						<p class="s-p">江都水利枢纽工程</p>
+						<img src="images/20190727-bg-wenzi.jpg" width="100%" height="100%" style="border-radius: 10px;"/>
+					</div>
+				</div>
+				
+			</div>-->
+				<div class="device">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<p class="s-p">江都水利枢纽工程</p>
+								<img src="images/bg-1.jpg" width="100%" height="100%" style="border-radius: 10px;" />
+							</div>
+							<div class="swiper-slide">
+								<p class="s-p">江都水利枢纽工程</p>
+								<img src="images/bg-2.jpg" width="100%" height="100%" style="border-radius: 10px;" />
+							</div>
+							<div class="swiper-slide">
+								<p class="s-p">江都水利枢纽工程</p>
+								<img src="images/bg-3.jpg" width="100%" height="100%" style="border-radius: 10px;" />
+							</div>
+							<div class="swiper-slide">
+								<p class="s-p">江都水利枢纽工程</p>
+								<img src="images/bg-4.jpg" width="100%" height="100%" style="border-radius: 10px;" />
+							</div>
+							<div class="swiper-slide">
+								<p class="s-p">江都水利枢纽工程</p>
+								<img src="images/bg-5.jpg" width="100%" height="100%" style="border-radius: 10px;" />
+							</div>
+							<div class="swiper-slide">
+								<p class="s-p">江都水利枢纽工程</p>
+								<img src="images/bg-6.jpg" width="100%" height="100%" style="border-radius: 10px;" />
+							</div>
+							
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<div class="footer">
+			<div class="f-content">
+				主办单位：水利部宣教中心 联系电话：6320xxxx
+			</div>
+		</div>
+
+		<script>
+			var mySwiper = new Swiper('.swiper-container', {
+				autoplay: 3000,
+				slidesPerView: 3,
+				loop: true,
+				//Enable 3D Flow
+				tdFlow: {
+					rotate: 50,
+					stretch: 180,
+					depth: 450,
+					modifier: 1,
+					shadows: false,
+				}
+			})
+			$('.arrow-left').on('click', function(e) {
+				e.preventDefault()
+				mySwiper.swipePrev()
+			})
+			$('.arrow-right').on('click', function(e) {
+				e.preventDefault()
+				mySwiper.swipeNext()
+			})
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<script type="text/javascript" src="js/jquery-1.11.0.js" ></script>
+		<script type="text/javascript" src="js/bootstrap.min.js" ></script>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<title>默认导航条</title>
+	</head>
+	<body>
+		<!--1.必须使用<nav>
+			2.父标签中需要添加 role="navigation" : 有助于增加可访问性-->
+			
+			<nav class="navbar navbar-default" role="navigation">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<a href="#" class="navbar-brand">数码产品</a>
+					</div>
+					<div class="nav navbar-nav">
+						<li class="active"><a href="#">小米手机</a></li>
+						<li><a href="#">魅族手机</a></li>
+						<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle = "dropdown">
+							华为手机<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="#">荣耀</a></li>
+							<li><a href="#">nova</a></li>
+							<li><a href="#">mate</a></li>
+							<li><a href="#">p系列</a></li>
+						</ul>
+						</li>
+					</div>
+				</div>
+				
+			</nav>
+	</body>
+</html>

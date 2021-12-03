@@ -1,0 +1,310 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 微软雅黑;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+img {
+  border: none;
+}
+li {
+  list-style: none;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+.center-block-1200 {
+  width: 1200px;
+  margin: 0 auto;
+}
+main {
+  background: #f2fbfb;
+  padding-bottom: 18px;
+}
+/* user style */
+.banner {
+  height: 643px;
+  background: url(../images_zt/wlaqxcz-202109-banner.jpg) center center
+    no-repeat;
+  background-size: cover;
+}
+nav {
+  height: 58px;
+  background: url(../images_zt/wlaqxcz-202109-navbg.jpg) center center no-repeat;
+  background-size: cover;
+}
+div.nav {
+  display: table;
+}
+.nav-child {
+  display: table-cell;
+  table-layout: fixed;
+  width: 1%;
+  font-size: 24px;
+  color: #ffffff;
+  line-height: 58px;
+  text-align: center;
+}
+.word {
+  height: 477px;
+  background: url(../images_zt/wlaqxcz-202109-word.png);
+  background-size: cover;
+}
+
+/* copy */
+.chnlbg img {
+  width: 100%;
+}
+.chnlbg {
+  height: 85px;
+  background: url(../images_zt/wlaqxcz-202109-chnlbg.png) center center
+    no-repeat;
+  background-size: cover;
+  margin: 23px 0;
+  text-align: center;
+  line-height: 85px;
+  font-size: 32px;
+  font-weight: bold;
+  color: #0348a5;
+}
+
+/* carousel */
+.slick-mod,
+.slick-mod2 {
+  width: 600px;
+  height: 336px;
+}
+.slick-item {
+  position: relative;
+}
+.slick-item img {
+  width: 100%;
+}
+.tit1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 16px;
+  color: #ffffff;
+  line-height: 40px;
+  text-indent: 2rem;
+  background: rgba(0, 0, 0, 0.5);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.slick-mod .slick-dots,
+.slick-mod2 .slick-dots {
+  position: absolute;
+  right: 10px;
+  bottom: 15px;
+}
+.slick-mod2 .slick-dots {
+  bottom: 36px;
+}
+
+.slick-mod .slick-arrow,
+.slick-mod2 .slick-arrow {
+  width: 33px;
+  height: 57px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 3;
+  cursor: pointer;
+}
+.slick-mod .slick-next {
+  right: 0;
+  background: url(../images_zt/wlaq-202009-arrowrigh.png) no-repeat center;
+}
+.slick-mod .slick-prev {
+  left: 0;
+  background: url(../images_zt/wlaq-202009-arrowlef.png) no-repeat center;
+}
+
+.slick-mod2 .slick-next {
+  right: 0;
+  background: url(../images/wlaq-202009-arrowrigh.png) no-repeat center;
+}
+.slick-mod2 .slick-prev {
+  left: 0;
+  background: url(../images/wlaq-202009-arrowlef.png) no-repeat center;
+}
+.slick-mod .slick-dots li,
+.slick-mod2 .slick-dots li {
+  width: 14px;
+  height: 14px;
+  background: #ffffff;
+  border-radius: 50%;
+  margin: 0 5px 0 0;
+}
+.slick-mod .slick-dots li.slick-active,
+.slick-mod2 .slick-dots li.slick-active {
+  width: 14px;
+  height: 14px;
+  background: #e50012;
+  border-radius: 50%;
+}
+/* --- */
+
+.ablist {
+  box-sizing: border-box;
+  width: 580px;
+  height: 336px;
+  padding: 0 16px;
+}
+.ablist .top {
+  /* height: 178px; */
+  padding-bottom: 5px;
+  border-bottom: 1px dashed #00b7ee;
+}
+.ablist h1 {
+  font-size: 30px;
+  text-align: center;
+  line-height: 50px;
+  margin: 0;
+}
+.ablist p {
+  font-size: 16px;
+  line-height: 35px;
+}
+.list {
+  padding: 10px;
+}
+.list li {
+  line-height: 35px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.list li::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: #000000;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.list img {
+  vertical-align: middle;
+  margin: -2px 10px 0 0;
+}
+
+/* .list-container {
+  height: 351px;
+} */
+.list-container .list {
+  padding: 0px 25px;
+}
+.list-container li {
+  width: 47%;
+}
+.list-container li:nth-child(even) {
+  float: right;
+}
+.list-container li:nth-child(odd) {
+  float: left;
+}
+
+.video-list {
+  box-sizing: border-box;
+  /* height: 405px; */
+  padding: 0px 20px;
+}
+
+.video {
+  width: 274px;
+  height: 218px;
+  float: left;
+  background-color: #ffffff;
+}
+/* .video-list .video:not(:nth-child(4n)) {
+  margin-right: 26px;
+}
+.video-list .video:not(:nth-child(n + 6)) {
+  margin-bottom: 33px;
+} */
+.video-list .video:not(:nth-child(4n)) {
+  margin-right: 20px;
+}
+.video-list .video:not(:nth-child(n + 5)) {
+  margin-bottom: 33px;
+}
+
+.video img {
+  display: block;
+  width: 273px;
+  height: 153px;
+}
+.v-tit {
+  position: relative;
+  text-align: center;
+  padding-top: 15px;
+}
+
+.link1 {
+  height: 322px;
+  background: url(../images_zt/wlaqz-202009-lbg.jpg);
+  background-size: cover;
+}
+
+.link1 .fl,
+.link1 .fr {
+  width: 50%;
+  height: 100%;
+}
+.link1 img {
+  display: block;
+  width: 550px;
+  margin: 43px auto;
+}
+
+.mb25 {
+  margin-bottom: 25px;
+}
+
+.boxs {
+  box-shadow: 0px 0px 3px 1px #ccc;
+}
+.source-time {
+  margin: 0 auto;
+  height: 35px;
+  text-align: center;
+  position: relative;
+  line-height: 35px;
+}
+
+.time {
+  margin-right: 10px;
+}
+
+.wechat,
+.sina {
+  position: absolute;
+  margin-top: 5px;
+}
+
+.wechat {
+  margin-left: 10px;
+}
+
+.sina {
+  margin-left: 46px;
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <link rel="stylesheet" href="images/normalize.css">
+    <link rel="stylesheet" href="images/slick.css">
+    <link rel="stylesheet" href="images/stbcjczx-202012-global.css">
+    <title>中国水土保持监测网站</title>
+    <style type="text/css">
+        .boxs {
+            box-shadow: 0px 0px 3px 1px #ccc;
+        }
+    </style>
+</head>
+<body>
+    <main class="main-bg">
+        <nav class="nav">
+            <div class="center-block-1200 clearfix">
+                <span class="fl">欢迎您来到中国水土保持监测网站&nbsp;&nbsp;|&nbsp;&nbsp;<span class="time"></span></span>
+                <span class="fr search-container"><form action="">站内搜索 
+                        <input type="text">
+                        <input type="submit" value="确定">
+                    </form>
+                </span>
+            </div>
+        </nav>
+        <div class="center-block-1200 logo">
+            <img src="images/stbcjczx-202012-wlogo.png" alt="">
+        </div>
+        <!-- 菜单 -->
+        <div class="center-block-1200">
+            <div class="nav-table">
+                <div class="nav-child"><a href="">首页</a></div>
+                <div class="nav-child"><a href="">内设部门</a></div>
+                <div class="nav-child"><a href="">党建专栏</a></div>
+                <div class="nav-child"><a href="">监测网络</a></div>
+                <div class="nav-child"><a href="">监测技术</a></div>
+                <div class="nav-child"><a href="">基础研究</a></div>
+                <div class="nav-child"><a href="">法律法规</a></div>
+                <div class="nav-child"><a href="">技术标准</a></div>
+            </div>
+        </div>
+
+        <div class="center-block-1200">
+            <div style="width: 100%;min-height: 380px;">
+                
+                <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td height="20"></td>
+                    </tr>
+                </table>
+                <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#ffffff" class="boxs">
+                    <tr>
+                        <td width="15">&nbsp;</td>
+                        <td>
+                            <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="">
+                                <tr>
+                                    <td align="left" height="40">&nbsp;&nbsp;<strong>当前位置：</strong>
+                                        <TRS_Curpage VALUE="--">当前位置</TRS_Curpage>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="">
+                                <TRS_Documents ID="owner" PAGESIZE="25">
+                                    <tr>
+                                        <td width="20" align="center" style="BORDER-BOTTOM: #787063 1px dashed; font-size:16px; padding-top:10px">
+                                            
+                                        </td>
+                                        <td align="left" width="796" style="BORDER-BOTTOM: #787063 1px dashed; font-size:16px; padding-top:10px">
+                                            <TRS_Document FIELD="doctitle" AUTOLINK="true">文档标题</TRS_Document>
+                                        </td>
+                                        <td width="88" align="center" style="BORDER-BOTTOM: #787063 1px dashed; font-size:16px; padding-top:10px">
+                                            <TRS_Document FIELD="docreltime" DATEFORMAT="yyyy-MM-dd">2010-08-28</TRS_Document>
+                                        </td>
+                                    </tr>
+                                </TRS_Documents>
+                            </table>
+                            <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="">
+                                <tr>
+                                    <td height="50" align="center">
+                                        <TRS_Template TEMPNAME="嵌套_概览分页脚本">嵌套_概览分页脚本</TRS_Template>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td width="15">&nbsp;</td>
+                    </tr>
+                </table>
+                <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td height="10"></td>
+                    </tr>
+                </table>
+                
+                </div>
+        </div>
+
+    </main>
+    <div class="footer">
+        <div class="center-block-1200 text-center">
+            <p>版权所有：水利部水土保持监测中心</p>
+            <p>通讯地址：北京市白广路二条2号（100053）</p>
+            <p>备案序号：京ICP备17006964号</p>
+        </div>
+    </div>
+
+    <script src="images/jquery-1.9.1.js"></script>
+    <script src="images/slick.js"></script>
+    <script>
+        var date = new Date();
+        var time = date.getFullYear() + "年" + (date.getMonth()+1) + '月' + date.getDate() + '日';
+        // console.log(time);
+        $(".time").html(time);
+        $(document).ready(function () {
+            $(".slick-mod").slick({
+                dots: false,
+                autoplay: true,
+            });
+
+        })
+    </script>
+</body>
+</html>
