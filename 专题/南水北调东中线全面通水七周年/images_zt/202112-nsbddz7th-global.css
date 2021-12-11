@@ -1,0 +1,483 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑";
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    border: none;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+}
+
+.center-block-1200 {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.w400 {
+    width: 400px;
+}
+
+.w800 {
+    width: 800px;
+}
+
+.w560 {
+    width: 560px;
+}
+
+.w396 {
+    width: 396px;
+}
+
+.w787 {
+    width: 787px;
+}
+
+.w733 {
+    width: 733px;
+}
+
+.w455 {
+    width: 455px;
+}
+
+.por {
+    position: relative;
+}
+
+
+/* user style */
+
+.header {
+    height: 659px;
+    background: url(./202112-nsbddz7th-bannernoworld.jpg) center center no-repeat;
+    background-size: cover;
+    text-align: center;
+    padding-top: 117px;
+    box-sizing: border-box;
+}
+
+main {
+    margin-top: -55px;
+}
+
+.hnews {
+    text-align: center;
+    color: #175ebf;
+    font-size: 36px;
+    font-weight: bolder;
+}
+
+.section1 p {
+    font-size: 18px;
+    color: #303030;
+    text-align: center;
+    line-height: 34px;
+}
+
+.section1 p a:not(:first-child)::before {
+    content: "";
+    display: inline-block;
+    width: 3px;
+    height: 19px;
+    background: #303030;
+    vertical-align: middle;
+    margin: -4px 10px 0;
+}
+
+.chnlbg {
+    height: 40px;
+    background-color: #ddf1fe;
+    margin: 29px 0;
+}
+
+.more {
+    margin-top: 10px;
+    margin-right: 15px;
+}
+
+.stsmx {
+    height: 400px;
+    background-color: #f6f6f6;
+}
+
+.tab-c {
+    height: 100px;
+    background-color: #d4e1f3;
+    padding: 24px;
+    box-sizing: border-box;
+    font-size: 20px;
+    line-height: 29px;
+}
+
+.tab-c.act {
+    background-color: #175ebf;
+    color: #ffffff;
+    position: relative;
+}
+
+.tab-c.act::after {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 29px;
+    background: url(../images_zt/202112-nsbddz7th-sanjiao.png);
+    background-size: cover;
+    right: -18px;
+    top: calc(50% - 29px / 2);
+}
+
+.tab-con {
+    display: none;
+    padding: 25px 24px 0 35px;
+}
+
+.tab-con.act {
+    display: block;
+}
+
+.tab-con h2 {
+    color: #175ebf;
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 42px;
+}
+
+.tab-con p {
+    color: #303030;
+    line-height: 30px;
+}
+
+.tab-con p+p {
+    margin-top: 40px;
+}
+
+.tab-con .more {
+    color: #0d5ecd;
+}
+
+.list {
+    padding: 0 14px;
+    box-sizing: border-box;
+    color: #303030;
+}
+
+.list li {
+    width: 560px;
+    line-height: 35px;
+}
+
+.list li:nth-child(even) {
+    float: right;
+}
+
+.list li:nth-child(odd) {
+    float: left;
+}
+
+.list .t {
+    display: inline-block;
+    width: 430px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.list .ti {
+    float: right;
+}
+
+.rmzx {
+    height: 372px;
+    background-color: #f6f6f6;
+}
+
+.qrbg {
+    position: relative;
+    display: block;
+    width: 82px;
+    height: 57px;
+    background-color: #def2ff;
+    border-bottom-right-radius: 30px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.qrbg+.qrbg {
+    margin-top: 22px;
+}
+
+.qrbg img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.qrbg.act {
+    background-color: #1c87d8;
+}
+
+.qrcontainer {
+    float: left;
+    margin-top: 40px;
+}
+
+.handbg {
+    height: 372px;
+    background: url(./202112-nsbddz7th-phone.png) right 51px bottom 18px no-repeat;
+}
+
+.qrcodepb {
+    position: absolute;
+    right: 107px;
+    top: 150px;
+}
+
+.qrcodepb span {
+    display: none;
+}
+
+.qrcodepb span.act {
+    display: block;
+}
+
+.imgs {
+    padding-top: 50px;
+    box-sizing: border-box;
+}
+
+.imgs img {
+    display: block;
+}
+
+.titimg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    line-height: 34px;
+    background-color: rgba(0, 0, 0, 0.42);
+    color: #ffffff;
+    text-indent: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.img3 {
+    margin-top: 10px;
+}
+
+
+/* swiepr */
+
+.swiper-container {
+    width: 981px;
+    margin-top: 45px;
+    padding-bottom: 50px;
+    margin-bottom: 30px;
+}
+
+.swiper-slide {
+    position: relative;
+    width: 701px;
+    height: 411px;
+}
+
+.swiper-slide .tit {
+    background: rgba(0, 0, 0, 0.584);
+    line-height: 47px;
+    color: #ffffff;
+    text-indent: 15px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.swiper-pagination-bullet {
+    width: 16px;
+    height: 16px;
+    background: #ffffff;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    border: 1px solid #ffffff;
+    box-sizing: border-box;
+    background: #d6000f;
+}
+
+.swiper-button {
+    width: 41px;
+    height: 71px;
+}
+
+.swiper-button-prev {
+    left: 10px;
+    background-image: url(./202112-nsbddz7th-arrowleft2.png)!important;
+}
+
+.swiper-button-next {
+    right: 10px;
+    background-image: url(./202112-nsbddz7th-arrowright2.png)!important;
+}
+
+.swiper-pagination {
+    bottom: 0px;
+    font-size: 30px;
+    color: #ababab;
+}
+
+.swiper-container .swiper-slide.swiper-slide-active {
+    box-shadow: 0 0 7px #000000;
+}
+
+footer {
+    background-color: #0060aa;
+    color: #ffffff;
+    font-size: 26px;
+    text-align: center;
+    line-height: 56px;
+    padding: 25px 0;
+}
+
+.slick-mod {
+    width: 100%;
+    padding: 7px 35px;
+    background-color: #f6f6f6;
+}
+
+.img-c {
+    width: 181px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.img-c {
+    text-align: center;
+}
+
+.slick-mod .slick-arrow {
+    width: 39px;
+    height: 55px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 3;
+    cursor: pointer;
+}
+
+.slick-mod .slick-next {
+    right: 0;
+    background: url(./202112-nsbddz7th-arrowright.png) no-repeat center;
+}
+
+.slick-mod .slick-prev {
+    left: 0;
+    background: url(../images_zt/202112-nsbddz7th-arrowleft.png) no-repeat center;
+}
+
+.adbd {
+    text-align: center;
+}
+
+.boxs {
+    box-shadow: 0px 0px 3px 1px #ccc;
+}
+
+.source-time {
+    margin: 0 auto;
+    height: 35px;
+    text-align: center;
+    position: relative;
+    line-height: 35px;
+}
+
+.time {
+    margin-right: 10px;
+}
+
+.wechat,
+.sina {
+    position: absolute;
+    margin-top: 5px;
+}
+
+.wechat {
+    margin-left: 10px;
+}
+
+.sina {
+    margin-left: 46px;
+}
+
+
+/* 文字动画 */
+
+.word7th {
+    -webkit-animation: zoomIn 0.8s 0s ease-out both;
+    animation: zoomIn 0.8s 0s ease-out both;
+    opacity: 1;
+    max-width: 100%;
+}
+
+@-webkit-keyframes zoomIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(0.3, 0.3, 0.3);
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(0.3, 0.3, 0.3);
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
