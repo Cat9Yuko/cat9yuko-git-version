@@ -1,0 +1,39 @@
+.left .item .wz.vcenter {
+    padding-top: 24px;
+}
+
+.parent-container {
+    background: #ffffff;
+}
+
+.zcfg-tree-child {
+    height: 36px;
+    background: #e3f2f4;
+    font-size: 16px;
+    text-indent: 20px;
+    line-height: 36px;
+    margin-bottom: 10px;
+    -moz-box-shadow: 0 0 7px #ccc;
+    -ms-box-shadow: 0 0 7px #ccc;
+    -o-box-shadow: 0 0 7px #ccc;
+    -webkit-box-shadow: 0 0 7px #ccc;
+    box-shadow: 0 0 7px #ccc;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=5, Direction=120, Color='#D6D6D6')";
+    filter: progid: DXImageTransform.Microsoft.Shadow(Strength=5, Direction=120, Color='#D6D6D6');
+}
+
+.zcfg-tree-child.act {
+    color: #1061c7;
+}
+
+.zcfg-tree-child a {
+    display: block;
+}
+
+.zcfg-tree {
+    display: none;
+}
+
+.zcfg-tree.act {
+    display: block;
+}
