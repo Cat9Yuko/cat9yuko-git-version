@@ -37,3 +37,231 @@
 .zcfg-tree.act {
     display: block;
 }
+
+
+/* 政策法规list */
+
+.zcfg-container {
+    padding: 0px 25px 25px 25px;
+    /* background: #f8fbfc; */
+}
+
+.zcfg-toptitle {
+    position: relative;
+    height: 70px;
+    border-bottom: 2px solid #0f5a9b;
+    box-sizing: border-box;
+}
+
+.zcfg-toptitle span {
+    position: absolute;
+    bottom: 10px;
+    font-family: "方正小标宋简体";
+    font-size: 20px;
+    color: #333333;
+}
+
+.zcfg-toptitle .xh {
+    left: 10px;
+}
+
+.zcfg-toptitle .bt {
+    left: 241px;
+}
+
+.zcfg-toptitle .xz {
+    right: 17px;
+}
+
+.zcfg-item {
+    height: 70px;
+}
+
+.zcfg-item:nth-child(even) {
+    background: #d3e3eb;
+}
+
+.zcfg-item .ixh,
+.zcfg-item .ititle {
+    float: left;
+}
+
+.zcfg-item .ixh span {
+    font-family: "宋体";
+}
+
+.zcfg-item .ixh {
+    width: 60px;
+    height: 70px;
+    text-align: center;
+    line-height: 70px;
+    font-family: "宋体";
+    font-size: 16px;
+    color: #333333;
+}
+
+.zcfg-item .ititle {
+    padding: 5px 0;
+    box-sizing: border-box;
+}
+
+.zcfg-item .ititle p {
+    line-height: 30px;
+    height: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.zcfg-item .ititle p:nth-child(1) {
+    width: calc(720px - 60px);
+    font-size: 16px;
+    font-family: "宋体";
+    font-weight: bold;
+}
+
+.zcfg-item .ititle p:nth-child(1) a {
+    font-size: 16px;
+    font-family: "宋体";
+    font-weight: bold;
+}
+
+.zcfg-item .ititle p:nth-child(2) {
+    font-size: 14px;
+    color: #333333;
+    font-family: "宋体";
+}
+
+.ssdate {
+    font-family: "宋体";
+    display: inline-block;
+    width: 500px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.zcfg-down {
+    float: right;
+    margin-right: 20px;
+    font-size: 14px;
+    color: #333333;
+}
+
+.zcfg-down a {
+    font-family: "宋体";
+}
+
+.zcfg-down a+a {
+    margin-left: 10px;
+}
+
+.zcfg-fy {
+    margin-top: 15px;
+}
+
+
+/* 规章库样式 */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.slbgzk-container {
+    background: url(../img/zfxxgk-202112-detailbg.jpg) top center no-repeat;
+}
+
+.center-block-1122 {
+    width: 1122px;
+    margin: 0 auto;
+}
+
+.gzk-head {
+    position: relative;
+    height: 370px;
+    background: url(../img/zfxxgk-202112-detailword.png) center center no-repeat;
+    background-size: cover;
+}
+
+.xxbg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 44px;
+    font-size: 24px;
+    color: #0f5194;
+    text-align: center;
+}
+
+.gzk-content {
+    padding: 0 36px;
+    box-sizing: border-box;
+    -moz-box-shadow: 0 0 7px #ccc;
+    -ms-box-shadow: 0 0 7px #ccc;
+    -o-box-shadow: 0 0 7px #ccc;
+    -webkit-box-shadow: 0 0 7px #ccc;
+    box-shadow: 0 0 7px #ccc;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=5, Direction=120, Color='#D6D6D6')";
+    filter: progid: DXImageTransform.Microsoft.Shadow(Strength=5, Direction=120, Color='#D6D6D6');
+    /* min-height: 500px; */
+    background-color: #fefefe;
+    margin-bottom: 15px;
+}
+
+.gzk-content-t {
+    position: relative;
+    text-align: center;
+    border-bottom: 5px solid #015293;
+    padding-top: 29px;
+    padding-bottom: 12px;
+    margin-bottom: 58px;
+    height: 121px;
+    box-sizing: border-box;
+}
+
+.gwygz {
+    position: absolute;
+    left: 371px;
+}
+
+.download {
+    position: absolute;
+    right: 18px;
+    bottom: 12px;
+}
+
+.download span {
+    display: inline-block;
+    width: 92px;
+    height: 40px;
+    border: 1px solid #d2d2d2;
+    text-align: center;
+    line-height: 40px;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #666666;
+}
+
+.download span a {
+    display: block;
+}
+
+.download span+span {
+    margin-left: 12px;
+}
+
+.gzk-content-b {
+    padding: 40px 0;
+    border-top: 5px solid #015293;
+    margin-top: 70px;
+    text-align: right;
+    padding-right: 17px;
+    font-size: 28px;
+    font-family: "方正小标宋简体";
+}
