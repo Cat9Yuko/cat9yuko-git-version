@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <title>分类树</title>
+    <link rel="StyleSheet" href="css/dtree.css" type="text/css" />
+    <script type="text/javascript" src="js/dtree.js"></script>
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <style>
+        a {
+            font-size: 0.28rem;
+        }
+        
+        .dTreeNode {
+            height: 40px;
+        }
+    </style>
+    <script type="text/javascript">
+        (function(doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function() {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if (clientWidth >= 750) {
+                        docEl.style.fontSize = '100px';
+                    } else {
+                        docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+                    }
+                };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+        $(function() {
+            var aLi = $('.tabnav a');
+            var aDiv = $('.tabbox .itembox');
+            aLi.mouseover(function() {
+                aLi.removeClass('on');
+                aDiv.addClass('hide');
+                $(this).addClass('on');
+                aDiv.eq($(this).index()).removeClass('hide');
+            });
+        })
+        var d; //保存树所有信息的对象
+        var appName = '';
+        $(document).ready(function() {
+            init();
+        });
+
+        function init() {
+            d = new dTree('d', 'subject', 'radio', '', 'view', '', '');
+            //console.log(d);
+            d.add(0, 'mulu', -1, '信息目录', '#', '', 'workFrame', 'img/cms_subject_enable_1_open.gif', 'img/cms_subject_enable_1_false.gif', true, true);
+            d.add(15, 'themecat', 0, '体裁分类<font color="red">(2561)</font>', 'javascript:void(0);', '', 'workFrame', 'cms_subject_enable_1_open.gif', 'cms_subject_enable_1_close.gif', false, true);
+            d.add(18, 'themecat/T01', 15, '命令(令)<font color="red">(73)</font>', 'javascript:void(0);', '', 'workFrame', 'cms_subject_enable_1_open.gif', 'cms_subject_enable_1_3_open.gif', false, false);
+            d.add(19, 'themecat/T02', 15, '决定<font color="red">(48)</font>', 'javascript:void(0);', '', 'workFrame', 'cms_subject_enable_1_open.gif', 'cms_subject_enable_1_3_open.gif', false, false);
+            d.add(20, 'themecat/T03', 15, '公告<font color="red">(147)</font>', 'javascript:void(0);', '', 'workFrame', 'cms_subject_enable_1_open.gif', 'cms_subject_enable_1_3_open.gif', false, false);
+            d.add(21, 'themecat/T04', 15, '通知<font color="red">(784)</font>', 'javascript:void(0);', '', 'workFrame', 'cms_subject_enable_1_open.gif', 'cms_subject_enable_1_3_open.gif', false, false);
+            d.add(22, 'themecat/T05', 15, '通报<font color="red">(39)</font>', 'javascript:void(0);', '', 'workFrame', 'cms_subject_enable_1_open.gif', 'cms_subject_enable_1_3_open.gif', false, false);
+            d.add(23, 'themecat/T06', 15, '批复<font color="red">(455)</font>', 'javascript:void(0);', '', 'workFrame', 'cms_subject_enable_1_open.gif', 'cms_subject_enable_1_3_open.gif', false, false);
+            d.add(24, 'themecat/T07', 15, '意见<font color="red">(103)</font>', 'javascript:void(0);', '', 'workFrame', 'cms_subject_enable_1_open.gif', 'cms_subject_enable_1_3_open.gif', false, false);
+            d.add(25, 'themecat/T08', 15, '函<font color="red">(269)</font>', 'javascript:void(0);', '', 'workFrame', 'cms_subject_enable_1_open.gif', 'cms_subject_enable_1_3_open.gif', false, false);
+            d.add(26, 'themecat/T09', 15, '其他<font color="red">(644)</font>', 'javascript:void(0);', '', 'workFrame', 'cms_subject_enable_1_open.gif', 'cms_subject_enable_1_3_open.gif', false, false);;
+            formHtmlElement(); //真正在页面形成html元素。好多div。
+        }
+
+        function formHtmlElement() {
+            var result = d.formHtml();
+            var doc = document.all.treeDiv;
+            doc.innerHTML = result;
+        }
+
+        function confirm() {
+            return d.getSelect();
+        }
+
+        function closeMe() {
+            window.returnValue = null;
+
+        }
+
+        //	var confirm = function() {
+        //	return d.getSelect();
+        //}
+    </script>
+
+</head>
+
+<body>
+    <table cellpadding="0" cellspacing="0" width="340" height="100%">
+
+        <tr>
+            <td valign="top">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" style="padding:10px">
+                    <tr>
+                        <td>
+                            <div id="treeDiv" class="dtree">树显示于此</div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+
+        </tr>
+    </table>
+
+</body>
+
+</html>
