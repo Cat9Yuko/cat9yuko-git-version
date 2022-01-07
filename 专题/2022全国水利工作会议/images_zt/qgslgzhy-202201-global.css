@@ -1,0 +1,291 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑";
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    border: none;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+}
+
+.center-block-1280 {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.w560 {
+    width: 560px;
+}
+
+.p50 {
+    width: 50%;
+}
+
+.padding17 {
+    padding: 17px;
+    box-sizing: border-box;
+}
+
+.white-bg {
+    padding: 17px;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+/* user style */
+header {
+    height: 60px;
+    background: url(qgslgzhy-202201-navbg.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.nav {
+    width: 900px;
+    display: table;
+}
+
+.nav-item {
+    display: table-cell;
+    width: 1%;
+    table-layout: fixed;
+    text-align: center;
+    line-height: 60px;
+    color: #c8000a;
+    font-weight: bold;
+    font-size: 18.75px;
+}
+
+main {
+    background: url(qgslgzhy-202201-banner.jpg) top center no-repeat;
+    padding-top: 603px;
+    box-sizing: border-box;
+}
+
+/* carousel */
+.slick-mod,
+.slick-mod2 {
+    width: 643px;
+    height: 432px;
+}
+
+.slick-item {
+    position: relative;
+}
+
+.slick-item img {
+    width: 100%;
+}
+
+.tit1 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 16px;
+    color: #ffffff;
+    line-height: 40px;
+    text-indent: 2rem;
+    background: rgba(0, 0, 0, 0.5);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.slick-mod .slick-dots,
+.slick-mod2 .slick-dots {
+    position: absolute;
+    right: 10px;
+    bottom: 15px;
+}
+
+.slick-mod2 .slick-dots {
+    bottom: 36px;
+}
+
+.slick-mod .slick-arrow,
+.slick-mod2 .slick-arrow {
+    width: 33px;
+    height: 57px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 3;
+    cursor: pointer;
+}
+
+/* .slick-mod .slick-next {
+  right: 0;
+  background: url(../images_zt/wlaq-202009-arrowrigh.png) no-repeat center;
+}
+.slick-mod .slick-prev {
+  left: 0;
+  background: url(../images_zt/wlaq-202009-arrowlef.png) no-repeat center;
+}
+
+.slick-mod2 .slick-next {
+  right: 0;
+  background: url(../images/wlaq-202009-arrowrigh.png) no-repeat center;
+}
+.slick-mod2 .slick-prev {
+  left: 0;
+  background: url(../images/wlaq-202009-arrowlef.png) no-repeat center;
+} */
+.slick-mod .slick-dots li,
+.slick-mod2 .slick-dots li {
+    width: 14px;
+    height: 14px;
+    background: #ffffff;
+    border-radius: 50%;
+    margin: 0 5px 0 0;
+}
+
+.slick-mod .slick-dots li.slick-active,
+.slick-mod2 .slick-dots li.slick-active {
+    width: 14px;
+    height: 14px;
+    background: #e50012;
+    border-radius: 50%;
+}
+
+/* --- */
+.hnews {
+    margin-top: 30px;
+    text-align: center;
+    color: #ea0101;
+    /* font-size: 24px; */
+}
+
+.abs {
+    line-height: 47px;
+}
+
+.line1 {
+    margin-top: 66px;
+    background: url(qgslgzhy-202201-line1.jpg) top 29px center no-repeat;
+}
+
+.line2 {
+    background: url(qgslgzhy-202201-line2.png) top 74px right -10px no-repeat;
+}
+
+.chnl1 {
+    width: 340px;
+    margin: 0 auto;
+    height: 50px;
+    background: url(qgslgzhy-202201-chnlb1.png);
+    background-size: cover;
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.titleanab {
+    padding-bottom: 0;
+
+}
+
+.titleanab h2 {
+    text-align: center;
+    font-size: 29px;
+    margin: 0px 0 20px 0;
+}
+
+.titleanab p {
+    line-height: 39px;
+}
+
+.chnlimg {
+    text-align: center;
+}
+
+.list li {
+    width: 595px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    line-height: 50px;
+}
+
+.list li:nth-child(even) {
+    float: right;
+}
+
+.list li:nth-child(odd) {
+    float: left;
+}
+.list {
+    padding: 30px 17px 30px 17px;
+    box-sizing: border-box;
+}
+.list li::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: #333333;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+footer {
+    margin-top: 20px;
+}
+.boxs {
+    box-shadow: 0px 0px 3px 1px #ccc;
+}
+.source-time {
+    margin: 0 auto;
+    height: 35px;
+    text-align: center;
+    position: relative;
+    line-height: 35px;
+}
+
+.time {
+    margin-right: 10px;
+}
+
+.wechat,
+.sina {
+    position: absolute;
+    margin-top: 5px;
+}
+
+.wechat {
+    margin-left: 10px;
+}
+
+.sina {
+    margin-left: 46px;
+}
