@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑";
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    border: none;
+}
+
+li {
+    list-style: none;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+.clearfix::after {
+    content: "";
+    height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+.center-block-1200 {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* user style */
+header {
+    height: 526px;
+    background: url(slfjqgzlfz-202201-banner.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.chnl-title {
+    height: 34px;
+    background: url(slfjqgzlfz-202201-chnlbg.png);
+    background-size: cover;
+}
+
+.chnl-title span:first-child {
+    font-size: 24px;
+    color: #303030;
+    font-weight: bold;
+    margin-left: 120px;
+    margin-top: 5px;
+}
+
+.more {
+    margin-right: 31px;
+    margin-top: 5px;
+}
+.list {
+    margin: 50px 0 0 0;
+    display: none;
+}
+.list.act {
+    display: block;
+}
+.list li {
+    width: 580px;
+    line-height: 30px;
+}
+.list li:nth-child(odd) {
+    float: left;
+}
+.list li:nth-child(even) {
+    float: right;
+}
+.list-title::before {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 11px;
+    background: #dadada;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-right: 10px;
+    vertical-align: middle;
+    margin-top: -2px;
+}
+
+.list-title, .list-time {
+    display: inline-block;
+}
+
+.list-title {
+    width: 427px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+section {
+    padding-bottom: 70px;
+}
+section+section {
+    padding-top: 58px;
+}
+section:nth-child(even) {
+    background: #f4f4f4;
+}
+.tabs {
+    text-align: center;
+    margin-top: 59px;
+}
+.tab-child {
+    display: inline-block;
+    width: 131px;
+    height: 52px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 52px;
+    margin: 0 auto;
+    background: url(slfjqgzlfz-202201-tabbg.png);
+    background-size: cover;
+}
+.tab-child.act {
+    background: url(slfjqgzlfz-202201-tabactbg.png);
+    background-size: cover;
+    color: #ffffff;
+}
+.tab-child +.tab-child {
+    margin-left: 6px;
+}
+.boxs {
+    box-shadow: 0px 0px 3px 1px #ccc;
+}
+.source-time {
+    margin: 0 auto;
+    height: 35px;
+    text-align: center;
+    position: relative;
+    line-height: 35px;
+}
+
+.time {
+    margin-right: 10px;
+}
+
+.wechat,
+.sina {
+    position: absolute;
+    margin-top: 5px;
+}
+
+.wechat {
+    margin-left: 10px;
+}
+
+.sina {
+    margin-left: 46px;
+}
