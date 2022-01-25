@@ -232,7 +232,7 @@
                         <div class="picMarquee-top picScroll-left" id="rec_01" style="display: block;">
                             <div class="bd-01">
                                 <div class="bzlm-01-cont" style="position:relative;">
-                                    <ul class="picList1" style="position: absolute; top: -2px; left: 0px;">
+                                    <ul class="picList1">
 
                                         <li>
                                             <a href="" target="_blank" title="">
@@ -395,59 +395,7 @@
 
         })
     </script>
-    <script>
-        //获取布局复杂的页面中的元素 结果为一个数组 [0]
-        function getByClass(oParent, sClass) {
-            var aEle = oParent.getElementsByTagName('*');
-            var aResult = [];
-            for (var i = 0; i < aEle.length; i++) {
-                if (aEle[i].className == sClass) {
-                    aResult.push(aEle[i]);
-                }
-            }
-            return aResult;
-        }
-        var oYxrw1 = document.getElementById('rec_01');
-        /*左边短标题按钮*/
-        var oYshortT1 = getByClass(oYxrw1, 'picList1')[0];
-        var aYshort1 = oYshortT1.getElementsByTagName('li');
-
-
-
-        /*上下按钮滚动*/
-        oYshortT1.innerHTML = oYshortT1.innerHTML + oYshortT1.innerHTML;
-
-        /*加5是因为把下面空的margin-bottom加上*/
-        var oYshortTn1 = aYshort1.length * (aYshort1[0].offsetHeight + 5);
-        /*左边的总高度*/
-        var oYshortTh1 = oYshortTn1 + 'px';
-        //							console.log(oXshortTh);
-
-
-
-
-
-        /*上移*/
-        function YmoveT1() {
-            if (oYshortT1.offsetTop < -oYshortT1.offsetHeight / 2) {
-                oYshortT1.style.top = '0px';
-            }
-            oYshortT1.style.top = (oYshortT1.offsetTop - 2) + 'px';
-        }
-        var YmoveTop1 = null;
-        auto1();
-        function auto1() { clearInterval(YmoveTop1); YmoveTop1 = setInterval(YmoveT1, 35); }
-        oYxrw1.onmouseover = function () {
-            clearInterval(YmoveTop1);
-
-        }
-        oYxrw1.onmouseout = function () {
-
-            clearInterval(YmoveTop1);
-            YmoveTop1 = setInterval(YmoveT1, 35);
-        }
-
-    </script>
+   
 </body>
 
 </html>
