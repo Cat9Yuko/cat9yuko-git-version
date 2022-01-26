@@ -140,6 +140,19 @@ nav {
     z-index: 3;
     cursor: pointer;
 }
+.slick-mod3 {
+    padding: 0 50px;
+}
+.slick-mod3 .slick-arrow {
+    width: 33px;
+    height: 57px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 3;
+    cursor: pointer;
+}
 
 .slick-mod .slick-next {
     right: 0;
@@ -152,15 +165,15 @@ nav {
 }
 
 
-/* .slick-mod2 .slick-next {
+.slick-mod3 .slick-next {
     right: 0;
-    background: url(../images/wlaq-202009-arrowrigh.png) no-repeat center;
+    background: url(qgshzhfyxj-202201-rightarrow.png) no-repeat center;
 }
 
-.slick-mod2 .slick-prev {
+.slick-mod3 .slick-prev {
     left: 0;
-    background: url(../images/wlaq-202009-arrowlef.png) no-repeat center;
-} */
+    background: url(qgshzhfyxj-202201-leftarrow.png) no-repeat center;
+}
 
 .slick-mod .slick-dots li,
 .slick-mod2 .slick-dots li {
@@ -230,7 +243,7 @@ nav {
     font-weight: bold;
     color: #d20e06;
     font-family: "黑体";
-    margin-bottom: 16px;
+    margin-bottom: 22px;
 }
 
 .chnl-t {
@@ -261,8 +274,8 @@ section+section {
 }
 
 .img-c {
-    width: 329px;
-    height: 323px;
+    width: 305px;
+    height: 298px;
     margin: 0 auto;
     position: relative;
     overflow: hidden;
@@ -274,10 +287,10 @@ section+section {
 
 .s3vd-w {
     margin: 0 auto;
-    width: 329px;
-    height: 139px;
+    width: 305px;
+    height: 221px;
     background-color: #fbecd2;
-    font-size: 20px;
+    font-size: 18px;
     padding: 0 15px;
     box-sizing: border-box;
 }
@@ -322,8 +335,8 @@ section+section {
 }
 
 main {
-    height: 2213px;
-    background: url(qgshzhfyxj-202201-mainbg.jpg) center center;
+    height: 1790px;
+    background: url(qgshzhfyxj-202201-mainbg2.jpg) center center;
     background-size: cover;
 }
 
@@ -403,7 +416,7 @@ main {
 #bzlm {
     width: 100%;
     height: 680px;
-    background: url(/images/2021zt/20210220qglh/bg.gif) no-repeat;
+    /* background: url(/images/2021zt/20210220qglh/bg.gif) no-repeat; */
     background-position: center center;
     padding-top: 20px;
     box-sizing: border-box;
