@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <title>水利部规章库</title>
+    <link href="css/202112_zwgk_adsearch.css" type="text/css" rel=stylesheet>
+    <link rel="stylesheet" href="css/dtree.css">
+    <link rel="stylesheet" href="css/layer.css">
+    <script src="js/json2.js"></script>
+    <script src="js/dtree.js"></script>
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/layer.js"></script>
+    <script type="text/javascript" src="js/layerUtil.js"></script>
+    <script type="text/javascript" src="js/WdatePicker.js" charset="UTF-8"></script>
+    <script src="js/calendar.js"></script>
+    <script type="text/javascript">
+        (function(doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function() {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if (clientWidth >= 750) {
+                        docEl.style.fontSize = '100px';
+                    } else {
+                        docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+                    }
+                };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+
+        var appName = '/gdnps';
+        var names = [
+            ['subcat', 'fbjg'],
+            ['infofrom', 'xxly'],
+            ['themecat', 'tcfl']
+        ];
+
+        var treeNames = ['infofrom', 'themecat'];
+        displayChange = function(type) {
+            for (var i = 0; i < treeNames.length; i++) {
+                $('#' + treeNames[i] + 'Content').html('');
+                $('#' + treeNames[i] + 'Content').hide();
+                if (type == treeNames[i]) {
+                    $('#' + treeNames[i] + 'Content').show();
+                    $('.' + type).css("background-image", "url(images/xxgk_27.jpg)");
+                } else {
+                    $('.' + treeNames[i]).css("background-image", "url(images/xxgk_24.jpg)");
+                }
+            }
+        };
+
+        function loadTree(type) {
+            displayChange(type);
+            if (type == 'infofrom') {
+                d = new dTree('d', 'subject', '');
+                d.add(0, 'mulu', -1, '信息目录', '#', '', 'workFrame', 'gdnps/tree/img/cms_subject_enable_1_open.gif', 'gdnps/tree/img/cms_subject_enable_1_false.gif', true, true);
+                d.add(17, 'infofrom', 0, '信息来源<font color="red">(932)</font>', 'javascript:void(0);', '', 'workFrame', 'cms_subject_enable_1_open.gif', 'cms_subject_enable_1_close.gif', false, true);
+                d.add(27, 'infofrom/X01', 17, '办公厅（国际合作司）<font color="red">(155)</font>', 'javascript:void(0);', '', 'workFrame', 'cms_subject_enable_1_open.gif', 'cms_subject_enable_1_3_open.gif', false, false);
+                d.add(28, 'infofrom/X02', 17, '政策法规司<font color="red">(156)</font>', 'javascript:void(0);', '', 'workFrame', 'cms_subject_enable_1_open.gif', 'cms_subject_enable_1_3_open.gif', false, false);
+                d.add(29, 'infofrom/X03', 17, '规划财务司<font color="red">(118)</font>', 'javascript:void(0);', '', 'workFrame', 'cms_subject_enable_1_open.gif', 'cms_subject_enable_1_3_open.gif', false, false);
+                d.add(30, 'infofrom/X04', 17, '社会组织管理局（社会组织执法监督局）<font color="red">(103)</font>', 'javascript:void(0);', '', 'workFrame', 'cms_subject_enable_1_open.gif', 'cms_subject_enable_1_3_open.gif', false, false);
+                d.add(31, 'infofrom/X05', 17, '社会救助司<font color="red">(26)</font>', 'javascript:void(0);', '', 'workFrame', 'cms_subject_enable_1_open.gif', 'cms_subject_enable_1_3_open.gif', false, false);
+                d.add(32, 'infofrom/X06', 17, '基层政权建设和社区治理司<font color="red">(25)</font>', 'javascript:void(0);', '', 'workFrame', 'cms_subject_enable_1_open.gif', 'cms_subject_enable_1_3_open.gif', false, false);
+                d.add(33, 'infofrom/X07', 17, '区划地名司<font color="red">(15)</font>', 'javascript:void(0);', '', 'workFrame', 'cms_subject_enable_1_open.gif', 'cms_subject_enable_1_3_open.gif', false, false);
+                d.add(34, 'infofrom/X08', 17, '社会事务司<font color="red">(68)</font>', 'javascript:void(0);', '', 'workFrame', 'cms_subject_enable_1_open.gif', 'cms_subject_enable_1_3_open.gif', false, false);
+                d.add(35, 'infofrom/X09', 17, '养老服务司<font color="red">(83)</font>', 'javascript:void(0);', '', 'workFrame', 'cms_subject_enable_1_open.gif', 'cms_subject_enable_1_3_open.gif', false, false);
+                d.add(36, 'infofrom/X10', 17, '儿童福利司<font color="red">(43)</font>', 'javascript:void(0);', '', 'workFrame', 'cms_subject_enable_1_open.gif', 'cms_subject_enable_1_3_open.gif', false, false);
+                d.add(37, 'infofrom/X11', 17, '慈善事业促进和社会工作司<font color="red">(48)</font>', 'javascript:void(0);', '', 'workFrame', 'cms_subject_enable_1_open.gif', 'cms_subject_enable_1_3_open.gif', false, false);
+                d.add(38, 'infofrom/X12', 17, '机关党委（人事司）<font color="red">(67)</font>', 'javascript:void(0);', '', 'workFrame', 'cms_subject_enable_1_open.gif', 'cms_subject_enable_1_3_open.gif', false, false);
+                d.add(39, 'infofrom/X13', 17, '离退休干部局<font color="red">(0)</font>', 'javascript:void(0);', '', 'workFrame', 'cms_subject_enable_1_open.gif', 'cms_subject_enable_1_3_open.gif', false, false);
+                d.add(40, 'infofrom/X14', 17, '其它<font color="red">(31)</font>', 'javascript:void(0);', '', 'workFrame', 'cms_subject_enable_1_open.gif', 'cms_subject_enable_1_3_open.gif', false, false);
+
+                formHtmlElement(type);
+            } else if (type == 'themecat') {
+                d = new dTree('d', 'subject', '');
+                d.add(0, 'mulu', -1, '信息目录', '#', '', 'workFrame', 'gdnps/tree/img/cms_subject_enable_1_open.gif', 'gdnps/tree/img/cms_subject_enable_1_false.gif', true, true);
+                d.add(15, 'themecat', 0, '体裁分类<font color="red">(2561)</font>', 'javascript:void(0);', '', 'workFrame', 'cms_subject_enable_1_open.gif', 'cms_subject_enable_1_close.gif', false, true);
+                d.add(18, 'themecat/T01', 15, '命令(令)<font color="red">(73)</font>', 'javascript:void(0);', '', 'workFrame', 'cms_subject_enable_1_open.gif', 'cms_subject_enable_1_3_open.gif', false, false);
+                d.add(19, 'themecat/T02', 15, '决定<font color="red">(48)</font>', 'javascript:void(0);', '', 'workFrame', 'cms_subject_enable_1_open.gif', 'cms_subject_enable_1_3_open.gif', false, false);
+                d.add(20, 'themecat/T03', 15, '公告<font color="red">(147)</font>', 'javascript:void(0);', '', 'workFrame', 'cms_subject_enable_1_open.gif', 'cms_subject_enable_1_3_open.gif', false, false);
+                d.add(21, 'themecat/T04', 15, '通知<font color="red">(784)</font>', 'javascript:void(0);', '', 'workFrame', 'cms_subject_enable_1_open.gif', 'cms_subject_enable_1_3_open.gif', false, false);
+                d.add(22, 'themecat/T05', 15, '通报<font color="red">(39)</font>', 'javascript:void(0);', '', 'workFrame', 'cms_subject_enable_1_open.gif', 'cms_subject_enable_1_3_open.gif', false, false);
+                d.add(23, 'themecat/T06', 15, '批复<font color="red">(455)</font>', 'javascript:void(0);', '', 'workFrame', 'cms_subject_enable_1_open.gif', 'cms_subject_enable_1_3_open.gif', false, false);
+                d.add(24, 'themecat/T07', 15, '意见<font color="red">(103)</font>', 'javascript:void(0);', '', 'workFrame', 'cms_subject_enable_1_open.gif', 'cms_subject_enable_1_3_open.gif', false, false);
+                d.add(25, 'themecat/T08', 15, '函<font color="red">(269)</font>', 'javascript:void(0);', '', 'workFrame', 'cms_subject_enable_1_open.gif', 'cms_subject_enable_1_3_open.gif', false, false);
+                d.add(26, 'themecat/T09', 15, '其他<font color="red">(644)</font>', 'javascript:void(0);', '', 'workFrame', 'cms_subject_enable_1_open.gif', 'cms_subject_enable_1_3_open.gif', false, false);
+
+                formHtmlElement(type);
+            }
+        }
+
+        function formHtmlElement(type) {
+            var result = d.formHtml();
+            var div = $('<div id="treeDiv" class="dtree" style="overflow-x: auto;">树显示于此</div>');
+            div.html(result);
+            $('#' + type + 'Content').append(div);
+        }
+
+        //显示右边的dtree 
+        fShowLeftNemu = function(name) {
+            fInitTree(name);
+            $('#' + name + 'Content').show();
+            $('#' + name + 'Content').siblings().hide();
+        }
+        fInitTree = function(name) {
+                if (name == 'infofrom') {
+                    gotoGipsSearch('机构分类', 'infofrom', '', '');
+                    loadTree('infofrom');
+                }
+                if (name == 'themecat') {
+                    gotoGipsSearch('体裁分类', 'themecat', '', '1');
+                    loadTree('themecat');
+                }
+            }
+            // 体裁
+        function fBuildSearchTcDiv(name) {
+            popTree(name);
+        }
+
+        function popTree(type) {
+            var url = "mobiletree.html?type=" + type;
+            var indexd = parent.layer.open({
+                type: 2,
+                title: '选择',
+                shade: 0.01,
+                closeBtn: 1,
+                shadeClose: false,
+                btn: ['确定'],
+                yes: function(i, content) {
+                    var msg = $(content).find('iframe')[0].contentWindow.confirm();
+                    if (msg) {
+                        var fullName = msg[0][2];
+                        var index = fullName.indexOf('<');
+                        fullName = index != -1 ? fullName.substring(0, index) : fullName;
+                        $('#seach' + type).val(fullName);
+                        $('#' + type + 'Hid').val(msg[0][1]);
+                    };
+                    parent.layer.close(indexd);
+                },
+                area: ['390px', '600px'],
+                content: url
+            });
+        }
+        // 检索按键
+        // 高级检索 检索按键
+        // 高级检索重置按键
+        function fResetClick() {
+            var seachTitle = $('#title');
+            var publishStartTime = $('#publishStartTime');
+            var publishEndTime = $('#publishEndTime');
+            var fwzh = $('#wh');
+            var seachthemecat = $('#seachthemecat');
+            var themecatHid = $('#themecatHid');
+            var seachinfofrom = $('#seachinfofrom');
+            var infofromHid = $('#infofromHid');
+            var seachBfzw = $('#seachBfzw');
+
+            seachTitle.val('');
+            fwzh.val('');
+            publishStartTime.val('');
+            publishEndTime.val('');
+            seachthemecat.val('');
+            themecatHid.val('');
+            seachinfofrom.val('');
+            infofromHid.val('');
+            seachBfzw.val('');
+        }
+
+        function search1() {
+            var form = document.getElementById('searchForm');
+            var arry = $("#searchForm").serializeArray();
+            var json = JSON.stringify(arry);
+            json = encodeURIComponent(json);
+            parent.$("#searchJson").val(json);
+            parent.search1(1); //重新执行检索
+            var index = parent.layer.getFrameIndex(window.name);
+            parent.layer.close(index);
+        }
+    </script>
+</head>
+
+<body>
+    <div class="head clearfix h34">
+        <h3 class="txt26 fl">高级检索</h3>
+    </div>
+    <div class="main txt18">
+        <form id="searchForm" method="post">
+            <div class="infobox ssbox">
+                <div class="itembox mar10 clearfix">
+                    <div class="fl w136">标&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;题</div>
+                    <div class="fr"><input type="text" class="ipt w450" id="title" name="title" placeholder="请输入标题内容" /></div>
+                </div>
+                <div class="itembox mar10 clearfix">
+                    <div class="fl w136">机构分类</div>
+                    <div class="fr">
+                        <input type="text" class="ipt w450" id="seachinfofrom" name="seachinfofrom" readonly onclick="fBuildSearchTcDiv('infofrom')" placeholder="请点击选择机构分类" />
+                        <input id="infofromHid" name="infofromHid" type="hidden" />
+                    </div>
+                </div>
+                <div class="itembox mar10 clearfix">
+                    <div class="fl w136">体裁分类</div>
+                    <div class="fr">
+                        <input type="text" class="ipt w450" id="seachthemecat" name="seachthemecat" readonly onclick="fBuildSearchTcDiv('themecat')" placeholder="请点击选择体裁分类" />
+                        <input id="themecatHid" name="themecatHid" type="hidden" />
+                    </div>
+                </div>
+                <div class="itembox mar10 clearfix">
+                    <div class="fl w136">发文字号</div>
+                    <div class="fr"><input type="text" class="ipt w450" id="wh" name="wh" placeholder="请输入发文字号" /></div>
+                </div>
+                <div class="itembox mar10 clearfix">
+                    <div class="fl w136">发布时间</div>
+                    <div class="fr fbtime w460">
+                        <div class="fl w130">起止日期</div><input id="publishStartTime" name="publishStartTime" type="text" class="ipt w320" onclick="WdatePicker({isShowWeek:true})" /></div>
+                </div>
+                <div class="itembox mar10 clearfix">
+                    <div class="fl w136">&nbsp;</div>
+                    <div class="fr fbtime w460">
+                        <div class="fl w130">截止日期</div><input id="publishEndTime" name="publishEndTime" type="text" class="ipt w320" onclick="WdatePicker({isShowWeek:true})" /></div>
+                </div>
+                <div class="itembox mar10 clearfix">
+                    <div class="fl w136">部分正文</div>
+                    <div class="fr"><textarea class="w450" id="seachBfzw" name="seachBfzw" placeholder="请输入文章正文"></textarea></div>
+                </div>
+
+            </div>
+            <div class="infobox">
+                <div class="itembox mar10 clearfix">
+                    <input type="button" value="检索" class="ibt fl" onclick="search1()" />
+                    <input type="button" value="重置" class="ibt fl reset" onclick="fResetClick()" />
+                </div>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>水利部规章库</title>
+    <link rel="stylesheet" href="css/202112_zwgk_restyle.css">
+    <link rel="stylesheet" href="css/layer.css">
+</head>
+
+<body>
+    <div class="slbgzk-container">
+        <div class="center-block-1122">
+            <div class="gzk-head">
+                <div class="xxbg">
+                    <p>现行有XX部</p>
+                </div>
+            </div>
+            <div class="search-container">
+                <div class="search-top">
+                    <form action="/search.html" method="get">
+                        <div class="search-bar">
+                            <div class="fl">
+
+                                <div class="w700 search-input">
+                                    <input type="text" name="keywrod" class="input-text" placeholder="请输入">
+                                    <input type="image" class="img-submit" src="img/zfxxgk-202112-searchicon.png" alt="搜索">
+                                </div>
+                            </div>
+                            <div class="fr">
+                                <div class="gjss"><button type="button" onclick="fBuildSearchDiv();">高级搜索</button></div>
+                            </div>
+                        </div>
+                        <div class="search-readio">
+                            <span class="sswz">搜索位置</span>
+                            <label>
+                            <input type="radio" name="sswz" value="标题" class="a-radio">
+                            <span class="b-radio"></span><span>标题</span>
+                        </label>
+
+                            <label>
+                            <input type="radio" name="sswz" value="全文" class="a-radio">
+                            <span class="b-radio"></span><span>全文</span>
+                        </label>
+                        </div>
+                    </form>
+                </div>
+                <div class="search-bottom">
+                    <iframe src="gzk-list.html" frameborder="0" width="100%" height="1350px" scrolling="no"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/layer.js"></script>
+    <script>
+        function fBuildSearchDiv() {
+            var url = 'adsearch.html';
+            layerSeacher = layer.open({
+                title: '',
+                type: 2,
+                shadeClose: true,
+                shade: 0.8,
+                area: ['990px', '530px'],
+                content: [url, 'no']
+            });
+        }
+    </script>
+</body>
+
+</html>

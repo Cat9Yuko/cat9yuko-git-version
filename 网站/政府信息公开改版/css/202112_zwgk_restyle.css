@@ -265,3 +265,187 @@ a {
     font-size: 28px;
     font-family: "方正小标宋简体";
 }
+
+
+/* 规章库搜索页 */
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.search-container {
+    background-color: #fefefe;
+    box-sizing: border-box;
+    padding: 36px;
+    min-height: 500px;
+    margin-bottom: 120px;
+    -moz-box-shadow: 0 0 7px #ccc;
+    -ms-box-shadow: 0 0 7px #ccc;
+    -o-box-shadow: 0 0 7px #ccc;
+    -webkit-box-shadow: 0 0 7px #ccc;
+    box-shadow: 0 0 7px #ccc;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=5, Direction=120, Color='#D6D6D6')";
+    filter: progid: DXImageTransform.Microsoft.Shadow(Strength=5, Direction=120, Color='#D6D6D6');
+}
+
+.w700 {
+    width: 700px;
+}
+
+.search-input {
+    height: 46px;
+    background-color: #d3e3eb;
+    border-radius: 10px;
+}
+
+.search-top {
+    padding-top: 50px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    height: 180px;
+    background-color: #f0f0f0;
+}
+
+.search-bar {
+    width: 825px;
+    margin: 0 auto;
+    height: 46px;
+    margin-bottom: 25px;
+}
+
+.input-text {
+    width: 630px;
+    height: 100%;
+    border: none;
+    text-indent: 2rem;
+    font-size: 18px;
+    border-radius: inherit;
+    outline: none;
+    background: inherit;
+}
+
+.img-submit {
+    float: right;
+    margin-right: 17px;
+    margin-top: 8px;
+}
+
+.gjss button {
+    width: 100px;
+    height: 46px;
+    background: #0f5194;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+
+/* readio */
+
+.sswz {
+    margin-right: 10px;
+}
+
+.search-readio {
+    text-align: center;
+    line-height: 22px;
+    color: #0f5194;
+}
+
+.search-readio label {
+    margin: 10px;
+}
+
+.a-radio {
+    display: none;
+}
+
+.b-radio {
+    display: inline-block;
+    border: 1px solid #105294;
+    background-color: #ffffff;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 5px;
+    margin-top: -2px;
+    margin-bottom: 1px;
+    position: relative;
+}
+
+.b-radio:before {
+    content: '';
+    font-size: 0;
+    width: 10px;
+    height: 10px;
+    background: rgb(15, 81, 148);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -5px;
+    margin-top: -5px;
+    border-radius: 2px;
+    display: none;
+    border-radius: 50%;
+}
+
+.a-radio:checked~.b-radio:before {
+    display: block;
+}
+
+
+/* 规章库列表样式 */
+
+.gzk-container {
+    padding: 0;
+}
+
+.gzk-items .zcfg-item {
+    height: 80px;
+}
+
+.gzk-items .zcfg-item .ixh {
+    width: 130px;
+    height: 100%;
+    line-height: 80px;
+}
+
+.gzk-container .zcfg-toptitle span {
+    bottom: 24px;
+}
+
+.gzk-container .zcfg-toptitle .xh {
+    left: 53px;
+}
+
+.gzk-container .zcfg-toptitle .xz {
+    right: 110px;
+}
+
+.gzk-items .zcfg-item .ititle p {
+    height: 35px;
+    line-height: 35px;
+}
+
+.gzk-items .zcfg-item .ititle p:nth-child(1) {
+    width: 900px;
+}
+
+.gzk-items .ssdate {
+    width: 735px;
+}
+
+.gzk-items .zcfg-item:nth-child(even) {
+    background: #eeeeee;
+}
+
+.gzk-items .zcfg-item:last-child {
+    border-bottom: 2px solid #0f5a9b;
+}
