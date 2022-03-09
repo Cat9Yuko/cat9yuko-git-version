@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "微软雅黑";
+}
+li {
+    list-style: none;
+}
+main {
+    padding-top: 60px;
+    box-sizing: border-box;
+    min-height: 1176px;
+    background: url(../images_zt/202111-zsbnl-mainbg2.jpg) center center no-repeat;
+    background-size: cover;
+    /* background-attachment: fixed; */
+}
+.body {
+    padding-top: 60px;
+    box-sizing: border-box;
+    min-height: 1176px;
+    background: url(../images_zt/202111-zsbnl-mainbg3.jpg) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.logo {
+  height: 60px;
+  /* background: url(../images_zt/202111-zsbnl-logo.jpg) center center no-repeat; */
+  background-size: cover;
+}
+.center-block-1200 {
+  width: 1200px;
+  margin: 0 auto;
+}
+.white-bg {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 40px 37px;
+    box-sizing: border-box;
+}
+.button {
+    position: relative;
+    height: 65px;
+    margin: 17px 0;
+}
+.word {
+    height: 234px;
+    background: url(../images_zt/202111-zsbnl-word.png) center center no-repeat;
+    background-size: cover;
+}
+.hword  {
+    height: 234px;
+}
+
+.boxs {
+    box-shadow: 0px 0px 3px 1px #ccc;
+}
+.source-time {
+    margin: 0 auto;
+    height: 35px;
+    text-align: center;
+    position: relative;
+    line-height: 35px;
+}
+
+.time {
+    margin-right: 10px;
+}
+
+.wechat,
+.sina {
+    position: absolute;
+    margin-top: 5px;
+}
+
+.wechat {
+    margin-left: 10px;
+}
+
+.sina {
+    margin-left: 46px;
+}
