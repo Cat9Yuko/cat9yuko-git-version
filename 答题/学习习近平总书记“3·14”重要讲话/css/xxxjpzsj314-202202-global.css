@@ -90,19 +90,22 @@ li {
 } */
 .index-bottom h2 {
   font-size: 25px;
-  margin: 20px 0;
+  margin: 20px 0 30px;
   color: #0151bd;
 }
 .index-bottom p {
   text-indent: 2rem;
-  font-size: 16.67px;
+  font-size: 19.17px;
   text-align: justify;
-  line-height: 25px;
+  line-height: 29px;
+  margin-bottom: 30px;
+  color: #000103;
+  /* font-family: "黑体"; */
 }
 .my-btn {
   width: 100%;
   text-align: center;
-  margin-top: 35px;
+  margin-top: 62px;
   /* margin-bottom: 10px; */
   height: 76px;
 }
