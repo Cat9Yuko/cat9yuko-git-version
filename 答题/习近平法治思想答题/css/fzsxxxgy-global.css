@@ -1,0 +1,360 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "微软雅黑";
+  font-size: 16px;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+.index {
+  width: 100%;
+  height: 1400px;
+  background: url(../img/xjpfzsx-202203-pcindexbg.jpg) center center;
+  background-size: cover;
+  position: relative;
+}
+.register {
+  background: url(../img/xjpfzsx-202203-pcregisterbg.jpg) center center;
+  background-size: cover;
+  height: 1300px;
+}
+.center-block-1298 {
+  width: 1298px;
+  margin: 0 auto;
+}
+.center_block {
+  width: 1200px;
+  margin: 0 auto;
+}
+.index-bookbg {
+  width: 1298px;
+  height: 917px;
+  background: url(../img/xjpfzsx-202203-bookbg.jpg) center center;
+  background-size: cover;
+  padding: 72px 50px 0 50px;
+  box-sizing: border-box;
+}
+.register .index-bookbg {
+  height: 813px;
+  background: url(../img/xjpfzsx-202203-registerbookbg.jpg) center center;
+  background-size: cover;
+}
+.login .index-bookbg {
+  height: 714px;
+  background: url(../img/xjpfzsx-202203-loginbookbg.jpg) center center;
+  background-size: cover;
+}
+.answer .index-bookbg {
+  height: auto;
+  background: url(../img/xjpfzsx-202203-answerbookbg.jpg) center center;
+  background-size: 100% 100%;
+  position: relative;
+  z-index: 99;
+  padding-bottom: 30px;
+  box-sizing: border-box;
+}
+.mainbg {
+  background: url(../img/xjpfzsx-202203-pcanswerbg2.jpg) center;
+  /* background-size: cover; */
+  background-repeat: repeat-y;
+}
+.desc-cont h2 {
+  font-size: 24px;
+  color: #b30003;
+  text-indent: 2rem;
+  margin-bottom: 10px;
+}
+.desc-cont h2 {
+  margin-top: 18px;
+}
+.desc-cont p {
+  color: #303030;
+  text-indent: 2rem;
+  line-height: 35px;
+}
+img {
+  border: none;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clearfix {
+  *zoom: 1;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.divh {
+  height: 373px;
+}
+.tab-container {
+  height: 606px;
+  background: #ffffff;
+}
+.box-shadow {
+  box-shadow: 0 0 7px #c2c2c2;
+}
+
+.tab-lef {
+  width: 250px;
+  background: #f1f1f1;
+  height: 100%;
+}
+.tab {
+  width: 100%;
+  height: 100px;
+  font-size: 28px;
+  text-align: center;
+  line-height: 100px;
+  color: #ababab;
+  cursor: pointer;
+}
+.tab img {
+  vertical-align: middle;
+}
+.tab:not(:last-child) {
+  border-bottom: 1px solid #bfbfbf;
+}
+.icon {
+  display: none;
+}
+
+.tab.act .icon-1 {
+  display: none;
+}
+.tab.act .icon {
+  display: inline;
+}
+.tab.act {
+  color: #ffffff;
+  background: #b00a0a;
+}
+
+.tab-item {
+  width: 950px;
+  height: 606px;
+  display: none;
+}
+.tab-item.act {
+  display: block;
+}
+.tab-item .content {
+  padding: 60px 41px;
+}
+.tab-item .content p {
+  font-size: 19px;
+  line-height: 44px;
+  text-indent: 2rem;
+}
+.tab-item .content p span {
+  color: #b00a0a;
+  font-size: 19px;
+}
+
+.btn {
+  width: 277px;
+  margin: 0 auto;
+  margin-top: 70px;
+}
+.btn a {
+  display: block;
+  height: 45px;
+  width: 131px;
+  background: #a8011c;
+  color: #ffffff;
+  font-size: 28px;
+  text-align: center;
+  line-height: 45px;
+}
+.btn a:nth-child(1) {
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+.btn a:nth-child(2) {
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+.link {
+  position: absolute;
+  width: 278px;
+  height: 38px;
+  right: 0;
+  bottom: 247px;
+  /* background: #ffffff; */
+}
+.link a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.link2 {
+  bottom: 150px;
+}
+
+/*  */
+.login {
+  background: url(../img/xjpfzsx-202203-pcloginbg.jpg) center center;
+  background-size: cover;
+  height: 1200px;
+}
+
+.register .welcom,
+.login .welcom {
+  font-size: 20px;
+  color: #b00a0a;
+  font-weight: bold;
+  text-indent: 36px;
+}
+
+.register input,
+.register select,
+.login input {
+  border: 1px solid #d4d4d4;
+  border-radius: 5px;
+  outline: none;
+  font-size: 20px;
+}
+.register select {
+  float: left;
+  width: 350px;
+  height: 50px;
+}
+
+.register span,
+.login span {
+  display: block;
+  width: 203px;
+  height: 50px;
+  background: #b00a0a;
+  color: #ffffff;
+  font-size: 24px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.zhuyi-center {
+  width: 840px;
+  height: 50px;
+  text-indent: 2rem;
+  margin: 0 auto;
+  color: #303030;
+  font-size: 16px;
+  line-height: 25px;
+}
+
+.sub-tij,
+.sub-tij button,
+.sub-dl button {
+  width: 165px;
+  height: 50px;
+  background: #b00a0a;
+  border-radius: 5px;
+  font-size: 24px;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  border-radius: 30px;
+}
+.sub-tij {
+  margin: 0 auto;
+  margin-top: 30px;
+}
+.answer_t {
+  font-size: 24px;
+  color: #b00a0a;
+}
+.xuanxiang {
+  margin: 20px 0 45px 0;
+  font-size: 16px;
+}
+.xx_ul li {
+  line-height: 30px;
+}
+
+.answer {
+  height: auto;
+  background: none;
+}
+.astop {
+  background: url(../img/xjpfzsx-202203-pcanswerbg1.jpg) center center;
+  background-size: cover;
+  width: 100%;
+  height: 946px;
+  margin-bottom: -560px;
+}
+
+.asbotm {
+  background: url(../img/xjpfzsx-202203-pcanswerbg3.jpg) center center;
+  background-size: cover;
+  width: 100%;
+  height: 534px;
+  margin-top: -532px;
+}
+.xx_ul input {
+  margin-right: 5px;
+}
+
+.timu {
+  line-height: 33px;
+  margin-bottom: 10px;
+}
+
+.score {
+  height: 966px;
+  /* background: url(../img/bznmgzdt_202006_pcscorebg.jpg) center center; */
+}
+
+.score-bg {
+  /* background: url(../img/202006nmgdt_scorebg.png) center center; */
+  background-size: cover;
+  width: 890px;
+  height: 596px;
+  margin: 0 auto;
+}
+.score .divh {
+  height: 275px;
+}
+
+.score .btn {
+  width: 360px;
+  margin-top: 26px;
+}
+.score .btn a {
+  font-size: 19.5px;
+  width: 155px;
+  height: 44px;
+  line-height: 44px;
+  border-radius: 10px;
+}
+.fen {
+  margin-top: 230px;
+}
+.fen p {
+  text-align: center;
+  color: #ce0008;
+  font-size: 36px;
+}
+
+.fen span {
+  display: inline;
+  background: none;
+  color: #ce0008;
+  font-size: 36px;
+}
+.fen .btn a {
+  font-size: 26px;
+}
