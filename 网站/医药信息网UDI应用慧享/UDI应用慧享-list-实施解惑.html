@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=1200">
+    <title>UDI应用慧享</title>
+    <link rel="stylesheet" href="images/normalize.css">
+    <link rel="stylesheet" href="images/slick.css">
+    <link rel="stylesheet" href="images/udiyyhx-202203-global.css">
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <div class="center-block-1200 logop">
+                <a href=""><img class="logoc" src="images/udiyyhx-202203-logo.png" width="331" height="47" alt=""></a>
+            </div>
+        </div>
+        <nav>
+            <div class="center-block-1200">
+                <div class="nav-p">
+                    <div class="nav-c"><a href="#">网站首页</a></div>
+                    <div class="nav-c"><a href="#">实施要求</a></div>
+                    <div class="nav-c"><a href="#">应用案例</a></div>
+                    <div class="nav-c"><a href="#">发码机构</a></div>
+                    <div class="nav-c"><a href="#">服务机构</a></div>
+                    <div class="nav-c"><a href="#">实施解惑</a></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="center-block-1200">
+            <section>
+                <div class="curpage">
+                    <a href="">首页</a> &gt; <a href="">实施解惑</a>
+                </div>
+                <div class="clearfix">
+                    <div class="fl w200 bgc-white list-nav">
+                        <h1>实施解惑</h1>
+                        <div class="list-navp">
+                            <div class="list-navc act"><a href="/">问题分类1</a></div>
+                            <div class="list-navc"><a href="">问题分类2</a></div>
+                            <div class="list-navc"><a href="">问题分类3</a></div>
+                        </div>
+                    </div>
+                    <div class="fr bgc-white list-container w975">
+                        <div class="list-title chnl-title clearfix">
+                            <span class="fl">问题分类1</span>
+                            <div class="fr">
+                                <div class="qanda-search">
+                                <form action="" method="post">
+                                    <input type="text" placeholder="请输入您要查找的内容"><input type="image" src="images/udiyyhx-202203-searchicon.png">
+                                </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="qandas">
+                            <div class="qanda">
+                                <div class="question">
+                                    <div class="w"><div class="icon fl">Q</div>问：</div>
+                                    <div class="quabs"><p>关于账号密码相关问题？</p></div>
+                                </div>
+                                <div class="question answer">
+                                    <div class="w"><div class="icon fl">A</div>答：</div>
+                                    <div class="quabs"><p>按照《医疗器械唯一标识系统试点工作方案》要求，2019年12月医疗器械唯一标识管理信息系统上线试运行，试点工作期间仅向试点企业的试点品种开放唯一标识数据申报功能。试点企业的用户名和初始密码将由国家句再系统上线之前统一发放给试点企业。</p></div>
+                                </div>
+                            </div>
+                            <div class="qanda">
+                                <div class="question">
+                                    <div class="w"><div class="icon fl">Q</div>问：</div>
+                                    <div class="quabs"><p>系统登录相关问题？</p></div>
+                                </div>
+                                <div class="question answer">
+                                    <div class="w"><div class="icon fl">A</div>答：</div>
+                                    <div class="quabs"><p>推荐使用IE11、火狐、Google、360极速浏览器进行系统登录。若系统无法登录，请先尝试更换浏览器，或者清理浏览器缓存并重启浏览器。</p></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fy">
+                            <span class="pages"><span class="gurl"><a>&lt;</a></span><a class="on">1</a><a target="_self" href="">2</a><a target="_self" href="">3</a><a target="_self" href="">4</a><a target="_self" href="">5</a><a target="_self" href="">6</a><a target="_self" href="">7</a><a target="_self" href="">8</a><a target="_self" href="">9</a><a href="">&gt;</a></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>Copyright © 2021 中国医疗器械信息网 All Rights Reserved. &nbsp;&nbsp;京ICP备05064905号-5</p>
+        <p>E-mail： hlwfwc@nmpaic.org.cn</p>
+    </footer>
+    
+    <script src="images/jquery-1.9.1.js"></script>
+    <script src="images/slick.js"></script>
+    <script>
+        $(function(){
+            $(".list-navp a").each(function(){
+                if($(this).attr("href") == "/") {
+                    $(this).parent().addClass("act");
+            }
+            })
+            
+        })
+    </script>
+</body>
+</html>
