@@ -72,7 +72,8 @@ nav a + a {
 .slick-mod,
 .slick-mod2 {
   width: 607px;
-  height: 405px;
+  height: 330px;
+  margin-top: 6px;
 }
 
 .slick-item {
@@ -84,7 +85,7 @@ nav a + a {
 }
 
 .tit1 {
-  position: absolute;
+  position: relative;
   bottom: 0;
   left: 0;
   right: 0;
@@ -92,7 +93,7 @@ nav a + a {
   color: #ffffff;
   line-height: 40px;
   text-indent: 2rem;
-  background: rgba(0, 39, 118, 0.543);
+  background: #00b0f0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -158,13 +159,17 @@ nav a + a {
   border-radius: 0%;
 }
 /* --- */
-.hnews h2 {
-  text-align: center;
-  font-size: 30px;
-  margin-bottom: 24px;
+.hnews {
+  height: 336px;
+  background: url(xxhglsph-202203-qybg.png) center center;
+  background-size: cover;
+  padding: 75px 28px 0 28px;
+  box-sizing: border-box;
+  font-size: 20px;
+  text-indent: 2em;
 }
 .hnews p {
-  line-height: 35px;
+  line-height: 42px;
 }
 
 .chnlbg1 {
@@ -190,7 +195,8 @@ nav a + a {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  line-height: 34px;
+  line-height: 42px;
+  font-size: 20px;
 }
 .list li::before {
   content: "";
@@ -201,6 +207,11 @@ nav a + a {
   vertical-align: middle;
   margin: 0 15px;
   margin-top: -1px;
+}
+.more {
+  font-size: 16px;
+  font-weight: normal;
+  margin-right: 10px;
 }
 /* swiper */
 
