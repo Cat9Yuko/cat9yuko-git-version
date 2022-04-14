@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>《习近平法治思想学习纲要》 网络答题活动</title>
+	<link rel="stylesheet" href="js/layui/css/layui.css"/>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/fzsxxxgy-app-global.css">
+			<script src="js/jquery-1.9.1.js"></script>
+	<script src="js/layui/layui.js"></script>
+    <script src="js/jQueryDistpicker/dist/distpicker.data.min.js"></script>
+    <script src="js/jQueryDistpicker/dist/distpicker.min.js"></script>
+</head>
+
+<body>
+    <div class="login register">
+        <div>
+            <img src="img/xjpfzsx-202203-apptopb.jpg" width="100%" alt="">
+        </div>
+        <div class="padding15">
+            <div class="box box-shadow app-bookbg">
+			  <form class="layui-form reg-font">
+                <p class="welcome wregister">欢迎注册</p>
+    
+                <ul class="m-ul">
+                    <li><span><img src="img/202006nmgdt_icon_people.png" width="14px" alt=""></span><input id="userName" type="text" class="layui-input"  lay-verify="required|username" autocomplete="off" required  placeholder="姓名"></li>
+                    <li><span><img src="img/202006nmgdt_icon_dun.png" width="14px" alt=""></span>
+					<div class="layui-input-inline" style="width: 90%;">
+					    <select  id="p_dept" class="middle" lay-filter="dept_filter" lay-search lay-verify="required">
+                            <option value="">部门单位</option>
+                        </select>
+					 </div>
+					</li>
+                    <li><span><img src="img/202006nmgdt_icon_dun.png" width="14px" alt=""></span>
+					   <div class="layui-input-inline" style="width: 90%;">
+					    <select id="c_dept" class="middle" lay-search>
+                            <option value="">部门单位</option>
+                        </select>
+						</div>
+					</li>
+                    <li><span><img src="img/202006nmgdt_icon_dun.png" width="14px" alt=""></span><input id="deptName" type="text" class="layui-input" autocomplete="off"  placeholder="单位名称"></li>
+                    <li><span><img src="img/202006nmgdt_icon_paswd.png" width="14px" alt=""></span><input  id="idCard" type="text" class="layui-input" lay-verify="required|idCard" autocomplete="off" required  placeholder="身份证号"></li>
+                    <li><span><img src="img/202006nmgdt_icon_phone.png" width="14px" alt=""></span><input id="telphone" type="text" class="layui-input" lay-verify="required|phone" required   placeholder="手机号"></li>
+					 <div data-toggle="distpicker">
+                    <li>
+					<span><img src="img/202006nmgdt_icon_dun.png" width="14px" alt=""></span>
+					<div class="layui-input-inline" style="width: 90%;">
+					<select lay-filter="p" id="province" lay-verify="required">
+					</select> 
+					</div>
+					</li>
+					<li>
+                   <span><img src="img/202006nmgdt_icon_dun.png" width="14px" alt=""></span> 
+				    <div class="layui-input-inline" style="width: 90%;">
+				      <select lay-filter="c" id="city" lay-verify="required">
+					  </select>
+					</div>
+					</li>
+						</div>
+                    <li><span><img src="img/202006nmgdt_icon_yzm.png" width="14px" alt=""></span><input id="code" type="text" style="width: 100px;display: inline;" class="layui-input" autocomplete="off"   lay-verify="required"   placeholder="验证码" />
+                        <img id="authCode" src="<%=path %>/getAuthCode" width="50" height="20" class="middle"
+                            onclick="changeAuthCode();" style="cursor: pointer;display: inline-block;float: right;" /></li>
+                </ul>
+    
+                <div class="btn-tj text-center">
+                    <button class="button" lay-submit lay-filter="submit" style="border:none;">提交</button>
+                </div>
+				  </form>
+            </div>
+
+            <div class="footerbg">
+                <div class="row">
+
+                    <img src="img/fzsxxxgy-app-footbg.png" alt="" width="100%">
+                </div>
+            </div>
+        </div>
+        
+
+    </div>
+<script>
+    layui.use('form', function () {
+        var form = layui.form;
+        
+
+        //事件监听
+
+        form.on('select(p)', function (data) {
+            $("#province").val(data.value).change();
+            form.render();
+        });
+        form.on('select(c)', function (data) {
+            $("#city").val(data.value).change();
+            form.render();
+        });
+
+         
+    });
+
+ 
+    
+</script>
+</body>
+
+</html>
