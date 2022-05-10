@@ -59,7 +59,9 @@ li {
 .search-icon {
   vertical-align: middle;
 }
-
+::placeholder {
+  color: #ffffff;
+}
 /* 导航条 */
 .nav-childs {
   width: 100%;

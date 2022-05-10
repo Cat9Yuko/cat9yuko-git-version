@@ -43,15 +43,15 @@ main {
   padding-bottom: 30px;
 }
 .banner {
-  height: 1264px;
-  background: url(jkfdqjbq-202203-banner.jpg) center center;
+  height: 1146px;
+  background: url(jkfdqjbq-202203-banner2.jpg) center center;
   background-size: cover;
 }
 nav {
   background: url(jkfdqjbq-202203-navbg.png) center center;
   background-size: cover;
   height: 63px;
-  margin-top: -303px;
+  margin-top: -166px;
 }
 .nav {
   display: table;
