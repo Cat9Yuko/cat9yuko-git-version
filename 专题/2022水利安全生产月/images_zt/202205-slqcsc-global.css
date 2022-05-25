@@ -1,0 +1,235 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "微软雅黑";
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+li {
+  list-style: none;
+}
+img {
+  border: none;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.center-block-1200 {
+  width: 1200px;
+  margin: 0 auto;
+}
+.clearfix {
+  *zoom: 1;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+.w562 {
+  width: 562px;
+}
+.w557 {
+    width: 557px;
+}
+.w370 {
+    width: 370px;
+}
+.border1 {
+  border: 1px solid #cac9c9;
+}
+/* user style */
+.banner {
+  height: 853px;
+  background: url(slaqscy-202205-banner.jpg) center center no-repeat;
+  background-size: cover;
+}
+.bgop {
+  padding: 18px;
+  border: 1px solid #c7c7c7;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.5);
+  margin-top: -159px;
+}
+.bg-white {
+  background: #ffffff;
+  padding: 20px 20px 0 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+.nav {
+  font-size: 20px;
+  color: #074d8e;
+  font-weight: bold;
+  padding: 0 78px;
+  line-height: 50px;
+}
+.nav li + li {
+  margin-left: 35px;
+}
+section {
+  margin-top: 24px;
+}
+.chnlbg {
+  width: 192px;
+  height: 44px;
+  line-height: 44px;
+  color: #ffffff;
+  font-size: 20px;
+  text-align: center;
+  background: url(202205-slaqsc-chnlbg.png);
+  background-size: cover;
+  margin-top: -9px;
+  margin-left: 26px;
+}
+.list {
+    padding: 10px 19px;
+    box-sizing: border-box;
+}
+.list li + li {
+    border-top: 1px dashed #c7c7c7;
+}
+.list li {
+    padding: 16px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.list li::before {
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background: #073c7d;
+    vertical-align: middle;
+    margin: 0 10px 0 3px;
+}
+
+.chnl {
+    font-size: 20px;
+    color: #074d8e;
+    font-weight: bold;
+    text-indent: 1rem;
+    border-bottom: 4px solid #0070c0;
+    width: 100%;
+    padding: 0 0 8px 0;
+}
+
+.list.nbr li{
+    border: none;
+    line-height: 47px;
+    padding: 0;
+}
+section.nmt {
+    margin-top: 0;
+}
+.s1 + .s1 {
+    margin-left: 25px;
+}
+
+/* carousel */
+.slick-mod,
+.slick-mod2 {
+  width: 370px;
+  height: 191px;
+}
+.slick-item {
+  position: relative;
+}
+.slick-item img {
+  width: 100%;
+}
+
+.slick-mod .slick-dots,
+.slick-mod2 .slick-dots {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
+
+.slick-mod .slick-arrow,
+.slick-mod2 .slick-arrow {
+  width: 33px;
+  height: 57px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 3;
+  cursor: pointer;
+}
+/* .slick-mod .slick-next {
+  right: 0;
+  background: url(../images_zt/wlaq-202009-arrowrigh.png) no-repeat center;
+}
+.slick-mod .slick-prev {
+  left: 0;
+  background: url(../images_zt/wlaq-202009-arrowlef.png) no-repeat center;
+}
+
+.slick-mod2 .slick-next {
+  right: 0;
+  background: url(../images/wlaq-202009-arrowrigh.png) no-repeat center;
+}
+.slick-mod2 .slick-prev {
+  left: 0;
+  background: url(../images/wlaq-202009-arrowlef.png) no-repeat center;
+} */
+.slick-mod .slick-dots li,
+.slick-mod2 .slick-dots li {
+  width: 25px;
+  height: 15px;
+  margin: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.slick-mod .slick-dots li.slick-active  {
+  background: red;
+}
+/* --- */
+.pagecustom {
+  width: 100%;
+  height: 100%;
+  color: #ffffff;
+  background: inherit;
+  font-size: 12px;
+  text-align: center;
+  border-left: 1px solid #ffffff;
+  box-sizing: border-box;
+}
+footer {
+  margin-top: 30px;
+}
+
+/* 细览 */
+.source-time {
+  margin: 0 auto;
+  height: 35px;
+  text-align: center;
+  position: relative;
+  line-height: 35px;
+}
+
+.time {
+  margin-right: 10px;
+}
+
+.wechat,
+.sina {
+  position: absolute;
+  margin-top: 5px;
+}
+
+.wechat {
+  margin-left: 10px;
+}
+
+.sina {
+  margin-left: 46px;
+}
