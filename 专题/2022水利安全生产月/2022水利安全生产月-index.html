@@ -25,7 +25,19 @@
             </nav>
             <section class="clearfix">
                 <div class="fl">
-                    <a href=""><img src="images_zt/slaqscy-202205-tpxw.jpg" alt=""></a>
+                    <div class="slick-mod3" style="width: 586px;">
+                        <div class="slick-item">
+                            <a href=""><img src="images_zt/slaqscy-202205-tpxw.jpg" alt="" width="580" height="365"></a>
+                        </div>
+                        <div class="slick-item">
+                            <a href=""><img src="images_zt/slaqscy-202205-tpxw.jpg" alt="" width="580" height="365"></a>
+                        </div>
+                        <div class="slick-item">
+                            <a href=""><img src="images_zt/slaqscy-202205-tpxw.jpg" alt="" width="580" height="365"></a>
+                        </div>
+                        
+                    </div>
+                    
                 </div>
                 <div class="fr w562 border1">
                     <div class="chnlbg"><a href="">活动动态</a></div>
@@ -68,7 +80,12 @@
                 </div>
             </section>
             <section class="clearfix nmt">
-                <a href=""><img src="images_zt/202205-slaqsc-hf.jpg" alt=""></a>
+                <div class="slick-mod3" >
+                    <div class="slick-item"><a href=""><img src="images_zt/202205-slaqsc-hf.jpg" alt="" width="1160" height="110"></a></div>
+                    <div class="slick-item"><a href=""><img src="images_zt/202205-slaqsc-hf.jpg" alt="" width="1160" height="110"></a></div>
+                    <div class="slick-item"><a href=""><img src="images_zt/202205-slaqsc-hf.jpg" alt="" width="1160" height="110"></a></div>
+                </div>
+                
             </section>
             <section class="clearfix">
                 <div class="fl w370 s1">
@@ -178,6 +195,11 @@
                 customPaging: function(slider, i) {
                     return $('<div class="pagecustom" />').text(i + 1);
                 }
+            });
+
+            $(".slick-mod3").slick({
+                dots: false,
+                autoplay: true
             });
 
         })

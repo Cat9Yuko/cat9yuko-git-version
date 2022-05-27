@@ -2,7 +2,7 @@
  * @Author: Cat9Yuko 
  * @Date: 2020-07-29 15:59:35 
  * @Last Modified by: Cat9Yuko
- * @Last Modified time: 2021-11-09 12:22:31
+ * @Last Modified time: 2022-05-26 23:27:26
  */
 
  // 依赖JQuery
@@ -79,8 +79,8 @@ window.onload = function () {
     var ali = aul.getElementsByTagName('li');
     var zuo = document.getElementsByTagName('h2')[0];
     var you = document.getElementsByTagName('h2')[1];
-    var speed = -2
-    aul.innerHTML = aul.innerHTML + aul.innerHTML;
+    var speed = 2
+    aul.innerHTML = aul.innerHTML;
     aul.style.width = ali[0].offsetWidth * ali.length + 'px';
     setInterval(function () {
         if (aul.offsetLeft < -aul.offsetWidth / 2) {
@@ -108,3 +108,12 @@ window.onload = function () {
         speed = s;
     })
 }
+
+// function ldpic() {
+//     //alert('杞藉叆涓�');		
+//     document.getElementsByTagName('li')[0].style.visibility = 'visible';
+//     document.getElementsByTagName('li')[1].style.visibility = 'visible';
+//     //alert('杞藉叆瀹屾垚');		
+// }
+
+// setTimeout("ldpic()", 2000 )

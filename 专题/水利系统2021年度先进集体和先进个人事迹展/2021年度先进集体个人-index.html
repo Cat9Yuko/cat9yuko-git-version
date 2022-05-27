@@ -8,33 +8,43 @@
     <link rel="stylesheet" href="images_zt/normalize.css">
     <link rel="stylesheet" href="images_zt/xjjtgr-202205-202203-scroll.css">
     <link rel="stylesheet" href="images_zt/xjjtgr-202205-global.css">
+    <style>
+
+    </style>
 </head>
 <body>
     <main>
-        <div class="center-block-1150">
+        <div class="center-block-1150 picMarquee-left">
             <div class="word"></div>
             <div class="white-bg2">
                 <div class="section1">
-                    
-                    <div class="pic_bl" id="div">
-                        <ul>
-                            <li><a href="#"><img src="images_zt/demo.jpg" alt="" border="0" height="635"></a></li>
-                            <li><a href="#"><img src="images_zt/demo.jpg" alt="" border="0" height="635"></a></li>
-                            <li><a href="#"><img src="images_zt/demo.jpg" alt="" border="0" height="635"></a></li>
-                            <li><a href="#"><img src="images_zt/demo.jpg" alt="" border="0" height="635"></a></li>
-                            <li><a href="#"><img src="images_zt/demo.jpg" alt="" border="0" height="635"></a></li>
-                            <li><a href="#"><img src="images_zt/demo.jpg" alt="" border="0" height="635"></a></li>
-                            <li><a href="#"><img src="images_zt/demo.jpg" alt="" border="0" height="635"></a></li>
-                            <li><a href="#"><img src="images_zt/demo.jpg" alt="" border="0" height="635"></a></li>
-                            <li><a href="#"><img src="images_zt/demo.jpg" alt="" border="0" height="635"></a></li>
-                            
-                        </ul>
+                    <div class="">
+                        <div class="pic_bl bd" id="div">
+                            <ul class="picList">
+                                <li><a href="#"><img title="1" src="images_zt/demo.jpg" alt="" border="0" height="635"></a></li>
+                                <li><a href="#"><img title="2" src="images_zt/demo.jpg" alt="" border="0" height="635"></a></li>
+                                <li><a href="#"><img title="3" src="images_zt/demo.jpg" alt="" border="0" height="635"></a></li>
+                                <li><a href="#"><img title="4" src="images_zt/demo.jpg" alt="" border="0" height="635"></a></li>
+                                <li><a href="#"><img title="5" src="images_zt/demo.jpg" alt="" border="0" height="635"></a></li>
+                                <li><a href="#"><img title="6" src="images_zt/demo.jpg" alt="" border="0" height="635"></a></li>
+                                <li><a href="#"><img title="7" src="images_zt/demo.jpg" alt="" border="0" height="635"></a></li>
+                                <li><a href="#"><img title="8" src="images_zt/demo.jpg" alt="" border="0" height="635"></a></li>
+                                <li><a href="#"><img title="9" src="images_zt/demo.jpg" alt="" border="0" height="635"></a></li>
+                                <li><a href="#"><img title="10" src="images_zt/demo.jpg" alt="" border="0" height="635"></a></li>
+                                <li><a href="#"><img title="11" src="images_zt/demo.jpg" alt="" border="0" height="635"></a></li>
+                                <li><a href="#"><img title="12" src="images_zt/demo.jpg" alt="" border="0" height="635"></a></li>
+                                
+                            </ul>
+                            <marquee behavior="" direction=""></marquee>
+                        </div>
                     </div>
+                    
                     
                 </div>
             </div>
-            <div class="button"><h2 class="pic_l"></h2><h2 class="pic_r"></h2></div>
+            <div class="button hd"><h2 class="pic_l  next"></h2><h2 class="pic_r prev"></h2></div>
         </div>
+        
         <div class="center-block footer">
             <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="">
                 <tbody>
@@ -84,5 +94,8 @@
     
     <script src="images_zt/jquery-1.9.1.js"></script>
     <script src="images_zt/xjjtgr-202205-202203-scroll.js"></script>
+    <script>
+        console.log($(".picList").width());
+    </script>
 </body>
 </html>
