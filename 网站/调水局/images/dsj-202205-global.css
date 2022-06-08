@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: "微软雅黑";
 }
 a {
   color: inherit;
@@ -161,7 +162,20 @@ nav {
   font-weight: bold;
   text-indent: 60px;
 }
-
+.nav-tabs {
+  left: 0;
+  right: 0;
+  position: absolute;
+  z-index: 99;
+  margin: 0 -10px;
+  text-align: center;
+  background: #055dac;
+  font-size: 16px;
+  display: none;
+}
+.nav li.act .nav-tabs {
+  display: block;
+}
 /* carousel */
 .slick-mod {
   width: 1200px;
@@ -170,7 +184,10 @@ nav {
 
 .slick-mod2 {
   width: 587px;
-  height: 265px;
+  height: 400px;
+}
+.slick-mod3 {
+  height: 91px;
 }
 .slick-item {
   position: relative;
@@ -205,7 +222,8 @@ nav {
 }
 
 .slick-mod .slick-arrow,
-.slick-mod2 .slick-arrow {
+.slick-mod2 .slick-arrow,
+.slick-mod3 .slick-arrow {
   width: 22px;
   height: 38px;
   margin: auto;
@@ -223,7 +241,22 @@ nav {
   left: 0;
   background: url(dsj-202205-arrowleft.png) no-repeat center;
 }
-
+.slick-mod3 .slick-next {
+  display: none!important;
+  right: 0;
+  background: url(dsj-202205-arrowright.png) no-repeat center;
+}
+.slick-mod3 .slick-prev {
+  display: none!important;
+  left: 0;
+  background: url(dsj-202205-arrowleft.png) no-repeat center;
+}
+.slick-mod3:hover .slick-next {
+  display: block!important;
+}
+.slick-mod3:hover .slick-prev {
+  display: block!important;
+}
 /* .slick-mod2 .slick-next {
   right: 0;
   background: url(../images/wlaq-202009-arrowrigh.png) no-repeat center;
@@ -310,8 +343,8 @@ section {
   color: #707070;
 }
 
-.img3 + .img3 {
-  margin-left: 36px;
+ .img3 {
+  margin: 0 15px;
 }
 
 .chnlbar {
@@ -460,10 +493,11 @@ footer p {
 }
 
 .fy {
-	width: 580px;
+	/* width: 580px; */
 	height: 30px;
 	margin: 20px auto 0px;
 	font-size: 12px;
+  text-align: center;
 }
 .fy .pages a {
 	color: #333;

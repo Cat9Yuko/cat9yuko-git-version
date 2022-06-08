@@ -10,5 +10,26 @@ $(function () {
     $(".lotime").text(l_str);
 
     
-    // more链接切换
+    $(".nav li").hover(function () {
+            // over
+            $(this).addClass("act");
+        }, function () {
+            // out
+            $(this).removeClass("act");
+        }
+    );
 })
+
+function SetHome(){//设为首页
+        var url = 'http://nsbd.mwr.cn/'
+	if (document.all) {
+            document.body.style.behavior='url(#default#homepage)';
+            document.body.setHomePage(url);
+        }else{
+            alert("抱歉，您的浏览器不支持自动设为首页，请手动设置！");
+        }
+}
+
+function AddFavorite(){//添加收藏
+        window.external.AddFavorite(document.location.href,document.title);
+}
