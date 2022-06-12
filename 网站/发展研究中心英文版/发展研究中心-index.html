@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1257">
+    <title>Development Research Center of the Ministry of Water Resources of P.R.China</title>
+    <link rel="stylesheet" href="images/normalize.css">
+    <link rel="stylesheet" href="images/idangerous.swiper.css">
+    <link rel="stylesheet" href="images/idangerous.swiper.3dflow.css">
+    <link rel="stylesheet" href="images/fzyjzxen-202206-global.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="center-block-1200 clearfix">
+            <img class="logo fl" src="images/fzyjzxen-202206-logo.png" alt="">
+            <div class="fl">
+                <p class="p">Development Research Center of</p>
+                <p class="">the Ministry of Water Resources of P.R.China</p>
+            </div>
+            <a href=""><img class="ch fr" src="images/fzyjzxen-202206-chban.png" alt=""></a>
+        </div>
+    </header>
+    <main>
+        <div class="banner"></div>
+        <div class="center-block-1200">
+            <div class="aboutus clearfix">
+                <div class="fl w580 abusbg">
+                    <img class="fr" src="images/fzyjzxen-202206-abus.png" alt="">
+                </div>
+                <div class="fr w580 abusword">
+                    <p class="title">About US</p>
+                    <p class="abs">The Research and Development Center is an institute directly under the Ministry of
+                        Water Resources. To suit the requirements of water resources reform and development, it is
+                        formed according to “total emerging and restructuring” principle and by emerging the previous
+                        Policy Research Center, Information Research Institute, and the economic research portion of
+                        Comprehensive Development and Administration Center of the Ministry of Water Resources...</p>
+                    <a class="learm" href="">learn more</a>
+                </div>
+            </div>
+        </div>
+        <div class="ttitle">What we do?</div>
+        <div class="iconbar"></div>
+        <div class="show-container">
+            <div class="show-4 s1">
+                <a href="">
+                    <p>Development</p>
+                    <p>Strategy</p>
+                </a>
+            </div>
+            <div class="show-4 s2">
+                <a href="">
+                    <p>Policy</p>
+                </a>
+            </div>
+            <div class="show-4 s3">
+                <a href="">
+                    <p>Legislation</p>
+                </a>
+            </div>
+            <div class="show-4 s4">
+                <a href="">
+                    <p>Economy</p>
+                </a>
+            </div>
+        </div>
+        <div class="show-container">
+            <div class="show-4 s5">
+                <a href="">
+                    <p>International Water</p>
+                    <p>Resources</p>
+                </a>
+            </div>
+            <div class="show-4 s6">
+                <a href="">
+                    <p>Investment and</p>
+                    <p>Statistics</p>
+                </a>
+            </div>
+            <div class="show-4 s7">
+                <a href="">
+                    <p>River / Lake</p>
+                    <p>Chief System</p>
+                </a>
+            </div>
+            <div class="show-4 s8">
+                <a href="">
+                    <p>Professional</p>
+                    <p>Digital Document</p>
+                    <p>Service</p>
+                </a>
+            </div>
+        </div>
+        <div class="ttitle" style="margin: 90px 0 40px;">What We Publish</div>
+        <div class="tips">Sample text. Click to select the text box. Click again or double click to start editing the
+            text.</div>
+            <div class="posre">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href=""><img src="images/fzyjzxen-202206-book.png" alt=""></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href=""><img src="images/fzyjzxen-202206-book.png" alt=""></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href=""><img src="images/fzyjzxen-202206-book.png" alt=""></a>
+                        </div>
+                    </div>
+                    <img class="leftbg" src="images/fzyjzxen-202206-leftbg.png" alt="">
+                    <img class="rightbg" src="images/fzyjzxen-202206-rightbg.png" alt="">
+                </div>
+                <div class="arrow arrow-left"><img src="images/fzyjzxen-202206-arrowleft.png" alt=""></div>
+                <div class="arrow arrow-right"><img src="images/fzyjzxen-202206-arrowright.png" alt=""></div>
+            </div>
+            
+            <div class="pla">
+                <div class="center-block-1200">
+                    <div class="pla-title">Contact US</div>
+
+                    <div class="pla-t em"><span>drc@waterinfo.com.cn</span></div>
+                    <div class="pla-t whe"><span>NO.3 YuYuanTan South Road, Haidian District, Beijing P.R.China</span></div>
+                </div>
+            </div>
+    </main>
+    <footer>
+        <p>Copyright 1999 -2022 Development Eesearch Center of the Ministry of Water Resources of P.R.China</p>
+    </footer>
+
+    <script src="images/jquery-1.9.1.js"></script>
+    <script src="images/idangerous.swiper.js"></script>
+    <script src="images/idangerous.swiper.3dflow.js"></script>
+    <script>
+        var mySwiper = new Swiper('.swiper-container', {
+            slidesPerView: 3,
+            loop: true,
+            // autoplay : 5000,
+            //Enable 3D Flow
+            tdFlow: {
+                shadows : false
+            }
+        })
+        $('.arrow-left').on('click', function (e) {
+            e.preventDefault()
+            mySwiper.swipePrev()
+        })
+        $('.arrow-right').on('click', function (e) {
+            e.preventDefault()
+            mySwiper.swipeNext()
+        })
+    </script>
+</body>
+
+</html>
