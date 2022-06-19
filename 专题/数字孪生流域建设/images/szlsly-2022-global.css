@@ -1,0 +1,276 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "微软雅黑";
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+img {
+  border: nones;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+}
+
+.center-block-1404 {
+  width: 1404px;
+  margin: 0 auto;
+}
+.center-block-1424 {
+  width: 1424px;
+  margin: 0 auto;
+}
+.w830 {
+  width: 830px;
+}
+.w546 {
+  width: 546px;
+}
+.w712 {
+  width: 712px;
+}
+.w585 {
+  width: 585px;
+}
+/* user style */
+header {
+  height: 730px;
+  background: url(szlslyjs-202206-indexbanner.jpg) center center no-repeat;
+  background-size: cover;
+}
+nav {
+  background: #001f84;
+}
+.nav {
+  color: #ffffff;
+  font-size: 24px;
+  padding-left: 60px;
+}
+.nav-item {
+  float: left;
+  text-align: center;
+  line-height: 72px;
+  margin-left: 60px;
+}
+.section1 {
+  padding: 30px 0;
+  height: 544px;
+  box-sizing: border-box;
+  background: #eaf5f9;
+}
+/* carousel */
+.slick-mod,
+.slick-mod2 {
+  width: 829px;
+  height: 470px;
+}
+.slick-item {
+  position: relative;
+}
+.slick-item img {
+  width: 100%;
+}
+.tit1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 20px;
+  color: #ffffff;
+  line-height: 58px;
+  text-indent: 2rem;
+  background: rgba(71, 107, 175, 0.5);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.slick-mod .slick-dots,
+.slick-mod2 .slick-dots {
+  position: absolute;
+  right: 10px;
+  bottom: 15px;
+}
+.slick-mod2 .slick-dots {
+  bottom: 36px;
+}
+
+.slick-mod .slick-arrow,
+.slick-mod2 .slick-arrow {
+  width: 20px;
+  height: 55px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 3;
+  cursor: pointer;
+}
+.slick-mod .slick-next {
+  right: 11px;
+  background: url(szlsly-2022-arrowright.png) no-repeat center;
+}
+.slick-mod .slick-prev {
+  left: 11px;
+  background: url(szlsly-2022-arrowleft.png) no-repeat center;
+}
+
+/* .slick-mod2 .slick-next {
+  right: 0;
+  background: url(../images/wlaq-202009-arrowrigh.png) no-repeat center;
+}
+.slick-mod2 .slick-prev {
+  left: 0;
+  background: url(../images/wlaq-202009-arrowlef.png) no-repeat center;
+} */
+.slick-mod .slick-dots li,
+.slick-mod2 .slick-dots li {
+  width: 12px;
+  height: 12px;
+  background: #ffffff;
+  border-radius: 0%;
+  margin: 0 18px 0 0;
+}
+.slick-mod .slick-dots li.slick-active,
+.slick-mod2 .slick-dots li.slick-active {
+  width: 12px;
+  height: 12px;
+  background: #e50012;
+  border-radius: 0%;
+}
+/* --- */
+.hnews h1 {
+  font-size: 30px;
+  color: #104fa5;
+  text-align: center;
+}
+.hnews p {
+  line-height: 43px;
+  font-size: 20px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px dashed #002876;
+}
+
+.lsit li {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 20px;
+  line-height: 42px;
+}
+.lsit li::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: #666666;
+  vertical-align: middle;
+  margin-right: 20px;
+  border-radius: 1px;
+}
+.more {
+  color: #0265b8;
+  font-size: 16px;
+}
+
+.bookleft {
+  background: url(szlsly-2022-bookleft.png);
+  background-size: cover;
+  height: 481px;
+}
+.bookleft2 {
+  background: url(szlsly-2022-bookleft2.png);
+  background-size: cover;
+  height: 481px;
+}
+.bookright {
+  background: url(szlsly-2022-bookright.png);
+  background-size: cover;
+  height: 481px;
+}
+.bookright2 {
+  background: url(szlsly-2022-bookright2.png);
+  background-size: cover;
+  height: 481px;
+}
+
+.bookleft,
+.bookleft2 {
+  padding-top: 42px;
+  padding-left: 52px;
+  box-sizing: border-box;
+}
+.bookright,
+.bookright2 {
+  padding-top: 42px;
+  padding-left: 76px;
+  box-sizing: border-box;
+}
+.chnlbar h3 {
+  font-size: 24px;
+  color: #0265b8;
+  padding-bottom: 10px;
+}
+
+.list2 li {
+  line-height: 48px;
+}
+
+.section2 {
+  padding: 27px 0;
+}
+
+.section3 {
+  background: url(szlslyjs-202206-bottombg.jpg) center center;
+  background-size: cover;
+  padding: 33px;
+}
+.header2 {
+  background: url(szlslyjs-202206-listbanner.jpg) center center no-repeat;
+  background-size: cover;
+  height: 500px;
+}
+.boxs {
+  box-shadow: 0px 0px 3px 1px #ccc;
+}
+.source-time {
+  margin: 0 auto;
+  height: 35px;
+  text-align: center;
+  position: relative;
+  line-height: 35px;
+}
+
+.time {
+  margin-right: 10px;
+}
+
+.wechat,
+.sina {
+  position: absolute;
+  margin-top: 5px;
+}
+
+.wechat {
+  margin-left: 10px;
+}
+
+.sina {
+  margin-left: 46px;
+}

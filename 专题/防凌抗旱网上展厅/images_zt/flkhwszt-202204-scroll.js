@@ -2,7 +2,7 @@
  * @Author: Cat9Yuko 
  * @Date: 2020-07-29 15:59:35 
  * @Last Modified by: Cat9Yuko
- * @Last Modified time: 2022-04-21 22:25:42
+ * @Last Modified time: 2022-06-17 20:29:58
  */
 
  // 依赖JQuery
@@ -79,7 +79,7 @@ window.onload = function () {
     var ali = aul.getElementsByTagName('li');
     var zuo = document.getElementsByTagName('h2')[0];
     var you = document.getElementsByTagName('h2')[1];
-    var speed = 2
+    var speed = -2
     aul.innerHTML = aul.innerHTML + aul.innerHTML;
     aul.style.width = ali[0].offsetWidth * ali.length + 'px';
     setInterval(function () {
