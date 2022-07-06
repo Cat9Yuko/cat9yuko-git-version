@@ -165,6 +165,35 @@
                 </div>
             </div>
         </section>
+        <section>
+            <div class="center-block-1404">
+                <div class="chnlbar chnlbar2">
+                    <div class="clearfix">
+                        <h3 class="fl"><a href="">各流域建设范围分布</a></h3>
+                        <a class="more fr" href="">更多&gt;&gt;</a>
+                    </div>
+                    <img src="images/szlsly-2022-chnlbar2.png" alt="">
+                </div>
+                <div class="slick-mod2">
+                    <div class="slick-item">
+                        <a href="">
+                            <img src="images/deomo.png" alt="">
+                        </a>
+                    </div>
+                    <div class="slick-item">
+                        <a href="">
+                            <img src="images/deomo.png" alt="">
+                        </a>
+                    </div>
+                    <div class="slick-item">
+                        <a href="">
+                            <img src="images/deomo.png" alt="">
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
         <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="#002876">
@@ -218,6 +247,10 @@
         $(document).ready(function () {
             $(".slick-mod").slick({
                 dots: true,
+                autoplay: true
+            });
+            $(".slick-mod2").slick({
+                dots: false,
                 autoplay: true
             });
 

@@ -79,6 +79,15 @@ nav {
   width: 829px;
   height: 470px;
 }
+.slick-mod2 {
+  width: 1336px;
+  height: 930px;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  border: 1px solid #2b2b2b;
+  box-sizing: border-box;
+}
 .slick-item {
   position: relative;
 }
@@ -121,6 +130,10 @@ nav {
   z-index: 3;
   cursor: pointer;
 }
+.slick-mod2 .slick-arrow {
+  width: 25px;
+  height: 62px;
+}
 .slick-mod .slick-next {
   right: 11px;
   background: url(szlsly-2022-arrowright.png) no-repeat center;
@@ -130,14 +143,14 @@ nav {
   background: url(szlsly-2022-arrowleft.png) no-repeat center;
 }
 
-/* .slick-mod2 .slick-next {
-  right: 0;
-  background: url(../images/wlaq-202009-arrowrigh.png) no-repeat center;
+.slick-mod2 .slick-next {
+  right: 20px;
+  background: url(szlsly-2022-arrowright2.png) no-repeat center;
 }
 .slick-mod2 .slick-prev {
-  left: 0;
-  background: url(../images/wlaq-202009-arrowlef.png) no-repeat center;
-} */
+  left: 20px;
+  background: url(szlsly-2022-arrowleft2.png) no-repeat center;
+}
 .slick-mod .slick-dots li,
 .slick-mod2 .slick-dots li {
   width: 12px;
@@ -273,4 +286,13 @@ nav {
 
 .sina {
   margin-left: 46px;
+}
+.chnlbar2 {
+margin-top: 30px;
+}
+.chnlbar2 h3 {
+  text-indent: 30px;
+}
+.chnlbar2 .more {
+  margin-right: 35px;
 }
