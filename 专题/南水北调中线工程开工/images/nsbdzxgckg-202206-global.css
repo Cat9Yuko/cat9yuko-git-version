@@ -399,3 +399,136 @@ footer p {
 .sina {
   margin-left: 46px;
 }
+
+.slick-mod3 .tit1 {
+  line-height: 72px;
+}
+/* 视频欣赏 */
+.row-recomendVideo { position: relative; z-index: 1; background-size: 100% 100%; }
+.row-recomendVideo h2 { height: 113px; width: 100%; margin-bottom: 25px; background-image:url(); background-repeat: no-repeat; position: relative; }
+.row-recomendVideo h2:before { content: ""; height: 100%; width: 100%; background: url("") 0 50% no-repeat; position: absolute; left: 0; top: 0; z-index: 0; }
+.row-recomendVideo .container { position: relative; z-index: 3; }
+.recom-cont { position: relative; height: 487px; }
+.recom-cont-item { position: absolute; z-index: 1; display: none; }
+.recom-cont-item.on { display: block; }
+.recom-box { position: relative; z-index: 3; }
+.recom-box-video { overflow: hidden; height: 460px; width: 710px; float: left; position: relative; }
+.recom-box-video img{ height: 460px; width: 710px;  }
+.recom-box-video video {  width: 100%; height: 100%; position: relative; z-index: 2; background: #000 url("") no-repeat center center; }
+.recom-box-video .recom-cover { width: 100%; height: 100%; display: block; position: absolute; z-index: 1; left: 0; top: 0; }
+.beginPos { right: -710px; }
+.recom-box-swiper { width: 475px; height: 460px; float: left; position: relative; z-index: 3; background: rgba(173, 173, 173, 0.2); }
+.recom-box-swiper .arrow-top { background:url(nsbdzxgckg-202207-top.png) no-repeat right top; position: absolute; left: 50%; top: 5px; margin-left: -11px; width: 35px; height: 25px; }
+.recom-box-swiper .arrow-down { background:url(nsbdzxgckg-202207-bottom.png) no-repeat right top; position: absolute; left: 50%; bottom: 5px; margin-left: -11px; width: 35px; height: 25px; }
+.recom-box-swiper .swiper-container { width: 100%; height: 396px; top: 35px; }
+.recom-box-swiper .slide-cont { height: 100%; position: relative; padding-top: 21px; }
+.recom-box-swiper .slide-cont:before { content: ""; width: 20px; height: 1px; background-color: #313131; position: absolute; left: 15px; bottom: 0; z-index: 1; }
+.recom-box-swiper img { width: 140px; height: 90px; float: left; position: relative; z-index: 4; transition: all 0.7s; }
+.recom-box-swiper .swiper-text { position: relative; z-index: 4; }
+.recom-box-swiper h3 { height: 30px; overflow: hidden; }
+.recom-box-swiper p { height: 50px; overflow: hidden; }
+.recom-box-swiper .swiper-slide { position: relative; cursor: pointer; }
+.recom-box-swiper .hover h3 { color: #fff; }
+.recom-box-swiper .hover p { color: #fff; }
+.recom-box-swiper .hover img { margin-left: -156px; }  
+.recom-box-swiper .hover .slide-cont:after { content: ""; background: #1b4d9d; background: -moz-linear-gradient(left, #1b4d9d 0%, #1b4d9d 100%); background: -webkit-linear-gradient(left, #1b4d9d 0%, #1b4d9d 100%); background: linear-gradient(to right, #1b4d9d 0%, #1b4d9d 100%);  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1b4d9d', endColorstr='#1b4d9d', GradientType=1);
+width: 100%; height: 112px; position: absolute; left: 0; top: 8px; z-index: 2; transition: all 0.5s; }
+.recom-box-swiper .on { position: relative; cursor: pointer; }
+
+.swiper-text h3 {
+  font-weight: normal;
+  text-align: left;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.fs-xs { font-size: 12px; }
+.fs-sm { font-size: 14px; }
+.fs-md { font-size: 16px; }
+.fs-lg { font-size: 24px; }
+.fs-xl { font-size: 20px; }
+.title-xs { font-size: 22px; }
+.title-sm { font-size: 26px; }
+.title-md { font-size: 30px; }
+.title-lg { font-size: 34px; }
+.title-xl { font-size: 38px; }
+.mt-xs { margin-top: 5px; }
+.mr-xs { margin-right: 5px; }
+.mb-xs { margin-bottom: 5px; }
+.ml-xs { margin-left: 5px; }
+.pt-xs { padding-top: 5px; }
+.pr-xs { padding-right: 5px; }
+.pb-xs { padding-bottom: 5px; }
+.pl-xs { padding-left: 5px; }
+.mt-sm { margin-top: 10px; }
+.mr-sm { margin-right: 10px; }
+.mb-sm { margin-bottom: 10px; }
+.ml-sm { margin-left: 10px; }
+.pt-sm { padding-top: 10px; }
+.pr-sm { padding-right: 10px; }
+.pb-sm { padding-bottom: 10px; }
+.pl-sm { padding-left: 10px; }
+.mt-md { margin-top: 15px; }
+.mr-md { margin-right: 15px; }
+.mb-md { margin-bottom: 15px; }
+.ml-md { margin-left: 15px; }
+.pt-md { padding-top: 15px; }
+.pr-md { padding-right: 15px; }
+.pb-md { padding-bottom: 15px; }
+.pl-md { padding-left: 15px; }
+.mt-lg { margin-top: 20px; }
+.mr-lg { margin-right: 20px; }
+.mb-lg { margin-bottom: 20px; }
+.ml-lg { margin-left: 20px; }
+.pt-lg { padding-top: 20px; }
+.pr-lg { padding-right: 20px; }
+.pb-lg { padding-bottom: 20px; }
+.pl-lg { padding-left: 20px; }
+.mt-xl { margin-top: 7px; }
+.mr-xl { margin-right: 25px; }
+.mb-xl { margin-bottom: 25px; }
+.ml-xl { margin-left: 25px; }
+.pt-xl { padding-top: 25px; }
+.pr-xl { padding-right: 25px; }
+.pb-xl { padding-bottom: 25px; }
+.pl-xl { padding-left: 25px; }
+.lh-xs { line-height: 1; }
+.lh-sm { line-height: 1.25; }
+.lh-md { line-height: 1.5; }
+.lh-lg { line-height: 1.75; }
+.lh-xl { line-height: 2; }
+.color-black { color: black; }
+.color-gray-darker { color: #0b0a0a; }
+.color-gray-dark { color: #555555; }
+.color-gray { color: gray; }
+.color-gray-light { color: #aaaaaa; }
+.color-gray-lighter { color: #d5d5d5; }
+.color-white { color: white; }
+.color-blue { color: #305798; }
+.color-red { color: #bf0009; }
+.color-yellow { color: #fbe282; }
+.bgc-black { background-color: black; }
+.bgc-gray-darker { background-color: #2b2b2b; }
+.bgc-gray-dark { background-color: #555555; }
+.bgc-gray { background-color: gray; }
+.bgc-gray-light { background-color: #aaaaaa; }
+.bgc-gray-lighter { border-bottom:4px solid #d7d7d7; }
+.bgc-white { background-color: white; }
+.bgc-blue { background-color: #305798; }
+.bgc-red { background-color: #bf0009; }
+.bgc-yellow { background-color: #fbe282; }
+.clearfix:after, .container:after, .row:after { content: ''; display: table; clear: both; }
+.show { display: block !important; }
+.hidden { display: none !important; }
+.invisible { visibility: hidden; }
+.center-block { display: block; margin-left: auto; margin-right: auto; }
+.center-text { text-align: center; }
+.fl { float: left; }
+.fr { float: right; }
+.page { width: 100%; }
+.container { width: 1200px; margin-left: auto; margin-right: auto; }
+.row { margin-left: 0px; margin-right: -15px; }
+.page > .row { margin-left: 0; margin-right: 0; }
+
+/* 视频欣赏 end */
