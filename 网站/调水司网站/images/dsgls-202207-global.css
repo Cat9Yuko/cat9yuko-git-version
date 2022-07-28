@@ -235,3 +235,122 @@ section {
 footer {
   margin-top: 30px;
 }
+
+.list-container {
+  background: #ffffff;
+  border: 1px solid #bbbbbb;
+  padding: 30px;
+  margin-top: 27px;
+}
+.list-chnltitle {
+  background: #1087d2;
+  font-size: 24px;
+  color: #ffffff;
+  height: 46px;
+  border: 1px solid #aeaeaf;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.list-chnltitle span {
+  display: inline-block;
+  padding: 9px 22px 9px 25px;
+  background: #0468a7;
+}
+.ul-container {
+  padding-top: 27px;
+  padding-left: 30px;
+  padding-right: 25px;
+}
+.list-li {
+  color: #010101;
+}
+.list-li+.list-li {
+  margin-top: 24px;
+}
+.list-ul {
+  padding-bottom: 30px;
+}
+.list-ul +.list-ul {
+  border-top: 1px solid #b7b7b7;
+  padding-top: 30px;
+}
+.lititle {
+  width: 800px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/* 分页 */
+.fy {
+	height: 30px;
+	font-size: 12px;
+  text-align: center;
+}
+.fy .pages a {
+	color: #333;
+	padding: 3px 8px;
+	border: 1px solid #d7d7d7;
+	margin-right: 5px;
+*display:inline-block;
+}
+.fy .pages a.on, .fy .pages a:hover {
+	background: #3582c4;
+	color: #fff;
+}
+.fy a {
+	color: #333;
+	padding: 3px 8px;
+	text-decoration: none;
+}
+.fy a:hover {
+	color: #3582c4;
+}
+.fy span, .fy button {
+	margin: 0 3px;
+}
+.fy button {
+	background: #3582c4;
+	border: 1px solid #d7d7d7;
+	padding: 3px 12px;
+*padding:2px 12px 0;
+	_padding: 6px 12px 0;
+	color: #fff;
+}
+.fy input {
+	width: 36px;
+	padding: 3px 0;
+	border: 1px solid #333;
+	text-indent: 4px;
+	margin: 0 4px;
+}
+.detail {
+  padding: 0;
+}
+.boxs {
+  box-shadow: 0px 0px 3px 1px #ccc;
+}
+.source-time {
+  margin: 0 auto;
+  height: 35px;
+  text-align: center;
+  position: relative;
+  line-height: 35px;
+}
+
+.time {
+  margin-right: 10px;
+}
+
+.wechat,
+.sina {
+  position: absolute;
+  margin-top: 5px;
+}
+
+.wechat {
+  margin-left: 10px;
+}
+
+.sina {
+  margin-left: 46px;
+}
