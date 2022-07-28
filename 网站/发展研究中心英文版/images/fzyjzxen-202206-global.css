@@ -352,6 +352,15 @@ footer p {
 img {
   max-width: 100%;
 }
+
+/* 202207 */
+.leftnav.bluebg .leftnav-item.act {
+  font-weight: normal;
+  background: #2a6fb7;
+}
+.leftnav.bluebg .leftnav-item {
+  background: #e9f0f8;
+}
 @media screen and (max-width: 1257px) {
   .show-4 {
     text-align: center;
