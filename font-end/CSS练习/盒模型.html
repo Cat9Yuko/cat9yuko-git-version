@@ -16,10 +16,14 @@
             background-color:  #eee;
             font-family: Arial, Helvetica, sans-serif;
         }
+        body * + * {
+            margin-top: 1.5em;
+        }
         header {
             color: #fff;
             background-color: #0072b0;
             border-radius: 0.5em;
+            padding: 1em 1.5em;
         }
         main {
             display: block;
@@ -29,15 +33,35 @@
         }
         .main {
             width: 70%;
+            padding: 1em 1.5em;
             background-color: #fff;
             border-radius: 0.5em;
         }
         .sidebar {
             width: 30%;
             margin-left: 1.5em;
+            margin-top: 0;
             padding: 1.5em;
             background-color: #fff;
             border-radius: 0.5em;
+        }
+        .button-link {
+            display: block;
+            padding: 0.5em;
+            color: #ffffff;
+            background-color: #0090c9;
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        .button-link + .button-link {
+            margin-top: 1.5em;
+        }
+        .sponsor-link {
+            display: block;
+            color: #0072b0;
+            text-decoration: none;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -51,8 +75,9 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias quos, vitae ratione id porro nulla culpa tenetur illum praesentium quidem amet explicabo vel voluptatem! Ex assumenda quas nulla repellat dicta.</p>
             </main>
             <aside class="sidebar">
-                <div class="widget"></div>
-                <div class="widget"></div>
+                <a href="" class="button-link">follow us on Twitter</a>
+                <a href="" class="button-link">link us on Facebook</a>
+                <a href="" class="sponsor-link">become a sponsor</a>
             </aside>
         </div>
 </body>

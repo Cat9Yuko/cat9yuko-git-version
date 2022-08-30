@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width='device-width', initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            box-sizing: border-box;
+        }
+
+        *,
+        ::before,
+        ::after {
+            box-sizing: inherit;
+        }
+
+        body {
+            background-color: #eee;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body * + * {
+            margin-top: 1.5em;
+        }
+        header {
+            padding: 1em 1.5em;
+            color: #fff;
+            background-color: #0072b0;
+            border-radius: .5em;
+            margin-bottom: 1.5em;
+        }
+        .main {
+            padding: 0 1.5em;
+            background-color: #fff;
+            border-radius: .5em;
+        }
+        .container {
+            max-width: 1080px;
+            margin: 0 auto;
+        }
+        .media {
+            float: left;
+            width: 50%;
+            padding: 1.5em;
+            background-color: #eee;
+            border-radius: 0.5em;
+        }
+        .media:nth-child(odd) {
+            clear: left;
+        }
+        .clearfix::after,.clearfix::before {
+            content: " ";
+            display: table;
+        }
+        .clearfix::after {
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Franklin Running Club</h1>
+        </header>
+        <main class="main clearfix">
+            <h2>Running tips</h2>
+            <div>
+                <div class="media">
+                    <img class="media-image" src="img/img1.png" alt="" width="100">
+                    <div class="media-body">
+                        <h4>Strength</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ducimus vel facilis est aut.
+                            Consequatur quod adipisci laboriosam alias.</p>
+                    </div>
+                </div>
+                <div class="media">
+                    <img class="media-image" src="img/img2.png" alt="" width="100">
+                    <div class="media-body">
+                        <h4>Cadence</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ducimus vel facilis est aut.
+                            Consequatur quod adipisci laboriosam alias.</p>
+                    </div>
+                </div>
+                <div class="media">
+                    <img class="media-image" src="img/img3.png" alt="" width="100">
+                    <div class="media-body">
+                        <h4>Strength</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ducimus vel facilis est aut.
+                            Consequatur quod adipisci laboriosam alias.</p>
+                    </div>
+                </div>
+                <div class="media">
+                    <img class="media-image" src="img/img4.png" alt="" width="100">
+                    <div class="media-body">
+                        <h4>Strength</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ducimus vel facilis est aut.
+                            Consequatur quod adipisci laboriosam alias.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
