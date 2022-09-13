@@ -43,8 +43,8 @@ header {
   height: 60px;
   line-height: 60px;
   font-size: 18px;
-  box-shadow: 0 0 17px #000000;
-  background: #ffffff;
+  /* box-shadow: 0 0 17px #000000; */
+  /* background: #ffffff; */
 }
 header a {
   margin: 0 23px;
@@ -54,6 +54,7 @@ header span a {
 }
 header img {
   margin-top: 12px;
+  margin-left: 70px;
 }
 main {
   background: url(ncslsdhycjz-202208-mainbg.jpg) center center no-repeat;
@@ -68,7 +69,7 @@ footer {
 }
 .top {
   padding-top: 518px;
-  margin-bottom: 31px;
+  margin-bottom: 44px;
 }
 .chnlbg {
   width: 586px;
@@ -77,12 +78,14 @@ footer {
   color: #ffffff;
   font-weight: bold;
   margin: 0 auto;
-  background: url(ncslsdhycjz-202208-indexchnlbg.png);
+  background: #0f5fba;
+  border-radius: 10px;
+  box-shadow: 0 0 5px #f4f0f0;
   background: cover;
-  font-size: 27px;
+  font-size: 22px;
   text-align: center;
 }
-
+.chnlbg span {padding: 0 35px;}
 .whitebg {
   background: #ffffff;
 }

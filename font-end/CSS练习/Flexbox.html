@@ -46,6 +46,24 @@
             display: block;/*让链接成为块元素,这样可以撑开父元素的高度*/
             padding: .5em 1em;
         }
+        .tile {
+            padding: 1.5em;
+            background-color: #fff;
+        }
+        .flex {
+            display: flex;
+        }
+        .flex > * + *  {
+            margin-top: 0;
+            margin-left: 1.5em;
+        }
+        .column-main {
+            flex: 66.67%;
+        }
+        .column-asdebar {
+            flex: 33.33%;
+        }
+        
     </style>
 </head>
 <body>
