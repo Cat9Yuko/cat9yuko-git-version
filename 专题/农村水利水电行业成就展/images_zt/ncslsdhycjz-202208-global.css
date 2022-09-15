@@ -57,9 +57,9 @@ header img {
   margin-left: 70px;
 }
 main {
-  background: url(ncslsdhycjz-202208-mainbg.jpg) center center no-repeat;
+  background: url(ncslsdhycjz-202208-mainbg2.jpg) center center no-repeat;
   background-size: cover;
-  min-height: 1447px;
+  min-height: 998px;
 }
 footer {
   height: 259px;
@@ -70,6 +70,10 @@ footer {
 .top {
   padding-top: 518px;
   margin-bottom: 44px;
+}
+.top.index {
+  padding-top: 352px;
+  margin-bottom: 0;
 }
 .chnlbg {
   width: 586px;
