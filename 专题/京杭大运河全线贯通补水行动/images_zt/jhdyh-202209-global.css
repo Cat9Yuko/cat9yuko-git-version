@@ -1,0 +1,165 @@
+:root {
+  box-sizing: border-box;
+}
+*,
+::before,
+::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+.center-block-1406 {
+  width: 1406px;
+  margin: 0 auto;
+}
+/* user style */
+main {
+  height: 1470px;
+  background: url(jhdyh-202209-mainbg.jpg) center top no-repeat;
+  background-size: cover;
+  padding-top: 385px;
+}
+footer {
+  text-shadow: -2px 0 #7e4207, 0 2px #7e4207, 2px 0 #7e4207, 0 -2px #7e4207;
+  font-weight: bold;
+}
+
+/* carousel */
+.slick-mod,
+.slick-mod2 {
+  width: 1406px;
+  height: 890px;
+}
+.slick-item {
+  position: relative;
+  padding: 0 4px;
+}
+.slick-item img {
+  width: 100%;
+}
+.tit1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 16px;
+  color: #ffffff;
+  line-height: 40px;
+  text-indent: 2rem;
+  background: rgba(0, 0, 0, 0.5);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.slick-mod .slick-dots,
+.slick-mod2 .slick-dots {
+  position: absolute;
+  right: 10px;
+  bottom: 15px;
+}
+.slick-mod2 .slick-dots {
+  bottom: 36px;
+}
+
+.slick-mod .slick-arrow,
+.slick-mod2 .slick-arrow {
+  width: 68px;
+  height: 140px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 3;
+  cursor: pointer;
+}
+.slick-mod .slick-next {
+  right: 0;
+  background: url(jhdyh-202209-arrowright.png) no-repeat center;
+}
+.slick-mod .slick-prev {
+  left: 4px;
+  background: url(jhdyh-202209-arrowleft.png) no-repeat center;
+}
+
+/* .slick-mod2 .slick-next {
+  right: 0;
+  background: url(../images/wlaq-202009-arrowrigh.png) no-repeat center;
+}
+.slick-mod2 .slick-prev {
+  left: 0;
+  background: url(../images/wlaq-202009-arrowlef.png) no-repeat center;
+} */
+.slick-mod .slick-dots li,
+.slick-mod2 .slick-dots li {
+  width: 14px;
+  height: 14px;
+  background: #ffffff;
+  border-radius: 50%;
+  margin: 0 5px 0 0;
+}
+.slick-mod .slick-dots li.slick-active,
+.slick-mod2 .slick-dots li.slick-active {
+  width: 14px;
+  height: 14px;
+  background: #e50012;
+  border-radius: 50%;
+}
+/* --- */
+/*  */
+.iw_ribbon {
+  position: fixed;
+  height: 126px;
+  width: 0px;
+  left: 0px;
+  top: 0px;
+  background: #123073;
+  opacity: 0.8;
+  z-index: 101;
+  overflow: hidden;
+  text-align: center;
+}
+
+.iw_ribbon img,
+.img_con {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  max-width: 100%;
+  border: 7px solid #fff;
+}
+
+.img_con {
+  border: 7px solid transparent;
+}
+
+.img_txt {
+  position: absolute;
+  bottom: -40px;
+  height: 20px;
+  width: 100%;
+  line-height: 1.2em;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  text-align: center;
+  font-family: 微软雅黑;
+}
+
+.iw_close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #f0f0f0 url(20191122_clos.gif) no-repeat center center;
+  width: 18px;
+  height: 18px;
+  display: none;
+  cursor: pointer;
+}

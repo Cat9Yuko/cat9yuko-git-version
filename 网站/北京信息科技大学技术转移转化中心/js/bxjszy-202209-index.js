@@ -18,6 +18,9 @@ $(function(){
     $(".imgshow-title-c").click(function(){
         $(this).addClass("act").siblings().removeClass("act");
         $(".imgshow-title-container").eq($(this).index()).addClass("act").siblings().removeClass("act");
+        var thishref = $(this).find("a").attr("data-href");
+        $(this).parent().find(".more").attr("href",thishref);
+        // console.log(thishref);
     })
 
     $(".con-tab").click(function(){

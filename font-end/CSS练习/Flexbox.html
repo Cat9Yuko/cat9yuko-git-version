@@ -58,12 +58,36 @@
             margin-left: 1.5em;
         }
         .column-main {
-            flex: 66.67%;
+            flex: 2;
         }
-        .column-asdebar {
-            flex: 33.33%;
+        .column-sidebar {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
         }
-        
+        .column-sidebar > .tile {
+            flex: 1;
+        }
+        .login-form h3 {
+            margin: 0;
+            font-size: 0.9em;
+            font-weight: bold;
+            text-align: right;
+            text-transform: uppercase;
+        }
+        .login-form input:not([type=checkbox]):not([type=radio]) {
+            display: block;
+            width: 100%;
+            margin-top: 0;
+        }
+        .login-form button {
+            margin-top: 1em;
+            border: 1px solid #cc6b5a;
+            background-color: white;
+            padding: .5em 1em;
+            cursor: pointer;
+        }
+
     </style>
 </head>
 <body>
@@ -82,6 +106,12 @@
         </nav>
         <main class="flex">
             <div class="column-main tile">
+                <h1>Them collabortaion done right</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, accusantium consequatur voluptate aspernatur amet harum!</p>
+                <h1>Them collabortaion done right</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, accusantium consequatur voluptate aspernatur amet harum!</p>
+                <h1>Them collabortaion done right</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, accusantium consequatur voluptate aspernatur amet harum!</p>
                 <h1>Them collabortaion done right</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, accusantium consequatur voluptate aspernatur amet harum!</p>
             </div>
