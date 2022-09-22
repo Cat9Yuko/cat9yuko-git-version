@@ -85,7 +85,7 @@ footer {
   background: url(jhdyh-202209-arrowright.png) no-repeat center;
 }
 .slick-mod .slick-prev {
-  left: 4px;
+  left: 0px;
   background: url(jhdyh-202209-arrowleft.png) no-repeat center;
 }
 
