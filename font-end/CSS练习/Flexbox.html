@@ -87,7 +87,35 @@
             padding: .5em 1em;
             cursor: pointer;
         }
-
+        .centered {
+            text-align: center;
+        }
+        .cost {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            line-height: .7;
+        }
+        .cost > span {
+            margin-top: 0;
+        }
+        .cost-currency {
+            font-size: 2rem;
+        }
+        .cost-dollars {
+            font-size: 4rem;
+        }
+        .cost-cents {
+            font-size: 1.5rem;
+            align-self: flex-start;
+        }
+        .cta-button {
+            display: block;
+            background-color: #cc6b5a;
+            color: white;
+            padding: .5em 1em;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
@@ -133,11 +161,11 @@
                 <div class="tile centered">
                     <small>Starting at</small>
                     <div class="cost">
-                        <span class="const-currency">$</span>
+                        <span class="cost-currency">$</span>
                         <span class="cost-dollars">20</span>
                         <span class="cost-cents">.00</span>
-                        <a href="" class="cta-button">Sign up</a>
                     </div>
+                    <a href="" class="cta-button">Sign up</a>
                 </div>
             </div>
         </main>
