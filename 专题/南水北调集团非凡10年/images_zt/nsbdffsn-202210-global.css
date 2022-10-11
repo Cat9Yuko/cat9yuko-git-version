@@ -249,6 +249,10 @@ header {
   padding-bottom: 3px;
   text-align: center;
 }
+.chnl-title a {
+  position: relative;
+  z-index: 21;
+}
 .chnl-title::before {
   content: "";
   display: block;
@@ -258,7 +262,7 @@ header {
   right: 0;
   height: 12px;
   background: #ffdede;
-  z-index: -1;
+  z-index: 20;
 }
 
 .slider-for {
@@ -280,4 +284,102 @@ header {
   height: 10px;
   background: #c10303;
   border-radius: 50%;
+}
+
+/* swiepr */
+
+.swiper-container {
+  width: 1040px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  position: relative;
+  width: 700px;
+  height: 410px;
+}
+
+.swiper-slide .tit {
+  background: rgba(0, 0, 0, 0.584);
+  line-height: 47px;
+  color: #ffffff;
+  text-indent: 15px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.swiper-pagination-bullet {
+  width: 16px;
+  height: 16px;
+  background: #ffffff;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  background: #d6000f;
+}
+
+.swiper-button {
+  width: 41px;
+  height: 71px;
+}
+
+.swiper-button-prev {
+  left: 10px;
+  background-image: url(nsbdffsn-202210-arrowleft2.png)!important;
+}
+
+.swiper-button-next {
+  right: 10px;
+  background-image: url(nsbdffsn-202210-arrowright2.png)!important;
+}
+
+.swiper-pagination {
+  bottom: 0px;
+  font-size: 30px;
+  color: #ababab;
+}
+
+.swiper-container .swiper-slide.swiper-slide-active {
+  box-shadow: 0 0 7px #000000;
+}
+
+footer {
+  text-align: center;
+  background-color: #ac0101;
+  color: #ffffff;
+  line-height: 36px;
+  padding: 15px 0;
+}
+.boxs {
+  box-shadow: 0px 0px 3px 1px #ccc;
+}
+.source-time {
+  margin: 0 auto;
+  height: 35px;
+  text-align: center;
+  position: relative;
+  line-height: 35px;
+}
+
+.time {
+  margin-right: 10px;
+}
+
+.wechat,
+.sina {
+  position: absolute;
+  margin-top: 5px;
+}
+
+.wechat {
+  margin-left: 10px;
+}
+
+.sina {
+  margin-left: 46px;
 }

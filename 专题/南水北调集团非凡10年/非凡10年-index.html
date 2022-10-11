@@ -7,6 +7,7 @@
     <title>非凡十年 南水答卷 热烈庆祝中国共产党第二十次全国代表大会胜利召开</title>
     <link rel="stylesheet" href="images_zt/normalize.css">
     <link rel="stylesheet" href="images_zt/slick.css">
+    <link rel="stylesheet" href="images_zt/swiper-3.4.2.css">
     <link rel="stylesheet" href="images_zt/nsbdffsn-202210-global.css">
 </head>
 <body>
@@ -236,10 +237,55 @@
                 </div>
             </div>
         </section>
+        <section style="background-color: #f6f6f6;padding-top: 1px;">
+            <div class="chnl-title" style="width: 250px;"><a href="">影像集萃</a></div>
+           <div class="center-block-1200" style="position: relative;">
+             <!-- Swiper -->
+             <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="">
+                            <img src="images_zt/demo3.jpg" alt="">
+                            <div class="tit">图片标题图片标题</div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="">
+                            <img src="images_zt/demo3.jpg" alt="">
+                            <div class="tit">图片标题图片标题</div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="">
+                            <img src="images_zt/demo3.jpg" alt="">
+                            <div class="tit">图片标题图片标题</div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="">
+                            <img src="images_zt/demo3.jpg" alt="">
+                            <div class="tit">图片标题图片标题</div>
+                        </a>
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+
+            </div>
+            <div id="next" class="swiper-button-next swiper-button swiper-button-white"></div>
+            <div id="prev" class="swiper-button-prev swiper-button swiper-button-white"></div>
+            
+           </div>
+        </section>
     </main>
-    <footer></footer>
+    <footer>
+        <p>京ICP备2021019491号 &nbsp;&nbsp;主办：中国南水北调集团有限公司</p>
+        <p>中国南水北调集团有限公司 &nbsp;&nbsp;版权所有</p>
+        <p><a href="">联系我们</a> &nbsp;&nbsp;| &nbsp;&nbsp;<a href="">法律声明</a></p>
+    </footer>
     <script src="images_zt/jquery-3.6.0.min.js"></script>
     <script src="images_zt/slick.js"></script>
+    <script src="images_zt/swiper.min-3.4.2.js"></script>
     <script>
         $(document).ready(function () {
                     $(".slick-mod").slick({
@@ -269,6 +315,25 @@
                         $(".htab-con").eq($(this).index()).addClass("act").siblings().removeClass("act");
                     })
                 })
+                var swiper = new Swiper('.swiper-container', {
+                    prevButton: '#prev',
+                    nextButton: '#next',
+                    loop: true,
+                    // pagination: '.swiper-pagination',
+                    clickable: true,
+                    effect: 'coverflow',
+                    grabCursor: true,
+                    centeredSlides: true,
+                    slidesPerView: 'auto',
+                    coverflow: {
+                        rotate: 50,
+                        stretch: 0,
+                        depth: 200,
+                        modifier: 1,
+                        slideShadows: false
+                    },
+                    // paginationType: 'fraction'
+                });
     </script>
 </body>
 </html>
