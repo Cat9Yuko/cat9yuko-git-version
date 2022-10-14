@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="one">
+        <span>网站导航</span>
+
+        <div class="body_end">
+            <select name="effective" class="menu1" id="menu2" onchange="window.open(this.value);resetValue();">
+                <option value="">默认选项</option>
+                <option value="https://www.baidu.com/">百度</option>
+                <option value="http://mwr.gov.cn/">水利部</option>
+            </select>
+            <select name="effective" class="menu1" id="menu2" onchange="window.open(this.value);resetValue();">
+                <option value="">默认选项1</option>
+                <option value="https://www.baidu.com/">百度1</option>
+                <option value="http://mwr.gov.cn/">水利部1</option>
+            </select>
+            <select name="effective" class="menu1" id="menu2" onchange="window.open(this.value);resetValue();">
+                <option value="">默认选项2</option>
+                <option value="https://www.baidu.com/">百度2</option>
+                <option value="http://mwr.gov.cn/">水利部2</option>
+            </select>
+
+        </div>
+
+    </div>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        function resetValue() {
+                $('select').each(function (i, j) {
+                    // console.log($(j).find("option:selected"));
+                    $(j).find("option:selected").attr("selected", false);
+                    // console.log($(j).find("option"));
+                    $(j).find("option").first().attr("selected", true);
+                    $(j).find("option").first().removeAttr("selected");
+                })
+        }
+    </script>
+</body>
+
+</html>

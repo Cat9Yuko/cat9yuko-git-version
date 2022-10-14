@@ -9,6 +9,55 @@
     <link rel="stylesheet" href="images_zt/slick.css">
     <link rel="stylesheet" href="images_zt/swiper-3.4.2.css">
     <link rel="stylesheet" href="images_zt/nsbdffsn-202210-global.css">
+    <style>
+        .list2  {
+            margin-right: 5px;
+            margin-top: 6px;
+            margin-bottom: 6px;
+        }
+        .list2 li {
+            width: 616px;
+            line-height: 94px;
+            text-indent: 25px;
+            font-size: 20px;
+        }
+        .list2 li:not(:last-child) {
+            border-bottom: 1px dashed #000000;
+        }
+        .list2 li.act {
+            background-color: #c10303;
+            color: #ffffff;
+            position: relative;
+            border-bottom: 1px solid #e19595;
+        }
+        .list2 li.act::before {
+            content: "";
+            position: absolute;
+            top: calc(50% - 14px);
+            left: -17px;
+            vertical-align: middle;
+            height: 0;
+            border-top: 14px solid transparent;
+            border-bottom: 14px solid transparent;
+            border-right: 17px solid #c10303;
+        }
+        .img-container {
+            margin-left: 16px;
+            margin-top: 21px;
+        }
+        .img-c {
+            display: none;
+        }
+        .img-c.act {
+            display: block;
+        }
+        .show-img {
+            padding: 30px 16px;
+        }
+        .simg + .simg {
+            margin-left: 67px;
+        }
+    </style>
 </head>
 <body>
     <header></header>
@@ -212,6 +261,41 @@
             </div>
         </section>
         <section>
+            <div class="chnl-title" style="width: 250px;"><a href="">两会声音</a></div>
+            <div class="center-block-1200 clearfix" style="background-color: #f6f6f6;">
+                <div class="fl">
+                    <div class="img-container">
+                        <div class="img-c act"><img src="images_zt/demo4.jpg" alt="1" width="540" height="339"></div>
+                        <div class="img-c"><img src="images_zt/demo4.jpg" alt="2" width="540" height="339"></div>
+                        <div class="img-c"><img src="images_zt/demo4.jpg" alt="33" width="540" height="339"></div>
+                        <div class="img-c"><img src="images_zt/demo4.jpg" alt="4" width="540" height="339"></div>
+                    </div>
+                </div>
+                <div class="fr">
+                    <ul class="list2">
+                        <li class="act"><a href="">保安公司党委专题学习党的十九届六中全会精神</a></li>
+                        <li><a href="">保安公司党委专题学习党的十九届六中全会精神</a></li>
+                        <li><a href="">保安公司党委专题学习党的十九届六中全会精神</a></li>
+                        <li><a href="">保安公司党委专题学习党的十九届六中全会精神</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="chnl-title" style="width: 250px;"><a href="">主题海报</a></div>
+            <div style="background-color: #f6f6f6;">
+                <div class="center-block-1200">
+                    <div class="show-img clearfix">
+                        <div class="simg fl"><a href=""><img src="images_zt/demo5.jpg" alt="" width="178" height="291"></a></div>
+                        <div class="simg fl"><img src="images_zt/demo5.jpg" alt=""></div>
+                        <div class="simg fl"><img src="images_zt/demo5.jpg" alt=""></div>
+                        <div class="simg fl"><img src="images_zt/demo5.jpg" alt=""></div>
+                        <div class="simg fl"><img src="images_zt/demo5.jpg" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
             <div class="clearfix center-block-1200">
                 <div class="fl w570">
                     <div class="chnl-title" style="width: 146px;margin-left: 0;"><a href="">一线动态</a></div>
@@ -313,6 +397,11 @@
                     $(".htab-item").hover(function(){
                         $(this).addClass("act").siblings().removeClass("act");
                         $(".htab-con").eq($(this).index()).addClass("act").siblings().removeClass("act");
+                    })
+
+                    $(".list2 li").hover(function(){
+                        $(this).addClass("act").siblings().removeClass("act");
+                        $(".img-c").eq($(this).index()).addClass("act").siblings().removeClass("act");
                     })
                 })
                 var swiper = new Swiper('.swiper-container', {
