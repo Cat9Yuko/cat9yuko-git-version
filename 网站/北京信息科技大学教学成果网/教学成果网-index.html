@@ -321,23 +321,13 @@
     <script src="images/slick.js"></script>
     <script src="images/index.js"></script>
     <script>
-        // 导航
-        $(".nav-child").hover(function(){
-            $(this).addClass("act").siblings().removeClass("act");
-        },function(){
-            $(this).removeClass("act");
-        })
+        
         $(".chnl-title span").hover(function(){
             $(this).addClass("act").siblings().removeClass("act");
             $(this).parent().next().children(".list-con").eq($(this).index()).addClass("act").siblings().removeClass("act");
         })
 
         $(document).ready(function () {
-            $(".slick-mod").slick({
-                dots: true,
-                autoplay: true
-            });
-
             $(".slick-mod2").slick({
                 dots: false,
                 autoplay: true
