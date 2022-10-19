@@ -140,7 +140,7 @@
         <section>
             <div class="center-block-1200 clearfix">
                 <div class="fl w580">
-                    <div class="chnl-title"><span class="act"><a href="">制度建设</a></span><span><a href="">教学研究</a></span><a href="" class="more fr">更多&nbsp;+</a></div> 
+                    <div class="chnl-title"><span class="act"><a href="#1">制度建设</a></span><span><a href="#2">教学研究</a></span><a href="#1" class="more fr">更多&nbsp;+</a></div> 
                     <div class="list-container">
                         <div class="list-con act">
                             <div class="list-hnews clearfix">
@@ -324,6 +324,8 @@
         
         $(".chnl-title span").hover(function(){
             $(this).addClass("act").siblings().removeClass("act");
+            $(this).parent().find(".more").attr("href",$(this).find("a").attr("href"));
+            
             $(this).parent().next().children(".list-con").eq($(this).index()).addClass("act").siblings().removeClass("act");
         })
 
