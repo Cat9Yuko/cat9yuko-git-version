@@ -1,0 +1,262 @@
+:root {
+  box-sizing: border-box;
+}
+*,
+::before,
+::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+img {
+  border: none;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clearfix::after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+.center-block-1237 {
+  width: 1237px;
+  margin: 0 auto;
+}
+.w526 {
+  width: 526px;
+}
+.w563 {
+  width: 563px;
+}
+/* user style */
+header {
+  height: 867px;
+  background: url(jhbtkzg-202212-banner.jpg) center center no-repeat;
+  background-size: cover;
+}
+main {
+  margin-top: -223px;
+}
+.bgcolor {
+  position: relative;
+  background: #0d9de6;
+}
+.imgbottom {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 512px;
+  background: url(jhbtkzg-202212-bannerbottom.jpg) center center no-repeat;
+  background-size: cover;
+  z-index: 20;
+}
+.whitebg {
+  position: relative;
+  z-index: 21;
+  background: #ffffff;
+  min-height: 500px;
+  padding: 27px 16px;
+}
+footer {
+  position: relative;
+  z-index: 21;
+  margin: 50px 0 0;
+  padding-bottom: 66px;
+}
+.fbg {
+  background: url(jhbtkzg-202210-footer.png) center center no-repeat;
+  background-size: contain;
+}
+/* carousel */
+.slick-mod,
+.slick-mod2 {
+  width: 600px;
+  height: 342px;
+}
+.slick-item {
+  position: relative;
+}
+.slick-item img {
+  width: 100%;
+}
+.tit1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 16px;
+  color: #ffffff;
+  line-height: 42px;
+  text-indent: 2rem;
+  background: rgba(26, 91, 140, 0.5);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.slick-mod .slick-dots,
+.slick-mod2 .slick-dots {
+  position: absolute;
+  right: 10px;
+  bottom: 15px;
+}
+.slick-mod2 .slick-dots {
+  bottom: 36px;
+}
+
+.slick-mod .slick-arrow,
+.slick-mod2 .slick-arrow {
+  width: 33px;
+  height: 57px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 3;
+  cursor: pointer;
+}
+/* .slick-mod .slick-next {
+  right: 0;
+  background: url(../images_zt/wlaq-202009-arrowrigh.png) no-repeat center;
+}
+.slick-mod .slick-prev {
+  left: 0;
+  background: url(../images_zt/wlaq-202009-arrowlef.png) no-repeat center;
+}
+
+.slick-mod2 .slick-next {
+  right: 0;
+  background: url(../images/wlaq-202009-arrowrigh.png) no-repeat center;
+}
+.slick-mod2 .slick-prev {
+  left: 0;
+  background: url(../images/wlaq-202009-arrowlef.png) no-repeat center;
+} */
+.slick-mod .slick-dots li,
+.slick-mod2 .slick-dots li {
+  width: 14px;
+  height: 14px;
+  background: #ffffff;
+  border-radius: 50%;
+  margin: 0 5px 0 0;
+}
+.slick-mod .slick-dots li.slick-active,
+.slick-mod2 .slick-dots li.slick-active {
+  width: 14px;
+  height: 14px;
+  background: #e50012;
+  border-radius: 50%;
+}
+/* --- */
+.hnewchlbg {
+  width: 500px;
+  height: 35px;
+  margin: 0 auto;
+  margin-top: 10px;
+  text-align: center;
+  line-height: 35px;
+  font-size: 24px;
+  background: url(jhbtkzg-202210-hnewsbg.png);
+}
+.hnewsabs {
+  font-size: 20px;
+  line-height: 40px;
+  margin-top: 20px;
+  padding-right: 5px;
+}
+.chnltitle {
+  font-size: 24px;
+  border-bottom: 1px solid #f78520;
+  padding-bottom: 5px;
+  text-indent: 15px;
+}
+.chnltitle span {
+  /* font-weight: bold; */
+  text-shadow: #f78520 1px 0 0, #f78520 0 1px 0, #f78520 -1px 0 0,
+    #f78520 0 -1px 0;
+}
+.chnltitle span::after {
+  content: "";
+  display: inline-block;
+  width: 48px;
+  height: 22px;
+  vertical-align: middle;
+  background: url(jhbtkzg-202210-chnlicon.png);
+  margin-left: 2px;
+}
+.fl .chnltitle {
+  margin-left: 16px;
+}
+.fr .chnltitle {
+  margin-right: 20px;
+}
+section + section {
+  margin-top: 15px;
+}
+.more {
+  font-size: 16px;
+  margin-right: 13px;
+  color: #f78520;
+}
+.list {
+  padding-top: 25px;
+}
+.fl .list {
+  padding-left: 12px;
+}
+.fr .list {
+  padding-left: 15px;
+  padding-right: 20px;
+}
+.list li {
+  line-height: 36px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.list li::before {
+  content: "";
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  background: #000000;
+  vertical-align: middle;
+  margin-right: 15px;
+}
+.source-time {
+  margin: 0 auto;
+  height: 35px;
+  text-align: center;
+  position: relative;
+  line-height: 35px;
+}
+
+.time {
+  margin-right: 10px;
+}
+
+.wechat,
+.sina {
+  position: absolute;
+  margin-top: 5px;
+}
+
+.wechat {
+  margin-left: 10px;
+}
+
+.sina {
+  margin-left: 46px;
+}
