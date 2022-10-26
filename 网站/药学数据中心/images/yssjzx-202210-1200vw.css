@@ -1,0 +1,221 @@
+/* 此css重写为1200宽页面代码 */
+.center-block-1400 {
+  width: 1200px;
+}
+.search-word {
+  width: 258px;
+  height: 32px;
+  border-left: 1px solid #909399;
+  border-top: 1px solid #909399;
+  border-bottom: 1px solid #909399;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.search-box {
+  margin-top: 16px;
+  margin-right: 20px;
+}
+.bsubmit {
+  height: 32px;
+  border-left: none;
+}
+.bsubmit img {
+  margin-top: 4px;
+}
+.link-6 .link {
+  width: 142px;
+}
+.link-6 .link p {
+  font-size: 18px;
+  line-height: 24px;
+}
+.link-6 .link:hover p {
+  color: #00be6f;
+}
+.link-6 .link + .link {
+  margin-left: 40px;
+}
+.link-6 {
+  padding: 48px 0 55px 0;
+}
+.link-6 .link img {
+  margin-bottom: 18px;
+}
+.chnltitle {
+  font-size: 36px;
+  color: #303133;
+}
+.tnews {
+  font-size: 26px;
+  line-height: 40px;
+}
+/* carousel */
+.slick-mod {
+  width: 570px;
+  height: 388px;
+}
+.w700 {
+  width: 600px;
+}
+.hlist-container {
+  width: 562px;
+}
+.chnl-title {
+  font-size: 24px;
+}
+.list li {
+  line-height: 45px;
+  font-size: 16px;
+}
+.border-left {
+  height: 386px;
+}
+.chnl-title .more {
+  font-size: 16px;
+}
+.ltime {
+  font-size: 14px;
+}
+.chnl-title .more:hover {
+  color: #00be6f;
+}
+.chnl-title .more::after {
+  width: 12px;
+  height: 10px;
+  background: url(yssjzx-202210-arrowright.png);
+}
+.chnl-title .more:hover::after {
+  background: url(yssjzx-202210-arrowright2.png);
+}
+.show-3c {
+  width: 378px;
+  height: 337px;
+}
+.show-3c + .show-3c {
+  margin-left: 32px;
+}
+.show3-title p {
+  font-size: 26px;
+  line-height: 30px;
+  margin-bottom: 18px;
+}
+.show-3c > p {
+  font-size: 15.4px;
+  line-height: 20px;
+}
+.show-3c {
+  padding: 59px 45px 0 45px;
+}
+.show-3c:hover {
+  box-shadow: 0 0 9px rgba(0, 0, 0, 0.07);
+}
+.mbutton {
+  font-size: 13px;
+  width: 102px;
+  height: 34px;
+  line-height: 34px;
+}
+.mbutton a::after {
+  width: 12px;
+  height: 10px;
+  background: url(yssjzx-202210-arrowright2.png);
+  margin-left: 2px;
+}
+.chnltitle-sub {
+  font-size: 22px;
+  margin-top: 30px;
+  color: #909399;
+}
+.slick-mod3 {
+  margin-top: 29px;
+}
+.aqyy-item {
+  width: 280px;
+  height: 358px;
+}
+.aqyy-item img {
+  max-width: 100%;
+  width: 280px;
+  height: 186px;
+}
+.aqyy-item + .aqyy-item {
+  margin-left: 26px;
+}
+.bto-title span {
+  font-size: 20.7px;
+}
+.bto-abs {
+  font-size: 14.5px;
+}
+.bto-title span::before {
+  width: 37.68px;
+  height: 3px;
+}
+.aqyy-item:hover {
+  box-shadow: 0 0 9px rgba(0, 0, 0, 0.07);
+}
+.slick-item {
+  padding: 10px 0;
+}
+.slick-mod3 .slick-next {
+  right: -55px;
+}
+.slick-mod3 .slick-prev {
+  left: -55px;
+}
+.gxbds-container {
+  margin-top: 77px;
+}
+.leftimg {
+  width: 700px;
+  height: 516px;
+}
+.gxbds-container h2 {
+  font-size: 26px;
+  line-height: 32px;
+  color: #303133;
+}
+.fbtiem {
+  font-size: 16px;
+  margin-top: 17px;
+  margin-bottom: 51px;
+  color: #252b42;
+}
+.gxb-abs {
+  font-size: 16px;
+  line-height: 26px;
+  margin-bottom: 20px;
+  color: #606266;
+}
+.gxbds-container h3 {
+  font-size: 20px;
+  color: #303133;
+}
+.lx {
+  font-size: 14px;
+}
+.tel {
+  font-size: 16px;
+}
+.oc-title {
+  font-size: 26px;
+  padding: 18px 0;
+}
+.icon {
+  width: 150px;
+  font-size: 20px;
+}
+.footert {
+  font-size: 16px;
+  padding-bottom: 60px;
+}
+.link2 {
+  margin-left: 150px;
+}
+.link3 {
+  margin-left: 150px;
+}
+.footerb {
+  font-size: 16px;
+  padding: 24px 0;
+}
