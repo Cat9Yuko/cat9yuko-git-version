@@ -53,13 +53,22 @@ li {
 .tlogo {
   margin-right: 45px;
   margin-left: -258px;
+  width: 300px;
+  margin-top: 10px;
 }
 .logo span {
   float: left;
   font-size: 27px;
   font-weight: bold;
   color: #ffffff;
-  line-height: 76px;
+  line-height: 45px;
+  text-align: right;
+}
+.logo span .p1 {
+  font-size: 25px;
+}
+.logo span .p2 {
+  font-size: 22px;
 }
 nav {
   height: 50px;
@@ -75,6 +84,7 @@ nav {
   line-height: 50px;
   color: #333333;
   position: relative;
+  font-size: 18px;
 }
 .nav-child > a,
 .nav-child-c > a {
@@ -100,6 +110,7 @@ nav {
   color: #ffffff;
   text-align: left;
   text-indent: 30px;
+  font-size: 16px;
 }
 .nav-child:hover .has-nav-child {
   display: block;
