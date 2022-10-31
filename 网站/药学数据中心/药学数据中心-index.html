@@ -21,7 +21,7 @@
         <div>
             <a><img src="images/yssjzx-202209-iconeyao.png" alt="">
                 <p>E药云搜</p>
-                <img class="sqrcode" src="images/yssjzx-202209-qrcode.png" alt="">
+                <img class="sqrcode" src="images/yssjzx-202209-qrcode2.png" alt="">
             </a>
         </div>
     </div>
@@ -392,7 +392,11 @@
                 infinite: false
             });
         })
-
+        $(".nav .nav-item").hover(function(){
+            $(this).addClass("act").siblings().removeClass("act");
+        },function(){
+            $(this).removeClass("act");
+        })
     </script>
 </body>
 </html>

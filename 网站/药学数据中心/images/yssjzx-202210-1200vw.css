@@ -154,7 +154,7 @@
 .aqyy-item:hover {
   box-shadow: 0 0 9px rgba(0, 0, 0, 0.07);
 }
-.slick-item {
+.slick-mod3 .slick-item {
   padding: 10px 0;
 }
 .slick-mod3 .slick-next {
