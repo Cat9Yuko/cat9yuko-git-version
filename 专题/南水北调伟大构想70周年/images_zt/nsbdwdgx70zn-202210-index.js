@@ -203,7 +203,7 @@ var page = {
         // 进入效果
         function comeInImg(obj) {
 
-            beginImg = '<img src="' + obj.find("img").attr("src") + '" class="beginPos" style="width: 710px;height: 460 px;display: block;position: absolute;z-index:10;top:0">';
+            beginImg = '<img src="' + obj.find("img").attr("src") + '" class="beginPos" style="width: 800px;height: 460 px;display: block;position: absolute;z-index:10;top:0">';
 
             $parentTab.find(".recom-box-video").append(beginImg);
             $parentTab.find(".beginPos").stop(true, true).animate({
@@ -227,7 +227,7 @@ var page = {
                 .find(".prepareOut")
                 .stop(true, true)
                 .animate({
-                    right: 710
+                    right: 800
                 }, 700, function () {
                     // obj.removeClass('hover');
                 });
