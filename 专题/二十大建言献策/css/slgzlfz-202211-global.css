@@ -1,0 +1,320 @@
+:root {
+  box-sizing: border-box;
+}
+*,
+::before,
+::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+}
+.hidden-pc {
+  display: none;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clearfix::after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+.whitebg {
+  background: #ffffff;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.w48p {
+  width: 48%;
+}
+/* user style */
+header {
+  height: 55px;
+  background: url(../img/slgzlfz-202211-pclogo.png) center center no-repeat;
+  background-size: cover;
+}
+main {
+  background: #faf1f1 url(../img/slgzlfz-202211-pcmainbg.jpg) center top
+    no-repeat;
+  background-size: cover;
+  padding-top: 850px;
+  min-height: 2608px;
+}
+.center-block {
+  width: 1310px;
+  margin: 0 auto;
+}
+.word .p1 {
+  font-size: 41.67px;
+  color: #fee3bb;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.word .p2 {
+  font-size: 33.33px;
+  color: #fee3bb;
+  line-height: 60px;
+}
+.wyly {
+  margin: 134px 0 65px 0;
+}
+.f-title {
+  width: 185px;
+  height: 67px;
+  line-height: 67px;
+  text-indent: 66px;
+  font-size: 27.08px;
+  color: #ffffff;
+  background: #eac58e;
+  border-radius: 6px;
+}
+.f-cont {
+  width: calc(100% - 185px);
+}
+select {
+  height: 67px;
+  width: 100%;
+  font-size: 27.08px;
+  color: #eac58e;
+  outline: none;
+  border: none;
+  padding: 0 27px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background: url(../img/slgzlfz-202211-pcapperance.png) right 34px top 50%
+    no-repeat;
+}
+select::-ms-expand {
+  display: none;
+}
+input[type="text"] {
+  width: 100%;
+  height: 67px;
+  border: none;
+  outline: none;
+  text-indent: 27px;
+  font-size: 27.08px;
+  color: #eac58e;
+}
+::placeholder {
+  font-size: 27.08px;
+  color: #eac58e;
+}
+.form-item + .form-item {
+  margin-top: 59px;
+}
+.f-title2 {
+  width: 185px;
+  height: 250px;
+  line-height: 67px;
+  text-indent: 66px;
+  font-size: 27.08px;
+  color: #ffffff;
+  background: #eac58e;
+  border-radius: 6px;
+}
+textarea {
+  display: block;
+  width: 100%;
+  height: 250px;
+  resize: none;
+  outline: none;
+  border: none;
+  padding: 15px 27px 0;
+  font-size: 27.08px;
+  color: #eac58e;
+}
+.tpyzm .f-title {
+  text-indent: 25px;
+  font-size: 26px;
+}
+.tpyzm .f-cont input {
+  width: calc(100% - 185px);
+}
+.tpyzm img {
+  float: right;
+  width: 185px;
+  height: 67px;
+  border-radius: 6px;
+}
+.phone .f-title {
+  text-indent: 37px;
+}
+.tpyzm .tp {
+  background: none;
+}
+.tpyzm .tp div {
+  cursor: pointer;
+  background: #eac58e;
+  height: 55px;
+  line-height: 55px;
+  border-radius: 6px;
+  margin-top: 6px;
+}
+.tpyzm .tp div.disabled {
+  background: #e2e0dd;
+  cursor: no-drop;
+}
+.button-tj {
+  text-align: center;
+  margin-top: 151px;
+}
+.button-tj button {
+  background: #ec8e02;
+  color: #ffffff;
+  width: 251px;
+  height: 90px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 37.5px;
+}
+footer {
+  line-height: 28px;
+}
+.dzjg {
+  width: 44px;
+  height: 56px;
+}
+.jiucuo {
+  height: 56px;
+}
+/* app style */
+@media screen and (max-width: 769px) {
+  .center-block {
+    width: 100%;
+    padding: 0 30px;
+  }
+  .hidden-app {
+    display: none;
+  }
+  .hidden-pc {
+    display: block;
+  }
+  header {
+    height: 13.5px;
+    background: url(../img/slgzlfz-202211-applogo.png) center center no-repeat;
+    background-size: cover;
+  }
+  main {
+    background: #faf1f1 url(../img/slgzlfz-202211-appmainbg.jpg) no-repeat;
+    background-size: cover;
+    padding-top: 192px;
+    min-height: 650px;
+  }
+  .word .p1 {
+    font-size: 10px;
+    margin-bottom: 5px;
+  }
+  .word .p2 {
+    font-size: 8px;
+    line-height: 16.5px;
+  }
+  .wyly {
+    margin: 20px 0 15px 0;
+  }
+  .f-title {
+    width: 45px;
+    height: 17px;
+    line-height: 17px;
+    font-size: 8px;
+    text-indent: 14px;
+  }
+  .f-cont {
+    width: calc(100% - 45px);
+  }
+  select {
+    display: block;
+    height: 17px;
+    line-height: 17px;
+    font-size: 8px;
+    background: none;
+    padding: 0 10px;
+    background: url(../img/slgzlfz-202211-appapperance.png) right 8px top 50%
+      no-repeat;
+    background-size: 10px 5px;
+  }
+  input[type="text"] {
+    display: block;
+    height: 17px;
+    text-indent: 10px;
+    font-size: 8px;
+    color: #eac58e;
+  }
+  ::placeholder {
+    font-size: 8px;
+  }
+  .form-item + .form-item {
+    margin-top: 14px;
+  }
+  .f-title2 {
+    width: 45px;
+    line-height: 17px;
+    height: 60px;
+    text-indent: 14px;
+    font-size: 8px;
+    color: #ffffff;
+    background: #eac58e;
+    border-radius: 6px;
+  }
+  textarea {
+    height: 60px;
+    font-size: 8px;
+    padding: 5px;
+  }
+  .tpyzm .f-title {
+    font-size: 7px;
+    text-indent: 3px;
+  }
+  .tpyzm .f-cont input {
+    width: calc(100% - 45px);
+    float: left;
+  }
+  .tpyzm img {
+    width: 45px;
+    height: 17px;
+  }
+  .phone .f-title {
+    text-indent: 37px;
+    text-indent: 6px;
+  }
+  .tpyzm .tp div {
+    width: 45px;
+    height: 15px;
+    line-height: 15px;
+    margin-top: 1px;
+  }
+  .button-tj {
+    margin-top: 26px;
+  }
+  .button-tj button {
+    width: 60px;
+    height: 22px;
+    font-size: 11px;
+  }
+  footer {
+    font-size: 7px;
+    line-height: 13px;
+  }
+  .guohui {
+    height: 7px;
+  }
+  .dzjg {
+    width: auto;
+    height: 14px;
+  }
+  .jiucuo {
+    height: 14px;
+  }
+}
