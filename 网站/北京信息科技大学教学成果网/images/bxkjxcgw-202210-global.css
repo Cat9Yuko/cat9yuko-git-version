@@ -52,7 +52,7 @@ li {
 }
 .tlogo {
   margin-right: 45px;
-  margin-left: -258px;
+  /* margin-left: -258px; */
   width: 300px;
   margin-top: 10px;
 }
@@ -85,6 +85,7 @@ nav {
   color: #333333;
   position: relative;
   font-size: 18px;
+  font-weight: bold;
 }
 .nav-child > a,
 .nav-child-c > a {
@@ -551,4 +552,10 @@ footer {
 .img-container-list {
   padding-top: 58px;
   padding-bottom: 50px;
+}
+.center-item {
+  display: inline-block;
+}
+.align-center {
+  text-align: center;
 }
