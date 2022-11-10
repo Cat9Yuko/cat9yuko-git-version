@@ -32,8 +32,8 @@
         <div class="banner-nav list-banner">
             <div class="center-block-1197 navpos">
                 <nav class="posab">
-                    <div class="nav-item act"><a href="">首 页</a></div>
-                    <div id="zxxgk" class="nav-item"><a href="">中心概况</a>
+                    <div class="nav-item act"><a href="1">首 页</a></div>
+                    <div id="zxxgk" class="nav-item"><a href="1">中心概况</a>
                         <div class="nav-childs">
                             <div class="clearfix pd">
                                 <div class="nav-child"><a href="">中心简介</a></div>
@@ -42,7 +42,7 @@
                             </div>
                         </div>
                     </div>
-                    <div id="xwdt" class="nav-item"><a href="">新闻动态</a>
+                    <div id="xwdt" class="nav-item"><a href="../">新闻动态</a>
                         <div class="nav-childs">
                             <div class="clearfix pd">
                                 <div class="nav-child"><a href="">要闻</a></div>
@@ -50,9 +50,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="nav-item"><a href="">通知公告</a></div>
-                    <div class="nav-item"><a href="">党建之窗</a></div>
-                    <div id="ztzl" class="nav-item"><a href="">专题专栏</a>
+                    <div class="nav-item"><a href="1">通知公告</a></div>
+                    <div class="nav-item"><a href="1">党建之窗</a></div>
+                    <div id="ztzl" class="nav-item"><a href="1">专题专栏</a>
                         <div class="nav-childs">
                             <div class="clearfix pd">
                                 <div class="nav-child"><a href="">监督检查</a></div>
@@ -61,7 +61,7 @@
                             </div>
                         </div>
                     </div>
-                    <div id="zcfg" class="nav-item"><a href="">政策法规</a>
+                    <div id="zcfg" class="nav-item"><a href="1">政策法规</a>
                         <div class="nav-childs">
                             <div class="clearfix pd">
                                 <div class="nav-child"><a href="">法律法规</a></div>
@@ -71,7 +71,7 @@
                             </div>
                         </div>
                     </div>
-                    <div id="gzhd" class="nav-item"><a href="">公众互动</a>
+                    <div id="gzhd" class="nav-item"><a href="1">公众互动</a>
                         <div class="nav-childs">
                             <div class="clearfix pd">
                                 <div class="nav-child"><a href="">征求意见</a></div>
@@ -200,7 +200,16 @@
     <script src="images/moment-with-locales.js"></script>
     <script src="images/jquery.webui-popover.min.js"></script>
     <script src="images/jazx-202209-index.js"></script>
-    
+    <script>
+        $('.nav-item > a').each(function(){
+		        //console.log(this+"-"+$(this));
+		        // console.log($($(this))[0].href);
+		        // console.log(String(window.location));
+                console.log(this.href);
+		        if(this.href=="../")
+		            $(this).parent().addClass('act');
+		    });
+    </script>
 </body>
 
 </html>

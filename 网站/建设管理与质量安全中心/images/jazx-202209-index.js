@@ -6,7 +6,7 @@ $(function () {
         trigger: 'hover',
         // title: 'Pop Title',
         // content: $(".nav-childs").html(),
-        width: 430,
+        width: 460,
         // height: 32,
         multi: false,
         closeable: false,
@@ -14,11 +14,11 @@ $(function () {
         padding: false,
         placement: 'bottom'
     };
-    var zxxgk = {content:$("#zxxgk .nav-childs").html(),width:325}
-    var xwdt = {content:$("#xwdt .nav-childs").html(),width:218}
+    var zxxgk = {content:$("#zxxgk .nav-childs").html(),width:348}
+    var xwdt = {content:$("#xwdt .nav-childs").html(),width:232}
     var zcfg = {content:$("#zcfg .nav-childs").html()}
     var gzhd = {content:$("#gzhd .nav-childs").html()}
-    var ztzl = {content:$("#ztzl .nav-childs").html(),width:325}
+    var ztzl = {content:$("#ztzl .nav-childs").html(),width:348}
     $('#zxxgk > a').webuiPopover('destroy').webuiPopover($.extend({}, settings, zxxgk));
     $('#xwdt > a').webuiPopover('destroy').webuiPopover($.extend({}, settings, xwdt));
     $('#zcfg > a').webuiPopover('destroy').webuiPopover($.extend({}, settings, zcfg));
