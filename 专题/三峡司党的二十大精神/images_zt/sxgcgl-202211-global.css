@@ -1,0 +1,256 @@
+:root {
+  box-sizing: border-box;
+}
+*,
+::before,
+::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+img {
+  border: none;
+  max-width: 100%;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clearfix::after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+.center-block-1200 {
+  width: 1200px;
+  margin: 0 auto;
+}
+.w617 {
+  width: 617px;
+}
+.w548 {
+  width: 548px;
+}
+/* user style */
+header {
+  height: 72px;
+}
+.logo {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.nav {
+  font-size: 18px;
+  line-height: 72px;
+  color: #303030;
+}
+.nav a + a {
+  margin-left: 35px;
+}
+
+main {
+  background: url(sxgcgl-202211-mainbg.jpg) center top no-repeat;
+  padding-top: 573px;
+  min-height: 800px;
+  padding-bottom: 20px;
+}
+
+.mbgcolor {
+  border-top: 5px solid #b00000;
+  background: rgba(255, 254, 244, 0.55);
+  padding-top: 7px;
+}
+
+/* carousel */
+.slick-mod,
+.slick-mod2 {
+  width: 577px;
+  height: 361px;
+  margin-left: 5px;
+}
+.slick-item {
+  position: relative;
+}
+.slick-item img {
+  width: 100%;
+}
+.tit1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 16px;
+  color: #ffffff;
+  line-height: 40px;
+  text-indent: 2rem;
+  background: rgba(0, 0, 0, 0.5);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.slick-mod .slick-dots,
+.slick-mod2 .slick-dots {
+  position: absolute;
+  right: 10px;
+  bottom: 15px;
+}
+.slick-mod2 .slick-dots {
+  bottom: 36px;
+}
+
+.slick-mod .slick-arrow,
+.slick-mod2 .slick-arrow {
+  width: 33px;
+  height: 57px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 3;
+  cursor: pointer;
+}
+/* .slick-mod .slick-next {
+  right: 0;
+  background: url(../images_zt/wlaq-202009-arrowrigh.png) no-repeat center;
+}
+.slick-mod .slick-prev {
+  left: 0;
+  background: url(../images_zt/wlaq-202009-arrowlef.png) no-repeat center;
+}
+
+.slick-mod2 .slick-next {
+  right: 0;
+  background: url(../images/wlaq-202009-arrowrigh.png) no-repeat center;
+}
+.slick-mod2 .slick-prev {
+  left: 0;
+  background: url(../images/wlaq-202009-arrowlef.png) no-repeat center;
+} */
+.slick-mod .slick-dots li,
+.slick-mod2 .slick-dots li {
+  width: 14px;
+  height: 14px;
+  background: #ffffff;
+  border-radius: 50%;
+  margin: 0 5px 0 0;
+}
+.slick-mod .slick-dots li.slick-active,
+.slick-mod2 .slick-dots li.slick-active {
+  width: 14px;
+  height: 14px;
+  background: #e50012;
+  border-radius: 50%;
+}
+/* --- */
+.chnlbg {
+  font-size: 24px;
+  width: 336px;
+  height: 39px;
+  line-height: 39px;
+  background: url(sxgcgl-202211-chnlbg.png);
+  background-size: cover;
+  margin: 0 auto;
+  text-align: center;
+  color: #ffe999;
+  margin-bottom: 25px;
+  margin-top: 10px;
+}
+.title-li {
+  font-size: 18px;
+  line-height: 24px;
+  height: 66px;
+  padding-left: 40px;
+  padding-right: 29px;
+  background: rgba(255, 255, 255, 0.5);
+}
+.title-li a {
+  display: table-cell;
+  height: 66px;
+  vertical-align: middle;
+}
+.title-li + .title-li {
+  margin-top: 7px;
+}
+section + section {
+  margin-top: 40px;
+}
+.chnlbg2 {
+  width: 285px;
+  height: 39px;
+  background: url(sxgcgl-202211-chnlbg2.png);
+  background-size: cover;
+  font-size: 24px;
+  color: #ffe999;
+  line-height: 39px;
+  text-indent: 28px;
+  margin-left: 4px;
+  margin-bottom: 25px;
+}
+.list {
+  color: #303030;
+}
+.list li {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 43px;
+}
+.list li::before {
+  content: "";
+  display: inline-block;
+  border-radius: 5px;
+  width: 11px;
+  height: 10px;
+  margin: 0 9px 0 4px;
+  background: #d90000;
+}
+.list.two-column li {
+  width: 548px;
+}
+.list.two-column li:nth-child(even) {
+  float: right;
+}
+.list.two-column li:nth-child(odd) {
+  float: left;
+}
+footer {
+  background: #b30009;
+}
+.boxs {
+  box-shadow: 0px 0px 3px 1px #ccc;
+}
+.source-time {
+  margin: 0 auto;
+  height: 35px;
+  text-align: center;
+  position: relative;
+  line-height: 35px;
+}
+
+.time {
+  margin-right: 10px;
+}
+
+.wechat,
+.sina {
+  position: absolute;
+  margin-top: 5px;
+}
+
+.wechat {
+  margin-left: 10px;
+}
+
+.sina {
+  margin-left: 46px;
+}
