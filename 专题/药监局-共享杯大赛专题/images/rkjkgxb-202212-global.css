@@ -235,6 +235,9 @@ img {
     border-radius: 16px;
     padding-top: 26px;
 }
+.nav-link:hover {
+    color: #00BE6F;
+}
 .nav-link p {
     margin-top: 6px;
     font-weight: 500;
@@ -259,6 +262,9 @@ img {
 .more2 {
     font-size: 14px;
     color: #7C95A1;
+}
+.more2:hover {
+    color: #00BE6F;
 }
 .news {
     background: #00BE6F;
@@ -294,6 +300,13 @@ img {
     vertical-align: middle;
     margin-left: 9px;
     margin-top: -4px;
+}
+.more:hover {
+    color: #00BE6F;
+}
+.more:hover::after {
+    background: url(rkjkgxb-202212-more2.png);
+    background-size: cover;
 }
 .list {
     font-size: 14px;
