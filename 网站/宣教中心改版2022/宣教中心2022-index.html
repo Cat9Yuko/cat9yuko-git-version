@@ -5,8 +5,140 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=1200">
     <title>水利宣教与水文化网</title>
+    <link rel="stylesheet" href="images/normalize.css">
+    <link rel="stylesheet" href="images/slick.css">
+    <link rel="stylesheet" href="images/slxjyswhw-202212-global.css">
 </head>
 <body>
-    
+    <header>
+        <div class="center-block-1200">
+            <div class="logo-container">
+                <img class="fl logo" src="images/slxjyswhw-202212-logo.png" alt="">
+                <div class="fr time-search-container">
+                    <div class="time">2022年7月22日 星期三</div>
+                    <div class="search-container">
+                        <form action="" method="get">
+                            <input type="text" class="search-input" placeholder="请输入关键字" required><button type="submit" class="search-submit">搜索</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <div class="center-block-1200 clearfix">
+                <div class="fl">
+                    <div class="homeicon">
+                        <span><a href="" target="_blank">首页</a></span>
+                    </div>
+                </div>
+                <div class="fl w1076">
+                    <div class="nav-items">
+                        <div class="nav-item"><a href="" target="_blank">组织机构</a></div>
+                        <div class="nav-item has-child">
+                            <a href="" target="_blank">新闻宣传</a>
+                            <div class="nav-childs">
+                                <div class="nav-child"><a href="" target="_blank">时政要闻</a></div>
+                                <div class="nav-child"><a href="" target="_blank">水利要闻</a></div>
+                                <div class="nav-child"><a href="" target="_blank">新闻发布</a></div>
+                                <div class="nav-child"><a href="" target="_blank">宣教动态</a></div>
+                            </div>
+                        </div>
+                        <div class="nav-item"><a href="" target="_blank">媒体聚焦</a></div>
+                        <div class="nav-item"><a href="" target="_blank">水利新媒体</a></div>
+                        <div class="nav-item"><a href="" target="_blank">舆情监测</a></div>
+                        <div class="nav-item"><a href="" target="_blank">展览音像</a></div>
+                        <div class="nav-item"><a href="" target="_blank">水情教育</a></div>
+                    </div>
+                    <div class="nav-items">
+                        <div class="nav-item"><a href="" target="_blank">水文化建设</a></div>
+                        <div class="nav-item has-child">
+                            <a href="" target="_blank">宣教平台</a>
+                            <div class="nav-childs">
+                                <div class="nav-child"><a href="" target="_blank">大思政基地</a></div>
+                                <div class="nav-child"><a href="" target="_blank">国家水情教育基地</a></div>
+                                <div class="nav-child"><a href="" target="_blank">国家水利遗产</a></div>
+                            </div>
+                        </div>
+                        <div class="nav-item has-child">
+                            <a href="" target="_blank">宣教智库</a>
+                            <div class="nav-childs">
+                                <div class="nav-child"><a href="" target="_blank">专家智库</a></div>
+                                <div class="nav-child"><a href="" target="_blank">创研团队</a></div>
+                                <div class="nav-child"><a href="" target="_blank">协作团队</a></div>
+                            </div>
+                        </div>
+                        <div class="nav-item"><a href="" target="_blank">网上展厅</a></div>
+                        <div class="nav-item"><a href="" target="_blank">影像资料</a></div>
+                        <div class="nav-item"><a href="" target="_blank">专题集锦</a></div>
+                        <div class="nav-item has-child">
+                            <a href="" target="_blank">党建纪检</a>
+                            <div class="nav-childs">
+                                <div class="nav-child"><a href="" target="_blank">中心党建</a></div>
+                                <div class="nav-child"><a href="" target="_blank">中心纪检</a></div>
+                                <div class="nav-child"><a href="" target="_blank">精神文明</a></div>
+                                <div class="nav-child"><a href="" target="_blank">工青妇园地</a></div>
+                                <div class="nav-child"><a href="" target="_blank">廉洁文化</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="center-block-1200">
+            <section>
+                <div class="hnews">
+                    <a href="" target="_blank">习近平在辽宁锦州市考察调研</a>
+                </div>
+            </section>
+            <section>
+                <div class="slick-mod">
+                    <div class="slick-item">
+                        <a href="" target="_blank">
+                            <img src="images/demo.jpg" alt="">
+                            <div class="tit1">2020年国家网络安全宣传周2020年国家网络安全宣传周2020年国家网络安全宣传周2020年国家网络安全宣传周2020年国家网络安全宣传周</div>
+                        </a>
+                    </div>
+                    <div class="slick-item">
+                        <a href="" target="_blank">
+                            <img src="images/demo.jpg" alt="">
+                            <div class="tit1">网信工作视频会议在京召开</div>
+                        </a>
+                    </div>
+                    <div class="slick-item">
+                        <a href="" target="_blank">
+                            <img src="images/demo.jpg" alt="">
+                            <div class="tit1">网信工作视频会议在京召开</div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer></footer>
+
+    <script src="images/jquery-3.6.0.min.js"></script>
+    <script src="images/slick.js"></script>
+    <script src="images/moment-with-locales.js"></script>
+    <script>
+        moment.locale('zh-cn');
+        var time = moment().format('YYYY年MMMDo dddd');
+        // console.log(time);
+        $(".time").text(time);
+       
+        $(document).ready(function () {
+            $(".slick-mod").slick({
+                dots: false,
+                autoplay: true
+            });
+
+            $(".slick-mod2").slick({
+                dots: false,
+                autoplay: false,
+            });
+
+        })
+    </script>
 </body>
 </html>
