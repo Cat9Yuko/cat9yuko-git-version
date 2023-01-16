@@ -47,20 +47,23 @@ li {
     padding: 0 23px 23px;
 }
 .nav {
-    width: 1332px;
+    width: 1333px;
     margin: 0 auto;
     background: url(qgslgzhy-2023-navbg.png) center center no-repeat;
     background-size: cover;
-    height: 139px;
+    height: 174px;
     text-align: center;
     font-size: 30px;
     color: #ffffff;
     font-weight: bold;
-    padding-top: 53px;
+    padding-top: 57px;
     line-height: 64px;
 }
 .nav a + a {
     margin-left: 14px;
+}
+main {
+  margin-top: -30px;
 }
 /* carousel */
 .slick-mod,

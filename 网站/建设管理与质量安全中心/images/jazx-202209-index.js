@@ -17,7 +17,7 @@ $(function () {
     var zxxgk = {content:$("#zxxgk .nav-childs").html(),width:348}
     var xwdt = {content:$("#xwdt .nav-childs").html(),width:232}
     var zcfg = {content:$("#zcfg .nav-childs").html()}
-    var gzhd = {content:$("#gzhd .nav-childs").html(),width: 120}
+    var gzhd = {content:$("#gzhd .nav-childs").html(),width: 232}
     var ztzl = {content:$("#ztzl .nav-childs").html(),width:348}
     $('#zxxgk > a').webuiPopover('destroy').webuiPopover($.extend({}, settings, zxxgk));
     $('#xwdt > a').webuiPopover('destroy').webuiPopover($.extend({}, settings, xwdt));
