@@ -551,3 +551,6 @@ section:first-of-type {
 .list_content {
     background: #ffffff;
 }
+::-webkit-input-placeholder {
+    text-indent: 16px;
+}
