@@ -1,8 +1,8 @@
 /*
  * @Author: Cat9Yuko 
  * @Date: 2020-07-29 15:59:35 
- * @Last Modified by: Cat9Yuko
- * @Last Modified time: 2022-06-23 22:11:26
+ * @Last Modified by: mikey.zhaopeng
+ * @Last Modified time: 2023-01-30 17:11:49
  */
 
  // 依赖JQuery
@@ -72,7 +72,6 @@
     setTimer();
 })
 
-
 window.onload = function () {
     var adiv = document.getElementById('div');
     var aul = adiv.getElementsByTagName('ul')[0];
@@ -107,4 +106,14 @@ window.onload = function () {
     }, function () {
         speed = s;
     })
+
+    var imgwid = 0;
+    // 判断图片的宽度
+    $("#div img").each(function(){
+        console.log($(this).width());
+        imgwid+=$(this).width();
+    })
+    var marrr = $("div li").length * 35;
+    console.log(imgwid);
+    $("#div ul").width(imgwid + marrr)
 }
