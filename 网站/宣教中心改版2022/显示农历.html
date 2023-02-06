@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script src="images/jquery-3.6.0.min.js"></script>
+    <script src="images/solarlunar.min.js"></script>
+    <script>
+        var zhengyue = solarlunar.solar2lunar(2023, 2, 6).monthCn;
+        var dayCn = solarlunar.solar2lunar(2023, 2, 6).dayCn;
+        console.log("monthCn: "+ zhengyue+"dayCn: "+ dayCn);
+        console.log(solarlunar.solar2lunar(2023, 2, 6))
+			// 结果如下:
+			// 结果如下:
+			// {
+			// 	 Animal: "牛"
+			// 	 IDayCn: "初三"
+			// 	 IMonthCn: "九月"
+			// 	 Term: "寒露"
+			// 	 astro: "天秤座"
+			// 	 cDay: 8
+			// 	 cMonth: 10
+			// 	 cYear: 2021
+			// 	 gzDay: "己丑"
+			// 	 gzMonth: "戊戌"
+			// 	 gzYear: "辛丑"
+			// 	 isLeap: false
+			// 	 isTerm: true
+			// 	 isToday: false
+			// 	 lDay: 3
+			// 	 lMonth: 9
+			// 	 lYear: 2021
+			// 	 nWeek: 5
+			// 	 ncWeek: "星期五"
+			// }
+    </script>
+</body>
+</html>

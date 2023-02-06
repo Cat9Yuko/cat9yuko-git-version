@@ -15,7 +15,7 @@
             <div class="logo-container">
                 <img class="fl logo" src="images/slxjyswhw-202212-logo.png" alt="">
                 <div class="fr time-search-container">
-                    <div class="time">2022年7月22日 星期三</div>
+                    <div class="time">2022年7月22日 星期三</div><span id="currentDate"></span>
                     <div class="search-container">
                         <form action="" method="get">
                             <input type="text" class="search-input" placeholder="请输入关键字" required><button type="submit" class="search-submit">搜索</button>
@@ -612,6 +612,14 @@
     <script src="images/moment-with-locales.js"></script>
     <script src="images/qrcode.js"></script>
     <script src="images/jquery.qrcode.min.js"></script>
+    <script src="images/solarlunar.min.js"></script>
+    <script>
+        // 农历日期
+        var zhengyue = solarlunar.solar2lunar(moment().format("YYYY"), moment().format("M"), moment().format("D")).monthCn;
+        var dayCn = solarlunar.solar2lunar(moment().format("YYYY"), moment().format("M"), moment().format("D")).dayCn;
+        console.log("monthCn: "+ zhengyue+"dayCn: "+ dayCn);
+        console.log("农历: "+zhengyue+dayCn);
+    </script>
     <script>
 
         // 切换
@@ -622,7 +630,7 @@
         moment.locale('zh-cn');
         var time = moment().format('YYYY年MMMDo dddd');
         // console.log(time);
-        $(".time").text(time);
+        $(".time").text(time+ " 农历: "+zhengyue+dayCn);
        
         $(document).ready(function () {
             $(".slick-mod").slick({
@@ -651,5 +659,6 @@
                 correctLevel: QRErrorCorrectLevel.M, //错误纠正级别 L:1,M:0,Q:3,H:2
             })
     </script>
+    
 </body>
 </html>
