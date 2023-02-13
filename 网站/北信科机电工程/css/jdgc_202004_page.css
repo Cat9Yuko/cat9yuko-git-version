@@ -39,7 +39,7 @@
   box-sizing: border-box;
 }
 .tab.act {
-  background: #2891EC;
+  background: #1f4f84;
   color: #ffffff;
   /* font-weight: bold; */
 }
@@ -231,6 +231,7 @@ table.browsersupport td {
   /* padding-top: 22px;
   padding-left: 29px; */
   padding: 22px 29px;
+  overflow: hidden;
 }
 
 .lt {
@@ -352,7 +353,7 @@ table.browsersupport td {
 	line-height: 35px;
 	/* text-indent: 15px; */
   font-weight: normal;
-  background-color: #6CBBFF ;
+  background-color: #2160a5 ;
   font-size: 14px;
   color: #FFFFFF;
   letter-spacing: 0.82px;

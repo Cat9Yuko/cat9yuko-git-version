@@ -66,6 +66,8 @@ img {
 .time {
     color: #5e5e5e;
     margin-bottom: 20px;
+    margin-right: -48px;
+    text-align: right;
 }
 .time-search-container {
     margin-top: 45px;
@@ -331,7 +333,7 @@ nav {
 }
 .border-container2 {
     border: 1px solid #dfdfdf;
-    height: 737px;
+    min-height: 670px;
 }
 .border-container2.graybg {
     background: #f0f0f0;
@@ -376,7 +378,7 @@ nav {
     margin-left: 10px;
 }
 .chnllist + .chnllist {
-    margin-top: 20px;
+    margin-top: 16px;
 }
 .list-item + .list-item {
     border-top: 1px dashed #9996a3;
@@ -409,7 +411,7 @@ nav {
     padding: 8px 0;
 }
 .border-container3 {
-    height: 357px;
+    min-height: 295px;
 }
 .border-container3 + .border-container3 {
     margin-top: 17px;
