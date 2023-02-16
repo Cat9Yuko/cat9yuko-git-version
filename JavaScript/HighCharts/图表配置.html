@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图表配置</title>
+    <style>
+        .cat9 {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div id="container" style="width: 600px;height: 400px;"></div>
+
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/highcharts.js"></script>
+    <script>
+        // 图表配置
+        var option = {
+            chart: {
+                type: 'bar',
+                /* 设置图表样式
+                图表样式属性包括 border、backgroundColor、margin、spacing、style等
+                边框：包括 borderColor、borderRadius、borderWidth
+                背景：包括 backgroundColor
+                外边距：包括 margin、marginTop、marginRight、marginBottom、marginLeft
+                内边距：包括 spacing、spacingTop、spacingRight、spacingBottom、spacingLeft
+                其他样式：其他属性例如字体等属性，实例代码
+                */
+                style: {
+                    fontFamily:"宋体",
+                    fontSize: '18px',
+                    fontWeight: 'bold',
+                    color: '#7cb5ec'
+                },
+                /* 另外还可以通过 chart.className 来绑定 CSS 类并给定 CSS 样式 */
+                className: 'cat9',
+                /* 
+                图表绘图区的可配置属性有：
+                plotBackgroundColor ： 绘图区背景颜色
+                plotBackgroundImage ： 绘图区背景图片
+                plotBorderColor ： 绘图区边框颜色
+                plotBorderWidth ： 绘图区边框宽度
+                plotShadow ： 绘图投影
+                 */
+                plotBackgroundColor: '#f3f3f3',
+                plotBackgroundImage: '/img/wallhaven-nr1jj0.png',
+                // plotBorderWidth: 5,
+                plotBorderColor: '#dedede',
+                plotShadow: true
+            },
+            title: {
+                text: '我的第一个图表'
+            },
+            xAxis: {
+                categories: ['一月','二月','三月']
+            },
+            yAxis: {
+                title: {
+                    text: '次数'
+                }
+            },
+            series: [{
+                name: '小明',
+                data: [1,7,4]
+            },{
+                name: '小红',
+                data: [5,7,3]
+            }]
+        };
+        // 通过构造函数
+        // var charts = Highcharts.chart('container',option);
+        
+        // 通过chart.renderTo来指定
+        /* var charts = Highcharts.chart({
+            // Highcharts配置
+            chart: {
+                renderTo: 'container',
+                type: 'bar'
+            },
+            title: {
+                text: '我的第一个图表'
+            },
+            xAxis: {
+                categories: ['一月','二月','三月']
+            },
+            yAxis: {
+                title: {
+                    text: '次数'
+                }
+            },
+            series: [{
+                name: '小明',
+                data: [1,7,4]
+            },{
+                name: '小红',
+                data: [5,7,3]
+            }]
+        }) */
+    // 使用jquery调用
+    $("#container").highcharts(option)
+    </script>
+</body>
+</html>
