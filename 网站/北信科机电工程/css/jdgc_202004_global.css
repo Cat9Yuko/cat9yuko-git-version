@@ -5,7 +5,7 @@
 }
 /* 通用样式 */
 body {
-  background: url(bg.jpg);
+  background: url(../img/bg.jpg);
 }
 a {
   text-decoration: none;
@@ -222,11 +222,11 @@ nav {
 }
 .slick-mod .slick-next {
   right: 15px;
-  background: url(next-1.png) no-repeat center;
+  background: url(../img/next-1.png) no-repeat center;
 }
 .slick-mod .slick-prev {
   left: 15px;
-  background: url(prev-1.png) no-repeat center;
+  background: url(../img/prev-1.png) no-repeat center;
 }
 .slick-mod .slick-dots li,
 .slick-mod2 .slick-dots li {
@@ -372,13 +372,13 @@ footer .fr {
 /* 202008  修改 */
 
 .header-bg {
-  background-image: url(head-bg.png);
+  background-image: url(../img/head-bg.png);
 }
 .footer-bg {
-  background-image: url(footer-bg.png);
+  background-image: url(../img/footer-bg.png);
 }
 .nav-bg {
-  background-image: url(nav-bg.png);
+  background-image: url(../img/nav-bg.png);
   background-size: cover;
   background-position: center center;
 }
