@@ -1,3 +1,8 @@
 {
-    "liveServer.settings.multiRootWorkspaceName": "北信科机电工程"
+    "liveServer.settings.multiRootWorkspaceName": "北信科机电工程",
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#61021B",
+        "titleBar.activeBackground": "#870226",
+        "titleBar.activeForeground": "#FFFBFC"
+    }
 }
