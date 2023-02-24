@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>标题</title>
+</head>
+
+<body>
+    <div id="container"></div>
+
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/highcharts.js"></script>
+    <script>
+        $(function () {
+            $('#container').highcharts({
+                title: {
+                    text: null,
+                    align: 'left',
+                    floating: true,
+                    margin: 20,
+                    style: {
+                        fontWeight: 'bold'
+                    },
+                    x: 50,
+                    y: 25
+                },
+                subtitle: {
+                    text: '我是<a href="#副标题">副标题</a>',
+                    align: 'right',
+                    useHTML: true
+                },
+                xAxis: {
+                    categories: ['一月', '二月', '三月', '四月']
+                },
+                series: [{
+                    name: '张三',
+                    data: [200, 300, 400, 500]
+                }]
+                    
+                
+            });
+            var chart  = $('#container').highcharts();
+            var title = chart.title.textStr;
+            var subtitle = chart.subtitle.textStr;
+            alert(title+subtitle);
+            // 重新设置标题
+            setTimeout(() => {
+                alert("重新设置标题");
+                // 设置标题
+                chart.setTitle({text:'标题1', style:{color:'#2ede7e'}});
+                /* 设置副标题 */
+                chart.setTitle(null,{text:'副<a href="#副标题2">标题2</a>',useHTML:true,style:{color:'#cb3131'}});
+            }, 3000);
+        })
+    </script>
+</body>
+
+</html>

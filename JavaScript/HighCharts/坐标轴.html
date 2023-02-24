@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>坐标轴</title>
+</head>
+
+<body>
+    <div id="container" style="width: 600px;"></div>
+
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/highcharts.js"></script>
+    <script>
+        $(function () {
+            $('#container').highcharts({
+                chart: {
+                    inverted: true
+                },
+                xAxis: {
+                    title: {
+                        text: 'x轴'
+                    },
+                    categories: ['一月', '二月', '三月', '四月', '五月', '六月'],
+                    labels: {
+                        staggerLines: 1
+                    },
+                    tickInterval: 1,
+                    tickWidth: 1,
+                    tickLength: 20,
+                    tickColor: '#000000',
+                    // tickmarkPlacement: 'on',
+                    gridLineWidth: 1,
+                    gridLineColor: '#2eb232',
+                    gridLineDashStyle: 'Dash'
+                },
+                yAxis: [{
+                    title: {
+                        text: 'y轴'
+                    },
+                    labels: {
+                        formatter: function () {
+                            if (this.value <= 100) {
+                                return "第一等级(" + this.value + ")";
+                            } else if (this.value > 100 && this.value <= 200) {
+                                return "第二等级(" + this.value + ")";
+                            }
+                            else {
+                                return "第三等级(" + this.value + ")";
+                            }
+                        },
+                        // step: 2
+                    },
+                    type: 'logarithmic',
+                    reversed: true,
+                    allowDecimals: true
+                }, {
+                    title: {
+                        text: 'y轴'
+                    },
+                    opposite: true
+                }],
+                series: [{
+                    type: 'column',
+                    name: '个数',
+                    data: [10.1, 120, 130, 240, 310, 430],
+                    yAxis: 0
+                }, {
+                    // type: 'linear',
+                    name: '个数',
+                    data: [1, 2, 3, 4, 5, 6],
+                    yAxis: 1
+                }]
+            });
+        });
+    </script>
+</body>
+
+</html>
