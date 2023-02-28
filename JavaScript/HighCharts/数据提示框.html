@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据提示框</title>
+</head>
+
+<body>
+    <div id="container" style="width: 600px;"></div>
+
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/highcharts.js"></script>
+    <script>
+        $("#container").highcharts({
+            xAxis: {
+                categories: ['一月', '二月', '三月', '四月', '五月', '六月']
+            },
+            series: [{
+                name: '张三',
+                data: [123, 234, 345, 456, 567, 678]
+            }],
+            tooltip: {
+                /* 控制提示框是否显示 */
+                enabled: true,
+                backgroundColor: '#fcffc5',
+                borderColor: 'red',
+                borderRadius: 100,
+                borderWidth: 3,
+                shadow: false,
+                animation: true,
+                style: {
+                    color: '#ff0000',
+                    fontSize: '17px',
+                    fontWeight: 'bold'
+                },
+                pointFormatter: function () {
+                    return '<span>' + this.series.color + '</span>'
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

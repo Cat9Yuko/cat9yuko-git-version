@@ -1,12 +1,77 @@
 <!DOCTYPE html>
 <html lang="zh-cmn-Hans">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>数据列</title>
 </head>
+
 <body>
-    
+    <div id="container" style="width: 600px;"></div>
+
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/highcharts.js"></script>
+    <script>
+        $(function () {
+            $("#container").highcharts({
+                xAxis: {    
+
+                    categories: ['一月', '二月', '三月', '四月','五月','六月','七月']
+                },
+                series: [{
+                    name: 'asd',
+                    data: [{
+                        name: 'point1',
+                        color: '#00ff00',
+                        y: 2
+                    }, {
+                        name: 'point2',
+                        color: '#ff00ff',
+                        y: 5,
+                        marker: {
+                            fillColor: '#bf0b23',
+                            radius: 10
+                        }
+                    }, 15, 245, 15, 12],
+                    lineWidth: 2,
+                    cursor: 'pointer',
+                    dashStyle: 'longdash',
+                    // 数据列分区
+                    zones: [{
+                        // 小于value值
+                        value: 10,
+                        color: '#f7a35c',
+                        dashStyle: 'dot'
+                    }, {
+                        value: 20,
+                        color: '#7cb5ec'
+                    }, {
+                        color: '#90ed7d'
+                    }]
+                }],
+                plotOptions: {
+                    // 点的选择
+                    series: {
+                        allowPointSelect: true
+                    },
+                    line: {
+                        
+                        // 数据标签指的是在数据点上显示一些数据信息标签
+                        dataLabels: {
+                            // 显示数据标签
+                            enabled: true,
+                            // formatter: function() {
+                            //     return this.x+ "=> "+ this.y
+                            // }
+                            format: '{x} <=> {y}'
+                        }
+                    }
+                }
+            })
+        });
+    </script>
 </body>
+
 </html>
