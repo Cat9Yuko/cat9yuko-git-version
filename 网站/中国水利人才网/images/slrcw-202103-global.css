@@ -410,3 +410,49 @@ footer {
 .ld-item + .ld-item {
   border-top: 1px solid #9f9f9f;
 }
+
+/* 人才评价左侧菜单修改 202302 */
+.lf-nav-c a {
+  text-align: left;
+  font-size: 16px;
+  text-indent: 90px;
+  background: none;
+  line-height: 43px;
+}
+.lf-nav-p {
+  background: url(../images/slrcw-202103-border.png) bottom center no-repeat;
+}
+.icon {
+  margin-bottom: 2px;
+}
+.icon-jian {
+  margin-bottom: 5px;
+  display: none;
+}
+.act .icon-jian {
+  display: inline;
+}
+.act .icon-jia {
+  display: none;
+}
+.lf-nav-c2 a {
+  font-size: 14px;
+  line-height: 29px;
+  text-indent: 92px;
+}
+.lf-nav-c2 a::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: #646464;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.lf-nav-c2.act a::before {
+  background: #3cb7e7;
+}
+.lf-nav-c2.act {
+  color: #3cb7e7;
+}
