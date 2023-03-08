@@ -221,30 +221,31 @@ nav {
 
 .slick-mod .slick-arrow,
 .slick-mod2 .slick-arrow {
-  width: 40px;
-  height: 84px;
+  width: 42px;
+  height: 69px;
   margin: auto;
   position: absolute;
   top: 0;
   bottom: 0;
   z-index: 3;
   cursor: pointer;
+  display: none!important;
 }
 .slick-mod2 .slick-arrow {
     width: 25px;
     height: 44px;
     display: none!important;
 }
-.slick-mod2:hover .slick-arrow {
+.slick-mod2:hover .slick-arrow,.slick-mod:hover .slick-arrow {
     display: block!important;
 }
 .slick-mod .slick-next {
   right: 0;
-  background: url(slxjyswhw-202212-arrowright.png) no-repeat center;
+  background: url(xjzx-202303-arrowright.png) no-repeat center;
 }
 .slick-mod .slick-prev {
   left: 0;
-  background: url(slxjyswhw-202212-arrowleft.png) no-repeat center;
+  background: url(xjzx-202303-arrowleft.png) no-repeat center;
 }
 
 .slick-mod2 .slick-next {
