@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=1424">
+    <title>第十八届世界水资源大会</title>
+    <link rel="stylesheet" href="images_zt/normalize.css">
+    <link rel="stylesheet" href="images_zt/idangerous.swiper.css">
+    <link rel="stylesheet" href="images_zt/idangerous.swiper.3dflow.css">
+    <style>
+        :root {
+            box-sizing: border-box;
+        }
+
+        *,
+        ::before,
+        ::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: inherit;
+        }
+
+        .center-block-1200 {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        .swiper-container {
+            width: 422px;
+            height: 522px;
+            /* padding: 1px 0; */
+            box-shadow: -1px 0 0px #dfdfdf;
+        }
+
+        .swiper-container .swiper-slide img {
+            box-shadow: 0 0 7px #dfdfdf;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="center-block-1200">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images_zt/demo.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="images_zt/demo.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="images_zt/demo.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="images_zt/demo.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="images_zt/demo.jpg" alt=""></div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="images_zt/jquery-3.6.1.min.js"></script>
+    <script src="images_zt/idangerous.swiper.js"></script>
+    <script src="images_zt/idangerous.swiper.3dflow.js"></script>
+    <script>
+        var mySwiper = new Swiper('.swiper-container', {
+            loop: true,
+            tdFlow: {
+                rotate: 0,
+                stretch: 337,
+                depth: 100,
+                shadows: true,
+
+            }
+        })
+
+        $('#btn1').click(function () {
+            mySwiper.swipePrev();
+        })
+        $('#btn2').click(function () {
+            mySwiper.swipeNext();
+        })
+    </script>
+</body>
+
+</html>
