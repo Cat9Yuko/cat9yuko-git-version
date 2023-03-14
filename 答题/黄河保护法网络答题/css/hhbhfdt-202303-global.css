@@ -264,11 +264,12 @@ li {
   font-size: 25px;
   color: #00285d;
   font-weight: bold;
+  text-align: center;
 }
 .xuanxiang {
   margin: 20px 0 45px 0;
   font-size: 22px;
-  color: #00285d;
+  /* color: #00285d; */
 }
 .xx_ul li {
   line-height: 35px;

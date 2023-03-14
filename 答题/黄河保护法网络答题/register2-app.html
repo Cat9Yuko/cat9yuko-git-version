@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>黄河保护法 网络答题活动</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/hhbhfdt-202303-mobile.css">
+</head>
+
+<body>
+    <div class=""><img src="img/hhbhfdt-202303-mtop.jpg" alt="" width="100%"></div>
+    <div class="whitebg-p">
+        <div class="whitebg-c">
+            <div class="login register">
+                <div class="padding15">
+                    <div class="box app-bookbg">
+                      <form class="layui-form reg-font">
+                        <p class="welcome wregister">问题登记</p>
+            
+                        <ul class="login-app">
+                            <li class="row">
+                                <div class="qianzui col-xs-4">*姓　　名</div>
+                                <div class="houzhui col-xs-8"><input id="userName" type="text" class="layui-input" lay-verify="required|username" autocomplete="off" required placeholder="请填写网络答题注册登录用户的真实姓名" /></div>
+                            </li>
+                            
+                            <li class="row">
+                                <div class="qianzui col-xs-4">所属单位</div>
+                                <div class="houzhui col-xs-8">
+                                    <input id="deptName" type="text" class="layui-input" autocomplete="off" />
+                                </div>
+                            </li>
+                            <li class="row">
+                                <div class="qianzui col-xs-4">*身份证号</div>
+                                <div class="houzhui col-xs-8">
+                                    <input id="idCard" type="text" class="layui-input" lay-verify="required|idCard" autocomplete="off" required placeholder="请填写网络答题注册登录用户的身份证号"/>
+                                </div>
+                            </li>
+                            <li class="row">
+                                <div class="qianzui col-xs-4">*注册电话</div>
+                                <div class="houzhui col-xs-8">
+                                    <input id="telphone" type="text" class="layui-input" lay-verify="required|phone" required placeholder="请填写网络答题注册登录用户的手机号"/>
+                                </div>
+                            </li>
+                            <li class="row">
+                                <div class="qianzui col-xs-4">联系电话</div>
+                                <div class="houzhui col-xs-8">
+                                    <input id="telphone2" type="text" class="layui-input" lay-verify="required|phone"/>
+                                </div>
+                            </li>
+                            <li class="row">
+                                <div class="qianzui col-xs-4">电子邮箱</div>
+                                <div class="houzhui col-xs-8">
+                                    <input id="email" type="text" class="layui-input" lay-verify="required|email"/>
+                                </div>
+                            </li>
+                            <li class="row">
+                                <div class="qianzui col-xs-4">*问题描述</div>
+                                <div class="houzhui col-xs-8">
+                                    <textarea maxlength="500" placeholder="请详细描述在答题过程中所遇到的问题。"></textarea>
+                                </div>
+                            </li>
+                            <!--<li class="row">
+                                <div class="qianzui col-xs-4">职　　业：</div>
+                                <div class="houzhui col-xs-8">
+                                    <div class="layui-input-inline" style="width: 100%">
+                                        <select id="profession" lay-verify="required">
+                                            <option value=""></option>
+                                            <option value="1">行政事业</option>
+                                            <option value="2">企业商业</option>
+                                            <option value="3">学生</option>
+                                            <option value="4">军人</option>
+                                            <option value="5">农民</option>
+                                            <option value="6">水利</option>
+                                            <option value="7">其他</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="row">
+                                <div class="qianzui col-xs-4">学　　历：</div>
+                                <div class="houzhui col-xs-8">
+                                    <div class="layui-input-inline" style="width:100%">
+                                        <select id="educational" lay-verify="required">
+                                            <option value=""></option>
+                                            <option value="1">小学</option>
+                                            <option value="2">中学</option>
+                                            <option value="3">大学及以上</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </li>-->
+                            <li class="row">
+                                <div class="qianzui col-xs-4 col-md-4">验&nbsp;证&nbsp;码：</div>
+                                <div class="houzhui col-xs-8 col-md-8"><input id="auth_code" type="text" style="width: 65%;" class="layui-input" autocomplete="off" />
+                                    <img id="authCode" src="<%=path %>/getAuthCode" width="30%" height="29" class="middle" onclick="changeAuthCode();" style="cursor: pointer;display: inline-block;" /></div>
+                            </li>
+                        </ul>
+                        <div class="fl my-btn">
+                            <a href="">提交</a>
+                        </div>
+                          </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class=""><img src="img/hhbhfdt-202303-mbottom.jpg" alt="" width="100%"></div>
+</body>
+
+</html>

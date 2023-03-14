@@ -4,13 +4,16 @@
   font-family: "微软雅黑";
 }
 body {
-  background-color: #9dd9e6;
+  background: url(../img/hhbhfdt-202303-mbg.jpg);
+  background-size: cover;
 }
 img {
   border: none;
   display: block;
 }
 a {
+  color: inherit;
+  text-decoration: none;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
   -webkit-user-select: none;
   -moz-user-focus: none;
@@ -46,15 +49,16 @@ li {
   float: left;
 }
 .indexdescw {
-  color: #00558d;
-  padding: 30px 40px;
+  /* color: #00558d; */
+  padding: 13px 10px;
 }
 .indexdescw h2 {
   font-size: 16.75px;
-  margin-bottom: 15px;
+  /* margin-bottom: 15px; */
+  color: #0c467a;
 }
 .indexdescw h2:not(:first-of-type) {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 .indexdescw p {
   font-size: 12.5px;
@@ -93,7 +97,8 @@ footer {
 }
 
 .login-app input {
-  border: 1px solid #feae01;
+  border: 1px solid #d4d4d4;
+  outline: none;
 }
 
 .login-app .row {
@@ -109,7 +114,7 @@ footer {
   line-height: 2;
   font-size: 14px;
   border-radius: 5px;
-  background: #feae01;
+  background: #0d5194;
   color: #fff;
 }
 
@@ -145,6 +150,90 @@ select {
   overflow: auto;
 }
 
+.login .box {
+  background: #ffffff;
+  padding: 30px 0;
+}
+
+.box-shadow {
+  box-shadow: 0 0 7px #c2c2c2;
+}
+
+.welcome {
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.m-ul {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.m-ul li {
+  border: 1px solid #ececec;
+  background: #ffffff;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  padding: 5px;
+}
+
+.m-ul li img {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.m-ul li input {
+  height: auto;
+  line-height: normal;
+  display: inline;
+  width: 80%;
+  padding-left: 0;
+  border: none;
+  /* border-left: 1px solid #d0d0d0; */
+  text-indent: 1rem;
+  outline: none;
+  color: #999999;
+}
+
+.m-ul li span {
+  display: inline-block;
+  border-right: 1px solid #d0d0d0;
+}
+
+.btn-tj {
+  padding: 3px 0;
+  margin-top: 45px;
+}
+
+.wregister {
+  margin-bottom: 10px;
+}
+
+.register .m-ul li {
+  margin-bottom: 5px;
+}
+
+.register .box {
+  padding: 10px 0 10px 0;
+  height: auto;
+}
+
+.m-ul select {
+  width: 86%;
+  /* text-indent: 1rem; */
+  border: none;
+  outline: none;
+  color: #999999;
+}
+
+.m-ul select:not(:last-child) {
+  margin-right: 5px;
+}
+.layui-input-inline {
+  display: inline;
+}
+
 /*answer*/
 .answer .box {
   padding: 15px 15px 25px;
@@ -154,13 +243,14 @@ select {
 .answer_t {
   font-size: 18px;
   font-weight: bold;
-  color: #00285d;
+  color: #0c467a;
+  text-align: center;
 }
 
 .xuanxiang {
   margin: 16px 0;
   font-size: 14px;
-  color: #00285d;
+  color: #000000;
 }
 .xx_ul li {
   line-height: 25px;
@@ -175,22 +265,23 @@ select {
 }
 /*score*/
 .score .box {
-  padding: 50px 0 30px;
+  padding: 100px 0 30px;
   /* height: 103px; */
   /* background: url(../img/sfg_2020_score2_app.jpg); */
   background-size: 100% 100%;
   margin: 0 auto;
   color: #ffffff;
-  font-size: 12px;
+  font-size: 30px;
   text-align: center;
   /* line-height: 10; */
 }
 .score p {
-    color: #183e91;
+    color: #0c467a;
     font-weight: bold;
 }
 .score p span {
     color: red;
+    font-size: 38px;
 }
 .twi {
   width: 100%;
@@ -210,7 +301,7 @@ select {
   text-align: center;
   margin-top: 35px;
   /* margin-bottom: 10px; */
-  height: 76px;
+  height: 50px;
 }
 .my-btn a {
   font-size: 15px;
@@ -219,6 +310,7 @@ select {
   padding: 7px 15px;
   border-radius: 5px;
   text-decoration: none;
+  font-weight: bold;
 }
 
 .my-btn a + a {
@@ -237,23 +329,26 @@ select {
 }
 .whitebg-p {
   padding: 5px;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 1);
   box-sizing: border-box;
   margin-left: 3px;
   margin-right: 3px;
+  border-radius: 5px;
 }
 .whitebg-c {
   background: rgba(255, 255, 255, 0.7);
   /* min-height: 865px; */
   /* padding: 52px 54px 60px; */
+  border: 1px dashed #a7b0dc;
   box-sizing: border-box;
+  border-radius: 5px;
 }
 
 .welcome {
   text-align: center;
-  font-size: 15px;
+  font-size: 19px;
   font-weight: bold;
-  color: #183e91;
+  color: #0c467a;
   padding: 15px 0 6px 0;
 }
 .zhuyi {
@@ -261,7 +356,46 @@ select {
   font-size: 10px;
 }
 .yelbg button,.yelbg a{
-  background: #f8ab25;
+  background: #0c467a;
+}
+.tips {
+  font-size: 10px;
+  color: #303030;
+  text-indent: 10px;
+}
+.btn_g button, .btn-tj button {
+  width: 99px;
+  height: 29px;
+  /* float: left; */
+  background: #0c467a;
+  color: #ffffff;
+  text-align: center;
+  line-height: 29px;
+  border-radius: 5px;
+  border: none;
+}
+.fiedbar {
+  position: fixed;
+  top: 150px;
+  right: 5%;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  color: #0c467a;
+}
+.register textarea {
+  width: 100%;
+  resize: none;
+  border: 1px solid #d4d4d4;
+  outline: none;
+  padding: 5px 0;
+}
+::placeholder {
+  font-size: 10px;
+  text-indent: 9px;
+}
+.houzhui {
+  padding-right: 0;
 }
 @media only screen and (min-width: 100px) and (max-width: 640px) {
 }
