@@ -1,8 +1,6 @@
 /*
  * 	 styleSelect - apply style to a select box
- *   (http://www.8stream.com)
- *
- * 	 Copyright (c) 2009 Siim Sindonen, 8STREAM <siim@8stream.com>
+ * 	 Copyright (c) 2009 Siim Sindonen, 8STREAM
  *   Dual licensed under the MIT and GPL licenses:
  *   http://www.opensource.org/licenses/mit-license.php
  *   http://www.gnu.org/licenses/gpl.html
