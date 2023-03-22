@@ -89,6 +89,13 @@ li {
   right: 0;
   background: url(dsbjsjszydh-202303-arrowright.png) no-repeat center;
 }
+.swiper-container2 {
+  width: 1238px;
+  height: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
 .hnews h2 {
   color: #0349a6;
   text-align: center;
