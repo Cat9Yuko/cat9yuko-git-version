@@ -1,0 +1,212 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Slider-overflow.js 3D图片轮播插件</title>
+        <style>
+            .slider {
+                position: relative;
+                width: 100%;
+                max-width: 100%
+            }
+
+            .slider .slider__inner {
+                display: flex;
+                position: relative;
+                align-items: center;
+                max-width: 1028px;
+                height: 702px;
+                margin: 0 auto
+            }
+
+            .slider .slider__inner .slider__item {
+                position: absolute;
+                height: 705px;
+                width: 502px;
+                opacity: 1;
+                transition: all .3s ease-in-out;
+                z-index: -1;
+                pointer-events: none;
+                user-select: none
+            }
+
+            .slider .slider__inner .slider__item-trigger-next {
+                left: 15%;
+                transform: translateX(-50%)
+            }
+
+            .slider .slider__inner .slider__item-trigger-previous {
+                left: 85%;
+                transform: translateX(-50%)
+            }
+
+            .slider .slider__inner .slider__item-selected {
+                box-shadow: 0 0 30px rgba(255,255,255,0.6),0 0 60px rgba(255,255,255,0.45),0 0 110px rgba(255,255,255,0.25),0 0 100px rgba(255,255,255,0.1);
+                height: 700px;
+                opacity: 1;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 502px;
+                z-index: 2
+            }
+
+            .slider .slider__inner .slider__item-previous,.slider .slider__inner .slider__item-next {
+                height: 700px;
+                opacity: 1;
+                width: 502px;
+                z-index: 1
+            }
+
+            .slider .slider__inner .slider__item-last,.slider .slider__inner .slider__item-first {
+                opacity: 1;
+                z-index: 0
+            }
+
+            .slider .slider__inner .slider__item-previous {
+                left: 30%;
+                transform: translateX(-50%)
+            }
+
+            .slider .slider__inner .slider__item-next {
+                left: 70%;
+                transform: translateX(-50%)
+            }
+
+            .slider .slider__inner .slider__item-first {
+                left: 15%;
+                transform: translateX(-50%)
+            }
+
+            .slider .slider__inner .slider__item-last {
+                left: 85%;
+                transform: translateX(-50%)
+            }
+
+            .slider .slider__inner .slider__item-container {
+                position: relative;
+                width: 100%;
+                height: 100%
+            }
+
+            .slider .slider__inner .slider__item-img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center
+            }
+
+            .slider .slider__inner .slider__item-datas {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                padding: .5rem 0;
+                background-color: rgba(255,255,255,0.75);
+                text-align: center;
+                font-family: 'Arial';
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis
+            }
+
+            .slider .slider__controls {
+                display: flex;
+                position: absolute;
+                left: 0;
+                right: 0;
+                width: 100%;
+                justify-content: space-between;
+                align-items: center
+            }
+
+            @media(max-width: 750px) {
+                .slider .slider__controls {
+                    display:none
+                }
+            }
+
+            .slider .slider__controls-previous,.slider .slider__controls-next {
+                border: 0;
+                cursor: pointer;
+                font-size: 50px;
+                background-color: transparent;
+                color: rgba(0,0,0,0.75);
+                padding: 0
+            }
+
+            .slider .slider__controls-previous:focus,.slider .slider__controls-next:focus {
+                outline: 0
+            }
+        </style>
+    </head>
+    <body>
+        <div class="slider">
+            <div class="slider__inner">
+                <div class="slider__item">
+                    <div class="slider__item-container">
+                        <img src="img/demo.jpg" class="slider__item-img"/>
+                        <div class="slider__item-datas">
+                            <span>Lorem Ipsum Dolores</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider__item">
+                    <div class="slider__item-container">
+                        <img src="img/demo.jpg" class="slider__item-img"/>
+                        <div class="slider__item-datas">
+                            <span>Lorem Ipsum Dolores</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider__item">
+                    <div class="slider__item-container">
+                        <img src="img/demo.jpg" class="slider__item-img"/>
+                        <div class="slider__item-datas">
+                            <span>Lorem Ipsum Dolores</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider__item">
+                    <div class="slider__item-container">
+                        <img src="img/demo.jpg" class="slider__item-img"/>
+                        <div class="slider__item-datas">
+                            <span>Lorem Ipsum Dolores</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider__item">
+                    <div class="slider__item-container">
+                        <img src="img/demo.jpg" class="slider__item-img"/>
+                        <div class="slider__item-datas">
+                            <span>Lorem Ipsum Dolores</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider__item">
+                    <div class="slider__item-container">
+                        <img src="img/demo.jpg" class="slider__item-img"/>
+                        <div class="slider__item-datas">
+                            <span>Lorem Ipsum Dolores</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slider__controls"></div>
+            </div>
+        </div>
+        <script src="js/carousel.js"></script>
+        <script>
+            const myCarousel = new Carousel({
+                container: document.querySelector('.slider'),
+                items: document.querySelectorAll('.slider__item'),
+                displayControls: true,
+                controlsContainer: document.querySelector('.slider__controls'),
+                textControls: ["<i class='fas fa-chevron-left'></i>", "<i class='fas fa-chevron-right'></i>"],
+                autoplay: true,
+                autoplayTime: 3500
+            });
+        </script>
+    </body>
+</html>
