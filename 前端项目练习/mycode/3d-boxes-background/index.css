@@ -1,10 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
+/* 小黄人图片 https://media.giphy.com/media/TXJiSN8vCERuE/giphy.gif */
 * {
   box-sizing: border-box;
 }
-
 body {
   background-color: #fafafa;
   font-family: 'Roboto', sans-serif;
@@ -15,11 +12,10 @@ body {
   height: 100vh;
   overflow: hidden;
 }
-
 .magic {
   background-color: #f9ca24;
-  color: #fff;
-  font-family: 'Poppins', sans-serif;
+  color: #ffffff;
+  font-family: 'Poppins', 'sans-serif';
   border: 0;
   border-radius: 3px;
   font-size: 16px;
@@ -29,18 +25,14 @@ body {
   top: 20px;
   letter-spacing: 1px;
   box-shadow: 0 3px rgba(249, 202, 36, 0.5);
-  z-index: 100;
 }
-
 .magic:focus {
   outline: none;
 }
-
 .magic:active {
   box-shadow: none;
   transform: translateY(2px);
 }
-
 .boxes {
   display: flex;
   flex-wrap: wrap;
@@ -50,18 +42,15 @@ body {
   position: relative;
   transition: 0.4s ease;
 }
-
 .boxes.big {
   width: 600px;
   height: 600px;
 }
-
 .boxes.big .box {
   transform: rotateZ(360deg);
 }
-
 .box {
-  background-image: url('https://media.giphy.com/media/EZqwsBSPlvSda/giphy.gif');
+  background-image: url('https://media.giphy.com/media/TXJiSN8vCERuE/giphy.gif');
   background-repeat: no-repeat;
   background-size: 500px 500px;
   position: relative;
@@ -69,7 +58,6 @@ body {
   width: 125px;
   transition: 0.4s ease;
 }
-
 .box::after {
   content: '';
   background-color: #f6e58d;
@@ -80,7 +68,6 @@ body {
   width: 15px;
   transform: skewY(45deg);
 }
-
 .box::before {
   content: '';
   background-color: #f9ca24;
@@ -91,3 +78,51 @@ body {
   width: 100%;
   transform: skewX(45deg);
 }
+/* .b1 {
+  background-position: 0 0;
+}
+.b2 {
+  background-position: -125px 0;
+}
+.b3 {
+  background-position: -250px 0;
+}
+.b4 {
+  background-position: -375px 0;
+}
+.b5 {
+  background-position: 0 -125px;
+}
+.b6 {
+  background-position: -125px -125px;
+}
+.b7 {
+  background-position: -250px -125px;
+}
+.b8 {
+  background-position: -375px -125px;
+}
+.b9 {
+  background-position: 0 -250px;
+}
+.b10 {
+  background-position: -125px -250px;
+}
+.b11 {
+  background-position: -250px -250px;
+}
+.b12 {
+  background-position: -375px -250px;
+}
+.b13 {
+  background-position: 0 -375px;
+}
+.b14 {
+  background-position: -125px -375px;
+}
+.b15 {
+  background-position: -250px -375px;
+}
+.b16 {
+  background-position: -375px -375px;
+} */

@@ -866,6 +866,22 @@ li {
 	bottom: 72px;
 	transform: translate(-50%,-50%);
 }
+/* 202303吸顶修改 start */
+.biaoge,.biaoge2 {
+	margin-top: 0;
+	border-top: none;
+	padding-top: 0;
+}
+.topf1 {
+	padding-bottom: 21px;
+}
+.topf2 {
+	padding: 9px 6px 0;
+	border-top: 1px solid #e4e4e4;
+}
+
+/* 202303吸顶修改 end */
+
 }
 @media only screen and (min-width: 100px) and (max-width: 320px) {
 	.week_day_btn {
@@ -896,6 +912,5 @@ li {
 	.lp:hover .change_button{
 	display: block;
 }
-	
 	
 }
