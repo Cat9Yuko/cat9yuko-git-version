@@ -137,14 +137,20 @@ li {
 
 
 .week_name li {
-	border-radius: 5px;
 	text-align: center;
 	font-size: 14px;
-	margin-left: 8px;
-	margin-right: 8px;
-	background: #f0f0f0;
+	/* margin-left: 8px;
+	margin-right: 8px; */
+	padding: 0 8px;
+	box-sizing: border-box;
+	
 	list-style: none;
 	color: #555658;
+}
+.week_name li span {
+	display: block;
+	background: #f0f0f0;
+	border-radius: 5px;
 }
 
 /* .week_name li:first-child {
@@ -895,10 +901,12 @@ li {
 	overflow-x: hidden;
 }
 .class_name {
-	overflow: scroll;
+	overflow-x: scroll;
+	height: 100%;
 }
 .week_name li,.class_name li {
 	flex: 0 0 51%;
+	align-content: space-between;
 }
 .week_name li {
 	margin: 0;
@@ -921,11 +929,11 @@ li {
 		display: none;
 	}
 	.week_name li {
-		margin-left: 10px;
-		margin-right: 10px;
+		/* margin-left: 10px;
+		margin-right: 10px; */
 	}
 	.week_name li:first-child {
-		margin-left: 8px;
+		/* margin-left: 8px; */
 	}
 	.table_content td {
 	padding: 5px 2px;
