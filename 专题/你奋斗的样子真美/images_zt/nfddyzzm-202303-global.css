@@ -1,0 +1,154 @@
+:root {
+  box-sizing: border-box;
+}
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+.cneter-block-1200 {
+  width: 1200px;
+  margin: 0 auto;
+}
+.cneter-block-1239 {
+  width: 1239px;
+  margin: 0 auto;
+}
+/* user style */
+.banner {
+  height: 950px;
+  background: url(nfddyzzm-202303-banner.jpg) center center no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 19;
+}
+.mainbg {
+  position: relative;
+}
+.main {
+  margin-top: -503px;
+  position: relative;
+  z-index: 21;
+}
+.wordbg {
+  height: 570px;
+  background: url(nfddyzzzm-202303-wordbg.png);
+  background-size: cover;
+  padding: 60px 66px 0;
+}
+.wordbg h2 {
+  text-align: center;
+  color: #b4110c;
+  font-size: 30px;
+}
+.wordbg p {
+  margin-top: 50px;
+  color: #b4110c;
+  line-height: 37px;
+  text-indent: 2rem;
+}
+.chnlbg {
+  margin-top: 88px;
+}
+
+/* swiepr */
+.swiper-container {
+  width: 100%;
+  margin-top: 45px;
+}
+.swiper-slide {
+  position: relative;
+  width: 622px;
+  height: 390px;
+}
+.swiper-slide .tit {
+  background: rgba(0, 0, 0, 0.5);
+  line-height: 39px;
+  color: #ff0000;
+  text-indent: 15px;
+  position: absolute;
+  font-size: 18px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.swiper-pagination-bullet {
+  width: 16px;
+  height: 16px;
+  background: #ffffff;
+  opacity: 1;
+}
+.swiper-pagination-bullet-active {
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  background: #d6000f;
+}
+.swiper-button {
+  width: 39px;
+  height: 55px;
+  /* background-color: rgba(219, 0, 10, 0.3); */
+}
+/* .swiper-button:hover {
+    background-color: rgba(219, 0, 10, 0.9);
+  } */
+.swiper-button-prev {
+  left: 0;
+  background: url(nfddyzzzm-202303-arrowleft.png);
+}
+.swiper-button-next {
+  right: 0;
+  background: url(nfddyzzzm-202303-arrowright.png);
+}
+/*  */
+.bottombg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 585px;
+  background: url(nfddyzzzm-202303-bgbottom.png) center center;
+  background-size: cover;
+  z-index: 20;
+}
+.footer {
+  margin-top: 130px;
+  position: relative;
+  z-index: 21;
+}
+.boxs {
+  box-shadow: 0px 0px 3px 1px #ccc;
+}
+.source-time {
+  margin: 0 auto;
+  height: 35px;
+  text-align: center;
+  position: relative;
+  line-height: 35px;
+}
+
+.time {
+  margin-right: 10px;
+}
+
+.wechat,
+.sina {
+  position: absolute;
+  margin-top: 5px;
+}
+
+.wechat {
+  margin-left: 10px;
+}
+
+.sina {
+  margin-left: 46px;
+}
