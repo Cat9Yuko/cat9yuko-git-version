@@ -135,6 +135,7 @@ li {
 	float: left;
 }
 
+
 .week_name li {
 	border-radius: 5px;
 	text-align: center;
@@ -146,9 +147,9 @@ li {
 	color: #555658;
 }
 
-.week_name li:first-child {
+/* .week_name li:first-child {
 	margin-left: 3px;
-}
+} */
 
 /*表格内容*/
 
@@ -868,9 +869,12 @@ li {
 }
 /* 202303吸顶修改 start */
 .biaoge,.biaoge2 {
-	margin-top: 0;
+	margin-top: 110px;
 	border-top: none;
 	padding-top: 0;
+}
+.biaoge2 {
+	margin-top: 73px;
 }
 .topf1 {
 	padding-bottom: 21px;
@@ -879,7 +883,26 @@ li {
 	padding: 9px 6px 0;
 	border-top: 1px solid #e4e4e4;
 }
-
+.topfixed {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	z-index: 30;
+	background: #ffffff;
+}
+.week_name {
+	overflow-x: hidden;
+}
+.class_name {
+	overflow: scroll;
+}
+.week_name li,.class_name li {
+	flex: 0 0 51%;
+}
+.week_name li {
+	margin: 0;
+}
 /* 202303吸顶修改 end */
 
 }

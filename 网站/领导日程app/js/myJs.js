@@ -25,6 +25,7 @@ $(function() {
 		$(".day_slector").hide();
 		$(".biaoge").show();
 		$(".biaoge2").hide();
+		$(".topf2").show();
 	})
 	$(".day_btn").click(function() {
 		$(this).addClass("wdb_active");
@@ -33,6 +34,7 @@ $(function() {
 		$(".week_slector").hide();
 		$(".biaoge2").show();
 		$(".biaoge").hide();
+		$(".topf2").hide();
 		pdd();
 	})
 
@@ -452,6 +454,11 @@ $(function() {
 //		console.log($b1.length)
 	})
 	
-	
+	// 新增同步滚动
+	$(".class_name").scroll(function () {
+		var class_name_scrollleft = $(this).scrollLeft();
+		$(".week_name").scrollLeft(class_name_scrollleft);
+		$(".class_name").scrollLeft(class_name_scrollleft)
+	});
 	
 })
