@@ -904,9 +904,11 @@ li {
 	overflow-x: scroll;
 	height: 100%;
 }
+.class_name::-webkit-scrollbar {
+	height: 0;
+}
 .week_name li,.class_name li {
 	flex: 0 0 51%;
-	align-content: space-between;
 }
 .week_name li {
 	margin: 0;

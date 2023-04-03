@@ -243,7 +243,7 @@ $(function() {
 		$(".d_first").attr("data-start",time);
 		$(".w_first").attr("data-start",time);
 		var month = (nowtime.getMonth() + 1) < 10 ? '0' + (nowtime.getMonth() + 1) : (nowtime.getMonth() + 1);
-		var day = nowtime.getDate() < 10 ? '0' + danowtimete.getDate() : nowtime.getDate();
+		var day = nowtime.getDate() < 10 ? '0' + nowtime.getDate() : nowtime.getDate();
 		$(".d_first").text(month+"."+day);
 	}
 	initDate();
