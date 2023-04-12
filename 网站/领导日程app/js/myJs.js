@@ -26,6 +26,8 @@ $(function() {
 		$(".biaoge").show();
 		$(".biaoge2").hide();
 		$(".topf2").show();
+		$(".day_buttons").hide();
+		$(".week_buttons").show();
 	})
 	$(".day_btn").click(function() {
 		$(this).addClass("wdb_active");
@@ -35,6 +37,8 @@ $(function() {
 		$(".biaoge2").show();
 		$(".biaoge").hide();
 		$(".topf2").hide();
+		$(".week_buttons").hide();
+		$(".day_buttons").show();
 		pdd();
 	})
 
@@ -291,12 +295,13 @@ $(function() {
 		console.log("miingtian");
 	}
 	
-	$(".fa-chevron-left").click(function() {
+	$(".pre_day").click(function() {
 		zuotian();
-		
 	})
-	
-	$(".fa-chevron-right").click(function() {
+	$(".this_day").click(function() {
+		initDate();
+	})
+	$(".next_day").click(function() {
 		mingtian();
 //		getdaybytype(3);
 		
@@ -420,13 +425,17 @@ $(function() {
         }
         
       };
-      $(".fa-chevron-left").on("click",function () {
+      $(".pre_week").on("click",function () {
       	 setDate(addDate(currentFirstDate,-7));
         $(".w_first").text($(".zhouyi").text().substring(5,10));
         $(".w_last").text($(".zhouri").text().substring(5,10));
         
       })
-      $(".fa-chevron-right").on("click",function () {
+	  $(".this_week").on("click",function () {
+		obaganlestyle(1, 7);
+	 
+   })
+      $(".next_week").on("click",function () {
       	setDate(addDate(currentFirstDate,7));
       	$(".w_first").text($(".zhouyi").text().substring(5,10));
         $(".w_last").text($(".zhouri").text().substring(5,10));
@@ -455,10 +464,14 @@ $(function() {
 	})
 	
 	// 新增同步滚动
+	
 	$(".class_name").scroll(function () {
 		var class_name_scrollleft = $(this).scrollLeft();
+
 		$(".week_name").scrollLeft(class_name_scrollleft);
-		$(".class_name").scrollLeft(class_name_scrollleft)
+		$(".class_name").scrollLeft(class_name_scrollleft);
+		// console.log(class_name_scrollleft);
 	});
+	
 	
 })

@@ -99,10 +99,11 @@ li {
 	margin-right: 13px;
 	margin-top: 20px;
 	float: right;
-	width: 190px;
+	/* width: 200px; */
 	height: 30px;
 	line-height: 30px;
 	font-size: 14px;
+	text-align: center;
 }
 
 .my_color {
@@ -120,13 +121,13 @@ li {
 }
 
 .shijian {
-	color: #8d8d8d;
+	color: #000000;
 	text-align: center;
-	line-height: 23px;
+	line-height: 25px;
 	background: #f0f0f0;
-	font-size: 12px;
+	font-size: 16px;
 	width: 10%;
-	height: 23px;
+	height: 25px;
 	float: left;
 }
 
@@ -138,14 +139,14 @@ li {
 
 .week_name li {
 	text-align: center;
-	font-size: 14px;
+	font-size: 16px;
 	/* margin-left: 8px;
 	margin-right: 8px; */
 	padding: 0 8px;
 	box-sizing: border-box;
 	
 	list-style: none;
-	color: #555658;
+	color: #000000;
 }
 .week_name li span {
 	display: block;
@@ -172,19 +173,20 @@ li {
 }
 
 .week li {
-	font-size: 12px;
+	font-size: 16px;
 	/*line-height: 61.5px;*/
 	text-align: center;
 	height: 50%;
-	color: #c1c1c1;
+	color: #000000;
 }
 
 .days {
-	color: #7a7a7a;
+	color: #000000;
 	width: 100%;
 	text-align: center;
 	position: absolute;
-	font-size: 7px;
+	/* font-size: 7px; */
+	font-size: 12px;
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
@@ -210,7 +212,7 @@ li {
 }
 
 .class_name li {
-	font-size: 11.43px;
+	font-size: 16px;
 }
 
 /**/
@@ -235,7 +237,7 @@ li {
 .b4 div {
 	display: table-cell;
 	vertical-align: middle;
-	color: #8a8a8a;
+	color: #000000;
 	text-align: justify;
 	height: 100%;
 	width: 100%;
@@ -270,16 +272,19 @@ li {
 }
 
 .beizhu {
-	color: #767676;
+	color: #000000;
 	border-top: 1px solid #e4e4e4;
 	border-bottom: 1px solid #e4e4e4;
-	font-size: 11.2px;
+	font-size: 16px;
+	overflow: hidden;
 }
 
 .beizhu span {
 	display: inline-block;
-	color: #b9c4d7;
+	color: #000000;
 	min-width: 250px;
+	float: right;
+	width: 86%;
 }
 
 
@@ -330,7 +335,7 @@ li {
 	width: 60px;
 	background: #f0f0f0;
 	border-radius: 5px;
-	color: #555658;
+	color: #000000;
 }
 
 .day_class_name {
@@ -343,7 +348,7 @@ li {
 	height: 100%;
 	width: 100%;
 	padding: 0 16px;
-	color: #8a8a8a;
+	color: #000000;
 	display: table-cell;
 	vertical-align: middle;
 	text-align: justify;
@@ -862,6 +867,24 @@ li {
 	height: 105px;
 }
 
+/* 202304 */
+.week_buttons,.day_buttons {
+	float: right;
+	margin-top: 20px;
+	margin-bottom: 5px;
+}
+.week_button,.day_button {
+	display: inline-block;
+	line-height: 30px;
+	padding: 0 10px;
+	background: #3790ea;
+	color: #ffffff;
+	border-radius: 5px;
+	font-size: 14.02px;
+}
+.day_buttons {
+	display: none;
+}
 @media only screen and (max-width: 767px) {
 	.s_btn_container {display: none;}
 	.b5 {
@@ -874,16 +897,25 @@ li {
 	transform: translate(-50%,-50%);
 }
 /* 202303吸顶修改 start */
+html,body {
+	overflow: hidden;
+}
+.week_slector,.day_slector {
+	width: 100%;
+	margin-top: 10px;
+	margin-right: 0;
+	font-weight: bold;
+}
 .biaoge,.biaoge2 {
-	margin-top: 110px;
+	margin-top: 145px;
 	border-top: none;
 	padding-top: 0;
 }
 .biaoge2 {
-	margin-top: 73px;
+	margin-top: 105px;
 }
 .topf1 {
-	padding-bottom: 21px;
+	padding-bottom: 11px;
 }
 .topf2 {
 	padding: 9px 6px 0;
@@ -903,9 +935,12 @@ li {
 .class_name {
 	overflow-x: scroll;
 	height: 100%;
+	-webkit-overflow-scrolling: touch;
 }
 .class_name::-webkit-scrollbar {
 	height: 0;
+	width: 0;
+	display: none;
 }
 .week_name li,.class_name li {
 	flex: 0 0 51%;
