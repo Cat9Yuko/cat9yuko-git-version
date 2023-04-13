@@ -1,0 +1,177 @@
+:root {
+  box-sizing: border-box;
+}
+*,
+::before,
+::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  font-family: '微软雅黑';
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clearfix::after {
+  content: ' ';
+  display: block;
+  clear: both;
+}
+.center-block-1200 {
+  width: 1200px;
+  margin: 0 auto;
+}
+/* user style */
+.mainbg {
+  background: url(gjxsd-202304-mainbg.jpg) top center no-repeat;
+}
+.header {
+  height: 426px;
+}
+.header .center-block-1200 {
+  position: relative;
+  height: 426px;
+}
+.email {
+  position: absolute;
+  top: 28px;
+  right: 60px;
+}
+.search-container {
+  position: absolute;
+  right: 227px;
+  top: 310px;
+}
+.keyword {
+  width: 192px;
+  height: 39px;
+  outline: none;
+  border: none;
+  float: left;
+  border-left: 1px solid #c7c8c9;
+  border-top: 1px solid #c7c8c9;
+  border-bottom: 1px solid #c7c8c9;
+  text-indent: 10px;
+}
+.submit {
+  height: 39px;
+  width: 71px;
+  border: none;
+  background: #076abe;
+  color: #ffffff;
+  cursor: pointer;
+}
+.nav-bg {
+  width: 1243px;
+  height: 68px;
+  background: url(gjxsd-202304-navbg.png);
+  margin: 0 auto;
+  z-index: 20;
+  position: relative;
+  margin-bottom: -93px;
+  margin-top: 25px;
+}
+.nav-p {
+  width: 1200px;
+  padding: 0 20px;
+  margin: 0 auto;
+  display: table;
+}
+.nav-c {
+  display: table-cell;
+  width: 1%;
+  table-layout: fixed;
+  font-size: 20px;
+  color: #fdfefd;
+  font-weight: bold;
+  text-align: center;
+  line-height: 49px;
+}
+.whitebg {
+  background: #ffffff;
+  padding: 93px 20px 0 20px;
+}
+.rolltext {
+  background: #f1f1f1;
+  white-space: nowrap;
+}
+.roll-icon {
+  width: 133px;
+  background: #1ba0e5;
+  line-height: 37px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+}
+.roll-icon img {
+  margin: 2px 6px 0 4px;
+}
+
+.txtMarquee-left {
+  position: relative;
+  border: 1px solid #ccc;
+}
+.txtMarquee-left .hd {
+  overflow: hidden;
+  height: 30px;
+  background: #f4f4f4;
+  padding: 0 10px;
+}
+.txtMarquee-left .hd .prev,
+.txtMarquee-left .hd .next {
+  display: block;
+  width: 5px;
+  height: 9px;
+  float: right;
+  margin-right: 5px;
+  margin-top: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  cursor: pointer;
+  background: url('../images/arrow.png') no-repeat;
+}
+.txtMarquee-left .hd .next {
+  background-position: 0 -50px;
+}
+.txtMarquee-left .hd .prevStop {
+  background-position: -60px 0;
+}
+.txtMarquee-left .hd .nextStop {
+  background-position: -60px -50px;
+}
+.txtMarquee-left .bd {
+  padding: 10px;
+}
+.txtMarquee-left .bd .tempWrap {
+  width: 425px !important;
+} /* 用 !important覆盖SuperSlide自动生成的宽度，这样就可以手动控制可视宽度。 */
+.txtMarquee-left .bd ul {
+  overflow: hidden;
+  zoom: 1;
+}
+.txtMarquee-left .bd ul li {
+  margin-right: 20px;
+  float: left;
+  height: 24px;
+  line-height: 24px;
+  text-align: left;
+  _display: inline;
+  width: auto !important;
+} /* 用 width:auto !important 覆盖SuperSlide自动生成的宽度，解决文字不衔接问题 */
+
+.txtMarquee-left .bd ul li span {
+  color: #999;
+}
