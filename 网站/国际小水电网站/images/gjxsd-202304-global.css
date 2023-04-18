@@ -2,8 +2,8 @@
   box-sizing: border-box;
 }
 *,
-::before,
-::after {
+::after,
+::before {
   box-sizing: inherit;
   margin: 0;
   padding: 0;
@@ -33,6 +33,15 @@ img {
 .center-block-1200 {
   width: 1200px;
   margin: 0 auto;
+}
+.w565 {
+  width: 565px;
+}
+.w747 {
+  width: 747px;
+}
+.w388 {
+  width: 388px;
 }
 /* user style */
 .mainbg {
@@ -107,6 +116,7 @@ img {
 .rolltext {
   background: #f1f1f1;
   white-space: nowrap;
+  margin-bottom: 20px;
 }
 .roll-icon {
   width: 133px;
@@ -139,3 +149,147 @@ img {
   _display: inline;
   width: auto !important;
 } /* 用 width:auto !important 覆盖SuperSlide自动生成的宽度，解决文字不衔接问题 */
+
+/* carousel */
+.slick-mod,
+.slick-mod2 {
+  width: 576px;
+  height: 370px;
+}
+.slick-item {
+  position: relative;
+}
+.slick-item img {
+  width: 100%;
+}
+.tit1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 16px;
+  color: #ffffff;
+  line-height: 40px;
+  text-indent: 2rem;
+  background: rgba(0, 0, 0, 0.5);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.slick-mod .slick-dots,
+.slick-mod2 .slick-dots {
+  position: absolute;
+  right: 10px;
+  bottom: 15px;
+}
+.slick-mod2 .slick-dots {
+  bottom: 36px;
+}
+
+.slick-mod .slick-arrow,
+.slick-mod2 .slick-arrow {
+  width: 33px;
+  height: 57px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 3;
+  cursor: pointer;
+}
+/* .slick-mod .slick-next {
+  right: 0;
+  background: url(../images_zt/wlaq-202009-arrowrigh.png) no-repeat center;
+}
+.slick-mod .slick-prev {
+  left: 0;
+  background: url(../images_zt/wlaq-202009-arrowlef.png) no-repeat center;
+}
+
+.slick-mod2 .slick-next {
+  right: 0;
+  background: url(../images/wlaq-202009-arrowrigh.png) no-repeat center;
+}
+.slick-mod2 .slick-prev {
+  left: 0;
+  background: url(../images/wlaq-202009-arrowlef.png) no-repeat center;
+} */
+.slick-mod .slick-dots li,
+.slick-mod2 .slick-dots li {
+  width: 14px;
+  height: 14px;
+  background: #ffffff;
+  border-radius: 50%;
+  margin: 0 5px 0 0;
+}
+.slick-mod .slick-dots li.slick-active,
+.slick-mod2 .slick-dots li.slick-active {
+  width: 14px;
+  height: 14px;
+  background: #e50012;
+  border-radius: 50%;
+}
+/* --- */
+.tabs {
+  border-bottom: 1px solid #dad9d9;
+}
+.tab {
+  display: inline-block;
+  width: 99px;
+  line-height: 36px;
+  text-align: center;
+  border-left: 1px solid #d3d3d3;
+  border-right: 1px solid #d3d3d3;
+  border-top: 1px solid #d3d3d3;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #0c45ad;
+}
+.tab {
+  margin-left: 13px;
+}
+.tab + .tab {
+  margin-left: 16px;
+}
+.tab.act {
+  background: #206bd5;
+  color: #ffffff;
+}
+.more {
+  font-size: 14px;
+  color: #8c8c8c;
+  margin-top: 16px;
+  margin-right: 14px;
+}
+.tab-con {
+  display: none;
+}
+.tab-con.act {
+  display: block;
+}
+.list li {
+  color: #020202;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  line-height: 40px;
+}
+.list {
+  padding-top: 12px;
+}
+.list li::before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  width: 5px;
+  height: 5px;
+  background-color: #9ba0aa;
+  margin-left: 19px;
+  margin-right: 15px;
+}
+section + section {
+  margin-top: 26px;
+}
