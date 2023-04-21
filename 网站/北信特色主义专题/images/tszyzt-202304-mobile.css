@@ -1,0 +1,137 @@
+@media only screen and (max-width: 767px) {
+  .center_block,
+  .content,
+  .fl,
+  .fr,
+  .chnl_title,
+  .footer {
+    width: 100%;
+  }
+  body {
+	background-image: none, url(tszyzt-202304-footerbg.jpg);
+  background-position: bottom left;
+  background-size: contain;
+  }
+  .chnl_title {
+    margin-top: 15px;
+  }
+  .banner {
+    height: auto;
+  }
+  .banner img {
+    width: 100%;
+  }
+  section {
+    padding: 0 10px;
+    margin-top: 0;
+  }
+  .mobanner {
+    display: block;
+  }
+  .top {
+    background-position: bottom left;
+  }
+  .content {
+    padding-top: 15px;
+  }
+  .nav {
+    width: 100%;
+	height: auto;
+    padding: 0;
+    background-image: none;
+    background-color: #ed3d16;
+  }
+  .nav ul {
+    padding: 0;
+  }
+  .nav li {
+    display: block;
+    float: left;
+    width: 20%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 30px;
+    font-size: 16px;
+  }
+  .nav li + li {
+    border-style: none;
+  }
+  .doctitle {
+    width: 70%;
+  }
+  .slick-mod,.slick-mod2 {
+	width: 100%;
+	height: auto;
+  }
+  .slick-mod2 img {
+    width: 100%;
+    height: auto;
+  }
+  .fl {
+    height: auto;
+  }
+  .sjjs {
+    margin-right: 0;
+  }
+
+  /*list页*/
+
+  .list_content {
+    width: 100%;
+    padding-bottom: 38px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .wbg ul {
+    padding: 21px 21px 0 21px;
+  }
+  .bottom ul {
+    padding-top: 10px;
+  }
+  .list .doctitle {
+    width: 65%;
+  }
+
+  /*细览*/
+  .article {
+    padding: 10px 15px;
+  }
+  .bt {
+    font-size: 20px;
+  }
+  .dochtmlcon img {
+    max-width: 100%;
+  }
+  .c {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .footer {
+    height: auto;
+    padding: 10px 0;
+    background-color: #dc0101;
+    color: #ffffff;
+  }
+  .c img {
+    float: none;
+  }
+  .c p {
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 100px) and (max-width: 320px) {
+  .list .doctitle {
+    width: 55%;
+  }
+  .fy {
+    width: 100%;
+  }
+  .fy a {
+    padding: 4px 8px;
+  }
+  .fy .pages a {
+    padding: 4px 10px;
+  }
+}
