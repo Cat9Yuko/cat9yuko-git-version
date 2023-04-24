@@ -90,7 +90,7 @@ img {
 }
 .slick-mod2 {
   width: 567px;
-  height: 310px;
+  height: auto;
   margin-top: 16px;
 }
 .slick-mod3 {
@@ -205,12 +205,57 @@ img {
   margin-top: 4px;
 }
 .list li {
+  position: relative;
   line-height: 71px;
   border-bottom: 1px solid #dbd1d1;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
   color: #6b6b6b;
+}
+/* 添加动画效果 */
+.list li:hover {
+  border-left: 12px solid #c20317;
+  color: #ffffff;
+  padding-left: 10px;
+}
+.list li a {
+  position: relative;
+  z-index: 21;
+}
+.list li::before {
+  content: '';
+  position: absolute;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #b7967e;
+  -webkit-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+  -ms-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transition-property: transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.list li:hover::before {
+  -webkit-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+  transform: scaleX(1);
+  opacity: 0.9;
+  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
 }
 .more {
   margin-top: 9px;
@@ -245,7 +290,9 @@ img {
   text-align: left;
   margin-left: 6px;
 }
-
+div.hou {
+  display: none;
+}
 .list2 li {
   line-height: 49px;
   color: #6b6b6b;
@@ -348,4 +395,12 @@ footer {
 
 .sina {
   margin-left: 46px;
+}
+
+.list2 a:hover,
+.tit2:hover,
+.tit:hover,
+.newsabs h2:hover {
+  color: #c00;
+  text-decoration: underline;
 }
