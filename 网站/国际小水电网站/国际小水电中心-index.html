@@ -10,6 +10,13 @@
     <link rel="stylesheet" href="images/gjxsd-202304-global.css">
 </head>
 <body>
+    <!-- 右侧固定二维码 -->
+    <div class="fixedbar">
+        <div class="fix-item">
+            <img src="images/gjxsd-202304-qrcode.jpg" alt="">
+            <p>欢迎关注国际小水电<br>中心微信公众号</p>
+        </div>
+    </div>
     <div class="mainbg">
         <header class="header">
             <div class="center-block-1200">
@@ -37,14 +44,13 @@
             <div class="center-block-1200 whitebg">
                 <div class="rolltext clearfix">
                     <div class="fl roll-icon"><img class="fl" src="images/gjxsd-202304-laba.png" alt="">滚动公告：</div>
-                    <div class="fr">
+                    <div class="fl">
                         <div class="txtMarquee-left">
                             <div class="bd">
                                 <ul class="infoList">
                                     <li><a href="" target="_blank">1中国打破了世界软件巨头规则</a></li>
                                     <li><a href="" target="_blank">2中国打破了世界软件巨头规则</a></li>
-                                    <li><a href="" target="_blank">3中国打破了世界软件巨头规则</a></li>
-                                    <li><a href="" target="_blank">4中国打破了世界软件巨头规则</a></li>
+                                    <li><a href="" target="_blank">3中国打破了世界软件巨头规则中国打破了世界软件巨头规则中国打破了世界软件巨头规则</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -107,7 +113,7 @@
                         </div>
                     </div>
                 </section>
-                <section>
+                <section class="clearfix">
                     <div class="fl w747">
                         <div class="tabs">
                             <div class="tab act"><a href="#1" target="_blank">行业动态</a></div>
@@ -174,11 +180,73 @@
                             </div>
                         </div>    
                     </div>
-                    
+                </section>
+                <section class="clearfix">
+                    <div class="slick-mod2">
+                        <div class="slick-item">
+                            <a href="" target="_blank">
+                                <img src="images/demo5.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="slick-item">
+                            <a href="" target="_blank">
+                                <img src="images/demo5.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="slick-item">
+                            <a href="" target="_blank">
+                                <img src="images/demo5.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="slick-item">
+                            <a href="" target="_blank">
+                                <img src="images/demo5.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="slick-item">
+                            <a href="" target="_blank">
+                                <img src="images/demo5.jpg" alt="">
+                            </a>
+                        </div>
+                        
+                    </div>
+                </section>
+                <section>
+                    <div class="tabs">
+                        <div class="tab act"><a href="#1" target="_blank">专题报道</a></div>
+                        <a class="more fr" href="#1">更多..</a>
+                    </div>
+                    <div class="clearfix change-section">
+                        <div class="change-tabs fl">
+                            <div class="change-tab act">小水电国际标准</div>
+                            <div class="change-tab">今日水电论坛</div>
+                            <div class="change-tab">世界小水电发展报告</div>
+                            <div class="change-tab">GEF项目</div>
+                        </div>
+                        <div class="change-container fr">
+                            <div class="change-content act">
+                                <img src="images/demo2.jpg" alt="" height="226">
+                                <ul class="list">
+                                    <li><a href="" target="_blank">水利部党组学习贯彻习近平总书记全国两会重要讲话精神水利部党组学习贯彻习近平总书记全国两会重要讲话精神</a></li>
+                                    <li><a href="" target="_blank">水利部党组学习贯彻习近平总书记全国两会重要讲话精神</a></li>
+                                    <li><a href="" target="_blank">水利部党组学习贯彻习近平总书记全国两会重要讲话精神</a></li>
+                                    <li><a href="" target="_blank">水利部党组学习贯彻习近平总书记全国两会重要讲话精神</a></li>
+                                    <li><a href="" target="_blank">水利部党组学习贯彻习近平总书记全国两会重要讲话精神</a></li>
+                                    <li><a href="" target="_blank">水利部党组学习贯彻习近平总书记全国两会重要讲话精神</a></li>
+                                </ul>
+                            </div>
+                            <div class="change-content"></div>
+                            <div class="change-content"></div>
+                            <div class="change-content"></div>
+                        </div>
+                    </div>
                 </section>
             </div>
         </main>
-        <footer class="footer"></footer>
+        <footer class="footer">
+            <p>版权所有：国际小水电中心 浙ICP备 06036417号-2   浙公网安备 33010602004205号</p>
+            <p>单位地址：浙江省杭州市西湖区南山路136号   联系方式：0571-86972077</p>
+        </footer>
     </div>
 
     <script src="images/jquery-3.6.4.min.js"></script>
@@ -187,7 +255,7 @@
     <script src="images/gjxsd-202304-index.js"></script>
     <script>
         // 滚动文字
-        jQuery(".txtMarquee-left").slide({mainCell:".bd ul",autoPlay:true,effect:"leftMarquee",vis: 2,interTime:50,trigger:"click"});
+        jQuery(".txtMarquee-left").slide({mainCell:".bd ul",autoPlay:true,effect:"leftMarquee",vis: 2,interTime:50});
 
         $(document).ready(function () {
             $(".slick-mod").slick({
@@ -196,8 +264,8 @@
             });
 
             $(".slick-mod2").slick({
-                dots: false,
-                autoplay: false,
+                dots: true,
+                autoplay: true
             });
 
             $(".tabs .tab").hover(function(){

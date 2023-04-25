@@ -44,6 +44,18 @@ img {
   width: 388px;
 }
 /* user style */
+.fixedbar {
+  position: fixed;
+  top: 451px;
+  right: 9%;
+  text-align: center;
+  font-size: 0;
+}
+.fixedbar p {
+  line-height: 18px;
+  font-size: 16px;
+  margin-top: 6px;
+}
 .mainbg {
   background: url(gjxsd-202304-mainbg.jpg) top center no-repeat;
 }
@@ -136,13 +148,8 @@ img {
 .txtMarquee-left .bd .tempWrap {
   width: 1022px !important;
 } /* 用 !important覆盖SuperSlide自动生成的宽度，这样就可以手动控制可视宽度。 */
-.txtMarquee-left .bd ul {
-  width: 1022px;
-  overflow: hidden;
-  zoom: 1;
-}
 .txtMarquee-left .bd ul li {
-  padding-right: 20px;
+  margin-right: 20px;
   float: left;
   line-height: 37px;
   text-align: left;
@@ -151,10 +158,12 @@ img {
 } /* 用 width:auto !important 覆盖SuperSlide自动生成的宽度，解决文字不衔接问题 */
 
 /* carousel */
-.slick-mod,
-.slick-mod2 {
+.slick-mod {
   width: 576px;
   height: 370px;
+}
+.slick-mod2 {
+  width: 100%;
 }
 .slick-item {
   position: relative;
@@ -182,9 +191,6 @@ img {
   position: absolute;
   right: 10px;
   bottom: 15px;
-}
-.slick-mod2 .slick-dots {
-  bottom: 36px;
 }
 
 .slick-mod .slick-arrow,
@@ -215,20 +221,32 @@ img {
   left: 0;
   background: url(../images/wlaq-202009-arrowlef.png) no-repeat center;
 } */
-.slick-mod .slick-dots li,
-.slick-mod2 .slick-dots li {
+.slick-mod .slick-dots li {
   width: 14px;
   height: 14px;
   background: #ffffff;
   border-radius: 50%;
   margin: 0 5px 0 0;
 }
-.slick-mod .slick-dots li.slick-active,
-.slick-mod2 .slick-dots li.slick-active {
+.slick-mod2 .slick-dots li {
+  width: 23px;
+  height: 5px;
+  background: rgb(58, 144, 219, 0.5);
+  border-radius: 0%;
+  margin: 0 5px 0 0;
+}
+
+.slick-mod .slick-dots li.slick-active {
   width: 14px;
   height: 14px;
   background: #e50012;
   border-radius: 50%;
+}
+.slick-mod2 .slick-dots li.slick-active {
+  width: 23px;
+  height: 5px;
+  background: #206bd5;
+  border-radius: 0%;
 }
 /* --- */
 .tabs {
@@ -292,4 +310,48 @@ img {
 }
 section + section {
   margin-top: 26px;
+}
+footer {
+  background-color: #0852ae;
+  text-align: center;
+  color: #ffffff;
+  line-height: 29px;
+  padding: 32px 0;
+  margin-top: 24px;
+}
+.change-section {
+  margin-top: 24px;
+}
+.change-tab {
+  width: 272px;
+  height: 55px;
+  background-color: #e0f4f8;
+  font-size: 20px;
+  color: #0c5c94;
+  text-indent: 26px;
+  line-height: 55px;
+  background-image: url(gjxsd-202304-icon2.png);
+  background-repeat: no-repeat;
+  background-position: right 34px center;
+}
+.change-tab.act {
+  background-image: url(gjxsd-202304-icon1.png);
+  background-color: #1a93d8;
+  color: #ffffff;
+}
+.change-tab + .change-tab {
+  margin-top: 2px;
+}
+.change-container {
+  width: 866px;
+}
+.change-content .list,.change-content img {
+  display: inline-block;
+}
+.change-content .list {
+  width: 468px;
+  padding-top: 0;
+}
+.change-content li {
+  line-height: 38px;
 }
