@@ -933,20 +933,27 @@ html,body {
 	overflow-x: hidden;
 }
 .class_name {
-	overflow-x: scroll;
+	overflow-x: auto;
 	height: 100%;
+<<<<<<< HEAD
 	-webkit-overflow-scrolling: touch;
 }
 .class_name::-webkit-scrollbar {
 	height: 0;
 	width: 0;
 	display: none;
+=======
+	flex-wrap: nowrap;
+>>>>>>> 954c591 (更新)
 }
 .week_name li,.class_name li {
 	flex: 0 0 51%;
 }
 .week_name li {
 	margin: 0;
+}
+.class_name::-webkit-scrollbar {
+	height: 0;
 }
 /* 202303吸顶修改 end */
 
