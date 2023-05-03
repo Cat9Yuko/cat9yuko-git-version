@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/3.2.47/vue.global.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <!-- <div v-on:click="add">{{name}}</div> -->
+        <!-- <div @[event]="add">{{name}}</div> -->
+        <!-- <div @click="add">{{name}}</div> -->
+        <!-- <a href="http://www.baidu.com" @click.prevent="go($event,'cat9')">{{name}}</a> -->
+        <h2>{{num}}</h2><button @click="add()">增加</button>
+        <button @click="des()">减少</button>
+        <div style="background-color: red;color: white;" v-if="error">提示：{{error}}</div>
+    </div>
+    <script src="vue.js"></script>
+</body>
+</html>
