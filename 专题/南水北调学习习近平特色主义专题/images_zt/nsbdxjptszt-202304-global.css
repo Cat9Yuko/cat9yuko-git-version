@@ -59,20 +59,20 @@ img {
 .hnews {
   background-image: url(nsbdxjptszt-202304-hnewsbg.jpg);
   background-size: contain;
-  height: 141px;
+  height: 121px;
 }
 .hnews-icon {
   margin-left: 20px;
-  margin-top: 17px;
+  margin-top: 13px;
 }
 .hnew {
   padding-right: 23px;
 }
 .hnew h2 {
   color: #fcd88b;
-  font-size: 32px;
+  font-size: 36px;
   text-align: center;
-  margin: 18px 0 26px;
+  margin: 40px 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -285,7 +285,6 @@ img {
   color: #848383;
 }
 .chnltitle {
-  text-align: center;
   color: #d81010;
   font-weight: bold;
   margin-top: 42px;
