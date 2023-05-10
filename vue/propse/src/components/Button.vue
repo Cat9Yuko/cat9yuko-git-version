@@ -1,26 +1,56 @@
 <template>
-  <div :class="[type, { disabled }]" :style="$attrs.style">
-    {{ content }}
-  </div>
+  <section>
+    <div :id="$attrs.id" :class="[type, { disabled }]">
+      {{ text }}
+    </div>
+    <h2 v-bind="$attrs">Cat9</h2>
+    <!-- {{ content }}
+    <hr>
+    <button @click="text = '奥利'">子组件</button>
+    {{ text }} -->
+  </section>
 </template>
 
 <script>
 export default {
+  inheritAttrs: false,
   props: {
+    click: {type: Function},
     content: {
       type: String,
-      default: '确定'
+      required: true
     },
     type: {
       type: String,
       default: 'info',
       validator(v) {
-        return ['success','danger','info'].includes(v)
+        return ['success', 'danger', 'info'].includes(v)
       }
+    },
+    hdTip: {
+      type: String
     },
     disabled: {
       type: Boolean,
       default: false
+    }
+  },
+  data() {
+    return {
+      text: this.content
+    }
+  },
+  watch: {
+    content(v) {
+      this.text = v
+    }
+  },
+  methods: {
+    onClick() {
+      this.text = 'loading...'
+      setTimeout(() => {
+        this.text = this.content
+      }, 3000);
     }
   }
 }
