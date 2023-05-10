@@ -10,8 +10,10 @@
 }
 .mainbg {
   height: 4100px;
-  background-image: url(mainbg.jpg);
-  background-position: center;
+  background-image: url(mainbg2.jpg),url(mainbg3.jpg);
+
+  background-position: top center,bottom center;
+  background-repeat: no-repeat;
 }
 footer {
   height: 316px;
@@ -22,6 +24,9 @@ footer {
   font-size: 20px;
   line-height: 42px;
   padding-top: 88px;
+  background-image: url(wave2.png);
+  animation: scrollToRight 1s linear infinite;
+  animation-duration: 15s;
 }
 footer p {
     position: relative;
@@ -43,6 +48,7 @@ footer p {
     min-height: 100px;
     max-height: 150px;
     vertical-align: bottom;
+    margin-top: 840px;
 }
 
 /* Animation */
@@ -79,7 +85,14 @@ footer p {
         transform: translate3d(85px,0,0);
     }
 }
-
+@keyframes scrollToRight {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 1920px 0;
+    }
+}
 /*Shrinking for mobile*/
 @media (max-width: 768px) {
     .waves {
