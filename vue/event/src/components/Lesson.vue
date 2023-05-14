@@ -9,10 +9,19 @@
 <script>
     export default {
         props: ['lesson'],
-        emits: ['del'],
+        emits: {
+            del(v) {
+                if(/^\d+$/.test(v)) {
+                    return true
+                }
+                throw new Error('需要一个数值的参数')
+            }
+        },
         methods: {
             del() {
-                this.$emit('del',this.lesson)
+                if(confirm('确定删除吗？')) {
+                    this.$emit('del',this.lesson.id)
+                }
             }
         }
     }
