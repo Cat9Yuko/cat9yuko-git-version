@@ -7,15 +7,15 @@
 
 <script>
 export default {
-    props: ['value'],
-    emits:['update:value'],
+    props: ['modelValue'],
+    emits:['update:modelValue'],
     data() {
-        return { content: this.value }
+        return { content: this.modelValue }
     },
     methods: {
         change(eve) {
             this.content = eve.target.value
-            this.$emit('update:value',this.content)
+            this.$emit('update:modelValue',this.content)
         }
     }
 }

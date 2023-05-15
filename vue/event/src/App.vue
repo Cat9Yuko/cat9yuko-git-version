@@ -1,14 +1,17 @@
 <template>
   <div>
     <div class="lesson">
-      <lesson v-for="item in db" :key="item.id" :lesson="item" @del="show" />
+      <lesson v-for="item in db" :key="item.id" :lesson="item" @del="show" 
+      v-model="item.title"
+      v-model:price="item.price" />
+      {{ db[0].title }}
       <!-- <input type="text" :value="title" @input="title = $event.target.value">
     {{ title }} -->
       <!-- <hd-input-vue :value="title" @update:value="change" /> -->
-      <hd-input-vue v-model:value="title" />
+      <!-- <hd-input-vue v-model="title" /> -->
     </div>
-    <hr>
-    {{ title }}
+    <!-- <hr>
+    {{ title }} -->
   </div>
 </template>
 
