@@ -2,16 +2,13 @@
     <div>
         <img :src="lesson.preview" alt="lesson.title">
         <h3 @dblclick="inputShow = true">
-            <input v-if="inputShow" type="text"
-            :value="lesson.title" @input="$emit('update:modelValue',$event.target.value)"
-            @keyup.enter="inputShow = fasle"
+            <input v-if="inputShow" type="text" :value="lesson.title" @input="changeTitle" @keyup.enter="inputShow = fasle"
                 @blur="inputShow = false">
             <strong v-else>{{ lesson.title }}</strong>
         </h3>
         <h3 @dblclick="inputPriceShow = true">
-            <input v-if="inputPriceShow" type="text"
-            :value="lesson.price" @input="$emit('update:price',$event.target.value)"
-            @keyup.enter="inputPriceShow = fasle"
+            <input v-if="inputPriceShow" type="text" :value="lesson.price"
+                @input="$emit('update:price', $event.target.value)" @keyup.enter="inputPriceShow = fasle"
                 @blur="inputPriceShow = false">
             <strong v-else>{{ lesson.price }}</strong>
         </h3>
@@ -21,15 +18,18 @@
 
 <script>
 export default {
-    props: ['lesson', 'modelValue','price'],
+    props: ['lesson', 'title', 'price', 'titleModifiers'],
     data() {
         return {
             inputShow: false,
             inputPriceShow: false,
         }
     },
+    created() {
+        console.log(this.titleModifiers);
+    },
     emits: {
-        'update:modelValue': null,
+        'update:title': null,
         del(v) {
             if (/^\d+$/.test(v)) {
                 return true
@@ -38,6 +38,19 @@ export default {
         }
     },
     methods: {
+        changeTitle($event) {
+            let value = $event.target.value;
+            if (this.titleModifiers.toupper) {
+                value = value.toUpperCase();
+            }
+            const substr = Object.keys(this.titleModifiers).find(m => /^substr_/.test(m));
+            console.log(this.titleModifiers + ' ' + substr);
+            if (substr) {
+                let info = substr.split('_')
+                value = value.substr(0, info[1])
+            }
+            this.$emit('update:title', value)
+        },
         del() {
             if (confirm('确定删除吗？')) {
                 this.$emit('del', this.lesson.id)
