@@ -1,30 +1,44 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld msg="Vite + Vue" />
+    <!-- {{ lessons }} -->
+    <lesson v-for="lesson of lessons" :key="lesson.id" :lesson="lesson">
+       <!-- <template v-slot:default="{content,title}">
+        {{ title }} - {{ content }}
+       </template> -->
+       <template #icon>:)</template>
+       <template #default="{id}">
+        <!-- {{ id }} -->
+        <button @click="del(id)">删除</button>
+       </template>
+    </lesson>
+  
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+<script>
+import lessons from './data'
+import Lesson from './components/Lesson.vue'
+  export default {
+  components: { Lesson },
+    data() {
+      return {
+        lessons
+      }
+    },
+    methods: {
+      del(id) {
+        const index = this.lessons.findIndex(l=>l.id == id);
+        this.lessons.splice(index,1)
+      }
+    }
+  }
+</script>
+
+<style lang="scss" scoped>
+// yarn add -D sass
+div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
 }
 </style>
