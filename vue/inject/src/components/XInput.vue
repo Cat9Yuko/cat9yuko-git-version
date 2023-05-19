@@ -31,7 +31,9 @@ label {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
+    
     div {
+        width: 100px;
         color: #666;
         font-size: 16px;
         margin-right: 10px;
