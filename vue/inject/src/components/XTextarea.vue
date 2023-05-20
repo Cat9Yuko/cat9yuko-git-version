@@ -1,13 +1,24 @@
 <template>
     <label>
         <div>{{ title }}</div>
-        <textarea v-model="content" @input="$emit('update:modelValue',$event.target.value)"></textarea>
+        <textarea :rows="rows" v-model="content" @input="$emit('update:modelValue', $event.target.value)"></textarea>
     </label>
 </template>
 
 <script>
 export default {
-    props: ['title', 'modelValue'],
+
+    props: {
+        title: {
+            type: String,
+            required: true
+        },
+        modelValue: String,
+        rows: {
+            type: Number,
+            default: 3
+        }
+    },
     emits: ['update:modelValue'],
     inject: ['webname'],
     data() {
@@ -31,7 +42,7 @@ label {
         margin-right: 10px;
     }
 
-    input {
+    textarea {
         border: 2px solid #ddd;
         padding: 5px 10px;
         color: #666;

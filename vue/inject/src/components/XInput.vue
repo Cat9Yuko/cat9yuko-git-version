@@ -3,7 +3,6 @@
         <label>
             <div>{{ title }}</div>
             <input type="text" v-model="content">
-            {{ webname }}
         </label>
     </div>
 </template>

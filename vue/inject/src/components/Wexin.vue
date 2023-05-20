@@ -3,19 +3,28 @@
     <card>
       <template #header>微信</template>
       <div>
-        <x-input title="微信账号" v-model="appName" />
-        <x-input title="秘钥" v-model="key" />
+        <x-input title="appid" v-model="config.wexin.appid" />
+        <x-input title="secret" v-model="config.wexin.secret" />
+        <x-textarea title="wechatName" v-model="config.wexin.wechatName"/>
+        <x-input title="老师" v-model="content"/>
       </div>
     </card>
   </div>
 </template>
 
 <script>
+import XInput from './XInput.vue'
 export default {
+  components: { XInput },
+  inject: ['config'],
   data() {
     return {
-      appName: 'cat9',
-      key: 'lorem a'
+      content:'老死'
+    }
+  },
+  methods: {
+    show(){
+      alert(this.content)
     }
   }
 }
