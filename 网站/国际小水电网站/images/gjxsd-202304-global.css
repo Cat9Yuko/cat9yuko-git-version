@@ -497,3 +497,14 @@ footer {
 .notitle {
   margin-top: 10px;
 }
+/* 添加下拉导航 */
+.nav-c ul {
+  display: none;
+  background-color: #1f62d0;
+}
+.nav-c ul.act {
+  display: block;
+}
+.nav-c ul li {
+  font-size: 16px;
+}

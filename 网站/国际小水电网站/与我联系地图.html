@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=1250">
+    <title>国际小水电中心</title>
+    <link rel="stylesheet" href="images/normalize.css">
+    <link rel="stylesheet" href="images/slick.css">
+    <link rel="stylesheet" href="images/gjxsd-202304-global.css">
+</head>
+
+<body>
+    <!-- 右侧固定二维码 -->
+    <div class="fixedbar">
+        <div class="fix-item">
+            <img src="images/gjxsd-202304-qrcode.jpg" alt="">
+            <p>欢迎关注国际小水电<br>中心微信公众号</p>
+        </div>
+    </div>
+    <div class="mainbg">
+        <header class="header">
+            <div class="center-block-1200">
+                <a href="https://mail.mwr.gov.cn/mail/userLogin" target="_blank"><img class="email"
+                        src="images/gjxsd-202304-email.png" alt=""></a>
+
+                <div class="search-container">
+                    <form action="" method="get">
+                        <input type="text" class="keyword"><button class="submit">搜索</button>
+                    </form>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <nav class="nav-bg">
+                <div class="nav-p">
+                    <div class="nav-c"><a href="" target="_blank">首页</a></div>
+                    <div class="nav-c"><a href="" target="_blank">机构</a></div>
+                    <div class="nav-c"><a href="" target="_blank">新闻</a></div>
+                    <div class="nav-c"><a href="" target="_blank">专题报道</a></div>
+                    <div class="nav-c"><a href="" target="_blank">党建工作</a></div>
+                    <div class="nav-c"><a href="" target="_blank">English</a></div>
+                    <div class="nav-c"><a href="" target="_blank">与我联系</a></div>
+                </div>
+            </nav>
+            <div class="center-block-1200 whitebg">
+                <section class="clearfix positionre">
+                    <div class="fl">
+                        <div class="left-nav">
+                            <div class="nav-title">新闻</div>
+                            <div class="nav-childs">
+                                <div class="nav-chlid act"><a href="" target="_blank">中心新闻</a></div>
+                                <div class="nav-chlid"><a href="" target="_blank">领导讲话</a></div>
+                                <div class="nav-chlid"><a href="" target="_blank">行业动态</a></div>
+                                <div class="nav-chlid"><a href="" target="_blank">国际交流</a></div>
+                                <div class="nav-chlid"><a href="" target="_blank">基地风采</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fr rightdetail w908">
+
+                        <div id="container" style="height: 500px;"></div>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <footer class="footer">
+            <p>版权所有：国际小水电中心 浙ICP备 06036417号-2 浙公网安备 33010602004205号</p>
+            <p>单位地址：浙江省杭州市西湖区南山路136号 联系方式：0571-86972077</p>
+        </footer>
+    </div>
+
+    <script src="images/jquery-3.6.4.min.js"></script>
+    <script src="images/slick.js"></script>
+    <script src="images/jquery.superslide.2.1.3.js"></script>
+    <script src="images/gjxsd-202304-index.js"></script>
+    <script src="//api.map.baidu.com/api?type=webgl&v=3.0&ak=bz9aeTywIfvmBGnXuxLSqHiP1OHzniYT"></script>
+    <script>
+        var map = new BMapGL.Map('container');
+        map.centerAndZoom(new BMapGL.Point(120.161379, 30.235134), 19);
+        map.enableScrollWheelZoom(true);
+        // 创建点标记
+        var marker1 = new BMapGL.Marker(new BMapGL.Point(120.161379, 30.235134));
+        // 在地图上添加点标记
+        map.addOverlay(marker1);
+    </script>
+</body>
+
+</html>
