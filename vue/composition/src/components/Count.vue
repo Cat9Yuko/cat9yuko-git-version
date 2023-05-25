@@ -4,11 +4,14 @@
     <span :style="attrs.style">{{ num }}</span>
     <button @click="add">+</button>
     <br>
-    <component :is="defaults[1]"/>
+    <component :is="defaults[1]" />
+    {{ sum }}
+    <br>
+    <button @click="updateUser('Cat9999999')">{{ user }}</button>
 </template>
 
 <script>
-import { ref, watch, watchEffect } from 'vue'
+import { ref, watch, watchEffect, computed,inject } from 'vue'
 export default {
     props: {
         init: { type: Number, default: 4 }
@@ -17,9 +20,12 @@ export default {
     emits: ['change'],
     setup(props, context) {
         const { emit, expose, attrs, slots } = context
+        const user = inject('user','Cat9')
+        const updateUser = inject('updateUser')
         // console.log(this)
         const defaults = slots.default()
         let num = ref(props.init);
+        let sum = computed(() => num.value + 100)
         let add = () => {
             num.value++;
             emit('change', num.value)
@@ -39,7 +45,7 @@ export default {
         // })
         // 只暴露num其他的读取不到
         expose({ num })
-        return { num, add, sub, attrs, slots, defaults }
+        return { num, add, sub, attrs, slots, defaults, sum,user,updateUser }
     }
 }
 </script>

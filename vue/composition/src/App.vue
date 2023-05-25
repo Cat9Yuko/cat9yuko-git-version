@@ -10,11 +10,17 @@
 
 <script>
 import Count from './components/Count.vue';
-import { ref, onMounted } from 'vue'
+import { ref, onMounted,onBeforeMount,onBeforeUpdate,onUpdated,onUnmounted,onBeforeUnmount,provide } from 'vue'
 export default {
   components: { Count },
   setup() {
     // let count = ref(0)
+    let user = ref('Cat9YuKo')
+    provide('user',user)
+    provide('updateUser',(newValue)=>user.value = newValue)
+    setTimeout(() => 
+      user.value = 'baidu.com'
+    , 1000)
     const countComponent = ref()
     onMounted(() => {
       console.log(countComponent.value.num);
