@@ -51,6 +51,9 @@ li {
 .w693 {
   width: 693px;
 }
+.w560 {
+  width: 560px;
+}
 /* user style */
 header {
   background-image: url('slaqscyhd-202305-banner.jpg');
@@ -104,6 +107,8 @@ section + section {
 }
 .slick-mod2 {
   margin-top: 43px;
+  width: 560px;
+  height: 294px;
 }
 .slider-for {
   width: 480px;
@@ -147,7 +152,7 @@ section + section {
 }
 .slick-mod2 .slick-dots {
   position: absolute;
-  bottom: 0;
+  bottom: 1px;
   right: 0;
 }
 .slider-nav .slick-arrow {
@@ -190,18 +195,18 @@ section + section {
   border-radius: 5px;
 }
 .slick-mod2 .slick-dots li {
-  width: 28px;
-  height: 15px;
-  line-height: 15px;
-  font-size: 16px;
+  width: 42px;
+  height: 22px;
+  line-height: 22px;
+  font-size: 23px;
   background: rgba(0, 0, 0, 0.5);
   color: #ffffff;
   border-radius: 0px;
   margin: 0 1px 0 0;
 }
 .slick-mod2 .slick-dots li.slick-active {
-  width: 28px;
-  height: 15px;
+  width: 42px;
+  height: 22px;
   background: #d82c3c;
   border-radius: 0px;
 }
@@ -221,7 +226,7 @@ section + section {
   border-top: 1px dashed #ababab;
 }
 .list.reviselineh li {
-  line-height: 42px;
+  line-height: 45px;
 }
 .list li::before {
   content: '';
