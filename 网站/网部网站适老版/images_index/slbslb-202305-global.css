@@ -44,6 +44,12 @@ li {
   background-color: #ffffff;
   box-shadow: 0 0 7px #dddddd;
 }
+.w200 {
+  width: 200px;
+}
+.w964 {
+  width: 964px;
+}
 /* 顶部原样式 */
 .top {
   width: 100%;
@@ -317,7 +323,7 @@ section {
   padding-left: 25px;
 }
 .list li::before {
-  content: "";
+  content: '';
   width: 8px;
   height: 8px;
   background-color: #b6b6b6;
@@ -342,4 +348,384 @@ section {
 }
 .chnllist-padding {
   padding-bottom: 30px;
+}
+.show8icon {
+  padding: 20px 0 20px 30px;
+}
+.show-icon {
+  background-color: #ebebeb;
+  padding: 7px;
+  border-radius: 5px;
+}
+.show-icon + .show-icon {
+  margin-left: 40px;
+}
+.show-rows + .show-rows {
+  margin-top: 9px;
+}
+.showbg {
+  width: 241px;
+  height: 79px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #666666;
+  line-height: 79px;
+  background-image: url('slbslb-202305-icon1.png');
+  background-position-y: center;
+  background-repeat: no-repeat;
+}
+.show-icon:hover {
+  background-color: #62cefd;
+}
+.show-icon:hover .showbg {
+  background-color: #04b1fb;
+  color: #ffffff;
+}
+/* 图标切换 */
+.icon1 .showbg {
+  background-image: url('slbslb-202305-icon1.png');
+  background-position-x: 21px;
+  text-indent: 81px;
+}
+.icon1:hover .showbg {
+  background-image: url('slbslb-202305-icon1-1.png');
+}
+.icon2 .showbg {
+  background-image: url('slbslb-202305-icon2.png');
+  background-position-x: 25px;
+  text-indent: 104px;
+}
+.icon2:hover .showbg {
+  background-image: url('slbslb-202305-icon2-1.png');
+}
+.icon3 .showbg {
+  background-image: url('slbslb-202305-icon3.png');
+  background-position-x: 17px;
+  text-indent: 69px;
+}
+.icon3:hover .showbg {
+  background-image: url('slbslb-202305-icon3-1.png');
+}
+.icon4 .showbg {
+  background-image: url('slbslb-202305-icon4.png');
+  background-position-x: 12px;
+  text-indent: 62px;
+}
+.icon4:hover .showbg {
+  background-image: url('slbslb-202305-icon4-1.png');
+}
+.icon5 .showbg {
+  background-image: url('slbslb-202305-icon5.png');
+  background-position-x: 21px;
+  text-indent: 81px;
+}
+.icon5:hover .showbg {
+  background-image: url('slbslb-202305-icon5-1.png');
+}
+.icon6 .showbg {
+  background-image: url('slbslb-202305-icon6.png');
+  background-position-x: 25px;
+  text-indent: 105px;
+}
+.icon6:hover .showbg {
+  background-image: url('slbslb-202305-icon6-1.png');
+}
+.icon7 .showbg {
+  background-image: url('slbslb-202305-icon7.png');
+  background-position-x: 13px;
+  text-indent: 74px;
+}
+.icon7:hover .showbg {
+  background-image: url('slbslb-202305-icon7-1.png');
+}
+.icon8 .showbg {
+  background-image: url('slbslb-202305-icon8.png');
+  background-position-x: 11px;
+  text-indent: 62px;
+}
+.icon8:hover .showbg {
+  background-image: url('slbslb-202305-icon8-1.png');
+}
+.chnl-title {
+  font-size: 36px;
+  color: #333333;
+  font-weight: bold;
+  border-bottom: 1px solid #61a7e2;
+  margin-left: 11px;
+  margin-right: 24px;
+  padding: 19px 0 11px 9px;
+}
+.zwmargin {
+  margin-left: 8px;
+  margin-top: 10px;
+}
+.zwmargin .fl:nth-child(2) {
+  margin-left: 4px;
+}
+.zwleft-nav {
+  width: 200px;
+}
+.zwleft-nitem {
+  /* width: 200px; */
+  height: 141px;
+  background-color: #3582c4;
+  text-align: center;
+  color: #ffffff;
+  font-size: 22px;
+  border-radius: 5px;
+}
+.zwleft-nitem img {
+  margin-top: 16px;
+  margin-bottom: 18px;
+}
+.zwleft-nitem a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.zwleft-nitem:nth-child(3) img {
+  margin-top: 21px;
+}
+.zwleft-nitem + .zwleft-nitem {
+  margin-top: 16px;
+}
+.zw-tabs {
+  border-bottom: 1px solid #d7d7d7;
+  padding: 7px 0 0 2px;
+}
+.zw-tab {
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333333;
+  padding: 0 4px;
+  padding-bottom: 13px;
+}
+.zw-tab.act {
+  color: #3582c4;
+  border-bottom: 3px solid #3582c4;
+}
+.zw-tab + .zw-tab {
+  margin-left: 14px;
+}
+.zw-list {
+  display: none;
+}
+.zw-list.act {
+  display: block;
+}
+.zw-list li {
+  font-size: 28px;
+  color: #333333;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 59px;
+}
+.zw-list li::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background-color: #888888;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin: 0 15px 0 10px;
+}
+.fw-nav {
+  text-align: center;
+  margin: 30px 0;
+}
+.fw-nitem {
+  display: inline-block;
+  width: 313px;
+  height: 128px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 28px;
+  background-color: #3582c4;
+  vertical-align: middle;
+}
+.fw-nitem img {
+  vertical-align: middle;
+  margin-right: 25px;
+}
+.fw-nitem a {
+  display: block;
+  padding-top: 35px;
+  height: 100%;
+}
+.fw-nitem + .fw-nitem {
+  margin-left: 59px;
+}
+.table_hp_fw {
+  border-collapse: collapse;
+  width: 1164px;
+  margin: 0 auto;
+  text-align: center;
+  border-spacing: 0;
+  font-size: 28px;
+  color: #333333;
+}
+.table_hp_fw thead {
+  background-color: #ebebeb;
+  line-height: 49px;
+  color: #333333;
+  font-weight: bold;
+  font-size: 24px;
+}
+.first {
+  width: 630px;
+  line-height: 60px;
+  text-align: left;
+  padding-left: 40px;
+  position: relative;
+}
+.first span::before {
+  content: '';
+  left: 15px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  margin-top: 30px;
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background-color: #888888;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 15px;
+}
+#zxfw_con {
+  padding: 10px 0;
+}
+.hd-container {
+  padding: 42px 0 39px;
+  margin-left: 15px;
+}
+.hd-item {
+  position: relative;
+  float: left;
+  width: 184px;
+  height: 184px;
+  background-image: url('slbslb-202305-icon12-bg.png');
+  background-size: cover;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #333333;
+}
+.hd-item a {
+  display: block;
+  height: 100%;
+}
+.hd-item img {
+  margin: 27px 0 0;
+}
+.hd-item p {
+  left: 0;
+  right: 0;
+  position: absolute;
+  bottom: 21px;
+}
+.hd-item + .hd-item {
+  margin-left: 12px;
+}
+.sssq-container {
+  width: 1178px;
+  margin: 0 auto;
+  padding-top: 22px;
+  padding-bottom: 22px;
+}
+.sssq-item {
+  float: left;
+  width: 25%;
+  line-height: 100px;
+  font-size: 28px;
+  text-indent: 94px;
+  color: #333333;
+}
+.sssq-item.icon9 {
+  background-image: url('slbslb-202305-icon13-1.png');
+  background-repeat: no-repeat;
+  background-position: center left 26px;
+}
+.sssq-item.icon10 {
+  background-image: url('slbslb-202305-icon14-1.png');
+  background-repeat: no-repeat;
+  background-position: center left 26px;
+}
+.sssq-item.icon11 {
+  background-image: url('slbslb-202305-icon15-1.png');
+  background-repeat: no-repeat;
+  background-position: center left 26px;
+}
+.sssq-item.icon12 {
+  background-image: url('slbslb-202305-icon16-1.png');
+  background-repeat: no-repeat;
+  background-position: center left 26px;
+}
+.sssq-item.icon13 {
+  background-image: url('slbslb-202305-icon17-1.png');
+  background-repeat: no-repeat;
+  background-position: center left 26px;
+}
+.sssq-item.icon14 {
+  background-image: url('slbslb-202305-icon18-1.png');
+  background-repeat: no-repeat;
+  background-position: center left 26px;
+}
+.sssq-item.icon15 {
+  background-image: url('slbslb-202305-icon19-1.png');
+  background-repeat: no-repeat;
+  background-position: center left 26px;
+}
+.sssq-item.icon16 {
+  background-image: url('slbslb-202305-icon20-1.png');
+  background-repeat: no-repeat;
+  background-position: center left 26px;
+}
+.sssq-item.icon9:hover {
+  background-image: url('slbslb-202305-icon13-2.png');
+  color: #3582c4;
+  text-decoration: underline;
+}
+.sssq-item.icon10:hover {
+  background-image: url('slbslb-202305-icon14-2.png');
+  color: #3582c4;
+  text-decoration: underline;
+}
+.sssq-item.icon11:hover {
+  background-image: url('slbslb-202305-icon15-2.png');
+  color: #3582c4;
+  text-decoration: underline;
+}
+.sssq-item.icon12:hover {
+  background-image: url('slbslb-202305-icon16-2.png');
+  color: #3582c4;
+  text-decoration: underline;
+}
+.sssq-item.icon13:hover {
+  background-image: url('slbslb-202305-icon17-2.png');
+  color: #3582c4;
+  text-decoration: underline;
+}
+.sssq-item.icon14:hover {
+  background-image: url('slbslb-202305-icon18-2.png');
+  color: #3582c4;
+  text-decoration: underline;
+}
+.sssq-item.icon15:hover {
+  background-image: url('slbslb-202305-icon19-2.png');
+  color: #3582c4;
+  text-decoration: underline;
+}
+.sssq-item.icon16:hover {
+  background-image: url('slbslb-202305-icon20-2.png');
+  color: #3582c4;
+  text-decoration: underline;
+}
+.yj-container {
 }
