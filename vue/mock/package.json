@@ -1,5 +1,5 @@
 {
-  "name": "todo",
+  "name": "mock",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -13,8 +13,6 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.1.0",
-    "mockjs": "^1.1.0",
-    "sass": "^1.62.1",
     "vite": "^4.3.9"
   }
 }
