@@ -8,6 +8,15 @@
     <link rel="stylesheet" href="images/normalize.css">
     <link rel="stylesheet" href="images/slick.css">
     <link rel="stylesheet" href="images/ztjytszt-202305-global.css">
+    <style>
+        .more {
+            line-height: 48px;
+        }
+        .change-link {
+            margin-top: 10px;
+            margin-right: -10px;
+        }
+    </style>
 </head>
 <body>
     <div class="minbg">
@@ -36,9 +45,10 @@
                     </div>
                 </div>
                 <div class="fr w590">
+                    <a class="fr more change-link" href="#2">更多&gt;&gt;</a>
                     <div class="chnlbg1">
-                        <div class="chnltab"><a href="" target="_blank">中央精神</a></div>
-                        <div class="chnltab act"><a href="" target="_blank">水利部动态</a></div>
+                        <div class="chnltab"><a href="#1" target="_blank">中央精神</a></div>
+                        <div class="chnltab act"><a href="#2" target="_blank">水利部动态</a></div>
                     </div>
                     <div class="tabcontainer">
                         <div class="tabcontent">
@@ -69,6 +79,7 @@
                 </div>
             </section>
             <section>
+                <a class="fr more" href="">更多&gt;&gt;</a>
                 <div class="chnlbg2">
                     <a href="" target="_blank">局内动态</a>
                 </div>
@@ -89,6 +100,7 @@
             </section>
             <section class="clearfix">
                 <div class="fl w590">
+                    <a class="fr more" href="">更多&gt;&gt;</a>
                     <div class="chnlbg2">
                         <a href="" target="_blank">调查研究</a>
                     </div>
@@ -102,6 +114,7 @@
                     </ul>
                 </div>
                 <div class="fr w590">
+                    <a class="fr more" href="">更多&gt;&gt;</a>
                     <div class="chnlbg2">
                         <a href="" target="_blank">学习参考</a>
                     </div>
@@ -179,6 +192,7 @@
         $(".chnltab").hover(function(){
             $(this).addClass("act").siblings().removeClass("act");
             $(".tabcontainer .tabcontent").eq($(this).index()).addClass("act").siblings().removeClass("act");
+            $(".change-link").attr("href",$(this).find("a").attr("href"));
         })
     </script>
 </body>
