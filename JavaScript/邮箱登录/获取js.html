@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>图片新闻</h2>
+    <ul id="news_tpxw"></ul>
+    <h2>时政新闻</h2>
+    <ul id="news_szyw"></ul>
+    <h2>国务院文件</h2>
+    <ul id="news_gwywj"></ul>
+    <h2>水利新闻</h2>
+    <ul id="news_slyw"></ul>
+
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        var news_tpxw = "";
+        var news_szyw = "";
+        var news_gwywj = "";
+        var news_slyw = "";
+    jQuery.ajax({
+        type: "get",
+        url: "http://www.mwr.gov.cn/syxg/tpxw/newsIndex.js",
+        dataType: "jsonp",
+        jsonp: "callback",
+        jsonpCallback: "newsIndex",
+        success: function (result) {
+            if (result && result.length > 0) {
+                result.forEach(function (cv) {
+                    // if (cv.name === "img") {
+                    //     cv.data.forEach(function (v, i) {
+                    //         $('.news .swiper-wrapper .swiper-slide').eq(i).css("backgroundImage", "url(" + v.img + ")");
+                    //         $('.news .swiper-wrapper .swiper-slide').eq(i).children("h4").text(v.title);
+                    //         $('.news .swiper-wrapper .swiper-slide').eq(i).attr("href", v.url);
+                    //     })
+                    // } else
+                    // 比较两个时间相差多少天
+                    // 判断日期天数
+                    function dateDiff(sDate1, sDate2) {  //sDate1和sDate2是yyyy-MM-dd格式  eg:2021-09-09、2021-09-10
+                        var startdate = new Date(sDate1);
+                        var enddate = new Date(sDate2);
+                        //把相差的毫秒数转换为天数
+                        var iDays = parseInt(Math.abs(enddate.getTime() - startdate.getTime()) / 1000 / 60 / 60 / 24); 
+                    
+                        return iDays;  //返回相差天数
+                    }
+                    // 图片新闻
+                     if (cv.name === "news_tpxw") {
+                        cv.data.forEach(function (v,i) {
+                            // 格式化时间
+                            // v.date = v.date.substring(5);
+                            news_tpxw += "<li><a href=\"" + v.url + "\" target=\"_blank\">" + v.title + "</a><span>"+v.date+"</span><img width=\"100\" src="+v.img+"></li>"
+                            articleTime = v.date.replace(/-/g, "/")
+                            // console.log(articleTime);
+                            // console.log(new Date().toLocaleDateString());
+                            let diffdays = dateDiff(articleTime, new Date().toLocaleDateString())
+                            console.log(diffdays)  // 1
+                        });
+                        $('#news_tpxw').html(news_tpxw);
+                    }
+                    // 时政要闻
+                    if (cv.name === "news_szyw") {
+                        cv.data.forEach(function (v,i) {
+                            // if(i<3)
+                            news_szyw += "<li><a href=\"" + v.url + "\" target=\"_blank\">" + v.title + "</a><span>"+v.date+"</span></li>"
+                        });
+                        $('#news_szyw').html(news_szyw);
+                    }
+                    // 国务院文件
+                    if (cv.name === "news_gwywj") {
+                        cv.data.forEach(function (v,i) {
+                            // 截取标题
+                            var titlenum = 28;
+                            if(v.title.length > titlenum) {
+                                v.title = v.title.substring(0,titlenum) + "...";
+                            }
+                            news_gwywj += "<li><a href=\"" + v.url + "\" target=\"_blank\">" + v.title + "</a><span>"+v.date+"</span></li>"
+                        });
+                        $('#news_gwywj').html(news_gwywj);
+                    }
+                    // 水利要闻
+                    if (cv.name === "news_slyw") {
+                        cv.data.forEach(function (v,i) {
+                            news_slyw += "<li><a href=\"" + v.url + "\" target=\"_blank\">" + v.title + "</a><span>"+v.date+"</span></li>"
+                        });
+                        $('#news_slyw').html(news_slyw);
+                    }
+                })
+            }
+        }
+    });
+    </script>
+</body>
+</html>
