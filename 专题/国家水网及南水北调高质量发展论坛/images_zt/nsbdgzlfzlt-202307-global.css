@@ -1,0 +1,379 @@
+:root {
+  box-sizing: border-box;
+}
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: '微软雅黑', 'Microsoft Yahei';
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+img {
+  border: none;
+  max-width: 100%;
+}
+li {
+  list-style: none;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clearfix::after {
+  content: ' ';
+  display: block;
+  height: 0;
+  clear: both;
+}
+.center-block-1200 {
+  width: 1200px;
+  margin: 0 auto;
+}
+.bgcolor {
+  background-color: #d9edfa;
+}
+section + section {
+  margin-top: 19px;
+}
+.padding {
+  padding-left: 9px;
+  padding-right: 14px;
+}
+.w590 {
+  width: 590px;
+}
+.whitebg {
+  background-color: #ffffff;
+  height: 391px;
+}
+/* user style */
+.mainbg {
+  background-image: url('nsbdgzlfzlt-202307-mainbg.jpg');
+  background-position: center top;
+  padding-top: 635px;
+  padding-bottom: 28px;
+  background-repeat: no-repeat;
+  background-color: #8db2e6;
+}
+.hnews {
+  text-align: center;
+  padding: 25px 0;
+}
+.hnews h2 {
+  color: #114bdb;
+  font-size: 31px;
+  margin-bottom: 22px;
+}
+.hnews p {
+  color: #155ed7;
+  font-size: 18px;
+  line-height: 1.2;
+}
+.hnews p a + a {
+  margin-left: 5px;
+}
+/* carousel */
+.slick-mod {
+  width: 576px;
+  height: 391px;
+}
+.slick-mod2 {
+  width: 1122px;
+  margin: 0 auto;
+}
+.slider-for {
+  width: 434px;
+  height: 448px;
+}
+.slider-nav {
+  width: 736px;
+  margin-top: 90px;
+}
+.slick-item {
+  position: relative;
+}
+.slick-item img {
+  /* width: 100%; */
+}
+.tit1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 16px;
+  color: #ffffff;
+  line-height: 45px;
+  text-indent: 20px;
+  background: rgba(0, 45, 128, 0.8);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.tit {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 16px;
+  line-height: 31px;
+  color: #3b3b3b;
+  margin-top: 19px;
+}
+.slick-mod2 .tit {
+  background-color: #ffffff;
+  margin-top: 0;
+  text-indent: 10px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 18px;
+  color: #525252;
+  width: 276px;
+}
+.slick-mod .slick-dots,
+.slick-mod2 .slick-dots {
+  position: absolute;
+  right: 10px;
+  bottom: 15px;
+}
+.slick-mod2 .slick-dots {
+  bottom: 36px;
+}
+
+.slider-nav .slick-arrow {
+  width: 45px;
+  height: 27px;
+  /* margin: auto; */
+  position: absolute;
+  top: -53px;
+  /* left: 0; */
+  right: 0;
+  z-index: 3;
+  cursor: pointer;
+}
+.slick-mod2 .slick-arrow {
+  width: 26px;
+  height: 62px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 3;
+  cursor: pointer;
+}
+.slider-nav .slick-next {
+  right: 7px;
+  background: url(nsbdgzlfzlt-202307-arrowrightd.png) no-repeat center;
+}
+.slider-nav .slick-prev {
+  right: 58px;
+  background: url(nsbdgzlfzlt-202307-arrowleft.png) no-repeat center;
+}
+
+.slick-mod2 .slick-next {
+  right: -34px;
+  background: url(nsbdgzlfzlt-202307-arrowright2d.png) no-repeat center;
+}
+.slick-mod2 .slick-prev {
+  left: -34px;
+  background: url(nsbdgzlfzlt-202307-arrowleft2.png) no-repeat center;
+}
+.slick-mod .slick-dots li,
+.slick-mod2 .slick-dots li {
+  width: 14px;
+  height: 14px;
+  background: #ffffff;
+  border-radius: 50%;
+  margin: 0 5px 0 0;
+}
+.slick-mod .slick-dots li.slick-active,
+.slick-mod2 .slick-dots li.slick-active {
+  width: 14px;
+  height: 14px;
+  background: #e50012;
+  border-radius: 50%;
+}
+/* --- */
+.tab {
+  width: 233px;
+  height: 44px;
+  line-height: 44px;
+  font-size: 26px;
+  font-weight: bold;
+  color: #545454;
+  text-align: center;
+  background-color: #98aad5;
+}
+.tab.act {
+  width: 357px;
+  height: 52px;
+  margin-top: -4px;
+  line-height: 52px;
+  background-color: #114bdb;
+  color: #ffffff;
+}
+.content {
+  display: none;
+}
+.content.act {
+  display: block;
+}
+.habs {
+  padding-top: 16px;
+  margin-left: 13px;
+  margin-right: 17px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #909090;
+}
+.habs h2 {
+  text-align: center;
+  font-size: 22px;
+  color: #5e5e5e;
+  line-height: 42px;
+  margin-bottom: 22px;
+}
+.habs p {
+  line-height: 26px;
+  color: #525252;
+}
+.habs img {
+  margin-top: -10px;
+  margin-right: 16px;
+}
+.list {
+  padding-left: 19px;
+  padding-right: 38px;
+  padding-top: 15px;
+}
+.list li {
+  line-height: 33px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #525252;
+}
+.list li::before {
+  content: '';
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background-color: #114bdb;
+  margin-right: 14px;
+  border-radius: 2px;
+}
+.chnltitle {
+  font-size: 32px;
+  color: #114bdb;
+  font-weight: bold;
+  margin-bottom: 45px;
+  margin-left: 23px;
+}
+.show-item {
+  width: 385px;
+  height: 557px;
+  background-color: #ffffff;
+}
+.show-item + .show-item {
+  margin-left: 10px;
+}
+.show-item h2 {
+  font-size: 18px;
+  color: #303030;
+  font-weight: normal;
+  text-align: center;
+  margin-top: 17px;
+  margin-bottom: 25px;
+}
+.show-item p {
+  color: #3b3b3b;
+  line-height: 27px;
+  padding-left: 20px;
+  padding-right: 15px;
+}
+.moreicon {
+  margin-right: 27px;
+  margin-top: 15px;
+}
+.libg {
+  background-image: url('nsbdgzlfzlt-202307-libg.png');
+  width: 1179px;
+  height: 284px;
+  background-size: cover;
+  padding: 0 3px;
+  position: relative;
+}
+.libg::before {
+  content: '';
+  position: absolute;
+  width: 1px;
+  border-left: 1px dashed #ffffff;
+  top: 0;
+  left: 50%;
+  left: calc(50% - 1px);
+  bottom: 0;
+}
+.list2 li {
+  width: 575px;
+  border-bottom: 1px dashed #ffffff;
+  font-size: 16px;
+  color: #525252;
+  padding-top: 18px;
+  padding-bottom: 7px;
+}
+.list2 li::before {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 14px;
+  background-image: url('nsbdgzlfzlt-202307-liicon.png');
+  vertical-align: middle;
+  margin: 0 12px;
+}
+.list2 li:nth-child(even) {
+  float: right;
+}
+.list2 li:nth-child(odd) {
+  float: left;
+}
+footer {
+  text-align: center;
+  background-color: #003580;
+  color: #ffffff;
+  line-height: 36px;
+  padding: 20px;
+}
+.boxs {
+  box-shadow: 0px 0px 3px 1px #ccc;
+}
+.source-time {
+  margin: 0 auto;
+  height: 35px;
+  text-align: center;
+  position: relative;
+  line-height: 35px;
+}
+
+.time {
+  margin-right: 10px;
+}
+
+.wechat,
+.sina {
+  position: absolute;
+  margin-top: 5px;
+}
+
+.wechat {
+  margin-left: 10px;
+}
+
+.sina {
+  margin-left: 46px;
+}
