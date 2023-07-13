@@ -14,6 +14,7 @@
   .curpage {
     margin-top: 15px;
     padding-left: 15px;
+    box-sizing: border-box;
   }
   .chnl_title {
     margin-top: 15px;
@@ -112,6 +113,10 @@
   }
   .bt {
     font-size: 20px;
+    margin-bottom: 15px;
+  }
+  .del {
+    padding-bottom: 25px;
   }
   .dochtmlcon img {
     max-width: 100%;
@@ -131,6 +136,9 @@
   }
   .c p {
     text-align: center;
+  }
+  .file-container {
+    margin: 25px 0 0;
   }
 }
 
