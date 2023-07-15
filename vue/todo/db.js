@@ -1,3 +1,4 @@
+// json-server --watch --port 3002   --host 127.0.0.1 db.js
 const Mock = require('mockjs')
 const Random = Mock.Random
 module.exports = () => {
