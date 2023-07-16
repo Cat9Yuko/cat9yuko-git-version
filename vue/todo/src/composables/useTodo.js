@@ -9,13 +9,18 @@ export default () => {
     const load = async () => {
         todos.value = await request.get()
     }
-    const del = (id) => {
+    const del = async id => {
         request.delete(id)
+        load()
+    }
+    const add =  async todo => {
+        await request.post(todo)
         load()
     }
     return {
         todos,
         del,
-        load
+        load,
+        add
     }
 }
