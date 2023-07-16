@@ -9,7 +9,6 @@ const { todo } = defineProps({
 
 <template>
   <div class="item">
-    {{ todo.id }}
     <input type="text" :value="todo.title" />
     <button @click="del(todo.id)">删除</button>
   </div>
