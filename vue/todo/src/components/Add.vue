@@ -17,9 +17,8 @@ const onSubmit = () => {
 <style lang="scss" scoped>
 div.add {
     display: flex;
-
     input {
-        border: 5px solid #8e44ad;
+        border: 5px solid #16a085;
         padding: 10px;
         flex: 1;
     }
