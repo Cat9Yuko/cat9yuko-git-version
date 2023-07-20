@@ -43,8 +43,8 @@ section + section {
   margin-top: 19px;
 }
 .padding {
-  padding-left: 9px;
-  padding-right: 14px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .w590 {
   width: 590px;
@@ -326,6 +326,9 @@ section + section {
   color: #525252;
   padding-top: 18px;
   padding-bottom: 7px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .list2 li::before {
   content: '';
@@ -376,4 +379,13 @@ footer {
 
 .sina {
   margin-left: 46px;
+}
+
+/* 又改 */
+.more {
+  font-size: 16px;
+  margin-top: 10px;
+  color: #000000;
+  font-weight: normal;
+  margin-right: 15px;
 }
