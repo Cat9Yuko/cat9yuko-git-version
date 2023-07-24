@@ -27,7 +27,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="less" scoped>
 div {
     border: solid 1px #ddd;
     header,main,footer {

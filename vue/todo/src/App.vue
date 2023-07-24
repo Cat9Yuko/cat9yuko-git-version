@@ -15,6 +15,6 @@ import Todo from './views/Todo.vue'
   </suspense>
 </template>
 
-<style lang="scss" scoped>
+<style lang="less" scoped>
 
 </style>

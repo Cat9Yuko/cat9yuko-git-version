@@ -22,7 +22,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="less">
 .classComponent {
     .c1 {
         color: red;

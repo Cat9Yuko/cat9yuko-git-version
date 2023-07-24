@@ -1,0 +1,21 @@
+@import "./variable";
+
+.van-panel {
+  margin-top: 10px;
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.van-nav-bar {
+  background-color: @primary-color;
+  color: @color-white;
+  .van-icon, .van-nav-bar__text {
+    color: @color-white;
+    vertical-align: middle;
+  }
+  .van-nav-bar__text {
+    line-height: 47px;
+    height: 45px;
+  }
+}

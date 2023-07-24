@@ -14,7 +14,7 @@ const { todo } = defineProps({
   </div>
 </template>
 
-<style lang="scss">
+<style lang="less">
 div.item {
   display: flex;
 

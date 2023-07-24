@@ -14,7 +14,7 @@ const order = () => {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="less" scoped>
 .sort {
     display: flex;
 

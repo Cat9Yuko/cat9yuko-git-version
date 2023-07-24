@@ -17,7 +17,7 @@ load()
   </div>
 </template>
 
-<style lang="scss">
+<style lang="less">
 .form {
   display: flex;
   margin-bottom: 20px;

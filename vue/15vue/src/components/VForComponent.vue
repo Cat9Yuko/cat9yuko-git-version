@@ -22,6 +22,6 @@ import lessons from '../data/lesson';
     }
 </script>
 
-<style lang="scss" scoped>
+<style lang="less" scoped>
 
 </style>

@@ -15,7 +15,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="less" scoped>
 div {
     border: 1px solid #ddd;
     margin-top: 20px;

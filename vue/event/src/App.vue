@@ -36,7 +36,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="less" scoped>
 .lesson {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

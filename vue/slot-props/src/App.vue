@@ -32,7 +32,7 @@ import Lesson from './components/Lesson.vue'
   }
 </script>
 
-<style lang="scss" scoped>
+<style lang="less" scoped>
 // yarn add -D sass
 div {
   display: flex;
