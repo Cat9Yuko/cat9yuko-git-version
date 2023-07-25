@@ -69,21 +69,21 @@ img {
   background: url(gjxsd-202304-mainbg.jpg) top center no-repeat;
 }
 .header {
-  height: 426px;
+  height: 237px;
 }
 .header .center-block-1200 {
   position: relative;
-  height: 426px;
+  height: 237px;
 }
 .email {
   position: absolute;
-  top: 28px;
-  right: 60px;
+  top: 176px;
+  right: 352px;
 }
 .search-container {
   position: absolute;
   right: 227px;
-  top: 310px;
+  top: 120px;
 }
 .keyword {
   width: 192px;
