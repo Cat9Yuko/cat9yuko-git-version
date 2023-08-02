@@ -19,9 +19,6 @@ li {
 .fr {
   float: right;
 }
-.clearfix {
-  *zoom: 1;
-}
 .clearfix::after {
   content: "";
   height: 0;
@@ -350,3 +347,5 @@ footer p {
 .sina {
   margin-left: 46px;
 }
+
+/* 新增头条新闻 */

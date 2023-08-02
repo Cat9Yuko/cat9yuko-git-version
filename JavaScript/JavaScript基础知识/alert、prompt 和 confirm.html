@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>alert、prompt 和 confirm</title>
+</head>
+<body>
+    <script>
+        alert("alert 1")
+
+        // prompt(title, [default]);
+        // title
+        // 显示给用户的文本
+        // default
+        // 可选的第二个参数，指定 input 框的初始值。
+        let prom = prompt('这是标题',100)
+        alert(`${prom}`)
+
+        let ayos = confirm('你确定吗?')
+        alert(ayos)
+    </script>
+</body>
+</html>
