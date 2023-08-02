@@ -349,3 +349,28 @@ footer p {
 }
 
 /* 新增头条新闻 */
+.header-news {
+  height: 120px;
+  background-image: url(nsbdfxkh-202308-hnewsbg.png);
+  background-size: cover;
+  margin-top: 27px;
+}
+.header-news p {
+  font-size: 40px;
+  color: #04447f;
+  font-weight: bold;
+  line-height: 120px;
+  text-align: center;
+}
+.chnltitle2 {
+  background-image: url(nsbdfxkh-202308-chnlbg.png);
+  height: 42px;
+  background-position: center center;
+  line-height: 40px;
+  margin-top: 24px;
+  margin-bottom: 48px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: bold;
+}
