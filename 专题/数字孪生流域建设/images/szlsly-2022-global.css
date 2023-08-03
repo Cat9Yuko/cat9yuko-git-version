@@ -296,3 +296,29 @@ margin-top: 30px;
 .chnlbar2 .more {
   margin-right: 35px;
 }
+/* 新增子栏目 */
+.childchnl {
+  margin-right: 21px;
+  font-size: 18px;
+  color: #848586;
+  font-weight: bold;
+  line-height: 24px;
+  margin-top: -2px;
+}
+.childchnl a {
+  display: block;
+  float: left;
+  line-height: 20px;
+}
+.childchnl a::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #969697;
+  width: 2px;
+  height: 20px;
+  margin: 0 18px;
+}
+.childchnl a:nth-child(1)::before {
+  content: none;
+}
