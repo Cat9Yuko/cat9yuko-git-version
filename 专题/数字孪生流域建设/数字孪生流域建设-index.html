@@ -77,12 +77,32 @@
                             <div class="clearfix">
                                 <h3 class="fl"><a href="">数字孪生流域</a></h3>
                                 <a class="more fr" href="">更多&gt;&gt;</a>
-                                <div class="fr childchnl"><a href="" target="_blank">简报</a><a href="">案例</a><a href="">督导</a></div>
+                                <div class="fr childchnl"><a class="act" href="" target="_blank">简报</a><a href="">案例</a><a href="">督导</a></div>
                             </div>
                             <img src="images/szlsly-2022-chnlbar.png" alt="">
                         </div>
-                        <ul class="lsit list2">
-                            <li><a href="">李国英在水利部“三对标、一规划”专项行动总结大会李国英在水利部“三对标、一规划”专项行动总结大会李国英在水利部“三对标、一规划”专项行动总结大会</a>
+                        <ul class="lsit list2 list3 act">
+                            <li><a href="">1李国英在水利部“三对标、一规划”专项行动总结大会李国英在水利部“三对标、一规划”专项行动总结大会李国英在水利部“三对标、一规划”专项行动总结大会</a>
+                            </li>
+                            <li><a href="">李国英在水利部“三对标、一规划”专项行动总结大会</a></li>
+                            <li><a href="">李国英在水利部“三对标、一规划”专项行动总结大会</a></li>
+                            <li><a href="">李国英在水利部“三对标、一规划”专项行动总结大会</a></li>
+                            <li><a href="">李国英在水利部“三对标、一规划”专项行动总结大会</a></li>
+                            <li><a href="">李国英在水利部“三对标、一规划”专项行动总结大会</a></li>
+                            <li><a href="">李国英在水利部“三对标、一规划”专项行动总结大会</a></li>
+                        </ul>
+                        <ul class="lsit list2 list3">
+                            <li><a href="">2李国英在水利部“三对标、一规划”专项行动总结大会李国英在水利部“三对标、一规划”专项行动总结大会李国英在水利部“三对标、一规划”专项行动总结大会</a>
+                            </li>
+                            <li><a href="">李国英在水利部“三对标、一规划”专项行动总结大会</a></li>
+                            <li><a href="">李国英在水利部“三对标、一规划”专项行动总结大会</a></li>
+                            <li><a href="">李国英在水利部“三对标、一规划”专项行动总结大会</a></li>
+                            <li><a href="">李国英在水利部“三对标、一规划”专项行动总结大会</a></li>
+                            <li><a href="">李国英在水利部“三对标、一规划”专项行动总结大会</a></li>
+                            <li><a href="">李国英在水利部“三对标、一规划”专项行动总结大会</a></li>
+                        </ul>
+                        <ul class="lsit list2 list3">
+                            <li><a href="">3李国英在水利部“三对标、一规划”专项行动总结大会李国英在水利部“三对标、一规划”专项行动总结大会李国英在水利部“三对标、一规划”专项行动总结大会</a>
                             </li>
                             <li><a href="">李国英在水利部“三对标、一规划”专项行动总结大会</a></li>
                             <li><a href="">李国英在水利部“三对标、一规划”专项行动总结大会</a></li>
@@ -255,6 +275,10 @@
                 autoplay: true
             });
 
+        })
+        $(".childchnl a").hover(function(){
+            $(this).addClass("act").siblings().removeClass('act');
+            $(".list3").eq($(this).index()).addClass("act").siblings().removeClass("act");
         })
     </script>
 </body>

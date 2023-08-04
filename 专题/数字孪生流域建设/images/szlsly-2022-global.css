@@ -49,8 +49,8 @@ img {
 }
 /* user style */
 header {
-  height: 730px;
-  background: url(szlslyjs-202206-indexbanner.jpg) center center no-repeat;
+  height: 651px;
+  background: url(szlslyjs-202308-indexbanner.jpg) center center no-repeat;
   background-size: cover;
 }
 nav {
@@ -321,4 +321,14 @@ margin-top: 30px;
 }
 .childchnl a:nth-child(1)::before {
   content: none;
+}
+
+.childchnl a.act {
+  color: #001f84;
+}
+.list3 {
+  display: none;
+}
+.list3.act {
+  display: block;
 }
