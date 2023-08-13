@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            perspective: 1000px;
+        }
+        .flip-wrapper {
+            position: relative;
+            transition: transfrom .25s ease-in-out;
+            transform-style: preserve-3d;
+        }
+        .flip-b {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: 0;
+            transform: rotateY(-180deg);
+        }
+        .flip-b,.flip-a {
+            backface-visibility: hidden;
+        }
+        .flip-wrapper.is-flipped {
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="flip-wrapper menu-wrapper is-flipped">
+        <div class="flip-a menu">
+            <h1 class="menu-heading">Top menu choices</h1>
+            <ol class="menu-list">
+                <li>Capricciosa1</li>
+                <li>Capricciosa2</li>
+                <li>Capricciosa3</li>
+                <li>Capricciosa4</li>
+                <li>Capricciosa5</li>
+                <li>Capricciosa6</li>
+                <li>Capricciosa7</li>
+                <li>Capricciosa8</li>
+                <li>Capricciosa9</li>
+                <li>Capricciosa10</li>
+                <li>Capricciosa11</li>
+            </ol>
+        </div>
+        <div class="flip-b menu-settings">
+            <!-- 这是部件背面的表单 -->
+            这是背面的菜单
+        </div>
+    </div>
+    
+</body>
+</html>
