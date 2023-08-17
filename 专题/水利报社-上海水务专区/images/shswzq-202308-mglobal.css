@@ -1,6 +1,7 @@
 @media screen and (min-width: 769px) {
   .mheader,
-  .more,.hiden-md {
+  .more,
+  .hiden-md {
     display: none;
   }
 }
@@ -10,7 +11,8 @@
   .center-block-1280,
   .w524,
   .list2 li,
-  .hnews.xxgk {
+  .hnews.xxgk,
+  .list_content {
     width: auto;
   }
   .fl,
@@ -20,11 +22,16 @@
     float: none;
   }
   .slick-mod,
-  .slick-mod2,.slider-for {
+  .slick-mod2,
+  .slider-for {
     width: auto;
     height: auto;
   }
-  .slider-nav,.hiden-xs {
+  .slider-nav,
+  .hiden-xs,
+  .listline,
+  .time,
+  .dot,.li-time2 {
     display: none;
   }
   .mr25 {
@@ -162,15 +169,21 @@
   .hnews.gzdt {
     margin-bottom: 21px;
   }
-  .list2 li {
+  .list2 li,
+  .wbg .list {
     background-image: none;
     border: 1px solid #014a85;
     border-image: linear-gradient(90deg, #014a85, #129ada) 1;
     height: auto;
   }
-  .list2 .li {
+  .wbg .list {
+    line-height: normal;
+  }
+  .list2 .li,
+  .wbg .list {
     padding: 9px 0;
   }
+
   .li-time {
     width: 76px;
     height: 35px;
@@ -182,7 +195,8 @@
   .li-time p:nth-child(2) {
     font-size: 13px;
   }
-  .li-title {
+  .li-title,
+  .wbg .doctitle {
     width: calc(100% - 76px);
     float: left;
     font-size: 13px;
@@ -195,14 +209,19 @@
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
   }
-  .list2 li + li {
+  .wbg .doctitle {
+    float: right;
+  }
+  .list2 li + li,
+  .wbg .list + .list,
+  .wbg ul {
     margin-top: 10px;
   }
   .list2 li:hover {
     background-image: none;
-    
   }
-  .list2 li:hover .li-time p, .list2 li:hover .li-title {
+  .list2 li:hover .li-time p,
+  .list2 li:hover .li-title {
     color: inherit;
   }
   /* .slider-nav {
@@ -246,7 +265,7 @@
     padding-bottom: 0;
   }
   .pfxcbg2 {
-    background-image: url("shswzq-202308-mobilebgbar2.jpg");
+    background-image: url('shswzq-202308-mobilebgbar2.jpg');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: bottom center;
@@ -269,7 +288,7 @@
   .tit3 h3 {
     font-size: 17px;
   }
-  .tit3 p {
+  .tit3 p,.li-abs2 {
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
@@ -282,7 +301,7 @@
     width: 169px;
     height: 56px;
     line-height: 55px;
-    background-image: url("shswzq-202308-mobilelinkibg.png");
+    background-image: url('shswzq-202308-mobilelinkibg.png');
     background-size: cover;
     text-indent: 76px;
     font-size: 13px;
@@ -302,7 +321,7 @@
   .links .link-item:nth-child(odd) {
     float: left;
   }
-  .links .link-item:nth-child(n+3) {
+  .links .link-item:nth-child(n + 3) {
     margin-top: 10px;
   }
   .mlogo {
@@ -312,5 +331,58 @@
   footer {
     padding: 26px 0;
     font-size: 12px;
+  }
+  /* 列表页 */
+  .wbg {
+    padding: 0;
+    border-top: 0;
+    background-color: #ffffff;
+    margin: 0 15px;
+  }
+  .fy .pages a,
+  .fy a {
+    padding: 4px 8px;
+  }
+  .list-img {
+    border-top: none;
+    padding: 0 15px;
+  }
+  .li-img img {
+    margin-right: 0;
+    width: 100%;
+  }
+  .li-title2 {
+    font-size: 17px;
+    line-height: 28px;
+    margin: 20px 0 13px;
+  }
+  .li-img + .li-img {
+    border-top: none;
+    padding-top: 0;
+  }
+  .article {
+    padding-top: 35px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .bt {
+    font-size: 17px;
+    line-height: 23px;
+    margin-bottom: 14px;
+  }
+  .del {
+    font-size: 13px;
+    padding-bottom: 15px;
+    margin-bottom: 17px;
+  }
+  .dochtmlcon {
+    padding: 0;
+    font-size: 13px;
+    line-height: 20px;
+  }
+.file-container {
+    font-size: 13px;
+    margin: 25px 0;
+    padding: 10px;
   }
 }
