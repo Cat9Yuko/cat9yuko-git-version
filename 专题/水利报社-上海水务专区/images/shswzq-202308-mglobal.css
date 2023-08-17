@@ -1,0 +1,316 @@
+@media screen and (min-width: 769px) {
+  .mheader,
+  .more,.hiden-md {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* 重置样式 */
+  .center-block-1280,
+  .w524,
+  .list2 li,
+  .hnews.xxgk {
+    width: auto;
+  }
+  .fl,
+  .fr,
+  .list2 li:nth-child(odd),
+  .list2 li:nth-child(even) {
+    float: none;
+  }
+  .slick-mod,
+  .slick-mod2,.slider-for {
+    width: auto;
+    height: auto;
+  }
+  .slider-nav,.hiden-xs {
+    display: none;
+  }
+  .mr25 {
+    margin: 0;
+  }
+  section {
+    margin: 0 15px;
+  }
+  .header {
+    height: auto;
+    background: none;
+  }
+  .mheader {
+    position: relative;
+  }
+  .mheader img {
+    display: block;
+  }
+  /* 导航样式 */
+  .navbar-toggle {
+    width: 37px;
+    height: 37px;
+    background-image: url('shswzq-202308-mobilenavclose.png');
+    background-size: cover;
+    position: fixed;
+    top: 10px;
+    border-radius: 50%;
+    box-shadow: 0 0 7px #dddddd;
+    right: 10px;
+    z-index: 21;
+  }
+  .navbar-toggle.collapsed {
+    background-image: url('shswzq-202308-mobilenavopen.png');
+    box-shadow: none;
+  }
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    z-index: 20;
+    background: rgba(0, 0, 0, 0.8);
+    height: auto;
+    padding: 0;
+  }
+  .nav {
+    width: 259px;
+    padding: 0;
+    margin-right: 0;
+    background-image: url('shswzq-202308-mboilenavbg.jpg');
+    background-size: cover;
+    background-image: linear-gradient(to right, #014a85, #0981af);
+    margin-top: 52px;
+  }
+  .nav-child {
+    float: none;
+    width: 100%;
+    line-height: 46px;
+    height: auto;
+    font-size: 17px;
+    font-weight: normal;
+    text-align: left;
+    text-indent: 1rem;
+  }
+  .nav-child + .nav-child {
+    border-left: none;
+    border-top: 1px solid #226698;
+  }
+  .chnltitle-bg {
+    margin-top: 25px;
+    margin-bottom: 20px;
+    font-size: 17px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 33px;
+    line-height: 28px;
+    background-image: url('shswzq-202308-mobilechnlbg.png');
+  }
+  .tit1 {
+    font-size: 13px;
+    line-height: 27px;
+  }
+  .slick-mod .slick-dots,
+  .slick-mod2 .slick-dots {
+    right: 8px;
+    bottom: 10px;
+  }
+  .hnews {
+    margin-bottom: 20px;
+  }
+  .hnews-title {
+    font-size: 17px;
+    margin: 20px 0 13px;
+  }
+  .hnews-abs {
+    font-size: 13px;
+    line-height: 17px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .hnews-abs a {
+    display: none;
+  }
+  .list li {
+    line-height: 35px;
+    font-size: 13px;
+  }
+  .more {
+    line-height: 29px;
+    text-align: center;
+    background-color: #f4f8fc;
+    font-size: 12px;
+    color: #014a85;
+    border: 1px solid #d4e1ef;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  .more a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .hnews.gzdt .hnews-abs {
+    padding: 0;
+  }
+  .hnews.gzdt .hnews-title {
+    font-size: 21px;
+    line-height: 26px;
+    margin: 20px 0;
+  }
+  .hnews.gzdt {
+    margin-bottom: 21px;
+  }
+  .list2 li {
+    background-image: none;
+    border: 1px solid #014a85;
+    border-image: linear-gradient(90deg, #014a85, #129ada) 1;
+    height: auto;
+  }
+  .list2 .li {
+    padding: 9px 0;
+  }
+  .li-time {
+    width: 76px;
+    height: 35px;
+    float: left;
+  }
+  .li-time p:nth-child(1) {
+    font-size: 21px;
+  }
+  .li-time p:nth-child(2) {
+    font-size: 13px;
+  }
+  .li-title {
+    width: calc(100% - 76px);
+    float: left;
+    font-size: 13px;
+    white-space: normal;
+    line-height: 17px;
+    text-indent: 0;
+    padding-left: 15px;
+    min-height: 34px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  .list2 li + li {
+    margin-top: 10px;
+  }
+  .list2 li:hover {
+    background-image: none;
+    
+  }
+  .list2 li:hover .li-time p, .list2 li:hover .li-title {
+    color: inherit;
+  }
+  /* .slider-nav {
+    margin-top: 0;
+    width: 100%;
+  }
+  .slider-nav img {
+    width: 632px;
+    height: auto;
+  } */
+  .slider-for {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  .slider-for img {
+    width: 632px;
+    border: 2.5px solid #ffffff;
+  }
+  .tpxwbg {
+    background-image: none;
+  }
+  .slider-for .tit2 {
+    height: auto;
+    font-size: 13px;
+    text-align: center;
+    padding-bottom: 10px;
+    background-image: none;
+    padding-top: 0;
+  }
+  .hnews.xxgk .hnews-title {
+    height: auto;
+    font-size: 17px;
+    line-height: 28px;
+  }
+  .hnews.xxgk:nth-child(2) {
+    display: none;
+  }
+  .pfxcbg {
+    background-image: none;
+    margin: 0;
+    padding-bottom: 0;
+  }
+  .pfxcbg2 {
+    background-image: url("shswzq-202308-mobilebgbar2.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom center;
+    padding: 0 15px 15px;
+  }
+  .slick-mod3 {
+    margin: 0 27px;
+  }
+  .slick-mod3 img {
+    width: auto;
+    height: auto;
+  }
+  .tit3 {
+    width: auto;
+    height: auto;
+    margin-left: 17.5px;
+    margin-right: 17.5px;
+    padding: 15px 18px;
+  }
+  .tit3 h3 {
+    font-size: 17px;
+  }
+  .tit3 p {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .links {
+    margin-bottom: 26px;
+  }
+  .links .link-item {
+    width: 169px;
+    height: 56px;
+    line-height: 55px;
+    background-image: url("shswzq-202308-mobilelinkibg.png");
+    background-size: cover;
+    text-indent: 76px;
+    font-size: 13px;
+    font-weight: normal;
+  }
+  .links .link-item a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .links .link-item + .link-item {
+    margin-left: 0;
+  }
+  .links .link-item:nth-child(even) {
+    float: right;
+  }
+  .links .link-item:nth-child(odd) {
+    float: left;
+  }
+  .links .link-item:nth-child(n+3) {
+    margin-top: 10px;
+  }
+  .mlogo {
+    width: 139px;
+    margin-top: 25px;
+  }
+  footer {
+    padding: 26px 0;
+    font-size: 12px;
+  }
+}
