@@ -156,6 +156,9 @@ nav {
 .slick-item {
   position: relative;
 }
+.slick-mod .slick-item img {
+  height: 388px;
+}
 .slick-item img {
   width: 100%;
 }
@@ -573,6 +576,7 @@ footer p {
 }
 .li-img img {
   margin-right: 15px;
+  width: 330px;
 }
 .li-time2 {
   font-size: 14px;

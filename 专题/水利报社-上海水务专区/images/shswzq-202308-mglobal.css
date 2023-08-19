@@ -27,6 +27,9 @@
     width: auto;
     height: auto;
   }
+  .slick-mod .slick-item img {
+    height: auto;
+  }
   .slider-nav,
   .hiden-xs,
   .listline,
@@ -350,6 +353,7 @@
   .li-img img {
     margin-right: 0;
     width: 100%;
+    height: auto;
   }
   .li-title2 {
     font-size: 17px;
