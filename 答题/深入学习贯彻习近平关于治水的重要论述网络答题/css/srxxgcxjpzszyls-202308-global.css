@@ -358,3 +358,23 @@ li {
   font-size: 20.83px;
   margin-top: 30px;
 }
+
+.welcom2 {
+  font-size: 28px;
+  color: #0d5194;
+  margin-top: 25px;
+}
+.proplem {
+  width: 786px;
+  height: 107px;
+  border: 1px solid #d4d4d4;
+  resize: none;
+  outline: none;
+  padding: 10px;
+  font-size: 19px;
+  box-sizing: border-box;
+}
+.proplem::placeholder {
+  /* color: #00285d; */
+  line-height: 80px;
+}
