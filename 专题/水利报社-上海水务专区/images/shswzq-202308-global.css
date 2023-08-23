@@ -46,12 +46,14 @@ header {
   background-image: url('shswzq-202308-banner.jpg');
   background-position: center center;
   height: 480px;
+  background-size: cover;
 }
 nav {
   background-image: url('shswzq-202308-navbg.jpg');
   background-position: center center;
   height: 70px;
   padding-top: 26px;
+  background-size: cover;
 }
 .nav {
   padding-left: 45px;
@@ -162,6 +164,16 @@ nav {
 .slick-item img {
   width: 100%;
 }
+.slider-for img {
+  width: 1280px;
+  height: 720px;
+}
+.slider-for .imgback {
+  width: 1280px;
+  height: 720px;
+  background-size: cover;
+  background-position: center center;
+}
 .slider-nav img {
   width: 171px;
   height: 114px;
@@ -181,7 +193,7 @@ nav {
   color: #ffffff;
   line-height: 45px;
   text-indent: 1rem;
-  background: rgba(172, 23, 43, 0.7);
+  background: rgba(0, 0, 0, 0.5);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

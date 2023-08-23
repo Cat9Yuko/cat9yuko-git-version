@@ -253,6 +253,12 @@
     padding-bottom: 10px;
     background-image: none;
     padding-top: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .slider-for .imgback, .slider-for img {
+    width: 632px;
+    height: 154px;
   }
   .hnews.xxgk .hnews-title {
     height: auto;
