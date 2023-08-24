@@ -156,7 +156,16 @@ select {
   font-size: 14.5px;
   color: #000000;
 }
-
+.problem {
+    width: 100%;
+    resize: none;
+    border: 1px solid #00b7ee;
+    outline: none;
+    padding: 5px 0 5px 10px;
+}
+.problem::placeholder {
+  font-size: 10px;
+}
 .xx_ul li {
   line-height: 25px;
 }

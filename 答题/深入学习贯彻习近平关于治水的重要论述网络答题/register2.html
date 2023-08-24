@@ -32,6 +32,10 @@
             border: 1px solid #d4d4d4;
             text-indent: 13px;
         }
+        .index-bg {
+            background-size: cover;
+            height: auto;
+        }
     </style>
 </head>
 
@@ -138,8 +142,9 @@
                                 </tr>
                                 <tr style="vertical-align: top;">
                                     <td align="right"><span>*问题描述</span></td>
-                                    <td><input name="proplem" id="proplem" class="layui-input" placeholder="请详细描述在答题过程中所遇到的问题。" 
-                                        style="width: 784px; height: 50px;" required /></td>
+                                    <td>
+                                        <textarea name="proplem" id="proplem" cols="30" rows="10" class="proplem" placeholder="请详细描述在答题过程中所遇到的问题。" maxlength="500"></textarea>
+                                    </td>
                                 </tr>
                                 
                                 <tr>
