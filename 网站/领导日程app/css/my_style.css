@@ -21,7 +21,7 @@ li {
 	width: 0 !important
 }
 .max_width {
-	max-width: 677px;
+	max-width: 688px;
 	margin: 0 auto;
 }
 
@@ -980,5 +980,18 @@ html,body {
 	.lp:hover .change_button{
 	display: block;
 }
-	
+	/* 202308新增pc端吸顶 */
+	.topfixed {
+		position: fixed;
+		max-width: 677px;
+    	margin: 0 auto;
+		left: 0;
+		right: 0;
+		top: 0;
+		z-index: 30;
+		background: #ffffff;
+	}
+	.biaoge {
+		margin-top: 102px;
+	}
 }

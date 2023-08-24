@@ -442,6 +442,25 @@ nav {
 .links .link-item + .link-item {
   margin-left: 15px;
 }
+.links .link-item.iconbg {
+  background-image: url("shswzq-202308-linkibg2.png");
+}
+.link-item.iconbg .icon {
+  background-repeat: no-repeat;
+  background-position: top 16px left 41px;
+}
+.link-item.iconbg .icon1 {
+  background-image: url("shswzq-202308-icon1.png");
+}
+.link-item.iconbg .icon2 {
+  background-image: url("shswzq-202308-icon2.png");
+}
+.link-item.iconbg .icon3 {
+  background-image: url("shswzq-202308-icon3.png");
+}
+.link-item.iconbg .icon4 {
+  background-image: url("shswzq-202308-icon4.png");
+}
 footer {
   background-color: #f0f4f8;
   text-align: center;

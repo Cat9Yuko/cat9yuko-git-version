@@ -316,6 +316,14 @@
     font-size: 13px;
     font-weight: normal;
   }
+  .links .link-item.iconbg {
+    background-image: url("shswzq-202308-mobilelinkibg2.png");
+  }
+  .link-item.iconbg .icon {
+    background-repeat: no-repeat;
+    background-position: top 9px left 22.5px;
+    background-size: 38px;
+  }
   .links .link-item a {
     display: block;
     width: 100%;
