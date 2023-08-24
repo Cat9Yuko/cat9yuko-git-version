@@ -364,7 +364,7 @@ li {
   color: #0d5194;
   margin-top: 25px;
 }
-.proplem {
+.problem {
   width: 786px;
   height: 107px;
   border: 1px solid #d4d4d4;
@@ -374,7 +374,7 @@ li {
   font-size: 19px;
   box-sizing: border-box;
 }
-.proplem::placeholder {
+.problem::placeholder {
   /* color: #00285d; */
   line-height: 80px;
 }
