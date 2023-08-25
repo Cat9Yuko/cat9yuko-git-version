@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <img src="lifecycle.png" alt="">
+    </div>
+    <script src="vue.js"></script>
+    <script>
+        var vm = new Vue({
+            el:'#app',
+            data: {
+                a:1
+            },
+            created: function(){
+                // 生命周期钩子的 this 上下文指向调用它的 Vue 实例。
+                console.log('[created] a is: ' + this.a);
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <p>{{obj.foo}}</p>
+        <button v-on:click="obj.foo = 'baz'" type="button">Change it</button>
+    </div>
+    <script src="vue.js"></script>
+    <script>
+        var data = {a:1}
+        var obj = {foo:'bar'}
+        // 这里唯一的例外是使用 Object.freeze()，这会阻止修改现有的 property，也意味着响应系统无法再追踪变化。
+        Object.freeze(obj)
+        var vm = new Vue({
+            el:'#app',
+            data: {
+                data,
+                obj
+            }
+        })
+        console.log(vm.a==data.a);
+        // 除了数据 property，Vue 实例还暴露了一些有用的实例 property 与方法。它们都有前缀 $，以便与用户定义的 property 区分开来。
+        console.log(vm.$data);
+        console.log(vm.$el);
+        vm.$watch('data.a',function(newValue, oldValue){
+            console.log(newValue + '|' +oldValue);
+        })
+    </script>
+</body>
+</html>
