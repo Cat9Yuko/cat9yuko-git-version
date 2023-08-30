@@ -574,3 +574,44 @@ footer {
 .align-center {
   text-align: center;
 }
+/* 师资新表格 */
+.t-border {
+  border-bottom: 1px solid #dddddd;
+  border-right: 1px solid #dddddd;
+}
+.teacher-table {
+  width: 800px;
+  margin: 0 auto;
+  font-size: 18px;
+  color: #333333;
+}
+.t-head {
+  border-left: 1px solid #dddddd;
+  border-top: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
+  padding: 10px 0;
+  text-indent: 1rem;
+  font-size: 20px;
+  font-weight: bold;
+}
+.t-cell.t-title {
+  width: 350px;
+  border-left: none;
+  text-indent: 1rem;
+}
+.t-body {
+  border-left: 1px solid #dddddd;
+}
+.t-body + .t-body {
+  border-top: 1px solid #dddddd;
+}
+.t-cell {
+  border-left: 1px solid #dddddd;
+  width: calc(100% - 350px);
+  line-height: 30px;
+}
+.t-name {
+  float: left;
+  width: 20%;
+  text-align: center;
+}

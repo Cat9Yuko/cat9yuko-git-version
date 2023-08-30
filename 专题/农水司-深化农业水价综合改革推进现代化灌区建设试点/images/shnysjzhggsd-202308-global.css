@@ -61,12 +61,11 @@ section + section {
   background-image: url('shnysjzhggsd-202308-chnlbg2.jpg');
 }
 .more {
-  font-size: 21px;
-  font-weight: bold;
+  font-size: 16px;
   margin-right: 17px;
 }
 .list {
-  padding: 25px 0 20px 20px;
+  padding: 15px 0 0px 20px;
 }
 .list li {
   white-space: nowrap;
@@ -93,6 +92,9 @@ section + section {
   vertical-align: middle;
   margin: 0 10px;
 }
+.list2 {
+  padding-top: 6px;
+}
 .list2.dot {
   padding-top: 12px;
   padding-bottom: 0;
@@ -101,7 +103,7 @@ section + section {
   line-height: 44px;
 }
 .lsit3 {
-  padding-top: 25px;
+  /* padding-top: 25px; */
   padding-left: 5px;
   padding-right: 5px;
 }
@@ -124,12 +126,12 @@ section + section {
 }
 .timelist {
   width: 181px;
-  height: 198px;
-  background-color: #01693b;
-  color: #ffffff;
+  height: 116px;
+  /* background-color: #01693b; */
+  /* color: #ffffff; */
   margin: 0 auto;
 }
-.timelist::after {
+/* .timelist::after {
   content: '';
   display: block;
   position: absolute;
@@ -139,7 +141,7 @@ section + section {
   border-right: 15px solid transparent;
   border-bottom: 5px solid transparent;
   border-left: 15px solid transparent;
-}
+} */
 .slick-timeline .slick-slide:nth-child(even) .timelist::after {
   bottom: 198px;
   border-top: 5px solid transparent;
@@ -166,11 +168,11 @@ section + section {
   height: 30px;
   background-image: url('shnysjzhggsd-202308-timedot.png');
   position: absolute;
-  top: 235px;
+  top: 170px;
   left: 74px;
 }
 .slick-timeline .slick-slide:nth-child(even) .timedot::after {
-  top: -68px;
+  top: -84px;
 }
 .titmet {
   font-size: 18px;
@@ -178,13 +180,13 @@ section + section {
   font-weight: bold;
   text-align: center;
   position: absolute;
-  top: 211px;
+  top: 146px;
   left: 0;
   right: 0;
   text-align: center;
 }
 .slick-timeline .slick-slide:nth-child(even) .titmet {
-  top: -30px;
+  top: -45px;
 }
 .timemore {
   font-size: 14px;
@@ -200,7 +202,7 @@ section + section {
 }
 .slick-timeline {
   width: 1083px;
-  height: 502px;
+  height: 371px;
   background-image: url('shnysjzhggsd-202308-timeline.jpg');
   background-position: center center;
   background-repeat: no-repeat;
@@ -208,7 +210,7 @@ section + section {
   /* background-color: aliceblue; */
 }
 .slick-timeline .slick-item {
-  height: 502px;
+  height: 371px;
   position: relative;
 }
 .slick-item {
@@ -286,10 +288,8 @@ section + section {
 }
 /* --- */
 .timeline {
-  margin-top: 30px;
-  background-image: url('shnysjzhggsd-202308-chnlbg3.jpg');
-  height: 597px;
-  padding-top: 41px;
+  /* background-image: url('shnysjzhggsd-202308-chnlbg3.jpg'); */
+  margin: 40px 0;
 }
 footer {
   background-color: #076139;
@@ -321,4 +321,8 @@ footer {
 
 .sina {
   margin-left: 46px;
+}
+.chnlborder {
+  border-top: 1px dashed #107247;
+  margin: 25px 15px 15px;
 }
