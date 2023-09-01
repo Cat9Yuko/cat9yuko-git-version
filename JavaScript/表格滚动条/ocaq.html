@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一键答题</title>
+</head>
+<body>
+    <h1>正确率高达99.99%</h1>
+    <script src="jquery.min.js"></script>
+    <script>
+        // 一键答题
+        var questionS ="";
+            var questionM ="";
+            var questionD ="";
+            var questionCindex = 0;
+            var questionMindex = 0;
+            var questionA =`1	C2	A3	A4	B5	B6	C7	D8	A9	B10	A11	C12	B13	A14	B15	B16	C17	B18	B19	D20	C21	D22	B23	A24	C25	B26	C27	B28	A29	A30	D`
+            var questionB = `31	A|B|C|D32	A|B|C|D33	B|C|D34	A|B|C|D35	A|B|C|D36	A|C37	A|C|D38	A|B|C|D39	A|B|C40	A|B|C|D`
+            var questionC = `41	A42	B43	A44	B45	A46	B47	A48	A49	A50	A`
+            // questionS = questionA.match(/A|B|C|D/ig)
+            questionS = questionA.match(/[a-d]/ig);
+            questionM = questionB.match(/\w\|\w\|\w\|\w|\w\|\w\|\w|\w\|\w/g);
+            questionD = questionC.match(/[a-d]/ig);
+            console.log(questionS)
+            console.log(questionM)
+            console.log(questionD)
+
+            $(".xuanxiang").each(function(index){
+                // 1单选 2多选 3判断
+                let dataqtype = $(this).attr("data-qtype")
+                if(dataqtype ==1) {
+                    // console.log('11111111111111111111111111111');
+                    // console.log(questionS[index]);
+                    if(questionS[index] == 'A') {
+                        $(this).find("input").eq(0).attr("checked","true");
+                    }
+                    if(questionS[index] == 'B') {
+                        $(this).find("input").eq(1).attr("checked","true");
+                    } 
+                    if(questionS[index] == 'C') {
+                        $(this).find("input").eq(2).attr("checked","true");
+                    } 
+                    if(questionS[index] == 'D') {
+                        $(this).find("input").eq(3).attr("checked","true");
+                    } 
+                } else if(dataqtype ==2) {
+                    // console.log('22222222222');
+                    // console.log(questionM[questionMindex]);
+                    let trueM = questionM[questionMindex].toString().split("|");
+                    for(let i=0;i<trueM.length;i++) {
+                        if(trueM[i] == 'A') {
+                        $(this).find("input").eq(0).attr("checked","true");
+                    }
+                    if(trueM[i] == 'B') {
+                        $(this).find("input").eq(1).attr("checked","true");
+                    } 
+                    if(trueM[i] == 'C') {
+                        $(this).find("input").eq(2).attr("checked","true");
+                    } 
+                    if(trueM[i] == 'D') {
+                        $(this).find("input").eq(3).attr("checked","true");
+                    } 
+                    }
+                    questionMindex++;
+                } else if(dataqtype ==3) {
+                    // console.log('333333333333333');
+                    // console.log(questionD[questionCindex]);
+                    if(questionD[questionCindex] == 'A') {
+                        $(this).find("input").eq(0).attr("checked","true");
+                    }
+                    if(questionD[questionCindex] == 'B') {
+                        $(this).find("input").eq(1).attr("checked","true");
+                    }
+                    questionCindex++;
+                } else {
+                    console.log('类型匹配失败');
+                }
+            })
+    </script>
+</body>
+</html>
