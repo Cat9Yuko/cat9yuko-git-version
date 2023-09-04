@@ -276,3 +276,24 @@ li {
 .register-bg .footer,.score-bg .footer {
   margin-top: 100px;
 }
+.welcom2 {
+  font-size: 28px;
+  color: #222f7e;
+  margin-top: 25px;
+  padding-left: 15px;
+}
+.problem {
+  width: 786px;
+  height: 107px;
+  border: 1px solid #d4d4d4;
+  resize: none;
+  outline: none;
+  padding: 10px;
+  font-size: 19px;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+.problem::placeholder {
+  /* color: #00285d; */
+  line-height: 80px;
+}
