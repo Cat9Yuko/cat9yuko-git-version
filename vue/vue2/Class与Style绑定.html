@@ -5,18 +5,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Class 与 Style 绑定</title>
+    <style>
+        a.active{font-weight: bold;}
+        a.text-danger{color: red;}
+        a.isActive {font-style: italic;}
+        a.hasError {color: green;}
+    </style>
 </head>
 <body>
     <div id="app">
         <h1>绑定 HTML Class</h1>
-        <p></p>
+        <h4>#对象语法</h4>
+        <p><a v-bind:class="{active: classObject.isActive,'text-danger':classObject.hasError}">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum perferendis praesentium quos sequi totam molestias quisquam? Amet molestias consequuntur suscipit cumque repudiandae nihil quas fugit. Natus praesentium iste reiciendis temporibus!</a></p>
+        <p><a v-bind:class="classObject">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum perferendis praesentium quos sequi totam molestias quisquam? Amet molestias consequuntur suscipit cumque repudiandae nihil quas fugit. Natus praesentium iste reiciendis temporibus!</a></p>
+        <p><button v-on:click="changeClass">切换类名</button></p>
+        <h4>#数组语法</h4>
+        <p><a v-bind:class="[activeClass,errorClass]">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium sint atque, sit obcaecati incidunt quam nesciunt libero nostrum asperiores illum in blanditiis esse maiores. Non consequuntur natus quis sunt consectetur?</a></p>
+        <p>如果你也想根据条件切换列表中的 class，可以用三元表达式：</p>
+        <p><a v-bind:class="[isActive?activeClass: '',errorClass]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, odio officiis. Accusamus consectetur voluptates nam natus iusto quo maiores architecto, aspernatur iste velit officiis quasi, fugit perferendis aliquam illo reiciendis?</a></p>
+        <h4>#用在组件上</h4>
+        <p>当在一个自定义组件上使用 class property 时，这些 class 将被添加到该组件的根元素上面。这个元素上已经存在的 class 不会被覆盖。</p>
+        <my-component class="baz boo"></my-component>
+        <my-component v-bind:class="{active: isActive}"></my-component>
+        <h1>绑定内联样式</h1>
+        <h4>#对象语法</h4>
+        <p>v-bind:style 的对象语法十分直观——看着非常像 CSS，但其实是一个 JavaScript 对象。CSS property 名可以用驼峰式 (camelCase) 或短横线分隔 (kebab-case，记得用引号括起来) 来命名</p>
+        <p><a v-bind:style="{color:activeColor,'font-size':fontSize+'px'}">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo ex eum iure deleniti mollitia accusantium odio ab, sint dolore, obcaecati tempora distinctio, soluta atque totam consequatur sunt ut itaque tenetur.</a></p>
+        <p>直接绑定到一个样式对象通常更好，这会让模板更清晰：</p>
+        <p><a v-bind:style="styleObject">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam reprehenderit qui asperiores, a tempore nesciunt explicabo quod laborum quas possimus dolore illum voluptatum recusandae ipsam enim mollitia aperiam iusto autem?</a></p>
+        <h4>#数组语法</h4>
+        <p><a v-bind:style="[baseStyles,overridingStyles]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, ut vel enim, dolorem voluptas laudantium necessitatibus architecto possimus sit, aut magni? Consectetur consequatur impedit voluptatem quaerat, id voluptate praesentium aspernatur!</a></p>
+        <h4>#自动添加前缀</h4>
+        <p>当 v-bind:style 使用需要添加浏览器引擎前缀的 CSS property 时，如 transform，Vue.js 会自动侦测并添加相应的前缀。</p>
     </div>
     <script src="vue.js"></script>
     <script>
+        Vue.component('my-component',{
+            template:'<p class="foo bar">Hi</p>'
+        })
         var vm = new Vue({
             el:'#app',
             data: {
-                mesage: "message"
+                overridingStyles:{
+                    fontWeight:'bold',
+                    fontSize: '16px'
+                },
+                baseStyles:{
+                    color: 'purple',
+                    'font-size':'20px'
+                },
+                styleObject:{
+                    color: 'green',
+                    fontSize: '12px'
+                },
+                activeColor:'red',
+                fontSize: 20,
+                mesage: "message",
+                error: null,
+                isActive:true,
+                classObject: {
+                    isActive: false,
+                    hasError: false,
+                    'text-danger': false
+                },
+                activeClass : 'active',
+                errorClass: 'text-danger'
+            },
+            methods:{
+                changeClass: function(){
+                    return {
+                        isActive : this.classObject.isActive = !this.classObject.isActive,
+                        hasError : this.classObject.hasError = !this.classObject.hasError
+                    }
+                }
             }
         })
     </script>
