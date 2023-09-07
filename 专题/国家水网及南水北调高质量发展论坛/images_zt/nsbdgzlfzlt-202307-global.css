@@ -57,22 +57,23 @@ section + section {
 .mainbg {
   background-image: url('nsbdgzlfzlt-202307-mainbg.jpg');
   background-position: center top;
-  padding-top: 635px;
+  padding-top: 986px;
   padding-bottom: 28px;
   background-repeat: no-repeat;
-  background-color: #8db2e6;
+  background-color: #afd4f2;
 }
 .hnews {
   text-align: center;
   padding: 25px 0;
+  background-color: #f3faff;
 }
 .hnews h2 {
-  color: #114bdb;
+  color: #006db8;
   font-size: 31px;
   margin-bottom: 22px;
 }
 .hnews p {
-  color: #155ed7;
+  color: #006db8;
   font-size: 18px;
   line-height: 1.2;
 }
@@ -111,7 +112,7 @@ section + section {
   color: #ffffff;
   line-height: 45px;
   text-indent: 20px;
-  background: rgba(0, 45, 128, 0.8);
+  background: rgba(0, 109, 184, 0.8);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -209,14 +210,14 @@ section + section {
   font-weight: bold;
   color: #545454;
   text-align: center;
-  background-color: #98aad5;
+  background-color: #a8d3f1;
 }
 .tab.act {
   width: 357px;
   height: 52px;
   margin-top: -4px;
   line-height: 52px;
-  background-color: #114bdb;
+  background-color: #006db8;
   color: #ffffff;
 }
 .content {
@@ -264,13 +265,13 @@ section + section {
   display: inline-block;
   width: 7px;
   height: 7px;
-  background-color: #114bdb;
+  background-color: #006db8;
   margin-right: 14px;
   border-radius: 2px;
 }
 .chnltitle {
   font-size: 32px;
-  color: #114bdb;
+  color: #006db8;
   font-weight: bold;
   margin-bottom: 45px;
   margin-left: 23px;
@@ -347,7 +348,7 @@ section + section {
 }
 footer {
   text-align: center;
-  background-color: #003580;
+  background-color: #006db8;
   color: #ffffff;
   line-height: 36px;
   padding: 20px;

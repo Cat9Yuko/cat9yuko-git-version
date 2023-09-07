@@ -31,6 +31,18 @@
         .box {
             padding-left: 10px;
         }
+        .register .telphoneissame {
+            height: auto;
+            font-size: 22px;
+            line-height: 30px;
+        }
+        .register .telphoneissame-select {
+            width: 100%;
+            height: 60px;
+        }
+        .register-bg .footer, .score-bg .footer {
+            margin-top: 50px;
+        }
     </style>
 </head>
 
@@ -118,6 +130,21 @@
                                     <td align="right"><span>联系电话</span></td>
                                     <td><input id="telphone2" type="text" class="layui-input" lay-verify="required|phone"
                                             style="width: 784px; height: 50px;" required /></td>
+                                </tr>
+                                <tr>
+                                    <td height="10px">
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="right"><span class="telphoneissame">*注册电话与联系电话是否一致</span></td>
+                                    <td>
+                                        <select class="telphoneissame-select">
+                                            <option value="">请选择</option>
+                                            <option value="">是</option>
+                                            <option value="">否</option>
+                                        </select>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td height="10px">

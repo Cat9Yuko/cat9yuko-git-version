@@ -10,14 +10,29 @@
     <div id="app">
         <h1>v-if</h1>
         <p>v-if 指令用于条件性地渲染一块内容。这块内容只会在指令的表达式返回 truthy 值的时候被渲染。</p>
-        <p><a v-if="awesome"></a></p>
+        <div>
+            <p v-if="awesome"><a>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae veritatis ipsum molestiae eius. Tempore iusto dolor, unde cum consequuntur expedita officia eligendi a autem exercitationem veritatis assumenda rerum iste quidem.</a></p>
+            <p v-else><a>禀耐中李禀弟韩到可至气俭知高语极，了留我匹有就我尚给先回十颜，宫娘我雷常刑着在勉说书有的子和，论见尚人学，衣系哥，我行但变为陈自了后，我谓给，谭在妙仆得光承币了新娘你己为，小说虑属极骨烦对性招六，在设今姑，的招事对所关对没则安弟绛个落幕战地，什锐几，反书。</a></p>
+        </div>
+        <h2>#在 &lt;template&gt; 元素上使用 v-if 条件渲染分组</h2>
+        <template v-if="awesome">
+            <h1>Title</h1>
+            <p>Paragraph 1</p>
+            <p>Paragraph 2</p>
+        </template>
+        <div>
+            <p v-if="Math.random() > 0.5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi nesciunt aspernatur corporis ipsum nam eligendi laudantium facilis quos qui deserunt, quod esse officiis iure reiciendis? Voluptates dolores maiores illo consequatur.</p>
+            <p v-else>语身斗谭的事尤，孔光到得何切尘又名得程死，答谢变能丐当但虽就仍洪一韩怒远程里办，若中虑其一总登土汪投略尹们洪杀他一，会看主楚开招马回为有气句在，下皇妙打，老胸叹终不仃人婵我同见这，有轻即动不韩间是无山活助韩张，回居会修极变之逃为要轻单护尺于全，拢奔文，人。</p>
+            <p>v-else 元素必须紧跟在带 v-if 或者 v-else-if 的元素的后面，否则它将不会被识别。</p>
+        </div>
     </div>
     <script src="vue.js"></script>
     <script>
         var vm = new Vue({
             el: '#app',
             data: {
-                message: 'message'
+                message: 'message',
+                awesome:true
             }
         })
     </script>
