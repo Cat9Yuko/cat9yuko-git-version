@@ -65,6 +65,9 @@ $(function() {
 		//mon
 	var mon_max = 0;
 	var mon_max2 = 0;
+	var morning_max = 0;
+	var afternoon_max = 0;
+	var evening_max = 0;
 	var one_day = $(this).find(".one-day");
 	var week = $(this).find(".week");
 	one_day.each(function(index2, value) {
@@ -81,6 +84,27 @@ $(function() {
 			one_day.find("li:last").height(mon_max2);
 			week.find("li:last").height(mon_max2 + 9);
 			week.find("li:last").css("line-height", mon_max2 + 9 + "px");
+		}
+		if($(this).children("li").length == 3) {
+			var morning = $(this).find("li:eq(0)");
+			var afternoon = $(this).find("li:eq(1)");
+			var evening = $(this).find("li:eq(2)");
+			var morningh = morning.height();
+			var afternoonh = afternoon.height();
+			var eveningh = evening.height();
+			morning_max = morningh > morning_max ? morningh : morning_max;
+			afternoon_max = afternoonh > afternoon_max ? afternoonh : afternoon_max;
+			evening_max = eveningh > evening_max ? eveningh : evening_max;
+			one_day.find("li:eq(0)").height(morning_max);
+			one_day.find("li:eq(1)").height(afternoon_max);
+			one_day.find("li:eq(2)").height(evening_max);
+
+			week.find("li:eq(0)").height(morning_max + 9);
+			week.find("li:eq(1)").height(afternoon_max + 9);
+			week.find("li:eq(2)").height(evening_max + 9);
+			week.find("li:eq(0)").css("line-height", morning_max + 9 + "px");
+			week.find("li:eq(1)").css("line-height", afternoon_max + 9 + "px");
+			week.find("li:eq(2)").css("line-height", evening_max + 9 + "px");
 		}
 	})	
 	});
@@ -119,20 +143,26 @@ $(function() {
 	var $ww = $(window).width();
 	var swc = $(".sw_content");
 	var xwc = $(".xw_content");
+	var xzc = $(".xz_content");
 //	console.log($ww);
 
 	//	pc端修改
 	if($ww >= 768) {
 		swc.attr("contenteditable", true);
 		xwc.attr("contenteditable", true);
+		xzc.attr("contenteditable", true);
 		$(".xm_content").attr("contenteditable", "true");
+		$(".xz_content").attr("contenteditable", "true");
 	}
 	//手机端跳转
 	if($ww < 768) {
 		$(".xm_content").click(function() {
 						window.location.href = "xiaomiluru.html";
 		});
-				$(".mobile_url").attr("href","xiaozhangluru.html");
+		$(".xz_content").click(function() {
+			window.location.href = "xiaozhang_mine.html";
+});
+		$(".mobile_url").attr("href","xiaozhangluru.html");
 		
 	}
 	//校长我的提交跳转
@@ -462,7 +492,26 @@ $(function() {
 		}
 //		console.log($b1.length)
 	})
-	
+	//校长切换 
+	$(".class_name").on("click",".change_button2",function () {
+		var $lp = $(this).parents(".lp");
+		$oneday = $lp.find(".one-day");
+		$b1 = $lp.find(".b1");
+		if($b1.length == 3) {
+			$oneday.empty();
+			$oneday.append("<li class='b1'><div class='xz_content' contenteditable='true''></div></li>");
+			my_bl();
+		}
+		if($b1.length == 1) {
+			$oneday.empty();
+			$oneday.append("<li class='b1'><div class='xz_content' contenteditable='true''></div></li>");
+			$oneday.append("<li class='b1'><div class='xz_content' contenteditable='true''></div></li>");
+			$oneday.append("<li class='b1'><div class='xz_content' contenteditable='true''></div></li>");
+			ssame();
+			my_bl();
+		}
+//		console.log($b1.length)
+	})
 	// 新增同步滚动
 	
 	$(".class_name").scroll(function () {
@@ -472,6 +521,5 @@ $(function() {
 		$(".class_name").scrollLeft(class_name_scrollleft);
 		// console.log(class_name_scrollleft);
 	});
-	
 	
 })
