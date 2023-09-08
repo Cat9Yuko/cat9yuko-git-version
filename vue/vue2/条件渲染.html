@@ -25,6 +25,28 @@
             <p v-else>语身斗谭的事尤，孔光到得何切尘又名得程死，答谢变能丐当但虽就仍洪一韩怒远程里办，若中虑其一总登土汪投略尹们洪杀他一，会看主楚开招马回为有气句在，下皇妙打，老胸叹终不仃人婵我同见这，有轻即动不韩间是无山活助韩张，回居会修极变之逃为要轻单护尺于全，拢奔文，人。</p>
             <p>v-else 元素必须紧跟在带 v-if 或者 v-else-if 的元素的后面，否则它将不会被识别。</p>
         </div>
+        <h2>#v-else-if</h2>
+        <p>v-else-if，顾名思义，充当 v-if 的“else-if 块”，可以连续使用</p>
+        <div>
+            <p v-if="type==='A'">A</p>
+            <p v-else-if="type==='B'">B</p>
+            <p v-else-if="type==='C'">C</p>
+            <p v-else>Not A/B/C</p>
+        </div>
+        <h2>用 key 管理可复用的元素</h2>
+        <p>那么在下面的代码中切换 loginType 将不会清除用户已经输入的内容。因为两个模板使用了相同的元素，<input> 不会被替换掉——仅仅是替换了它的 placeholder。</p>
+        <div>
+            <template v-if="loginType === 'username'">
+                <label>Username</label>
+                <input type="text" placeholder="请输入你的用户名" key="username-input">
+            </template>
+            <template v-else>
+                <label>Email</label>
+                <input type="text" placeholder="请输入你的邮箱地址" key="email-input">
+            </template>
+            <button v-on:click="changeLoginType()">Toggle loginType</button>
+        </div>
+        <h2>#v-show</h2>
     </div>
     <script src="vue.js"></script>
     <script>
@@ -32,7 +54,14 @@
             el: '#app',
             data: {
                 message: 'message',
-                awesome:true
+                awesome:true,
+                type: 'B',
+                loginType: 'username'
+            },
+            methods: {
+                changeLoginType: function(){
+                    return this.loginType = this.loginType === 'username' ? 'email': 'username'
+                }
             }
         })
     </script>
