@@ -44,11 +44,11 @@ header {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 765px;
+  height: 546px;
 }
 header.listbanner {
-  background-image: url('gzzx200w-202309-banner2.jpg');
-  height: 545px;
+  background-image: url('gzzx200w-202309-banner.jpg');
+  height: 546px;
 }
 .mainbg {
   background-image: url('gzzx200w-202309-mainbg.jpg');
