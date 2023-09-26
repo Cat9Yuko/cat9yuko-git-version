@@ -148,15 +148,21 @@ header.listbanner {
   background-color: #033f9a;
   color: #ffffff;
   position: relative;
+  vertical-align: middle;
+  text-align: center;
 }
 .q-icon div,
 .a-icon div {
-  position: absolute;
+  /* position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
   text-align: center;
-  margin: auto;
+  /* margin: auto; */
+  display: table-cell;
+  width: 100px;
+  height: 106px;
+  vertical-align: middle;
 }
 .q-word,
 .a-word {
