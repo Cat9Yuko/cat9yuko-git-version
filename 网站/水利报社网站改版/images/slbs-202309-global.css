@@ -35,8 +35,14 @@ img {
   width: 1280px;
   margin: 0 auto;
 }
-section {
-  margin-top: 28px;
+.main {
+  padding-top: 28px;
+}
+section + section {
+  margin-top: 50px;
+}
+.w425 {
+  width: 425px;
 }
 /* user style */
 .welcome {
@@ -126,6 +132,7 @@ nav {
 .nav-item {
   float: left;
   font-size: 17px;
+  position: relative;
 }
 .nav-item + .nav-item {
   margin-left: 40px;
@@ -141,8 +148,11 @@ nav {
 }
 .nav-child {
   margin-left: -40px;
-  padding-top: 6px;
+  /* margin-top: 6px; */
   display: none;
+  position: absolute;
+  z-index: 22;
+  border-top: 3px solid #0097e6;
 }
 .nav-item:hover .nav-child {
   display: block;
@@ -152,6 +162,7 @@ nav {
   width: 126px;
   line-height: 40px;
   text-align: center;
+  border-top: 3px solid #94d8f6;
 }
 .nav-child-item + .nav-child-item {
   border-top: 1px solid #ffffff;
@@ -163,6 +174,19 @@ nav {
 .slick-mod {
   width: 1280px;
   height: 167px;
+}
+.slick-mod2 {
+  width: 1280px;
+  height: 167px;
+}
+.slick-mod2 {
+  width: 845px;
+  height: 475px;
+}
+.slick-mod2 .slick-item img {
+  width: 100%;
+  height: 475px;
+  border-radius: 5px;
 }
 .slick-item {
   position: relative;
@@ -187,6 +211,18 @@ nav {
   height: 130px;
   float: left;
   position: relative;
+}
+.show-item4 p {
+  width: 235px;
+  margin: 0 auto;
+  margin-top: -30px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .show-item4 .borderb {
   width: 307px;
@@ -220,24 +256,20 @@ nav {
   bottom: 0;
   left: 0;
   right: 0;
-  font-size: 16px;
+  font-size: 22px;
   color: #ffffff;
-  line-height: 40px;
-  text-indent: 2rem;
-  background: rgba(0, 0, 0, 0.5);
+  line-height: 60px;
+  text-indent: 20px;
+  background: rgba(0, 0, 0, 0);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.slick-mod .slick-dots,
 .slick-mod2 .slick-dots {
   position: absolute;
-  right: 10px;
-  bottom: 15px;
-}
-.slick-mod2 .slick-dots {
-  bottom: 36px;
+  right: 15px;
+  bottom: 24px;
 }
 
 .slick-mod .slick-arrow,
@@ -268,19 +300,62 @@ nav {
   left: 0;
   background: url(../images/wlaq-202009-arrowlef.png) no-repeat center;
 } */
-.slick-mod .slick-dots li,
 .slick-mod2 .slick-dots li {
-  width: 14px;
-  height: 14px;
+  width: 8px;
+  height: 7px;
   background: #ffffff;
   border-radius: 50%;
   margin: 0 5px 0 0;
 }
-.slick-mod .slick-dots li.slick-active,
 .slick-mod2 .slick-dots li.slick-active {
-  width: 14px;
-  height: 14px;
-  background: #e50012;
-  border-radius: 50%;
+  width: 19px;
+  height: 7px;
+  background: #005bac;
+  border-radius: 5px;
 }
 /* --- */
+.hnews-container h2 {
+  font-size: 40px;
+  color: #005bac;
+  font-weight: bold;
+  text-align: center;
+  margin: 22px 0;
+}
+.hnews-list {
+  text-align: center;
+  color: #333333;
+}
+.hnews-list a::before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  width: 2px;
+  height: 17px;
+  background-color: #a9a9a9;
+  margin: 0 10px;
+}
+.hnews-list a:nth-child(1):before {
+  content: none;
+}
+.list li {
+  height: 60px;
+  border-top: 1px solid #edf3f7;
+  font-size: 16px;
+  color: #222222;
+  display: table;
+  padding-left: 22px;
+  padding-right: 45px;
+  width: 100%;
+}
+.list li:nth-child(1) {
+  border-top: none;
+}
+.list li:hover {
+  background-image: url("slbs-202309-lihoverbg.jpg");
+  color: #ffffff;
+}
+.list li a {
+  display: table-cell;
+  vertical-align: middle;
+  line-height: 22px;
+}
