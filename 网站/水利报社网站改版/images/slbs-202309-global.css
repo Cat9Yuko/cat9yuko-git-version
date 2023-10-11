@@ -41,6 +41,9 @@ img {
 section + section {
   margin-top: 50px;
 }
+.w845 {
+  width: 845px;
+}
 .w425 {
   width: 425px;
 }
@@ -338,7 +341,7 @@ nav {
   content: none;
 }
 .list li {
-  height: 60px;
+  height: 59px;
   border-top: 1px solid #edf3f7;
   font-size: 16px;
   color: #222222;
@@ -351,11 +354,68 @@ nav {
   border-top: none;
 }
 .list li:hover {
-  background-image: url("slbs-202309-lihoverbg.jpg");
+  background-image: url('slbs-202309-lihoverbg.jpg');
   color: #ffffff;
 }
 .list li a {
   display: table-cell;
   vertical-align: middle;
   line-height: 22px;
+}
+.section-b {
+  margin-top: 20px;
+}
+.zt-item {
+  text-align: center;
+  width: 275px;
+}
+.zt-item img {
+  border-radius: 4px;
+}
+.zt-item p {
+  line-height: 30px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.zt-item + .zt-item {
+  margin-left: 10px;
+}
+.chnltitle {
+  font-size: 18px;
+  padding-left: 20px;
+  color: #005bac;
+  font-weight: bold;
+  border-bottom: 1px solid #edf3f7;
+  padding-bottom: 10px;
+  padding-top: 14px;
+}
+.chnltitle span::before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  background-image: url('slbs-202309-iconwater.png');
+  width: 11px;
+  height: 16px;
+  background-size: cover;
+  margin-right: 11px;
+}
+.list2 {
+  padding-top: 7px;
+}
+.list2 li {
+  line-height: 34px;
+  padding-left: 20px;
+  color: #222222;
+}
+.section-f {
+  background-image: url("slbs-202309-commentbg.png");
+  height: 50px;
+  background-size: cover;
+}
+.chnltitle.white-word {
+  border-bottom: none;
+}
+.section-f {
+  margin-top: 20px;
 }
