@@ -262,7 +262,12 @@ section + section {
   left: -60px;
   background: url('shnysjzhggsd-202308-arrowleft.png') no-repeat center;
 }
-
+.slick-timeline .slick-prev.slick-disabled {
+  background: url('shnysjzhggsd-202310-arrowleftd.png') no-repeat center;
+}
+.slick-timeline .slick-next.slick-disabled {
+  background: url('shnysjzhggsd-202310-arrowrightd.png') no-repeat center;
+}
 /* .slick-mod2 .slick-next {
   right: 0;
   background: url(../images/wlaq-202009-arrowrigh.png) no-repeat center;
