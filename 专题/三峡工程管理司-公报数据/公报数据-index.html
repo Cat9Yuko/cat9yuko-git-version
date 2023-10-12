@@ -69,5 +69,34 @@
             </tbody>
         </table>
     </footer>
+    <script src="images/jquery-3.7.0.min.js"></script>
+    <script>
+        var articleData = "";
+    jQuery.ajax({
+        type: "get",
+        url: "/syxg/tpxw/newsIndex.js",
+        dataType: "jsonp",
+        jsonp: "callback",
+        jsonpCallback: "newsIndex",
+        success: function (result) {
+            if (result && result.length > 0) {
+                result.forEach(function (cv) {
+
+                    if (cv.name === "news_sxgcgb") {
+                        cv.data.forEach(function (v) {
+                            articleData += "<li><a href=\"" + v.url + "\" target=\"_blank\">" + v.title + "</a></li>"
+                        });
+                        $('.list').html(articleData);
+                    }
+                })
+            }
+        },
+            error: function (e) {  //请求超时回调
+                if(e.statusText == "timeout"){
+                    alert("请求超时")
+                }
+            }
+    });
+    </script>
 </body>
 </html>
