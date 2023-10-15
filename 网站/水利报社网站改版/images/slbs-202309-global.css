@@ -390,6 +390,13 @@ nav {
   padding-bottom: 10px;
   padding-top: 14px;
 }
+.chnltitle.npd {
+  padding: 0;
+  border: none;
+  background-image: url("slbs-202309-iconrmtbg.png");
+  background-repeat: no-repeat;
+  background-position: center right;
+}
 .chnltitle span::before {
   content: '';
   display: inline-block;
@@ -399,6 +406,12 @@ nav {
   height: 16px;
   background-size: cover;
   margin-right: 11px;
+}
+.chnltitle span.rmbd::before {
+  background-image: url("slbs-202309-iconrmt.png");
+  width: 30px;
+  height: 26px;
+  font-size: 22px;
 }
 .list2 {
   padding-top: 7px;
@@ -415,7 +428,32 @@ nav {
 }
 .chnltitle.white-word {
   border-bottom: none;
+  text-shadow: #ffffff 2px 0 0, #ffffff 0 2px 0, #ffffff -2px 0 0, #ffffff 0 -2px 0;
 }
 .section-f {
   margin-top: 20px;
+}
+.scrolltext {
+  width: 1140px;
+  font-size: 16px;
+  color: #222222;
+  background: none;
+  margin-left: 37px;
+}
+.scrolltext:hover {
+  background: none;
+}
+.scrolltext a {
+  margin: 0 12px;
+  line-height: 50px;
+}
+.scrolltext a::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 10px;
+  height: 10px;
+  border: 1px solid #0a62af;
+  border-radius: 50%;
+  margin-right: 10px;
 }
