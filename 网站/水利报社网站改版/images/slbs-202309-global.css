@@ -128,6 +128,7 @@ nav {
 .borderb {
   border-bottom: 3px solid #94d8f6;
   height: 50px;
+  box-sizing: border-box;
 }
 .nav {
   padding-left: 30px;
@@ -156,6 +157,7 @@ nav {
   position: absolute;
   z-index: 22;
   border-top: 3px solid #0097e6;
+  box-sizing: border-box;
 }
 .nav-item:hover .nav-child {
   display: block;
@@ -166,9 +168,11 @@ nav {
   line-height: 40px;
   text-align: center;
   border-top: 3px solid #94d8f6;
+  box-sizing: border-box;
 }
 .nav-child-item + .nav-child-item {
   border-top: 1px solid #ffffff;
+  box-sizing: border-box;
 }
 .nav-child-item:hover {
   background-color: #0097e6;
@@ -198,16 +202,19 @@ nav {
   background-image: url('slbs-202309-trainh.png');
   height: 167px;
   padding-top: 18px;
+  box-sizing: border-box;
 }
 .trainb {
   background-image: url('slbs-202309-trainb.png');
   height: 167px;
   padding-top: 18px;
+  box-sizing: border-box;
 }
 .trainf {
   background-image: url('slbs-202309-trainf.png');
   height: 167px;
   padding-top: 18px;
+  box-sizing: border-box;
 }
 .show-item4 {
   width: 25%;
@@ -348,6 +355,7 @@ nav {
   display: table;
   padding-left: 22px;
   padding-right: 45px;
+  box-sizing: border-box;
   width: 100%;
 }
 .list li:nth-child(1) {
@@ -456,4 +464,76 @@ nav {
   border: 1px solid #0a62af;
   border-radius: 50%;
   margin-right: 10px;
+}
+.rmbd-container{
+  overflow: hidden;
+  width: 1280px;
+  height: 415;
+ padding-top: 20px;
+}
+.rmbd-container ul li{
+  float: left;
+  height: 415px;
+  width: 119px;
+}
+.rmbd-container ul li + li {
+  margin-left: 1px;
+}
+.rmbd-container ul .pic{
+  position: relative;
+  background-position: center center;  /*图片居中  等比例*/
+  background-repeat: no-repeat;  /*图片不平铺*/
+}
+.rmbd-container ul li:nth-child(1){
+  width: 680px;
+}
+.txt{
+  background-color: #000;
+  background: rgba(0, 0, 0, 0.4);
+  height: 415px;
+  width: 100%;
+}
+.txt .p1{
+  display: table-cell;
+  font-size: 22px;
+  width: 100%;
+  height: 415px;
+  padding: 0 50px;
+  vertical-align: middle;
+  color: #ffffff;
+}
+.txt .p2 {
+  display: none;
+}
+.rmbd-container ul li.act .txt {
+  background: none;
+}
+.rmbd-container ul li.act .p1 {
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: auto;
+  padding: 0 0 30px 23px;
+}
+.rotate-bg {
+  height: 560px;
+  overflow: hidden;
+  transition: background-image 0.5s;
+}
+.rotate-bg * {box-sizing: initial;}
+.rotating-slider {
+  margin-top: 90px;
+}
+.sszq-text {
+  background-image: url("slbs-202309-chnlbg2.png");
+  width: 257px;
+  height: 55px;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 22px;
+  font-weight: bold;
+  color: #005fb1;
+  line-height: 45px;
 }

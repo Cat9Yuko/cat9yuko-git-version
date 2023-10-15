@@ -8,7 +8,35 @@
     <link rel="stylesheet" href="images/normalize.css">
     <link rel="stylesheet" href="images/slick.css">
     <link rel="stylesheet" href="images/liMarquee.css">
+    <link rel="stylesheet" href="images/rotating-slider.css">
     <link rel="stylesheet" href="images/slbs-202309-global.css">
+    <style>
+        .rotating-slider ul.slides li{
+            color: #fff
+        }
+        .rotating-slider ul.slides li:nth-of-type(1){
+            background: url('images/slbs-202309-jsbg.png');
+            background-size: 100%;
+        }
+        .rotating-slider ul.slides li:nth-of-type(2){
+            background: url('images/slbs-202309-fjbg.png');
+            background-size: 100%;
+        }
+        .rotating-slider ul.slides li:nth-of-type(3){
+            background: url('images/slbs-202309-sxbg.png');
+            background-size: 100%;
+        }
+        .rotating-slider ul.slides li:nth-of-type(4){
+            background: url('images/slbs-202309-shbg.png');
+            background-size: 100%;
+        }
+        .rotating-slider ul.slides li .inner{
+            box-sizing: border-box;
+            padding: 2em;
+            height: 100%;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -218,6 +246,90 @@
         <section>
             <div class="center-block-1280">
                 <div class="chnltitle npd"><span class="rmbd">融媒报道</span></div>
+                <div class="rmbd-container">
+                    <ul>
+                        <li class="act">
+                            <div class="pic" style="background-image: url('images/demo4.jpg');">
+                                <a href="">
+                                    <div class="txt">
+                                        <p class="p1">习近平主持召开推进</p>
+                                        <p class="p2">习近平主持召开推进</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pic" style="background-image: url('images/demo4.jpg');">
+                                <a href="">
+                                    <div class="txt">
+                                        <p class="p1">习近平主持召开推进</p>
+                                        <p class="p2">习近平主持召开推进</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pic" style="background-image: url('images/demo4.jpg');">
+                                <a href="">
+                                    <div class="txt">
+                                        <p class="p1">习近平主持召开推进推</p>
+                                        <p class="p2">习近平主持召开推进推</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pic" style="background-image: url('images/demo4.jpg');">
+                                <a href="">
+                                    <div class="txt">
+                                        <p class="p1">习近平主持召开推进</p>
+                                        <p class="p2">习近平主持召开推进</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pic" style="background-image: url('images/demo4.jpg');">
+                                <a href="">
+                                    <div class="txt">
+                                        <p class="p1">习近平主持召开</p>
+                                        <p class="p2">习近平主持召开</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pic" style="background-image: url('images/demo4.jpg');">
+                                <a href="">
+                                    <div class="txt">
+                                        <p class="p1">习近平主持召开推进</p>
+                                        <p class="p2">习近平主持召开推进</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="rotate-bg" style="background-image: url('images/slbs-202309-jsbgm.png');">
+                <div class="center-block-1280">
+                    <div class="sszq-text">水事专区</div>
+                    <div class="rotating-slider">
+                        <ul class="slides">
+                            <li data-url="www.mwr.gov.com" data-img="images/slbs-202309-jsbgm.png"><div class="inner"></div></li>
+                            <li data-url="www.mwr.gov.com" data-img="images/slbs-202309-fjbgm.png"><div class="inner"></div></li>
+                            <li data-url="www.mwr.gov.com" data-img="images/slbs-202309-sxbgm.png"><div class="inner"></div></li>
+                            <li data-url="www.mwr.gov.com" data-img="images/slbs-202309-shbgm.png"><div class="inner"></div></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="center-block-1280">
+                <div class="chnltitle white-word"><span>水事推广</span></div>
             </div>
         </section>
     </main>
@@ -226,6 +338,7 @@
     <script src="images/jquery-3.7.0.min.js"></script>
     <script src="images/slick.js"></script>
     <script src="images/jquery.liMarquee.js"></script>
+    <script src="images/jquery.rotating-slider.js"></script>
     <script>
         $(document).ready(function () {
             $(".slick-mod").slick({
@@ -239,7 +352,32 @@
                 infinite: false
             });
             $('.scrolltext').liMarquee();
+            $(".rmbd-container ul li").hover(function(){
+                $(this).stop(true).addClass("act").animate({width:"680px"},1000).siblings().removeClass("act").stop(true).animate({width:"119px"},1000);
+            });
+            
         })
+        $(function(){ 
+            $('.rotating-slider').rotatingSlider({
+                slideHeight : Math.min(340, window.innerWidth -80),
+                slideWidth : Math.min(460, window.innerWidth - 80),
+                autoRotateInterval: 5000,
+                // slideHeight : 452,
+                // slideWidth : 450,
+                directionControls: false,
+                afterRotationStart: function(){
+                    var index = $('.rotating-slider .active-slide').index();
+                    $(".rotate-bg").css("background-image","url("+$('.rotating-slider .active-slide').attr('data-img')+")")
+                }
+            });
+            // 扇形的链接跳转
+            $(".slides li").each(function(){
+                $(this).click(function(url){
+                    var url = $(this).attr("data-url")
+                    window.location = url
+                })
+            })
+        });
     </script>
 </body>
 </html>
