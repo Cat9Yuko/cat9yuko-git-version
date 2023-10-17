@@ -37,6 +37,9 @@ img {
 }
 .main {
   padding-top: 28px;
+  background-image: url("slbs-202309-mainbottombg.jpg");
+  background-position: center bottom;
+  background-repeat: no-repeat;
 }
 section + section {
   margin-top: 50px;
@@ -46,6 +49,12 @@ section + section {
 }
 .w425 {
   width: 425px;
+}
+.w575 {
+  width: 575px;
+}
+.w619 {
+  width: 619px;
 }
 /* user style */
 .welcome {
@@ -309,8 +318,7 @@ nav {
   text-overflow: ellipsis;
 }
 
-.slick-mod2 .slick-dots,
-.slick-mod3 .slick-dots {
+.slick-mod2 .slick-dots {
   position: absolute;
   right: 15px;
   bottom: 24px;
@@ -320,7 +328,11 @@ nav {
   right: 6px;
   top: 7px;
 }
-
+.slick-mod4 .slick-dots {
+  position: absolute;
+  right: 11px;
+  bottom: 11px;
+}
 .slick-mod .slick-arrow,
 .slick-mod2 .slick-arrow {
   width: 33px;
@@ -378,6 +390,22 @@ nav {
   border-radius: 50%;
   display: block;
   background: #f3d0ab;
+}
+.slick-mod4 .slick-dots li img {
+  border-radius: 5px;
+}
+.slick-mod4 .slick-dots li {
+  width: 8px;
+  height: 7px;
+  border-radius: 50%;
+  background: #ffffff;
+  margin: 0 4px 0 0;
+}
+.slick-mod4 .slick-dots li.slick-active {
+  width: 8px;
+  height: 7px;
+  border-radius: 50%;
+  background: #005bac;
 }
 /* --- */
 .hnews-container h2 {
@@ -677,11 +705,76 @@ nav {
   display: inline-block;
   vertical-align: middle;
   background-image: url('slbs-202309-icon4.png');
-  background-size: cover;
+  background-size: contain;
   width: 25px;
   height: 20px;
   margin-left: 5px;
   margin-right: 10px;
+}
+.channeltitle-bg span.icon2::before {
+  width: 25px;
+  height: 24px;
+  vertical-align: top;
+  background-image: url('slbs-202309-icon2.png');
+}
+.channeltitle-bg span.icon9::before {
+  width: 30px;
+  height: 25px;
+  vertical-align: top;
+  background-image: url('slbs-202309-icon9.png');
+}
+.chnltitle2 {
+  margin-bottom: 30px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #005bac;
+  border-bottom: 2px solid #bad4e7;
+}
+.chnltitle2 span {
+  display: inline-block;
+  padding-bottom: 12px;
+  padding-right: 17px;
+  border-bottom: 2px solid #2d78bb;
+  margin-bottom: -2px;
+}
+.chnltitle2 span::before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -5px;
+  background-size: contain;
+  margin-left: 5px;
+  margin-right: 10px;
+}
+.chnltitle2 span.icon1::before {
+  background-image: url('slbs-202309-icon1.png');
+  width: 23px;
+  height: 22px;
+}
+.chnltitle2 span.icon3::before {
+  background-image: url('slbs-202309-icon3.png');
+  width: 24px;
+  height: 24px;
+}
+.chnltitle2 span.icon5::before {
+  background-image: url('slbs-202309-icon5.png');
+  width: 26px;
+  height: 23px;
+}
+.chnltitle2 span.icon6::before {
+  background-image: url('slbs-202309-icon6.png');
+  width: 24px;
+  height: 23px;
+}
+.chnltitle2 span.icon7::before {
+  background-image: url('slbs-202309-icon7.png');
+  width: 20px;
+  height: 23px;
+}
+.chnltitle2 span.icon8::before {
+  background-image: url('slbs-202309-icon8.png');
+  width: 21px;
+  height: 24px;
 }
 .ly-lcontainer {
   width: 570px;
@@ -733,7 +826,7 @@ nav {
   font-size: 18px;
 }
 .ly-rtop h2::before {
-  content: "";
+  content: '';
   display: inline-block;
   vertical-align: middle;
   width: 6px;
@@ -757,12 +850,139 @@ nav {
 .ly-rbottom .moreimg {
   width: 18px;
   height: 14px;
-  background-image: url("slbs-202309-more.png");
+  background-image: url('slbs-202309-more.png');
   margin-top: 15px;
 }
-.ly-ritem a:hover .ly-rtop h2{
+.ly-ritem a:hover .ly-rtop h2 {
   color: #005bac;
 }
 .ly-ritem a:hover .ly-rbottom .moreimg {
-  background-image: url("slbs-202309-moreh.png");
+  background-image: url('slbs-202309-moreh.png');
+}
+.df-limg {
+  position: relative;
+  height: 251px;
+}
+.df-limg img {
+  width: 438px;
+  height: 251px;
+  border-radius: 5px;
+}
+.df-limg p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  text-indent: 1rem;
+  position: absolute;
+  left: 0;
+  bottom: 20px;
+  right: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.df-rlist {
+  margin-left: 30px;
+}
+.list3 li {
+  line-height: 42px;
+  width: 360px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.list3 li::before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  width: 6px;
+  height: 6px;
+  background-color: #a6d1dd;
+  border-radius: 50%;
+  margin-right: 13px;
+}
+.df-ritem {
+  width: 386px;
+}
+.df-ritem + .df-ritem {
+  border-top: 1px solid #edf3f7;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+.df-ritem img {
+  width: 173px;
+  height: 105px;
+  float: left;
+  border-radius: 5px;
+  margin-right: 16px;
+}
+.df-ritem p {
+  line-height: 24px;
+  padding-top: 4px;
+}
+.df-ritem p span {
+  color: #999999;
+  font-size: 14px;
+}
+.img-list {
+  width: 619px;
+}
+.img-list + .img-list {
+  margin-top: 20px;
+}
+.img-list img {
+  width: 258px;
+  height: 155px;
+}
+.img-list:nth-of-type(even) img {
+  float: left;
+  margin-right: 20px;
+}
+.img-list:nth-of-type(odd) img {
+  float: right;
+  margin-left: 20px;
+}
+.img-list h2 {
+  font-size: 18px;
+  line-height: 24px;
+  padding-top: 15px;
+}
+.img-list p {
+  font-size: 14px;
+  color: #666666;
+  line-height: 22px;
+  margin-top: 15px;
+}
+.list3.circleicon li {
+  width: 100%;
+  line-height: 1;
+  line-height: initial;
+}
+.list3.circleicon li:hover {
+  font-weight: bold;
+}
+.list3.circleicon li + li {
+  margin-top: 24px;
+}
+.list3.circleicon li::before {
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  border: 1px solid #0d63b0;
+}
+.show6-item {
+  float: left;
+}
+.show6-item + .show6-item {
+  margin-left: 10px;
+}
+.show6-item img {
+  width: 205px;
+  height: 323px;
+}
+.footerlink {
+  background-image: url("slbs-202309-linkmainbg.png");
+  width: 1309px;
+  height: 420px;
+  margin: 0 auto;
 }
