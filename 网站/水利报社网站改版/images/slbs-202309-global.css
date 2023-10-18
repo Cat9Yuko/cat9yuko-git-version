@@ -37,7 +37,8 @@ img {
 }
 .main {
   padding-top: 28px;
-  background-image: url("slbs-202309-mainbottombg.jpg");
+  padding-bottom: 60px;
+  background-image: url('slbs-202309-mainbottombg.jpg');
   background-position: center bottom;
   background-repeat: no-repeat;
 }
@@ -80,9 +81,11 @@ section + section {
   padding-left: 27px;
   padding-top: 7px;
   height: 66px;
+  float: left;
 }
 .logo {
   margin-top: 11px;
+  float: left;
 }
 .lword p {
   line-height: 27px;
@@ -981,8 +984,107 @@ nav {
   height: 323px;
 }
 .footerlink {
-  background-image: url("slbs-202309-linkmainbg.png");
+  background-image: url('slbs-202309-linkmainbg.png');
   width: 1309px;
   height: 420px;
   margin: 0 auto;
+  padding: 60px 55px 0;
+}
+.link-title {
+  width: 80px;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 20px;
+}
+.link-url {
+  width: 1090px;
+  font-size: 14px;
+}
+.footerlink > div + div {
+  margin-top: 40px;
+}
+.link-url a + a {
+  margin-left: 12px;
+}
+.link-p + .link-p {
+  margin-top: 13px;
+}
+footer {
+  border-top: 2px solid #0ea5ea;
+  height: 392px;
+  background-image: url('slbs-202309-footerbg.jpg');
+  background-position: center;
+  background-size: cover;
+  padding-top: 50px;
+}
+.jb-lins {
+  text-align: center;
+}
+.jblink + .jblink {
+  margin-left: 20px;
+}
+.jblink {
+  width: 300px;
+  border: 1px solid #dadada;
+  border-radius: 5px;
+  display: inline-block;
+}
+.jblink span {
+  height: 66px;
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 14px;
+  line-height: 17px;
+  color: #333333;
+  text-align: left;
+}
+.jblink span.icon1::before {
+  content: '';
+  display: block;
+  float: left;
+  width: 31px;
+  height: 34px;
+  margin-left: 31px;
+  margin-right: 20px;
+  background-image: url('slbs-202309-iconjb1.png');
+}
+.jblink span.icon2::before {
+  content: '';
+  display: block;
+  float: left;
+  width: 29px;
+  height: 21px;
+  margin-left: 26px;
+  margin-right: 17px;
+  background-image: url('slbs-202309-iconjb2.png');
+}
+.jblink span.icon3::before {
+  content: '';
+  display: block;
+  float: left;
+  width: 31px;
+  height: 28px;
+  margin-left: 11px;
+  margin-right: 12px;
+  background-image: url('slbs-202309-iconjb3.png');
+}
+.footer-logo {
+  text-align: center;
+  margin-top: 51px;
+  margin-bottom: 19px;
+}
+.footer-word {
+  text-align: center;
+}
+.footer-word .iconjh::before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  background-image: url('slbs-202309-iconjh.png');
+  width: 18px;
+  height: 20px;
+  margin-right: 6px;
+}
+.footer-word p + p {
+  margin-top: 18px;
 }
