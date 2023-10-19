@@ -57,6 +57,12 @@ section + section {
 .w619 {
   width: 619px;
 }
+.w810 {
+  width: 810px;
+}
+.w420 {
+  width: 420px;
+}
 /* user style */
 .welcome {
   height: 40px;
@@ -321,7 +327,8 @@ nav {
   text-overflow: ellipsis;
 }
 
-.slick-mod2 .slick-dots {
+.slick-mod2 .slick-dots,
+.rmbd-slick .slick-dots {
   position: absolute;
   right: 15px;
   bottom: 24px;
@@ -337,7 +344,8 @@ nav {
   bottom: 11px;
 }
 .slick-mod .slick-arrow,
-.slick-mod2 .slick-arrow {
+.slick-mod2 .slick-arrow,
+.rmbd-slick .slick-arrow {
   width: 33px;
   height: 57px;
   margin: auto;
@@ -364,14 +372,16 @@ nav {
   left: 0;
   background: url(../images/wlaq-202009-arrowlef.png) no-repeat center;
 } */
-.slick-mod2 .slick-dots li {
+.slick-mod2 .slick-dots li,
+.rmbd-slick .slick-dots li {
   width: 8px;
   height: 7px;
   background: #ffffff;
   border-radius: 50%;
   margin: 0 5px 0 0;
 }
-.slick-mod2 .slick-dots li.slick-active {
+.slick-mod2 .slick-dots li.slick-active,
+.rmbd-slick .slick-dots li.slick-active {
   width: 19px;
   height: 7px;
   background: #005bac;
@@ -509,7 +519,8 @@ nav {
   margin-right: 11px;
   margin-top: -1px;
 }
-.chnltitle span::before {
+.chnltitle span::before,
+.listpage-fr span::before {
   content: '';
   display: inline-block;
   vertical-align: middle;
@@ -519,7 +530,8 @@ nav {
   background-size: cover;
   margin-right: 11px;
 }
-.chnltitle span.rmbd::before {
+.chnltitle span.rmbd::before,
+.listpage-fr span.rmbd::before {
   background-image: url('slbs-202309-iconrmt.png');
   width: 30px;
   height: 26px;
@@ -573,7 +585,6 @@ nav {
 .rmbd-container {
   overflow: hidden;
   width: 1280px;
-  height: 415;
   padding-top: 20px;
 }
 .rmbd-container ul li {
@@ -1087,4 +1098,102 @@ footer {
 }
 .footer-word p + p {
   margin-top: 18px;
+}
+
+.list-main {
+  background-image: none;
+}
+.curpage-container {
+  font-size: 14px;
+}
+.list-container {
+  background-image: url('slbs-202309-listpagebar.jpg');
+  background-repeat: no-repeat;
+  background-position: center top;
+  padding-top: 45px;
+  margin-top: 22px;
+}
+.listpage-ul .listpage-title {
+  float: left;
+  width: 640px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: #222222;
+}
+.listpage-ul .listpage-time {
+  float: right;
+  font-size: 14px;
+  color: #999999;
+}
+.listpage-ul li {
+  line-height: 28px;
+}
+.listpage-ul li:nth-child(5n) {
+  margin-bottom: 30px;
+}
+.listpage-ul li::before {
+  content: '';
+  display: block;
+  float: left;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid #0c63b0;
+  margin: 5px 21px 0 7px;
+}
+.listpage-fr {
+  background-image: url('slbs-202309-listpagebar2.jpg');
+  background-position: right center;
+  background-repeat: no-repeat;
+  font-size: 22px;
+  font-weight: bold;
+  color: #005bac;
+}
+.listpage-fr.mt5 {
+  margin-top: 20px;
+}
+.rmbd-c {
+  margin-top: 20px;
+}
+.rmbd-c img {
+  height: 257px;
+  border-radius: 5px;
+}
+.rmbd-c p {
+  font-size: 18px;
+  color: #222222;
+  padding-top: 10px;
+  text-indent: 1rem;
+}
+.ts-show2 {
+  padding-top: 20px;
+}
+.ts-show2 .ts-item {
+  float: left;
+}
+.ts-show2 .ts-item img {
+  width: 205px;
+  height: 323px;
+}
+.ts-show2 .ts-item + .ts-item {
+  margin-left: 10px;
+}
+.pages {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 15px;
+}
+.pages a {
+  padding: 2px 8px;
+  border: 1px solid #eaeaea;
+  background-color: #ffffff;
+}
+.pages a.act,.pages a:hover {
+  background-color: #0167d5;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+.pages a + a {
+  margin-left: 4px;
 }
