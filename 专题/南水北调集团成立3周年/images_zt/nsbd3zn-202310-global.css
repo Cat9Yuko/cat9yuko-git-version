@@ -36,7 +36,7 @@ img {
   margin: 0 auto;
 }
 .mainbgcolor {
-  background-color: #f1f8fb;
+  background-color: #fbecec;
   padding: 18px;
 }
 section + section {
@@ -48,7 +48,7 @@ section + section {
 }
 header {
   background-image: url('nsbd3zn-202310-banner.jpg');
-  height: 856px;
+  height: 853px;
   background-position: center top;
   background-size: cover;
 }
@@ -69,7 +69,7 @@ header {
   color: #ffffff;
 }
 .hnews-abs {
-  background-color: #f1f8fb;
+  background-color: #fbecec;
   padding: 33px 18px;
 }
 .hnews-abs p {
@@ -119,7 +119,7 @@ header {
   display: block;
   width: 8px;
   height: 8px;
-  background-color: #0a8cbc;
+  background-color: #e20808;
   border-radius: 50%;
   left: 0;
   top: 29px;
@@ -168,7 +168,7 @@ header {
   height: 74px;
   line-height: 24px;
   text-align: center;
-  color: #0b4097;
+  color: #d30d0d;
   padding: 11px 11px 0;
 }
 .cgbg p {
@@ -305,7 +305,7 @@ header {
   position: absolute;
   width: 124px;
   height: 29px;
-  background-color: #72caeb;
+  background-color: #ea6e6e;
   bottom: 0;
   right: 0;
   text-align: center;
@@ -313,7 +313,7 @@ header {
   text-overflow: ellipsis;
   overflow: hidden;
   line-height: 29px;
-  color: #656464;
+  color: #ffffff;
   font-size: 16px;
 }
 .list li:hover div {
@@ -375,7 +375,7 @@ header {
 }
 
 footer {
-  background-color: #0b4397;
+  background-color: #e20808;
   text-align: center;
   color: #ffffff;
   line-height: 34px;
