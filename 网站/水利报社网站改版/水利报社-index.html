@@ -392,20 +392,20 @@
                     <div class="pc hidden-smxs">
                         <div class="rotating-slider">
                             <ul class="slides">
-                                <li class="" data-url="www.mwr.gov.com" data-img="images/slbs-202309-jsbgm.png" style="background-image: url(images/slbs-202309-jsbg.png);"><div class="inner"></div></li>
-                                <li class="" data-url="www.mwr.gov.com" data-img="images/slbs-202309-fjbgm.png"><div class="inner"></div></li>
-                                <li class="" data-url="www.mwr.gov.com" data-img="images/slbs-202309-sxbgm.png"><div class="inner"></div></li>
-                                <li class="" data-url="www.mwr.gov.com" data-img="images/slbs-202309-shbgm.png"><div class="inner"></div></li>
+                                <li class="" data-url="www.mwr.gov.com" data-img="images/slbs-202309-jsbgm.png" style="background: url(images/slbs-202309-jsbg.png);background-size: cover;"><div class="inner"></div></li>
+                                <li class="" data-url="www.mwr.gov.com" data-img="images/slbs-202309-fjbgm.png" style="background: url(images/slbs-202309-fjbg.png);background-size: cover;"><div class="inner"></div></li>
+                                <li class="" data-url="www.mwr.gov.com" data-img="images/slbs-202309-sxbgm.png" style="background: url(images/slbs-202309-sxbg.png);background-size: cover;"><div class="inner"></div></li>
+                                <li class="" data-url="www.mwr.gov.com" data-img="images/slbs-202309-shbgm.png" style="background: url(images/slbs-202309-shbg.png);background-size: cover;"><div class="inner"></div></li>
                             </ul>
                         </div>
                     </div>
                     <div class="app">
                         <div class="rotating-slider">
                             <ul class="slides">
-                                <li class="" data-url="www.mwr.gov.com" data-img="images/slbs-202309-jsbgm.png" style="background-image: url(images/slbs-202309-jsbg.png);"><div class="inner"></div></li>
-                                <li class="" data-url="www.mwr.gov.com" data-img="images/slbs-202309-fjbgm.png"><div class="inner"></div></li>
-                                <li class="" data-url="www.mwr.gov.com" data-img="images/slbs-202309-sxbgm.png"><div class="inner"></div></li>
-                                <li class="" data-url="www.mwr.gov.com" data-img="images/slbs-202309-shbgm.png"><div class="inner"></div></li>
+                                <li class="" data-url="www.mwr.gov.com" data-img="images/slbs-202309-jsbgm.png" style="background: url(images/slbs-202309-jsbg.png);background-size: cover;"><div class="inner"></div></li>
+                                <li class="" data-url="www.mwr.gov.com" data-img="images/slbs-202309-fjbgm.png" style="background: url(images/slbs-202309-fjbg.png);background-size: cover;"><div class="inner"></div></li>
+                                <li class="" data-url="www.mwr.gov.com" data-img="images/slbs-202309-sxbgm.png" style="background: url(images/slbs-202309-sxbg.png);background-size: cover;"><div class="inner"></div></li>
+                                <li class="" data-url="www.mwr.gov.com" data-img="images/slbs-202309-shbgm.png" style="background: url(images/slbs-202309-shbg.png);background-size: cover;"><div class="inner"></div></li>
                             </ul>
                         </div>
                     </div>
@@ -764,6 +764,7 @@
     <script src="images/slick.js"></script>
     <script src="images/jquery.liMarquee.js"></script>
     <script src="images/jquery.rotating-slider.js"></script>
+    <!-- <script src="images/jquery.rotating-slider-app.js"></script> -->
     <script src="images/slbs-202309-index.js"></script>
     <script>
         $(document).ready(function () {
@@ -836,13 +837,13 @@
                 
             });
             $('.scrolltext').liMarquee();
-            
+            var slidewidth = 274;
             // pc
-            $('.pc .rotating-slider').rotatingSlider({
+            var pc = $('.pc .rotating-slider').rotatingSlider({
                 // slideHeight : Math.min(274, window.innerWidth -80),
                 // slideWidth : Math.min(460, window.innerWidth - 80),
                 autoRotateInterval: 5000,
-                slideHeight : 274,
+                slideHeight : slidewidth,
                 slideWidth : 460,
                 directionControls: false,
                 draggable:false,
@@ -850,8 +851,9 @@
                     $(".rotate-bg").css("background-image","url("+$('.rotating-slider .active-slide').attr('data-img')+")")
                 }
             });
-            // app
-            $('.app .rotating-slider').rotatingSlider({
+            
+            // // app
+            var app = $('.app .rotating-slider').rotatingSlider({
                 // slideHeight : Math.min(80, window.innerWidth -80),
                 // slideWidth : Math.min(290, window.innerWidth - 80),
                 autoRotateInterval: 5000,
@@ -874,7 +876,6 @@
         })
         $(function(){
             // $(window).resize(function(){
-                console.log('object');
                 if($(window).width() > 991) {
                 $(".rmbd-container ul li").hover(function(){
                 $(this).stop(true).addClass("act").animate({width:"680px"},1000).siblings().removeClass("act").stop(true).animate({width:"119px"},1000);

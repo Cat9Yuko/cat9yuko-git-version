@@ -60,6 +60,9 @@
   .rotating-slider {
     margin-top: 64px;
   }
+ .app .rotating-slider ul.slides li{
+  background-size: 100%;
+ }
   .logo-container {
     margin: auto;
     padding: 15px;
