@@ -643,22 +643,27 @@ nav {
 .rotate-bg * {
   box-sizing: initial;
 }
-.rotating-slider {
+.rotating-slider,
+.rotating-slider2 {
   margin-top: 90px;
 }
-.rotating-slider ul.slides li {
+.rotating-slider ul.slides li,
+.rotating-slider2 ul.slides li {
   color: #fff;
 }
-.rotating-slider ul.slides li:nth-of-type(1) {
+.rotating-slider ul.slides li:nth-of-type(1),
+.rotating-slider2 ul.slides li:nth-of-type(1) {
   background: url('slbs-202309-jsbg.png');
   background-size: 100%;
 }
-.rotating-slider ul.slides li:nth-of-type(2) {
+.rotating-slider ul.slides li:nth-of-type(2),
+.rotating-slider2 ul.slides li:nth-of-type(2) {
   background: url('slbs-202309-fjbg.png');
   background-size: 100%;
   position: relative;
 }
-.rotating-slider ul.slides li::after {
+.rotating-slider ul.slides li::after,
+.rotating-slider2 ul.slides li::after {
   content: '';
   position: absolute;
   top: 0;
@@ -667,24 +672,30 @@ nav {
   bottom: 0;
   background-color: rgba(14, 150, 113, 0.7);
 }
-.rotating-slider ul.slides li.previous-slide::after {
+.rotating-slider ul.slides li.previous-slide::after,
+.rotating-slider2 ul.slides li.previous-slide::after {
   background-color: rgba(0, 91, 172, 0.7);
 }
-.rotating-slider ul.slides li.next-slide::after {
+.rotating-slider ul.slides li.next-slide::after,
+.rotating-slider2 ul.slides li.next-slide::after {
   background-color: rgba(14, 150, 113, 0.7);
 }
-.rotating-slider ul.slides li.active-slide::after {
+.rotating-slider ul.slides li.active-slide::after,
+.rotating-slider2 ul.slides li.active-slide::after {
   content: none;
 }
-.rotating-slider ul.slides li:nth-of-type(3) {
+.rotating-slider ul.slides li:nth-of-type(3),
+.rotating-slider2 ul.slides li:nth-of-type(3) {
   background: url('slbs-202309-sxbg.png');
   background-size: 100%;
 }
-.rotating-slider ul.slides li:nth-of-type(4) {
+.rotating-slider ul.slides li:nth-of-type(4),
+.rotating-slider2 ul.slides li:nth-of-type(4) {
   background: url('slbs-202309-shbg.png');
   background-size: 100%;
 }
-.rotating-slider ul.slides li .inner {
+.rotating-slider ul.slides li .inner,
+.rotating-slider2 ul.slides li .inner {
   box-sizing: border-box;
   padding: 2em;
   height: 100%;

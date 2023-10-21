@@ -67,3 +67,6 @@ body{
     transform-origin: bottom center;
     width: 100%;
 }
+.rotating-slider ul.slides li.active-slide {
+    z-index: 20;
+}

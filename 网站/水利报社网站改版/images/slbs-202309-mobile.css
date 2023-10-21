@@ -7,11 +7,19 @@
   .m-hfimg,
   .m-channelt,
   .rmbd-slick2,
-  .apptopc {
+  #apptopc,.app {
     display: none !important;
   }
 }
 @media screen and (max-width: 991px) {
+  #apptopc {
+    word-break: normal;
+    color: #ffffff;
+    background-color: #005bac;
+    padding: 1px 3px;
+    font-size: 10px;
+    margin-left: 5px;
+  }
   /* reset style */
   .hidden-smxs {
     display: none !important;

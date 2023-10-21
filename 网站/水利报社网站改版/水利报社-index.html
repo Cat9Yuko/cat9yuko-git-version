@@ -389,13 +389,25 @@
             <div class="rotate-bg" style="background-image: url('images/slbs-202309-jsbgm.png');">
                 <div class="center-block-1280">
                     <div class="sszq-text">水事专区</div>
-                    <div class="rotating-slider">
-                        <ul class="slides">
-                            <li class="" data-url="www.mwr.gov.com" data-img="images/slbs-202309-jsbgm.png" style="background-image: url(images/slbs-202309-jsbg.png);"><div class="inner"></div></li>
-                            <li class="" data-url="www.mwr.gov.com" data-img="images/slbs-202309-fjbgm.png"><div class="inner"></div></li>
-                            <li class="" data-url="www.mwr.gov.com" data-img="images/slbs-202309-sxbgm.png"><div class="inner"></div></li>
-                            <li class="" data-url="www.mwr.gov.com" data-img="images/slbs-202309-shbgm.png"><div class="inner"></div></li>
-                        </ul>
+                    <div class="pc hidden-smxs">
+                        <div class="rotating-slider">
+                            <ul class="slides">
+                                <li class="" data-url="www.mwr.gov.com" data-img="images/slbs-202309-jsbgm.png" style="background-image: url(images/slbs-202309-jsbg.png);"><div class="inner"></div></li>
+                                <li class="" data-url="www.mwr.gov.com" data-img="images/slbs-202309-fjbgm.png"><div class="inner"></div></li>
+                                <li class="" data-url="www.mwr.gov.com" data-img="images/slbs-202309-sxbgm.png"><div class="inner"></div></li>
+                                <li class="" data-url="www.mwr.gov.com" data-img="images/slbs-202309-shbgm.png"><div class="inner"></div></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="app">
+                        <div class="rotating-slider">
+                            <ul class="slides">
+                                <li class="" data-url="www.mwr.gov.com" data-img="images/slbs-202309-jsbgm.png" style="background-image: url(images/slbs-202309-jsbg.png);"><div class="inner"></div></li>
+                                <li class="" data-url="www.mwr.gov.com" data-img="images/slbs-202309-fjbgm.png"><div class="inner"></div></li>
+                                <li class="" data-url="www.mwr.gov.com" data-img="images/slbs-202309-sxbgm.png"><div class="inner"></div></li>
+                                <li class="" data-url="www.mwr.gov.com" data-img="images/slbs-202309-shbgm.png"><div class="inner"></div></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -825,41 +837,32 @@
             });
             $('.scrolltext').liMarquee();
             
-            
-        })
-        $(function(){
-            $(window).width();
-            if($(window).width() <= 991) {
-                $('.rotating-slider').rotatingSlider({
-                slideHeight : Math.min(80, window.innerWidth -80),
-                slideWidth : Math.min(290, window.innerWidth - 80),
+            // pc
+            $('.pc .rotating-slider').rotatingSlider({
+                // slideHeight : Math.min(274, window.innerWidth -80),
+                // slideWidth : Math.min(460, window.innerWidth - 80),
                 autoRotateInterval: 5000,
-                // slideHeight : 452,
-                // slideWidth : 450,
+                slideHeight : 274,
+                slideWidth : 460,
                 directionControls: false,
+                draggable:false,
                 afterRotationStart: function(){
                     $(".rotate-bg").css("background-image","url("+$('.rotating-slider .active-slide').attr('data-img')+")")
                 }
             });
-
-            } else {
-                $(".rmbd-container ul li").hover(function(){
-                $(this).stop(true).addClass("act").animate({width:"680px"},1000).siblings().removeClass("act").stop(true).animate({width:"119px"},1000);
-                $(".zt-container").destroy();
-            });
-                $('.rotating-slider').rotatingSlider({
-                slideHeight : Math.min(274, window.innerWidth -80),
-                slideWidth : Math.min(460, window.innerWidth - 80),
+            // app
+            $('.app .rotating-slider').rotatingSlider({
+                // slideHeight : Math.min(80, window.innerWidth -80),
+                // slideWidth : Math.min(290, window.innerWidth - 80),
                 autoRotateInterval: 5000,
-                // slideHeight : 452,
-                // slideWidth : 450,
+                slideHeight : 80,
+                slideWidth : 290,
                 directionControls: false,
+                draggable:false,
                 afterRotationStart: function(){
                     $(".rotate-bg").css("background-image","url("+$('.rotating-slider .active-slide').attr('data-img')+")")
                 }
             });
-            }
-            
             // 扇形的链接跳转
             $(".slides li").each(function(){
                 $(this).click(function(url){
@@ -867,6 +870,22 @@
                     window.location = url
                 })
             })
+
+        })
+        $(function(){
+            $(window).resize(function(){
+                console.log('object');
+                if($(window).width() > 991) {
+                $(".rmbd-container ul li").hover(function(){
+                $(this).stop(true).addClass("act").animate({width:"680px"},1000).siblings().removeClass("act").stop(true).animate({width:"119px"},1000);
+            });
+            } else {
+
+            }
+            })
+            
+            
+            
         });
     </script>
 </body>
