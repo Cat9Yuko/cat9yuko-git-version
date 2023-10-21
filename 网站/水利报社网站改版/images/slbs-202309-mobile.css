@@ -5,7 +5,9 @@
   .m-rmbdimg,
   .m-more,
   .m-hfimg,
-  .m-channelt {
+  .m-channelt,
+  .rmbd-slick2,
+  .apptopc {
     display: none !important;
   }
 }
@@ -130,6 +132,13 @@
     margin: 0;
     line-height: 28px;
     padding: 0 10px;
+    /* 显示两行 */
+    word-break: break-all;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; /* 这里是超出几行省略 */
+    overflow: hidden;
   }
   section + section {
     margin-top: 0;
@@ -144,7 +153,7 @@
     padding: 0 15px;
   }
   .slick-mod2 .slick-item img,
-  .rmbd-slick .slick-item img {
+  .rmbd-slick2 .slick-item img {
     height: auto;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
@@ -166,13 +175,13 @@
     text-indent: 0;
   }
   .slick-mod2 .slick-dots,
-  .rmbd-slick .slick-dots {
+  .rmbd-slick2 .slick-dots {
     bottom: 15px;
     left: 0;
     right: 0;
   }
   .slick-mod2 .slick-dots li,
-  .rmbd-slick .slick-dots li {
+  .rmbd-slick2 .slick-dots li {
     background-color: #b2bcd8;
   }
   .list {
@@ -265,7 +274,7 @@
   .rmbd-container ul .pic {
     background-size: cover;
   }
-  .rmbd-slick .slick-dots li:nth-child(1) {
+  .rmbd-slick2 .slick-dots li:nth-child(1) {
     width: 8px;
   }
   .rotate-bg {

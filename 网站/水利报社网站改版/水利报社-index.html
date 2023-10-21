@@ -20,7 +20,7 @@
                 <div class="clearfix logo-container">
                     <img class="logo" src="images/slbs-202309-logo.png" alt="">
                     <div class="lword">
-                        <p>主办：中国水利报社</p>
+                        <p>主办：中国水利报社 <span id="apptopc">切换电脑版</span></p>
                         <p>互联网新闻信息服务许可证 编号：10120170019</p>
                     </div>
                 </div>
@@ -246,7 +246,75 @@
             <div class="center-block-1280">
                 <div class="chnltitle npd"><span class="rmbd"><a href="" target="_blank" rel="noopener noreferrer">融媒报道</a></span></div>
                 <div class="rmbd-container">
-                    <ul class="rmbd-slick">
+                    <ul class="rmbd-slick hidden-smxs">
+                        <li class="act">
+                            <div class="pic" style="background-image: url('images/demo4.jpg');">
+                                <a href="">
+                                    <img class="m-rmbdimg" src="images/demo4.jpg" alt="">
+                                    <div class="txt">
+                                        <p class="p1">水利部技术帮扶工作组</p>
+                                        <p class="p2">水利部技术帮扶工作组</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pic" style="background-image: url('images/demo4.jpg');">
+                                <a href="">
+                                    <img class="m-rmbdimg" src="images/demo4.jpg" alt="">
+                                    <div class="txt">
+                                        <p class="p1">水利部技术帮扶工作组</p>
+                                        <p class="p2">水利部技术帮扶工作组</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pic" style="background-image: url('images/demo4.jpg');">
+                                <a href="">
+                                    <img class="m-rmbdimg" src="images/demo4.jpg" alt="">
+                                    <div class="txt">
+                                        <p class="p1">水利部技术帮扶工作组推</p>
+                                        <p class="p2">水利部技术帮扶工作组推</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pic" style="background-image: url('images/demo4.jpg');">
+                                <a href="">
+                                    <img class="m-rmbdimg" src="images/demo4.jpg" alt="">
+                                    <div class="txt">
+                                        <p class="p1">水利部技术帮扶工作组</p>
+                                        <p class="p2">水利部技术帮扶工作组</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pic" style="background-image: url('images/demo4.jpg');">
+                                <a href="">
+                                    <img class="m-rmbdimg" src="images/demo4.jpg" alt="">
+                                    <div class="txt">
+                                        <p class="p1">水利部技术帮扶工作组</p>
+                                        <p class="p2">水利部技术帮扶工作组</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pic" style="background-image: url('images/demo4.jpg');">
+                                <a href="">
+                                    <img class="m-rmbdimg" src="images/demo4.jpg" alt="">
+                                    <div class="txt">
+                                        <p class="p1">水利部技术帮扶工作组</p>
+                                        <p class="p2">水利部技术帮扶工作组</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="rmbd-slick rmbd-slick2">
                         <li class="act">
                             <div class="pic" style="background-image: url('images/demo4.jpg');">
                                 <a href="">
@@ -713,6 +781,48 @@
                     }
                 }]
             });
+            $(".zt-container").slick({
+                dots: false,
+                autoplay: false,
+                slidesToShow: 3,
+                responsive: [{
+                    breakpoint: 991,
+                    settings: {
+                        dots: false,
+                        slidesToShow: 1,
+                        autoplay: true
+                    }
+                }]
+            });
+            $(".rmbd-slick2").slick({
+                dots: false,
+                autoplay: false,
+                responsive:[{
+                    breakpoint: 991,
+                    settings: {
+                    dots: true,
+                    autoplay: true
+                    }
+                }]
+            });
+            $(".showitem6").slick({
+                dots: false,
+                autoplay: false,
+                slidesToShow: 6,
+                responsive:[{
+                    breakpoint: 991,
+                    settings:{
+                    dots: false,
+                    autoplay: true,
+                    // infinite: false,
+                    speed: 300,
+                    slidesToShow: 1,
+                    centerMode: false,
+                    variableWidth: true
+                    }
+                }]
+                
+            });
             $('.scrolltext').liMarquee();
             
             
@@ -731,26 +841,11 @@
                     $(".rotate-bg").css("background-image","url("+$('.rotating-slider .active-slide').attr('data-img')+")")
                 }
             });
-            $(".zt-container").slick({
-                dots: false,
-                autoplay: true
-            });
-            $(".rmbd-slick").slick({
-                dots: true,
-                autoplay: true
-            });
-            $(".showitem6").slick({
-                dots: false,
-                autoplay: true,
-                // infinite: false,
-                speed: 300,
-                slidesToShow: 1,
-                centerMode: false,
-                variableWidth: true
-            });
+
             } else {
                 $(".rmbd-container ul li").hover(function(){
                 $(this).stop(true).addClass("act").animate({width:"680px"},1000).siblings().removeClass("act").stop(true).animate({width:"119px"},1000);
+                $(".zt-container").destroy();
             });
                 $('.rotating-slider').rotatingSlider({
                 slideHeight : Math.min(274, window.innerWidth -80),

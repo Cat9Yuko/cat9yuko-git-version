@@ -1302,3 +1302,28 @@ footer {
   padding: 9px 12px;
   color: #ffffff;
 }
+.article-file:empty {
+  display: none;
+}
+.backmobile {
+  width: 200px;
+  height: 200px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  background: #efefef;
+  color: #000;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  overflow: hidden;
+}
+.backmobile img {
+  display: block;
+  margin: 0 auto;
+  width: 40%;
+  height: auto;
+  margin-top: 20px;
+}
