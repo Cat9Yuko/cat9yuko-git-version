@@ -52,6 +52,40 @@ header {
   background-position: center top;
   background-size: cover;
 }
+/* 天天加头部动画 */
+header {
+  background-image: url("nsbd3zn-202310-headerbg.png");
+  height: 850px;
+  padding-top: 285px;
+  text-align: center;
+}
+.header-word {
+  width: 1286px;
+  height: 289px;
+  margin: 0 auto;
+  animation: move1 1s 0.2s;
+  -webkit-animation: move1 1s 0.2s;
+  animation-fill-mode: backwards;
+  -webkit-animation-fill-mode: backwards;
+  overflow: hidden;
+}
+@keyframes move1{
+  from{height:0px;}
+  to{height:289px;}
+}
+@-webkit-keyframes move1{
+  from{height:0px;}
+  to{height:289px;}
+}
+@-moz-keyframes move1{
+  from{height:0px;}
+  to{height:289px;}
+}
+@-o-keyframes move1{
+  from{height:0px;}
+  to{height:289px;}
+}
+/* 头部动画结束 */
 .hnews {
   background-image: url('nsbd3zn-202310-hnewsbg.png');
   height: 96px;
