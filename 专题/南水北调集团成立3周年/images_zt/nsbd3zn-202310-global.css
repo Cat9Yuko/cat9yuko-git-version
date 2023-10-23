@@ -53,7 +53,7 @@ header {
   background-size: cover;
 }
 /* 天天加头部动画 */
-header {
+/* header {
   background-image: url("nsbd3zn-202310-headerbg.png");
   height: 850px;
   padding-top: 285px;
@@ -84,7 +84,7 @@ header {
 @-o-keyframes move1{
   from{height:0px;}
   to{height:289px;}
-}
+} */
 /* 头部动画结束 */
 .hnews {
   background-image: url('nsbd3zn-202310-hnewsbg.png');
@@ -202,7 +202,7 @@ header {
   height: 74px;
   line-height: 24px;
   text-align: center;
-  color: #d30d0d;
+  color: #ffffff;
   padding: 11px 11px 0;
 }
 .cgbg p {

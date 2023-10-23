@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <title>Ministry of Water Resources the People’s Republic of China</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/swiper-3.4.2.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/en-202310-global.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="center-block-1280">
+                <div class="nav clearfix">
+                    <div class="nav-item"><a href="">Home</a></div>
+                    <div class="nav-item haschild"><a href="">THE MINISTRY</a>
+                        <div class="nav-childcontainer clearfix">
+                            <div class="nav-tchild"><a href="">ABOUT MINISTRY</a></div>
+                            <div class="nav-tchild"><a href="">LEADERSHIP</a></div>
+                            <div class="nav-tchild"><a href="">DEPARTMENTS</a></div>
+                            <div class="nav-tchild"><a href="">INSTITUTIONS</a></div>
+                        </div>
+                    </div>
+                    <div class="nav-item"><a href="">Main Responsibilities</a></div>
+                    <div class="nav-item"><a href="">News</a></div>
+                    <div class="nav-item"><a href="">PROJECTS</a></div>
+                    <div class="nav-item"><a href="">DOCUMENTS</a></div>
+                    <div class="backzh">
+                        <a href="http://www.mwr.gov.cn/">中文</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="indexbg">
+            <div class="center-block-1280 searchre">
+                <div class="search-container clearfix">
+                    <input class="search-word" type="text"><input class="search-submit" type="image" src="img/en-202310-iconsearch.png">
+                </div>
+            </div>
+            
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><a href=""><img src="img/demo.jpg" alt=""><p>Xi rallies Party for "unstoppable" pursuit to national rejuvenation as CPC celebrates centenary</p></a></div>
+                    <div class="swiper-slide"><a href=""><img src="img/demo.jpg" alt=""><p>Xi rallies Party for "unstoppable" pursuit to national rejuvenation as CPC celebrates centenary</p></a></div>
+                    <div class="swiper-slide"><a href=""><img src="img/demo.jpg" alt=""><p>Xi rallies Party for "unstoppable" pursuit to national rejuvenation as CPC celebrates centenary</p></a></div>
+                </div>
+                <div class="pagination"></div>
+              </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class=""></div>
+    </main>
+    <footer></footer>
+    <script src="js/jquery-3.7.0.min.js"></script>
+    <script src="js/swiper-3.4.2.min.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/en-202310-index.js"></script>
+    <script>
+        $(function(){
+            var swiper = new Swiper('.swiper-container',{
+                    autoplay: 3000, //是否自动滚动
+                    speed: 500,      //滚动速速
+                    autoplayDisableOnInteraction: true,
+                    loop: true,
+                    centeredSlides: true,
+                    slidesPerView: 3, //当前选中
+                    pagination: '.swiper-pagination',
+                    paginationClickable: true,
+                    prevButton: '.swiper-button-prev', // 左右切换
+                    nextButton: '.swiper-button-next', // 左右切换
+                    onInit: function(swiper) {
+                        swiper.slides[3].className = "swiper-slide swiper-slide-active"; //当前选中 状态
+                    },
+                    breakpoints: {
+                        100: {
+                            slidesPerView: 0,
+                        }
+                    }
+                });
+        })
+    </script>
+</body>
+</html>
