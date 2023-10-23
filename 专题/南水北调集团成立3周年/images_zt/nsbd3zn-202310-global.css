@@ -399,13 +399,13 @@ header {
 
 #box .prev {
   left: 0px;
-  background: url("nsbd3zn-202310-arrowleft.png");
+  background: url('nsbd3zn-202310-arrowleft.png');
 }
 
 #box .next {
   right: 0px;
   /* background-position: -39px 0; */
-  background: url("nsbd3zn-202310-arrowright.png");
+  background: url('nsbd3zn-202310-arrowright.png');
 }
 
 footer {
@@ -442,4 +442,28 @@ footer {
 
 .sina {
   margin-left: 46px;
+}
+/* 新增图片列表 */
+.img-list {
+  width: 1150px;
+  margin: 0 auto;
+}
+.img-list .img-item {
+  float: left;
+  width: 258px;
+}
+.img-list .img-item img {
+  width: 257px;
+  height: 308px;
+}
+.img-item + .img-item {
+  margin-left: 38px;
+}
+.img-item p {
+  line-height: 30px;
+  text-align: center;
+  padding: 0 20px;
+}
+.row {
+  margin-top: 20px;
 }
