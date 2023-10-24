@@ -431,7 +431,8 @@ nav {
 .swiper-pagination6 .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background: #024888;
 }
-.swiper-button-prev2,.swiper-button-next2 {
+.swiper-button-prev2,
+.swiper-button-next2 {
   position: absolute;
   width: 9px;
   height: 13px;
@@ -439,18 +440,18 @@ nav {
   bottom: 0;
 }
 .swiper-button-prev2 {
-  background-image: url("../img/en-202310-arrowleft2-d.png");
+  background-image: url('../img/en-202310-arrowleft2-d.png');
   left: 0;
 }
 .swiper-button-next2 {
-  background-image: url("../img/en-202310-arrowright2-d.png");
+  background-image: url('../img/en-202310-arrowright2-d.png');
   left: 44px;
 }
 .swiper-button-prev2.swiper-button-disabled {
-  background-image: url("../img/en-202310-arrowleft2.png");
+  background-image: url('../img/en-202310-arrowleft2.png');
 }
 .swiper-button-next2.swiper-button-disabled {
-  background-image: url("../img/en-202310-arrowright2.png");
+  background-image: url('../img/en-202310-arrowright2.png');
 }
 
 .channel-title {
@@ -525,4 +526,25 @@ nav {
 .flpos {
   position: relative;
   height: 382px;
+}
+.section6 {
+  padding-bottom: 126px;
+}
+footer {
+  background-image: url('../img/en-202310-inidexfooterbg.jpg');
+  height: 500px;
+  background-position: center top;
+  background-size: cover;
+  text-align: center;
+  padding-top: 150px;
+  box-sizing: border-box;
+}
+.footerlink {
+  margin-bottom: 80px;
+}
+footer p {
+  font-size: 24px;
+  color: #ffffff;
+  font-family: 'Georgia';
+  line-height: 41px;
 }
