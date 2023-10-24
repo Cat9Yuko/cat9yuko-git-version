@@ -1338,3 +1338,79 @@ footer {
   height: auto;
   margin-top: 20px;
 }
+.listimg-list .img-item {
+  width: 241px;
+  float: left;
+  text-align: center;
+}
+.listimg-list .img-item + .img-item {
+  margin-left: 42px;
+}
+.listimg-list + .listimg-list {
+  margin-top: 30px;
+}
+.listimg-list .img-item p {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: #222222;
+  padding-top: 20px;
+}
+.listpage-fr.ldhd {
+  background-image: url('slbs-202309-listpagebar810.jpg');
+  margin-bottom: 27px;
+}
+
+.ldjs-container {
+  background-color: #f0f6f9;
+  padding-top: 52px;
+}
+.ldjs-img img {
+  width: 157px;
+  height: 220px;
+}
+.ldjs-img {
+  text-align: center;
+}
+.ldjs-img h3 {
+  font-size: 22px;
+  color: #005bac;
+  line-height: 32px;
+  margin: 20px 0;
+}
+.ldjs-word {
+  padding: 0 25px 25px;
+}
+.ldjs-word p {
+  line-height: 26px;
+  color: #222222;
+}
+.ldjs-word p + p {
+  margin-top: 25px;
+}
+.slick-mod2.listpage-mod {
+  width: 100%;
+  height: 455px;
+}
+.slick-mod2.listpage-mod .slick-item img {
+  height: 100%;
+}
+.listpage-fr.lsitfl-title {
+  background-image: none;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+.imglist-s3clumn + .imglist-s3clumn {
+  margin-top: 20px;
+}
+.imglist-s3clumn .s3clumn-item {
+  float: left;
+}
+.imglist-s3clumn .s3clumn-item img {
+  width: 260px;
+  height: 158px;
+  display: block;
+}
+.imglist-s3clumn .s3clumn-item + .s3clumn-item {
+  margin-left: 13px;
+}
