@@ -93,8 +93,10 @@
             </div>
             <div class="list-container clearfix">
                 <div class="fl w810">
-                    <div class="m-channelt" style="background-image: url('images/slbs-202309-icon4.png');">流域</div>
-                    <div class="tab-slect">
+
+                    <div class="listpage-fr slb appchnltitle"><span class="rmbd"><a href="" target="_blank" rel="noopener noreferrer">栏目标题</a></span></div>
+
+                    <div class="tab-slect clearfix">
                         <div class="slect-row clearfix">
                             <div class="slect-item act"><a href="">2023年</a></div>
                             <div class="slect-item"><a href="">2023年</a></div>
@@ -105,8 +107,6 @@
                             <div class="slect-item"><a href="">2023年</a></div>
                             <div class="slect-item"><a href="">2023年</a></div>
                             <div class="slect-item"><a href="">2023年</a></div>
-                        </div>
-                        <div class="slect-row clearfix">
                             <div class="slect-item"><a href="">2023年</a></div>
                             <div class="slect-item"><a href="">2023年</a></div>
                             <div class="slect-item"><a href="">2023年</a></div>
@@ -187,6 +187,8 @@
     <script src="images/jquery.liMarquee.js"></script>
     <script src="images/jquery.rotating-slider.js"></script>
     <script src="images/slbs-202309-index.js"></script>
-    
+    <script>
+        $(".slect-row").scrollLeft($(".slect-item.act").offset().left - 10)
+    </script>
 </body>
 </html>

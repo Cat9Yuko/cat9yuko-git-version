@@ -95,38 +95,52 @@
             <div class="list-container clearfix">
                 <div class="center-block-1280">
                     <div class="searchp-container">
+                    <div class="listpage-fr slb"><span class="rmbd"><a href="" target="_blank" rel="noopener noreferrer">高级搜索</a></span></div>
                         <div class="searchp-ceter">
-                            <div class="searchp-item clearfix">
-                                <div class="fl searchp-title">标　题：</div>
-                                <div class="fl"><input class="searchp-input" type="text"></div>
-                            </div>
-                            <div class="searchp-item clearfix">
-                                <div class="fl searchp-title">作　者：</div>
-                                <div class="fl"><input class="searchp-input" type="text"></div>
-                            </div>
-                            <div class="searchp-item clearfix">
-                                <div class="fl searchp-title">正　文：</div>
-                                <div class="fl"><input class="searchp-input" type="text"></div>
-                            </div>
-                            <div class="searchp-item clearfix">
-                                <div class="fl searchp-title">类　型：</div>
-                                <div class="fl clearfix">
-                                    <label class="label"><input type="radio" name="newstype"><div class="iconradio"></div>新闻资讯</label>
-                                    <label class="label"><input type="radio" name="newstype"><div class="iconradio"></div>报刊杂志</label>
+                            <form action="aaa" method="get">
+                                <div class="searchp-appbg">
+                                    <div class="searchp-item clearfix">
+                                        <div class="fl searchp-title">标　题：</div>
+                                        <div class="fl"><input class="searchp-input" type="text" name="title" placeholder="请输入内容"></div>
+                                    </div>
+                                    <div class="searchp-item clearfix">
+                                        <div class="fl searchp-title">作　者：</div>
+                                        <div class="fl"><input class="searchp-input" type="text" name="author" placeholder="请输入内容"></div>
+                                    </div>
+                                    <div class="searchp-item clearfix">
+                                        <div class="fl searchp-title">正　文：</div>
+                                        <div class="fl"><input class="searchp-input" type="text" name="content" placeholder="请输入内容"></div>
+                                    </div>
+                                    <div class="searchp-item clearfix hidden-smxs">
+                                        <div class="fl searchp-title">类　型：</div>
+                                        <div class="fl clearfix">
+                                            <label class="label"><input type="radio" name="channelid" value="156185" checked><div class="iconradio"></div>新闻资讯</label>
+                                            <label class="label"><input type="radio" name="channelid" value="113513"><div class="iconradio"></div>报刊杂志</label>
+                                        </div>
+                                    </div>
+                                    <div class="searchp-item clearfix app-select">
+                                        <div class="fl searchp-title">类　型：</div>
+                                        <div class="fl clearfix">
+                                            <select name="channelid">
+                                                <option value="156185">新闻资讯&gt;</option>
+                                                <option value="113513">报刊杂志</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="searchp-item clearfix">
+                                        <div class="fl searchp-title">日　期：</div>
+                                        <div class="fl clearfix">
+                                            <input id="searchtimes" class="searchtimes" readonly placeholder="开始时间"><span class="timeword hidden-smxs">至</span><span class="timeword">-</span><input id="searchtimee" class="searchtimee" type="text" readonly placeholder="结束时间"><span class="timed">&gt;</span>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="searchp-item clearfix">
-                                <div class="fl searchp-title">日　期：</div>
-                                <div class="fl clearfix">
-                                    <input id="searchtimes" class="searchtimes" type="" name="" value=""><span class="timeword">至</span><input id="searchtimee" class="searchtimee" type="text">
+                                <div class="searchp-item clearfix searchsubmit">
+                                    <div class="fl searchp-title hidden-smxs">　　　　</div>
+                                    <div class="fl clearfix">
+                                        <button type="submit">检索</button>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="searchp-item clearfix">
-                                <div class="fl searchp-title">　　　　</div>
-                                <div class="fl clearfix">
-                                    <button type="submit">检索</button>
-                                </div>
-                            </div>
+                            </form>
                         </div>
                     </div>
                 </div>

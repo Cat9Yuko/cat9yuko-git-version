@@ -195,6 +195,14 @@ nav {
 .nav-child-item:hover {
   background-color: #0097e6;
 }
+.nav-child.bzzc {
+  width: 465px;
+  background-color: #005bac;
+  padding: 0 15px;
+}
+.nav-child.bzzc a + a {
+  margin-left: 15px;
+}
 /* carousel */
 .slick-mod {
   width: 1280px;
@@ -482,6 +490,7 @@ nav {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  font-size: 16px;
 }
 .zt-item + .zt-item {
   margin-left: 10px;
@@ -1453,8 +1462,15 @@ footer {
   margin-bottom: 40px;
 }
 .slect-item {
-  padding: 0 15px;
+  width: 90px;
+  /* padding: 0 15px; */
+  text-align: center;
   float: left;
+  margin-bottom: 17px;
+  line-height: 22px;
+}
+.slect-row .slect-item:nth-child(10n) {
+  border-left: none;
 }
 .slect-item + .slect-item {
   border-left: 2px solid #dddddd;
@@ -1716,4 +1732,54 @@ footer {
   height: 32px;
   border: none;
   border-radius: 3px;
+}
+.searchsubmit {
+  margin-top: 24px;
+}
+.searchres-container {
+  background-color: #f9fcfd;
+  border: 1px solid #d5e4eb;
+  padding: 20px 30px;
+  margin-bottom: 50px;
+}
+.searchres {
+  width: 1025px;
+}
+.searchres-item1 span {
+  color: #005bac;
+  font-weight: bold;
+  line-height: 32px;
+}
+.searchres-item2 input[type='text'] {
+  width: 178px;
+  height: 32px;
+  border: 1px solid #005bac;
+  border-radius: 5px;
+  margin-left: 20px;
+  margin-right: 25px;
+  outline: none;
+  text-indent: 10px;
+}
+.searchres-item2 input[type='checkbox'] {
+  width: 22px;
+  height: 22px;
+  border: 1px solid #9ab4bf;
+  vertical-align: middle;
+  border-radius: 5px;
+  margin-right: 11px;
+  margin-top: -2px;
+}
+.searchres-item3 button {
+  width: 138px;
+  height: 32px;
+  background-color: #005bac;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+}
+.listpage-ul.searchres  {
+  width: 100%;
+}
+.listpage-ul.searchres .listpage-title {
+  width: 80%;
 }

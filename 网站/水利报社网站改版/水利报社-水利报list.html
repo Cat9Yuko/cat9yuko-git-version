@@ -94,18 +94,17 @@
             </div>
             <div class="list-container clearfix">
                 <div class="fl w810">
-                    <div class="m-channelt" style="background-image: url('images/slbs-202309-icon4.png');">流域</div>
-                    <div class="listpage-fr slb"><span class="rmbd"><a href="" target="_blank" rel="noopener noreferrer">报纸头条</a></span><div class="en">CHINA WATER RESOURCES NEWS</div></div>
+                    <div class="listpage-fr slb"><span class="rmbd"><a href="" target="_blank" rel="noopener noreferrer">报纸头条</a></span><div class="en hidden-smxs">CHINA WATER RESOURCES NEWS</div></div>
                     <div class="slb-container">
                         <div class="slb-title">李国英调研西藏水利工作</div>
                         <div class="slb-time">总第 5433 期 本期出版日期： 2023-10-20</div>
                     </div>
                     <div class="slbsearch-container">
-                        <form action="aaa" method="get">
-
-                            <span>内容检索 <input class="slbsearch-content" type="text" placeholder="请输入内容"></span><span>期号<input class="slbsearch-num" type="text" placeholder="请输入期号"><span class="qiw">期</span></span>
-                            <span>出版日期<input id="slbsearch-time" class="slbsearch-time" type="text" placeholder="请输入日期"></span><span><button type="submit">确定</button></span>
-                        </form>
+                        <span>
+                            <span>内容检索 <input class="slbsearch-content" type="text" placeholder="请输入内容"></span><span>期号<input class="slbsearch-num" type="text" placeholder="请输入期号"><span class="qiw hidden-smxs">期</span></span>
+                            <span>出版日期<input id="slbsearch-time" readonly class="slbsearch-time" type="text" placeholder="请输入日期"></span>
+                        </span>
+                        <span><button type="submit">确定</button></span>
                     </div>
 
                     <div class="slb-res">
@@ -361,7 +360,7 @@
                     </div>
                     
                 </div>
-                <div class="fr w420 hidden-smxs">
+                <div class="fr w420">
                     <div class="slb-desc">
                         <div class="desc-img"><img src="images/slbs-202309-iconzgslb.jpg" alt=""></div>
                         <div class="desc-word">
@@ -416,7 +415,7 @@
         xvDate({
             'targetId':'slbsearch-time',
             'format':'-',
-            'hms':'off',
+            'hms':'off'
         })
     </script>
 </body>
