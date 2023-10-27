@@ -6,6 +6,7 @@
 ::after {
   margin: 0;
   padding: 0;
+  box-sizing: inherit;
 }
 a {
   color: inherit;
@@ -51,6 +52,7 @@ section + section {
   background-position: center top;
   height: 935px;
   background-size: cover;
+  margin-bottom: 30px;
 }
 nav {
   background-image: url('../img/en-202310-navbg.jpg');
@@ -95,7 +97,7 @@ nav {
   font-family: 'Microsoft Yahei';
   color: #ffffff;
   float: right;
-  margin: 12px 2px 0 0;
+  margin: 22px 2px 0 0;
 }
 .nav-item.haschild:hover .nav-childcontainer,
 .nav-item.haschild:hover::after {
@@ -365,6 +367,10 @@ nav {
 .swiper-container5 .tit1 {
   margin: 4px 0;
   padding: 0 13px;
+}
+.swiper-container4 .tit1 {
+  height: 100px;
+  padding-top: 10px;
 }
 .swiper-container4 .swiper-button-prev,
 .swiper-container4 .swiper-button-next {
