@@ -608,3 +608,93 @@ footer.footerbg {
 .article-content p {
   margin-bottom: 40px;
 }
+.channel-title2 {
+  font-size: 28px;
+  text-align: center;
+  color: #0464b2;
+  font-family: "Trebuchet MS";
+  background-image: linear-gradient(#014a58,#014a58);
+  background-position: center;
+  background-size: 100% 1px;
+  background-repeat: no-repeat;
+  margin-top: 35px;
+  margin-bottom: 80px;
+}
+.channel-title2 span {
+  padding: 0 21px;
+  background-color: #ffffff;
+}
+.channel-tabs {
+  display: table;
+  margin-bottom: 82px;
+}
+.tabs-item {
+  display: table-cell;
+  width: 1%;
+  table-layout: fixed;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 42px;
+  font-size: 32px;
+  color: #333333;
+  font-family: "Trebuchet MS";
+  border-radius: 3px;
+}
+.tabs-item.act {
+  background-color: #6994c7;
+  color: #ffffff;
+}
+.ministry-article p {
+  font-size: 24px;
+  color: #6e6e6f;
+  font-family: "Georgia";
+  line-height: 35px;
+  margin-bottom: 36px;
+}
+.leader + .leader {
+  margin-top: 110px;
+}
+.leadership-container {
+  padding-bottom: 130px;
+}
+.leadership-title{
+  text-align: center;
+  font-size: 32px;
+  color: #333333;
+  font-family: "Trebuchet MS";
+  margin-bottom: 60px;
+}
+.ld-img {
+  width: 200px;
+}
+.ld-img img {
+  display: block;
+}
+.ld-img p {
+  padding: 12px 0;
+  background-color: #3382c5;
+  text-align: center;
+  color: #ffffff;
+  font-size: 24px;
+  font-family: "Georgia";
+}
+.ld-desc {
+  width: 1040px;
+}
+.ld-desc > p {
+  font-size: 24px;
+  color: #6e6e6f;
+  font-family: "Georgia";
+  line-height: 36px;
+  text-align: justify;
+}
+.readmore {
+  float: right;
+  font-size: 20px;
+  color: #6e6e6f;
+  font-family: 'Trebuchet MS';
+  margin-top: 20px;
+}
+.leadershiplist-item + .leadershiplist-item {
+  margin-top: 94px;
+}
