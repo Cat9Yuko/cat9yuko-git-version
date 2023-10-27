@@ -145,7 +145,7 @@ nav {
 }
 .search-word {
   height: 22px;
-  width: 220px;
+  width: 210px;
   float: left;
   margin-right: 11px;
   border: none;
@@ -370,7 +370,6 @@ nav {
 }
 .swiper-container4 .tit1 {
   height: 100px;
-  padding-top: 10px;
 }
 .swiper-container4 .swiper-button-prev,
 .swiper-container4 .swiper-button-next {
@@ -553,4 +552,59 @@ footer p {
   color: #ffffff;
   font-family: 'Georgia';
   line-height: 41px;
+}
+/* 细览 */
+.indexbg.headerbg {
+  background-image: url("../img/en-202310-headerbg.jpg");
+  height: 335px;
+  margin-bottom: 0;
+}
+footer.footerbg {
+  background-image: url("../img/en-202310-footerbg.jpg");
+  height: 335px;
+  padding-top: 90px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.curpage {
+  padding: 20px 0;
+}
+.article-title {
+  font-size: 46px;
+  text-align: center;
+  color: #0464b2;
+  font-family: "Trebuchet MS";
+  line-height: 49px;
+  margin-bottom: 30px;
+  margin-top: 50px;
+}
+.article-time {
+  text-align: center;
+  font-size: 18px;
+  color: #6e6e6f;
+  font-family: "Georgia";
+  margin-bottom: 27px;
+}
+.wx,.wb {
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  background-image: url("../img/en-202310-iconwx.jpg");
+  vertical-align: middle;
+  margin-left: 23px;
+  cursor: pointer;
+}
+.wb {
+  margin-left: 5px;
+  background-image: url("../img/en-202310-iconwb.jpg");
+}
+.article-content {
+  font-size: 24px;
+  color: #6e6e6f;
+  font-family: "Georgia";
+  line-height: 40px;
+  text-align: justify;
+}
+.article-content p {
+  margin-bottom: 40px;
 }

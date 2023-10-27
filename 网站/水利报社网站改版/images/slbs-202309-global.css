@@ -1402,7 +1402,7 @@ footer {
 }
 .slick-mod2.listpage-mod {
   width: 100%;
-  height: 455px;
+  height: auto;
 }
 .slick-mod2.listpage-mod .slick-item img {
   height: 100%;
@@ -1465,16 +1465,16 @@ footer {
   margin-bottom: 40px;
 }
 .slect-item {
-  width: 90px;
-  /* padding: 0 15px; */
+  /* width: 90px; */
+  padding: 0 15px;
   text-align: center;
   float: left;
   margin-bottom: 17px;
   line-height: 22px;
 }
-.slect-row .slect-item:nth-child(10n) {
+/* .slect-row .slect-item:nth-child(10n) {
   border-left: none;
-}
+} */
 .slect-item + .slect-item {
   border-left: 2px solid #dddddd;
 }

@@ -7,7 +7,6 @@
     <title>Ministry of Water Resources the People’s Republic of China</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/swiper-3.4.2.min.css">
-    <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/en-202310-global.css">
 </head>
 <body>
@@ -50,7 +49,7 @@
                 </div>
             </div>
         </nav>
-        <div class="indexbg">
+        <div class="indexbg headerbg">
             <div class="center-block-1280 searchre">
                 <div class="search-container clearfix">
                     <input class="search-word" type="text"><input class="search-submit" type="image" src="img/en-202310-iconsearch.png">
@@ -60,22 +59,65 @@
         </div>
     </header>
     <main class="main">
-        <div class="center-block-1280"></div>
-    </main>
-    <footer>
-        <div class="footerlink">
-            <a href=""><img src="img/en-202310-footerlink1.png" alt=""></a>
-            <a href=""><img src="img/en-202310-footerlink2.png" alt=""></a>
+        <div class="center-block-1280">
+            <div class="curpage"><a href="">Home</a> &gt; <a href="">News</a></div>
+            <div class="article-container">
+                <div class="article-title">Guidance for building modern civilization of Chinese <br>nation</div>
+                <div class="article-time"><span>2023-06-05 14:15</span><span class="wx"></span><span class="wb"></span>
+                    <div class="wechatshare" style="background: #FFFFFF;width: 233px;border: 1px solid lightgray;display: none;position: absolute; right: 40%; ">
+                        <div class="wecs-container " style="width: 230px; margin: 0 auto; background: #FFFFFF;padding-top: 5px;padding-bottom: 5px; ">
+                            <div id="qrcode" style="padding:10px "></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="article-content">
+                    <p align="center"><img src="img/demo.jpg" alt=""></p>
+                    <p>The Chinese Academy of History building looks like a a traditional Chinese cauldron, or "ding." </p>
+                    <p>On Friday, Chinese President Xi Jinping delivered a keynote speech at a symposium on cultural inheritance and development in Beijing.</p>
+                    <p>Xi's speech comprehensively summarized and expounded the outstanding characteristics of the Chinese civilization, profoundly highlighted the significance of integrating the basic principles of Marxism with traditional Chinese culture, and put forward the major task of building the modern civilization of the Chinese nation. His speech has provided guidance for forging a new chapter of socialist culture with Chinese characteristics at a new historical starting point.</p>
+                    <p>Xi put forward a series of new ideas, new perspectives and new judgments on cultural construction, promoting the creative transformation and innovative development of traditional Chinese culture. His important discourse on combining the basic principles of Marxism with China's specific realities and traditional Chinese culture, and his series of important discourses on inheriting and promoting Chinese culture, and striving to build the modern civilization of the Chinese nation, displayed a broad vision and scientific rigor.</p>
+                    <p>President Xi pointed out that the Chinese civilization has the prominent characteristics of continuity, innovation, unity, inclusiveness and peace. These "five prominent characteristics" fundamentally determine that the Chinese nation will inevitably follow its own path. The long-standing Chinese civilization has nurtured the precious spiritual qualities of the Chinese nation and cultivated the lofty values pursued by the Chinese people.</p>
+                    <p>Xi has repeatedly emphasized the need to combine the basic principles of Marxism with China's specific realities and with traditional Chinese culture. During this symposium, he made a comprehensive and profound exposition on the "second combination," and pointed out that the premise of this "combination" is mutual compatibility, and the result is mutual achievement, which has solidified the foundation for China's modernization path, opened up space for innovation and consolidated cultural subjectivity.</p>
+                    <p>Civilization is like water, nourishing everything silently. On the new journey, we must deeply implement the important statements made by President Xi regarding the inheritance and development of culture, which will inject powerful cultural nourishment and spiritual strength into the construction of a strong nation and the rejuvenation of the Chinese nation.</p>
+                    <p>Source: Chinadaily</p>
+                </div>
+            </div>
         </div>
+    </main>
+    <footer class="footerbg">
         <p>Copyright© Ministry of Water Resources , the People's Republic of China </p>
         <p>Organizer : Intemational Economic & Technical Cooperation and Exchange Center , MWR</p>
         <p>Water Resources Information Center , MWR</p>
     </footer>
     <script src="js/jquery-3.7.0.min.js"></script>
     <script src="js/swiper-3.4.2.min.js"></script>
-    <script src="js/slick.js"></script>
     <script src="js/en-202310-index.js"></script>
-    <script>
+    <script src="js/jquery.qrcode.min.js"></script>
+    <script type="text/javascript">
+        var title, pic;
+        title = ""; 
+        pic = ""; 
+        $(".wx").hover(function() {
+            $(".wechatshare").toggle();
+        });
+        $(".wb").click(function() {
+            shareToXl(title, window.location.href, pic);
+        });
+        
+        function shareToXl(title, url, picurl) {
+            var sharesinastring = 'https://service.weibo.com/share/share.php?title=' + title + '&url=' + url + '&content=utf-8&sourceUrl=' + url + '&pic=' + picurl;
+            window.open(sharesinastring, 'newwindow', 'height=400,width=400,top=100,left=100');
+        };
+
+        var url = window.location.href;
+
+        
+        $("#qrcode").qrcode({
+            text: url, 
+            width: 200, 
+            height: 200, 
+
+        });
         
     </script>
 </body>
