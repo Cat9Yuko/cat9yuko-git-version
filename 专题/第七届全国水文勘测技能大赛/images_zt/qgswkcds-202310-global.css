@@ -1,0 +1,145 @@
+:root {
+  box-sizing: border-box;
+}
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: '微软雅黑', 'Microsoft Yahei';
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+img {
+  border: none;
+  max-width: 100%;
+}
+li {
+  list-style: none;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.center-block-1200 {
+  width: 1200px;
+  margin: 0 auto;
+}
+.w583 {
+  width: 583px;
+}
+
+/* user style */
+header {
+  background-image: url('qgswkcds-202310-headerbg.jpg');
+  height: 1075px;
+  background-position: center top;
+  background-size: cover;
+  padding-top: 968px;
+}
+.main {
+  background-image: url('qgswkcds-202310-mainbg.jpg');
+  background-position: center top;
+  min-height: 100px;
+}
+.nav {
+  background-color: #ffffff;
+  display: table;
+}
+.nav-item {
+  display: table-cell;
+  table-layout: fixed;
+  width: 1%;
+  text-align: center;
+  font-size: 28px;
+  color: #095293;
+  line-height: 53px;
+}
+/* carousel */
+.slick-mod,
+.slick-mod2 {
+  width: 600px;
+  height: 437px;
+}
+.slick-item {
+  position: relative;
+}
+.slick-item img {
+  width: 100%;
+}
+.tit1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 18px;
+  color: #ffffff;
+  line-height: 40px;
+  text-indent: 1rem;
+  background: rgba(0, 0, 0, 0.5);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.slick-mod .slick-dots,
+.slick-mod2 .slick-dots {
+  position: absolute;
+  right: 10px;
+  bottom: 15px;
+}
+.slick-mod2 .slick-dots {
+  bottom: 36px;
+}
+
+.slick-mod .slick-arrow,
+.slick-mod2 .slick-arrow {
+  width: 33px;
+  height: 57px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 3;
+  cursor: pointer;
+}
+.slick-mod .slick-dots li,
+.slick-mod2 .slick-dots li {
+  width: 9px;
+  height: 9px;
+  background: #ffffff;
+  border-radius: 50%;
+  margin: 0 5px 0 0;
+}
+.slick-mod .slick-dots li.slick-active,
+.slick-mod2 .slick-dots li.slick-active {
+  width: 9px;
+  height: 9px;
+  background: #1db6e6;
+  border-radius: 50%;
+}
+/* --- */
+.hnews {
+  border-bottom: 1px dashed #474747;
+  padding-bottom: 25px;
+}
+.hnews h2 {
+  font-size: 28px;
+  color: #03427a;
+  text-align: center;
+  margin: 15px 0;
+}
+.hnews p {
+  color: #474747;
+  line-height: 33px;
+}

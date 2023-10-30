@@ -190,6 +190,9 @@
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
   }
+  .slick-mod2 .slick-item img {
+    height: 216px;
+  }
   .tit1,
   .txt .p1,
   .ly-lcontainer h2,
@@ -268,6 +271,12 @@
   .zt-item p {
     display: none;
   }
+  .ztitem-child {
+    width: 100%;
+  }
+  .ztitem-child img {
+    height: 214px;
+  }
   .list2 {
     padding-top: 0;
   }
@@ -302,12 +311,17 @@
     padding: 15px 15px 0;
     display: block;
     height: 87px;
+    width: 100%;
+    writing-mode: initial;
   }
   .rmbd-container ul .pic {
     background-size: cover;
   }
   .rmbd-slick2 .slick-dots li:nth-child(1) {
     width: 8px;
+  }
+  .m-rmbdimg {
+    height: 234px;
   }
   .rotate-bg {
     margin-top: 35px;

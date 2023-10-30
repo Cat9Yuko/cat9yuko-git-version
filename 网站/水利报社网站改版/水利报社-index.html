@@ -96,8 +96,8 @@
     </header>
     <main class="main">
         <section class="hidden-smxs">
-            <div class="center-block-1280">
-                <div class="slick-mod">
+            <div class="center-block-1280 train-overflow">
+                <div class="slick-mod" id="m-train">
                     <div class="slick-item">
                         <div class="trainh clearfix">
                             <div class="show-item4"><img class="train-h" src="images/slbs-202309-wordssgz.png" alt="" width="179"></div>
@@ -223,9 +223,9 @@
                     <div class="fl w845">
                     <div class="chnltitle npd m-rdzt"><span class="rmbd"><a href="" target="_blank" rel="noopener noreferrer">热点专题</a></span></div>
                         <div class="zt-container clearfix">
-                            <div class="zt-item fl"><a href="" target="_blank" rel="noopener noreferrer"><img src="images/demo3.jpg" alt=""><p>学思想 强党性 重实践 建新功</p></a></div>
-                            <div class="zt-item fl"><a href="" target="_blank" rel="noopener noreferrer"><img src="images/demo3.jpg" alt=""><p>学思想 强党性 重实践 建新功</p></a></div>
-                            <div class="zt-item fl"><a href="" target="_blank" rel="noopener noreferrer"><img src="images/demo3.jpg" alt=""><p>学思想 强党性 重实践 建新功</p></a></div>
+                            <div class="zt-item fl clearfix"><div class="ztitem-child"><a href="" target="_blank" rel="noopener noreferrer"><img src="images/demo3.jpg" alt=""><p>学思想 强党性 重实践 建新功</p></a></div></div>
+                            <div class="zt-item fl clearfix"><div class="ztitem-child"><a href="" target="_blank" rel="noopener noreferrer"><img src="images/demo3.jpg" alt=""><p>学思想 强党性 重实践 建新功</p></a></div></div>
+                            <div class="zt-item fl clearfix"><div class="ztitem-child"><a href="" target="_blank" rel="noopener noreferrer"><img src="images/demo3.jpg" alt=""><p>学思想 强党性 重实践 建新功</p></a></div></div>
                         </div>
                     </div>
                     <div class="fr w425">
@@ -260,8 +260,8 @@
                                 <a href="">
                                     <img class="m-rmbdimg" src="images/demo4.jpg" alt="">
                                     <div class="txt">
-                                        <p class="p1">水利部技术帮扶工作组</p>
-                                        <p class="p2">水利部技术帮扶工作组</p>
+                                        <p class="p1">高基数之上明显增长！水利建设投资为何不断创新高？</p>
+                                        <p class="p2">高基数之上明显增长！水利建设投资为何不断创新高？</p>
                                     </div>
                                 </a>
                             </div>
@@ -668,15 +668,15 @@
                             <div class="link-p">
                                 <a href="" target="_blank" rel="noopener noreferrer">中国水利报</a>
                                 <a href="" target="_blank" rel="noopener noreferrer">《中国水利》杂志</a>
-                                <a href="" target="_blank" rel="noopener noreferrer">中国水事微信公众号</a>
-                                <a href="" target="_blank" rel="noopener noreferrer">中国水利杂志微信公众号</a>
-                                <a href="" target="_blank" rel="noopener noreferrer">中国河长制湖长制微信公众号</a>
-                                <a href="" target="_blank" rel="noopener noreferrer">中国水利报强国号</a>
-                                <a href="" target="_blank" rel="noopener noreferrer">中国水事视频号</a>
-                                <a href="" target="_blank" rel="noopener noreferrer">中国水利微博号</a>
+                                <a href="" target="_blank" rel="noopener noreferrer">中国水事微信公众号<span class="linkqrcode"><img src="images/qrcode.png" alt=""></span></a>
+                                <a href="" target="_blank" rel="noopener noreferrer">中国水利杂志微信公众号<span class="linkqrcode"><img src="images/qrcode.png" alt=""></span></a>
+                                <a href="" target="_blank" rel="noopener noreferrer">中国河长制湖长制微信公众号<span class="linkqrcode"><img src="images/qrcode.png" alt=""></span></a>
+                                <a href="" target="_blank" rel="noopener noreferrer">中国水利报强国号<span class="linkqrcode"><img src="images/qrcode.png" alt=""></span></a>
+                                <a href="" target="_blank" rel="noopener noreferrer">中国水事视频号<span class="linkqrcode"><img src="images/qrcode.png" alt=""></span></a>
+                                <a href="" target="_blank" rel="noopener noreferrer">中国水利微博号<span class="linkqrcode"><img src="images/qrcode.png" alt=""></span></a>
                             </div>
                             <div class="link-p">
-                                <a href="" target="_blank" rel="noopener noreferrer">中国水事抖音号</a>
+                                <a href="" target="_blank" rel="noopener noreferrer">中国水事抖音号<span class="linkqrcode"><img src="images/qrcode.png" alt=""></span></a>
                                 <a href="" target="_blank" rel="noopener noreferrer">中组部共产党员网“民生水利”视频</a>
                                 <a href="" target="_blank" rel="noopener noreferrer">中国水事人民号</a>
                                 <a href="" target="_blank" rel="noopener noreferrer">中国水事百家号</a>
@@ -775,12 +775,19 @@
     <!-- <script src="images/jquery.rotating-slider-app.js"></script> -->
     <script src="images/slbs-202309-index.js"></script>
     <script>
+        
         $(document).ready(function () {
             $(".slick-mod").slick({
                 dots: false,
-                autoplay: true,
+                autoplay: false,
                 infinite: false
             });
+            $('#m-train').animate({'margin-left':'0'},1600, function () {
+                setTimeout(function(){
+                    $(".slick-mod").slick('slickSetOption', 'autoplay', 5000, true);
+            },1600);
+			});
+
             $(".slick-mod2").slick({
                 dots: true,
                 autoplay: true,
