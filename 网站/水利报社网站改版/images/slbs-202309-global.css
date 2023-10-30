@@ -290,6 +290,7 @@ nav {
   position: relative;
 }
 .show-item4 p {
+  display: none;
   width: 235px;
   margin: 0 auto;
   margin-top: -30px;
@@ -497,6 +498,7 @@ nav {
 .ztitem-child {
   width: 275px;
   border-radius: 4px;
+  overflow: hidden;
 }
 .zt-container .slick-slide:nth-child(2) .ztitem-child {
   margin: 0 auto;
@@ -515,7 +517,7 @@ nav {
   margin-left: 10px;
 }
 .chnltitle {
-  font-size: 18px;
+  font-size: 22px;
   padding-left: 20px;
   color: #005bac;
   font-weight: bold;
@@ -582,6 +584,7 @@ nav {
   border-bottom: none;
   text-shadow: #ffffff 2px 0 0, #ffffff 0 2px 0, #ffffff -2px 0 0,
     #ffffff 0 -2px 0;
+    line-height: 31px;
 }
 .section-f {
   margin-top: 20px;
@@ -1020,6 +1023,7 @@ nav {
   width: 100%;
   line-height: 1;
   line-height: initial;
+  font-size: 18px;
 }
 .list3.circleicon li:hover {
   font-weight: bold;
@@ -1077,7 +1081,10 @@ nav {
   height: 170px;
   padding: 10px;
   background: #fff;
-  border: 1px solid #ccc box;
+  border: 1px solid #ccc;
+}
+.link-p a .linkqrcode:empty {
+  display: none;
 }
 .linkqrcode img {
   width: 150px;
@@ -1085,6 +1092,7 @@ nav {
 }
 .footerlink > div + div {
   margin-top: 40px;
+  position: relative;
 }
 .link-url a + a {
   margin-left: 12px;
@@ -1092,6 +1100,62 @@ nav {
 .link-p + .link-p {
   margin-top: 13px;
 }
+.footerlink a.data-ismore:after {
+  content: '';
+  position: absolute;
+  right: 50%;
+  margin-right: -8px;
+  bottom: -15px;
+  width: 15px;
+  height: 15px;
+  background: url("icon-top.png") right bottom no-repeat;
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100%;
+  background-size: 100%
+}
+.footerlink .layer .layer-item {
+  display: none;
+  width: 1098px;
+  height: 140px;
+  padding: 10px 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border: 1px solid #dbdbdb;
+  background: #fff
+}
+.footerlink .layer .layer-item.show {
+  display: block
+}
+.footerlink .layer .layer-item:hover {
+  display: block;
+}
+.footerlink .layer {
+  position: absolute;
+    width: 1100px;
+    right: 5px;
+    bottom: 40px;
+    z-index: 50;
+    height: 0;
+    overflow: hidden;
+    -webkit-transition: height .8s;
+    -moz-transition: height .8s;
+    transition: height .8s
+}
+
+.footerlink .layer span {
+  display: inline-block;
+  margin-right: 24px;
+  font-size: 14px;
+  line-height: 45px;
+  color: #333
+}
+.footerlink .layer.show {
+  height: 140px
+}
+
 footer {
   border-top: 2px solid #0ea5ea;
   height: 392px;
@@ -1188,6 +1252,7 @@ footer {
 .listpage-ul .listpage-title {
   float: left;
   width: 640px;
+  font-size: 18px;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -1200,7 +1265,7 @@ footer {
   margin-right: 35px;
 }
 .listpage-ul li {
-  line-height: 28px;
+  line-height: 30px;
 }
 .listpage-ul li:nth-child(5n) {
   margin-bottom: 30px;
@@ -1238,7 +1303,10 @@ footer {
   font-size: 18px;
   color: #222222;
   padding-top: 10px;
-  text-indent: 1rem;
+  line-height: 24px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .ts-show2 {
   padding-top: 20px;
@@ -1452,6 +1520,7 @@ footer {
 }
 .slick-mod2.listpage-mod .slick-item img {
   height: 100%;
+  height: 455px;
 }
 .listpage-fr.lsitfl-title {
   background-image: none;

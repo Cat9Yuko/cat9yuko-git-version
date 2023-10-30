@@ -193,6 +193,9 @@
   .slick-mod2 .slick-item img {
     height: 216px;
   }
+  .slick-mod2.listpage-mod .slick-item img {
+    height: 215px;
+  }
   .tit1,
   .txt .p1,
   .ly-lcontainer h2,
