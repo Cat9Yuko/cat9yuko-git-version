@@ -335,12 +335,13 @@ nav {
 .train-f {
   position: absolute;
   bottom: 3px;
+  width: 125px;
 }
 .train-h {
-  left: 83px;
+  left: 50%;
 }
 .train-f {
-  right: 83px;
+  right: 50%;
 }
 .show-item4 a {
   display: block;
@@ -373,6 +374,9 @@ nav {
   position: absolute;
   right: 6px;
   top: 7px;
+}
+.slick-mod4 {
+  margin: -25px 0;
 }
 .slick-mod4 .slick-dots {
   position: absolute;
@@ -651,6 +655,7 @@ nav {
   position: relative;
   background-position: center center; /*图片居中  等比例*/
   background-repeat: no-repeat; /*图片不平铺*/
+  height: 415px;
 }
 .rmbd-container ul li:nth-child(1) {
   width: 680px;
@@ -658,7 +663,7 @@ nav {
 .txt {
   background-color: #000;
   background: rgba(0, 0, 0, 0.4);
-  height: 415px;
+  height: 100%;
   width: 100%;
 }
 .txt .p1 {
@@ -672,7 +677,19 @@ nav {
   width: 75px;
   color: #ffffff;
 }
-.txt .p2 {
+.txt .p3 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  writing-mode: vertical-rl;
+  height: 100%;
+  text-align: center;
+  font-size: 22px;
+  width: 75px;
+  color: #ffffff;
+}
+.txt .p1,
+.txt .p2,.rmbd-container ul li.act .p3 {
   display: none;
 }
 .rmbd-container ul li.act .txt {
@@ -829,6 +846,7 @@ nav {
   background-size: contain;
   margin-left: 5px;
   margin-right: 10px;
+  background-repeat: no-repeat;
 }
 .chnltitle2 span.icon1::before {
   background-image: url('slbs-202309-icon1.png');

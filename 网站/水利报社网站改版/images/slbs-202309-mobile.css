@@ -276,6 +276,8 @@
   }
   .ztitem-child {
     width: 100%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
   }
   .ztitem-child img {
     height: 214px;
@@ -319,6 +321,11 @@
   }
   .rmbd-container ul .pic {
     background-size: cover;
+    height: auto;
+  }
+  .txt .p3 {display: none;}
+  .rmbd-container ul li.act .p1 {
+    text-align: center;
   }
   .rmbd-slick2 .slick-dots li:nth-child(1) {
     width: 8px;
@@ -347,6 +354,8 @@
   }
   .ly-lcontainer img {
     display: block;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
   }
   .ly-lcontainer h2 {
     margin: 0;
@@ -380,6 +389,8 @@
     width: 100%;
     height: auto;
     display: block;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
   }
   .df-limg p {
     color: #000000;
@@ -415,6 +426,8 @@
     display: block;
     height: auto;
     margin: 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
   }
   .img-list:nth-of-type(odd) img {
     display: none;
@@ -452,7 +465,8 @@
   }
   .show6-item img {
     height: 263.5px;
-    width: auto;
+    width: 100%;
+    border-radius: 5px;
   }
   footer {
     padding-top: 0;

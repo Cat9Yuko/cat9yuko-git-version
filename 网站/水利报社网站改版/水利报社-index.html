@@ -263,6 +263,7 @@
                                     <div class="txt">
                                         <p class="p1">高基数之上明显增长！水利建设投资为何不断创新高？</p>
                                         <p class="p2">高基数之上明显增长！水利建设投资为何不断创新高？</p>
+                                        <p class="p3">首页标题</p>
                                     </div>
                                 </a>
                             </div>
@@ -274,6 +275,7 @@
                                     <div class="txt">
                                         <p class="p1">水利部技术帮扶工作组</p>
                                         <p class="p2">水利部技术帮扶工作组</p>
+                                        <p class="p3">首页标题</p>
                                     </div>
                                 </a>
                             </div>
@@ -285,6 +287,7 @@
                                     <div class="txt">
                                         <p class="p1">水利部技术帮扶工作组推</p>
                                         <p class="p2">水利部技术帮扶工作组推</p>
+                                        <p class="p3">首页标题</p>
                                     </div>
                                 </a>
                             </div>
@@ -296,6 +299,7 @@
                                     <div class="txt">
                                         <p class="p1">水利部技术帮扶工作组</p>
                                         <p class="p2">水利部技术帮扶工作组</p>
+                                        <p class="p3">首页标题</p>
                                     </div>
                                 </a>
                             </div>
@@ -307,6 +311,7 @@
                                     <div class="txt">
                                         <p class="p1">水利部技术帮扶工作组</p>
                                         <p class="p2">水利部技术帮扶工作组</p>
+                                        <p class="p3">首页标题</p>
                                     </div>
                                 </a>
                             </div>
@@ -318,6 +323,7 @@
                                     <div class="txt">
                                         <p class="p1">水利部技术帮扶工作组</p>
                                         <p class="p2">水利部技术帮扶工作组</p>
+                                        <p class="p3">首页标题</p>
                                     </div>
                                 </a>
                             </div>
@@ -331,6 +337,7 @@
                                     <div class="txt">
                                         <p class="p1">水利部技术帮扶工作组</p>
                                         <p class="p2">水利部技术帮扶工作组</p>
+                                        <p class="p3">首页标题</p>
                                     </div>
                                 </a>
                             </div>
@@ -341,7 +348,7 @@
                                     <img class="m-rmbdimg" src="images/demo4.jpg" alt="">
                                     <div class="txt">
                                         <p class="p1">水利部技术帮扶工作组</p>
-                                        <p class="p2">水利部技术帮扶工作组</p>
+                                        <p class="p3">首页标题</p>
                                     </div>
                                 </a>
                             </div>
@@ -353,6 +360,7 @@
                                     <div class="txt">
                                         <p class="p1">水利部技术帮扶工作组推</p>
                                         <p class="p2">水利部技术帮扶工作组推</p>
+                                        <p class="p3">首页标题</p>
                                     </div>
                                 </a>
                             </div>
@@ -364,6 +372,7 @@
                                     <div class="txt">
                                         <p class="p1">水利部技术帮扶工作组</p>
                                         <p class="p2">水利部技术帮扶工作组</p>
+                                        <p class="p3">首页标题</p>
                                     </div>
                                 </a>
                             </div>
@@ -375,6 +384,7 @@
                                     <div class="txt">
                                         <p class="p1">水利部技术帮扶工作组</p>
                                         <p class="p2">水利部技术帮扶工作组</p>
+                                        <p class="p3">首页标题</p>
                                     </div>
                                 </a>
                             </div>
@@ -386,6 +396,7 @@
                                     <div class="txt">
                                         <p class="p1">水利部技术帮扶工作组</p>
                                         <p class="p2">水利部技术帮扶工作组</p>
+                                        <p class="p3">首页标题</p>
                                     </div>
                                 </a>
                             </div>
@@ -914,6 +925,8 @@
                 if($(window).width() > 991) {
                 $(".rmbd-container ul li").hover(function(){
                 $(this).stop(true).addClass("act").animate({width:"680px"},1000).siblings().removeClass("act").stop(true).animate({width:"119px"},1000);
+                $(this).find('.txt .p3').stop().animate({left:'200%'},'slow');
+                $(this).siblings().find('.txt .p3').stop().animate({left:'0px'},'slow');
             });
             } else {
 
