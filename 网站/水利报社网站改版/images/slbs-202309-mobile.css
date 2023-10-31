@@ -498,7 +498,7 @@
   }
   .listpage-ul .listpage-title {
     white-space: normal;
-    line-height: 20px;
+    line-height: 24px;
     font-size: 16px;
   }
   .listpage-ul li + li {
@@ -830,6 +830,7 @@
   }
   .listimg-list .img-item img {
     width: 100%;
+    height: 603px;
   }
   .listimg-list .img-item p {
     padding: 15px;
