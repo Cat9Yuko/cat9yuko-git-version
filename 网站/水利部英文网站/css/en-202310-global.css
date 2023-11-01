@@ -49,6 +49,12 @@ section + section {
 .w600 {
   width: 600px;
 }
+.w400 {
+  width: 400px;
+}
+.w420 {
+  width: 420px;
+}
 /* user style */
 .indexbg {
   background-image: url('../img/en-202310-mainbgh.jpg');
@@ -627,7 +633,7 @@ footer.footerbg {
   margin-top: 35px;
   margin-bottom: 80px;
 }
-.channel-title2.uppercase {
+.channel-title2.uppercase,.channel-title4.uppercase {
   text-transform: uppercase;
 }
 .channel-title2 span {
@@ -736,6 +742,30 @@ footer.footerbg {
   padding-left: 10px;
   padding-right: 10px;
 }
+.show-2column .listpage-ul {
+  padding: 0;
+}
+.show-2column {
+  padding-bottom: 100px;
+}
+.show-2column .listpage-ul li img {
+  float: left;
+  margin-right: 19px;
+  width: 163px;
+  height: 92px;
+}
+.show-2column.show3 .fl + .fl {
+  margin-left: 30px;
+}
+.listpage-ul li p {
+  display: table;
+  width: calc(100% - 182px);
+  height: 92px;
+}
+.listpage-ul li p span {
+  display: table-cell;
+  vertical-align: middle;
+}
 .listpage-ul li {
   font-size: 24px;
   color: #6e6e6f;
@@ -798,4 +828,47 @@ footer.footerbg {
   color: #333333;
   font-family: 'Trebuchet MS';
   margin-bottom: 50px;
+}
+.channel-title4 {
+  font-size: 32px;
+  color: #333333;
+  font-family: 'Trebuchet MS';
+  margin-bottom: 45px;
+}
+.channel-title4 a::after {
+  content: '';
+  display: inline-block;
+  background-image: url('../img/en-202310-iconlt.png');
+  width: 52px;
+  height: 24px;
+  margin-left: 17px;
+}
+.showimg-li {
+  width: 402px;
+  float: left;
+}
+.showimg-li + .showimg-li {
+  margin-left: 37px;
+}
+.showimg-row + .showimg-row {
+  margin-top: 28px;
+}
+.showimg-li img {
+  border-radius: 5px;
+  width: 402px;
+  height: 256px;
+  box-shadow: 0 0 7px #b4b3b3;
+}
+.showimg-li p {
+  font-size: 24px;
+  color: #6e6e6f;
+  font-family: 'Georgia';
+  line-height: 36px;
+  margin-top: 20px;
+}
+.showimg-li:hover img {
+  box-shadow: 0 0 20px #00b4ff;
+}
+.showimg-li:hover p {
+  color: #0163b2;
 }
