@@ -101,24 +101,55 @@
                     <div class="slick-item">
                         <div class="trainh clearfix">
                             <div class="show-item4"><img class="train-h" src="images/slbs-202309-wordssgz.png" alt="" width="179"></div>
-                            <div class="show-item4"><div class="borderb"><div class="borderb2"><a href="" target="_blank" rel="noopener noreferrer"><img src="images/demo.jpg" alt="" width="235" height="116"><p>图片名称</p></a></div></div></div>
-                            <div class="show-item4"><div class="borderb"><div class="borderb2"><a href="" target="_blank" rel="noopener noreferrer"><img src="images/demo.jpg" alt="" width="235" height="116"><p>图片名称</p></a></div></div></div>
+                        </div>
+                    </div>
+                    <div class="slick-item">
+                        <div class="trainb clearfix">
                             <div class="show-item4"><div class="borderb"><div class="borderb2"><a href="" target="_blank" rel="noopener noreferrer"><img src="images/demo.jpg" alt="" width="235" height="116"><p>图片名称</p></a></div></div></div>
                         </div>
                     </div>
                     <div class="slick-item">
                         <div class="trainb clearfix">
                             <div class="show-item4"><div class="borderb"><div class="borderb2"><a href="" target="_blank" rel="noopener noreferrer"><img src="images/demo.jpg" alt="" width="235" height="116"><p>图片名称</p></a></div></div></div>
+                        </div>
+                    </div>
+                    <div class="slick-item">
+                        <div class="trainb clearfix">
                             <div class="show-item4"><div class="borderb"><div class="borderb2"><a href="" target="_blank" rel="noopener noreferrer"><img src="images/demo.jpg" alt="" width="235" height="116"><p>图片名称</p></a></div></div></div>
+                        </div>
+                    </div>
+                    <div class="slick-item">
+                        <div class="trainb clearfix">
                             <div class="show-item4"><div class="borderb"><div class="borderb2"><a href="" target="_blank" rel="noopener noreferrer"><img src="images/demo.jpg" alt="" width="235" height="116"><p>图片名称</p></a></div></div></div>
+                        </div>
+                    </div>
+                    <div class="slick-item">
+                        <div class="trainb clearfix">
+                            <div class="show-item4"><div class="borderb"><div class="borderb2"><a href="" target="_blank" rel="noopener noreferrer"><img src="images/demo.jpg" alt="" width="235" height="116"><p>图片名称</p></a></div></div></div>
+                        </div>
+                    </div>
+                    <div class="slick-item">
+                        <div class="trainb clearfix">
+                            <div class="show-item4"><div class="borderb"><div class="borderb2"><a href="" target="_blank" rel="noopener noreferrer"><img src="images/demo.jpg" alt="" width="235" height="116"><p>图片名称</p></a></div></div></div>
+                        </div>
+                    </div>
+                    <div class="slick-item">
+                        <div class="trainb clearfix">
+                            <div class="show-item4"><div class="borderb"><div class="borderb2"><a href="" target="_blank" rel="noopener noreferrer"><img src="images/demo.jpg" alt="" width="235" height="116"><p>图片名称</p></a></div></div></div>
+                        </div>
+                    </div>
+                    <div class="slick-item">
+                        <div class="trainb clearfix">
+                            <div class="show-item4"><div class="borderb"><div class="borderb2"><a href="" target="_blank" rel="noopener noreferrer"><img src="images/demo.jpg" alt="" width="235" height="116"><p>图片名称</p></a></div></div></div>
+                        </div>
+                    </div>
+                    <div class="slick-item">
+                        <div class="trainb clearfix">
                             <div class="show-item4"><div class="borderb"><div class="borderb2"><a href="" target="_blank" rel="noopener noreferrer"><img src="images/demo.jpg" alt="" width="235" height="116"><p>图片名称</p></a></div></div></div>
                         </div>
                     </div>
                     <div class="slick-item">
                         <div class="trainf clearfix">
-                            <div class="show-item4"><div class="borderb"><div class="borderb2"><a href="" target="_blank" rel="noopener noreferrer"><img src="images/demo.jpg" alt="" width="235" height="116"><p>图片名称</p></a></div></div></div>
-                            <div class="show-item4"><div class="borderb"><div class="borderb2"><a href="" target="_blank" rel="noopener noreferrer"><img src="images/demo.jpg" alt="" width="235" height="116"><p>图片名称</p></a></div></div></div>
-                            <div class="show-item4"><div class="borderb"><div class="borderb2"><a href="" target="_blank" rel="noopener noreferrer"><img src="images/demo.jpg" alt="" width="235" height="116"><p>图片名称</p></a></div></div></div>
                             <div class="show-item4 "><img class="train-f" src="images/slbs-202309-wordssgz2.png" alt="" width="180"></div>
                         </div>
                     </div>
@@ -796,10 +827,14 @@
     <script src="images/slbs-202309-index.js"></script>
     <script>
         $(document).ready(function () {
+            $("#m-train .slick-item").eq(1).find(".trainb").addClass("header");
+            $("#m-train .slick-item").eq(-2).find(".trainb").addClass("footer");
             $(".slick-mod").slick({
                 dots: false,
-                autoplay: false,
-                infinite: false
+                autoplay: true,
+                infinite: true,
+                slidesToShow: 4,
+                slidesToScroll:4
             });
             $('#m-train').animate({'margin-left':'0'},1600, function () {
                 setTimeout(function(){

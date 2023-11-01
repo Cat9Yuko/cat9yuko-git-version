@@ -46,6 +46,9 @@ section + section {
 .w940 {
   width: 940px;
 }
+.w600 {
+  width: 600px;
+}
 /* user style */
 .indexbg {
   background-image: url('../img/en-202310-mainbgh.jpg');
@@ -555,12 +558,12 @@ footer p {
 }
 /* 细览 */
 .indexbg.headerbg {
-  background-image: url("../img/en-202310-headerbg.jpg");
+  background-image: url('../img/en-202310-headerbg.jpg');
   height: 335px;
   margin-bottom: 0;
 }
 footer.footerbg {
-  background-image: url("../img/en-202310-footerbg.jpg");
+  background-image: url('../img/en-202310-footerbg.jpg');
   height: 335px;
   padding-top: 90px;
   background-size: cover;
@@ -568,12 +571,15 @@ footer.footerbg {
 }
 .curpage {
   padding: 20px 0;
+  font-size: 18px;
+  font-family: 'Georgia';
+  color: #6e6e6f;
 }
 .article-title {
   font-size: 46px;
   text-align: center;
   color: #0464b2;
-  font-family: "Trebuchet MS";
+  font-family: 'Trebuchet MS';
   line-height: 49px;
   margin-bottom: 30px;
   margin-top: 50px;
@@ -582,26 +588,27 @@ footer.footerbg {
   text-align: center;
   font-size: 18px;
   color: #6e6e6f;
-  font-family: "Georgia";
+  font-family: 'Georgia';
   margin-bottom: 27px;
 }
-.wx,.wb {
+.wx,
+.wb {
   display: inline-block;
   width: 26px;
   height: 26px;
-  background-image: url("../img/en-202310-iconwx.jpg");
+  background-image: url('../img/en-202310-iconwx.jpg');
   vertical-align: middle;
   margin-left: 23px;
   cursor: pointer;
 }
 .wb {
   margin-left: 5px;
-  background-image: url("../img/en-202310-iconwb.jpg");
+  background-image: url('../img/en-202310-iconwb.jpg');
 }
 .article-content {
   font-size: 24px;
   color: #6e6e6f;
-  font-family: "Georgia";
+  font-family: 'Georgia';
   line-height: 40px;
   text-align: justify;
 }
@@ -612,13 +619,16 @@ footer.footerbg {
   font-size: 28px;
   text-align: center;
   color: #0464b2;
-  font-family: "Trebuchet MS";
-  background-image: linear-gradient(#014a58,#014a58);
+  font-family: 'Trebuchet MS';
+  background-image: linear-gradient(#014a58, #014a58);
   background-position: center;
   background-size: 100% 1px;
   background-repeat: no-repeat;
   margin-top: 35px;
   margin-bottom: 80px;
+}
+.channel-title2.uppercase {
+  text-transform: uppercase;
 }
 .channel-title2 span {
   padding: 0 21px;
@@ -637,7 +647,7 @@ footer.footerbg {
   line-height: 42px;
   font-size: 32px;
   color: #333333;
-  font-family: "Trebuchet MS";
+  font-family: 'Trebuchet MS';
   border-radius: 3px;
 }
 .tabs-item.act {
@@ -647,7 +657,7 @@ footer.footerbg {
 .ministry-article p {
   font-size: 24px;
   color: #6e6e6f;
-  font-family: "Georgia";
+  font-family: 'Georgia';
   line-height: 35px;
   margin-bottom: 36px;
 }
@@ -657,11 +667,11 @@ footer.footerbg {
 .leadership-container {
   padding-bottom: 130px;
 }
-.leadership-title{
+.leadership-title {
   text-align: center;
   font-size: 32px;
   color: #333333;
-  font-family: "Trebuchet MS";
+  font-family: 'Trebuchet MS';
   margin-bottom: 60px;
 }
 .ld-img {
@@ -676,7 +686,7 @@ footer.footerbg {
   text-align: center;
   color: #ffffff;
   font-size: 24px;
-  font-family: "Georgia";
+  font-family: 'Georgia';
 }
 .ld-desc {
   width: 1040px;
@@ -684,7 +694,7 @@ footer.footerbg {
 .ld-desc > p {
   font-size: 24px;
   color: #6e6e6f;
-  font-family: "Georgia";
+  font-family: 'Georgia';
   line-height: 36px;
   text-align: justify;
 }
@@ -697,4 +707,95 @@ footer.footerbg {
 }
 .leadershiplist-item + .leadershiplist-item {
   margin-top: 94px;
+}
+.leader-detail .leadership-list {
+  background-color: #e4f2ff;
+  padding: 45px 49px;
+}
+.leader-detail .ld-desc {
+  width: 940px;
+}
+.leader-detail .ld-desc h2 {
+  font-size: 32px;
+  color: #333333;
+  font-family: 'Trebuchet MS';
+  font-weight: normal;
+  margin: 6px 0 30px 0;
+}
+.leadership-article {
+  margin-top: 65px;
+}
+.leadership-article,
+.leadership-article span {
+  font-size: 24px !important;
+  color: #6e6e6f;
+  font-family: 'Georgia';
+  line-height: 40px;
+}
+.listpage-ul {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.listpage-ul li {
+  font-size: 24px;
+  color: #6e6e6f;
+  line-height: 36px;
+  font-family: 'Georgia';
+}
+.listpage-ul li + li {
+  margin-top: 41px;
+}
+.listpage-ul.hastime li + li {
+  margin-top: 36px;
+}
+.listpage-ul .li-title {
+  width: 1090px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.page {
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 40px;
+  font-family: 'Arial', 'Helvetica', 'sans-serif';
+}
+.page a {
+  padding: 5px 8px;
+  line-height: 31px;
+  color: #295b8c;
+  font-size: 16px;
+}
+.page a + a {
+  margin-left: 6px;
+}
+.page a.act {
+  background-color: #edf4fb;
+}
+.page a.ps::before {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 13px;
+  margin-top: -4px;
+  vertical-align: middle;
+  background-color: #295b8c;
+  margin-right: 1px;
+}
+.page a.pe::after {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 13px;
+  margin-top: -4px;
+  vertical-align: middle;
+  background-color: #295b8c;
+  margin-right: 1px;
+}
+.channel-title3 {
+  text-align: center;
+  font-size: 32px;
+  color: #333333;
+  font-family: 'Trebuchet MS';
+  margin-bottom: 50px;
 }
