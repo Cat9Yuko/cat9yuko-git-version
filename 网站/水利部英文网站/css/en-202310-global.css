@@ -633,7 +633,8 @@ footer.footerbg {
   margin-top: 35px;
   margin-bottom: 80px;
 }
-.channel-title2.uppercase,.channel-title4.uppercase {
+.channel-title2.uppercase,
+.channel-title4.uppercase {
   text-transform: uppercase;
 }
 .channel-title2 span {
@@ -871,4 +872,50 @@ footer.footerbg {
 }
 .showimg-li:hover p {
   color: #0163b2;
+}
+.quicklink-container {
+  width: 1046px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  margin-top: 49px;
+}
+.quicklink-title {
+  text-align: center;
+  font-size: 28px;
+  color: #0464b2;
+  font-family: 'Trebuchet MS';
+  background-color: #e5f3ff;
+  text-transform: uppercase;
+  padding-top: 23px;
+  padding-bottom: 23px;
+}
+.quick-ul {
+  border-left: 1px solid #cecece;
+  border-right: 1px solid #cecece;
+  border-bottom: 1px solid #cecece;
+  box-sizing: border-box;
+}
+.quick-li {
+  font-size: 24px;
+  color: #6e6e6f;
+  font-family: 'Georgia';
+  padding-top: 30px;
+  line-height: 36px;
+  padding-bottom: 25px;
+  padding-left: 80px;
+}
+.quick-li + .quick-li {
+  border-top: 1px solid #cecece;
+}
+.contact {
+  margin-bottom: 80px;
+}
+.contact p {
+  color: #6e6e6f;
+  font-size: 24px;
+  font-family: 'Georgia';
+  text-align: center;
+}
+.contact p + p {
+  padding-top: 46px;
 }

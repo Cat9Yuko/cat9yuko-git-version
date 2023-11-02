@@ -12,6 +12,7 @@
 a {
   color: inherit;
   text-decoration: none;
+  outline: none;
 }
 li {
   list-style: none;
