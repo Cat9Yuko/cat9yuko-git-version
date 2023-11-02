@@ -483,6 +483,12 @@ nav {
   text-align: center;
   color: #333333;
 }
+.hnews-list a {
+  font-size: 18px;
+}
+.hnews-list + .hnews-list {
+  margin-top: 15px;
+}
 .hnews-list a::before {
   content: '';
   display: inline-block;
