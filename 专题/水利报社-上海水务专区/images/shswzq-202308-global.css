@@ -43,10 +43,19 @@ img {
 }
 /* user style */
 header {
-  background-image: url('shswzq-202308-banner.jpg');
+  background-image: url('shswzq-202308-banner2.jpg');
   background-position: center center;
   height: 480px;
   background-size: cover;
+  position: relative;
+}
+.tg-word {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  padding: 5px 15px;
 }
 nav {
   background-image: url('shswzq-202308-navbg.jpg');
