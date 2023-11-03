@@ -10,7 +10,13 @@
     <link rel="stylesheet" href="images/liMarquee.css">
     <link rel="stylesheet" href="images/rotating-slider.css">
     <link rel="stylesheet" href="images/slbs-202309-global.css">
-    <link rel="stylesheet" href="images/slbs-202309-mobile.css">
+    <!-- <link rel="stylesheet" href="images/slbs-202309-mobile.css"> -->
+    <style>
+        /* 隐藏手机端样式 */
+        .slick-slide .m-hfimg,.m-rdzt,.bzzc-nav,.rmbd-slick.rmbd-slick2,.m-rmbdimg,.app .rotating-slider,.m-more,.nav-m,#apptopc,.navmenu-childs {
+            display: none;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -829,7 +835,41 @@
     <!-- <script src="images/jquery.rotating-slider-app.js"></script> -->
     <script src="images/slbs-202309-index.js"></script>
     <script>
+        $(function(){
+  function isMobile() {
+    var userAgentInfo = navigator.userAgent;
+ 
+    var mobileAgents = [ "Android", "iPhone", "SymbianOS", "Windows Phone", "iPad","iPod"];
+ 
+    var mobile_flag = false;
+ 
+    //根据userAgent判断是否是手机
+    for (var v = 0; v < mobileAgents.length; v++) {
+        if (userAgentInfo.indexOf(mobileAgents[v]) > 0) {
+            mobile_flag = true;
+            break;
+        }
+    }
+ 
+     var screen_width = window.screen.width;
+     var screen_height = window.screen.height;   
+ 
+     //根据屏幕分辨率判断是否是手机
+     if(screen_width < 500 && screen_height < 800){
+         mobile_flag = true;
+     }
+ 
+     return mobile_flag;
+}
+ var mobile = isMobile();
+
+console.log(mobile);
+if(mobile == true) {
+                window.location.href= '/水利报社-index.html';
+            }
+})
         $(document).ready(function () {
+            
             $("#m-train .slick-item").eq(1).find(".trainb").addClass("header");
             $("#m-train .slick-item").eq(-2).find(".trainb").addClass("footer");
             $(".slick-mod").slick({
@@ -859,53 +899,53 @@
             var slickmod4 = $(".slick-mod4").slick({
                 dots: true,
                 autoplay: true,
-                responsive: [{
-                    breakpoint: 991,
-                    settings: {
-                        dots: false
-                    }
-                }]
+                // responsive: [{
+                //     breakpoint: 991,
+                //     settings: {
+                //         dots: false
+                //     }
+                // }]
             });
             $(".zt-container").slick({
                 dots: false,
                 autoplay: false,
                 slidesToShow: 3,
-                responsive: [{
-                    breakpoint: 991,
-                    settings: {
-                        dots: false,
-                        slidesToShow: 1,
-                        autoplay: true
-                    }
-                }]
+                // responsive: [{
+                //     breakpoint: 991,
+                //     settings: {
+                //         dots: false,
+                //         slidesToShow: 1,
+                //         autoplay: true
+                //     }
+                // }]
             });
             $(".rmbd-slick2").slick({
                 dots: false,
                 autoplay: false,
-                responsive:[{
-                    breakpoint: 991,
-                    settings: {
-                    dots: true,
-                    autoplay: true
-                    }
-                }]
+                // responsive:[{
+                //     breakpoint: 991,
+                //     settings: {
+                //     dots: true,
+                //     autoplay: true
+                //     }
+                // }]
             });
             $(".showitem6").slick({
                 dots: false,
                 autoplay: false,
                 slidesToShow: 6,
-                responsive:[{
-                    breakpoint: 991,
-                    settings:{
-                    dots: false,
-                    autoplay: true,
-                    // infinite: false,
-                    speed: 300,
-                    slidesToShow: 1,
-                    centerMode: false,
-                    variableWidth: true
-                    }
-                }]
+                // responsive:[{
+                //     breakpoint: 991,
+                //     settings:{
+                //     dots: false,
+                //     autoplay: true,
+                //     // infinite: false,
+                //     speed: 300,
+                //     slidesToShow: 1,
+                //     centerMode: false,
+                //     variableWidth: true
+                //     }
+                // }]
                 
             });
             $('.scrolltext').liMarquee();

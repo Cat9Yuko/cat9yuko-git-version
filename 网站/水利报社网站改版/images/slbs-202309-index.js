@@ -18,4 +18,3 @@ $('#apptopc').on('click', function () {
   //   $("meta[name='viewport']").attr("content", "width=device-width")
   //   $('#backmobile').remove()
   // });
-  
