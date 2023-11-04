@@ -556,6 +556,9 @@ footer {
 .footerlink {
   margin-bottom: 80px;
 }
+.footerlink a +a {
+  margin-left: 100px;
+}
 footer p {
   font-size: 24px;
   color: #ffffff;
@@ -612,14 +615,14 @@ footer.footerbg {
   background-image: url('../img/en-202310-iconwb.jpg');
 }
 .article-content {
-  font-size: 24px;
+  font-size: 24px!important;
   color: #6e6e6f;
-  font-family: 'Georgia';
-  line-height: 40px;
+  font-family: 'Georgia'!important;
+  line-height: 40px!important;
   text-align: justify;
 }
 .article-content p {
-  margin-bottom: 40px;
+  margin-bottom: 40px!important;
 }
 .channel-title2 {
   font-size: 28px;
@@ -673,6 +676,9 @@ footer.footerbg {
 }
 .leadership-container {
   padding-bottom: 130px;
+}
+.leader-detail {
+  margin-top: 20px;
 }
 .leadership-title {
   text-align: center;
