@@ -689,13 +689,17 @@ footer.footerbg {
 }
 .ld-img {
   width: 200px;
+  position: relative;
 }
 .ld-img img {
   display: block;
 }
 .ld-img p {
-  padding: 12px 0;
-  background-color: #3382c5;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px 0;
   text-align: center;
   color: #ffffff;
   font-size: 24px;
