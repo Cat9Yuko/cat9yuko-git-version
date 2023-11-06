@@ -170,7 +170,7 @@ nav {
   position: relative;
   width: 100%;
   height: 600px;
-  margin-top: 65px;
+  margin-top: 40px;
 }
 .swiper-container .swiper-slide img {
   width: 850px;
@@ -275,7 +275,7 @@ nav {
   -moz-transform-style: preserve-3d;
   -ms-transform-style: preserve-3d;
   transform-style: preserve-3d;
-  transform: scale(0.6);
+  transform: scale(0.7);
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   -o-transition: all 0.5s;
@@ -284,7 +284,7 @@ nav {
   -moz-transition: transform 1s;
   -ms-transition: transform 1s;
   -o-transition: transform 1s;
-  -webkit-transform: scale(0.6);
+  -webkit-transform: scale(0.7);
   opacity: 0.5;
 }
 .swiper-container .swiper-slide-active,
@@ -313,7 +313,7 @@ nav {
   color: #ffffff;
   font-family: 'Georgia';
   text-align: center;
-  padding-top: 32px;
+  padding-top: 20px;
 }
 .swiper-container .swiper-slide {
   width: 850px;
