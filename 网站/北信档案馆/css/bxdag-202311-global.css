@@ -1,0 +1,140 @@
+:root {
+  box-sizing: border-box;
+}
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  font-family: '微软雅黑', 'Microsoft Yahei';
+  box-sizing: inherit;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+  border: none;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.center-block-1200 {
+  width: 1200px;
+  margin: 0 auto;
+}
+/* user style */
+
+/* carousel */
+.slick-header,
+.himg {
+  width: 100%;
+  height: 640px;
+}
+.himg {
+  background-position: center center;
+  background-size: cover;
+}
+.slick-item {
+  position: relative;
+}
+.himg::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  content: '';
+  display: block;
+  background-image: url('../img/bxkdag-202311-mask2.png');
+  background-size: cover;
+}
+.slick-header .slick-item img {
+  width: 100%;
+  height: 640px;
+}
+.slick-header .slick-dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 30px;
+}
+.slick-header .slick-dots li {
+  width: 13px;
+  height: 6px;
+  background: #bfa690;
+  border-radius: 5px;
+  margin: 0 3px 0 0;
+}
+.slick-header .slick-dots li.slick-active {
+  width: 28px;
+  height: 6px;
+  background: #774d2d;
+  border-radius: 5px;
+}
+/* --- */
+header {
+  position: relative;
+}
+.mask {
+  position: absolute;
+  /* background-image: url('../img/bxkdag-202311-mask.png'); */
+  height: 100px;
+  z-index: 22;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+.topbar {
+  height: 100px;
+  border-bottom: 1px solid #b5a698;
+}
+.logo {
+  padding-top: 22px;
+  margin-left: -260px;
+}
+nav {
+  margin-right: -260px;
+}
+.nav-item {
+  float: left;
+  font-size: 18px;
+  color: #ffffff;
+  line-height: 100px;
+}
+.nav-item span {
+  display: inline-block;
+  line-height: 98px;
+  padding: 0 20px;
+}
+.nav-item.act span {
+  border-bottom: 2px solid #ffffff;
+}
+.nav-child {
+  font-size: 15px;
+  text-align: center;
+  line-height: 40px;
+  background-color: #996f48;
+  color: #ffffff;
+  display: none;
+}
+.child-item:hover {
+  background-color: #764c2c;
+}
+.search-container {
+  line-height: normal;
+  padding-top: 33px;
+  padding-left: 30px;
+}
