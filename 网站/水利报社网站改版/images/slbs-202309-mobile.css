@@ -281,6 +281,7 @@
   }
   .ztitem-child img {
     height: 214px;
+    border-radius: 0;
   }
   .list2 {
     padding-top: 0;
