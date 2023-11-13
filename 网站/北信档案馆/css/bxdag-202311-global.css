@@ -634,7 +634,7 @@ footer {
   margin-bottom: 25px;
 }
 .listpage-ul li::before {
-  content: "";
+  content: '';
   display: inline-block;
   width: 10px;
   height: 10px;
@@ -642,4 +642,40 @@ footer {
   border-radius: 50%;
   vertical-align: middle;
   margin-right: 20px;
+}
+.article-container {
+  background-color: #ffffff;
+  padding: 46px 53px;
+}
+.article-top h2 {
+  color: #333333;
+  font-size: 26px;
+  text-align: center;
+  line-height: 36px;
+}
+.article-top .st {
+  text-align: center;
+  margin-top: 30px;
+  border-bottom: 1px dashed #e3e3e3;
+  padding-bottom: 41px;
+  margin-bottom: 30px;
+}
+.article-bottom p {
+  color: #111111;
+  line-height: 29px;
+}
+.fj-container:empty {
+  display: none;
+}
+.fj-container {
+  background-color: #f9f5f1;
+  border: 1px dashed #764c2c;
+  padding: 20px;
+  margin-top: 47px;
+}
+.fj-container p:nth-child(1) {
+  font-weight: bold;
+}
+.fj-container p {
+  line-height: 26px;
 }
