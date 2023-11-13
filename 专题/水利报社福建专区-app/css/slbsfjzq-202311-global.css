@@ -31,8 +31,14 @@ li {
   display: block;
   clear: both;
 }
-
-/* user style */
+.bmfc-mar {
+  margin-top: 36px;
+  margin-bottom: 46px;
+}
+.dfdt-mar {
+  margin: 35px 0;
+}
+/* app user style */
 nav {
   position: relative;
 }
@@ -60,7 +66,109 @@ nav {
 }
 .main {
   background-color: #f0f0f0;
+  padding-top: 15px;
+}
+.main.indexbg {
+  padding-bottom: 150px;
+  background-image: url('../img/slbsfjzq-202311-mainbottombg.jpg');
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+section + section {
+  margin-top: 15px;
 }
 .apppd {
-  padding: 0 5px;
+  padding: 0 15px;
 }
+.chnltitle {
+  margin-bottom: 9px;
+}
+.chnlbg {
+  width: 109px;
+  height: 40px;
+  background-image: url('../img/slbsfjzq-202311-channeltitlebg.png');
+  background-size: cover;
+  font-size: 19px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 34px;
+}
+.more {
+  float: right;
+  font-size: 13px;
+  color: #0257a3;
+  margin-top: 13px;
+}
+.henws {
+  background-color: #ffffff;
+  padding: 25px 19px;
+  border-radius: 5px;
+}
+.henws h2 {
+  font-size: 21px;
+  color: #0257a3;
+  text-align: center;
+  line-height: 29px;
+}
+.slick-img img {
+  display: block;
+  height: 194px;
+  width: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.slick-img .titi {
+  font-size: 16px;
+  color: #222222;
+  background-color: #ffffff;
+  line-height: 21px;
+  padding: 10px 15px;
+}
+.applist li {
+  font-size: 16px;
+  line-height: 21px;
+  background-color: #ffffff;
+  padding: 15px;
+}
+.applist li + li {
+  border-top: 1px solid #edf3f7;
+}
+/* carousel */
+.slick-mod {
+  width: 100%;
+  height: 194px;
+}
+.slick-item {
+  position: relative;
+}
+.slick-item img {
+  width: 100%;
+}
+.slick-mod .slick-dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+}
+.slick-mod .slick-dots li {
+  width: 5px;
+  height: 5px;
+  background: #ffffff;
+  border-radius: 50%;
+  margin: 0 5px 0 0;
+}
+.slick-mod .slick-dots li.slick-active {
+  width: 13.5px;
+  height: 5px;
+  background: #005bac;
+  border-radius: 50%;
+}
+/* --- */
+.zt-links .zt-item + .zt-item {
+  margin-top: 15px;
+}
+.zt-links .zt-item img {
+  width: 100%;
+}
+/* app user style end */
