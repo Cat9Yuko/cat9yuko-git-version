@@ -39,6 +39,7 @@ li {
   margin: 35px 0;
 }
 /* app user style */
+.hidden-xsm {display: none;}
 nav {
   position: relative;
 }
@@ -125,6 +126,12 @@ section + section {
   line-height: 21px;
   padding: 10px 15px;
 }
+.slick-img.listpage .slick-item {
+  text-align: center;
+}
+.slick-img.listpage .slick-item + .slick-item {
+  margin-top: 17px;
+}
 .applist li {
   font-size: 16px;
   line-height: 21px;
@@ -133,6 +140,29 @@ section + section {
 }
 .applist li + li {
   border-top: 1px solid #edf3f7;
+}
+.applist.listpage li + li {
+  margin-top: 11px;
+  border-top: none;
+}
+.pages {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+}
+.pages a {
+  padding: 2px 8px;
+  border: 1px solid #eaeaea;
+  background-color: #ffffff;
+}
+.pages a.act,
+.pages a:hover {
+  background-color: #0167d5;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+.pages a + a {
+  margin-left: 4px;
 }
 /* carousel */
 .slick-mod {
@@ -170,5 +200,51 @@ section + section {
 }
 .zt-links .zt-item img {
   width: 100%;
+}
+footer {
+  background-color: #036bb6;
+  color: #ffffff;
+  padding: 35px 0;
+  border-top: 1px solid #09a1e5;
+}
+footer p {
+  font-size: 12px;
+  line-height: 17px;
+  text-align: center;
+}
+footer p + p {
+  font-size: 10px;
+  margin-top: 20px;
+}
+.article-container {
+  background-color: #ffffff;
+  margin: 0 15px;
+}
+.art-t {
+  padding: 18px 15px;
+  border-bottom: 1px solid #e3e3e3;
+}
+.art-t h2 {
+  font-size: 18px;
+  line-height: 28px;
+  color: #111111;
+  text-align: center;
+}
+.art-t div {
+  text-align: center;
+  font-size: 13px;
+  margin-top: 15px;
+  color: #666666;
+}
+.art-b {
+  padding: 15px 9px;
+}
+.art-b p {
+  font-size: 16px;
+  line-height: 21px;
+  color: #111111;
+}
+.art-b p + p {
+  margin-top: 20px;
 }
 /* app user style end */
