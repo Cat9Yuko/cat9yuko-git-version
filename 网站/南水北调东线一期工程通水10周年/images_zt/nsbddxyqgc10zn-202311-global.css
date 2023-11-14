@@ -36,16 +36,16 @@ li {
 }
 /* user style */
 .main {
-  background-image: url('nsbddxyqgc10zn-202311-headerbg.jpg');
-  background-position: center top;
-  background-color: #f9f7f1;
+  background-image: url('nsbddxyqgc10zn-202311-headerbg.jpg'),url("nsbddxyqgc10zn-202311-bottombg.jpg");
+  background-position: center top,center bottom;
+  background-color: #bbe3fd;
   background-repeat: no-repeat;
   padding-bottom: 56px;
   box-sizing: border-box;
 }
 .header-word {
   /* text-align: center; */
-  padding-top: 150px;
+  padding-top: 66px;
 }
 .posre {
   position: relative;
@@ -53,9 +53,9 @@ li {
 }
 
 .header-word {
-  width: 603px;
-  height: 354px;
-  margin-left: 320px;
+  width: 924px;
+  height: 714px;
+  margin: 0 auto;
   animation: move1 1s 0.2s;
   -webkit-animation: move1 1s 0.2s;
   animation-fill-mode: backwards;
@@ -67,7 +67,7 @@ li {
     height: 0px;
   }
   to {
-    height: 388px;
+    height: 714px;
   }
 }
 @-webkit-keyframes move1 {
@@ -75,7 +75,7 @@ li {
     height: 0px;
   }
   to {
-    height: 388px;
+    height: 714px;
   }
 }
 @-moz-keyframes move1 {
@@ -83,7 +83,7 @@ li {
     height: 0px;
   }
   to {
-    height: 388px;
+    height: 714px;
   }
 }
 @-o-keyframes move1 {
@@ -91,7 +91,7 @@ li {
     height: 0px;
   }
   to {
-    height: 388px;
+    height: 714px;
   }
 }
 section + section {
@@ -136,7 +136,7 @@ section + section {
 }
 .slick-mod2 .slick-item h2 {
   font-size: 25px;
-  color: #a10202;
+  color: #1b5cb4;
   font-weight: normal;
   margin-bottom: 20px;
 }
@@ -251,6 +251,14 @@ section + section {
   width: 383px;
   height: 267px;
 }
+.s3item div {
+  height: 267px;
+  overflow: hidden;
+}
+.s3item img:hover {
+  transform: scale(1.1);
+  transition: all 0.5s;
+}
 .s3item h2 {
   font-size: 23px;
   font-weight: normal;
@@ -311,9 +319,20 @@ section + section {
   position: relative;
   z-index: 20;
 }
-.sncj-citem img {
+.sncj-citem div {
   float: left;
+  width: 320px;
+  height: 223px;
+  overflow: hidden;
   margin-right: 16px;
+}
+.sncj-citem img {
+  width: 320px;
+  height: 223px;
+}
+.sncj-citem img:hover {
+  transform: scale(1.1);
+  transition: all 0.5s;
 }
 .sncj-citem p {
   font-size: 18px;
@@ -337,7 +356,7 @@ section + section {
 }
 footer {
   text-align: center;
-  background-color: #c90303;
+  background-color: #3A91D8;
   padding: 25px 0;
   color: #ffffff;
 }
