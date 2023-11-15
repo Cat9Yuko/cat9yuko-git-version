@@ -36,12 +36,16 @@ li {
 }
 /* user style */
 .main {
-  background-image: url('nsbddxyqgc10zn-202311-headerbg.jpg'),url("nsbddxyqgc10zn-202311-bottombg.jpg");
-  background-position: center top,center bottom;
+  background-image: url('nsbddxyqgc10zn-202311-headerbg.jpg');
+  background-position: center top;
   background-color: #bbe3fd;
   background-repeat: no-repeat;
   padding-bottom: 56px;
   box-sizing: border-box;
+}
+.main.index {
+  background-image: url('nsbddxyqgc10zn-202311-headerbg.jpg'),url("nsbddxyqgc10zn-202311-bottombg.jpg");
+  background-position: center top,center bottom;
 }
 .header-word {
   /* text-align: center; */
