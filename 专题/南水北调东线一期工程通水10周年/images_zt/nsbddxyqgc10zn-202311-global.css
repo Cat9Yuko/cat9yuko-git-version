@@ -115,7 +115,7 @@ section + section {
   right: 0;
   width: 914px;
   height: 219px;
-  background-color: #ffffff;
+  background-color: rgb(229, 245, 255);
   border: 1px solid #b1b0b0;
 }
 .slick-word .slick-item {
@@ -154,7 +154,7 @@ section + section {
   padding: 25px 14px 0;
   width: 281px;
   height: 268px;
-  background-color: #fefefe;
+  background-color: rgb(229, 245, 255);
   box-sizing: border-box;
 }
 .slick-item {
