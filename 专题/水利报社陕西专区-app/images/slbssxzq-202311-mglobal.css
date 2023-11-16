@@ -54,17 +54,15 @@ li {
     display: flex;
     text-align: center;
     padding: 0 15px;
-    background-color: #005bac;
-  }
-  .nav-p {
-    border-bottom: 1px solid #94d8f6;
+    background-color: #158da8;
   }
   .navisshow {
     display: none;
     position: absolute;
     left: 0;
     right: 0;
-    background-color: #005bac;
+    z-index: 20;
+    background-color: #158da8;
   }
   .nav-item {
     flex: 1 auto;
@@ -76,12 +74,12 @@ li {
     width: 14px;
   }
   .main {
-    background-color: #d8eaf1;
+    background-color: #f0f0f0;
     padding-top: 15px;
   }
   .main.indexbg {
-    padding-bottom: 63px;
-    background-image: url('slbsjszq-202311-bottombg.jpg');
+    padding-bottom: 85px;
+    background-image: url('slbssxzq-202311-bottombg.png');
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: contain;
@@ -94,29 +92,56 @@ li {
   }
   .chnltitle {
     margin-bottom: 9px;
-
   }
   .chnlbg {
     font-size: 19px;
     text-align: center;
     line-height: 34px;
+    color: #158da8;
   }
   .chnlbg::before {
-    content: "";
+    content: '';
     display: inline-block;
     vertical-align: middle;
-    width: 23px;
-    height: 21px;
-    background-image: url('slbsjszq-202311-channelicon.png');
     background-size: cover;
     margin-right: 10px;
     margin-top: -2px;
   }
+  .icon1 .chnlbg::before {
+    background-image: url('slbssxzq-202311-icon1.png');
+    width: 25.5px;
+    height: 26px;
+  }
+  .icon2 .chnlbg::before {
+    background-image: url('slbssxzq-202311-icon2.png');
+    width: 22px;
+    height: 22.5px;
+  }
+  .icon3 .chnlbg::before {
+    background-image: url('slbssxzq-202311-icon3.png');
+    width: 19px;
+    height: 25.5px;
+  }
+  .icon4 .chnlbg::before {
+    background-image: url('slbssxzq-202311-icon4.png');
+    width: 25.5px;
+    height: 19px;
+  }
+  .icon5 .chnlbg::before {
+    background-image: url('slbssxzq-202311-icon5.png');
+    width: 21px;
+    height: 21px;
+  }
+  .icon6 .chnlbg::before {
+    background-image: url('slbssxzq-202311-icon6.png');
+    width: 22.5px;
+    height: 22.5px;
+  }
   .more {
     float: right;
     font-size: 13px;
-    color: #0257a3;
     margin-top: 13px;
+    color: #158da8;
   }
   .henws {
     background-color: #ffffff;
@@ -149,6 +174,9 @@ li {
   .slick-img.listpage .slick-item + .slick-item {
     margin-top: 17px;
   }
+  .applist {
+    box-shadow: 0 0 7px #e3e3e3;
+  }
   .applist li {
     font-size: 16px;
     line-height: 21px;
@@ -157,7 +185,7 @@ li {
     border-radius: 5px;
   }
   .applist li + li {
-    margin-top: 10px;
+    border-top: 1px solid #edf3f7;
   }
   .applist.listpage li + li {
     margin-top: 11px;
@@ -187,6 +215,13 @@ li {
     width: 100%;
     border-radius: 5px;
     overflow: hidden;
+    box-shadow: 0 0 7px #e3e3e3;
+  }
+  .slick-mod2 {
+    margin-bottom: 15px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 7px #e3e3e3;
   }
   .slick-mod .tit1 {
     font-size: 16px;
@@ -196,6 +231,15 @@ li {
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+  }
+  .slick-mod2 .tit1 {
+    height: 91px;
+    font-size: 16px;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    line-height: 21px;
+    background-color: #ffffff;
   }
   .slick-item {
     position: relative;
@@ -210,6 +254,13 @@ li {
     right: 0;
     bottom: 57px;
   }
+  .slick-mod2 .slick-dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 19px;
+  }
+  .slick-mod2 .slick-dots li,
   .slick-mod .slick-dots li {
     width: 5px;
     height: 5px;
@@ -217,6 +268,10 @@ li {
     border-radius: 50%;
     margin: 0 5px 0 0;
   }
+  .slick-mod2 .slick-dots li {
+    background: #b2bcd8;
+  }
+  .slick-mod2 .slick-dots li.slick-active,
   .slick-mod .slick-dots li.slick-active {
     width: 13.5px;
     height: 5px;
@@ -224,14 +279,26 @@ li {
     border-radius: 4px;
   }
   /* --- */
-  .zt-links .zt-item + .zt-item {
-    margin-top: 15px;
+  .zt-links .zt-item {
+    width: 50%;
+  }
+  .zt-links .zt-item:nth-child(even) {
+    float: right;
+    text-align: right;
+  }
+  .zt-links .zt-item:nth-child(odd) {
+    float: left;
+    
+  }
+  .zt-links .zt-item:nth-child(n+3) {
+    margin-top: 14px;
   }
   .zt-links .zt-item img {
-    width: 100%;
+    box-shadow: 0 0 7px #e3e3e3;
+    width: 165px;
   }
   footer {
-    background-color: #036bb6;
+    background-color: #158da8;
     color: #ffffff;
     padding: 35px 0;
     border-top: 1px solid #09a1e5;

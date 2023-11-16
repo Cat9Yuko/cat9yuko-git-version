@@ -193,7 +193,7 @@ section + section {
   width: 13.5px;
   height: 5px;
   background: #005bac;
-  border-radius: 50%;
+  border-radius: 4px;
 }
 /* --- */
 .zt-links .zt-item + .zt-item {
