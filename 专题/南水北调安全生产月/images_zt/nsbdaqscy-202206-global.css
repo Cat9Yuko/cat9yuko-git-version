@@ -19,9 +19,6 @@ img {
 .fr {
   float: right;
 }
-.clearfix {
-  *zoom: 1;
-}
 .clearfix::after {
   content: "";
   display: block;
@@ -44,8 +41,8 @@ img {
 }
 /* user style */
 header {
-  height: 620px;
-  background: url(nsbdaqscy-202206-banner.jpg) center center no-repeat;
+  height: 542px;
+  background: url("nsbdslaqscy-202311-banner.png") center center;
   background-size: cover;
 }
 nav {
