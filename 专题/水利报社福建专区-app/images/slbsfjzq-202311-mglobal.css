@@ -175,6 +175,9 @@ li {
   .slick-item {
     position: relative;
   }
+  .slick-mod  .slick-item img {
+    height: 194px;
+  }
   .slick-item img {
     width: 100%;
   }
