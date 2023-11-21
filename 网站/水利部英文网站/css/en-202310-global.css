@@ -899,6 +899,10 @@ footer.footerbg {
   padding-top: 23px;
   padding-bottom: 23px;
 }
+.quicklink-title p {
+  font-size: 20px;
+  text-transform: lowercase;
+}
 .quick-ul {
   border-left: 1px solid #cecece;
   border-right: 1px solid #cecece;
