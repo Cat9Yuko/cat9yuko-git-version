@@ -523,8 +523,10 @@ footer {
   border-bottom: 1px solid #764c2c;
   box-sizing: border-box;
   margin-bottom: 43px;
+  display: flex;
 }
 .channel-item {
+  flex: 1;
   height: 50px;
   line-height: 50px;
   float: left;
@@ -547,7 +549,8 @@ footer {
 .channel-item.act {
   background-image: url('../img/bskdag-202311-activebg.jpg');
   color: #ffffff;
-  background-size: cover;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
 .img-item {
   width: 398px;
