@@ -768,6 +768,21 @@ footer.footerbg {
 .show-2column.show3 .fl + .fl {
   margin-left: 30px;
 }
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+.flex .fl {
+  display: flex;
+}
+.flex .w600 {
+  flex: 600px 0;
+}
+.flex .listpage-ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 .listpage-ul li p {
   display: table;
   width: calc(100% - 182px);
