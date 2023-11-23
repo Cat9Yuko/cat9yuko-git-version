@@ -778,6 +778,9 @@ footer.footerbg {
 .flex .w600 {
   flex: 600px 0;
 }
+.flex .fr {
+  margin-left: 80px;
+}
 .flex .listpage-ul {
   display: flex;
   flex-direction: column;
