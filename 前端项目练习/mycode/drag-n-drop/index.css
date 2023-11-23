@@ -18,5 +18,21 @@ body {
   background: white;
 }
 .fill {
-    background-image: url('');
+  background-image: url('https://c.wallhere.com/images/17/78/f7fb1c6ca6ae3dcf9b35b7a0842a-1564671.jpg!d');
+  height: 145px;
+  width: 145px;
+  cursor: pointer;
+}
+.hold {
+  border: 5px solid #333333;
+}
+.hovered {
+  background-color: #333333;
+  border-color: white;
+  border-style: dashed;
+}
+@media (max-width: 800px) {
+  body {
+    flex-direction: column;
+  }
 }

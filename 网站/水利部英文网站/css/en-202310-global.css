@@ -779,7 +779,7 @@ footer.footerbg {
   flex: 600px 0;
 }
 .flex .fr {
-  margin-left: 80px;
+  margin-left: auto;
 }
 .flex .listpage-ul {
   display: flex;
