@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {display: flex;padding-left: 0;}
+        li {list-style: none;}
+        .ul {display: table;}
+        .ul li {
+            display: table-cell;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <!-- <li class="first"><img src="images_zt/slxt2022ndkh-202304-img1.jpg" data-img="images_zt/slxt2022ndkh-202304-img1.jpg"></li> -->
+    </ul>
+    <div class="ul"></div>
+    <p></p>
+    <button>点击复制</button>
+    
+    <script src="images_zt/jquery-3.6.4.min.js"></script>
+    <script>
+        let listr = '';
+        for (let index = 0; index < 42; index++) {
+            if(index == 0) {
+                listr+=`<li class="first"><img src="images_zt/slxt2022ndkh-202304-img${index+1}.jpg" data-img="images_zt/slxt2022ndkh-202304-img${index+1}.jpg"></li>`;
+            } else {
+                listr+=`<li class=""><img src="images_zt/slxt2022ndkh-202304-img${index+1}.jpg" data-img="images_zt/slxt2022ndkh-202304-img${index+1}.jpg"></li>`;
+            }
+        }
+        $("ul").html(listr);
+        let html = '';
+        let width = 0;
+        let endindex = $("ul li").length - 1;
+        $("ul li").each(function(index, ele){
+            html += $("ul li")[endindex].outerHTML;
+            endindex--;
+            width += $(this).width();
+        })
+        $(".ul").html(html);
+        $("p").text(html);
+        console.log(width);
+        $("button").click(function(){
+            $("body").append($("<input>"));
+            $("input").val($("p").text());
+            $("input").focus().select();
+            document.execCommand("Copy");
+            $("input").remove();
+            alert("复制成功");
+        })
+    </script>
+</body>
+</html>
