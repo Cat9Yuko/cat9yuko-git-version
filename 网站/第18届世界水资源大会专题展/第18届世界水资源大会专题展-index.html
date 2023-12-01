@@ -94,9 +94,9 @@
 
     <!-- 放大图片 -->
     <div id="iw_ribbon" class="iw_ribbon">
-        <!-- <div class="img_con" style="width: 1024px; height: 715px; margin-left: -512px; margin-top: -357.5px;">
+        <div class="img_con" style="width: 1024px; height: 715px; margin-left: -512px; margin-top: -357.5px;">
             <p class="img_txt"></p>
-        </div> -->
+        </div>
         <span class="iw_close"></span>
         <span class="iw_zoom">单点缩略图放大图片</span>
     </div>
@@ -105,36 +105,5 @@
     <script src="images_zt/jq_eas.js"></script>
     <script src="images_zt/szydhztz18-202311-image_wall.js"></script>
     <script src="images_zt/szydhztz18-202311-scroll.js"></script>
-    <script>
-        
-            var tliwid = 0;
-            var naturalWidth = 0;
-            var arr = [];
-            $("#div li").each(function(i){
-            tliwid += Math.floor($(this).width());
-            arr.push(Math.floor($(this).width()));
-            var $img = $(this).find("img");
-            console.log($img[0].naturalWidth);
-            naturalWidth += $img[0].naturalWidth;
-        })
-        // var geiwidth = setInterval(() => {
-        //     $("#div li").each(function(i){
-        //     var $img = $(this).find("img");
-        //     var w = $img[0].naturalWidth;
-        //     if(w) {
-        //         naturalWidth += $img[0].naturalWidth;
-        //     }
-            
-        // })
-        // }, 50);
-        console.log("naturalWidth: " + naturalWidth);
-        console.log(arr);
-        console.log(tliwid);
-        console.log(tliwid*2);
-        // var totmar = $("#div li").length * 25;
-        // 
-        // 2050*2 + 26271 *2
-        
-    </script>
 </body>
 </html>

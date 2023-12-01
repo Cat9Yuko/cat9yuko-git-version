@@ -101,18 +101,18 @@ $(window).on('load',function(){
 				  $iw_ribbon.children("img").remove();
 				  $iw_ribbon.children("img").next().nextAll().not(".iw_close").remove();
 				// on window resize we need to recalculate the window dimentions
-				// $(window).bind('resize', function() {
-				// 			getWindowsDim();
-				// 			resizeiwT();
-				// 			if($iw_ribbon.is(':animated'))
-				// 				return false;
-				// 			closeRibbon();
-				// 		 })
-				// 		 .bind('scroll', function() {
-				// 			if($iw_ribbon.is(':animated'))
-				// 				return false;
-				// 			closeRibbon();
-				// 		 });
+				$(window).bind('resize', function() {
+							getWindowsDim();
+							resizeiwT();
+							if($iw_ribbon.is(':animated'))
+								return false;
+							closeRibbon();
+						 })
+						 .bind('scroll', function() {
+							if($iw_ribbon.is(':animated'))
+								return false;
+							closeRibbon();
+						 });
 				
 			},
 			showWork=function($el){
