@@ -17,7 +17,7 @@
         padding-top: 332px;
         }
         #div ul {
-            width: 50350px!important;
+            width: 49596px!important;
             /* 56642 */
             /* width: 34140px!important; */
         }
@@ -104,6 +104,37 @@
     <script src="images/jquery-3.6.4.min.js"></script>
     <script src="images/wztymb-202312-jqeas.js"></script>
     <script src="images/wztymb-202312-image_wall.js"></script>
-    <script src="images/wztymb-202312-scroll.js"></script>
+    <script src="images/wztymb-202312-scroll2.js"></script>
+    <script>
+        
+        var tliwid = 0;
+        var naturalWidth = 0;
+        var arr = [];
+        $("#div li").each(function(i){
+        tliwid += Math.floor($(this).width());
+        arr.push(Math.floor($(this).width()));
+        var $img = $(this).find("img");
+        console.log($img[0].naturalWidth);
+        naturalWidth += $img[0].naturalWidth;
+    })
+    // var geiwidth = setInterval(() => {
+    //     $("#div li").each(function(i){
+    //     var $img = $(this).find("img");
+    //     var w = $img[0].naturalWidth;
+    //     if(w) {
+    //         naturalWidth += $img[0].naturalWidth;
+    //     }
+        
+    // })
+    // }, 50);
+    console.log("naturalWidth: " + naturalWidth);
+    console.log(arr);
+    console.log(tliwid);
+    console.log(tliwid*2);
+    // var totmar = $("#div li").length * 25;
+    // 
+    // 2050*2 + 26271 *2
+    
+</script>
 </body>
 </html>
