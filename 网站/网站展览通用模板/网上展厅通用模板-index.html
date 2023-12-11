@@ -7,7 +7,7 @@
     <title>贡献中国智慧  中国方案  中国力量 推动解决全球水治理问题——第18届世界水资源大会专题展</title>
     <link rel="stylesheet" href="images/normalize.css">
     <link rel="stylesheet" href="images/wztymb-202312-scroll.css">
-    <link rel="stylesheet" href="images/imageviewer.css">
+    <link rel="stylesheet" href="images/wztymb-202312-imageviewer.css">
     <link rel="stylesheet" href="images/wztymb-202312-global.css">
     <style>
         main {
@@ -106,14 +106,14 @@
     <script src="images/wztymb-202312-jqeas.js"></script>
     <!-- <script src="images/wztymb-202312-image_wall.js"></script> -->
     <script src="images/wztymb-202312-scroll.js"></script>
-    <script src="images/imageviewer.js"></script>
+    <script src="images/wztymb-202312-imageviewer.js"></script>
     <script>
         $(function () {
             var viewer = ImageViewer();
             $('.gallery').click(function () {
                 var imgSrc = this.src,
                     highResolutionImage = $(this).data('data-img');
-                viewer.show(imgSrc, highResolutionImage);
+                viewer.show(imgSrc);
             });
         });
     </script>
@@ -141,9 +141,11 @@
     // }, 50);
     console.log("naturalWidth: " + naturalWidth);
     console.log(arr);
-    console.log(arr.length * 25 *2 + naturalWidth);
-    // console.log(tliwid);
-    // console.log(tliwid*2);
+    console.log(arr.length * 25 *2 + naturalWidth*2);
+    console.log(tliwid);
+    console.log('margin');
+    console.log(tliwid*2);
+    console.log(arr.length * 25 *2);
     // var totmar = $("#div li").length * 25;
     // 
     // 2050*2 + 26271 *2
