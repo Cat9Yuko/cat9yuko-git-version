@@ -304,6 +304,14 @@ header {
 .slick-mod4 .slick-dots li:nth-child(1)::after {
 content: none;
 }
+.slick-mod4 .slick-item p {
+  font-size: 24px;
+  line-height: 48px;
+  text-align: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
 /* --- */
 /* 全屏图片 */
 .iw_ribbon {
