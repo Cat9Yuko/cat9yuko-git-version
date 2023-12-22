@@ -8,8 +8,36 @@
     <link rel="stylesheet" href="images_zt/normalize.css">
     <link rel="stylesheet" href="images_zt/slick.css">
     <link rel="stylesheet" href="images_zt/nsbddzx9zn-202312-global.css">
+    <style>
+        .fixedbar2 {
+            position: fixed;
+            right: 10px;
+            z-index: 99;
+            bottom: 250px;
+        }
+        .fixedbar2 p {
+            text-align: center;
+            line-height: 24px;
+        }
+        .fixedbar2 img {
+            margin-bottom: 10px;
+        }
+        .fixedbar2 .fixedbar2-close {
+            position: absolute;
+            right: 10px;
+            top: 0;
+        }
+        .fixedbar2-close span {
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
+    <div class="fixedbar2">
+        <p class="fixedbar2-close"><span>X</span></p>
+        <img src="images_zt/demo.jpg" alt="">
+        <p>国资央企违反中央八项规定精神问题<br>举报平台入口<br>请使用手机扫描二维码</p>
+    </div>
     <header>
         <div class="slick-mod5">
             <div class="slick-item"><img src="images_zt/1.png" alt=""></div>
@@ -138,7 +166,7 @@
                 </div>
                 <div class="chnlbg"><a href="" target="_blank" rel="noopener noreferrer"><img src="images_zt/nsbddtxyq9zn-202312-channelrxyy.png" alt=""></a></div>
                 <div class="slick-mod4">
-                    <div class="slick-item"><a href="" target="_blank" rel="noopener noreferrer"><div><img src="images_zt/demo6.jpg" alt="" height="568"><p>新华社：新华社权威快报｜南水北调东线通水10周年</p></div></a></div>
+                    <div class="slick-item"><a href="" target="_blank" rel="noopener noreferrer"><div><div style="overflow: hidden;"><img src="images_zt/demo6.jpg" alt="" height="568"></div><p>新华社：新华社权威快报｜南水北调东线通水10周年</p></div></a></div>
                     <div class="slick-item"><a href="" target="_blank" rel="noopener noreferrer"><div><img src="images_zt/demo6.jpg" alt="" height="568"><p>新华社：新华社权威快报｜南水北调东线通水10周年</p></div></a></div>
                     <div class="slick-item"><a href="" target="_blank" rel="noopener noreferrer"><div><img src="images_zt/demo6.jpg" alt="" height="568"><p>新华社：新华社权威快报｜南水北调东线通水10周年</p></div></a></div>
                     <div class="slick-item"><a href="" target="_blank" rel="noopener noreferrer"><div><img src="images_zt/demo6.jpg" alt="" height="568"><p>新华社：新华社权威快报｜南水北调东线通水10周年</p></div></a></div>
@@ -194,6 +222,11 @@
             });
         })
 
+    </script>
+    <script>
+        $(".fixedbar2-close").click(function(){
+            $(this).parent().remove();
+        })
     </script>
 </body>
 </html>

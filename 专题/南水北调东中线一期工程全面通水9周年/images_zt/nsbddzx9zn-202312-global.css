@@ -166,7 +166,8 @@ img {
   width: 285px;
   height: 260px;
   margin: 0 auto;
-  background-color: #e6f5ff;
+  background-color: #0A73CE;
+  color: #ffffff;
   line-height: 48px;
   padding: 0 40px;
   display: table;
@@ -319,6 +320,8 @@ img {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  background-color: #0A73CE;
+  color: #ffffff;
 }
 .slick-mod5 .slick-dots {
   position: absolute;
@@ -417,7 +420,8 @@ img {
   width: 227px;
   height: 221px;
   float: left;
-  background-color: #ffffff;
+  background-color: #0A73CE;
+  color: #ffffff;
   font-size: 20px;
   background-size: cover;
   background-repeat: no-repeat;

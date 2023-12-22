@@ -52,8 +52,24 @@ header {
   background-size: cover;
   height: 374px;
 }
+nav {
+  background-color: #D91B1B;
+}
+.nav {
+  display: table;
+  width: 100%;
+}
+.nav-child {
+  display: table-cell;
+  width: 1%;
+  table-layout: fixed;
+  line-height: 42px;
+  font-size: 18px;
+  color: #ffffff;
+  text-align: center;
+}
 .mainbg {
-  background-image: url('slfjqsmzghqq-202312-mainbg.jpg');
+  /* background-image: url('slfjqsmzghqq-202312-mainbg.jpg'); */
   background-position: center top;
   background-repeat: no-repeat;
   padding-bottom: 24px;
