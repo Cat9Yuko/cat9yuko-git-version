@@ -2,7 +2,7 @@
  * @Author: Cat9Yuko 
  * @Date: 2020-07-29 15:59:35 
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2023-12-01 10:41:57
+ * @Last Modified time: 2024-01-03 19:21:19
  */
 
  // 依赖JQuery
@@ -71,6 +71,7 @@
     }
 
     setTimer();
+        
 });
 
 
