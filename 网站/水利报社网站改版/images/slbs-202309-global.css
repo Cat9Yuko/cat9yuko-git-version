@@ -38,7 +38,7 @@ img {
   margin: 0 auto;
 }
 .main {
-  padding-top: 28px;
+  padding-top: 30px;
   padding-bottom: 60px;
   background-image: url('slbs-202309-mainbottombg.jpg');
   background-position: center bottom;
@@ -81,32 +81,31 @@ section + section {
   padding-right: 15px;
 }
 .logo-container {
-  margin-top: -8px;
+  margin-top: -13px;
 }
 .lword {
   border-left: 1px solid #e2eef3;
   margin-left: 33px;
   padding-left: 27px;
-  padding-top: 7px;
-  height: 66px;
+  height: 47px;
   float: left;
 }
 .logo {
-  margin-top: 11px;
   float: left;
 }
 .lword p {
-  line-height: 27px;
+  line-height: 16px;
   font-size: 14px;
 }
 .lword p:nth-child(1) {
   font-size: 16px;
   color: #005bac;
   font-weight: bold;
+  margin-bottom: 16px;
 }
 .iconlink {
-  height: 90px;
-  padding-top: 40px;
+  height: 55px;
+  padding-top: 14px;
   padding-right: 20px;
 }
 .iconlink-item {
@@ -138,12 +137,16 @@ section + section {
   width: 25px;
   height: 18px;
 }
+.banner-containeer img {
+  display: block;
+  width: 100%;
+}
 nav {
+  background-image: url('slbs-202401-navbgpc.jpg');
   background-color: #005bac;
   color: #ffffff;
   height: 47px;
   line-height: 44px;
-  border-bottom: 3px solid #0097e6;
 }
 .borderb {
   border-bottom: 3px solid #94d8f6;
@@ -159,7 +162,7 @@ nav {
   position: relative;
 }
 .nav-item + .nav-item {
-  margin-left: 40px;
+  margin-left: 36px;
 }
 .moreicon::after {
   content: '';
@@ -300,10 +303,10 @@ nav {
   background-size: cover;
 }
 .trainb.header {
-  background-image: url("slbs-202309-trainhb.png");
+  background-image: url('slbs-202309-trainhb.png');
 }
 .trainb.footer {
-  background-image: url("slbs-202309-trainfa.png");
+  background-image: url('slbs-202309-trainfa.png');
 }
 .trainf {
   background-image: url('slbs-202309-trainf.png');
@@ -472,12 +475,15 @@ nav {
   background: #005bac;
 }
 /* --- */
+.hnews-container {
+  margin-bottom: -20px;
+}
 .hnews-container h2 {
   font-size: 40px;
   color: #005bac;
   font-weight: bold;
   text-align: center;
-  margin: 22px 0;
+  margin: 0 0 22px;
 }
 .hnews-list {
   text-align: center;
@@ -502,7 +508,8 @@ nav {
   content: none;
 }
 .list li {
-  height: 59px;
+  padding-top: 13px;
+  padding-bottom: 12px;
   border-top: 1px solid #edf3f7;
   font-size: 16px;
   color: #222222;
@@ -515,9 +522,16 @@ nav {
 .list li:nth-child(1) {
   border-top: none;
 }
-.list li:hover {
+.list.firstb li:nth-child(1) {
+  font-size: 18px;
+  font-weight: bold;
+  color: #222222;
+}
+.list li:hover,.list.firstb li:hover {
   background-image: url('slbs-202309-lihoverbg.jpg');
+  background-repeat: no-repeat;
   color: #ffffff;
+  background-size: 100% 100%;
 }
 .list li a {
   display: table-cell;
@@ -565,6 +579,9 @@ nav {
   border-bottom: 1px solid #edf3f7;
   padding-bottom: 10px;
   padding-top: 8px;
+}
+.chnltitle.point {
+  font-size: 18px;
 }
 .chnltitle.npd {
   padding: 0;
@@ -707,7 +724,8 @@ nav {
   color: #ffffff;
 }
 .txt .p1,
-.txt .p2,.rmbd-container ul li.act .p3 {
+.txt .p2,
+.rmbd-container ul li.act .p3 {
   display: none;
 }
 .rmbd-container ul li.act .txt {
