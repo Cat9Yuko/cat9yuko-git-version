@@ -107,7 +107,20 @@
     <!-- <script src="images/wztymb-202312-image_wall.js"></script> -->
     <script src="images/wztymb-202312-scroll.js"></script>
     <script src="images/wztymb-202312-imageviewer.js"></script>
+<<<<<<< HEAD
     
+=======
+    <script>
+        $(function () {
+            var viewer = ImageViewer('');
+            $('.gallery').click(function () {
+                var imgSrc = this.src,
+                    highResolutionImage = $(this).data('data-img');
+                viewer.show(imgSrc,highResolutionImage);
+            });
+        });
+    </script>
+>>>>>>> b9ebaf1 (新增)
     <script>
         
         var tliwid = 0;
