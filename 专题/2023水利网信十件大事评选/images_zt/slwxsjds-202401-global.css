@@ -139,7 +139,7 @@ img {
     right: 5px;
     top: 5px;
     bottom: 5px;
-    background: rgba(212, 236, 255, 0.8);
+    background: rgba(255, 255, 255, 0.8);
 }
 
 .show-detail h1 {
@@ -157,6 +157,14 @@ img {
 
 .more {
     color: #0760e6;
+}
+
+.bot-item:hover .img-title {
+    display: none;
+}
+
+.bot-item:hover .show-detail {
+    display: block;
 }
 
 .bot-items+.bot-items {
