@@ -53,12 +53,38 @@ header {
   height: 640px;
   margin-top: -53px;
 }
+.slick-mod3 {
+  padding-bottom: 97px;
+  margin-bottom: 58px;
+}
 .slick-mod2 img:hover,
-.slick-mod img:hover {
+.slick-mod img:hover,
+.slick-mod3 img:hover {
   transform: scale(1.2);
 }
 .slick-item {
   position: relative;
+}
+.show-6item {
+  width: 384px;
+  height: 303px;
+  float: left;
+  margin-left: 23px;
+  background-color: #f5f6f7;
+}
+.show-6item div {
+  overflow: hidden;
+}
+.show-6item:nth-child(3n+1) {
+  margin-left: 0;
+}
+.show-6item:nth-child(n+4) {
+  margin-top: 39px;
+}
+.show-6item p {
+  font-size: 16px;
+  line-height: 23px;
+  padding: 14px;
 }
 .slick-item img {
   width: 100%;
@@ -100,6 +126,15 @@ header {
   z-index: 3;
   cursor: pointer;
 }
+.slick-mod3 .slick-arrow {
+  width: 110px;
+  height: 57px;
+  margin: auto;
+  position: absolute;
+  bottom: 0;
+  z-index: 3;
+  cursor: pointer;
+}
 .slick-mod .slick-next {
   right: 0;
   background: url('nsbdjnds-202401-arrowright.png') no-repeat center;
@@ -109,14 +144,14 @@ header {
   background: url('nsbdjnds-202401-arrowleft.png') no-repeat center;
 }
 
-/* .slick-mod2 .slick-next {
-  right: 0;
-  background: url(../images/wlaq-202009-arrowrigh.png) no-repeat center;
+.slick-mod3 .slick-next {
+  right: 457px;
+  background: url('nsbdjnds-202401-arrowright2.png') no-repeat center;
 }
-.slick-mod2 .slick-prev {
-  left: 0;
-  background: url(../images/wlaq-202009-arrowlef.png) no-repeat center;
-} */
+.slick-mod3 .slick-prev {
+  left: 457px;
+  background: url('nsbdjnds-202401-arrowleft2.png') no-repeat center;
+}
 .slick-mod .slick-dots li,
 .slick-mod2 .slick-dots li {
   width: 14px;
@@ -140,7 +175,9 @@ header {
   margin-top: 62px;
   margin-bottom: 20px;
 }
-
+.chnltitle.text-center {
+  text-align: center;
+}
 .list li {
   line-height: 91px;
   white-space: nowrap;
@@ -148,7 +185,46 @@ header {
   overflow: hidden;
   border-bottom: 1px solid #d7d8d9;
 }
-
+.nobor li + li {
+  border-bottom: none;
+  border-top: 1px solid #d7d8d9;
+}
 section + section {
   margin-top: 65px;
+}
+
+footer {
+  text-align: center;
+  background-color: #03489d;
+  color: #ffffff;
+  line-height: 36px;
+  padding: 30px 0;
+}
+.boxs {
+  box-shadow: 0px 0px 3px 1px #ccc;
+}
+.source-time {
+  margin: 0 auto;
+  height: 35px;
+  text-align: center;
+  position: relative;
+  line-height: 35px;
+}
+
+.time {
+  margin-right: 10px;
+}
+
+.wechat,
+.sina {
+  position: absolute;
+  margin-top: 5px;
+}
+
+.wechat {
+  margin-left: 10px;
+}
+
+.sina {
+  margin-left: 46px;
 }
