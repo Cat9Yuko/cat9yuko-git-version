@@ -66,6 +66,15 @@ section + section {
   width: 420px;
 }
 /* user style */
+.fixedbar {
+  position: fixed;
+  top: 444px;
+  right: 37px;
+}
+.fixedbar .close img {
+  display: block;
+  cursor: pointer;
+}
 .welcome {
   height: 40px;
   background-image: url('slbs-202309-welcomebg.png');
@@ -233,11 +242,13 @@ nav {
 /* carousel */
 .slick-mod {
   width: 1280px;
-  height: 167px;
+  height: 174px;
+  overflow: hidden;
   margin-left: 1280px;
 }
 .train-overflow {
   overflow: hidden;
+  margin-top: -39px;
 }
 .slick-mod3 {
   width: 1140px;
@@ -279,6 +290,7 @@ nav {
 .slick-mod2 {
   width: 845px;
   height: 475px;
+  overflow: hidden;
 }
 .slick-mod2 .slick-item img {
   width: 100%;
@@ -289,28 +301,28 @@ nav {
   position: relative;
 }
 .trainh {
-  background-image: url('slbs-202309-trainh.png');
-  height: 167px;
+  background-image: url('slbs-202401-trainh.png');
+  height: 174px;
   padding-top: 18px;
   box-sizing: border-box;
   background-size: cover;
 }
 .trainb {
-  background-image: url('slbs-202309-trainb.png');
-  height: 167px;
-  padding-top: 18px;
+  background-image: url('slbs-202401-trainb.png');
+  height: 174px;
+  padding-top: 22px;
   box-sizing: border-box;
   background-size: cover;
 }
-.trainb.header {
+/* .trainb.header {
   background-image: url('slbs-202309-trainhb.png');
 }
 .trainb.footer {
   background-image: url('slbs-202309-trainfa.png');
-}
+} */
 .trainf {
-  background-image: url('slbs-202309-trainf.png');
-  height: 167px;
+  background-image: url('slbs-202401-trainf.png');
+  height: 174px;
   padding-top: 18px;
   box-sizing: border-box;
   background-size: cover;
@@ -335,21 +347,21 @@ nav {
   overflow: hidden;
 }
 .show-item4 .borderb {
-  width: 307px;
-  height: 128px;
+  width: 255px;
+  height: 130px;
   margin: 0 auto;
   border-bottom: 4px solid #005bac;
 }
 .show-item4 .borderb .borderb2 {
   height: 124px;
   display: block;
-  border-bottom: 1px solid #bdd1e4;
+  border-bottom: none;
 }
 .train-h,
 .train-f {
   position: absolute;
-  bottom: 3px;
-  width: 125px;
+  bottom: 25px;
+  width: 150px;
 }
 .train-h {
   left: 50%;
@@ -391,6 +403,8 @@ nav {
 }
 .slick-mod4 {
   margin: -25px 0;
+  height: 80px;
+  overflow: hidden;
 }
 .slick-mod4 .slick-dots {
   position: absolute;
@@ -524,7 +538,7 @@ nav {
 }
 .list.firstb li:nth-child(1) {
   font-size: 18px;
-  font-weight: bold;
+  /* font-weight: bold; */
   color: #222222;
 }
 .list li:hover,.list.firstb li:hover {
@@ -646,6 +660,7 @@ nav {
 }
 .section-f {
   margin-top: 20px;
+  overflow: hidden;
 }
 .scrolltext {
   width: 1140px;
@@ -740,11 +755,12 @@ nav {
   bottom: 0;
   right: 0;
   height: auto;
-  padding: 0 0 30px 23px;
+  padding: 30px 0 30px 23px;
+  background-color: rgba(0, 0, 0, 0.4);
   writing-mode: initial;
 }
 .rotate-bg {
-  height: 560px;
+  height: 490px;
   overflow: hidden;
   transition: background-image 0.5s;
 }
@@ -819,9 +835,51 @@ nav {
   font-weight: bold;
   color: #005fb1;
   line-height: 45px;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+.sszq-text::after {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  top: 21px;
+  right: 66px;
+  background-image: url('slbs-202401-sszqcmore.png');
+  width: 12px;
+  height: 7px;
+  vertical-align: middle;
+}
+.sszq-navitems {
+  text-align: center;
+  display: none;
+  position: absolute;
+  z-index: 20;
+}
+.sszq-navitems.act {
+  display: block;
+}
+.sszq-navitems .item {
+  width: 166px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  color: #0060b1;
+  font-weight: bold;
+  background-image: url('slbs-202401-sszqcbg.png');
+  display: inline-block;
+}
+.sszq-navitems .item + .item {
+  margin-left: 10px;
+}
+.sszq-navitems .item:hover {
+  background-image: url('slbs-202401-sszqcbgh.png');
+  color: #ffffff;
 }
 .sstg-container {
   height: 50px;
+  overflow: hidden;
   background-image: url('slbs-202309-sstgbg.png');
 }
 .channeltitle-bg {
@@ -1100,6 +1158,18 @@ nav {
   line-height: initial;
   font-size: 18px;
 }
+.list3.circleicon li:nth-child(1) {
+  font-weight: bold;
+}
+.list3 li p.abs {
+  color: #666666;
+  font-size: 14px;
+  white-space: normal;
+  font-weight: normal;
+  padding-left: 21px;
+  margin-top: 12px;
+  line-height: 22px;
+}
 .list3.circleicon li + li {
   margin-top: 24px;
 }
@@ -1108,6 +1178,10 @@ nav {
   height: 10px;
   background-color: #ffffff;
   border: 1px solid #0d63b0;
+}
+.showitem6 {
+  height: 323px;
+  overflow: hidden;
 }
 .show6-item {
   float: left;
