@@ -70,6 +70,7 @@ section + section {
   position: fixed;
   top: 444px;
   right: 37px;
+  z-index: 20;
 }
 .fixedbar .close img {
   display: block;
@@ -162,16 +163,13 @@ nav {
   height: 50px;
   box-sizing: border-box;
 }
-.nav {
-  padding-left: 30px;
-}
 .nav-item {
   float: left;
   font-size: 17px;
   position: relative;
 }
 .nav-item + .nav-item {
-  margin-left: 36px;
+  margin-left: 38px;
 }
 .moreicon::after {
   content: '';
