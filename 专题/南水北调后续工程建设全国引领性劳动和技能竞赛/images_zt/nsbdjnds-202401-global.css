@@ -35,6 +35,9 @@ img {
   width: 1200px;
   margin: 0 auto;
 }
+.w542 {
+  width: 542px;
+}
 .w572 {
   width: 572px;
 }
@@ -49,9 +52,12 @@ header {
 }
 /* carousel */
 .slick-mod2 {
-  width: 569px;
-  height: 640px;
-  margin-top: -53px;
+  width: 640px;
+  height: 414px;
+  margin-top: 39px;
+}
+.slick-mod {
+  margin-top: 39px;
 }
 .slick-mod3 {
   padding-bottom: 97px;
@@ -173,13 +179,13 @@ header {
   /* color: #03489d; */
   font-weight: bold;
   margin-top: 62px;
-  margin-bottom: 20px;
+  margin-bottom: 34px;
 }
 .chnltitle.text-center {
   text-align: center;
 }
 .list li {
-  line-height: 91px;
+  line-height: 90px;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
