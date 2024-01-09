@@ -234,3 +234,30 @@ footer {
 .sina {
   margin-left: 46px;
 }
+.hnews {
+  background-image: url('http://www.csnwd.com.cn/images_zt/nsbd3zn-202310-hnewsbg.png');
+  height: 96px;
+  margin-top: -35px;
+  background-size: cover;
+  background-position: center center;
+}
+.hnews h2 {
+  font-size: 36px;
+  line-height: 96px;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #ffffff;
+}
+.hnews-abs {
+  background-color: #f9f3ef;
+  padding: 21px 18px;
+}
+.hnews-abs p {
+  line-height: 36px;
+}
+.hnews-abs p.more {
+  text-align: right;
+  line-height: 20px;
+}
