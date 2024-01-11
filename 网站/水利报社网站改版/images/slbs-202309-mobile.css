@@ -18,6 +18,59 @@
   }
 }
 @media screen and (max-width: 991px) {
+  .fixedbar {
+    width: 100px;
+    top: 250px;
+    right: 15px;
+  }
+  .close .fr {
+    float: right;
+  }
+  /* 融媒体矩阵 */
+  .rmtjz-item {
+    width: 105px;
+    height: 132px;
+    padding-top: 17px;
+  }
+  .rmtjz-item img {
+    width: 70px;
+    height: 70px;
+  }
+  .rmtjz-item p {
+    margin-top: 12px;
+    font-size: 10px;
+    line-height: 11.5px;
+  }
+  .rmtjz-li + .rmtjz-li,.rmtjz-li2 + .rmtjz-li2 {
+    margin-left: 15px;
+  }
+  .rmtjz-li:nth-child(3n+1) {
+    margin-left: 0;
+  }
+  .rmtjz-li:nth-child(n+4) {
+    margin-top: 16px;
+  }
+  .rmtjz-li2 {
+    width: 105px;
+    height: 46px;
+  }
+  .rmtjz-li2 img {
+    height: 28px;
+    width: auto;
+    margin-right: 6px;
+  }
+  .rmtjz-item2 span {
+    font-size: 10px;
+  }
+  .rmtjz-li2:nth-child(3n+1) {
+    margin-left: 0;
+  }
+  .rmtjz-li2:nth-child(n + 4) {
+    margin-top: 16px;
+  }
+  .list-container.rmtjzmt {
+    margin-top: 14px;
+  }
   #apptopc {
     word-break: normal;
     color: #ffffff;
@@ -505,7 +558,7 @@
   }
   .show6-item img {
     height: 263.5px;
-    width: 100%;
+    width: auto;
     /* border-radius: 5px; */
   }
   footer {
@@ -563,6 +616,11 @@
   }
   .pages a:hover {
     background-color: #ffffff;
+    color: #000000;
+  }
+  .pages a.act {
+    background-color: #0167d5;
+    color: #ffffff;
   }
   .m-channelt {
     background-size: contain;
