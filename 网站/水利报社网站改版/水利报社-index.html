@@ -48,8 +48,8 @@
                     <div class="nav clearfix hidden-smxs">
                         <div class="nav-item"><span class="moreicon"><a href="" target="_blank" rel="noopener noreferrer">部长之窗</a></span>
                             <div class="nav-child bzzc">
-                                <div class="">部　长：<a href="" target="_blank" rel="noopener noreferrer">李国英</a></div>
-                                <div class="">副部长：<a href="" target="_blank" rel="noopener noreferrer">田学斌</a><a href="" target="_blank" rel="noopener noreferrer">王新哲</a><a href="" target="_blank" rel="noopener noreferrer">王道席</a><a href="" target="_blank" rel="noopener noreferrer">刘伟平</a><a href="http://" target="_blank" rel="noopener noreferrer">朱程清</a><a href="http://" target="_blank" rel="noopener noreferrer">陈敏</a></div>
+                                <div class="">水利部领导：<a href="" target="_blank" rel="noopener noreferrer">李国英</a><a href="" target="_blank" rel="noopener noreferrer">王新哲</a><a href="" target="_blank" rel="noopener noreferrer">王道席</a><a href="" target="_blank" rel="noopener noreferrer">刘伟平</a><a href="http://" target="_blank" rel="noopener noreferrer">朱程清</a><a href="http://" target="_blank" rel="noopener noreferrer">陈敏</a></div>
+                                <!-- <div class="">副部长：</div> -->
                             </div>
                         </div>
                         <div class="nav-item"><a href="" target="_blank" rel="noopener noreferrer">要闻</a></div>
@@ -101,8 +101,8 @@
                         </div>
                     </div>
                     <div class="bzzc-nav">
-                        <div class="bzzc-item bz">部　长：<a href="" target="_blank" rel="noopener noreferrer">李国英</a></div>
-                        <div class="bzzc-item fbz">副部长：<a href="" target="_blank" rel="noopener noreferrer">田学斌</a><a href="" target="_blank" rel="noopener noreferrer">王新哲</a><a href="" target="_blank" rel="noopener noreferrer">王道席</a><a href="" target="_blank" rel="noopener noreferrer">刘伟平</a><a href="http://" target="_blank" rel="noopener noreferrer">朱程清</a><a href="http://" target="_blank" rel="noopener noreferrer">陈敏</a></div>
+                        <div class="bzzc-item bz">水利部领导：<a href="" target="_blank" rel="noopener noreferrer">李国英</a><a href="" target="_blank" rel="noopener noreferrer">王新哲</a><a href="" target="_blank" rel="noopener noreferrer">王道席</a><a href="" target="_blank" rel="noopener noreferrer">刘伟平</a><a href="http://" target="_blank" rel="noopener noreferrer">朱程清</a><a href="http://" target="_blank" rel="noopener noreferrer">陈敏</a></div>
+                        <!-- <div class="bzzc-item fbz">副部长：</div> -->
                     </div>
                 </div>
             </div>
@@ -1025,6 +1025,22 @@
             
             
         });
+        // 查看电脑版
+$('#apptopc').on('click', function () {
+    // var isShowPc = localStorage.setItem('isShowPc', true)
+    $("meta[name='viewport']").attr("content", "width=1300, target-densitydpi=device-dpi")
+    $('body').append('<div id="backmobile" class="backmobile"><img src="./images/slbs-202310-mobileicon.png" />返回手机版</div>')
+    // var h2title = '<TRS_DOCUMENTS ID="大标题新闻" NUM="1"><a href="<TRS_DOCUMENT FIELD="_RECURL"/>" target="_blank" rel="noopener noreferrer"><TRS_DOCUMENT FIELD="DOCPEOPLE" AUTOLINK="FALSE" AUTOCOLOR="true" CODEFILTERED="false"/></a></TRS_DOCUMENTS>';
+    // $(".hnews-container h2").html(h2title);
+
+    $('.scrolltext').liMarquee();
+  });
+  // 返回手机版
+  $('body').on('click', '#backmobile', function () {
+    // var isShowPc = localStorage.setItem('isShowPc', false)
+    $("meta[name='viewport']").attr("content", "width=device-width")
+    $('#backmobile').remove()
+  });
         
     </script>
 </body>

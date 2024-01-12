@@ -200,14 +200,18 @@
     width: 14px;
   }
   .bzzc-nav {
-    padding: 0 15px;
+    padding: 0 10px;
   }
   .bzzc-item {
-      display: flex;
+      /* display: flex; */
+      white-space: nowrap;
   }
   .bzzc-item a {
-    flex: 1;
+    /* flex: 1; */
     font-size: 14px;
+  }
+  .bzzc-item a + a {
+    margin-left: 5px;
   }
   .navmenu-childs,
   .bzzc-nav {
