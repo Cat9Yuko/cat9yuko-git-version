@@ -645,6 +645,11 @@
     line-height: 28px;
     margin-bottom: 15px;
   }
+  .article-top h3 {
+    margin-top: 0;
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
   .article-top {
     border-image: none;
     border-bottom: 1px solid #e3e3e3;
