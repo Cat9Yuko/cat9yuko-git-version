@@ -534,10 +534,16 @@ nav {
 .list li:nth-child(1) {
   border-top: none;
 }
-.list.firstb li:nth-child(1) {
-  font-size: 18px;
-  /* font-weight: bold; */
-  color: #222222;
+.list.firstb li {
+  display: table;
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 54px;
+  overflow: hidden;
+}
+.list.firstb li a {
+  display: table-cell;
+  vertical-align: middle;
 }
 .list li:hover,
 .list.firstb li:hover {
@@ -690,8 +696,12 @@ nav {
   width: 1280px;
   padding-top: 20px;
 }
+.rmbd-slick {
+  white-space: nowrap;
+}
 .rmbd-container ul li {
-  float: left;
+  /* float: left; */
+  display: inline-block;
   height: 415px;
   width: 119px;
   /* border-radius: 8px; */
@@ -1514,7 +1524,13 @@ footer {
   text-align: center;
   font-weight: normal;
 }
-.article-top h3:empty {
+.article-top h4 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: normal;
+}
+.article-top h3:empty,.article-top h4:empty {
   display: none;
 }
 .sourcetime-share {

@@ -311,6 +311,11 @@
   .list {
     margin-top: 15px;
   }
+  .list.firstb li {
+    display: block;
+    height: auto;
+    padding: 15px;
+  }
   .list.firstb li:nth-child(1) {
     font-weight: normal;
     font-size: 16px;
@@ -649,6 +654,11 @@
     margin-top: 0;
     font-size: 16px;
     margin-bottom: 15px;
+  }
+  .article-top h4 {
+    margin: 0;
+    padding-top: 15px;
+    font-size: 16px;
   }
   .article-top {
     border-image: none;
