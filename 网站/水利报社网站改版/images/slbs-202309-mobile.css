@@ -135,6 +135,9 @@
   .slick-mod2 {
     height: 303px;
   }
+  .slick-mod2 .slick-arrow {
+    display: none!important;
+  }
   .zt-container {
     height: 214px;
     overflow: hidden;

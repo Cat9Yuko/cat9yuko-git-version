@@ -410,10 +410,19 @@ nav {
   bottom: 11px;
 }
 .slick-mod .slick-arrow,
-.slick-mod2 .slick-arrow,
 .rmbd-slick .slick-arrow {
   width: 33px;
   height: 57px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 3;
+  cursor: pointer;
+}
+.slick-mod2 .slick-arrow {
+  width: 42px;
+  height: 69px;
   margin: auto;
   position: absolute;
   top: 0;
@@ -428,16 +437,16 @@ nav {
 .slick-mod .slick-prev {
   left: 0;
   background: url(../images_zt/wlaq-202009-arrowlef.png) no-repeat center;
-}
+} */
 
 .slick-mod2 .slick-next {
   right: 0;
-  background: url(../images/wlaq-202009-arrowrigh.png) no-repeat center;
+  background: url('slbs-202401-arrowright.png') no-repeat center;
 }
 .slick-mod2 .slick-prev {
   left: 0;
-  background: url(../images/wlaq-202009-arrowlef.png) no-repeat center;
-} */
+  background: url('slbs-202401-arrowleft.png') no-repeat center;
+}
 .slick-mod2 .slick-dots li,
 .rmbd-slick .slick-dots li {
   width: 8px;
