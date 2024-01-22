@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>模块</title>
+</head>
+<body>
+    
+    <script>
+        //为按照模块模式提供必要的封装， ES6 之前的模块有时候会使用函数作用域和立即调用函数表达式
+        //（ IIFE， Immediately Invoked Function Expression）将模块定义封装在匿名闭包中。
+        var Foo = (function(){
+            return {
+                bar: 'baz',
+                baz: function(){
+                    console.log(this.bar);
+                }
+            };
+        })();
+        // console.log(Foo.bar);
+        // Foo.baz();
+
+        // 还有一种模式叫作“泄露模块模式”（ revealing module pattern）。
+        var Foo2 = (function(){
+            var bar2 = 'baz2';
+            var baz2 = function(){
+                console.log(bar2);
+            }
+            return {
+                bar2: bar2,
+                baz2: baz2
+            }
+        })();
+        // console.log(Foo2.bar);
+        // Foo2.baz2();
+        // 在模块内部也可以定义模块，这样可以实现命名空间嵌套：
+        var Foo3 = (function(){
+            return {
+                bar: 'baz'
+            }
+        })();
+        Foo3.baz = (function(){
+            return {
+                qux: function(){
+                    console.log('baz');
+                }
+            }
+        })();
+        // console.log(Foo3.bar);
+        // Foo3.baz.qux();
+        // 为了让模块正确使用外部的值，可以将它们作为参数传给 IIFE：
+        var globalBar = 'IIFE';
+        var Foo4 = (function(bar){
+            return {
+                bar: bar,
+                baz: function() {
+                    console.log('bar');
+                }
+            }
+        })(globalBar);
+        // console.log(Foo4.bar);
+        // Foo4.baz()
+
+        // 因为这里的模块实现其实就是在创建 JavaScript 对象的实例，所以完全可以在定义之后再扩展模块：
+        var Foo5 = (function(bar) {
+            var bar = 'baz5';
+            return {
+                bar: bar
+            }
+        })();
+        // 扩展Foo5
+        var Foo5 = (function(FooModule) {
+            FooModule.baz = function(){
+                console.log(FooModule.bar);
+            }
+            return FooModule;
+        })(Foo5);
+        console.log(Foo5.bar);
+        Foo5.baz();
+    </script>
+</body>
+</html>
