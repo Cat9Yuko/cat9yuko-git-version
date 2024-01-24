@@ -724,6 +724,10 @@ nav {
   background-position: center center; /*图片居中  等比例*/
   background-repeat: no-repeat; /*图片不平铺*/
   height: 415px;
+  background-size: cover;
+}
+.rmbd-container ul li.act .pic {
+  background-size: 100% 100%;
 }
 .rmbd-container ul li:nth-child(1) {
   width: 680px;
