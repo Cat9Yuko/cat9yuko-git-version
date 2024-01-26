@@ -7,7 +7,8 @@
     <title>Cookie</title>
 </head>
 <body>
-    <script>
+    <script src="js/cookieutil.js"></script>
+    <!-- <script>
         // 在所有这些参数中，只有 cookie 的名称和值是必需的。
         // 这行代码会创建一个名为"name"的会话 cookie
         document.cookie = "name=cat9";
@@ -15,6 +16,10 @@
         document.cookie = encodeURIComponent('name') + "=" + encodeURIComponent('Nicholas');
         // 要为创建的 cookie 指定额外的信息，只要像 Set-Cookie 头部一样直接在后面追加相同格式的字符串即可：
         document.cookie = encodeURIComponent('name') + "=" + encodeURIComponent('Yuko2') + "; domain=127.0.0.1; path=/chaper25/";
+    </script> -->
+    <script>
+        // 设置cookie
+        CookieUtil.set("name","Nicholas");
     </script>
 </body>
 </html>
