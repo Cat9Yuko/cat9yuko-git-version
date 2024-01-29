@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>子cookie</title>
+</head>
+<body>
+    <script src="js/subcookieutil.js"></script>
+    <script>
+        document.cookie = "data=name=Nicholas&book=Professional%20JavaScript";
+        // 取得所有子cookie
+        let data = SubCookieUtil.getAll("data");
+        console.log(data);
+        console.log(data.name);
+        console.log(data.book);
+
+        // 取得个别子cookie
+        console.log(SubCookieUtil.get("data","name"));
+        console.log(SubCookieUtil.get("data","book"));
+
+        // 设置两个字cookie
+        SubCookieUtil.set("data","name","Nicholas2");
+        SubCookieUtil.set("data","book","Professional JavaScript2");
+
+        // 设置所有子cookie并传入过期时间
+        SubCookieUtil.setAll("data",{name:"Nicholas3",book:"Professional JavaScript3"}, new Date("January 30, 2024"));
+
+        // 修改"name"的值并修改整个cookie的过期时间
+        SubCookieUtil.set("data","name","Michael", new Date("February 1, 20224"));
+
+        // 只删除"name"子cookie
+        SubCookieUtil.unset("data","name");
+
+        // 删除整个cookie
+        SubCookieUtil.unsetAll("data")
+    </script>
+</body>
+</html>

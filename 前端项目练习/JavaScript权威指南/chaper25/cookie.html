@@ -8,6 +8,14 @@
 </head>
 <body>
     <script src="js/cookieutil.js"></script>
+    <!-- cookie 在浏览器中是由以下参数构成的:
+    1: 名称：唯一标识 cookie 的名称。
+    2: 值：存储在 cookie 里的字符串值。这个值必须经过 URL 编码。
+    3: 域： cookie 有效的域。
+    4: 路径：请求 URL 中包含这个路径才会把 cookie 发送到服务器。
+    5: 过期时间：表示何时删除 cookie 的时间戳（即什么时间之后就不发送到服务器了）。
+    6: 安全标志：设置之后，只在使用 SSL 安全连接的情况下才会把 cookie 发送到服务器。
+    -->
     <!-- <script>
         // 在所有这些参数中，只有 cookie 的名称和值是必需的。
         // 这行代码会创建一个名为"name"的会话 cookie
@@ -20,6 +28,22 @@
     <script>
         // 设置cookie
         CookieUtil.set("name","Nicholas");
+        CookieUtil.set("book","Professional JavaScript");
+        // 删除cookie
+        // CookieUtil.unset("name");
+        // CookieUtil.unset("book");
+        // 设置有路径、域或过期时间的cookie
+        console.log(new Date());
+        CookieUtil.set("name","Nicholas2",new Date("January 30, 2024"),"/chaper25/","127.0.0.1");
+        // 删除刚才设置的cookie
+        // CookieUtil.unset("name","/chaper25/","127.0.0.1");
+        // 设置安全cookie
+        CookieUtil.set("name","Nicholas",null,null,null,true);
+        CookieUtil.set("name","Nicholas3");
+
+        // 读取cookie
+        console.log(CookieUtil.get("name"));
+        console.log(CookieUtil.get("book"));
     </script>
 </body>
 </html>
