@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>IndexedDB</title>
+  </head>
+  <body>
+    <!-- IndexedDB 是类似于 MySQL 或 Web SQL Database 的数据库。与传统数据库最大的区别在于，
+IndexedDB 使用对象存储而不是表格保存数据。 IndexedDB 数据库就是在一个公共命名空间下的一组对
+象存储，类似于 NoSQL 风格的实现。 -->
+
+    <script>
+      let db,
+        request,
+        version = 1,
+        users = [
+          {
+            username: '007',
+            firstName: 'James',
+            lastName: 'Bond',
+            password: 'foo'
+          },
+          {
+            username: '008',
+            firstName: 'Petter',
+            lastName: 'Park',
+            password: 'spider'
+          },
+          {
+            username: '009',
+            firstName: '阿姆斯特朗',
+            lastName: '超级回旋踢',
+            password: 'o(￣▽￣)ｄ'
+          },
+          {
+            username: 'ace',
+            firstName: 'a',
+            lastName: 'ce',
+            password: 'eca'
+          }
+        ]
+      request = indexedDB.open('admin', version)
+      request.onerror = event => {
+        console.error(`Failed to open: ${event.target.error}`)
+      }
+      request.onsuccess = event => {
+        db = event.target.request
+        console.log(event)
+        console.log('数据库打开成功')
+      }
+
+      request.onupgradeneeded = event => {
+        console.log('事件升级成功!')
+        const db = event.target.result
+        if (db.objectStoreNames.contains('users')) {
+          db.deleteObjectStore('users')
+        }
+        db.createObjectStore('usersList', {
+          keyPath: 'username'
+        })
+        request.onerror = event => {
+          alert('Did not get the object!')
+        }
+        request.onsuccess = event => {
+          console.log('插入执行成功!')
+          let requests = []
+          let transaction = db.transaction('usersList', 'readwrite'),
+            store = transaction.objectStore('usersList')
+          // 键范围
+          // 指定键值
+          const onlyRange = IDBKeyRange.only('007')
+          // 从"007"记录开始，直到最后
+          const lowerRange = IDBKeyRange.lowerBound('007')
+          // 从"007"的下一条记录开始，直到最后
+          const lowerRange2 = IDBKeyRange.lowerBound('007', true)
+          // 第三种键范围可以定义结果集的上限，通过调用 upperBound()方法可以指定游标不会越过的记录。
+          // 下面的键范围保证游标从头开始并在到达键为"ace"的记录停止：
+          // 从头开始，到"ace"记录为止
+          const upperRange = IDBKeyRange.upperBound('ace')
+          // 从头开始，到"ace"的前一条记录为止
+          // 如果不想包含指定的键，可以在第二个参数传入 true
+          const upperRange2 = IDBKeyRange.upperBound('ace', true)
+          // 要同时指定下限和上限，可以使用 bound()方法。这个方法接收四个参数：下限的键、上限的键、
+          // 可选的布尔值表示是否跳过下限和可选的布尔值表示是否跳过上限。
+
+          // 从"007"记录开始，到"ace"记录停止
+          const boundRange = IDBKeyRange.bound('007', 'ace')
+
+          // 从"007"的下一条记录开始，到"ace"记录停止
+          const boundRange2 = IDBKeyRange.bound('007', 'ace', true)
+
+          // 从"007"的下一条记录开始，到"ace"的前一条记录停止
+          const boundRange3 = IDBKeyRange.bound('007', 'ace', true, true)
+
+          // 从"007"记录开始，到"ace"的前一条记录停止
+          const boundRange4 = IDBKeyRange.bound('007', 'ace', false, true)
+          // 插入数据
+          for (let user of users) {
+            console.log('成功插入一条')
+            request = store.add(user)
+            requests.push(request)
+          }
+          request = store.openCursor()
+          request.onerror = () => {
+            console.log('错误')
+          }
+          request.onsuccess = event => {
+            const cursor = event.target.result
+            let value, updateRequest, deleteRequest
+            if (cursor) {
+              // 永远要检查
+
+              // 修改数据
+              // if(cursor.key == "007") {
+              //   value = cursor.value;
+              //   value.password = "magic!";
+              //   updateRequest = cursor.update(value);
+              //   updateRequest.onsuccess = () => {
+              //     console.log('修改成功');
+              //   }
+              //   updateRequest.onerror = () => {
+              //     console.log('修改失败');
+              //   }
+              // }
+              // 删除数据
+              // if(cursor.key == "008") {
+              //   deleteRequest = cursor.delete();
+              //   deleteRequest.onsuccess = () => {
+              //     console.log('删除成功!');
+              //   }
+              //   deleteRequest.onerror = () => {
+              //     console.log('删除失败!');
+              //   }
+              // }
+
+              // 查询数据
+              // console.log(
+              //   `Key: ${cursor.key}, Value: ${JSON.stringify(cursor.value)}}`
+              // )
+              // cursor.continue();
+
+              // 定义了范围之后，把它传给 openCursor()方法，就可以得到位于该范围内的游标：
+              let range = IDBKeyRange.bound("007","009",false,true);
+              request = store.openCursor(range);
+              request.onsuccess = (event) => {
+                const cursor = event.target.result;
+                if(cursor) {
+                    console.log(
+                  `Key: ${cursor.key}, Value: ${JSON.stringify(cursor.value)}`
+                )
+              cursor.continue() // 移动到下一条记录
+                } else {
+                  console.log("Done!");
+                }
+                
+              }
+            } else {
+              ;('没有数据啦!')
+            }
+          }
+
+          transaction.onerror = event => {
+            console.log('事务被取消')
+          }
+          transaction.oncomplete = event => {
+            console.log('事务成功完成')
+          }
+          transaction.onsuccess = event => {
+            console.log('事务成功')
+          }
+          console.log(requests)
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Web Storage</title>
+</head>
+<body>
+    <script>
+        // 使用方法存储数据
+        sessionStorage.setItem("name","Nicholas");
+        // 使用属性存储数据
+        sessionStorage.book = "Professional JavaScript";
+
+        // 使用方法取得数据
+        let name = sessionStorage.getItem("name");
+        console.log(name);
+        // 使用属性取得数据
+        let book = sessionStorage.book;
+        console.log(book);
+        console.log(sessionStorage.IsThisFirstTime_Log_From_LiveServer);
+
+        // 可以结合 sessionStorage 的 length 属性和 key()方法遍历所有的值：
+        // for(let i =0,len = sessionStorage.length;i < len;i++) {
+        //     let key = sessionStorage.key(i);
+        //     let value = sessionStorage.getItem(key)
+        //     console.log(`${key} = ${value}`);
+        // }
+
+        for(let key in sessionStorage) {
+            let value = sessionStorage.getItem(key);
+            console.log(`${key} = ${value}`);
+        }
+
+        // 使用delete删除值
+        // delete sessionStorage.name;
+        // 使用方法删除值
+        // sessionStorage.removeItem("book");
+
+        // 使用方法存储数据
+        localStorage.setItem("name","Nicholas");
+        // 使用属性存储数据
+        localStorage.book = "Professional JavaScript";
+        // 使用方法取得数据
+        let name2 = localStorage.getItem("name");
+        console.log(name2);
+        // 使用属性取得数据
+        let book2 = localStorage.book;
+        console.log(book2);
+
+        // 两种存储方法的区别在于，存储在 localStorage 中的数据会保留到通过 JavaScript 删除或者用户
+        // 清除浏览器缓存。 localStorage 数据不受页面刷新影响，也不会因关闭窗口、标签页或重新启动浏览器而丢失。
+
+        // 存储事件
+        // domain：存储变化对应的域。
+        // key：被设置或删除的键。
+        // newValue：键被设置的新值，若键被删除则为 null。
+        // oldValue：键变化之前的值。
+        window.addEventListener("storage", (event)=> alert(`Storage changed for ${event.domain}&${event.key}&${event.newValue}&${event.oldValue}`))
+        localStorage.setItem("name","newValue")
+        
+    </script>
+</body>
+</html>
