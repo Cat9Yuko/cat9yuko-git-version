@@ -52,6 +52,10 @@ IndexedDB 使用对象存储而不是表格保存数据。 IndexedDB 数据库�
         db = event.target.request
         console.log(event)
         console.log('数据库打开成功')
+        // db.onversionchange = () => {
+        //   db.close();
+        //   console.log('db close');
+        // };
       }
 
       request.onupgradeneeded = event => {
@@ -60,9 +64,13 @@ IndexedDB 使用对象存储而不是表格保存数据。 IndexedDB 数据库�
         if (db.objectStoreNames.contains('users')) {
           db.deleteObjectStore('users')
         }
-        db.createObjectStore('usersList', {
+        let objectStore = db.createObjectStore('usersList', {
           keyPath: 'username'
         })
+        // createIndex()的第一个参数是索引的名称，第二个参数是索引属性的名称，第三个参数是包含
+        // 键 unique 的 options 对象。这个选项中的 unique 应该必须指定，表示这个键是否在所有记录中唯
+        // 一。因为 username 可能不会重复，所以这个键是唯一的。
+        let index = objectStore.createIndex("password","password",{unique: true});
         request.onerror = event => {
           alert('Did not get the object!')
         }
@@ -70,7 +78,7 @@ IndexedDB 使用对象存储而不是表格保存数据。 IndexedDB 数据库�
           console.log('插入执行成功!')
           let requests = []
           let transaction = db.transaction('usersList', 'readwrite'),
-            store = transaction.objectStore('usersList')
+            store = transaction.objectStore('usersList');
           // 键范围
           // 指定键值
           const onlyRange = IDBKeyRange.only('007')
@@ -105,7 +113,11 @@ IndexedDB 使用对象存储而不是表格保存数据。 IndexedDB 数据库�
             request = store.add(user)
             requests.push(request)
           }
-          request = store.openCursor()
+
+          request = store.openCursor();
+          // request = index.openKeyCursor();
+          // request = index.get("foo");
+          // request = index.getKey("spider");
           request.onerror = () => {
             console.log('错误')
           }
@@ -139,25 +151,41 @@ IndexedDB 使用对象存储而不是表格保存数据。 IndexedDB 数据库�
               // }
 
               // 查询数据
+              // console.log(cursor);
+              console.log(
+                `Key: ${cursor.key}, Value: ${JSON.stringify(cursor.value)}}`
+              )
               // console.log(
-              //   `Key: ${cursor.key}, Value: ${JSON.stringify(cursor.value)}}`
+              //   `Key: ${cursor.key}, Value: ${cursor.value}`
               // )
               // cursor.continue();
 
               // 定义了范围之后，把它传给 openCursor()方法，就可以得到位于该范围内的游标：
-              let range = IDBKeyRange.bound("007","009",false,true);
-              request = store.openCursor(range);
-              request.onsuccess = (event) => {
-                const cursor = event.target.result;
-                if(cursor) {
-                    console.log(
-                  `Key: ${cursor.key}, Value: ${JSON.stringify(cursor.value)}`
-                )
-              cursor.continue() // 移动到下一条记录
+              let range = IDBKeyRange.bound('007', '009', false, true)
+              // request = store.openCursor(range);
+              // 设置游标方向
+              /* openCursor()方法实际上可以接收两个参数，第一个是 IDBKeyRange 的实例，第二个是表示方
+              向的字符串。通常，游标都是从对象存储的第一条记录开始，每次调用 continue()或 advance()都
+              会向最后一条记录前进。这样的游标其默认方向为"next"。如果对象存储中有重复的记录，可能需要
+              游标跳过那些重复的项。为此，可以给 openCursor()的第二个参数传入"nextunique"： */
+              // 注意， openCursor()的第一个参数是 null，表示默认的键范围是所有值。此游标会遍历对象存
+              // 储中的记录，从第一条记录开始迭代，到最后一条记录，但会跳过重复的记录。
+              // request = store.openCursor(null, 'nextunique');
+
+              // 外，也可以创建在对象存储中反向移动的游标，从最后一项开始向第一项移动。此时需要给
+              // openCursor()传入"prev"或"prevunique"作为第二个参数（后者的意思当然是避免重复）。
+              request = store.openCursor(null,"prevunique");
+
+              request.onsuccess = event => {
+                const cursor = event.target.result
+                if (cursor) {
+                  // console.log(
+                  //   `Key: ${cursor.key}, Value: ${JSON.stringify(cursor.value)}`
+                  // )
+                  // cursor.continue() // 移动到下一条记录
                 } else {
-                  console.log("Done!");
+                  console.log('Done!')
                 }
-                
               }
             } else {
               ;('没有数据啦!')
@@ -168,10 +196,10 @@ IndexedDB 使用对象存储而不是表格保存数据。 IndexedDB 数据库�
             console.log('事务被取消')
           }
           transaction.oncomplete = event => {
-            console.log('事务成功完成')
+            console.log('事务成功完成');
           }
           transaction.onsuccess = event => {
-            console.log('事务成功')
+            console.log('事务成功');
           }
           console.log(requests)
         }
