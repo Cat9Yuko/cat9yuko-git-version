@@ -46,96 +46,107 @@
 
       //   数组
       let values = [25, 'hi', true],
-      books = [
-        {
-          title: 'Professional JavaScript',
-          authors: ['Nicholas C. Zakas', 'Matt Frisabie'],
-          edition: 4,
-          year: 2017
-        },
-        {
-          title: 'Professional JavaScript',
-          authors: ['Nicholas C. Zakas', 'Matt Frisabie'],
-          edition: 3,
-          year: 2011
-        },
-        {
-          title: 'Professional JavaScript',
-          authors: ['Nicholas C. Zakas', 'Matt Frisabie'],
-          edition: 2,
-          year: 2009
-        },
-        {
-          title: 'Professional JavaScript',
-          authors: ['Nicholas C. Zakas', 'Matt Frisabie'],
-          edition: 1,
-          year: 2007
-        },
-        {
-          title: 'Professional JavaScript',
-          authors: ['Nicholas C. Zakas'],
-          edition: 1,
-          year: 2006
-        }
-      ]
-    //   解析与序列化
-    // console.log(books);
-    // console.log(books[2].title);
+        books = [
+          {
+            title: 'Professional JavaScript',
+            authors: ['Nicholas C. Zakas', 'Matt Frisabie'],
+            edition: 4,
+            year: 2017
+          },
+          {
+            title: 'Professional JavaScript',
+            authors: ['Nicholas C. Zakas', 'Matt Frisabie'],
+            edition: 3,
+            year: 2011
+          },
+          {
+            title: 'Professional JavaScript',
+            authors: ['Nicholas C. Zakas', 'Matt Frisabie'],
+            edition: 2,
+            year: 2009
+          },
+          {
+            title: 'Professional JavaScript',
+            authors: ['Nicholas C. Zakas', 'Matt Frisabie'],
+            edition: 1,
+            year: 2007
+          },
+          {
+            title: 'Professional JavaScript',
+            authors: ['Nicholas C. Zakas'],
+            edition: 1,
+            year: 2006
+          }
+        ]
+      //   解析与序列化
+      // console.log(books);
+      // console.log(books[2].title);
 
-    // JSON对象
-    let book = {
-        title: "	Professional JavaScript",
-        authors: [
-            " Nicholas C. Zakas",
-            "Matt Frisbie"
-        ],
+      // JSON对象
+      let book = {
+        title: '	Professional JavaScript',
+        authors: [' Nicholas C. Zakas', 'Matt Frisbie'],
         edition: 4,
         year: 2017,
-		// 注意，箭头函数不能用来定义 toJSON()方法。主要原因是箭头函数的词法作用域是全局作用域，在这种情况下不合适。
-		toJSON: function() {
-			return this.title;
-		}
-    };
-    // 将JavaScript 序列化为 JSON 字符串
-    let jsonText = JSON.stringify(book);
-    console.log(jsonText);
-	// 将 JSON 解析为原生 JavaScript 值
-	let bookcopy = JSON.parse(jsonText);
-	// console.log(bookcopy);
+        releaseDate: new Date(2024, 2, 4)
+        // 注意，箭头函数不能用来定义 toJSON()方法。主要原因是箭头函数的词法作用域是全局作用域，在这种情况下不合适。
+        // toJSON: function () {
+        //   return this.title
+        // }
+      }
+      // 将JavaScript 序列化为 JSON 字符串
+      // let jsonText = JSON.stringify(book)
+      // console.log(jsonText)
+      // 将 JSON 解析为原生 JavaScript 值
+      // let bookcopy = JSON.parse(jsonText)
+      // console.log(bookcopy);
 
-	// 序列化选项
-	// 过滤结果
-	// 第一个参数是过滤器，可以是数组或函数；第二个参数是用于缩进结果 JSON 字符串的选项。
-	// jsonText = JSON.stringify(book,["title","edition"]);
-	// {"title":"\tProfessional JavaScript","edition":4}
-	// console.log(jsonText);
-	/* 如果第二个参数是一个函数，则行为又有不同。提供的函数接收两个参数：属性名（ key）和属性
+      // 序列化选项
+      // 过滤结果
+      // 第一个参数是过滤器，可以是数组或函数；第二个参数是用于缩进结果 JSON 字符串的选项。
+      // jsonText = JSON.stringify(book,["title","edition"]);
+      // {"title":"\tProfessional JavaScript","edition":4}
+      // console.log(jsonText);
+      /* 如果第二个参数是一个函数，则行为又有不同。提供的函数接收两个参数：属性名（ key）和属性
 值（ value）。可以根据这个 key 决定要对相应属性执行什么操作。这个 key 始终是字符串，只是在值
 不属于某个键/值对时会是空字符串。 */
-	// 返回 undefined 会导致属性被忽略。
-	// jsonText = JSON.stringify(book,(key,value) => {
-	// 	switch(key) {
-	// 		case "authors":
-	// 			return value.join(",")
-	// 		case "year":
-	// 			return 5000;
-	// 		case "edition":
-	// 			return undefined;
-	// 		default: 
-	// 			return value;
-	// 	}
-	// })
-	// 字符串缩进
-	// JSON.stringify()方法的第三个参数控制缩进和空格。在这个参数是数值时，表示每一级缩进的空格数。
-	// 例如，每级缩进 4 个空格，最大缩进值为 10，大于 10 的值会自动设置为 10
-	// jsonText = JSON.stringify(book, null, 4)
+      // 返回 undefined 会导致属性被忽略。
+      // jsonText = JSON.stringify(book,(key,value) => {
+      // 	switch(key) {
+      // 		case "authors":
+      // 			return value.join(",")
+      // 		case "year":
+      // 			return 5000;
+      // 		case "edition":
+      // 			return undefined;
+      // 		default:
+      // 			return value;
+      // 	}
+      // })
+      // 字符串缩进
+      // JSON.stringify()方法的第三个参数控制缩进和空格。在这个参数是数值时，表示每一级缩进的空格数。
+      // 例如，每级缩进 4 个空格，最大缩进值为 10，大于 10 的值会自动设置为 10
+      // jsonText = JSON.stringify(book, null, 4)
 
-	// 如果缩进参数是一个字符串而非数值， 那么 JSON 字符串中就会使用这个字符串而不是空格来缩进。
+      // 如果缩进参数是一个字符串而非数值， 那么 JSON 字符串中就会使用这个字符串而不是空格来缩进。
 
-	// 使用字符串时同样有 10 个字符的长度限制。如果字符串长度超过 10，则会在第 10 个字符处截断
-	// jsonText = JSON.stringify(book, null, "--");
-	jsonText = JSON.stringify(book)
-	console.log(jsonText);
+      // 使用字符串时同样有 10 个字符的长度限制。如果字符串长度超过 10，则会在第 10 个字符处截断
+      // jsonText = JSON.stringify(book, null, "--");
+      // jsonText = JSON.stringify(book)
+      // console.log(jsonText)
+
+      // toJSON()方法可以与过滤函数一起使用，因此理解不同序列化流程的顺序非常重要。在把对象传
+      // 给 JSON.stringify()时会执行如下步骤。
+      // (1) 如果可以获取实际的值，则调用 toJSON()方法获取实际的值，否则使用默认的序列化。
+      // (2) 如果提供了第二个参数，则应用过滤。传入过滤函数的值就是第(1)步返回的值。
+      // (3) 第(2)步返回的每个值都会相应地进行序列化。
+      // (4) 如果提供了第三个参数，则相应地进行缩进。
+        let jsonText = JSON.stringify(book);
+      let bookCopy = JSON.parse(jsonText,
+      (key, value) => key == "releaseDate" ? new Date(value) : value);
+      console.log(bookCopy.releaseDate.getFullYear());
+
+      // 
     </script>
   </body>
 </html>
