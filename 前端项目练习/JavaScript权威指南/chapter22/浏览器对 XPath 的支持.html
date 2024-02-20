@@ -7,6 +7,7 @@
     <title>浏览器对 XPath 的支持</title>
 </head>
 <body>
+    
     <script>
         // 要确定浏览器是否支持DOM Level 3 XPath
         let supportsXPath = document.implementation.hasFeature("XPath","3.0");
@@ -40,23 +41,103 @@
         XPathResult.FIRST_ORDERED_NODE_TYPE：返回只有一个节点的节点集合，包含文档中第一个匹配的节点。
         */
     //    创建XML
-       let xmldom = document.implementation.createDocument("","root",null);
+       let xmldom = document.implementation.createDocument("","employee",null);
+       
        let child = xmldom.createElement("name");
        let child2= xmldom.createElement("name");
+       child.innerHTML = "name";
+       child2.innerHTML= "name2";
        xmldom.documentElement.appendChild(child);
        xmldom.documentElement.appendChild(child2);
-
+        console.log(xmldom);
        
-       let result = xmldom.evaluate("employee/name",xmldom.documentElement, null, 
-       XPathResult.ORDERED_NODE_ITERATOR_TYPE, null);
-       console.log(result);
-       if(result !== null) {
-        let element = result.iterateNext();
-        while(element) {
-            console.log(element.tagName);
-            node = result.iterateNext();
+    //    let result = xmldom.evaluate("/employee/name",xmldom.documentElement, null, 
+    //    XPathResult.ORDERED_NODE_ITERATOR_TYPE, null);
+    //    if(result !== null) {
+    //        console.log(result);
+    //     let element = result.iterateNext();
+    //     while(element) {
+    //         console.log(element.tagName);
+    //         element = result.iterateNext();
+    //     }
+    //    }
+
+    // 如果指定了快照结果类型（无论有序还是无序），都必须使用 snapshotItem()方法和 snapshotLength属性获取结果
+    // let result = xmldom.evaluate("/employee/name",xmldom.documentElement,null,
+    // XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
+    // if(result!==null) {
+    //     for(let i = 0,len = result.snapshotLength; i<len;i++) {
+    //         console.log(result.snapshotItem(i).tagName);
+    //     }
+    // }
+
+    // 单个节点结果
+    // let result = xmldom.evaluate("/employee/name",xmldom.documentElement, null,
+    // XPathResult.FIRST_ORDERED_NODE_TYPE,null);
+    // if(result !== null) {
+    //     console.log(result.singleNodeValue.tagName);
+    // }
+    // 简单类型结果
+    // 对于
+// 布尔值类型，如果至少有一个节点匹配 XPath 表达式， booleanValue 就是 true；否则， booleanValue为 false。
+    // let result = xmldom.evaluate("/employee/name",xmldom.documentElement, null, XPathResult.BOOLEAN_TYPE,null);
+    // console.log(result.booleanValue);
+
+    // 对于数值类型， XPath 表达式必须使用返回数值的 XPath 函数，如 count()可以计算匹配给定模式的节点数。
+    // 如果在这里没有指定 XPath 函数，numberValue 就等于 NaN。
+    // let result = xmldom.evaluate("count(/employee/name)",xmldom.documentElement,null,
+    // XPathResult.NUMBER_TYPE, null);
+    // console.log(result.numberValue);
+
+    // 对于字符串类型， evaluate()方法查找匹配 XPath 表达式的第一个节点，然后返回其第一个子节
+// 点的值，前提是第一个子节点是文本节点。如果不是，就返回空字符串。
+        // let result = xmldom.evaluate("/employee/name",xmldom.documentElement,null,
+        // XPathResult.STRING_TYPE, null);
+        // console.log(result.stringValue);
+
+        // 默认类型结果
+        // 所有 XPath 表达式都会自动映射到特定类型的结果。设置特定结果类型会限制表达式的输出。 不过，
+// 可以使用 XPathResult.ANY_TYPE 类型让求值自动返回默认类型结果。
+        // let result = xmldom.evaluate("/employee/name",xmldom.documentElement,null,
+        // XPathResult.ANY_TYPE,null);
+        // if(result !== null) {
+        //     switch(result.resultType) {
+        //         case XPathResult.STRING_TYPE:
+        //             break;
+                
+        //         case XPathResult.NUMBER_TYPE:
+        //             break;
+
+        //         case XPathResult.BOOLEAN_TYPE:
+        //             break;
+
+        //         case XPathResult.UNORDERED_NODE_ITERATOR_TYPE:
+        //             // 处理无序节点迭代类型
+        //             break;
+
+        //         default:
+        //             // 处理其他可能的结果类型
+        //     }
+        // }
+
+        // 命名空间支持
+        // 对于使用命名空间的 XML 文档，必须告诉 XPathEvaluator 命名空间信息，才能进行正确求值
+        // let nsresolver = xmldom.createNSResolver(xmldom.documentElement);
+        // let result = xmldom.evaluate("name",xmldom.documentElement,nsresolver,XPathResult.ORDERED_NODE_SNAPSHOT_TYPE,null);
+        // console.log(result.snapshotLength);
+
+        // 第二种处理命名空间的方式是定义一个接收命名空间前缀并返回相应 URI 的函数
+        // 在并不知晓文档的哪个节点包含命名空间定义时，可以采用这种定义命名空间解析函数的方式。只
+// 要知道前缀和 URI，就可以定义这样一个函数，然后把它作为第三个参数传给 evaluate()。
+        let nsresolver = function(prefix) {
+                switch(prefix) {
+                    case "wrox": return "";
+
+                }
         }
-       }
+        let result = xmldom.evaluate("count(name)",xmldom.documentElement, nsresolver,
+        XPathResult.NUMBER_TYPE, null);
+        console.log(result.numberValue);
     </script>
 </body>
 </html>
