@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>浏览器对 XPath 的支持</title>
+</head>
+<body>
+    <script>
+        // 要确定浏览器是否支持DOM Level 3 XPath
+        let supportsXPath = document.implementation.hasFeature("XPath","3.0");
+        console.log(`是否支持XPath 3.0 = ${supportsXPath}`);
+
+        /* 
+        虽然这个规范定义了不少类型，但其中最重要的两个是 XPathEvaluator 和 XPathResult。
+        XPathEvaluator 用于在特定上下文中求值 XPath 表达式，包含三个方法。
+        1) createExpression(expression, nsresolver)，用于根据 XPath 表达式及相应的命名空间
+        计算得到一个 XPathExpression， XPathExpression 是查询的编译版本。这适合于同样的查
+        询要运行多次的情况。
+        2) createNSResolver(node)，基于 node 的命名空间创建新的 XPathNSResolver 对象。当对
+        使用名称空间的 XML 文档求值时，需要 XPathNSResolver 对象。
+        3) evaluate(expression, context, nsresolver, type, result)，根据给定的上下文和
+        命名空间对 XPath 进行求值。其他参数表示如何返回结果。
+        在上述三个方法中，使用最频繁的是 evaluate()。这个方法接收五个参数： XPath 表达式、上下
+        文节点、命名空间解析器、返回的结果类型和 XPathResult 对象（用于填充结果，通常是 null，因
+        为结果也可能是函数值）。第三个参数，命名空间解析器，只在 XML 代码使用 XML 命名空间的情况下
+        有必要。如果没有使用命名空间，这个参数也应该是 null。第四个参数要返回值的类型是如下 10 个常
+        量值之一。
+
+        XPathResult.ANY_TYPE：返回适合 XPath 表达式的数据类型。
+        XPathResult.NUMBER_TYPE：返回数值。
+        XPathResult.STRING_TYPE：返回字符串值。
+        XPathResult.BOOLEAN_TYPE：返回布尔值。
+        XPathResult.UNORDERED_NODE_ITERATOR_TYPE：返回匹配节点的集合，但集合中节点的顺序可能与它们在文档中的顺序不一致。
+        XPathResult.ORDERED_NODE_ITERATOR_TYPE：返回匹配节点的集合，集合中节点的顺序与它们在文档中的顺序一致。这是非常常用的结果类型。
+        XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE：返回节点集合的快照，在文档外部捕获节点，因此对文档的进一步修改不会影响该节点集合。集合中节点的顺序可能与它们在文档中的顺序不一致。
+        XPathResult.ORDERED_NODE_SNAPSHOT_TYPE：返回节点集合的快照，在文档外部捕获节点，因此对文档的进一步修改不会影响这个节点集合。集合中节点的顺序与它们在文档中的顺序一致。
+        XPathResult.ANY_UNORDERED_NODE_TYPE：返回匹配节点的集合，但集合中节点的顺序可能与它们在文档中的顺序不一致。
+        XPathResult.FIRST_ORDERED_NODE_TYPE：返回只有一个节点的节点集合，包含文档中第一个匹配的节点。
+        */
+    //    创建XML
+       let xmldom = document.implementation.createDocument("","root",null);
+       let child = xmldom.createElement("name");
+       let child2= xmldom.createElement("name");
+       xmldom.documentElement.appendChild(child);
+       xmldom.documentElement.appendChild(child2);
+
+       
+       let result = xmldom.evaluate("employee/name",xmldom.documentElement, null, 
+       XPathResult.ORDERED_NODE_ITERATOR_TYPE, null);
+       console.log(result);
+       if(result !== null) {
+        let element = result.iterateNext();
+        while(element) {
+            console.log(element.tagName);
+            node = result.iterateNext();
+        }
+       }
+    </script>
+</body>
+</html>

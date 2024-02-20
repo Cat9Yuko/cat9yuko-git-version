@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>处理XML</title>
+</head>
+<body>
+    <script>
+        // 在 JavaScript 中处理 XML 时， root 参数通常只会使用一次，因为这个参数定义的是 XML DOM
+// 中 document 元素的标签名。 namespaceUri 参数用得很少，因为在 JavaScript 中很难管理命名空间。
+// doctype 参数则更是少用。
+        // let xmldom = document.implementation.createDocument(namespaceUri,root,doctype);
+/* 这个例子创建了一个 XML DOM 文档，该文档没有默认的命名空间和文档类型。注意，即使不指定
+命名空间和文档类型，参数还是要传的。命名空间传入空字符串表示不应用命名空间，文档类型传入
+null 表示没有文档类型。 */
+        // let xmldom = document.implementation.createDocument("","root",null);
+        // console.log(xmldom.documentElement.tagName);
+        // let child = xmldom.createElement("child");
+        // xmldom.documentElement.appendChild(child)
+        // console.log(xmldom);
+    // 要检查浏览器是否支持 DOM Level 2 XML，可以使用如下代码：
+    let hasXmlDom = document.implementation.hasFeature("XML","2.0");
+    console.log(`是否支持XML 2.0 = ${hasXmlDom}`);
+
+    
+    // 把 XML 解析为 DOM 文档
+    // 这个方法接收两个参数：要解析的 XML 字符串和内容类型（始终应该是"text/html"）。
+    // let parser = new DOMParser();
+    // let xmldom = parser.parseFromString("<root><child/></root>","text/html");
+    // console.log(xmldom);
+    // console.log(xmldom.documentElement.tagName);
+    // console.log(xmldom.documentElement.firstChild.tagName);
+    // let anotherChild = xmldom.createElement("child");
+    // xmldom.documentElement.appendChild(anotherChild);
+    // let children = xmldom.getElementsByTagName("child");
+    // console.log(children.length);
+
+    // let parser = new DOMParser(),
+    // xmldom,
+    // errors;
+
+    // try {
+    //     xmldom = parser.parseFromString("<root>","text/xml");
+    //         errors = xmldom.getElementsByTagName("parsererror");
+    //         if(errors.length > 0) {
+    //             throw new Error("Parsing error!");
+    //         }
+    // } catch(ex) {
+    //     console.log("Parsing error!");
+    // }
+
+    // 把 DOM 文档序列化为 XML 字符串。
+    let xmldom = document.implementation.createDocument("","root",null);
+    console.log(xmldom);
+    let serializer = new XMLSerializer();
+    // 如果给 serializeToString()传入非 DOM 对象，就会导致抛出错误。
+    let xml = serializer.serializeToString(xmldom);
+    console.log(xml);
+
+    
+    </script>
+</body>
+</html>
