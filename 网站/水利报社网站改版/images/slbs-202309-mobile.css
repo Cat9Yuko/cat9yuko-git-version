@@ -1029,7 +1029,7 @@
     width: 100%;
   }
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 370px) {
   .logo-container {
     padding: 15px 10px;
   }
