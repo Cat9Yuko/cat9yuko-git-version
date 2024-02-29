@@ -1,0 +1,224 @@
+:root {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: '微软雅黑', 'Microsoft Yahei';
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+  border: none;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.center-block-1200 {
+  width: 1200px;
+  margin: 0 auto;
+}
+.w556 {
+  width: 556px;
+}
+.zindex {
+  position: relative;
+  z-index: 20;
+}
+/* user style */
+.logo {
+  display: block;
+  margin-left: 33px;
+}
+.main {
+  background-image: url('dzxgqmd-202402-mainbg.jpg');
+  background-position: top center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+.word img {
+  display: block;
+}
+.white-container {
+  background-color: #ffffff;
+}
+.white-container + .white-container {
+  margin-top: 27px;
+}
+.pad1 {
+  padding: 13px 23px 14px 12px;
+}
+/* carousel */
+.slick-mod,
+.slick-mod2 {
+  width: 587px;
+  height: 418px;
+}
+.slick-item {
+  position: relative;
+}
+.slick-item img {
+  width: 100%;
+}
+.tit1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 18px;
+  color: #ffffff;
+  line-height: 45px;
+  text-indent: 2rem;
+  background: rgba(140, 140, 140, 0.9);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.slick-mod .slick-dots,
+.slick-mod2 .slick-dots {
+  position: absolute;
+  right: 13px;
+  bottom: 16px;
+}
+.slick-mod2 .slick-dots {
+  bottom: 36px;
+}
+
+.slick-mod .slick-arrow,
+.slick-mod2 .slick-arrow {
+  width: 33px;
+  height: 57px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 3;
+  cursor: pointer;
+}
+/* .slick-mod .slick-next {
+  right: 0;
+  background: url(../images_zt/wlaq-202009-arrowrigh.png) no-repeat center;
+}
+.slick-mod .slick-prev {
+  left: 0;
+  background: url(../images_zt/wlaq-202009-arrowlef.png) no-repeat center;
+}
+
+.slick-mod2 .slick-next {
+  right: 0;
+  background: url(../images/wlaq-202009-arrowrigh.png) no-repeat center;
+}
+.slick-mod2 .slick-prev {
+  left: 0;
+  background: url(../images/wlaq-202009-arrowlef.png) no-repeat center;
+} */
+.slick-mod .slick-dots li,
+.slick-mod2 .slick-dots li {
+  width: 15px;
+  height: 14px;
+  background: #4e4e4e;
+  border-radius: 50%;
+  margin: 0 7px 0 0;
+}
+.slick-mod .slick-dots li.slick-active,
+.slick-mod2 .slick-dots li.slick-active {
+  width: 15px;
+  height: 14px;
+  background: #ffffff;
+  border-radius: 50%;
+}
+/* --- */
+.htitle {
+  font-size: 30px;
+  font-weight: bold;
+  color: #032e66;
+  text-align: center;
+  margin: 16px 0 14px;
+}
+.habs {
+  font-size: 18px;
+  color: #333333;
+  line-height: 40px;
+}
+.hmore {
+  margin-right: 10px;
+  margin-top: 5px;
+}
+.chnltitle {
+  font-size: 26px;
+  margin-bottom: 25px;
+  color: #030303;
+}
+.pad2 {
+  padding: 36px 26px 28px;
+}
+.list li {
+  width: 284px;
+  height: 45px;
+  line-height: 45px;
+  font-size: 18px;
+  color: #ffffff;
+  background-color: #88acd4;
+  float: left;
+  margin-left: 3px;
+  text-indent: 19px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.list li:nth-child(4n + 1) {
+  margin-left: 0;
+}
+.list li:nth-child(n + 5) {
+  margin-top: 5px;
+}
+footer {
+  background-image: url('dzxgqmd-202402-footerbg.png');
+  height: 305px;
+  margin-top: -48px;
+}
+.boxs {
+  box-shadow: 0px 0px 3px 1px #ccc;
+}
+.source-time {
+  margin: 0 auto;
+  height: 35px;
+  text-align: center;
+  position: relative;
+  line-height: 35px;
+}
+
+.time {
+  margin-right: 10px;
+}
+
+.wechat,
+.sina {
+  position: absolute;
+  margin-top: 5px;
+}
+
+.wechat {
+  margin-left: 10px;
+}
+
+.sina {
+  margin-left: 46px;
+}
