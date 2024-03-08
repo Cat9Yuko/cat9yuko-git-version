@@ -55,11 +55,11 @@ li {
 }
 .login-bg {
   width: 100%;
-  background: url("../img/wlaqdt-202308-loginbg.jpg") top center no-repeat;
+  background: url("../img/zszyls-202403-loginbg.jpg") top center no-repeat;
   background-size: cover;
-  height: 1723px;
+  height: 1591px;
   box-sizing: border-box;
-  padding-top: 954px;
+  padding-top: 831px;
 }
 .whitebg-p {
   padding: 20px;
@@ -159,11 +159,10 @@ li {
 .register input,
 .register select,
 .login input {
-  border: 1px solid #5d8ab5;
+  border: 1px solid #ed840a;
   border-radius: 5px;
   outline: none;
   font-size: 20px;
-  background: #eef7f9;
 }
 .register select {
   float: left;
@@ -176,14 +175,14 @@ li {
   display: block;
   width: 225px;
   height: 45px;
-  background: #7fc6e3;
-  color: #ecf5f8;
+  background: #ed7f00;
+  color: #ffffff;
   font-size: 24px;
   text-align: center;
   line-height: 45px;
   border-radius: 5px;
   margin-right: 10px;
-  text-shadow: -1px 0 #91baca, 0 1px #91baca, 1px 0 #91baca;
+  text-shadow: -1px 0 #d19651, 0 1px #d19651, 1px 0 #d19651;
 }
 .zhuyi p {
   font-size: 25px;
@@ -209,7 +208,7 @@ li {
 .sub-dl button {
   width: 218px;
   height: 74px;
-  background: #0f4186;
+  background: #c10202;
   border-radius: 5px;
   font-size: 25px;
   color: #ffffff;
@@ -229,24 +228,24 @@ li {
 .answer-bg {
   position: relative;
   width: 100%;
-  background-image: url("../img/wlaqdt-202308-answert.jpg"),url("../img/wlaqdt-202308-answerb.jpg");
+  background-image: url("../img/zszyls-202403-answert.jpg"),url("../img/zszyls-202403-answerb.jpg");
   background-repeat: no-repeat;
   background-position: center top,center bottom;
   /* height: 1522px; */
   box-sizing: border-box;
-  padding: 609px 0 40px 0;
-  background-color: #011b38;
+  padding: 831px 0 0px 0;
+  background-color: #b80600;
 }
 
 .answer_t {
   font-size: 25px;
-  color: #00285d;
+  color: #020202;
   font-weight: bold;
 }
 .xuanxiang {
   margin: 20px 0 45px 0;
   font-size: 22px;
-  color: #00285d;
+  color: #020202;
 }
 .xx_ul li {
   line-height: 35px;
@@ -263,7 +262,7 @@ li {
 }
 
 .score p {
-    color: #183e91;
+    color: #030303;
     font-size: 37.5px;
     font-weight: bold;
     text-align: center;
@@ -284,7 +283,7 @@ li {
 }
 .welcom2 {
   font-size: 28px;
-  color: #222f7e;
+  color: #505050;
   margin-top: 25px;
   padding-left: 15px;
 }
