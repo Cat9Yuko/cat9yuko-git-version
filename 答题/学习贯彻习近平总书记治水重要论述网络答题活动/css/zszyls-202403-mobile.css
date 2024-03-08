@@ -4,7 +4,7 @@
   font-family: "微软雅黑";
 }
 body {
-  background: #10529b;
+  background: #ce544f;
 }
 img {
   border: none;
@@ -52,15 +52,18 @@ li {
 .indexdescw h2 {
   font-size: 16.75px;
   margin-bottom: 15px;
-  color: #0151bd;
+  color: #dd0000;
 }
 .indexdescw h2:not(:first-of-type) {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 .indexdescw p {
   font-size: 12px;
   line-height: 24px;
   text-indent: 2rem;
+}
+.indexdescw .mb p {
+  line-height: 20px;
 }
 .tishi {
   text-align: center;
@@ -94,7 +97,7 @@ footer {
 }
 
 .login-app input {
-  border: 1px solid #7da1c4;
+  border: 1px solid #ee8914;
 }
 
 .login-app .row {
@@ -110,16 +113,16 @@ footer {
   line-height: 2;
   font-size: 14px;
   border-radius: 5px;
-  background: #7fc6e3;
+  background: #ed7f00;
   color: #fff;
-  text-shadow: -1px 0 #99becb, 0 1px #99becb, 1px 0 #99becb;
+  text-shadow: -1px 0 #cf7d1d, 0 1px #cf7d1d, 1px 0 #cf7d1d;
 }
 
 .login-app .houzhui input,
 .login-app .houzhui select {
   width: 100%;
   height: 30px;
-  background: #eef7f9;
+  /* background: #eef7f9; */
 }
 .login-app .houzhui select {
   font-size: 12px;
@@ -133,7 +136,7 @@ footer {
   height: 29px;
   font-size: 15px;
   color: #ffffff;
-  background: #0f4186;
+  background: #c10202;
   border: none;
   border-radius: 5px;
   line-height: 1.5;
@@ -141,7 +144,7 @@ footer {
 }
 
 select {
-  border: 1px solid #7da1c4;
+  border: 1px solid #ee8914;
   width: 98%;
 }
 .login .box {
@@ -157,13 +160,13 @@ select {
 .answer_t {
   font-size: 18px;
   font-weight: bold;
-  color: #00285d;
+  /* color: #00285d; */
 }
 
 .xuanxiang {
   margin: 16px 0;
   font-size: 14px;
-  color: #00285d;
+  /* color: #00285d; */
 }
 .xx_ul li {
   line-height: 25px;
@@ -189,7 +192,7 @@ select {
   /* line-height: 10; */
 }
 .score p {
-    color: #183e91;
+    color: #020202;
     font-weight: bold;
 }
 .score p span {
@@ -216,9 +219,9 @@ select {
   height: 50px;
 }
 .my-btn a {
-  font-size: 15px;
+  font-size: 12px;
   color: #ffffff;
-  background: #0e4186;
+  background: #c10202;
   padding: 7px 15px;
   border-radius: 5px;
   text-decoration: none;
@@ -256,7 +259,7 @@ select {
   text-align: center;
   font-size: 15px;
   font-weight: bold;
-  color: #183e91;
+  color: #c10202;
   padding: 15px 0 6px 0;
 }
 .zhuyi {
@@ -264,7 +267,7 @@ select {
   font-size: 10px;
 }
 .yelbg button,.yelbg a{
-  background: #0f4186;
+  background: #c10202;
 }
 .fl {
   float: left;
