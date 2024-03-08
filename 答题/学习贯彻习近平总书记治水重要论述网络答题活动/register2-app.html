@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/wlaqzsdt-202308-mobile.css">
+        <title>2023年国家网络安全宣传周 网络安全知识网络答题活动</title>
+        <style>
+            .login-app .houzhui input, .login-app .houzhui select {
+        text-indent: 10px;
+        font-size: 15px;
+            }
+            .login-app .houzhui input::placeholder {
+                font-size: 9px;
+            }
+            .problem {
+    width: 100%;
+    resize: none;
+    border: 1px solid #d4d4d4;
+    outline: none;
+    padding: 5px 0 5px 10px;
+    border-radius: 5px;
+}
+.problem::placeholder {
+  font-size: 10px;
+}
+.login-app .qianzui {
+    background-color: #2568c8;
+    text-shadow: none;
+}
+.login-app .houzhui input, .login-app .houzhui select {
+    background: none;
+    border: 1px solid #d4d4d4;
+    border-radius: 5px;
+}
+.pred {
+    font-size: 14px;
+            color: #222f7e;
+            padding: 10px 14px 0;
+        }
+        .pred2 {
+            display: inline-block;
+            /* font-weight: bold; */
+            /* color: red; */
+            font-style: normal;
+        }
+        .welcom2 {
+  font-size: 16px;
+  color: #222f7e;
+  margin-bottom: 10px;
+  padding-left: 15px;
+}
+.login-app .telphoneissame {
+    height: auto;
+    font-size: 13px;
+    line-height: 1.5;
+}
+.login-app .houzhui .telphoneissame-select {
+    height: 30px;
+    font-size: 12px;
+}
+        </style>
+    </head>
+<body>
+    <div class=""><img src="img/wlaqdt-202308-mheader.jpg" alt="" width="100%"></div>
+    <div class="whitebg-p">
+        <div class="whitebg-c">
+            <div class="register">
+                <p class="pred">为解决您在答题过程中遇到的问题，请认真填写下列内容，带*为必填项。技术人员于<i class="pred2">3个工作日内</i>处理，如仍有问题，可再次反映。</p>
+                <div class="welcom2">问题登记</div>
+                    <div class="box app-bookbg">
+                        <form class="layui-form reg-font">            
+                          <ul class="login-app">
+                              <li class="row">
+                                  <div class="qianzui col-xs-4">*姓　　名</div>
+                                  <div class="houzhui col-xs-8"><input id="userName" type="text" class="layui-input" lay-verify="required|username" autocomplete="off" required placeholder="请填写网络答题注册登录用户的真实姓名" /></div>
+                              </li>
+                              
+                              <li class="row">
+                                  <div class="qianzui col-xs-4">所属单位</div>
+                                  <div class="houzhui col-xs-8">
+                                      <input id="deptName" type="text" class="layui-input" autocomplete="off" />
+                                  </div>
+                              </li>
+                              <li class="row">
+                                  <div class="qianzui col-xs-4">*身份证号</div>
+                                  <div class="houzhui col-xs-8">
+                                      <input id="idCard" type="text" class="layui-input" lay-verify="required|idCard" autocomplete="off" required placeholder="请填写网络答题注册登录用户的身份证号"/>
+                                  </div>
+                              </li>
+                              <li class="row">
+                                  <div class="qianzui col-xs-4">*注册电话</div>
+                                  <div class="houzhui col-xs-8">
+                                      <input id="telphone" type="text" class="layui-input" lay-verify="required|phone" required placeholder="请填写网络答题注册登录用户的手机号"/>
+                                  </div>
+                              </li>
+                              <li class="row">
+                                  <div class="qianzui col-xs-4">联系电话</div>
+                                  <div class="houzhui col-xs-8">
+                                      <input id="telphone2" type="text" class="layui-input" lay-verify="required|phone"/>
+                                  </div>
+                              </li>
+                              <li class="row">
+                                <div class="qianzui col-xs-4 telphoneissame">*注册电话与联系电话是否一致</div>
+                                <div class="houzhui col-xs-8">
+                                    <select class="telphoneissame-select">
+                                        <option value="">请选择</option>
+                                        <option value="">是</option>
+                                        <option value="">否</option>
+                                    </select>
+                                </div>
+                            </li>
+                              <li class="row">
+                                  <div class="qianzui col-xs-4">电子邮箱</div>
+                                  <div class="houzhui col-xs-8">
+                                      <input id="email" type="text" class="layui-input" lay-verify="required|email"/>
+                                  </div>
+                              </li>
+                              <li class="row">
+                                  <div class="qianzui col-xs-4">*问题描述</div>
+                                  <div class="houzhui col-xs-8">
+                                      <textarea class="problem" maxlength="500" placeholder="请详细描述在答题过程中所遇到的问题。"></textarea>
+                                      <!-- <input id="problem" type="text" class="layui-input" placeholder="请详细描述在答题过程中所遇到的问题。"/> -->
+                                  </div>
+                              </li>
+                              <!--<li class="row">
+                                  <div class="qianzui col-xs-4">职　　业：</div>
+                                  <div class="houzhui col-xs-8">
+                                      <div class="layui-input-inline" style="width: 100%">
+                                          <select id="profession" lay-verify="required">
+                                              <option value=""></option>
+                                              <option value="1">行政事业</option>
+                                              <option value="2">企业商业</option>
+                                              <option value="3">学生</option>
+                                              <option value="4">军人</option>
+                                              <option value="5">农民</option>
+                                              <option value="6">水利</option>
+                                              <option value="7">其他</option>
+                                          </select>
+                                      </div>
+                                  </div>
+                              </li>
+                              <li class="row">
+                                  <div class="qianzui col-xs-4">学　　历：</div>
+                                  <div class="houzhui col-xs-8">
+                                      <div class="layui-input-inline" style="width:100%">
+                                          <select id="educational" lay-verify="required">
+                                              <option value=""></option>
+                                              <option value="1">小学</option>
+                                              <option value="2">中学</option>
+                                              <option value="3">大学及以上</option>
+                                          </select>
+                                      </div>
+                                  </div>
+                              </li>-->
+                              <li class="row">
+                                  <div class="qianzui col-xs-4 col-md-4">验&nbsp;证&nbsp;码：</div>
+                                  <div class="houzhui col-xs-8 col-md-8"><input id="auth_code" type="text" style="width: 65%;" class="layui-input" autocomplete="off" />
+                                      <img id="authCode" src="<%=path %>/getAuthCode" width="30%" height="29" class="middle" onclick="changeAuthCode();" style="cursor: pointer;display: inline-block;" /></div>
+                              </li>
+                          </ul>
+                          <div class="hei2-btn text-center">
+                              <button class="button" lay-submit lay-filter="submit" style="border:none;">提交</button>
+                              <!-- <button type="reset" class=" layui-btn-primary button" style="border:none;">重置</button> -->
+                          </div>
+                            </form>
+                      </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <img src="img/wlaqdt-202308-mfooter.jpg" width="100%" alt="">
+    </footer>
+</body>
+</html>

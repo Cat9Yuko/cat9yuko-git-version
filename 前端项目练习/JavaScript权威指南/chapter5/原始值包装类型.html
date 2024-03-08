@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>原始值包装类型</title>
+</head>
+<body>
+    <script>
+        /* 为了方便操作原始值， ECMAScript 提供了 3 种特殊的引用类型： Boolean、 Number 和 String。
+这些类型具有本章介绍的其他引用类型一样的特点，但也具有与各自原始类型对应的特殊行为。每当用
+到某个原始值的方法或属性时，后台都会创建一个相应原始包装类型的对象，从而暴露出操作原始值的
+各种方法。 */
+        // let s1 = "some text";
+        // let s2 = s1.substring(2);
+        // console.log(s2);
+
+        /* 当
+第二行访问 s1 时，是以读模式访问的，也就是要从内存中读取变量保存的值。在以读模式访问字符串
+值的任何时候，后台都会执行以下 3 步：
+        (1) 创建一个 String 类型的实例；
+        (2) 调用实例上的特定方法；
+        (3) 销毁实例。
+        */
+    //    let s1 = new String("some text");
+    //    let s2 = s1.substring(2);
+    //    s1 = null;
+
+        /* 引用类型与原始值包装类型的主要区别在于对象的生命周期。在通过 new 实例化引用类型后，得到
+的实例会在离开作用域时被销毁，而自动创建的原始值包装对象则只存在于访问它的那行代码执行期
+间。这意味着不能在运行时给原始值添加属性和方法。 */
+
+        // let s1 = "some text";
+        // s1.color = "red";
+        // console.log(s1.color); // undefined
+
+        // let obj = new Object("some text");
+        // console.log(obj instanceof String);
+
+//         如果传给 Object 的是字符串，则会创建一个 String 的实例。如果是数值，则会创建 Number 的
+// 实例。布尔值则会得到 Boolean 的实例。
+
+        // 注意，使用 new 调用原始值包装类型的构造函数，与调用同名的转型函数并不一样。例如：
+
+        // let value = "25"
+        // let number = Number(value) // 转型函数
+        // console.log(typeof number);
+
+        // let obj = new Number(value) // 构造函数
+        // console.log(typeof obj);
+
+        // Boolean
+        /* Boolean 是对应布尔值的引用类型。要创建一个 Boolean 对象，就使用 Boolean 构造函数并传入
+true 或 false，如下例所示： */
+        let booleanObject = new Boolean(true);
+    </script>
+</body>
+</html>

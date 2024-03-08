@@ -189,10 +189,77 @@ null。返回的数组虽然是 Array 的实例，但包含两个额外的属性
 //       }
         // 无论正则表达式是怎么创建的，继承的方法 toLocaleString()和 toString()都返回正则表达
 // 式的字面量表示。
-        let pattern = new RegExp("\\[bc\\]","gi");
-        console.log(pattern.toString());
-        console.log(pattern.toLocaleString());
+      //   let pattern = new RegExp("\\[bc\\]","gi");
+      //   console.log(pattern.toString());
+      //   console.log(pattern.toLocaleString());
+      //   这里的模式是通过 RegExp 构造函数创建的，但 toLocaleString()和 toString()返回的都是其
+// 字面量的形式。
+// 注意 正则表达式的 valueOf()方法返回正则表达式本身
 
+      // RegExp 构造函数属性
+      // 这些属性适用于作用域中的所有正则表达式，而且会根据最后执行的正则表达式操作而变化。
+      // 这些属性适用于作用域中的所有正则表达式，而且会根据最后执行的正则表达式操作而变化。
+
+      /* 
+	  全 名			简 写 	说 明
+      input			$_		最后搜索的字符串（非标准特性）
+      lastMatch 	$& 		最后匹配的文本
+	  lastParen 	$+ 		最后匹配的捕获组（非标准特性）
+	  leftContext 	$` 		input 字符串中出现在 lastMatch 前面的文本
+	  rightContext 	$' 		input 字符串中出现在 lastMatch 后面的文本
+      */
+
+	//   let text = "this has been a short summer";
+	//   let pattern = /(.)hort/g;
+
+	//   if(pattern.test(text)) {
+	// 	console.log(RegExp.input);
+	// 	console.log(RegExp.leftContext);
+	// 	console.log(RegExp.rightContext);
+	// 	console.log(RegExp.lastMatch);
+	// 	console.log(RegExp.lastParen);
+	//   }
+
+	//   以上代码创建了一个模式，用于搜索任何后跟"hort"的字符，并把第一个字符放在了捕获组中。不同属性包含的内容如下。
+
+	// input 属性中包含原始的字符串。
+	// leftConext 属性包含原始字符串中"short"之前的内容， rightContext 属性包含"short"
+	// 之后的内容。
+	// lastMatch 属性包含匹配整个正则表达式的上一个字符串，即"short"。
+	// lastParen 属性包含捕获组的上一次匹配，即"s"。
+
+	// 这些属性名也可以替换成简写形式，只不过要使用中括号语法来访问，如下面的例子所示，因为大
+	// 多数简写形式都不是合法的 ECMAScript 标识符
+	// if(pattern.test(text)) {
+	// 	console.log(RegExp.$_);
+	// 	console.log(RegExp["$`"]);
+	// 	console.log(RegExp["$'"]);
+	// 	console.log(RegExp["$&"]);
+	// 	console.log(RegExp["$+"]);
+	// }
+
+	// RegExp 还有其他几个构造函数属性，可以存储最多 9 个捕获组的匹配项。
+	let text = "this has been a short summer";
+	let pattern = /(..)or(.)/g;
+
+	if(pattern.test(text)) {
+		console.log(RegExp.$1);
+		console.log(RegExp.$2);
+	}
+
+	// 注意 RegExp 构造函数的所有属性都没有任何 Web 标准出处，因此不要在生产环境中使用它们。
+
+	// 模式局限
+	/* 
+	\A 和\Z 锚（分别匹配字符串的开始和末尾）
+	联合及交叉类
+	原子组
+	x（忽略空格）匹配模式
+	条件式匹配
+	正则表达式注释
+	*/
+
+	// 虽然还有这些局限，但 ECMAScript 的正则表达式已经非常强大，可以用于大多数模式匹配任务。
     </script>
   </body>
 </html>
