@@ -324,4 +324,48 @@ nav {
   color: #b3b5b6;
   text-align: right;
   margin-top: 40px;
+  padding-right: 5px;
+}
+.img-container {
+  padding-top: 20px;
+}
+.nn-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: #1e7fca;
+  line-height: 18px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.imgc-bottom {
+  margin-top: 40px;
+  padding-top: 30px;
+}
+footer {
+  background-color: #1e7fca;
+  margin-top: 27px;
+}
+.footerlink {
+  font-size: 14px;
+  color: #ffffff;
+  padding: 80px 0 80px 10px;
+}
+.row-link + .row-link {
+  margin-top: 28px;
+}
+
+.row-link a {
+  display: block;
+  width: 70px;
+  float: left;
+}
+.row-link a + a {
+  margin-left: 150px;
+}
+.copyright {
+  background-color: #f2f5f8;
+  font-size: 12px;
+  text-align: center;
+  color: #909192;
+  padding: 23px 0;
 }
