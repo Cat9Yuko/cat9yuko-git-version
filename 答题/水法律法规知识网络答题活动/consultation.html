@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=1298">
+    <title>2024年 “世界水日” “中国水周” 水法律法规知识网络答题活动</title>
+    <link rel="stylesheet" href="css/sflfgzswldt-202403-global.css">
+		<script src="js/jquery.min.js"></script>
+		  <script src="js/yanzhengma.js"></script>
+    <style>
+        .register span, .login span {
+            background-color: #00b7ee;
+            width: 190px;
+            text-shadow: none;
+        }
+        .register input, .register select, .login input {
+            padding-left: 10px;
+            background: none;
+            border: 1px solid #d4d4d4;
+        }
+        .pred {
+            color: #505050;
+            padding-left: 15px;
+        }
+        .pred2 {
+            display: inline-block;
+            /* font-weight: bold; */
+            /* color: red; */
+            font-style: normal;
+        }
+        .box {
+            padding-left: 10px;
+        }
+        .register .telphoneissame {
+            height: auto;
+            font-size: 22px;
+            line-height: 30px;
+        }
+        .register .telphoneissame-select {
+            width: 100%;
+            height: 60px;
+        }
+        .register-bg .footer, .score-bg .footer {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+     <div class="answer-bg">
+        <div class="center-block-1200" style="width: 1200px;">
+            <div class="whitebg-c clearfix" style="box-shadow: 0 0 7px #ccc;">
+
+                <div class="register">
+                    <div class="center_block box">
+                        <p class="pred">为解决您在答题过程中遇到的问题，请认真填写下列内容，带*为必填项。技术人员于<i class="pred2">3个工作日内</i>处理，如仍有问题，可再次反映。</p>
+                        <div class="welcom2">问题登记</div>
+                        <form class="layui-form reg-font" action="/sendmail/dati-sendmail.jsp" id="tjform" method="post" enctype="multipart/form-data" accept-charset="utf-8">
+						<input id="type" name="type" type="hidden"   value="dati"/>
+						 <input id="answerName" name="answerName"  type="hidden"  value="学习贯彻习近平总书记治水重要论述网络答题"/>
+                            <table cellspacing="0" cellpadding="0" width="840px" style="margin: 25px auto;">
+                                <tr>
+                                    <td width="30%" align="right"><span>*姓　　名</span></td>
+                                    <td width="64%">
+                                        <input id="userName"  name="userName" type="text" class="layui-input"
+                                            lay-verify="required|username" autocomplete="off"
+                                            style="width: 784px; height: 50px;" required placeholder="请填写网络答题注册登录用户的真实姓名" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td height="10px">
+
+                                    </td>
+                                </tr>
+                                <!-- <tr>
+                                    <td align="right"><span>所属单位</span></td>
+                                    <td>
+                                        <div class="layui-input-inline"
+                                            style="width: 382px;float: left;margin-right: 20px;">
+                                            <select id="p_dept" class="middle" lay-filter="dept_filter" lay-search>
+                                                <option value="">请选择</option>
+                                            </select>
+                                        </div>
+                                        <div class="layui-input-inline" style="width: 382px;float: left;">
+                                            <select id="c_dept" class="middle" lay-search>
+                                                <option value="">请选择</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td height="22px">
+
+                                    </td>
+                                </tr> -->
+                                <tr>
+                                    <td align="right"><span>所属单位</span></td>
+                                    <td><input id="deptName" name="deptName"  type="text" class="layui-input" autocomplete="off"
+                                            style="width: 784px; height: 50px;" /></td>
+                                </tr>
+                                <tr>
+                                    <td height="10px">
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="right"><span>*身份证号</span></td>
+                                    <td><input id="idCard" name="idCard" type="text" class="layui-input" lay-verify="required|idCard"
+                                            autocomplete="off" style="width: 784px; height: 50px;" required  placeholder="请填写网络答题注册登录用户的身份证号"/></td>
+                                </tr>
+                                <tr>
+                                    <td height="10px">
+
+                                    </td>
+                                </tr>
+                                <!-- <tr>
+                                <td align="right"><span>*</span>出生年份：</td>
+                                <td><input id="birthDate" type="text" class="layui-input" lay-verify="required"
+                                           autocomplete="off" style="width: 200px; height: 25px;"/></td>
+                            </tr> -->
+                                <tr>
+                                    <td align="right"><span>*注册电话</span></td>
+                                    <td><input id="telphone" name="telphone" type="text" class="layui-input" lay-verify="required|phone"
+                                            style="width: 784px; height: 50px;" required placeholder="请填写网络答题注册登录用户的手机号" /></td>
+                                </tr>
+                                <tr>
+                                    <td height="10px">
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="right"><span>联系电话</span></td>
+                                    <td><input id="telphone2" name="telphone2"  type="text" class="layui-input" 
+                                            style="width: 784px; height: 50px;"   /></td>
+                                </tr>
+                                <tr>
+                                    <td height="10px">
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="right"><span class="telphoneissame">*注册电话与联系电话是否一致</span></td>
+                                    <td>
+                                        <select class="telphoneissame-select"  id="telphoneissame"  name="telphoneissame"  lay-verify="required">
+                                            <option value="">请选择</option>
+                                               <option value="是">是</option>
+                                            <option value="否">否</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td height="10px">
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="right"><span>电子邮箱</span></td>
+                                    <td><input id="email" name="email" type="email" class="layui-input" lay-verify="email"
+                                            style="width: 784px; height: 50px;"  /></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td height="10px">
+
+                                    </td>
+                                </tr>
+                                <tr style="vertical-align: top;">
+                                    <td align="right"><span>*问题描述</span></td>
+                                    <td>
+                                        <textarea name="problem" id="problem" cols="30" rows="10" class="problem" placeholder="请详细描述在答题过程中所遇到的问题。" maxlength="500" lay-verify="required|problem" required></textarea>
+                                    </td>
+                                </tr>
+                                
+                                <tr>
+                                    <td height="10px">
+
+                                    </td>
+                                </tr>
+                                
+                                <tr>
+                                    <td align="right"><span
+                                            style="width:190px;text-align:center;display:inline-block">验&nbsp;证&nbsp;码</span>
+                                    </td>
+                                    <td><input id="code" name="code" type="text" class="layui-input" lay-verify="required"
+                                            autocomplete="off" style="width: 600px; height: 50px; display: inline;" />
+                                        <canvas id="canvas"    style="height:50px;width:130px;display:block;float:right;margin-left:35px;"></canvas></td>
+                                </tr>
+                                <!--<tr>
+                                <td height="30px">
+    
+                                </td>
+                            </tr>-->
+
+                            </table>
+                            
+                            <div class="sub-tij">
+                                <button class="button" lay-submit lay-filter="submit"
+                                    style="border:none;" id="save">提交</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer" style="border-top: 4px solid #0b72ba;">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="">
+                <tbody>
+                    <tr>
+                        <td align="center">
+                            <!--底部 start-->
+                            <table width="1200" border="0" cellspacing="0" cellpadding="0" bgcolor="" align="center" style="margin:0px auto; border-top:0px solid #cccccc">
+                                <tbody>
+                                    <tr>
+                                        <td height="116" align="center" valign="">
+    
+                                            <table border="0" cellspacing="0" cellpadding="0" align="center">
+                                                <tbody>
+                                                    <tr>
+                                                        <td height="20">&nbsp;</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="font-size:15px; line-height:28px; color:#000000;text-align: center;">
+                                                            <a href="https://beian.miit.gov.cn/" target="_blank">京ICP备14010557号</a> &nbsp;&nbsp;主办单位：水利部普法办公室 政策法规司 人事司 &nbsp;&nbsp;承办单位：水利部宣传教育中心 &nbsp;&nbsp;技术支持单位：水利部信息中心
+                                                            <br>政府网站标识码：bm20000001&nbsp;&nbsp;
+                                                            <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11040102700040" style="text-decoration: none;font-size:16px; color:#000000" target="_blank"><img src="http://www.mwr.gov.cn/images_zt/20190906-guohui.png" border="0" style="display:inline" ignoreapd="1"> 京公网安备11040102700040号</a> &nbsp;&nbsp;联系电话：010-63205077
+                                                        </td>
+                                                        <td style="padding-left:36px; padding-right:10px">
+                                                            <a href="http://bszs.conac.cn/sitename?method=show&amp;id=0726B189C5F03282E053012819ACDB52" target="_blank"><img src="http://www.mwr.gov.cn/images_zt/20190906-dzjg.png" width="44" height="56" border="0" ignoreapd="1"></a>
+                                                        </td>
+                                                        <td>
+                                                            <a href="http://121.43.68.40/exposure/jiucuo.html?site_code=bm20000001&amp;url=http%3A%2F%2Fwww.mwr.gov.cn%2F" target="_blank"><img src="http://www.mwr.gov.cn/images_zt/20190906-jiucuo.png" width="119" height="56" border="0" ignoreapd="1"></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td height="20">&nbsp;</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+    
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!--底部 end-->
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+    </div>
+<script>
+     //验证码绑定
+var show_num = [];
+$(function(){
+  draw("canvas",show_num);
+  $("#canvas").on('click',function(){
+	 show_num = [];
+   draw("canvas",show_num);
+  })
+})
+</script>
+    
+</body>
+
+</html>

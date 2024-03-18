@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/zszyls-202403-mobile.css">
+        <title>学习贯彻习近平总书记治水重要论述 网络答题活动</title>
+    </head>
+<body>
+    <div class=""><img src="img/zszyls-202403-mheader.jpg" alt="" width="100%"></div>
+    <div class="whitebg-p">
+        <div class="whitebg-c">
+            <div class="register">
+                <p class="welcome">请确认您的用户信息</p>
+                <div class="box">
+                    <form class="layui-form reg-font">
+         <input id="user_id" type="hidden" />
+                    <ul class="login-app">
+                        <li class="row">
+                            <div class="qianzui col-xs-4">姓　　名</div>
+                            <div class="houzhui col-xs-8"><input id="userName" type="text" class="layui-input" lay-verify="required|username" autocomplete="off" required /></div>
+                        </li>
+                        <li class="row">
+                            <div class="qianzui col-xs-4">单　　位</div>
+                            <div class="houzhui col-xs-8">
+                                <div class="layui-input-inline" style="margin-bottom: 5px;">
+                                    <select id="p_dept" class="middle" lay-filter="dept_filter" lay-search  lay-verify="required">
+                                        <option value="">请选择</option>
+                                    </select>
+                                </div>
+                                <div class="layui-input-inline" >
+                                    <select id="c_dept" class="middle" lay-search>
+                                        <option value="">请选择</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="row">
+                            <div class="qianzui col-xs-4">单位全称</div>
+                            <div class="houzhui col-xs-8">
+                                <input id="deptName" type="text" class="layui-input" autocomplete="off" />
+                            </div>
+                        </li>
+                        <li class="row">
+                            <div class="qianzui col-xs-4">身份证号</div>
+                            <div class="houzhui col-xs-8">
+                                <input id="idCard" type="text" class="layui-input" lay-verify="required|idCard" autocomplete="off" required/>
+                            </div>
+                        </li>
+                        <li class="row">
+                            <div class="qianzui col-xs-4">手机号码</div>
+                            <div class="houzhui col-xs-8">
+                                <input id="telphone" type="text" class="layui-input" lay-verify="required|phone" required/>
+                            </div>
+                        </li>
+                        <li class="row">
+                            <div class="qianzui col-xs-4">所在地区</div>
+                            <div class="houzhui col-xs-8">
+                                <div data-toggle="distpicker">
+                                    <div class="layui-input-inline" style="margin-bottom: 5px;">
+                                        <select lay-filter="p" id="province" lay-verify="required"></select>
+                                    </div>
+                                    <div class="layui-input-inline">
+                                        <select lay-filter="c" id="city" lay-verify="required"></select>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!--<li class="row">
+                            <div class="qianzui col-xs-4">职　　业</div>
+                            <div class="houzhui col-xs-8">
+                                <div class="layui-input-inline" style="width: 100%">
+                                    <select id="profession" lay-verify="required">
+                                        <option value=""></option>
+                                        <option value="1">行政事业</option>
+                                        <option value="2">企业商业</option>
+                                        <option value="3">学生</option>
+                                        <option value="4">军人</option>
+                                        <option value="5">农民</option>
+                                        <option value="6">水利</option>
+                                        <option value="7">其他</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="row">
+                            <div class="qianzui col-xs-4">学　　历</div>
+                            <div class="houzhui col-xs-8">
+                                <div class="layui-input-inline" style="width:100%">
+                                    <select id="educational" lay-verify="required">
+                                        <option value=""></option>
+                                        <option value="1">小学</option>
+                                        <option value="2">中学</option>
+                                        <option value="3">大学及以上</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </li>-->
+                        <li class="row">
+                            <div class="qianzui col-xs-4 col-md-4">验&nbsp;证&nbsp;码</div>
+                            <div class="houzhui col-xs-8 col-md-8"><input id="code" type="text" style="width: 65%;display: inline;vertical-align: middle;" class="layui-input" autocomplete="off" lay-verify="required" />
+                                <img id="authCode" src="<%=path %>/getAuthCode" width="30%" height="29" class="middle" onclick="changeAuthCode();" style="cursor: pointer;display: inline-block;" /></div>
+                        </li>
+                    </ul>
+                    <div class="tishi">注：所有参赛者请填写真实信息，以免影响后期统计信息。</div>
+                    <div class="hei2-btn text-center">
+                         <button  class="xiugai  button" style="border:none;">修改信息</button>
+                   <button class="button" lay-submit lay-filter="doUpdate" id="save_btn" style="display: none;border:none;margin-left:20px;">保存修改</button>
+                   <button class="toanswer button" class="closepage" id="answer_btn"  style="border:none;margin-left:20px;">开始答题</button>
+                    </div>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <img src="img/zszyls-202403-mfooter.jpg" width="100%" alt="">
+    </footer>
+</body>
+</html>

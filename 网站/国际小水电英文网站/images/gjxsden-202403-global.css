@@ -369,3 +369,38 @@ footer {
   color: #909192;
   padding: 23px 0;
 }
+
+.curpage {
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+.channel-container {
+  background-color: #ffffff;
+  padding: 40px 24px;
+  margin-bottom: 21px;
+}
+.channel-container .title {
+  font-size: 24px;
+  font-weight: bold;
+}
+.list-container {
+  display: flex;
+}
+.leftnav {
+  flex: 403px 0;
+  background-color: #ffffff;
+  width: 403px;
+  margin-right: auto;
+}
+.leftnav-title {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 34px 24px;
+}
+.leftnav-list {
+  padding: 0 6px;
+}
+.rightlist {
+  flex: 776px 0;
+  background-color: #ffffff;
+}
