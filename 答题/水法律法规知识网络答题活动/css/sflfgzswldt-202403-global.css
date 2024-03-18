@@ -122,7 +122,7 @@ li {
 }
 .my-btn a {
   font-size: 28px;
-  color: #ffffff;
+  color: #014b7f;
   background: #05baee;
   padding: 9px 36px;
   border-radius: 10px;
@@ -260,16 +260,26 @@ li {
 .xx_ul label {
     cursor: pointer;
 }
-
+.score {
+  background-image: url('../img/sflfgzswldt-202403-scorebg.png');
+  width: 913px;
+  height: 166px;
+  background-size: cover;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 57px;
+  margin-top: 75px;
+}
 .score p {
-    color: #030303;
-    font-size: 37.5px;
+    color: #ffffff;
+    font-size: 30px;
     font-weight: bold;
     text-align: center;
-    margin: 100px 0;
 }
 .score p span {
-    color: red;
+    color: #ffffff;
+    font-size: 50px;
+    padding: 0 5px;
 }
 
 
