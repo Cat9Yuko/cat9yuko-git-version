@@ -393,9 +393,11 @@ footer {
   margin-right: auto;
 }
 .leftnav-title {
+  position: relative;
   font-size: 20px;
   font-weight: bold;
-  padding: 34px 24px;
+  /* height: 70px; */
+  
 }
 .leftnav-list {
   padding: 0 6px;
@@ -403,4 +405,66 @@ footer {
 .rightlist {
   flex: 776px 0;
   background-color: #ffffff;
+}
+.leftnav-li {
+  padding: 22px 0 22px 24px;
+}
+.leftnav-li + .leftnav-li {
+  border-top: 1px solid #f1f1f1;
+}
+.leftnav-li.has-child .leftnav-title {
+  padding-right: 38px;
+}
+.leftnav-li.has-child .leftnav-title::after {
+  content: "";
+  vertical-align: middle;
+  background-image: url('../images/gjxsden-202403-iconhaschild.png');
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  right: 18px;
+  top: calc(50% - 9px);
+}
+.child-nav {
+  display: none;
+}
+.leftnav-li.act .child-nav {
+  display: block;
+}
+.child-item {
+  margin-top: 20px;
+}
+.child-item {
+  font-size: 20px;
+  line-height: 25px;
+  padding-left: 25px;
+}
+.child-item.act a {
+  color: #0829b3;
+}
+.page-list {
+  padding: 0 16px;
+}
+.page-list .li {
+  font-size: 20px;
+  padding: 20px 0;
+}
+.page-list .li + .li {
+  border-top: 1px solid #f2f5f8;
+}
+.li-time {
+  font-size: 14px;
+  color: #b3b5b6;
+  margin-top: 10px;
+}
+.li-time::before {
+  content: "";
+  display: inline-block;
+  background-image: url('gjxsden-202403-icontime.png');
+  width: 18px;
+  height: 18px;
+  background-size: cover;
+  vertical-align: middle;
+  margin-top: -2px;
+  margin-right: 9px;
 }
