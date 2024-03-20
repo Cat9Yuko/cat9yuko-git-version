@@ -383,6 +383,10 @@ footer {
   font-size: 24px;
   font-weight: bold;
 }
+.channel-container .abs {
+  line-height: 35px;
+  margin-top: 13px;
+}
 .list-container {
   display: flex;
 }
@@ -431,6 +435,12 @@ footer {
 .leftnav-li.act .child-nav {
   display: block;
 }
+.leftnav-li2 {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 25px 0;
+  border-bottom: 1px solid #f1f1f1;
+}
 .child-item {
   margin-top: 20px;
 }
@@ -467,4 +477,13 @@ footer {
   vertical-align: middle;
   margin-top: -2px;
   margin-right: 9px;
+}
+.right-artilce {
+  padding: 20px 15px;
+}
+.right-artilce p {
+  font-size: 20px;
+  line-height: 48px;
+  /* word-wrap: break-word;
+  word-break: break-all; */
 }
