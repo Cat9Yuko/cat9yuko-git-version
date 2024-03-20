@@ -458,9 +458,7 @@ footer {
 .page-list .li {
   font-size: 20px;
   padding: 20px 0;
-}
-.page-list .li + .li {
-  border-top: 1px solid #f2f5f8;
+  border-bottom: 1px solid #f2f5f8;
 }
 .li-time {
   font-size: 14px;
@@ -486,4 +484,35 @@ footer {
   line-height: 48px;
   /* word-wrap: break-word;
   word-break: break-all; */
+}
+.page {
+  font-size: 12px;
+  margin: 36px 0;
+  margin-left: 22px;
+}
+.page a {
+  border: 1px solid #ebebeb;
+  color: #003366;
+  padding: 8px 9px;
+  display: inline-block;
+}
+.page a + a {
+  margin-left: 3px;
+}
+.page a.act {
+  background-color: #003366;
+  color: #ffffff;
+}
+.list-container2 .page-list {
+  padding: 0;
+}
+.list-container2 .li {
+  background-color: #f2f5f8;
+  margin-top: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.page.aligncenter {
+  text-align: center;
+  margin-left: 0;
 }
