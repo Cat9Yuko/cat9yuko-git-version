@@ -396,6 +396,13 @@ footer {
   margin-left: 50px;
   margin-right: 60px;
 }
+.abs .abs-img2 img {
+  float: left;
+  margin-right: 17px;
+}
+.abs .abs-img2 p {
+  overflow: hidden;
+}
 .list-container {
   display: flex;
 }
@@ -417,6 +424,9 @@ footer {
 .rightlist {
   flex: 776px 0;
   background-color: #ffffff;
+}
+.rightlist.no-bg {
+  background: none;
 }
 .leftnav-li {
   padding: 22px 0 22px 24px;
@@ -447,6 +457,18 @@ footer {
   font-size: 20px;
   font-weight: bold;
   padding: 25px 0;
+  border-bottom: 1px solid #f1f1f1;
+}
+.leftnav-li3 {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 25px 17px;
+  border-bottom: 1px solid #f1f1f1;
+}
+.leftnav-li4 {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 25px 4px;
   border-bottom: 1px solid #f1f1f1;
 }
 .child-item {
@@ -495,7 +517,7 @@ footer {
 }
 .page {
   font-size: 12px;
-  margin: 36px 0;
+  margin: 23px 0;
   margin-left: 22px;
 }
 .page a {
@@ -523,4 +545,78 @@ footer {
 .page.aligncenter {
   text-align: center;
   margin-left: 0;
+}
+.module-li {
+  display: flex;
+}
+.module-li + .module-li {
+  margin-top: 20px;
+}
+.item {
+  font-size: 16px;
+  flex: 589px 0;
+  background-color: #ffffff;
+  padding: 30px 24px;
+}
+.item:nth-child(1) {
+  margin-right: auto;
+}
+.item h3 {
+  font-size: 20px;
+}
+.item p {
+  line-height: 36px;
+  margin-top: 26px;
+}
+.item2 {
+  background-color: #ffffff;
+  padding: 30px 24px;
+  flex: 1;
+}
+.newreport-container {
+  margin-top: 30px;
+}
+.newreport-container img {
+  float: left;
+  width: 244px;
+  margin-right: 39px;
+}
+.newreport-container h3 {
+  font-size: 24px;
+  margin-bottom: 23px;
+}
+.newreport-container p {
+  line-height: 36px;
+  margin-bottom: 15px;
+}
+.pagelist2 {
+  border-top: 28px solid #f2f5f8;
+  padding: 20px 20px 0;
+}
+.pagelist2 .li2 {
+  background-color: #f2f5f8;
+  display: inline-block;
+}
+.pagelist2 .li2 + .li2 {
+  margin-top: 20px;
+}
+.pagelist2 .li2 img {
+  float: left;
+  width: 271px;
+  height: 182px;
+  margin-right: 28px;
+  margin-top: -20px;
+}
+.pagelist2 .li2 h3 {
+  font-size: 20px;
+  line-height: 35px;
+  margin-top: 21px;
+  margin-bottom: 29px;
+}
+.child-nav2 {
+  font-weight: normal;
+  margin-top: 20px;
+}
+.child-item2 + .child-item2 {
+  margin-top: 12px;
 }
