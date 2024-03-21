@@ -34,7 +34,7 @@ li {
   width: 519px;
 }
 .w575 {
-  width: 575px;
+  width: 570px;
 }
 /* user style */
 .index-bg {
@@ -106,7 +106,7 @@ li {
 }
 .index-bottom p {
   text-indent: 2rem;
-  font-size: 16px;
+  font-size: 18px;
   text-align: justify;
   line-height: 39px;
   color: #095991;
@@ -128,7 +128,9 @@ li {
   border-radius: 10px;
   display: inline-block;
 }
-
+.my-btn.white-clor a {
+  color: #ffffff;
+}
 .my-btn a + a {
   margin-left: 100px;
 }

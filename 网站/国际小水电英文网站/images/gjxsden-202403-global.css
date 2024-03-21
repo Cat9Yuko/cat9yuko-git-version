@@ -143,7 +143,7 @@ nav {
   margin-right: 10px;
 }
 .main {
-  margin-top: 14px;
+  margin-top: 25px;
 }
 /* carousel */
 .slick-mod {
@@ -283,7 +283,7 @@ nav {
   margin-top: 20px;
 }
 .news-li::after {
-  content: "";
+  content: '';
   display: block;
   width: 3px;
   height: 90%;
@@ -300,7 +300,7 @@ nav {
 }
 .news-time {
   font-size: 0;
-  margin-top:7px;
+  margin-top: 7px;
 }
 .icon-newstime {
   font-size: 14px;
@@ -387,6 +387,15 @@ footer {
   line-height: 35px;
   margin-top: 13px;
 }
+.abs .abs-img {
+  padding-top: 21px;
+}
+.abs .abs-img img {
+  float: left;
+  width: 246px;
+  margin-left: 50px;
+  margin-right: 60px;
+}
 .list-container {
   display: flex;
 }
@@ -401,7 +410,6 @@ footer {
   font-size: 20px;
   font-weight: bold;
   /* height: 70px; */
-  
 }
 .leftnav-list {
   padding: 0 6px;
@@ -420,7 +428,7 @@ footer {
   padding-right: 38px;
 }
 .leftnav-li.has-child .leftnav-title::after {
-  content: "";
+  content: '';
   vertical-align: middle;
   background-image: url('../images/gjxsden-202403-iconhaschild.png');
   width: 18px;
@@ -466,7 +474,7 @@ footer {
   margin-top: 10px;
 }
 .li-time::before {
-  content: "";
+  content: '';
   display: inline-block;
   background-image: url('gjxsden-202403-icontime.png');
   width: 18px;
