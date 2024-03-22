@@ -30,9 +30,58 @@
             var questionD ="";
             var questionCindex = 0;
             var questionMindex = 0;
-            var questionA =`1	C2	A3	A4	B5	B6	C7	D8	A9	B10	A11	C12	B13	A14	B15	B16	C17	B18	B19	D20	C21	D22	B23	A24	C25	B26	C27	B28	A29	A30	D`
-            var questionB = `31	A|B|C|D32	A|B|C|D33	B|C|D34	A|B|C|D35	A|B|C|D36	A|C37	A|C|D38	A|B|C|D39	A|B|C40	A|B|C|D`
-            var questionC = `41	A42	B43	A44	B45	A46	B47	A48	A49	A50	A`
+            var questionA =`1	D
+2	A
+3	C
+4	C
+5	B
+6	A
+7	A
+8	D
+9	C
+10	B
+11	A
+12	C
+13	A
+14	B
+15	B
+16	C
+17	A
+18	B
+19	C
+20	A
+21	B
+22	A
+23	C
+24	B
+25	D
+26	B
+27	A
+28	A
+29	D
+30	B
+
+`
+            var questionB = `31	A|B|C
+32	B|D
+33	A|B|C|D
+34	A|C
+35	A|B|D
+36	A|B|D
+37	A|B|C|D
+38	A|B|C
+39	A|B|C|D
+40	A|D`
+            var questionC = `41	B
+42	A
+43	B
+44	A
+45	B
+46	A
+47	A
+48	B
+49	B
+50	A`
             // questionS = questionA.match(/A|B|C|D/ig)
             questionS = questionA.match(/[a-d]/ig);
             questionM = questionB.match(/\w\|\w\|\w\|\w|\w\|\w\|\w|\w\|\w/g);
