@@ -620,3 +620,25 @@ footer {
 .child-item2 + .child-item2 {
   margin-top: 12px;
 }
+.detail-container {
+  background-color: #ffffff;
+}
+.article-container {
+  width: 923px;
+  margin: 0 auto;
+  padding-top: 42px;
+}
+.article-container .title {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+.content {
+  border-top: 1px solid #909192;
+  padding-top: 36px;
+  margin-top: 30px;
+}
+.content p {
+  line-height: 30px;
+  margin-bottom: 24px;
+}
