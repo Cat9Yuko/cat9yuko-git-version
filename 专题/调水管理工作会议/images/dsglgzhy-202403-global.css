@@ -1,0 +1,174 @@
+:root {
+  font-size: 16px;
+  font-family: '微软雅黑', 'Microsoft Yahei';
+  box-sizing: border-box;
+}
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+img {
+  border: none;
+  max-width: 100%;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.center-block-1200 {
+  width: 1200px;
+  margin: 0 auto;
+}
+.w595 {
+  width: 595px;
+}
+/* user style */
+header {
+  background-image: url('dsglgzhy-202403-header.jpg');
+  height: 585px;
+  background-position: center center;
+  background-size: cover;
+}
+section + section {
+  margin-top: 32px;
+}
+.main {
+  margin-top: -35px;
+}
+.hnews {
+  background-image: url('dsglgzhy-202403-chnlbg1.jpg');
+  height: 363px;
+  padding-top: 43px;
+  padding-left: 27px;
+  padding-right: 27px;
+}
+.hnews h3 {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 14px;
+}
+.hnews p {
+  line-height: 35px;
+  text-indent: 2rem;
+}
+.hnews .more,.tabs-body .more {
+  width: 166px;
+  height: 29px;
+  background-color: #006db8;
+  text-align: center;
+  line-height: 29px;
+  color: #ffffff;
+  border-radius: 13px;
+  font-size: 14px;
+  float: right;
+}
+.tabs-header .tab-item {
+  width: 247px;
+  height: 44px;
+  float: left;
+  background-color: #b8d7ed;
+  text-align: center;
+  font-size: 26px;
+  color: #545454;
+  line-height: 44px;
+  font-weight: bold;
+}
+.tab-item h2 {
+  text-align: center;
+  margin-top: 23px;
+  margin-bottom: 20px;
+}
+.tab-item p {
+  line-height: 35px;
+}
+.tabs-header .tab-item.act {
+  width: 348px;
+  height: 52px;
+  background-color: #006db8;
+  color: #ffffff;
+  line-height: 52px;
+  margin-top: -4px;
+}
+.tabs-body {
+  height: 293px;
+  padding: 0 29px;
+}
+.tabs-body .tab-item {
+  display: none;
+}
+.tabs-body .tab-item.act {
+  display: block;
+}
+.chnltitle {
+  line-height: 45px;
+  font-size: 26px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #006db8;
+  padding-left: 23px;
+  margin-bottom: 26px;
+}
+.list li {
+  line-height: 37px;
+}
+.list li::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 10px;
+  background-image: url('dsglgzhy-202403-iconli.png');
+  background-size: cover;
+  vertical-align: middle;
+  margin-right: 10px;
+  margin-left: 13px;
+}
+footer {
+  background-color: #025a96;
+  margin-top: 20px;
+}
+.boxs {
+  box-shadow: 0px 0px 3px 1px #ccc;
+}
+.source-time {
+  margin: 0 auto;
+  height: 35px;
+  text-align: center;
+  position: relative;
+  line-height: 35px;
+}
+
+.time {
+  margin-right: 10px;
+}
+
+.wechat,
+.sina {
+  position: absolute;
+  margin-top: 5px;
+}
+
+.wechat {
+  margin-left: 10px;
+}
+
+.sina {
+  margin-left: 46px;
+}
