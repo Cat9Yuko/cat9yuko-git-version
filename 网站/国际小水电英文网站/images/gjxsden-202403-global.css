@@ -107,14 +107,18 @@ nav {
   position: absolute;
   white-space: nowrap;
   background-color: #ffffff;
-  padding: 15px;
   display: none;
   z-index: 20;
 }
 .nav-citems.act {
   display: block;
 }
-.nav-citem + .nav-citem {
+.nav-citem {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+}
+.nav-citem:nth-child(1) {
   padding-top: 15px;
 }
 .search-container {
@@ -641,4 +645,18 @@ footer {
 .content p {
   line-height: 30px;
   margin-bottom: 24px;
+}
+/* 新增 */
+.nav-gitems {
+  padding: 15px 15px 0 30px;
+  left: 100%;
+  background-color: #ffffff;
+  display: none;
+  font-weight: normal;
+}
+.nav-gitem + .nav-gitem {
+ padding-top: 15px;
+}
+.nav-citem:hover .nav-gitems {
+  display: block;
 }
