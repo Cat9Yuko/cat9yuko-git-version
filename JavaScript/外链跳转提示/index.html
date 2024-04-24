@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /*增加点击外链提示*/
+.f-tal{text-align:left}.f-tac{text-align:center}.f-tar{text-align:right}.m-outside-chain-dialog,.m-outside-chain-shade{position:fixed;_position:absolute;pointer-events:auto;display:none}.m-outside-chain-shade{top:0;left:0;width:100%;height:100%;z-index:10000;background-color:#000;opacity:.3;_height:expression(document.body.offsetHeight+"px")}.m-outside-chain-dialog{margin-left:-185px;margin-top:-100px;-webkit-overflow-scrolling:touch;top:50%;left:50%;width:370px;-webkit-background-clip:content;box-shadow:1px 1px 50px rgba(0,0,0,.3);z-index:10001;font-family:"Helvetica Neue",Helvetica,Arial,"PingFang SC","Hiragino Sans GB","WenQuanYi Micro Hei","Microsoft Yahei",sans-serif}.m-outside-chain-dialog .m-outside-chain{height:100%;padding:20px 40px 40px;background-color:#fff;border-radius:5px}.m-outside-chain .u-tt{margin:0;font-size:20px;line-height:32px;font-weight:400;border-bottom:1px solid #eee;text-align:center}.m-outside-chain .bd{padding:16px 0;font-size:14px;line-height:26px}.m-outside-chain .bd p{padding:0;margin:0}.m-outside-chain .u-web-tt{color:#c12c20}.m-outside-chain .ft a,.m-outside-chain .ft a:hover{text-decoration:none;color:#626262}.m-outside-chain .ft a{padding:0 12px;display:inline-block;font-size:14px;line-height:30px;background-color:#f7f7f7;border:1px solid #e5e5e5}.m-outside-chain .ft a+a{margin-left:10px}
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="http://www.mwr.gov.cn/xw/sjzs/202404/t20240424_1709663.html" target="_blank" rel="noopener noreferrer">珠江水利委员会会商部署北江特大洪水退水阶段防御工作</a></li>
+        <li><a href="https://www.mwr.gov.cn" target="_blank" rel="noopener noreferrer">水利部</a></li>
+        <li><a href="https://app.cctv.com/special/m/lbvod/index.html?vide=VIDE6G3zBaNRONnShBRoqzak240419&guid=bc7722afcba44dabb5ad9b9c5c68b91e&vtype=2&vsetId=C10437" target="_blank" rel="noopener noreferrer">[视频]未来三天 江南华南强降雨和强对流天气持续</a></li>
+        <li><a href="http://www.mwr.gov.cn/hd/zxft/zxzb/fbh20240422/" target="_blank" rel="noopener noreferrer">发布会</a></li>
+        <li><a href="http://jgdj.mwr.gov.cn/" target="_blank" rel="noopener noreferrer">机关党建</a></li>
+        <li><img src="http://www.mwr.gov.cn/mwr_div/images_index/2016web_20161222_xzt1.jpg" width="367" height="70" border="0" usemap="#Map" alt="鼓励和引导社会资本参与重大水利工程建设运营"></li>
+    </ul>
+    <map name="Map">
+        <area shape="rect" coords="307,2,364,21" href="http://www.mwr.gov.cn/xw/201612/t20161229_783119.html">
+        <area shape="rect" coords="307,24,364,48" href="../xw/201612/t20161229_783119.html">
+        </map> 
+
+    <!-- 外链跳转提示框 -->
+    <div class="m-outside-chain-shade j-outside-chain-shade" style="display: none;"></div>
+    <div class="m-outside-chain-dialog j-outside-chain-dialog" style="display: none;">
+        <div class="m-outside-chain">
+            <div class="bd">
+                <p class="f-tac">您访问的链接即将离开<br><span class="u-web-tt">“中华人民共和国水利部”</span>门户网站，<br>是否继续？</p>
+            </div>
+            <div class="ft f-tac"><a class="u-btn-yes j-btn-yes" href="javascript:;" target="_blank"
+                    rel="noopener noreferrer">继续访问</a><a class="u-btn-no j-btn-no" href="javascript:;" target="_self">取消</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.js"></script>
+    <script>
+        // 判断外链跳转
+        // 以mwr.gov.cn结尾
+        var regExp = /mwr.gov.cn$/
+        var regExp2 = /^..\/|^.\//
+        function dialogshow() {
+            $(".j-outside-chain-shade").show();
+            $(".j-outside-chain-dialog").show();
+        }
+        function dialoghide() {
+            $(".j-outside-chain-shade").hide();
+            $(".j-outside-chain-dialog").hide();
+        }
+        jQuery("body").on("click", 'a[href^="http"]:not(".j-btn-yes,.j-btn-no,.j-no-outside-elem"),map area', function(event) {
+            
+            var linkurl = $(this).attr("href");
+            linkurl = linkurl.split("/")[2];
+            if(!regExp.test(linkurl) && !regExp2.test($(this).attr("href"))) {
+                event.preventDefault();
+                dialogshow();
+                $(".j-btn-yes").attr("href",$(this).attr("href"))
+            }
+        })
+        $(".j-btn-yes").click(function(){
+            dialoghide()
+        })
+        $(".j-btn-no").click(function(){
+            dialoghide()
+        })
+    </script>
+</body>
+</html>
