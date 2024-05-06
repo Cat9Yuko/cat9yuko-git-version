@@ -310,7 +310,11 @@
             </main>
         </div>
     </div>
-    <footer></footer>
+    <footer>
+        <p>京ICP备2021019491号 &nbsp;&nbsp;主办：中国南水北调集团有限公司</p>
+        <p>中国南水北调集团有限公司 &nbsp;&nbsp;版权所有</p>
+        <p><a href="" target="_blank" rel="noopener noreferrer">联系我们</a> &nbsp;&nbsp;| &nbsp;&nbsp;<a href="" target="_blank" rel="noopener noreferrer">法律声明</a></p>
+    </footer>
 
     <script src="images_zt/jquery-3.7.0.min.js"></script>
     <script src="images_zt/slick.js"></script>
@@ -326,6 +330,10 @@
                 dots: false,
                 autoplay: true,
             });
+            $(".slick-mod3").slick({
+                dots: false,
+                autoplay: true,
+            });
 
             $(document).on('mouseenter','#slideBoxUlBut li',function(){
 
@@ -338,6 +346,10 @@ $('#slideBox .bd ul').stop().animate({'margin-top':-(_showLiHeight*_thisIndex)})
 });
 
 });
+
+setTimeout(function(){
+                        $('#slideBoxUlBut li').first().mouseenter();
+                    },1000)
 
         })
         $(".tabs .tab").hover(function () {
