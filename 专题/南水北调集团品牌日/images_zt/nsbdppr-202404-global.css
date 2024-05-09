@@ -43,12 +43,17 @@ img {
   width: 566px;
 }
 /* user style */
+header {
+  background-image: url('nsbdppr-202404-banner.jpg');
+  height: 531px;
+  background-position: center center;
+}
 .indexbg {
-  background-image: url('nsbdppr-202404-indexbg.jpg');
+  /* background-image: url('nsbdppr-202404-indexbg.jpg');
   background-position: center top;
-  background-repeat: no-repeat;
-  padding-top: 936px;
-  background-color: #b1d7f3;
+  background-repeat: no-repeat; */
+  padding-top: 34px;
+  /* background-color: #b1d7f3; */
   padding-bottom: 53px;
 }
 .hnews {
@@ -346,7 +351,7 @@ img {
   line-height: 32px;
 }
 .libg {
-  background-image: url('nsbdppr-202404-listbg.png');
+  background-image: url('nsbdppr-202404-listbg2.png');
   width: 1199px;
   height: 284px;
   background-size: cover;
@@ -365,7 +370,7 @@ img {
 }
 .list2 li {
   width: 575px;
-  border-bottom: 1px dashed #ffffff;
+  border-bottom: 1px dashed #fff2de;
   font-size: 16px;
   color: #525252;
   padding-top: 18px;
@@ -423,7 +428,7 @@ img {
 
 .ibox5 .slideBox .hd ul li {
   width: 240px;
-  height: 84px;
+  height: 83px;
   border: 1px #cacaca solid;
   border-bottom: 0;
   line-height: 82px;
