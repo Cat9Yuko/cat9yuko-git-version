@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <title>水利部网站数据分析系统平台</title>
+</head>
+<body>
+    <div id="main" style="width: 800px;height:593px;"></div>
+    
+    <script src="js/echarts.min.js"></script>
+    <script src="js/china.js"></script>
+    <script>
+        var chart = echarts.init(document.getElementById('main'));
+        chart.setOption({
+            series: [{
+                type: 'map',
+                map: 'china'
+            }],
+            geo: [{
+                color: {
+    type: 'linear',
+    x: 0,
+    y: 0,
+    x2: 0,
+    y2: 1,
+    colorStops: [{
+        offset: 0, color: 'red' // 0% 处的颜色
+    }, {
+        offset: 1, color: 'blue' // 100% 处的颜色
+    }],
+    global: false // 缺省为 false
+}
+            }]
+        });
+        </script>
+</body>
+</html>
