@@ -17,7 +17,7 @@
           <section class="flex-none basis-[800px] ">
             <div class="bg-[url('/img/bs-mainbg-800.png')] h-[593px]">
               <center-channel-title>流量分布</center-channel-title>
-              
+              <map-horizontal-bar/>
             </div>
           </section>
           <section class="flex-none bg-slate-500 basis-[500px] ">
@@ -33,10 +33,11 @@ import channelTitle from '@/components/channelTitle.vue'
 import SmallChannelTitle from '@/components/smallChannelTitle.vue'
 import Pie from '@/components/pie.vue'
 import HorizontalBar from '@/components/horizontalBar.vue'
-import TwoLine from '../components/twoLine.vue'
-import CenterChannelTitle from '../components/centerChannelTitle.vue'
+import TwoLine from '@/components/twoLine.vue'
+import CenterChannelTitle from '@/components/centerChannelTitle.vue'
+import MapHorizontalBar from '@/components/mapHorizontalBar.vue'
     export default {
-    components: { basicData,channelTitle, SmallChannelTitle, Pie,HorizontalBar,TwoLine, CenterChannelTitle }
+    components: { basicData,channelTitle, SmallChannelTitle, Pie,HorizontalBar,TwoLine, CenterChannelTitle, MapHorizontalBar }
         
     }
 

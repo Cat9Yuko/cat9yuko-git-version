@@ -15,7 +15,9 @@ export const wwfw = (data) => {
 export const distribute = (params) => {
     return $getJson('./JSON/LLFB.json', params) // 流量分布
 }
-
+export const chinamap = (params) => {
+    return $getJson('./JSON/china.json', params) // 地图
+}
 
 export const jsonAjax = (data) => {
     return $getJson('./JSON/ZSCD.json')// 政声传递
