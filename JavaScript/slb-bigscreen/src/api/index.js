@@ -6,7 +6,15 @@ export const jbqk = (params) => {
 export const resources = (params) => {
     return $getJson('./JSON/XXFB.json', params) // 信息发布
 }
-
+export const hdjl = (data) => {
+    return $getJson('./JSON/HDJL.json')// 互动交流
+}
+export const wwfw = (data) => {
+    return $getJson('./JSON/ZWFW.json')// 政声传递
+}
+export const distribute = (params) => {
+    return $getJson('./JSON/LLFB.json', params) // 流量分布
+}
 
 
 export const jsonAjax = (data) => {
@@ -45,7 +53,4 @@ export const recent = (params) => {
 }
 export const articles = (params) => {
     return $getJson('./JSON/RMWZ.json', params) // 热门文章
-}
-export const distribute = (params) => {
-    return $getJson('./JSON/LLFB.json', params) // 流量分布
 }

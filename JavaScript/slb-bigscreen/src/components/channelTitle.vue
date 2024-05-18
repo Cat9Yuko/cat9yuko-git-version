@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="bg-[url('assets/img/bs-chnlbg-500.png')] bg-cover h-[50px] text-white text-[20px] font-bold mt-2 leading-[50px] indent-12"><slot></slot></div>
+        <div class="bg-[url('/img/bs-chnlbg-500.png')] bg-cover h-[50px] text-white text-[20px] font-bold mt-2 leading-[50px] indent-12"><slot></slot></div>
     </div>
 </template>
 
