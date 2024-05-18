@@ -3,7 +3,9 @@ import {$getJson} from '@/utils/request.js'
 export const jbqk = (params) => {
     return $getJson('./JSON/JBQK.json', params) // 基本情况
 }
-
+export const resources = (params) => {
+    return $getJson('./JSON/XXFB.json', params) // 信息发布
+}
 
 
 
@@ -31,9 +33,7 @@ export const letterCharts = (params) => {
 export const daily = (params) => {
     return $getJson('./JSON/RCJC.json', params) // 日常监测
 }
-export const resources = (params) => {
-    return $getJson('./JSON/ZYFB.json', params) // 资源分布
-}
+
 export const supervise = (params) => {
     return $getJson('./JSON/LYZFWZJG.json', params) // 流域政府网站监管 
 }
