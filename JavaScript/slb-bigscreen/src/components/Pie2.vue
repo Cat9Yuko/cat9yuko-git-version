@@ -13,7 +13,6 @@
     export default {
         mounted() {
             zzfwl().then((res) => {
-                console.log(res);
                 this.renderChart(res)
             })
         },

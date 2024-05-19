@@ -1,12 +1,10 @@
 <template>
-    <big-screen/>
+    <router-view/>
 </template>
 
 <script>
-import bigScreen from '@/views/bigScreen.vue'
 
 export default {
-  components: { bigScreen },
 
 }
 </script>

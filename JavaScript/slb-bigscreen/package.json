@@ -13,6 +13,7 @@
     "axios": "^1.4.0",
     "echarts": "^5.4.2",
     "vue": "^3.4.21",
+    "vue-router": "^4.3.2",
     "vue3-seamless-scroll": "^2.0.1"
   },
   "devDependencies": {
