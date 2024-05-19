@@ -21,13 +21,19 @@
             </div>
             <div class="flex justify-around mt-7">
               <div class="flex-none basis-[385px] h-[310px] bg-[url('/img/bs-mainbg-385.png')]">
-
+                <center-small-channel-title>站点流量</center-small-channel-title>
+                <bar/>
               </div>
-              <div class="flex-none basis-[385px] h-[310px] bg-[url('/img/bs-mainbg-385.png')]"></div>
+              <div class="flex-none basis-[385px] h-[310px] bg-[url('/img/bs-mainbg-385.png')]">
+                <center-small-channel-title>近日更新</center-small-channel-title>
+                <Line/>
+              </div>
             </div>
           </section>
-          <section class="flex-none bg-slate-500 basis-[500px] ">
-            
+          <section class="flex-none basis-[500px] ">
+            <div class="bg-[url('/img/bs-mainbg-800.png')] h-[215px] bg-[100%]">
+              <channel-title>网站总体访问量情况</channel-title>
+            </div>
           </section>
         </main>
     </div>
@@ -37,13 +43,17 @@
 import basicData from '@/components/basicData.vue'
 import channelTitle from '@/components/channelTitle.vue'
 import SmallChannelTitle from '@/components/smallChannelTitle.vue'
-import Pie from '@/components/pie.vue'
+import Pie from '@/components/Pie.vue'
 import HorizontalBar from '@/components/horizontalBar.vue'
 import TwoLine from '@/components/twoLine.vue'
 import CenterChannelTitle from '@/components/centerChannelTitle.vue'
 import MapHorizontalBar from '@/components/mapHorizontalBar.vue'
+import CenterSmallChannelTitle from '@/components/centerSmallChannelTitle.vue'
+import Bar from '@/components/Bar.vue'
+import Line from '@/components/Line.vue'
     export default {
-    components: { basicData,channelTitle, SmallChannelTitle, Pie,HorizontalBar,TwoLine, CenterChannelTitle, MapHorizontalBar }
+    components: { basicData,channelTitle, SmallChannelTitle, Pie,HorizontalBar,TwoLine,
+       CenterChannelTitle, MapHorizontalBar,CenterSmallChannelTitle,Bar,Line }
         
     }
 

@@ -18,6 +18,14 @@ export const distribute = (params) => {
 export const chinamap = (params) => {
     return $getJson('./JSON/china.json', params) // 地图
 }
+export const siteTraffic = (params) => {
+    return $getJson('./JSON/ZDLL.json', params) // 站点流量
+}
+export const recent = (params) => {
+    return $getJson('./JSON/JRGX.json', params) // 近日更新
+}
+
+
 
 export const jsonAjax = (data) => {
     return $getJson('./JSON/ZSCD.json')// 政声传递
@@ -47,12 +55,8 @@ export const daily = (params) => {
 export const supervise = (params) => {
     return $getJson('./JSON/LYZFWZJG.json', params) // 流域政府网站监管 
 }
-export const siteTraffic = (params) => {
-    return $getJson('./JSON/ZDLL.json', params) // 站点流量
-}
-export const recent = (params) => {
-    return $getJson('./JSON/JRGX.json', params) // 近日更新
-}
+
+
 export const articles = (params) => {
     return $getJson('./JSON/RMWZ.json', params) // 热门文章
 }
