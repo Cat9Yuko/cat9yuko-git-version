@@ -7,12 +7,13 @@
 </template>
 
 <script>
-    import {resources} from '@/api/'
+    import {zzfwl} from '@/api/'
     import * as echarts from 'echarts'
 
     export default {
         mounted() {
-            resources().then((res) => {
+            zzfwl().then((res) => {
+                console.log(res);
                 this.renderChart(res)
             })
         },
@@ -33,17 +34,16 @@
                         yAxis: {show: false},
                         legend:  {
                             orient:'vertical',
-                            left: '285px',
-                            top: '55px',
+                            left: '240px',
+                            top: '20px',
                             align: 'left',
-                            height: '50px',
+                            height: '130px',
                             itemGap: 19,
                             textStyle: {
                                 color: '#ffffff'
                             },
                             icon: 'rect'
                         },
-                        
                         color:[
                             {type: 'linear',x: 0,y: 0,x2: 0,y2: 1,
                             colorStops: [
@@ -77,14 +77,14 @@
                         ],
                         // 图表配置
                         series: {
-                            name:'信息发布',
+                            name:'主站访问量情况',
                             type: 'pie',
                             radius: ['50%','100%'],
                             startAngle: 150,
-                            minAngle:20,
+                            minAngle:25,
                             width:'151px',
                             height: '151px',
-                            left: '82px',
+                            left: '60px',
                             top:'5px',
                             label: {
                                 show: true,

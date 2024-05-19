@@ -17,7 +17,6 @@
         methods: {
             renderChart(res) {
                 const target = this.$refs.target
-                console.log(res);
                 if(target) {
                     const mChart = echarts.init(target)
                     const option = {

@@ -24,7 +24,18 @@ export const siteTraffic = (params) => {
 export const recent = (params) => {
     return $getJson('./JSON/JRGX.json', params) // 近日更新
 }
-
+export const viewsNum = (params) => {
+    return $getJson('./JSON/WZFWL.json', params) // 网站总体访问量
+}
+export const zzfwl = (params) => {
+    return $getJson('./JSON/ZZFWL.json', params) // 主站访问量情况
+}
+export const lmfwlph = (params) => {
+    return $getJson('./JSON/LMFWLPH.json', params) // 站点流量
+}
+export const articles = (params) => {
+    return $getJson('./JSON/RMWZ.json', params) // 热门文章
+}
 
 
 export const jsonAjax = (data) => {
@@ -39,9 +50,6 @@ export const attention = (params) => {
 export const focused = (params) => {
     return $getJson('./JSON/ZDGZ.json', params) // 重点关注
 }
-export const focusing = (params) => {
-    return $getJson('./JSON/ZMJJ.json', params) // 政民聚焦
-}
 export const letter = (params) => {
     return $getJson('./JSON/ZXLX.json', params) // 最新来信
 }
@@ -54,9 +62,4 @@ export const daily = (params) => {
 
 export const supervise = (params) => {
     return $getJson('./JSON/LYZFWZJG.json', params) // 流域政府网站监管 
-}
-
-
-export const articles = (params) => {
-    return $getJson('./JSON/RMWZ.json', params) // 热门文章
 }

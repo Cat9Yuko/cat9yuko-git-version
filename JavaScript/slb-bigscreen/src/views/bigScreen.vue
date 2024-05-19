@@ -19,7 +19,7 @@
               <center-channel-title>流量分布</center-channel-title>
               <map-horizontal-bar/>
             </div>
-            <div class="flex justify-around mt-7">
+            <div class="flex justify-around mt-8">
               <div class="flex-none basis-[385px] h-[310px] bg-[url('/img/bs-mainbg-385.png')]">
                 <center-small-channel-title>站点流量</center-small-channel-title>
                 <bar/>
@@ -30,9 +30,22 @@
               </div>
             </div>
           </section>
-          <section class="flex-none basis-[500px] ">
-            <div class="bg-[url('/img/bs-mainbg-800.png')] h-[215px] bg-[100%]">
+          <section class="flex-none basis-[500px]">
+            <div class="bg-[url('/img/bs-bgh215.png')] h-[215px] bg-[100%] mt-[20px]">
               <channel-title>网站总体访问量情况</channel-title>
+              <roll-table/>
+            </div>
+            <div class="bg-[url('/img/bs-bgh215.png')] h-[215px] bg-[100%] mt-[16px]">
+              <channel-title>主站访问量情况</channel-title>
+              <pie-2/>
+            </div>
+            <div class="bg-[url('/img/bs-bgh215.png')] h-[215px] bg-[100%] mt-[16px]">
+              <channel-title>主站主要栏目访问量排行</channel-title>
+              <bar-right/>
+            </div>
+            <div class="bg-[url('/img/bs-bgh245.png')] h-[245px] bg-[100%] mt-[16px]">
+              <channel-title>热门文章</channel-title>
+              <roll-table-2/>
             </div>
           </section>
         </main>
@@ -51,10 +64,12 @@ import MapHorizontalBar from '@/components/mapHorizontalBar.vue'
 import CenterSmallChannelTitle from '@/components/centerSmallChannelTitle.vue'
 import Bar from '@/components/Bar.vue'
 import Line from '@/components/Line.vue'
+import RollTable from '@/components/rollTable.vue'
+import Pie2 from '@/components/Pie2.vue'
+import BarRight from '@/components/barRight.vue'
+import RollTable2 from '@/components/rollTable2.vue'
     export default {
-    components: { basicData,channelTitle, SmallChannelTitle, Pie,HorizontalBar,TwoLine,
-       CenterChannelTitle, MapHorizontalBar,CenterSmallChannelTitle,Bar,Line }
-        
+    components: { basicData,channelTitle, SmallChannelTitle, Pie,HorizontalBar,TwoLine, CenterChannelTitle, MapHorizontalBar,CenterSmallChannelTitle,Bar,Line, RollTable, Pie2, BarRight, RollTable2 }
     }
 
 </script>
