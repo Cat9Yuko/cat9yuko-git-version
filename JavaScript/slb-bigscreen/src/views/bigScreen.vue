@@ -19,6 +19,12 @@
               <center-channel-title>流量分布</center-channel-title>
               <map-horizontal-bar/>
             </div>
+            <div class="flex justify-around mt-7">
+              <div class="flex-none basis-[385px] h-[310px] bg-[url('/img/bs-mainbg-385.png')]">
+
+              </div>
+              <div class="flex-none basis-[385px] h-[310px] bg-[url('/img/bs-mainbg-385.png')]"></div>
+            </div>
           </section>
           <section class="flex-none bg-slate-500 basis-[500px] ">
             
