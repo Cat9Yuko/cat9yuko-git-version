@@ -36,16 +36,34 @@ img {
   width: 1280px;
   margin: 0 auto;
 }
-
+.w425 {
+  width: 425px;
+}
+.w814 {
+  width: 814px;
+}
+.w462 {
+  width: 462px;
+}
+.w435 {
+  width: 425px;
+}
+section + section {
+  margin-top: 50px;
+}
+.whitebg {
+  background-color: #ffffff;
+}
 /* user style  */
 .mainbg {
   background-image: url('sxslzq-202405-mainbg.jpg');
   background-repeat: no-repeat;
+  background-size: 100%;
   background-color: #eef6f9;
 }
 .navbg {
   background-color: #0abfee;
-  background: linear-gradient(to right,#2e75f6,#0abfee);
+  background: linear-gradient(to right, #2e75f6, #0abfee);
   height: 70px;
 }
 .nav-item {
@@ -85,10 +103,11 @@ img {
 }
 .search-container {
   position: absolute;
+  z-index: 20;
   display: none;
   padding: 6px 12px;
   top: 70px;
-  right: 0;
+  right: -70px;
   width: 255px;
   background-color: #ffffff;
   height: 40px;
@@ -109,5 +128,237 @@ img {
 }
 .headerpadding {
   height: 436px;
+  position: relative;
+}
+.tg-word {
+  position: absolute;
+  width: 66px;
+  height: 32px;
+  border: 1px solid #2e75f6;
+  text-align: center;
+  line-height: 32px;
+  color: #2e75f6;
+  top: 27px;
+  right: 26px;
+}
+/* carousel */
+.slick-mod {
+  width: 845px;
+  height: 475px;
+}
+.slick-mod2 {
+  width: 1225px;
+  height: 180px;
+}
+.slick-item {
+  position: relative;
+}
+.slick-item img {
+  width: 100%;
+}
+.slick-mod2 .slick-item img  {
+  display: block;
+}
+.mask {
+  background-image: url('sxslzq-202405-mask.png');
+  height: 148px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.tit1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 22px;
+  color: #ffffff;
+  text-indent: 1rem;
+  padding-bottom: 21px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
+.slick-mod .slick-dots {
+  position: absolute;
+  right: 15px;
+  bottom: 24px;
+}
+.slick-mod2 .slick-dots {
+  right: 22px;
+  top: 50%;
+  width: 8px;
+  position: absolute;
+  margin: auto;
+}
+
+.slick-mod .slick-arrow,
+.slick-mod2 .slick-arrow {
+  width: 33px;
+  height: 57px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 3;
+  cursor: pointer;
+}
+/* .slick-mod .slick-next {
+  right: 0;
+  background: url(../images_zt/wlaq-202009-arrowrigh.png) no-repeat center;
+}
+.slick-mod .slick-prev {
+  left: 0;
+  background: url(../images_zt/wlaq-202009-arrowlef.png) no-repeat center;
+}
+
+.slick-mod2 .slick-next {
+  right: 0;
+  background: url(../images/wlaq-202009-arrowrigh.png) no-repeat center;
+}
+.slick-mod2 .slick-prev {
+  left: 0;
+  background: url(../images/wlaq-202009-arrowlef.png) no-repeat center;
+} */
+.slick-mod .slick-dots li {
+  width: 8px;
+  height: 7px;
+  background: #ffffff;
+  border-radius: 10px;
+  margin: 0 5px 0 0;
+}
+.slick-mod .slick-dots li.slick-active {
+  width: 19px;
+  height: 7px;
+  background: #0abfee;
+  border-radius: 10px;
+}
+
+.slick-mod2 .slick-dots li {
+  width: 8px;
+  height: 8px;
+  background: #ffffff;
+  border-radius: 10px;
+  margin: 0 0 6px 0;
+  display: block;
+}
+.slick-mod2 .slick-dots li.slick-active {
+  width: 8px;
+  height: 8px;
+  background: #0abfee;
+  border-radius: 10px;
+}
+/* --- */
+
+.chnl-tab {
+  width: 208px;
+  height: 52px;
+  line-height: 52px;
+  font-size: 20px;
+  font-weight: bold;
+  background: linear-gradient(to right, #f3ece3,#ffffff);
+  background-color: #ffffff;
+  border-top: 2px solid #0abfee;
+  text-align: center;
+}
+.chnl-tab.act {
+  background-image: url('sxslzq-202405-chnlactbg.jpg');
+  background-size: cover;
+  color:  #ffffff;
+}
+.chnltab-container {
+  height: 414px;
+  background-color: #ffffff;
+  margin-top: 9px;
+}
+.verticl-alig {
+  height: 59px;
+  display: table;
+  width: 100%;
+  line-height: 22px;
+  padding-left: 22px;
+  padding-right: 40px;
+}
+.verticl-alig a {
+  display: table-cell;
+  vertical-align: middle;
+}
+.verticl-alig + .verticl-alig {
+  border-top: 1px solid #dae5ea;
+}
+.verticl-alig:hover {
+  background-image: url('sxslzq-202405-lihoverbg.jpg');
+  color: #ffffff;
+}
+.chnltab-con {
+  display: none;
+}
+.chnltab-con.act {
+  display: block;
+}
+.zt-title {
+  background-image: url('sxslzq-202405-chnlztbg.jpg');
+  width: 45px;
+  height: 180px;
+  text-align: center;
+  font-size: 20px;
+  line-height: 25px;
+  font-weight: bold;
+  color: #ffffff;
+  vertical-align: middle;
+  display: table-cell;
+}
+.chnltitle {
+  line-height: 52px;
+  font-size: 24px;
+  color: #1f4ea3;
+  font-weight: bold;
+  border-bottom: 2px solid #0abfee;
+  margin-bottom: 28px;
+}
+.chnltitle span {
+  display: inline-block;
+  text-indent: 2px;
+  margin-bottom: -2px;
+  border-bottom: 4px solid #1f4ea3;
+}
+.dfdt-container {
+  padding: 38px 27px 10px;
+  height: 332px;
+}
+.dfdtimg {
+  width: 258px;
+}
+.dfdtimg p {
+  font-size: 18px;
+  color: #111111;
+  font-weight: bold;
+  line-height: 24px;
+  margin-top: 19px;
+}
+.list li {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  line-height: 46px;
+}
+.list li::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  margin-right: 18px;
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #0abfee;
+  border-radius: 50%;
+}
+.videozb {
+  height: 332px;
+}
+.videozb p {
+  line-height: 23px;
+  padding-left: 22px;
+  padding-top: 7px;
 }
