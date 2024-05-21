@@ -1,0 +1,79 @@
+@media screen and (min-width: 769px) {
+  .hidden-md {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hidden-xs {
+    display: none;
+  }
+
+  .fl,
+  .fr {
+    float: none;
+  }
+
+  .center-block-1280,
+  .w425,
+  .w814,
+  .w462,
+  .w435,
+  .w625,
+  .wqqx .srcoll {
+    width: 100%;
+  }
+  .dfdt-container,
+  .headerpadding {
+    height: auto;
+  }
+
+  .slick-mod,
+  .slick-mod2 {
+    width: 100%;
+    height: auto;
+  }
+  .mainbg {
+    background: none;
+  }
+  .main {
+    padding: 0 15px;
+    margin-top: -21px;
+  }
+  .navbg {
+    display: none;
+  }
+  .mheader {
+    background-image: url("sxslzq-202405-mheader.jpg");
+    height: 240px;
+    background-size: cover;
+  }
+  .tg-word {
+    width: 49px;
+    height: 24px;
+    line-height: 24px;
+    border-color: #ffffff;
+    color: #ffffff;
+    font-size: 12px;
+    left: 20px;
+    right: 20px;
+  }
+
+  /* 手机版导航 */
+  .navbar-toggle {
+    width: 37px;
+    height: 37px;
+    background-image: url('sxslzq-202405-mnavbar.png');
+    background-size: cover;
+    position: fixed;
+    top: 10px;
+    border-radius: 50%;
+    box-shadow: 0 0 7px #dddddd;
+    right: 10px;
+    z-index: 21;
+  }
+  .navbar-toggle.collapsed {
+    background-image: url('sxslzq-202405-mnavbaract.png');
+    box-shadow: none;
+  }
+}
