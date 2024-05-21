@@ -134,7 +134,7 @@
                     </div>
                 </section>
 
-                <section class="clearfix">
+                <section class="clearfix hidden-xs">
                     <div class="fl"><div class="zt-title"><a href="" target="_blank" rel="noopener noreferrer">专<br>题<br>关<br>注</a></div></div>
                     <div class="fr">
                         <div class="slick-mod2">
@@ -519,6 +519,7 @@
     <script src="images/jquery-3.7.0.min.js"></script>
     <script src="images/slick.js"></script>
     <script src="images/ssxlzq-swiper.min.js"></script>
+    <script src="images/sxslzq-202405-index.js"></script>
     <script>
         $(document).ready(function () {
             $(".slick-mod").slick({
@@ -554,6 +555,14 @@
             }
 
             wqqx()
+
+            // if($(window).width() < 769) {
+            //     console.log($(window).width());
+
+            //     $(".tit1").each(function(){
+            //         $(this).text($(this).text().substring(0,20)+"...")
+            //     })
+            // }
 
         })
 
