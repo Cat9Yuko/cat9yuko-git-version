@@ -165,10 +165,10 @@ section {
 }
 
 /* 3d */
-
+.img_div {overflow: hidden;margin-top: 35px;}
 #featured-area {
-  width: 700px;
-  height: 500px;
+  width: 900px;
+  height: 474px;
   margin: 0px auto 0;
 }
 .roundabout-moveable-item .rtit {
@@ -187,15 +187,15 @@ section {
 }
 .roundabout-holder {
   list-style: none;
-  width: 700px;
-  height: 500px;
+  width: 900px;
+  height: 474px;
   margin: 0 auto;
 }
 
 .roundabout-moveable-item {
   font-size: 12px !important;
-  width: 700px;
-  height: 369px;
+  width: 900px;
+  height: 474px;
   cursor: pointer;
 }
 

@@ -20,11 +20,17 @@
   .w462,
   .w435,
   .w625,
-  .wqqx .srcoll {
+  .wqqx .srcoll,
+  .dfdtimg,
+  .chnltitle2 {
     width: 100%;
   }
   .dfdt-container,
-  .headerpadding {
+  .headerpadding,
+  .chnltab-container,
+  .videozb,
+  .mtgz-container,
+  .ksq-container {
     height: auto;
   }
 
@@ -61,7 +67,7 @@
   .navbar-toggle {
     width: 37px;
     height: 37px;
-    background-image: url('sxslzq-202405-mnavbar.png');
+    background-image: url("sxslzq-202405-mnavbar.png");
     background-size: cover;
     position: fixed;
     top: 10px;
@@ -71,7 +77,7 @@
     z-index: 21;
   }
   .navbar-toggle.collapsed {
-    background-image: url('sxslzq-202405-mnavbaract.png');
+    background-image: url("sxslzq-202405-mnavbaract.png");
     box-shadow: none;
   }
   .navbg {
@@ -91,12 +97,12 @@
     padding: 0;
     margin: 0 auto;
     margin-right: 0;
-    background-image: url('sxslzq-202405-mnavbg.jpg');
+    background-image: url("sxslzq-202405-mnavbg.jpg");
     background-size: cover;
     background-image: linear-gradient(to right, #2e75f6, #10b3ef);
     margin-top: 52px;
   }
-  .nav-item{
+  .nav-item {
     float: none;
     width: 100%;
     line-height: 46px;
@@ -137,5 +143,181 @@
   .slick-mod .slick-dots li.slick-active {
     height: 3.5px;
     width: 10px;
+  }
+
+  .chnltab-con.hidden-xs {
+    display: none;
+  }
+  .chnltab-con {
+    display: block;
+    padding-top: 6px;
+  }
+  .chnl-tab,
+  .chnltitle {
+    width: 100%;
+    background-image: url("sxslzq-202405-mchannelbg.png");
+    height: 30px;
+    background-size: cover;
+    background-position: bottom center;
+    border: none;
+    font-size: 17px;
+    line-height: 25px;
+    margin-top: 15px;
+    color: #1f4ea3;
+    text-align: center;
+  }
+  .chnl-tab,
+  .video-container,
+  .sq-container {
+    margin-top: 30px;
+  }
+  .chnltitle {
+    margin-bottom: 12.5px;
+  }
+  .chnltitle span {
+    padding: 0;
+    border: none;
+  }
+  .verticl-alig {
+    padding: 10px 0;
+    height: auto;
+    font-size: 13px;
+  }
+  .verticl-alig:hover {
+    background: none;
+    color: inherit;
+  }
+  .verticl-alig::before {
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #4ecdee;
+    margin: 0 10px 0 5px;
+  }
+  .verticl-alig:nth-child(n + 5) {
+    display: none;
+  }
+  .mmore {
+    line-height: 29px;
+    text-align: center;
+    font-size: 12px;
+    color: #014a85;
+    background-color: #eef6f9;
+    border: 1px solid #d4e1ef;
+    border-radius: 2px;
+    margin-top: 15px;
+  }
+  section + section {
+    margin-top: 30px;
+  }
+  .dfdt-container {
+    padding: 0;
+  }
+  .dfdtimg img {
+    width: 100%;
+    display: block;
+  }
+  .dfdtimg p {
+    margin: 15px 0 0;
+    font-size: 13px;
+    padding-left: 10px;
+    line-height: 18px;
+  }
+  .lsit {
+    padding-bottom: 7px;
+  }
+  .list li {
+    font-size: 13px;
+    line-height: 18px;
+    padding: 10px 0;
+    white-space: normal;
+    padding-left: 20px;
+    position: relative;
+  }
+  .list li::before {
+    position: absolute;
+    left: 5px;
+    top: 18px;
+  }
+  .list li + li {
+    border-top: 1px solid #dae5ea;
+  }
+  .list li:nth-child(n + 4) {
+    display: none;
+  }
+  .videozb img {
+    display: block;
+  }
+  .videozb p {
+    padding: 0;
+    padding-left: 10px;
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+  }
+  .mtgz-container,
+  .ksq-container {
+    padding: 0;
+  }
+  .ksq-container .list li {
+    line-height: 18px;
+  }
+  .chnltitle img {
+    width: 90px;
+    margin-right: 10px;
+  }
+  .chnltitle2 {
+    padding-top: 0;
+  }
+  .wqqx {
+    margin-top: 17px;
+    margin-bottom: 30px;
+  }
+  .wqqx .srcoll .img {
+    height: 193px;
+  }
+  .wqqx .srcoll .abs {
+    display: none;
+  }
+  .wqqx .srcoll .txt {
+    height: 150px;
+  }
+  .wqqx .srcoll .tit {
+    font-size: 16px;
+    line-height: 23px;
+    font-weight: normal;
+  }
+  .wqqx .srcoll .more {
+    margin-top: 5px;
+  }
+  .chnltitle2 {
+    line-height: 25px;
+    font-size: 17px;
+    color: #1f4ea3;
+    font-weight: bold;
+    height: 30px;
+    border-bottom: 1px solid #0abfee;
+    background-image: none;
+  }
+  .chnltitle2 span {
+    display: inline-block;
+    border-bottom: 2px solid #1f4ea3;
+    vertical-align: sub;
+    padding: 0 5px;
+  }
+  footer {
+    margin-top: 0;
+    font-size: 12px;
+    line-height: 17px;
+    padding: 26px 0;
+  }
+  footer img {
+    width: 140px;
+  }
+  footer p,span {
+    display: block;
   }
 }
