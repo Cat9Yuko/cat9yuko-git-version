@@ -1,0 +1,329 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "微软雅黑";
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+img {
+  border: none;
+}
+li {
+  list-style: none;
+}
+.center-block-1200 {
+  width: 1300px;
+  margin: 0 auto;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+.w519 {
+  width: 519px;
+}
+.w575 {
+  width: 610px;
+}
+/* user style */
+.index-bg {
+  width: 100%;
+  background: url("../img/jlcftl-202405-indexbg.jpg") top center no-repeat;
+  background-size: cover;
+  height: 1200px;
+  box-sizing: border-box;
+  padding-top: 467px;
+}
+.register-bg {
+  width: 100%;
+  background: url("../img/jlcftl-202405-consulationbg.jpg") top center no-repeat;
+  background-size: cover;
+  height: 1300px;
+  box-sizing: border-box;
+  padding-top: 467px;
+}
+.register-bg .whitebg-p {
+  padding-top: 33px;
+}
+.login-bg {
+  width: 100%;
+  background: url("../img/zszyls-202403-loginbg.jpg") top center no-repeat;
+  background-size: cover;
+  height: 1591px;
+  box-sizing: border-box;
+  padding-top: 831px;
+}
+.whitebg-p {
+  padding: 46px 30px 28px;
+  background: rgba(255, 255, 255, 0.6);
+  box-sizing: border-box;
+  border-radius: 32px;
+}
+.whitebg-c {
+  /* background: rgba(255, 255, 255, 1); */
+  /* padding: 37px 54px 37px; */
+  border-radius: 32px;
+  box-sizing: border-box;
+}
+
+.index-top {
+  width: 653px;
+  margin: 0 auto;
+  border-top: 3px solid #10284b;
+  border-bottom: 3px solid #10284b;
+  margin-bottom: 40px;
+}
+.index-top p {
+  line-height: 36px;
+  font-size: 20.8px;
+  color: #16274b;
+  font-family: "黑体";
+}
+/* .index-bottom {
+  color: #183e91;
+  font-family: "黑体";
+} */
+.index-bottom h2 {
+  background-color: #d30606;
+  width: 202px;
+  height: 47px;
+  line-height: 47px;
+  border-radius: 13px;
+  text-align: center;
+  background-size: cover;
+  font-size: 24px;
+  color: #ffffff;
+  font-weight: normal;
+  margin-bottom: 18px;
+}
+.index-bottom p {
+  text-indent: 2rem;
+  font-size: 18px;
+  text-align: justify;
+  line-height: 44px;
+  color: #000000;
+  /* font-family: "黑体"; */
+  margin-bottom: 4px;
+}
+.my-btn {
+  width: 100%;
+  text-align: center;
+  margin-top: 27px;
+  /* margin-bottom: 10px; */
+  height: 76px;
+}
+.my-btn a {
+  font-size: 28px;
+  color: #014b7f;
+  background: #05baee;
+  padding: 9px 36px;
+  border-radius: 10px;
+  display: inline-block;
+}
+.my-btn.white-clor a {
+  color: #ffffff;
+}
+.my-btn a + a {
+  margin-left: 100px;
+}
+.indexbtn a {
+  background: none;
+  background-image: url('../img/jlcftl-202405-buttonnbg.png');
+  padding: 0;
+  width: 207px;
+  height: 54px;
+  color: #d30606;
+  line-height: 54px;
+}
+
+/*register*/
+.register {
+  width: 100%;
+  /* background: url(../img/sfg_2020_register.jpg) center center; */
+  background-size: cover;
+}
+
+/* .register .box{
+	height: 685px;
+} */
+.register .bt {
+  height: 520px;
+  width: 100%;
+}
+.register .welcom,
+.login .welcom {
+  font-size: 24px;
+  color: #000000;
+  text-indent: 48px;
+  margin-bottom: 15px;
+}
+
+.register input,
+.register select,
+.login input {
+  border: 1px solid #d40c0c;
+  border-radius: 5px;
+  outline: none;
+  font-size: 20px;
+}
+.register select {
+  float: left;
+  width: 100%;
+  height: 45px;
+}
+
+.register span,
+.login span {
+  display: block;
+  width: 200px;
+  height: 51px;
+  background: #d40c0c;
+  color: #ffffff;
+  font-size: 24px;
+  text-align: center;
+  line-height: 45px;
+  border-radius: 5px;
+  margin-right: 30px;
+  /* text-shadow: -1px 0 #d19651, 0 1px #d19651, 1px 0 #d19651; */
+}
+.zhuyi p {
+  font-size: 20px;
+  line-height: 50px;
+  color: #000000;
+  margin-bottom: 10px;
+  text-indent: 48px;
+}
+.zhuyi p + p {
+  margin-bottom: 25px;
+}
+.zhuyi-center {
+  width: 840px;
+  height: 50px;
+  text-indent: 2rem;
+  margin: 0 auto;
+  color: #034c91;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+/* .sub-tij, */
+.sub-tij button,
+.sub-dl button {
+  width: 218px;
+  height: 50px;
+  background: #d40c0c;
+  border-radius: 5px;
+  font-size: 25px;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+.sub-tij {
+  margin: 0 auto;
+  text-align: center;
+}
+.sub-tij button + button {
+  margin-left: 144px;
+}
+/*answer*/
+.zindex-11 {
+  position: relative;
+  z-index: 11;
+}
+.answer-bg {
+  position: relative;
+  width: 100%;
+  background-image: url('../img/jlcftl-202405-consulationbg.jpg');
+  background-repeat: no-repeat;
+  background-position: center top,center bottom;
+  /* height: 1522px; */
+  box-sizing: border-box;
+  padding: 369px 0 0px 0;
+}
+
+.answer_t {
+  font-size: 25px;
+  color: #020202;
+  font-weight: bold;
+}
+.xuanxiang {
+  margin: 20px 0 45px 0;
+  font-size: 22px;
+  color: #020202;
+}
+.xx_ul li {
+  line-height: 35px;
+}
+
+.timu {
+    line-height: 38px;
+}
+.xx_ul input {
+    margin-right: 10px;
+}
+.xx_ul label {
+    cursor: pointer;
+}
+.score {
+  background-image: url('../img/sflfgzswldt-202403-scorebg.png');
+  width: 913px;
+  height: 166px;
+  background-size: cover;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 57px;
+  margin-top: 75px;
+}
+.score p {
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+.score p span {
+    color: #ffffff;
+    font-size: 50px;
+    padding: 0 5px;
+}
+
+
+.footer {
+  margin-top: 31px;
+  position: relative;
+  z-index: 99;
+}
+.register-bg .footer,.score-bg .footer {
+  margin-top: 20px;
+}
+.welcom2 {
+  font-size: 28px;
+  color: #000000;
+  margin-top: 5px;
+  padding-left: 87px;
+}
+.problem {
+  width: 796px;
+  height: 107px;
+  border: 1px solid #d40c0c;
+  resize: none;
+  outline: none;
+  padding: 10px;
+  font-size: 19px;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+.problem::placeholder {
+  /* color: #00285d; */
+  line-height: 80px;
+}
