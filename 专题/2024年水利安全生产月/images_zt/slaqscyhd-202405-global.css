@@ -55,10 +55,12 @@ li {
   width: 560px;
 }
 /* user style */
-header {
-  background-image: url('slaqscyhd-202305-banner.jpg');
-  background-position: top center;
-  height: 779px;
+.mainbg {
+  background-image: url('slaqscy-202405-mainbg.jpg'),url('slaqscy-202405-footerbg.png');
+  padding-top: 570px;
+  background-position: center top,center bottom;
+  background-repeat: no-repeat;
+  background-color: #caf2ff;
 }
 nav {
   background-color: #ededed;
