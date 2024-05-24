@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: '微软雅黑';
+  font-family: "微软雅黑";
 }
 img {
   border: none;
@@ -34,7 +34,7 @@ li {
 }
 .indexword p {
   font-size: 13.5px;
-  color: #034186;
+  color: #000000;
   text-indent: 2rem;
   line-height: 31.5px;
   padding: 0 15px;
@@ -77,7 +77,7 @@ li {
   line-height: 20px;
 }
 .tishi {
-  color: #034c91;
+  color: #ca0a0a;
   font-size: 12.5px;
   line-height: 24px;
   padding-bottom: 50px;
@@ -111,7 +111,7 @@ footer {
 }
 
 .login-app input {
-  border: 1px solid #00b7ee;
+  border: 1px solid #ca0a0a;
 }
 
 .login-app .row {
@@ -127,7 +127,7 @@ footer {
   line-height: 2;
   font-size: 14px;
   border-radius: 5px;
-  background: #00b7ee;
+  background: #ca0a0a;
   color: #fff;
   /* text-shadow: -1px 0 #cf7d1d, 0 1px #cf7d1d, 1px 0 #cf7d1d; */
 }
@@ -150,7 +150,7 @@ footer {
   height: 29px;
   font-size: 15px;
   color: #ffffff;
-  background: #0f94c5;
+  background: #ca0a0a;
   border: none;
   border-radius: 5px;
   line-height: 1.5;
@@ -158,7 +158,7 @@ footer {
 }
 
 select {
-  border: 1px solid #00b7ee;
+  border: 1px solid #ca0a0a;
   width: 98%;
 }
 .login .box {
@@ -196,7 +196,7 @@ select {
 .score .box {
   padding: 23px 0 30px;
   height: 61.5px;
-  background: url('../img/sflfgzswldt-202403-appscorebg.png');
+  background: #ca0a0a;
   background-size: 100% 100%;
   margin: 60px 15px 50px;
   color: #ffffff;
@@ -235,7 +235,7 @@ select {
 .my-btn a {
   font-size: 12px;
   color: #ffffff;
-  background: #0e76ca;
+  background: #ca0a0a;
   padding: 7px 15px;
   border-radius: 5px;
   text-decoration: none;
@@ -273,7 +273,7 @@ select {
   text-align: center;
   font-size: 12px;
   font-weight: bold;
-  color: #034c91;
+  color: #000000;
   padding: 15px 0 0 0;
 }
 .zhuyi {
@@ -282,8 +282,8 @@ select {
 }
 .yelbg button,
 .yelbg a {
-  background: #4accfc;
-  color: #014b7f;
+  background: #ca0a0a;
+  color: #ffffff;
 }
 .fl {
   float: left;
@@ -295,7 +295,7 @@ select {
   width: 48%;
 }
 .clearfix::after {
-  content: '';
+  content: "";
   display: block;
   height: 0;
   visibility: hidden;

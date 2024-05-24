@@ -125,8 +125,8 @@ li {
 }
 .my-btn a {
   font-size: 28px;
-  color: #014b7f;
-  background: #05baee;
+  color: #ffffff;
+  background: #c00b0b;
   padding: 9px 36px;
   border-radius: 10px;
   display: inline-block;
@@ -176,6 +176,7 @@ li {
   border-radius: 5px;
   outline: none;
   font-size: 20px;
+  background: none;
 }
 .register select {
   float: left;
@@ -252,6 +253,16 @@ li {
   padding: 369px 0 0px 0;
 }
 
+.answer-bg2 {
+  position: relative;
+  width: 100%;
+  background-image: url('../img/jlcftl-202405-answert.jpg'),url('../img/jlcftl-202405-answerb.jpg');
+  background-repeat: no-repeat;
+  background-position: center top,center bottom;
+  /* height: 1522px; */
+  box-sizing: border-box;
+  padding: 467px 0 0px 0;
+}
 .answer_t {
   font-size: 25px;
   color: #020202;
@@ -276,7 +287,7 @@ li {
     cursor: pointer;
 }
 .score {
-  background-image: url('../img/sflfgzswldt-202403-scorebg.png');
+  background-color: #c00b0b;
   width: 913px;
   height: 166px;
   background-size: cover;
@@ -284,6 +295,8 @@ li {
   text-align: center;
   padding-top: 57px;
   margin-top: 75px;
+  margin-bottom: 30px;
+  border-radius: 50px;
 }
 .score p {
     color: #ffffff;
