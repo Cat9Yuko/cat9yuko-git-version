@@ -36,20 +36,37 @@ export const lmfwlph = (params) => {
 export const articles = (params) => {
     return $getJson('./JSON/RMWZ.json', params) // 热门文章
 }
-
-
+export const zqgjfbl = (params) => {
+    return $getJson('./JSON/ZQGJFBL.json', params) // 站群稿件发布量
+}
+export const focused = (params) => {
+    return $getJson('./JSON/ZDGZ.json', params) // 重点关注
+}
+export const zxgjgz = (data) => {
+    return $getJson('./JSON/ZXGJGZ.json')// 最新稿件关注
+}
 export const jsonAjax = (data) => {
     return $getJson('./JSON/ZSCD.json')// 政声传递
 }
+export const wzfb = (data) => {
+    return $getJson('./JSON/WZFB.json')// 网站发布
+}
+export const wsdt = (data) => {
+    return $getJson('./JSON/WSDT.json')// 网上答题
+}
+export const gzzx = (data) => {
+    return $getJson('./JSON/GZZX.json')// 网上答题
+}
+
+
+
 export const follow = (data) => {
     return $getJson('./JSON/ZGZ.json') // 政关注
 }
 export const attention = (params) => {
     return $getJson('./JSON/ZYLFP.json') // 注意类分配
 }
-export const focused = (params) => {
-    return $getJson('./JSON/ZDGZ.json', params) // 重点关注
-}
+
 export const letter = (params) => {
     return $getJson('./JSON/ZXLX.json', params) // 最新来信
 }
