@@ -20,6 +20,9 @@ img {
 li {
   list-style: none;
 }
+body {
+  background-color: #dbf0ff;
+}
 .fl {
   float: left;
 }
@@ -36,8 +39,24 @@ li {
   width: 1200px;
   margin: 0 auto;
 }
+.center-block-864 {
+  width: 864px;
+  margin: 0 auto;
+}
 .w374 {
   width: 374px;
+}
+.w395 {
+  width: 395px;
+}
+.w410 {
+  width: 410px;
+}
+.w420 {
+  width: 420px;
+}
+.w430 {
+  width: 430px;
 }
 .w488 {
   width: 488px;
@@ -54,6 +73,14 @@ li {
 .w560 {
   width: 560px;
 }
+.w864 {
+  width: 864px;
+}
+.whitebg {
+  background-color: #ffffff;
+  padding: 10px;
+}
+
 /* user style */
 .mainbg {
   background-image: url('slaqscy-202405-mainbg.jpg'),url('slaqscy-202405-footerbg.png');
@@ -63,68 +90,96 @@ li {
   background-color: #caf2ff;
 }
 nav {
-  background-color: #ededed;
+  background-image: url('slaqscy-202405-navbg.png');
+  width: 882px;
+  height: 55px;
+  margin: 0 auto;
 }
 .nav {
-  font-size: 20px;
-  color: #ee000c;
-  line-height: 60px;
+  text-align: center;
+  font-size: 12px;
+  color: #ffffff;
+  line-height: 50px;
   font-weight: bold;
 }
 .nav li {
-  float: left;
+  display: inline-block;
   margin-left: 30px;
 }
 .main {
-  padding: 44px 0 32px;
+  padding: 28px 0 100px;
+}
+section {
+  position: relative;
 }
 section + section {
-  margin-top: 44px;
+  margin-top: 40px;
 }
 .chnltitle {
-  font-size: 28px;
+  font-size: 22px;
   color: #ffffff;
   font-weight: bold;
   text-align: center;
-  background-image: url('slaqscyhd-202305-chnlbg1.png');
+  background-image: url('slaqscy-202405-chnlbg.png');
   background-repeat: no-repeat;
   background-position: center;
-  line-height: 42px;
-  width: 348px;
-  height: 45px;
-  margin-bottom: 32px;
+  line-height: 30px;
+  width: 313px;
+  height: 40px;
+  position: relative;
+  z-index: 22;
+  margin-bottom: 20px;
+}
+.line::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 14px;
+  width: 100%;
+  height: 2px;
+  z-index: 20;
+  background-color: #3566b6;
 }
 .chnltitle.center {
   margin-left: auto;
   margin-right: auto;
 }
 .chnltitle.longbg {
-  width: 594px;
-  background-image: url('slaqscyhd-202305-chnlbg2.png');
+  width: 499px;
+  background-image: url('slaqscy-202405-chnlbg2.png');
 }
 /* carousel */
 .slick-mod {
-  width: 580px;
-  height: 363px;
+  width: 390px;
+  height: 263px;
+  overflow: hidden;
 }
 .slick-mod2 {
-  margin-top: 43px;
-  width: 560px;
-  height: 294px;
+  width: 340px;
+  height: 180px;
+  margin: 0 auto;
 }
 .slider-for {
-  width: 480px;
-  height: 344px;
+  width: 291px;
+  height: 208px;
+  background-color: #e6feff;
 }
 .slider-nav {
-  width: 206px;
-  height: 344px;
+  width: 124px;
+  height: 208px;
   overflow: hidden;
+  background-color: #e6feff;
   margin-top: -2px;
 }
-.slider-nav img {
-  height: 110px;
-  margin: 2px 0;
+.slider-for .slick-item img {
+  width: 148px;
+  margin: 0 auto;
+}
+.slider-nav .slick-item img {
+  height: 67px;
+  width: auto;
+  margin: 0 auto;
 }
 .slick-item {
   position: relative;
@@ -137,9 +192,9 @@ section + section {
   bottom: 0;
   left: 0;
   right: 0;
-  font-size: 16px;
-  color: #ee000c;
-  line-height: 45px;
+  font-size: 12px;
+  color: #ffffff;
+  line-height: 30px;
   text-indent: 1rem;
   background: rgba(0, 0, 0, 0.5);
   white-space: nowrap;
@@ -149,8 +204,8 @@ section + section {
 
 .slick-mod .slick-dots {
   position: absolute;
-  right: 10px;
-  bottom: 15px;
+  right: 14px;
+  bottom: 10px;
 }
 .slick-mod2 .slick-dots {
   position: absolute;
@@ -158,8 +213,8 @@ section + section {
   right: 0;
 }
 .slider-nav .slick-arrow {
-  width: 46px;
-  height: 19px;
+  width: 30px;
+  height: 12px;
   margin: auto;
   position: absolute;
   left: 0;
@@ -167,34 +222,45 @@ section + section {
   z-index: 3;
   cursor: pointer;
 }
+.slick-mod2 .slick-arrow {
+  width: 25px;
+  height: 26px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 3;
+  cursor: pointer;
+}
 .slider-nav .slick-next {
   bottom: 0;
-  background: url('slaqscyhd-202305-arrowbottom.png') no-repeat center;
+  background: url('slaqscyhd-202405-arrowbottom.png') no-repeat 100%;
+  background-size: contain;
 }
 .slider-nav .slick-prev {
   top: 3px;
-  background: url('slaqscyhd-202305-arrowtop.png') no-repeat center;
+  background: url('slaqscyhd-202405-arrowtop.png') no-repeat center;
 }
-/* .slick-mod2 .slick-next {
-  right: 0;
-  background: url(../images/wlaq-202009-arrowrigh.png) no-repeat center;
+.slick-mod2 .slick-next {
+  right: -30px;
+  background: url('slaqscy-202405-arrowright.png') no-repeat center;
 }
 .slick-mod2 .slick-prev {
-  left: 0;
-  background: url(../images/wlaq-202009-arrowlef.png) no-repeat center;
-} */
+  left: -30px;
+  background: url('slaqscy-202405-arrowleft.png') no-repeat center;
+}
 .slick-mod .slick-dots li {
-  width: 19px;
-  height: 5px;
+  width: 11px;
+  height: 11px;
   background: #ffffff;
-  border-radius: 5px;
+  border-radius: 50%;
   margin: 0 5px 0 0;
 }
 .slick-mod .slick-dots li.slick-active {
-  width: 19px;
-  height: 5px;
-  background: #ee000c;
-  border-radius: 5px;
+  width: 11px;
+  height: 11px;
+  background: #0068d4;
+  border-radius: 50%;
 }
 .slick-mod2 .slick-dots li {
   width: 42px;
@@ -209,26 +275,26 @@ section + section {
 .slick-mod2 .slick-dots li.slick-active {
   width: 42px;
   height: 22px;
-  background: #d82c3c;
+  background: #0068d4;
   border-radius: 0px;
 }
 /* --- */
+.list {
+  padding-top: 0;
+}
 .list li {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
   line-height: 50px;
+  font-size: 12px;
+  line-height: 30px;
 }
-.list.dashed li {
-  border-bottom: 1px dashed #ababab;
-  line-height: 60px;
-  height: 60px;
-}
-.list.dashed li:nth-child(1) {
-  border-top: 1px dashed #ababab;
+.list.dashed {
+  padding-top: 10px;
 }
 .list.reviselineh li {
-  line-height: 45px;
+  line-height: 27px;
 }
 .list li::before {
   content: '';
@@ -236,23 +302,23 @@ section + section {
   width: 7px;
   height: 7px;
   vertical-align: middle;
-  background-color: #ee000c;
+  background-color: #000000;
   border-radius: 50%;
-  margin: 0 15px 0 10px;
+  margin: 0 5px 0 0px;
 }
 .list.reviselineh li::before {
   margin-left: 0;
 }
 .gchd-container h2 {
-  color: #525252;
-  font-size: 24px;
+  color: #0157a1;
+  font-size: 18px;
   text-align: center;
-  margin: 25px 0;
+  margin: 0 0 15px ;
 }
 .gchd-container p {
   color: #525252;
   line-height: 27px;
-  margin-bottom: 55px;
+  font-size: 12px;
 }
 .more {
   display: block;
