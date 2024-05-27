@@ -829,3 +829,64 @@ footer img {
 .file-container p {
   line-height: 25px;
 }
+
+/* 新增搜索页面 */
+.search-bar {
+  height: 70px;
+  border-top: 2px solid #11568d;
+  border-bottom: 1px solid #d5e4eb;
+  background-color: #f3f6f7;
+}
+.searchnum {
+  padding: 28px 0 0 32px;
+}
+.searchnum span {
+  color: #005bac;
+  font-weight: bold;
+}
+.search-form {
+  padding-top: 19px;
+}
+.search-word {
+  width: 178px;
+  height: 32px;
+  border: 1px solid #005bac;
+  margin-left: 21px;
+  margin-right: 25px;
+  border-radius: 5px;
+  text-indent: 11px;
+  outline: none;
+}
+.search-check {
+  width: 22px;
+  height: 22px;
+  vertical-align: text-top;
+  border-radius: 5px;
+  margin-right: 11px;
+  border: 1px solid #9ab4bf;
+}
+.list-img.noborder {
+  border-top: none;
+}
+.search-button {
+  width: 138px;
+  height: 32px;
+  background-color: #055e92;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  margin-left: 50px;
+  margin-right: 30px;
+}
+.list-img.circle .li .dot {
+  margin-right: 20px;
+}
+.list-img.circle .li .dot::before {
+  background-color: #ffffff;
+  border: 1px solid #0c62b0;
+  width: 10px;
+  height: 10px;
+}
+.list-img.circle .li:nth-child(5n) {
+  margin-bottom: 30px;
+}
