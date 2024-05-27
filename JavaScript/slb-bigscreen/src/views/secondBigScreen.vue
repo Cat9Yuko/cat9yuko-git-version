@@ -39,12 +39,14 @@
               </div>
               <div class="flex-none basis-[385px] h-[285px]">
                 <small-channel-title>在线访谈</small-channel-title>
+                <center-line/>
               </div>
             </div>
 
             <div class="flex justify-around">
               <div class="flex-none basis-[385px] h-[285px]">
                 <small-channel-title>征求意见</small-channel-title>
+                <center-two-line-smooth/>
               </div>
               <div class="flex-none basis-[385px] h-[285px]">
                 <small-channel-title>网上投票</small-channel-title>
@@ -79,9 +81,13 @@ import SmallChannelTitle from '@/components/smallChannelTitle.vue'
 import Radar from '@/components/Radar.vue'
 import CenterTwoLine from '@/components/centerTwoLine.vue'
 import BarCenter from '@/components/barCenter.vue'
+import CenterLine from '@/components/centerLine.vue'
+import CenterTwoLineSmooth from '@/components/centerTwoLineSmooth.vue'
 export default {
     components:{channelTitle,centerChannelTitle,BarLeft,
-        WordCloud,RollTable3,SmallChannelTitle,Radar,CenterTwoLine,BarCenter}
+        WordCloud,RollTable3,SmallChannelTitle,Radar,CenterTwoLine,BarCenter,
+        CenterLine,
+        CenterTwoLineSmooth}
 }
     
 </script>

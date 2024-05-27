@@ -57,7 +57,12 @@ export const wsdt = (data) => {
 export const gzzx = (data) => {
     return $getJson('./JSON/GZZX.json')// 网上答题
 }
-
+export const zxft = (params) => {
+    return $getJson('./JSON/ZXFT.json', params) // 在线访谈
+}
+export const zqyj = (params) => {
+    return $getJson('./JSON/ZQYJ.json', params) // 征求意见
+}
 
 
 export const follow = (data) => {
