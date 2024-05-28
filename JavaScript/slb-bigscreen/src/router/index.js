@@ -5,7 +5,7 @@ import secondBigScreen from '@/views/secondBigScreen.vue'
 
 const routes = [
     {path: '/', component: bigScreen},
-    {path: '/scr2', component: secondBigScreen},
+    {path: '/2', component: secondBigScreen},
 ]
 
 const router = createRouter({
