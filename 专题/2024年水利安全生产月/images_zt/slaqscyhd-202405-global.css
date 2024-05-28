@@ -35,12 +35,8 @@ body {
   height: 0;
   clear: both;
 }
-.center-block-1200 {
-  width: 1200px;
-  margin: 0 auto;
-}
 .center-block-864 {
-  width: 864px;
+  width: 1424px;
   margin: 0 auto;
 }
 .w374 {
@@ -84,30 +80,29 @@ body {
 /* user style */
 .mainbg {
   background-image: url('slaqscy-202405-mainbg.jpg'),url('slaqscy-202405-footerbg.png');
-  padding-top: 570px;
+  padding-top: 940px;
   background-position: center top,center bottom;
   background-repeat: no-repeat;
   background-color: #caf2ff;
 }
 nav {
   background-image: url('slaqscy-202405-navbg.png');
-  width: 882px;
-  height: 55px;
+  width: 1455px;
+  height: 91px;
   margin: 0 auto;
 }
 .nav {
   text-align: center;
-  font-size: 12px;
+  font-size: 20px;
   color: #ffffff;
-  line-height: 50px;
-  font-weight: bold;
+  line-height: 80px;
 }
 .nav li {
   display: inline-block;
   margin-left: 30px;
 }
 .main {
-  padding: 28px 0 100px;
+  padding: 40px 0 173px;
 }
 section {
   position: relative;
@@ -116,16 +111,16 @@ section + section {
   margin-top: 40px;
 }
 .chnltitle {
-  font-size: 22px;
+  font-size: 36px;
   color: #ffffff;
   font-weight: bold;
   text-align: center;
   background-image: url('slaqscy-202405-chnlbg.png');
   background-repeat: no-repeat;
   background-position: center;
-  line-height: 30px;
-  width: 313px;
-  height: 40px;
+  line-height: 48px;
+  width: 517px;
+  height: 65px;
   position: relative;
   z-index: 22;
   margin-bottom: 20px;
@@ -135,7 +130,7 @@ section + section {
   position: absolute;
   left: 0;
   right: 0;
-  top: 14px;
+  top: 23px;
   width: 100%;
   height: 2px;
   z-index: 20;
