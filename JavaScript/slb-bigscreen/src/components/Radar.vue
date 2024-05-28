@@ -30,6 +30,9 @@
                 if(target) {
                     const mChart = echarts.init(target)
                     const option = {
+                        tooltip: {
+                            trigger: 'item'
+                        },
                     grid: {
                         top:'0'
                     },

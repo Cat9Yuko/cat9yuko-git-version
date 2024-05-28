@@ -50,6 +50,7 @@
               </div>
               <div class="flex-none basis-[385px] h-[285px]">
                 <small-channel-title>网上投票</small-channel-title>
+                <stack-bar/>
               </div>
             </div>
 
@@ -59,12 +60,15 @@
           <section class="flex-none basis-[500px]">
             <div class="bg-[url('/img/bs-bgh300.png')] h-[300px] mt-[20px]">
                 <channel-title>政民聚焦</channel-title>
+                <bar-right-2/>
             </div>
             <div class="bg-[url('/img/bs-bgh300.png')] h-[300px] mt-[20px]">
                 <channel-title>全国来信趋势</channel-title>
+                <right-line/>
             </div>
             <div class="bg-[url('/img/bs-bgh300.png')] h-[300px] mt-[20px]">
                 <channel-title>最新来信</channel-title>
+                <roll-table-4/>
             </div>
           </section>
         </main>
@@ -83,11 +87,14 @@ import CenterTwoLine from '@/components/centerTwoLine.vue'
 import BarCenter from '@/components/barCenter.vue'
 import CenterLine from '@/components/centerLine.vue'
 import CenterTwoLineSmooth from '@/components/centerTwoLineSmooth.vue'
+import StackBar from '@/components/stackBar.vue'
+import BarRight2 from '@/components/barRight2.vue'
+import RightLine from '@/components/rightLine.vue'
+import RollTable4 from '@/components/rollTable4.vue'
 export default {
-    components:{channelTitle,centerChannelTitle,BarLeft,
-        WordCloud,RollTable3,SmallChannelTitle,Radar,CenterTwoLine,BarCenter,
-        CenterLine,
-        CenterTwoLineSmooth}
+    components:{channelTitle,centerChannelTitle,BarLeft, WordCloud,RollTable3,SmallChannelTitle,Radar,CenterTwoLine,BarCenter, CenterLine, CenterTwoLineSmooth, StackBar, BarRight2,
+      RightLine,
+        RollTable4}
 }
     
 </script>

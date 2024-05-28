@@ -63,6 +63,18 @@ export const zxft = (params) => {
 export const zqyj = (params) => {
     return $getJson('./JSON/ZQYJ.json', params) // 征求意见
 }
+export const wstp = (params) => {
+    return $getJson('./JSON/WSTP.json', params) // 网上投票
+}
+export const zmjj = (params) => {
+    return $getJson('./JSON/ZMJJ.json', params) // 政民聚焦
+}
+export const letterCharts = (params) => {
+    return $getJson('./JSON/QGLX.json', params) // 全国来信趋势
+}
+export const letter = (params) => {
+    return $getJson('./JSON/ZXLX.json', params) // 最新来信
+}
 
 
 export const follow = (data) => {
@@ -72,12 +84,7 @@ export const attention = (params) => {
     return $getJson('./JSON/ZYLFP.json') // 注意类分配
 }
 
-export const letter = (params) => {
-    return $getJson('./JSON/ZXLX.json', params) // 最新来信
-}
-export const letterCharts = (params) => {
-    return $getJson('./JSON/QGLX.json', params) // 全国来信
-}
+
 export const daily = (params) => {
     return $getJson('./JSON/RCJC.json', params) // 日常监测
 }
