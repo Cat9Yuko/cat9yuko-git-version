@@ -10,7 +10,7 @@ export const hdjl = (data) => {
     return $getJson('./JSON/HDJL.json')// 互动交流
 }
 export const wwfw = (data) => {
-    return $getJson('./JSON/ZWFW.json')// 政声传递
+    return $getJson('./JSON/ZWFW.json')// 政务服务
 }
 export const distribute = (params) => {
     return $getJson('./JSON/LLFB.json', params) // 流量分布
@@ -74,21 +74,4 @@ export const letterCharts = (params) => {
 }
 export const letter = (params) => {
     return $getJson('./JSON/ZXLX.json', params) // 最新来信
-}
-
-
-export const follow = (data) => {
-    return $getJson('./JSON/ZGZ.json') // 政关注
-}
-export const attention = (params) => {
-    return $getJson('./JSON/ZYLFP.json') // 注意类分配
-}
-
-
-export const daily = (params) => {
-    return $getJson('./JSON/RCJC.json', params) // 日常监测
-}
-
-export const supervise = (params) => {
-    return $getJson('./JSON/LYZFWZJG.json', params) // 流域政府网站监管 
 }

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <a href="http://www.csnwd.com.cn/123">www.csnwd.com.cn</a>
+    <a href="http://www.csnwd.com.cn/514">www.csnwd.com.cn</a>
+    <a href="http://www.csnwd.com.cn/124">www.csnwd.com.cn</a>
+    <a href="http://www.csnwd.com.cn">www.csnwd.com.cn</a>
+    <a href="http://www.csnwd.com.cn">www.csnwd.com.cn</a>
+    <a href="http://www.csnwd.com.cn">www.csnwd.com.cn</a>
+    <a href="http://www.csnwd.com.cn/123/">www.csnwd.com.cn</a>
+    <a href="http://www.baidu.com">baidu</a>
+
+
+    <script src="http://mwr.gov.cn/images_index/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $("body a").each(function(){
+                $(this).attr("href",$(this).attr("href").replace(/www.csnwd.com.cn/ig, "/"))                
+            })
+        })
+        
+        </script>
+</body>
+</html>

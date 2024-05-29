@@ -37,7 +37,12 @@
                             },
                             axisTick: {
                                 show: false
-                            }
+                            },
+                            data: res.map(item => (
+                                {
+                                value: item.time
+                                }
+                            )),
                         },
                         // y 轴
                         yAxis: {
