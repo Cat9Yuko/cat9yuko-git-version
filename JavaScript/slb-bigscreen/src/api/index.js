@@ -52,7 +52,7 @@ export const wsdt = (data) => {
     return $getJson('./JSON/WSDT.json')// 网上答题
 }
 export const gzzx = (data) => {
-    return $getJson('./JSON/GZZX.json')// 网上答题
+    return $getJson('./JSON/GZZX.json')// 公众咨询
 }
 export const zxft = (params) => {
     return $getJson('./JSON/ZXFT.json', params) // 在线访谈
