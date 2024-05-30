@@ -31,7 +31,7 @@ export const zzfwl = (params) => {
     return $getJson('./JSON/ZZFWL.json', params) // 主站访问量情况
 }
 export const lmfwlph = (params) => {
-    return $getJson('./JSON/LMFWLPH.json', params) // 站点流量
+    return $getJson('./JSON/LMFWLPH.json', params) // 主站主要栏目访问量排行
 }
 export const articles = (params) => {
     return $getJson('./JSON/RMWZ.json', params) // 热门文章
@@ -44,9 +44,6 @@ export const focused = (params) => {
 }
 export const zxgjgz = (data) => {
     return $getJson('./JSON/ZXGJGZ.json')// 最新稿件关注
-}
-export const jsonAjax = (data) => {
-    return $getJson('./JSON/ZSCD.json')// 政声传递
 }
 export const wzfb = (data) => {
     return $getJson('./JSON/WZFB.json')// 网站发布

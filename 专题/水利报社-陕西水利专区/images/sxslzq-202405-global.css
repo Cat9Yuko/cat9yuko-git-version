@@ -158,6 +158,9 @@ section + section {
 .slick-item {
   position: relative;
 }
+.slick-mod .slick-item img {
+  height: 475px;
+}
 .slick-item img {
   width: 100%;
 }

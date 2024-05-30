@@ -23,7 +23,8 @@
                     const mChart = echarts.init(target)
                     const option = {
                         tooltip: {
-                            trigger: 'item'
+                            trigger: 'item',
+                            formatter: '{b}: {c}%'
                         },
                         // x 轴
                         xAxis: {
@@ -117,7 +118,7 @@
                                 position: 'inside',
                                 color: '#ffffff',
                                 fontSize: 8,
-                                formatter: '{d}%',
+                                formatter: '{c}%',
                             },
                             labelLine: {
                                 show: false
