@@ -215,7 +215,7 @@
                         <div class="img-link"><a href="" target="_blank" rel="noopener noreferrer"><img src="images/sxslzq-202405-iconzwfw.jpg" alt=""></a></div>
                     </div>
                 </section>
-                <section>
+                <!-- <section>
                     <div class="chnltitle2"><span><a href="" target="_blank" rel="noopener noreferrer">秦水风采</a></span></div>
                     <div id="wqqx" class="wqqx">
                         <div class="part">
@@ -488,8 +488,84 @@
                             </div>
                         </div>
                     </div>
-                </section>
+                </section> -->
+            </div>
+            
+            <section class="tpxwbg">
+                <div class="center-block-1280">
+                    <div class="chnltitle2"><span><a href="" target="_blank" rel="noopener noreferrer">图说三秦</a></span></div>
 
+                    <div class="slider-for">
+                        <div class="slick-item">
+                            <a href="" target="_blank">
+                                    <div class="mask"></div>
+                                    <img src="images/demo2.jpg" alt="">
+                                    <div class="tit2">与上海水务相关的图片新闻报道、十大工程美图</div>
+                            </a>
+                        </div>
+                        <div class="slick-item">
+                            <a href="" target="_blank">
+                                <div class="mask"></div>
+                                <img src="images/demo2.jpg" alt="">
+                                <div class="tit2">与上海水务相关的图片新闻报道、十大工程美图</div>
+                            </a>
+                        </div>
+                        <div class="slick-item">
+                            <a href="" target="_blank">
+                                <div class="mask"></div>
+                                <img src="images/demo2.jpg" alt="">
+                                <div class="tit2">与上海水务相关的图片新闻报道、十大工程美图</div>
+                            </a>
+                        </div>
+                        <div class="slick-item">
+                            <a href="" target="_blank">
+                                <div class="mask"></div>
+                                <img src="images/demo2.jpg" alt="">
+                                <div class="tit2">与上海水务相关的图片新闻报道、十大工程美图</div>
+                            </a>
+                        </div>
+                        <div class="slick-item">
+                            <a href="" target="_blank">
+                                <div class="mask"></div>
+                                <img src="images/demo2.jpg" alt="">
+                                <div class="tit2">与上海水务相关的图片新闻报道、十大工程美图</div>
+                            </a>
+                        </div>
+                        <div class="slick-item">
+                            <a href="" target="_blank">
+                                <div class="mask"></div>
+                                <img src="images/demo2.jpg" alt="">
+                                <div class="tit2">与上海水务相关的图片新闻报道、十大工程美图</div>
+                            </a>
+                        </div>
+                    </div>
+    
+                    <div class="slider-nav">
+                        <div class="slick-item">
+                            <div><img src="images/demo2.jpg" alt=""></div>
+                        </div>
+                        <div class="slick-item">
+                            <div><img src="images/demo2.jpg" alt=""></div>
+                        </div>
+                        <div class="slick-item">
+                            <div><img src="images/demo2.jpg" alt=""></div>
+                        </div>
+                        <div class="slick-item">
+                            <div><img src="images/demo2.jpg" alt=""></div>
+                        </div>
+                        <div class="slick-item">
+                            <div><img src="images/demo2.jpg" alt=""></div>
+                        </div>
+                        <div class="slick-item">
+                            <div><img src="images/demo2.jpg" alt=""></div>
+                        </div>
+                    </div>
+
+                    <div class="mmore hidden-md"><a href="" target="_blank" rel="noopener noreferrer">更多</a></div>
+                </div>
+            </section>
+
+            <div class="center-block-1280">
                 <section class="hidden-xs">
                     <div class="link-container">
                         <div class="link-item">
@@ -513,6 +589,7 @@
                     </div>
                 </section>
             </div>
+
         </main>
         <footer>
             <p>主办：中国水利报社 版权所有 不得复制或建立镜像</p>
@@ -536,6 +613,41 @@
                 dots: true,
                 autoplay: true,
                 vertical: true
+            });
+
+            $('.slider-for').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                fade: true,
+                asNavFor: '.slider-nav',
+                responsive: [{
+                    breakpoint: 1280,
+                    settings: {
+                        centerMode: true,
+                        slidesToShow: 1,
+                        arrows: false,
+                        fade: false,
+                        // centerPadding: '5px',
+                    }
+                }]
+            });
+            $('.slider-nav').slick({
+                slidesToShow: 5,
+                slidesToScroll: 1,
+                asNavFor: '.slider-for',
+                dots: false,
+                centerMode: false,
+                focusOnSelect: true,
+                autoplay: true,
+                // responsive: [{
+                //     breakpoint: 1280,
+                //     settings: {
+                //         centerMode: true,
+                //         slidesToShow: 1,
+                //         arrows: false
+                //     }
+                // }]
             });
 
             $(".chnl-tab").hover(function(){

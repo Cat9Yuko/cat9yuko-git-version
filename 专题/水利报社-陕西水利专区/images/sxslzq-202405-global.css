@@ -155,6 +155,21 @@ section + section {
   height: 180px;
   overflow: hidden;
 }
+.slider-for {
+  margin-top: 36px;
+}
+.slider-nav {
+  width: 937px;
+  margin: 0 auto;
+  margin-top: -88px;
+  margin-bottom: 51px;
+}
+.slider-for .imgback {
+  width: 1280px;
+  height: 720px;
+  background-size: cover;
+  background-position: center center;
+}
 .slick-item {
   position: relative;
 }
@@ -164,16 +179,23 @@ section + section {
 .slick-item img {
   width: 100%;
 }
+.slider-nav img {
+  width: 171px;
+  height: 114px;
+  border: 2px solid #ffffff;
+  margin: 0 auto;
+}
+.slider-for img {
+  width: 1280px;
+  height: 720px;
+}
 .slick-mod2 .slick-item img  {
   display: block;
 }
-.mask {
-  background-image: url('sxslzq-202405-mask.png');
-  height: 148px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  right: 0;
+.tpxwbg {
+  background-image: url('sxslzq-202405-sectionbg.png');
+  background-position: bottom 84px center;
+  background-repeat: no-repeat;
 }
 .tit1 {
   position: absolute;
@@ -188,7 +210,19 @@ section + section {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
+.tit2 {
+  height: 268px;
+  background-image: url('sxslzq-202405-mask.png');
+  background-size: cover;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding-top: 134px;
+  text-align: center;
+  font-size: 24px;
+  color: #ffffff;
+}
 .slick-mod .slick-dots {
   position: absolute;
   right: 15px;
@@ -400,6 +434,7 @@ section + section {
   text-align: center;
   color: #1f4ea3;
   padding-top: 21px;
+  margin-top: 43px;
 }
 
 .wqqx {
