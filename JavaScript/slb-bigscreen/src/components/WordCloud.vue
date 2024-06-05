@@ -57,8 +57,8 @@
                             }
                             },
                             data: data.map(item => ({
-                                name: item.name,
-                                value: item.symbolSize
+                                name: item.hotWord,
+                                value: item.count
                             })),
                         },
 

@@ -5,12 +5,12 @@
 </template>
 
 <script>
-    import {wwfw} from '@/api/'
+    import {wzfb} from '@/api/'
     import * as echarts from 'echarts'
 
     export default {
         mounted() {
-            wwfw().then((res) => {
+            wzfb().then((res) => {
                 this.renderChart(res)
             })
         },

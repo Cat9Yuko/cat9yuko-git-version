@@ -1,10 +1,10 @@
 <template>
     <div>
-      <dv-scroll-board :config="config" ref="scrollBoard" class="ml-[1.5625rem] mt-[1.0625rem]" style="width: 28.1875rem;height: 8.125rem;" />
+      <dv-scroll-board :config="config" class="ml-[1.5625rem] mt-[1.0625rem]" style="width: 28.1875rem;height: 8.125rem;" />
     </div>
   </template>
   <script>
-    import { reactive, ref } from '@vue/reactivity'
+    import { reactive } from '@vue/reactivity'
     import {viewsNum} from '@/api/'
   
   export default {

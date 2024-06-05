@@ -1,16 +1,16 @@
 <template>
     <div>
-        <div ref="target" class="w-full h-[230px]"></div>
+        <div ref="target" class="w-full h-[200px]"></div>
     </div>
 </template>
 
 <script>
-    import {zqgjfbl} from '@/api/'
+    import {wwfw} from '@/api/'
     import * as echarts from 'echarts'
 
     export default {
         mounted() {
-            zqgjfbl().then((res) => {
+            wwfw().then((res) => {
                 this.renderChart(res)
             })
         },
@@ -39,11 +39,11 @@
                             axisLabel: {
                                 show: true,
                                 color: '#ffffff',
-                                fontSize: 8,
+                                fontSize: 10,
                                 interval: 0,
                                 // rotate: 90,
-                                inside: true,
-                                width: 10,
+                                // inside: true,
+                                // width: 10,
                                 overflow: 'break'
                             },
                             axisTick: {
@@ -59,7 +59,7 @@
                         },
                         // y 轴
                         yAxis: {
-                            type: 'log',
+                            type: 'value',
                             axisLabel: {
                                 color: '#ffffff',
                                 // show: false,
@@ -83,7 +83,7 @@
                             left:'30px',
                             right: '30px',
                             bottom: '10px',
-                            top: '40px',
+                            top: '20px',
                             containLabel: true
                         },
                         // 滚动条
@@ -118,6 +118,12 @@
                         // }],
                         color:[
                             // 右下左上
+                            // {type: 'linear',x: 0,y: 1,x2: 0,y2: 0,
+                            // colorStops: [
+                            //     {offset: 0, color: 'rgba(222,184,76,0.2)'},
+                            //     {offset: 1, color: 'rgba(222,184,76,1)'}
+                            // ],
+                            // global: false},
                             {type: 'linear',x: 0,y: 1,x2: 0,y2: 0,
                             colorStops: [
                                 {offset: 0, color: 'rgba(37,192,198,0.2)'},
@@ -128,12 +134,12 @@
                         ],
                         // 图表配置
                         series: {
-                            name: '站群稿件发布量',
+                            name: '站点流量',
                             type:'bar',
                             label: {
                                 show: false
                             },
-                            barMaxWidth: 10,
+                            // barMaxWidth: '10px',
                             zlevel: 1,
                             data: data.map(item => ({
                                 value: item.value

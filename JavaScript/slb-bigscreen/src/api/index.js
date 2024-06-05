@@ -37,16 +37,16 @@ export const articles = (params) => {
     return $getJson('./JSON/RMWZ.json', params) // 热门文章
 }
 export const zqgjfbl = (params) => {
-    return $getJson('./JSON/ZQGJFBL.json', params) // 站群稿件发布量
+    return $getJson('./JSON/ZQGJFBL.json', params) // 站群发布
 }
 export const focused = (params) => {
-    return $getJson('./JSON/ZDGZ.json', params) // 重点关注
+    return $getJson('./JSON/ZDGZ.json', params) // 热点关注
 }
 export const zxgjgz = (data) => {
-    return $getJson('./JSON/ZXGJGZ.json')// 最新稿件关注
+    return $getJson('./JSON/ZXGJGZ.json')// 最新文章
 }
 export const wzfb = (data) => {
-    return $getJson('./JSON/WZFB.json')// 网站发布
+    return $getJson('./JSON/WZFB.json')// 政务服务2
 }
 export const wsdt = (data) => {
     return $getJson('./JSON/WSDT.json')// 网上答题

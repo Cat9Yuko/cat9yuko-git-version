@@ -20,13 +20,13 @@
                 let name = []
                 let data1 = []
                 let data2 = []
-                let month = []
+                let year = []
                 res.map((item)=> {
                     name.push(item.name[0]) 
                     name.push(item.name[1]) 
                     data1 = item.value[0]
                     data2 = item.value[1]
-                    month = item.month
+                    year = item.year
                 })
                 
                 if(target) {
@@ -37,7 +37,7 @@
                         },
                         // x 轴
                         xAxis: {
-                            data: month,
+                            data: year,
                             axisLabel: {
                                 color: '#ffffff',
                                 fontSize: 10,

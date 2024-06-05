@@ -19,7 +19,7 @@
                 const target = this.$refs.target
                 if(target) {
                     const mChart = echarts.init(target)
-                    let months = []
+                    let year = []
                     let data1 = []
                     let data2 = []
                     let legend = []
@@ -27,8 +27,8 @@
                         data1 = item.value[0]
                         data2 = item.value[1]
                         legend = item.name
-                        item.month.map(item => {
-                            months.push(item)
+                        item.year.map(item => {
+                            year.push(item)
                         })
                     })
                     // console.log(legendarr);
@@ -71,7 +71,7 @@
                                 show: false
                             },
                             zlevel: 2,
-                            data: months
+                            data: year
                         },
                         // y 轴
                         yAxis: {

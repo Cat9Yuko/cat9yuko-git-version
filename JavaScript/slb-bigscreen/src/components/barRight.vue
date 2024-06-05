@@ -39,10 +39,12 @@
                             axisLabel: {
                                 show: true,
                                 color: '#ffffff',
-                                fontSize: 10,
+                                fontSize: 8,
                                 interval: 0,
                                 // rotate: 90,
-                                inside: false
+                                inside: true,
+                                width: 10,
+                                overflow: 'break'
                             },
                             axisTick: {
                                 show: false
@@ -57,7 +59,7 @@
                         },
                         // y 轴
                         yAxis: {
-                            type: 'log',
+                            type: 'value',
                             axisLabel: {
                                 color: '#ffffff',
                                 // show: false,

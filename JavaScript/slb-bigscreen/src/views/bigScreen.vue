@@ -11,7 +11,7 @@
               <small-channel-title>互动交流</small-channel-title>
               <horizontal-bar/>
               <small-channel-title>政务服务</small-channel-title>
-              <two-line/>
+              <left-bar/>
             </div>
           </section>
           <section class="flex-none basis-[800px] ">
@@ -68,8 +68,9 @@ import RollTable from '@/components/rollTable.vue'
 import Pie2 from '@/components/Pie2.vue'
 import BarRight from '@/components/barRight.vue'
 import RollTable2 from '@/components/rollTable2.vue'
+import LeftBar from '@/components/LeftBar.vue'
     export default {
-    components: { basicData,channelTitle, SmallChannelTitle, Pie,HorizontalBar,TwoLine, CenterChannelTitle, MapHorizontalBar,CenterSmallChannelTitle,Bar,Line, RollTable, Pie2, BarRight, RollTable2 }
+    components: { basicData,channelTitle, SmallChannelTitle, Pie,HorizontalBar,TwoLine, CenterChannelTitle, MapHorizontalBar,CenterSmallChannelTitle,Bar,Line, RollTable, Pie2, BarRight, RollTable2,LeftBar }
     }
 
 </script>

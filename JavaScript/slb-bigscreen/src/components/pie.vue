@@ -34,9 +34,9 @@
                         legend:  {
                             orient:'vertical',
                             left: '285px',
-                            top: '55px',
+                            top: '35px',
                             align: 'left',
-                            height: '50px',
+                            height: '100px',
                             itemGap: 19,
                             textStyle: {
                                 color: '#ffffff'
@@ -73,7 +73,34 @@
                                 {offset: 1, color: '#392a6c'}
                             ],
                             global: false},
-                            
+                            {type: 'linear',x: 0,y: 0,x2: 0,y2: 1,
+                            colorStops: [
+                                {offset: 0, color: '#ce41a8'},
+                                {offset: 0.3, color: '#eb70ca'},
+                                {offset: 1, color: '#ce41a8'}
+                            ],
+                            global: false},
+                            {type: 'linear',x: 0,y: 0,x2: 0,y2: 1,
+                            colorStops: [
+                                {offset: 0, color: '#ef3e5b'},
+                                {offset: 0.3, color: '#e67184'},
+                                {offset: 1, color: '#a81b32'}
+                            ],
+                            global: false},
+                            {type: 'linear',x: 0,y: 0,x2: 0,y2: 1,
+                            colorStops: [
+                                {offset: 0, color: '#ffa030'},
+                                {offset: 0.3, color: '#f1a954'},
+                                {offset: 1, color: '#c47110'}
+                            ],
+                            global: false},
+                            {type: 'linear',x: 0,y: 0,x2: 0,y2: 1,
+                            colorStops: [
+                                {offset: 0, color: '#2ad9dd'},
+                                {offset: 0.3, color: '#52e0e3'},
+                                {offset: 1, color: '#0eadb1'}
+                            ],
+                            global: false},
                         ],
                         // 图表配置
                         series: {
