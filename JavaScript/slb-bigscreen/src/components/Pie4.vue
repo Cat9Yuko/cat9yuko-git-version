@@ -115,6 +115,8 @@
       radius: ['90%', '100%'], //大小
       left:'center',
       top:'middle',
+      width: '190px',
+      height: '190px',
       hoverAnimation: true,
       labelLine: {
         show:true,
@@ -164,7 +166,9 @@
       type: 'gauge',
       zlevel: 2,
       splitNumber: 85,
-      radius: '50%',
+      radius: '90%',
+      width: '150px',
+      height: '150px',
       startAngle: 90,
       endAngle: -269.9999,
       axisLine: {
@@ -190,6 +194,7 @@
       detail: {
         show: 0,
       },
+      data: [0]
     },
   ]
 
