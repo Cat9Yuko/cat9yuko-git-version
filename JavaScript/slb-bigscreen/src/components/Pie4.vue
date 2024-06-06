@@ -166,7 +166,7 @@
       type: 'gauge',
       zlevel: 2,
       splitNumber: 85,
-      radius: '90%',
+      radius: '95%',
       width: '150px',
       height: '150px',
       startAngle: 90,
@@ -184,7 +184,7 @@
         show: true,
         length: 7,
         lineStyle: {
-          width: 4,
+          width: 2,
           color: '#017383',
         },
       },
