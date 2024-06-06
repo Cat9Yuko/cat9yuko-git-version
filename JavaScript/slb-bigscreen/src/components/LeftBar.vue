@@ -25,7 +25,7 @@
                     })
                     const option = {
                         tooltip: {
-                            trigger: "axis",
+                            trigger: "item",
                         },
                         // x 轴
                         xAxis: {
@@ -134,8 +134,10 @@
                         ],
                         // 图表配置
                         series: {
-                            name: '站点流量',
-                            type:'bar',
+                            name: '政务服务',
+                            type:'pictorialBar',
+                            symbolClip: true,
+                            symbol: 'path://M0,10 L10,10 C5.5,10 6.5,5 5,5 C3.5,5 4.5,10 0,10 z',
                             label: {
                                 show: false
                             },

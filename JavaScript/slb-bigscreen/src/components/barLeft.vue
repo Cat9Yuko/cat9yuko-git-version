@@ -25,7 +25,7 @@
                     })
                     const option = {
                         tooltip: {
-                            trigger: "axis",
+                            trigger: "item",
                         },
                         // x 轴
                         xAxis: {
@@ -127,8 +127,8 @@
                             
                         ],
                         // 图表配置
-                        series: {
-                            name: '站群稿件发布量',
+                        series: [{
+                            name: '站点稿件发布量',
                             type:'bar',
                             label: {
                                 show: false
@@ -138,7 +138,7 @@
                             data: data.map(item => ({
                                 value: item.value
                             })),
-                        },
+                        },]
 
                     }
                     mChart.setOption(option)

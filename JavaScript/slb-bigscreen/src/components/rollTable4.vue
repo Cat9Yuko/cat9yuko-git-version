@@ -20,7 +20,7 @@
         index: false,
         carousel:'single',
         indexHeader:'序号',
-        columnWidth: [300,120],
+        columnWidth: [300,140],
         align: ['left','left'],
     }
     )

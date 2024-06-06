@@ -75,6 +75,7 @@
                                 fontSize: 12,
                                 margin: 15
                             },
+                            inverse: true,
                             axisTick: {
                                 show: false
                             },
@@ -92,6 +93,7 @@
                                 fontSize: 12,
                                 margin: 15
                             },
+                            inverse: true,
                             axisTick: {
                                 show: false
                             },

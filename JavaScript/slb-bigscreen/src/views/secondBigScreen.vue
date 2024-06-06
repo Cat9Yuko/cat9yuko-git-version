@@ -63,7 +63,7 @@
           <section class="flex-none basis-[500px]">
             <div class="bg-[url('/img/bs-bgh300.png')] h-[300px] mt-[20px]">
                 <channel-title>政民聚焦</channel-title>
-                <bar-right-2/>
+                <pie-3/>
             </div>
             <div class="bg-[url('/img/bs-bgh300.png')] h-[300px] mt-[20px]">
                 <channel-title>全国来信趋势</channel-title>
@@ -95,10 +95,12 @@ import BarRight2 from '@/components/barRight2.vue'
 import RightLine from '@/components/rightLine.vue'
 import RollTable4 from '@/components/rollTable4.vue'
 import TwoLine from '@/components/twoLine.vue'
+import Pie3 from '@/components/Pie3.vue'
 export default {
     components:{channelTitle,centerChannelTitle,BarLeft, WordCloud,RollTable3,SmallChannelTitle,Radar,CenterTwoLine,BarCenter, CenterLine, CenterTwoLineSmooth, StackBar, BarRight2,
       RightLine, RollTable4,
-        TwoLine
+        TwoLine,
+        Pie3
     }
 }
     
