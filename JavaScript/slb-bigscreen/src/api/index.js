@@ -64,10 +64,10 @@ export const wstp = (params) => {
     return $getJson('./JSON/WSTP.json', params) // 网上投票
 }
 export const zmjj = (params) => {
-    return $getJson('./JSON/ZMJJ.json', params) // 政民聚焦
+    return $getJson('./JSON/ZMJJ.json', params) // 主题分类
 }
 export const letterCharts = (params) => {
-    return $getJson('./JSON/QGLX.json', params) // 全国来信趋势
+    return $getJson('./JSON/QGLX.json', params) // 来信趋势
 }
 export const letter = (params) => {
     return $getJson('./JSON/ZXLX.json', params) // 最新来信

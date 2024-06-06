@@ -62,11 +62,11 @@
 
           <section class="flex-none basis-[500px]">
             <div class="bg-[url('/img/bs-bgh300.png')] h-[300px] mt-[20px]">
-                <channel-title>政民聚焦</channel-title>
+                <channel-title>主题分类</channel-title>
                 <pie-3/>
             </div>
             <div class="bg-[url('/img/bs-bgh300.png')] h-[300px] mt-[20px]">
-                <channel-title>全国来信趋势</channel-title>
+                <channel-title>来信趋势</channel-title>
                 <right-line/>
             </div>
             <div class="bg-[url('/img/bs-bgh300.png')] h-[300px] mt-[20px]">
