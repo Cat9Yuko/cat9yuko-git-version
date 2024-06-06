@@ -20,6 +20,14 @@
             renderChart(data) {
                 const target = this.$refs.target
                 if(target) {
+                    const total = data[0].value
+                    const bjnum = data[1]
+                    const wbj = data[0].value - data[1].value
+                    const wbjnum = {"name": "未办结数量"}
+                    Object.assign(wbjnum,{"value":wbj})
+                    const data2 = []
+                    data2.push(bjnum,wbjnum)
+                    console.log(data2);
                     const mChart = echarts.init(target)
                     const option = {
                         tooltip: {
@@ -32,10 +40,10 @@
                         // y 轴
                         yAxis: {show: false},
                         title:{   //圆环中间内容
-                            text: '6000',
-                            subtext: '统计数',
+                            text: total,
+                            subtext: '受理数量',
                             left:"center",
-                            top:"44%",
+                            top:"40%",
                             textStyle:{
                                 color:"#fff",
                                 fontSize:18,
@@ -108,95 +116,76 @@
                         ],
                         // 图表配置
                         series: [
-    {
-      name: '',
-      avoidLabelOverlap: true,//防止标签重叠
-      type: 'pie',
-      radius: ['90%', '100%'], //大小
-      left:'center',
-      top:'middle',
-      width: '190px',
-      height: '190px',
-      hoverAnimation: true,
-      labelLine: {
-        show:true,
-        lineStyle: {
-          width: 3,
-        },
-        normal: {
-          length: 10, // 指示线长度
-          length2:10
-        },
-      },
-      data: data,
-      label: {
-        show: true,
-        formatter: function(params){ },
-        textStyle: {
-          fontSize: '18',
-          fontWeight: 'bold',
-          color:'#fff'
-        },
-        rich: {
-          color0: {
-            color: '#D56383',
-          },
-          color1: {
-            color: '#00FF95',
-          },
-          color3: {
-            color: '#FFE900',
-          },
-          color2: {
-            color: '#F5B157',
-          },
-          color4: {
-            color: '#1DA7FF',
-          },
-          color5:{
-            color:'#2967EA'
-          }
-        },
-      },
-      emphasis: {
-        show: false,
-      },
-    },
-    {
-      type: 'gauge',
-      zlevel: 2,
-      splitNumber: 85,
-      radius: '95%',
-      width: '150px',
-      height: '150px',
-      startAngle: 90,
-      endAngle: -269.9999,
-      axisLine: {
-        show: false,
-      },
-      axisTick: {
-        show: false,
-      },
-      axisLabel: {
-        show: false,
-      },
-      splitLine: {
-        show: true,
-        length: 7,
-        lineStyle: {
-          width: 2,
-          color: '#017383',
-        },
-      },
-      pointer: {
-        show: 0,
-      },
-      detail: {
-        show: 0,
-      },
-      data: [0]
-    },
-  ]
+                      {
+                        name: '',
+                        avoidLabelOverlap: false,//防止标签重叠
+                        type: 'pie',
+                        radius: ['90%', '100%'], //大小
+                        left:'center',
+                        top:'middle',
+                        width: '190px',
+                        height: '190px',
+                        startAngle: 190,
+                        padAngle: 5,
+                        hoverAnimation: true,
+                        labelLine: {
+                          show:true,
+                          lineStyle: {
+                            width: 3,
+                          },
+                          normal: {
+                            length: 20, // 指示线长度
+                            length2:20
+                          },
+                        },
+                        data: data2,
+                        label: {
+                          show: true,
+                          formatter: function(params){ },
+                          textStyle: {
+                            fontSize: '12',
+                            fontWeight: 'bold',
+                            color:'#fff'
+                          }
+                        },
+                        emphasis: {
+                          show: false,
+                        },
+                      },
+                      {
+                        type: 'gauge',
+                        zlevel: 2,
+                        splitNumber: 85,
+                        radius: '95%',
+                        width: '150px',
+                        height: '150px',
+                        startAngle: 90,
+                        endAngle: -269.9999,
+                        axisLine: {
+                          show: false,
+                        },
+                        axisTick: {
+                          show: false,
+                        },
+                        axisLabel: {
+                          show: false,
+                        },
+                        splitLine: {
+                          show: true,
+                          length: 7,
+                          lineStyle: {
+                            width: 2,
+                            color: '#017383',
+                          },
+                        },
+                        pointer: {
+                          show: 0,
+                        },
+                        detail: {
+                          show: 0,
+                        }
+                      },
+                    ]
 
                     }
                     mChart.setOption(option)
