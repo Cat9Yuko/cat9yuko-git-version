@@ -24,8 +24,8 @@
               <div class="flex justify-around">
               
               <div class="flex-none basis-[385px] h-[285px]">
-                <small-channel-title>网上答题</small-channel-title>
-                <center-two-line/>
+                <small-channel-title>在线访谈</small-channel-title>
+                <center-line/>
               </div>
               <div class="flex-none basis-[385px] h-[285px]">
                 <small-channel-title>公众咨询</small-channel-title>
@@ -36,13 +36,14 @@
             <div class="flex justify-around mt-5">
               
               <div class="flex-none basis-[385px] h-[285px]">
-                <small-channel-title>在线访谈</small-channel-title>
-                <center-line/>
-              </div>
-              <div class="flex-none basis-[385px] h-[285px]">
                 <small-channel-title>征求意见</small-channel-title>
                 <center-two-line-smooth/>
               </div>
+              <div class="flex-none basis-[385px] h-[285px]">
+                <small-channel-title>网上答题</small-channel-title>
+                <center-two-line/>
+              </div>
+              
             </div>
 
             <div class="flex justify-around">
@@ -66,11 +67,11 @@
                 <pie-3/>
             </div>
             <div class="bg-[url('/img/bs-bgh300.png')] h-[300px] mt-[20px]">
-                <channel-title>来信趋势</channel-title>
+                <channel-title>咨询趋势</channel-title>
                 <right-line/>
             </div>
             <div class="bg-[url('/img/bs-bgh300.png')] h-[300px] mt-[20px]">
-                <channel-title>最新来信</channel-title>
+                <channel-title>最新咨询</channel-title>
                 <roll-table-4/>
             </div>
           </section>

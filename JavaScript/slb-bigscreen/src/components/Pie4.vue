@@ -27,7 +27,6 @@
                     Object.assign(wbjnum,{"value":wbj})
                     const data2 = []
                     data2.push(bjnum,wbjnum)
-                    console.log(data2);
                     const mChart = echarts.init(target)
                     const option = {
                         tooltip: {

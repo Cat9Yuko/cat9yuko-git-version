@@ -95,9 +95,23 @@
                                     {offset: 0, color: 'rgba(39,186,189,0.2)'},
                                     {offset: 1, color: 'rgba(39,186,189,0.5)'}
                                 ],
-                                global: false}
+                                global: false},
                             },
                             showSymbol:false,
+                            markPoint: {
+                                symbol:'circle',
+                                symbolSize: 6,
+                                label: {
+                                    color: '#ffffff',
+                                    offset: [15,0]
+                                },
+                                itemStyle: {
+                                    color: '#ffffff'
+                                },
+                                data: [
+                                { type: 'max', name: 'Max' }
+                                ]
+                            },
                         }]
 
                     }

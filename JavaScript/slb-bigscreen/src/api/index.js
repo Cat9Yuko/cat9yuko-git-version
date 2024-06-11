@@ -3,6 +3,9 @@ import {$getJson} from '@/utils/request.js'
 export const jbqk = (params) => {
     return $getJson('./JSON/JBQK.json', params) // 基本情况
 }
+export const sitelist = (params) => {
+    return $getJson('./JSON/SITELIST.json', params) // 基本情况
+}
 export const resources = (params) => {
     return $getJson('./JSON/XXFB.json', params) // 信息发布
 }

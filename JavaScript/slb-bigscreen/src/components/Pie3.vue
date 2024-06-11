@@ -37,6 +37,18 @@
                             top: '0',
                             containLabel: true
                         },
+                        title:{   //圆环中间内容
+                            // text: total,
+                            text: '公众\n咨询',
+                            left:"center",
+                            top:"middle",
+                            textStyle:{
+                                color:"#fff",
+                                fontSize:14,
+                                align:"center",
+                                lineHeight: 16
+                            },
+                        },
                         color:[
                             // 右下左上
                             {type: 'linear',x: 0,y: 0,x2: 1,y2: 0,
@@ -49,27 +61,13 @@
                         ],
                         // 图表配置
                         series: [
+                                
                                 {
                                     type: "pie",
                                     color: '#8E99B3',
                                     silent: true,
                                     clockwise: true,
-                                    radius: ["0%", "10%"],
-                                    center: ["50%", "50%"],
-                                    label: {
-                                        show: false,
-                                    },
-                                    labelLine: {
-                                        show: false,
-                                    },
-                                    data: [0],
-                                },
-                                {
-                                    type: "pie",
-                                    color: '#8E99B3',
-                                    silent: true,
-                                    clockwise: true,
-                                    radius: ["15%", "16%"],
+                                    radius: ["35%", "30%"],
                                     center: ["50%", "50%"],
                                     label: {
                                         show: false,
@@ -82,7 +80,7 @@
                                 {
                                     stack: "a",
                                     type: "pie",
-                                    radius: ["30%", "68%"],
+                                    radius: ["50%", "68%"],
                                     center: ["50%", "50%"],
                                     silent: true, // 鼠标悬浮效果
                                     clockwise: true, // 鼠标悬浮效果

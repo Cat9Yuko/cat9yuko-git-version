@@ -36,6 +36,38 @@
                         tooltip: {
                             trigger: "axis",
                         },
+                        // x 轴
+                        xAxis: {
+                            type: 'category',
+                            data: months,
+                            axisLabel: {
+                                color: '#ffffff',
+                                fontSize: 10,
+                            },
+                            axisLine: {
+                                lineStyle: {
+                                    color:'#0f5b6a'
+                                }
+                            },
+                            axisTick: {
+                                show: false
+                            }
+                        },
+                        // y 轴
+                        yAxis: {
+                            type: 'value',
+                            axisLabel: {
+                                color: '#ffffff',
+                                fontSize: 10,
+                            },
+                            splitLine: {
+                                lineStyle: {
+                                    type: 'dashed',
+                                    color: '#06434f'
+                                }
+                            }
+                        },
+                        
                         legend:  {
                             textStyle: {
                                 color: '#ffffff',
@@ -47,114 +79,49 @@
                             itemWidth: 12,
                             itemHeight: 2
                         },
-                        // x 轴
-                        xAxis: {
-                            type:'category',
-                            axisLine: {
-                                show: true,
-                                lineStyle: {
-                                    color:'#0f5b6a'
-                                }
-                            },
-                            axisLabel: {
-                                show: true,
-                                color: '#ffffff',
-                                fontSize: 10,
-                                interval: 0,
-                                // rotate: 90,
-                                inside: false
-                            },
-                            axisTick: {
-                                show: false
-                            },
-                            splitLine: {
-                                show: false
-                            },
-                            zlevel: 2,
-                            data: months
-                        },
-                        // y 轴
-                        yAxis: {
-                            type: 'value',
-                            axisLabel: {
-                                color: '#ffffff',
-                                // show: false,
-                                fontSize: 10,
-                                margin: 15
-                            },
-                            axisTick: {
-                                show: false
-                            },
-                            axisLine: {
-                                show: false
-                            },
-                            splitLine: {
-                                lineStyle: {
-                                    type: 'dashed',
-                                    color: '#06434f'
-                                }
-                            }
-                        },
                         grid: {
                             left:'30px',
                             right: '30px',
-                            bottom: '10px',
-                            top: '40px',
+                            top:'40px',
+                            bottom:'0',
                             containLabel: true
                         },
-                        color:[
-                            // 右下左上
-                            {type: 'linear',x: 0,y: 1,x2: 0,y2: 0,
-                            colorStops: [
-                                {offset: 0, color: 'rgba(37,192,198,0.2)'},
-                                {offset: 1, color: 'rgba(37,192,198,1)'}
-                            ],
-                            global: false},
-                            {type: 'linear',x: 0,y: 1,x2: 0,y2: 0,
-                            colorStops: [
-                                {offset: 0, color: 'rgba(53,151,94,0.2)'},
-                                {offset: 1, color: 'rgba(53,151,94,1)'}
-                            ],
-                            global: false},
-                            {type: 'linear',x: 0,y: 1,x2: 0,y2: 0,
-                            colorStops: [
-                                {offset: 0, color: 'rgba(222,184,76,0.2)'},
-                                {offset: 1, color: 'rgba(222,184,76,1)'}
-                            ],
-                            global: false}
-                            
-                        ],
+                        color:['#27babd','#27babd'],
                         // 图表配置
                         series: [{
                             name: legend[0],
-                            type:'bar',
+                            type:'line',
                             label: {
                                 show: false
                             },
                             stack: '网上投票',
                             barMaxWidth: 10,
                             zlevel: 1,
-                            data: data1
-                        },{
-                            name: legend[1],
-                            type:'bar',
-                            label: {
-                                show: false
+                            data: data1,
+                            areaStyle: {
+                                color: // 右下左上
+                                {type: 'linear',x: 0,y: 0,x2: 1,y2: 0,
+                                colorStops: [
+                                    {offset: 0, color: 'rgba(39,186,189,0.2)'},
+                                    {offset: 1, color: 'rgba(39,186,189,0.5)'}
+                                ],
+                                global: false}
                             },
-                            stack: '网上投票',
-                            barMaxWidth: 10,
-                            zlevel: 1,
-                            data: data2
-                        },{
-                            name: legend[2],
-                            type:'bar',
-                            label: {
-                                show: false
+                            showSymbol:false,
+                            markPoint: {
+                                symbol:'circle',
+                                symbolSize: 6,
+                                label: {
+                                    color: '#ffffff',
+                                    offset: [15,0]
+                                },
+                                itemStyle: {
+                                    color: '#ffffff'
+                                },
+                                data: [
+                                { type: 'max', name: 'Max' }
+                                ]
                             },
-                            stack: '网上投票',
-                            barMaxWidth: 10,
-                            zlevel: 1,
-                            data: data2
                         }]
 
                     }

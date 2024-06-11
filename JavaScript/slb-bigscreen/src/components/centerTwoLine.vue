@@ -53,7 +53,7 @@
                         },
                         // y 轴
                         yAxis: {
-                            type: 'value',
+                            type: 'log',
                             axisLabel: {
                                 color: '#ffffff',
                                 fontSize: 10,
@@ -84,64 +84,35 @@
                             bottom:'0',
                             containLabel: true
                         },
-                        color:['#e1ad48','#27babd'],
+                        color:[
+                            // 右下左上
+                            {type: 'linear',x: 0,y: 1,x2: 0,y2: 0,
+                            colorStops: [
+                                {offset: 0, color: 'rgba(222,184,76,0.2)'},
+                                {offset: 1, color: 'rgba(222,184,76,1)'}
+                            ],
+                            global: false},
+                            {type: 'linear',x: 0,y: 1,x2: 0,y2: 0,
+                            colorStops: [
+                                {offset: 0, color: 'rgba(37,192,198,0.2)'},
+                                {offset: 1, color: 'rgba(37,192,198,1)'}
+                            ],
+                            global: false}
+                            
+                        ],
                         // 图表配置
                         series: [{
                             name: name[0],
-                            type:'line',
+                            type:'bar',
                             data: data1,
-                            areaStyle: {
-                                color: // 右下左上
-                                {type: 'linear',x: 0,y: 0,x2: 1,y2: 0,
-                                colorStops: [
-                                    {offset: 0, color: 'rgba(255,173,72,0.2)'},
-                                    {offset: 1, color: 'rgba(255,173,72,0.5)'}
-                                ],
-                                global: false}
-                            },
-                            showSymbol:false,
-                            markPoint: {
-                                symbol:'circle',
-                                symbolSize: 6,
-                                label: {
-                                    color: '#ffffff',
-                                    offset: [15,0]
-                                },
-                                itemStyle: {
-                                    color: '#ffffff'
-                                },
-                                data: [
-                                { type: 'max', name: 'Max' }
-                                ]
-                            },
+                            barMaxWidth: 10,
+                            showSymbol:false
                         },{
                             name: name[1],
-                            type:'line',
+                            type:'bar',
                             data: data2,
-                            areaStyle: {
-                                color:// 右下左上
-                                {type: 'linear',x: 0,y: 0,x2: 1,y2: 0,
-                                colorStops: [
-                                    {offset: 0, color: 'rgba(39,186,89,0.2)'},
-                                    {offset: 1, color: 'rgba(39,186,189,0.5)'}
-                                ],
-                                global: false}
-                            },
-                            showSymbol:false,
-                            markPoint: {
-                                symbol:'circle',
-                                symbolSize: 6,
-                                label: {
-                                    color: '#ffffff',
-                                    offset: [15,0]
-                                },
-                                itemStyle: {
-                                    color: '#ffffff'
-                                },
-                                data: [
-                                { type: 'max', name: 'Max' }
-                                ]
-                            },
+                            barMaxWidth: 10,
+                            showSymbol:false
                         }]
 
                     }
