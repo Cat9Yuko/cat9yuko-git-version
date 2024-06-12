@@ -184,6 +184,18 @@
     <script src="http://xwxc.mwr.cn/images/jquery.qrcode.min.js" type="text/javascript" charset="utf-8" ignoreapd=1>
     </script>
     <script type="text/javascript">
+        // 输出到HTML之前，使用转义函数
+        function escapeHTML(str) {
+        var map = {
+            '&': '&amp;',
+            '<': '&lt;',
+            '>': '&gt;',
+            '"': '&quot;',
+            "'": '&#039;'
+        };
+        return str.replace(/[&<>"']/g, function(m) { return map[m]; });
+        }
+        let safeUrl = escapeHTML(window.location.href);
         var title, pic;
         title = "";
         pic = "";
@@ -194,16 +206,16 @@
             $(".wechatshare").toggle();
         });
         $(".sina").click(function () {
-            shareToXl(title, window.location.href, pic);
+            shareToXl(title, safeUrl, pic);
         });
 
         function shareToXl(title, url, picurl) {
-            var sharesinastring = 'http://v.t.sina.com.cn/share/share.php?title=' + title + '&url=' + url +
-                '&content=utf-8&sourceUrl=' + url + '&pic=' + picurl;
+            var sharesinastring = 'http://v.t.sina.com.cn/share/share.php?title=' + escapeHTML(title) + '&url=' + url +
+                '&content=utf-8&sourceUrl=' + url + '&pic=' + escapeHTML(picurl);
             window.open(sharesinastring, 'newwindow', 'height=400,width=400,top=100,left=100');
         };
 
-        var url = window.location.href;
+        var url = safeUrl;
 
 
         $("#qrcode").qrcode({
