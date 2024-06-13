@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/layui.css" />
+    <style>
+        .layui-table thead th {
+            font-weight: bold;
+        }
+        .search {
+            padding: 15px;
+        }
+        .layui-laypage .layui-laypage-curr .layui-laypage-em {
+            background-color: #1E9FFF;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="search">
+        <form class="layui-form layui-form-pane" action="">
+            <div class="layui-form-item">
+                <label class="layui-form-label">标题：</label>
+                <div class="layui-input-inline">
+                  <input type="text" name="title" class="layui-input" autocomplete="false">
+                </div>
+                <label class="layui-form-label">报送时间：</label>
+                <div class="layui-input-inline">
+                  <input id="startDate" type="text" name="title" class="layui-input" placeholder="开始时间" readonly>
+                </div>
+                <div class="layui-form-mid">-</div>
+                <div class="layui-input-inline">
+                  <input id="endDate" type="text" name="title" class="layui-input" placeholder="结束时间" readonly>
+                </div>
+                <label class="layui-form-label">状态：</label>
+                <div class="layui-input-inline">
+                    <select name="status" lay-verify="">
+                        <option value="">请选择</option>
+                        <option value="已完成">已完成</option>
+                        <option value="已发布">已发布</option>
+                      </select>     
+                </div>
+                <label class="layui-form-label">拟入栏目：</label>
+                <div class="layui-input-inline">
+                    <select name="chnl" lay-verify="">
+                        <option value="">请选择</option>
+	                	<option value="司局直属">司局直属</option>
+	                	<option value="地方水事">地方水事</option>
+	                	<option value="通知公告">通知公告</option>
+	                	<option value="政策解读">政策解读</option>
+	                	<option value="人事信息">人事信息</option>
+	                	<option value="媒体之声">媒体之声</option>
+	                	<option value="其他">其他</option>
+                      </select>     
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">报送单位：</label>
+                <div class="layui-input-inline">
+                    <select name="status" lay-verify="">
+                        <option value="">请选择</option>
+                        <option value="已完成">已完成</option>
+                        <option value="已发布">已发布</option>
+                      </select>     
+                </div>
+                <label class="layui-form-label">直属单位：</label>
+                <div class="layui-input-inline">
+                    <select name="status" lay-verify="">
+                        <option value="">请选择</option>
+                        <option value="已完成">已完成</option>
+                        <option value="已发布">已发布</option>
+                      </select>     
+                </div>
+                <label class="layui-form-label">报送人：</label>
+                <div class="layui-input-inline">
+                  <input type="text" name="title" class="layui-input" autocomplete="false">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="" style="text-align: center;">
+                  <button class="layui-btn layui-btn-normal" lay-submit lay-filter="formDemo">查询</button>
+                </div>
+              </div>
+          </form>
+    </div>
+    <div class="table">
+        <table class="layui-table" lay-even lay-skin="nob">
+            <colgroup>
+              
+            </colgroup>
+            <thead>
+              <tr>
+                <th>序号</th>
+                <th>信息标题</th>
+                <th>拟入栏目</th>
+                <th>报送单位</th>
+                <th>直属单位</th>
+                <th>报送人</th>
+                <th>申请人联系方式</th>
+                <th>所在处室</th>
+                <th>办公电话</th>
+                <th>信息来源</th>
+                <th>转载来源</th>
+                <th>是否涉密</th>
+                <th>是否政务公开</th>
+                <th>是否获得合法授权</th>
+                <th>是否存在侵害个人信息权益风险</th>
+                <th>直属司局领导</th>
+                <th>是否为您的直属司局领导</th>
+                <th>非所在司局或单位主要负责同志审核情况说明</th>
+                <th>网站登记直属司局领导</th>
+                <th>状态</th>
+                <th>申请时间</th>
+                <th>附件</th>
+              </tr>
+            </thead>
+            <tbody id="div_demo">
+              <tr>
+                <td>1</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <ul>
+                    <li>
+                      <a
+                        href=""
+                        title=""
+                        >下载附件</a
+                      >
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              
+            </tbody>
+          </table>
+    </div>
+    <div id="fy" style="text-align: center;">
+
+    </div>
+    
+
+    <script src="js/layui.js"></script>
+    <script>
+        layui.use('laydate', function(){
+        var laydate = layui.laydate;
+        var today = new Date();
+        var month = today.getMonth() + 1
+        if(month < 10) {
+            month = '0'+ month
+        }
+        var defaultDate = today.getFullYear() + '-' + month + '-' + today.getDate();
+        // 设定元素
+        laydate.render({
+            elem: '#startDate' // 开始日期元素
+            ,type: 'date', // 设定类型
+            value: defaultDate,
+            done: function(value, date){
+                
+            }
+        });
+        laydate.render({
+                    elem: '#endDate' // 结束日期元素
+                    ,type: 'date', // 设定类型
+                    value: defaultDate,
+                    done: function(value, date){
+                        // 结束日期的最大值
+                        
+                    }
+                });
+    });
+    layui.use('laypage', function(){
+  var laypage = layui.laypage;
+  
+  //执行一个laypage实例
+  laypage.render({
+    elem: 'fy', //注意，这里的 test1 是 ID，不用加 # 号
+    count: 50, //数据总数，从服务端得到
+    limit: 10, // 每页显示条数
+
+   });
+});
+        </script>
+  </body>
+</html>
