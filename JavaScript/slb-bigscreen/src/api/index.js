@@ -4,7 +4,7 @@ export const jbqk = (params) => {
     return $getJson('./JSON/JBQK.json', params) // 基本情况
 }
 export const sitelist = (params) => {
-    return $getJson('./JSON/SITELIST.json', params) // 基本情况
+    return $getJson('./JSON/SITELIST.json', params) // 基本情况站点列表
 }
 export const resources = (params) => {
     return $getJson('./JSON/XXFB.json', params) // 信息发布
@@ -28,28 +28,28 @@ export const recent = (params) => {
     return $getJson('./JSON/JRGX.json', params) // 近日更新
 }
 export const viewsNum = (params) => {
-    return $getJson('./JSON/WZFWL.json', params) // 网站总体访问量
+    return $getJson('./JSON/WZZTFWL.json', params) // 网站总体访问量
 }
 export const zzfwl = (params) => {
     return $getJson('./JSON/ZZFWL.json', params) // 主站访问量情况
 }
 export const lmfwlph = (params) => {
-    return $getJson('./JSON/LMFWLPH.json', params) // 主站主要栏目访问量排行
+    return $getJson('./JSON/ZZZYLMFWL.json', params) // 主站主要栏目访问量排行
 }
 export const articles = (params) => {
     return $getJson('./JSON/RMWZ.json', params) // 热门文章
 }
 export const zqgjfbl = (params) => {
-    return $getJson('./JSON/ZQGJFBL.json', params) // 站群发布
+    return $getJson('./JSON/ZQFB.json', params) // 站群发布
 }
 export const focused = (params) => {
-    return $getJson('./JSON/ZDGZ.json', params) // 热点关注
+    return $getJson('./JSON/RDGZ.json', params) // 热点关注
 }
 export const zxgjgz = (data) => {
-    return $getJson('./JSON/ZXGJGZ.json')// 最新文章
+    return $getJson('./JSON/ZXWZ.json')// 最新文章
 }
 export const wzfb = (data) => {
-    return $getJson('./JSON/WZFB.json')// 政务服务2
+    return $getJson('./JSON/ZWFW2.json')// 政务服务2
 }
 export const wsdt = (data) => {
     return $getJson('./JSON/WSDT.json')// 网上答题
@@ -67,10 +67,10 @@ export const wstp = (params) => {
     return $getJson('./JSON/WSTP.json', params) // 网上投票
 }
 export const zmjj = (params) => {
-    return $getJson('./JSON/ZMJJ.json', params) // 主题分类
+    return $getJson('./JSON/ZTFL.json', params) // 主题分类
 }
 export const letterCharts = (params) => {
-    return $getJson('./JSON/QGLX.json', params) // 来信趋势
+    return $getJson('./JSON/LXQS.json', params) // 来信趋势
 }
 export const letter = (params) => {
     return $getJson('./JSON/ZXLX.json', params) // 最新来信

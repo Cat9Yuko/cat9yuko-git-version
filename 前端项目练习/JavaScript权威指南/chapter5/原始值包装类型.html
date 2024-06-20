@@ -54,6 +54,60 @@
         /* Boolean 是对应布尔值的引用类型。要创建一个 Boolean 对象，就使用 Boolean 构造函数并传入
 true 或 false，如下例所示： */
         let booleanObject = new Boolean(true);
+        /* Boolean 的实例会重写 valueOf()方法，返回一个原始值 true 或 false。 toString()方法被调
+用时也会被覆盖，返回字符串"true"或"false"。 */
+        let falseObject = new Boolean(false);
+        let result = falseObject && true;
+        console.log(result);
+
+        let falseValue = false;
+        result = falseValue && true;
+        console.log(result);
+        /* 除此之外，原始值和引用值（ Boolean 对象）还有几个区别。首先， typeof 操作符对原始值返回
+"boolean"，但对引用值返回"object"。同样， Boolean 对象是 Boolean 类型的实例，在使用
+instaceof 操作符时返回 true，但对原始值则返回 false，如下所示： */
+        // console.log(typeof falseObject);
+        // console.log(typeof falseValue);
+        // console.log(falseObject instanceof Boolean);
+        // console.log(falseValue instanceof Boolean);
+
+        // Number
+        /* Number 是对应数值的引用类型。要创建一个 Number 对象，就使用 Number 构造函数并传入一个
+数值，如下例所示： */
+        let numberObject = new Number(10)
+        /* 与 Boolean 类型一样， Number 类型重写了 valueOf()、 toLocaleString()和 toString()方
+法。 valueOf()方法返回 Number 对象表示的原始数值，另外两个方法返回数值字符串。 */
+        // console.log(numberObject.valueOf());
+        // console.log(numberObject.toLocaleString());
+        // toString() 方法可选地接收一个表示基数的参数，并返回相应基数形式的数值字符串，如下所示：
+        // let num = 10
+        // console.log(num.toString());
+        // console.log(num.toString(2));
+        // console.log(num.toString(8));
+        // console.log(num.toString(10));
+        // console.log(num.toString(16));
+
+        /* 除了继承的方法， Number 类型还提供了几个用于将数值格式化为字符串的方法。
+toFixed()方法返回包含指定小数点位数的数值字符串，如： */
+
+        let num = 10
+        // console.log(num.toFixed(2));
+        // 如果数值本身的小数位超过了参数指定的位数，则四舍五入到最接近的116 第 5 章 基本引用类型小数位
+        let num2 = 10.005
+        // console.log(num2.toFixed(2));
+        /* 注意 toFixed()方法可以表示有 0~20 个小数位的数值。某些浏览器可能支持更大的范
+围，但这是通常被支持的范围。 */
+
+        let num3 = 10;
+        // console.log(num3.toExponential(1));
+        // 一般来说，这么小的数不用表示为科学记数法形式。如果想得到数值最适当的形式，那么可以使用 toPrecision()。
+        // console.log(num3.toPrecision());
+        // 这个方法接收一个参数，表示结果中数字的总位数（不包含指数）。
+        let num4 = 99;
+        console.log(num4.toPrecision(1));
+        console.log(num4.toPrecision(2));
+        console.log(num4.toPrecision(3));
+        
     </script>
 </body>
 </html>
