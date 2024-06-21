@@ -54,19 +54,18 @@
     :before-close="handleClose"
   >
     <div class="flex flex-wrap justify-between gap-y-2 sitelist">
-        <div class="w-[20%] text-[14px] text-white" v-for="item in sitelist">{{ item }}</div>
+        <div class="w-[20%] text-[14px] text-white" v-for="item in jbqk.siteList">{{ item }}</div>
     </div>
     
   </el-dialog>
 </template>
 
 <script>
-    import {jbqk,sitelist} from '@/api/'
+    import {jbqk} from '@/api/'
     export default {
         data() {
             return {
                 jbqk: {},
-                sitelist: [],
                 dialogVisible: false
             }
         },
@@ -74,9 +73,6 @@
             jbqk().then(res => {
                 this.jbqk = res
             }) 
-            sitelist().then(res => {
-                this.sitelist = res
-            })
         },
         methods: {
             showSite() {
