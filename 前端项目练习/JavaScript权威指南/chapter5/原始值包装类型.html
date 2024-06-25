@@ -58,11 +58,11 @@ true 或 false，如下例所示： */
 用时也会被覆盖，返回字符串"true"或"false"。 */
         let falseObject = new Boolean(false);
         let result = falseObject && true;
-        console.log(result);
+        // console.log(result);
 
         let falseValue = false;
         result = falseValue && true;
-        console.log(result);
+        // console.log(result);
         /* 除此之外，原始值和引用值（ Boolean 对象）还有几个区别。首先， typeof 操作符对原始值返回
 "boolean"，但对引用值返回"object"。同样， Boolean 对象是 Boolean 类型的实例，在使用
 instaceof 操作符时返回 true，但对原始值则返回 false，如下所示： */
@@ -104,10 +104,49 @@ toFixed()方法返回包含指定小数点位数的数值字符串，如： */
         // console.log(num3.toPrecision());
         // 这个方法接收一个参数，表示结果中数字的总位数（不包含指数）。
         let num4 = 99;
-        console.log(num4.toPrecision(1));
-        console.log(num4.toPrecision(2));
-        console.log(num4.toPrecision(3));
-        
+        // console.log(num4.toPrecision(1));
+        // console.log(num4.toPrecision(2));
+        // console.log(num4.toPrecision(3));
+        /* 注意 toPrecision()方法可以表示带 1~21 个小数位的数值。某些浏览器可能支持更大
+的范围，但这是通常被支持的范围。 */
+        let numberValue = 10
+        // console.log(typeof numberObject);
+        // console.log(typeof numberValue);
+        // console.log(numberObject instanceof Number);
+        // console.log(numberValue instanceof Number);
+
+        // isInteger()方法和安全整数
+        /* ES6 新增了 Number.isInteger()方法，用于辨别一个数值是否保存为整数。有时候，小数位的 0
+可能会让人误以为数值是一个浮点值： */
+        // console.log(Number.isInteger(1));
+        // console.log(Number.isInteger(1.00));
+        // console.log(Number.isInteger(1.01));
+        /* IEEE 754 数值格式有一个特殊的数值范围，在这个范围内二进制值可以表示一个整数值。这个数值
+范围从 Number.MIN_SAFE_INTEGER（ -2^53 + 1）到 Number.MAX_SAFE_INTEGER（ 2^53 - 1）。对超出这
+个范围的数值，即使尝试保存为整数， IEEE 754 编码格式也意味着二进制值可能会表示一个完全不同的
+数值。为了鉴别整数是否在这个范围内，可以使用 Number.isSafeInteger()方法： */
+        // console.log(Number.isSafeInteger(-1 * (2** 53)));
+        // console.log(Number.isSafeInteger(-1 * (2 ** 53) + 1));
+        // console.log(Number.isSafeInteger(2 ** 53));
+        // console.log(Number.isSafeInteger((2 ** 53) - 1));
+
+        // String
+        let stringObject = new String("你好 世界")
+        let stringValue = "hello world"
+
+        /* 注意，即使字符串中包含双字节
+字符（而不是单字节的 ASCII 字符），也仍然会按单字符来计数。 */
+        console.log(stringValue.length);
+        console.log(stringObject.length);
+
+        let message = "法师赵海柱"
+        let message2 = "1abcd"
+        // charAt()方法返回给定索引位置的字符，由传给方法的整数参数指定。
+        console.log(message.charAt(0));
+
+        // 使用 charCodeAt()方法可以查看指定码元的字符编码。
+        console.log(message.charCodeAt(0));
+        console.log(message2.charCodeAt(0));
     </script>
 </body>
 </html>
