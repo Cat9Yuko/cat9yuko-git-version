@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文本数据操作</title>
+</head>
+<body>
+    <div id="app">
+       <div v-text="name"></div>
+       <div v-html="html"></div>
+    </div>
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/3.4.29/vue.global.js"></script>
+   
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    name: '后盾人',
+                    html: '<h2 style="color: red;">houdunren.com</h2>'
+                }
+            }
+        })
+        const vm = app.mount("#app")
+
+        setTimeout(() => {
+            vm.$data.name = '向军大叔'
+        }, 3000);
+    </script>
+</body>
+</html>

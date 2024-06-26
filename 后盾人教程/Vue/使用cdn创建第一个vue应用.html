@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>使用cdn创建第一个vue应用</title>
+</head>
+<body>
+    <div id="app">
+       <h2 v-for="lession in lessions"> {{lession.title}}</h2>
+    </div>
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/3.4.29/vue.global.js"></script>
+    <script>
+        window.lessions = [{"title":"第一章 Vue 基础入门"},{"title":"第二章 vue3.0组件化开发"}]
+    </script>
+    <script>
+        const app = Vue.createApp({
+            template: `<div>houdunren - {{title}} <xj/></div>`,
+            data() {
+                return {
+                    lessions: lessions,
+                    title: '后盾人',
+                    title2: 'houdunren.com'
+                }
+            }
+        })
+
+        // 创建组件
+        app.component('xj', {
+            data() {
+                return {
+                    name: '向军大叔'
+                }
+            },
+            template: `<h2 style="background-color:red;color:white;">{{name}}</h2>`
+        })
+        const vm = app.mount("#app")
+    </script>
+</body>
+</html>
