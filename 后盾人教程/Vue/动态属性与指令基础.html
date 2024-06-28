@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动态属性与指令修改</title>
+</head>
+<body>
+    <div id="app">
+        <div v-bind:id="id">{{name}}</div>
+        <div :id="id2">{{name}}</div>
+        <div>{{num==1?'后盾人':'向军'}}</div>
+        <a v-bind:[arg]="url">{{name}}</a> <!-- 控制属性 -->
+        <div v-show="false"> {{name}} </div>
+        <div v-once>{{name2}}</div>
+        <div>{{name2}}</div>
+    </div>
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/3.4.29/vue.global.js"></script>
+   
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    name: '后盾人',
+                    name2: '后盾人2',
+                    id: 'hdcms',
+                    id2: undefined, // null 或 undefined属性是无效的
+                    num: 1,
+                    arg: 'name',
+                    url:''
+                }
+            }
+        })
+        const vm = app.mount('#app')
+
+        setTimeout(() => {
+            vm.$data.num = 100
+            vm.$data.name2 = '变了'
+            vm.$data.arg = 'href'
+            vm.$data.url = 'http://www.houdunren.com'
+        }, 3000);
+    </script>
+</body>
+</html>
