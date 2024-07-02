@@ -25,24 +25,35 @@
                     name: '后盾人',
                     event:'click',
                     num: 1,
-                    error:''
+                    tip: ''
+                }
+            },
+            computed: {
+                // error: {
+                //     get() {
+                //         const message =  this.num == 0 ? '不能小于0' : this.num==10?'不能大于10':''
+                //         if(message) {
+                //             return this.tip + message
+                //         }
+                //     },
+                //     set(tip) {
+                //         this.tip = tip
+                //     }
+                // }
+                error() {
+                    const message =  this.num == 0 ? '不能小于0' : this.num==10?'不能大于10':''
+                    if(message) return this.tip + message
                 }
             },
             methods: {
                 add() {
-                    this.error = ''
                     if(this.num < 10) {
                         this.num++
-                    } else {
-                        this.error = '不能超过10'
                     }
                 },
                 desc() {
-                    this.error = ''
                     if(this.num>0) {
                         this.num-- 
-                    } else {
-                        this.error = '不能小于0'
                     }
                 }
             },
