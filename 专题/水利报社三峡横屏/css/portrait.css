@@ -1,0 +1,133 @@
+/* 竖屏   orientation: portrait 代表竖屏的状态下*/
+@media screen and (orientation: portrait) {
+  /* :root {
+        font-size: 4px;
+      }
+      html {
+        width: 100%;
+        height: 100%;
+      }
+      body {
+        width: 100%;
+        height: 100%;
+      } */
+}
+
+/* 横屏 orientation: landscape代表手机在横屏的状态下 */
+@media screen and (orientation: landscape) {
+  :root {
+    font-size: 5px;
+  }
+  html {
+    width: 100vw;
+    height: 100vh;
+  }
+  body {
+    width: 100vw;
+    height: 100vh;
+  }
+  .main {
+    overflow-x: auto !important;
+    overflow-y: auto !important;
+    height: 100%;
+    width: 100%;
+    top: 0;
+  }
+  #parallax {
+    height: 100vh;
+    width: 1100vw;
+  }
+  .box {
+    height: 100% !important;
+    width: 100vw;
+  }
+  .textp1 {
+    width: 16.75rem;
+    top: 3.7rem;
+    left: calc(50% - 18.125rem);
+  }
+  .textp2 {
+    width: 6.125rem;
+    top: 23.125rem;
+    left: calc(50% - 3.125rem);
+  }
+  .textp3 {
+    top: 15.625rem;
+    width: 16.75rem;
+    left: calc(50% - 0.625rem);
+  }
+  .col1 {
+    bottom: 3.125rem;
+    left: calc(50% - 21.5625rem);
+    width: 43.1875rem;
+  }
+  .tips {
+    width: 12.5rem;
+    height: 6.25rem;
+    bottom: 1.875rem;
+    background-size: cover;
+  }
+  .box2 .textPic1 {
+    top: 17.25rem;
+    left: calc(50% - 32.5rem);
+    width: 68.75rem;
+  }
+  .box2 .textPic2 {
+    top: 28.5rem;
+    left: calc(50% - 35rem);
+    width: 68.75rem;
+  }
+  .map {
+    left: calc(50% - 37.1875rem);
+    top: 9.375rem;
+    width: 74.375rem;
+    height: 19.625rem;
+    background-size: cover;
+  }
+  .shijue1 {
+    width: 31.25rem;
+  }
+  .shijue2 {
+    width: 98.75rem;
+  }
+  .shijue3 {
+    width: 131.25rem;
+  }
+  .map a {
+    width: 6.25rem;
+    font-size: 1.125rem;
+  }
+  .map a i {
+    width: .875rem;
+    height: .875rem;
+    border-radius: 1rem;
+    border: 2px solid #fff;
+  }
+  .map1{bottom:2.25rem;left:12.5rem;}.map1 i{left:-1.1875rem;top:-1.0625rem;}
+ .map2{bottom:7.125rem;left:10rem;}.map2 i{left:3rem;top:1.3125rem;}
+ .map3{bottom:7.5rem;left:17.1875rem;}.map3 i{left:-2.125rem;top:-0.125rem;}
+ .map4{bottom:10rem;left:13.125rem;}.map4 i{left:3.125rem;top:.5rem;}
+ .map5{bottom:10.9375rem;left:19.0625rem;}.map5 i{left:-2rem;top:.375rem;}
+ .map6{bottom:12.1875rem;left:14.25rem;}.map6 i{left:2.75rem;top:.375rem;}
+ .map7{bottom:14.75rem;left:14.375rem;}.map7 i{left:2.3125rem;top:1.625rem;}
+ .map8{bottom:15.375rem;left:19.375rem;}.map8 i{left:.3125rem;top:2rem;}
+ .map9{bottom:15.9375rem;left:22.1875rem;}.map9 i{left:.5rem;top:2.375rem;}
+.map10{bottom:16.5625rem;left:26.25rem;}.map10 i{left:.625rem;top:2.1875rem;}
+.map11{bottom:17.5rem;left:33.125rem;}.map11 i{left:.625rem;top:2.25rem;}
+.map12{bottom:18.75rem;left:51.25rem;}.map12 i{left:.625rem;top:2.4375rem;}
+.box4 a {
+    height: 100%;
+    width: 44vw;
+}
+.box4 a.tingbg1 {
+    background-size: cover;
+}
+.box4 a.tingbg2 {
+    left: 33vw;
+    background-size: cover;
+}
+.box4 a.tingbg3 {
+    left: 66vw;
+    background-size: cover;
+}
+}

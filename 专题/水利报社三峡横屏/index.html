@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>新三峡的幸福回响</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="keywords" content="新三峡的幸福回响">
+    <meta name="description" content="新三峡的幸福回响">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">	
+	<meta name="format-detection" content="telephone=no">
+    <!-- css -->
+	<link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/custom.css">
+	<link rel="stylesheet" href="css/portrait.css">
+  </head>
+  <body>
+	
+	<style>
+		body{background:#000;}
+		.quanpingv{display:block;height:100%;width:100%;position:relative;margin:0;}
+		.quanpingv video{display:block;position:absolute;top:50%;left:0%;transform:translateY(-50%);}
+		.quanpingv:hover .tiaoguo{opacity: 1;}
+		.tiaoguo{display:block;width:auto;height:auto;padding:6px 25px;text-align:center;font-size:16px; color:#fff; position:absolute;top:30px;right:30px;z-index:100;
+			border:1px solid #fff;opacity: 0;}
+		.tiaoguo:hover{background:#fff;color:#333;opacity:0.9}
+		.quanpingv .btn_bf{height:calc(100% - 70px);}
+		.quanpingv .bofang{background-size:9% 20%;}
+		.quanpingv .zanting{background-size:9% 20%;}
+	</style>
+
+	<div id="print">
+		<div class="quanpingv">
+			<a class="tiaoguo chuxian" href="main.html"> 跳过视频 </a>
+			<!--<a class="btn_bf bofang" href="javascript:void(0)"></a>-->
+			<video controls="" autoplay id="myvideo" controlslist="nodownload" poster="images/v0.png" style="width:100%;height:100%">
+				<!-- <source src="http://cdn.dayuxiaoyu.com/water/v0.mp4" type="video/mp4"/> -->
+			</video>
+		</div>
+	</div>
+    
+	<!-- jQuery -->
+
+	<script src="js/jquery-1.7.min.js"></script>
+	<script src="js/spotlight.bundle.js"></script>
+	<script src="js/custom.js"></script>
+	<script src="js/portrait.js"></script>
+	<script>
+
+        var video = document .getElementById("myvideo");
+		video.addEventListener("ended",function(){
+			video.play();
+			window.location.href = "main.html";2
+		});
+
+		$("#myvideo").bind("contextmenu",function() { return false; });
+
+    </script>
+	
+    
+  </body>
+</html>
