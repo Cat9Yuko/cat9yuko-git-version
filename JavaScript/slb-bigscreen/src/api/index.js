@@ -70,7 +70,7 @@ export const zmjj = (params) => {
     return $getJson('./JSON/ZTFL.json', params) // 主题分类
 }
 export const letterCharts = (params) => {
-    return $getJson('./JSON/LXQS.json', params) // 来信趋势
+    return $getJson('./JSON/ZXQS.json', params) // 来信趋势
 }
 export const letter = (params) => {
     return $getJson('./JSON/ZXLX.json', params) // 最新来信

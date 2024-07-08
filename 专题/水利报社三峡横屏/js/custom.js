@@ -35,7 +35,6 @@ $(document).ready(function () {
 		
 	});
 	
-	
 	   
 	 //我的收藏 点赞  $(this).siblings().removeClass("open");
 	$('.wd-btn-sc').click(function() {				
@@ -46,159 +45,456 @@ $(document).ready(function () {
 			$(this).addClass('act');
 		}
 	});
+	$('.article-title .icon').click(function () {
+		$(this).toggleClass('on');
+    });
 	
-	
+
 	// 返回顶部
 	$('#totop').click(function () {
 		$('html,body').animate({ scrollTop: 0 }, 300);
 	});
 
-	
-	
-	// 目录
-	$('.title').click(function () {
-		$(this).parent(".mulu").toggleClass('open');
-    });
+
 		
-	$('.article-title .icon').click(function () {
-		$(this).toggleClass('on');
-    });
-	
-	
-	
-	
-	// menu
-	$(".menu1").click(function () {
+	// 获取横向滚动条的位置  并点击触发
+	var scrollPosition = $(".main").scrollLeft();
+	// menu 点击滚动到相应位置
+	$(".menu1").click(function (){
 		$(".menu2").removeClass("hov");
 		$(".menu3").removeClass("hov");
 		$(".menu1").addClass("hov");
-		//$("#parallax").addClass("weizhi1");
-		
+		$(".main").animate({ scrollLeft: scrollPosition + 3840 }, 1000);
 	});
-	$(".menu2").click(function () {
+	$(".menu2").click(function (){
 		$(".menu1").removeClass("hov");
 		$(".menu3").removeClass("hov");
 		$(".menu2").addClass("hov");
+		$(".main").animate({ scrollLeft: scrollPosition + 7680 }, 1000);
 	});
-	$(".menu3").click(function () {
+	$(".menu3").click(function (){
 		$(".menu1").removeClass("hov");
 		$(".menu2").removeClass("hov");
 		$(".menu3").addClass("hov");
+		$(".main").animate({ scrollLeft: scrollPosition + 19200 }, 1000);
 	});
-	
-	
-	$(window).scroll( function() { 
-		$("#parallax").removeClass("weizhi1");
+	// 听故事 点击滚动到相应位置
+	$(".tingbg1").click(function (){
+		$(".main").animate({ scrollLeft: scrollPosition + 7680 }, 1000);
+	});
+	$(".tingbg2").click(function (){
+		$(".main").animate({ scrollLeft: scrollPosition + 11520 }, 1000);
+	});
+	$(".tingbg3").click(function (){
+		$(".main").animate({ scrollLeft: scrollPosition + 15360 }, 1000);
 	});
 
+	// 音乐按钮
+	$(".btn_yykg a").click(function (){
+		if ($(this).hasClass('yygb')) {
+			$(this).removeClass('yygb');	
+			$(this).addClass("yydk");
+			$('.bgmusic7')[0].pause();
+		} else {
+			$(this).removeClass('yydk');	
+			$(this).addClass("yygb");
+			$('.bgmusic7')[0].play();
+		}
+    });
 	
+	// 视频按钮
+	$(".btn_bf").click(function (){
+		if ($(this).hasClass('bofang')) {
+			$(this).removeClass('bofang');	
+			$(this).addClass("zanting");
+			$(this).next("video")[0].play();
+		} else {
+			$(this).removeClass('zanting');	
+			$(this).addClass("bofang");
+			$(this).next("video")[0].pause();
+		}
+    });
+
+	// 禁止视频右键菜单
+	$(".vid").bind("contextmenu",function() { return false; });
+	$("#zuihouv").bind("contextmenu",function() { return false; });
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+	// 获取横向滚动条的位置  并横向滚动触发
+	$(".main").scroll(function () {
+		var scrollPosition = $(".main").scrollLeft();
+
+		// 给菜单加样式
+		if (scrollPosition > 3700) {
+			if (scrollPosition > 5750) {
+				if (scrollPosition > 19000) {
+					$(".menu2").removeClass("hov");
+					$(".menu1").removeClass("hov");
+					$(".menu3").addClass("hov");
+				}else {
+					$(".menu1").removeClass("hov");
+					$(".menu3").removeClass("hov");
+					$(".menu2").addClass("hov");
+				};
+			}else {
+				$(".menu2").removeClass("hov");
+				$(".menu3").removeClass("hov");
+				$(".menu1").addClass("hov");
+			};
+		}else{
+			$(".menu2").removeClass("hov");
+			$(".menu3").removeClass("hov");
+			$(".menu1").removeClass("hov");
+		};
+		
+		
+		// 菜单出现动画
+		if (scrollPosition > 1900) {
+			$('.leftmenu').addClass('openmu movemu')
+			setTimeout(function() {
+				$('.menu1').addClass('openmu movemu')
+			}, 500);
+			setTimeout(function() {
+				$('.menu2').addClass('openmu movemu')
+			}, 1000);
+			setTimeout(function() {
+				$('.menu3').addClass('openmu movemu')
+			}, 1500);
+		}else{};	
+		
+		
+		// 视觉差动画
+		if (scrollPosition > 3600) {
+			$('.shijue3').addClass('move5 openmu')
+			setTimeout(function() {
+				$('.shijue2').addClass('')
+			}, 500);
+			setTimeout(function() {
+				$('.shijue1').addClass('move3 openmu')
+			}, 0);
+		}else{};
+		
+		if (scrollPosition > 7500) {
+			$('.shijue4').addClass('moveman openmu')
+			setTimeout(function() {
+				$('.shijue5').addClass('moveman openmu')
+			}, 1500);
+		}else{};	
+			
+		if (scrollPosition > 11000) {
+			$('.shijue6').addClass('moveman openmu')
+			setTimeout(function() {
+				$('.shijue7').addClass('moveman openmu')
+			}, 1500);
+		}else{};	
+
+		if (scrollPosition > 15000) {
+			$('.shijue8').addClass('moveman openmu')
+			
+		}else{};
+		
+		
+		
+
+		//车站闪烁
+		if (scrollPosition > 3800) {
+			if (scrollPosition > 5000) {
+						$(".map a").removeClass("hov");
+					}else {
+						$('.map1').addClass('hov')
+						setTimeout(function() {
+							$('.map2').addClass('hov')
+							$(".map1").removeClass("hov");
+						}, 500);
+						setTimeout(function() {
+							$('.map3').addClass('hov')
+							$(".map2").removeClass("hov");
+						}, 1000);
+						setTimeout(function() {
+							$('.map4').addClass('hov')
+							$(".map3").removeClass("hov");
+						}, 1500);
+						setTimeout(function() {
+							$('.map5').addClass('hov')
+							$(".map4").removeClass("hov");
+						}, 2000);
+						setTimeout(function() {
+							$('.map6').addClass('hov')
+							$(".map5").removeClass("hov");
+						}, 2500);
+						setTimeout(function() {
+							$('.map7').addClass('hov')
+							$(".map6").removeClass("hov");
+						}, 3000);
+						setTimeout(function() {
+							$('.map8').addClass('hov')
+							$(".map7").removeClass("hov");
+						}, 3500);
+						setTimeout(function() {
+							$('.map9').addClass('hov')
+							$(".map8").removeClass("hov");
+						}, 4000);
+						setTimeout(function() {
+							$('.map10').addClass('hov')
+							$(".map9").removeClass("hov");
+						}, 4500);
+						setTimeout(function() {
+							$('.map11').addClass('hov')
+							$(".map10").removeClass("hov");
+						}, 5000);
+						setTimeout(function() {
+							$('.map12').addClass('hov')
+							$(".map11").removeClass("hov");
+						}, 5500);
+						setTimeout(function() {
+							$(".map12").removeClass("hov");
+						}, 6000);
+						setTimeout(function() {
+							$(".map1").addClass("");
+							$(".map1 i").addClass("hov-hand");
+						}, 7000);
+					};
+			
+		}else{};
+			
+		 
+		
+
+		// 控制声音播放
+		if (scrollPosition > 7600) {
+			if (scrollPosition > 8100) {
+				$('.bgmusic1')[0].pause();
+			}else{
+				$('.bgmusic1')[0].play();
+			}
+		}else if(scrollPosition < 7400) {
+			$('.bgmusic1')[0].pause();
+		}else{};
+	
+		if (scrollPosition > 11200) {
+				if (scrollPosition > 11700) {
+					$('.bgmusic2')[0].pause();
+				}else{
+					$('.bgmusic2')[0].play();
+				};
+			}else if(scrollPosition < 10500) {
+				$('.bgmusic2')[0].pause();
+			}else{};
+			
+		if (scrollPosition > 15200) {
+				if (scrollPosition > 15700) {
+					$('.bgmusic3')[0].pause();
+				}else{
+					$('.bgmusic3')[0].play();
+				};
+			}else if(scrollPosition < 15000) {
+				$('.bgmusic3')[0].pause();
+			}else{};
+
+		
+		// 控制视频播放
+		if (scrollPosition > 10900) {			
+			$('#vid1')[0].pause();
+		}else if(scrollPosition < 8600) {
+			$('#vid1')[0].pause();
+		}else{};
+
+		if (scrollPosition > 14800) {
+			$('#vid2')[0].pause();
+		}else if(scrollPosition < 13300) {
+			$('#vid2')[0].pause();
+		}else{};
+
+		if (scrollPosition > 19200) {
+			$('#vid3')[0].pause();
+		}else if(scrollPosition < 18000) {
+			$('#vid3')[0].pause();
+		}else{};
+
+		
+		//视频播放的时候暂停背景音乐
+		var video2 = $('.vid');
+		var audio2 = $('.bgmusic7');
+		video2.on('play', function() {
+			audio2[0].pause();
+			$(".btn_yykg a").addClass("yydk");
+			$(".btn_yykg a").removeClass('yygb');
+		});
+		video2.on('pause', function() {
+			audio2[0].play();
+			$(".btn_yykg a").addClass("yygb");
+			$(".btn_yykg a").removeClass('yydk');
+		});
+		video2.on('ended', function() {
+			audio2[0].play();
+			$(".btn_yykg a").addClass("yygb");
+			$(".btn_yykg a").removeClass('yydk');
+		});
+		
+			
+		// 笑脸视频播放
+		if (scrollPosition > 19000) {
+			$("#zuihouv")[0].play();
+			$('.bgmusic7')[0].pause();
+			$(".btn_yykg a").addClass("yydk");
+			$(".btn_yykg a").removeClass('yygb');
+			setTimeout(function() {
+				$('.zimucon').addClass('moveman openmu')
+			}, 26000);
+		}
+		else if(scrollPosition < 18000) {
+			$("#zuihouv")[0].pause();
+		}else{};
+
+
+
+		
+
+		
+		//笑脸动画 以前的
+		if (scrollPosition > 19000) {
+			$('.photocon li:nth-child(1)').addClass('openphoto move1')
+			$('.photocon li:nth-child(2)').addClass('openphoto move1')
+			$('.photocon li:nth-child(3)').addClass('openphoto move2')
+			$('.photocon li:nth-child(4)').addClass('openphoto move2')
+			$('.photocon li:nth-child(5)').addClass('openphoto move1')
+			$('.photocon li:nth-child(6)').addClass('openphoto move4')
+			setTimeout(function() {
+				$('.photocon li:nth-child(7)').addClass('openphoto move4')
+				$('.photocon li:nth-child(8)').addClass('openphoto move4')
+				$('.photocon li:nth-child(9)').addClass('openphoto move3')
+				
+			}, 2000);
+			setTimeout(function() {
+				$('.photocon li:nth-child(10)').addClass('openphoto move3')
+				$('.photocon li:nth-child(11)').addClass('openphoto move1')
+				$('.photocon li:nth-child(12)').addClass('openphoto move1')
+				
+			}, 3000);
+			setTimeout(function() {
+				$('.photocon li:nth-child(13)').addClass('openphoto move1')
+				$('.photocon li:nth-child(14)').addClass('openphoto move2')
+				$('.photocon li:nth-child(15)').addClass('openphoto move1')
+				$('.photocon li:nth-child(16)').addClass('openphoto move4')
+				$('.photocon li:nth-child(17)').addClass('openphoto move4')
+				
+			}, 4000);
+			setTimeout(function() {
+				$('.photocon li:nth-child(18)').addClass('openphoto move4')
+				$('.photocon li:nth-child(19)').addClass('openphoto move3')
+				$('.photocon li:nth-child(20)').addClass('openphoto move3')
+				$('.photocon li:nth-child(21)').addClass('openphoto move1')
+				$('.photocon li:nth-child(22)').addClass('openphoto move1')
+				$('.photocon li:nth-child(23)').addClass('openphoto move2')
+				
+			}, 5000);
+			setTimeout(function() {
+				$('.photocon li:nth-child(24)').addClass('openphoto move2')
+				$('.photocon li:nth-child(25)').addClass('openphoto move1')
+				$('.photocon li:nth-child(26)').addClass('openphoto move4')
+				$('.photocon li:nth-child(27)').addClass('openphoto move4')
+				$('.photocon li:nth-child(28)').addClass('openphoto move4')
+				$('.photocon li:nth-child(29)').addClass('openphoto move3')
+			}, 6000);
+			// setTimeout(function() {
+			// 	$('.erweima').addClass('openphoto chuxian2')
+			// 	$('.zimucon').addClass('moveman openmu')
+			// }, 8000);
+		}else{};
+		
+
+		
+
+			
+	});	
+
+
+
+	var video1 = document .getElementById("zuihouv");
+		video1.addEventListener("ended",function(){
+			video1.pause();
+			
+			
+		});
+
+
 	
 });
 
 
 
 
+
+
+
+
+
+
 const checkboxes = document.getElementsByTagName("input");
         const gallery = [{
-            title: "丰都",
-            description: "照片介绍",
+            title: " ",//丰都
+            description: "",
             src: "images/duibi/fengdu1.jpg"
         },{
-            title: "丰都旧照",
-            description: "照片介绍",
-            src: "images/duibi/fengdu2.jpg"
-        },{
-            title: "长寿",
-            description: "照片介绍",
+            title: " ",//长寿
+            description: "",
             src: "images/duibi/changshou1.jpg"
         },{
-            title: "长寿旧照",
-            description: "照片介绍",
-            src: "images/duibi/changshou2.jpg"
-        },{
-            title: "涪陵",
-            description: "照片介绍",
+            title: " ",//涪陵
+            description: "",
             src: "images/duibi/fuling1.jpg"
         },{
-            title: "涪陵旧照",
-            description: "照片介绍",
-            src: "images/duibi/fuling2.jpg"
-        },{
-            title: "兴山",
-            description: "照片介绍",
+            title: " ",//兴山
+            description: "",
             src: "images/duibi/xingshan1.jpg"
         },{
-            title: "兴山旧照",
-            description: "照片介绍",
-            src: "images/duibi/xingshan2.jpg"
-        },{
-            title: "云阳",
-            description: "照片介绍",
+            title: " ",//云阳
+            description: "",
             src: "images/duibi/yunyang1.jpg"
         },{
-            title: "云阳旧照",
-            description: "照片介绍",
-            src: "images/duibi/yunyang2.jpg"
-        },{
-            title: "忠县",
-            description: "照片介绍",
+            title: " ",//忠县
+            description: "",
             src: "images/duibi/zhongxian1.jpg"
         },{
-            title: "忠县旧照",
-            description: "照片介绍",
-            src: "images/duibi/zhongxian2.jpg"
-        },{
-            title: "开州",
-            description: "照片介绍",
+            title: " ",//开州
+            description: "",
             src: "images/duibi/kaizhou1.jpg"
         },{
-            title: "开州旧照",
-            description: "照片介绍",
-            src: "images/duibi/kaizhou2.jpg"
-        },{
-            title: "万州",
-            description: "照片介绍",
+            title: " ",//万州
+            description: "",
             src: "images/duibi/wanzhou1.jpg"
         },{
-            title: "万州旧照",
-            description: "照片介绍",
-            src: "images/duibi/wanzhou2.jpg"
-        },{
-            title: "奉节",
-            description: "照片介绍",
+            title: " ",//奉节
+            description: "",
             src: "images/duibi/fengjie1.jpg"
         },{
-            title: "奉节旧照",
-            description: "照片介绍",
-            src: "images/duibi/fengjie2.jpg"
-        },{
-            title: "巫山",
-            description: "照片介绍",
+            title: " ",//巫山
+            description: "",
             src: "images/duibi/wushan1.jpg"
         },{
-            title: "巫山旧照",
-            description: "照片介绍",
-            src: "images/duibi/wushan2.jpg"
-        },{
-            title: "巴东",
-            description: "照片介绍",
+            title: " ",//巴东
+            description: "",
             src: "images/duibi/badong1.jpg"
         },{
-            title: "巴东旧照",
-            description: "照片介绍",
-            src: "images/duibi/badong2.jpg"
-        },{
-            title: "秭归",
-            description: "照片介绍",
+            title: " ",//秭归
+            description: "",
             src: "images/duibi/zigui1.jpg"
-        },{
-            title: "秭归",
-            description: "照片介绍",
-            src: "images/duibi/zigui2.jpg"
         }];
 		window.showGallery = function(index){
 				Spotlight.show(gallery, {
 					index: index,
 					theme: "dark",
 				});
-			};
+		};
