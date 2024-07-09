@@ -3,7 +3,9 @@
 
 $(document).ready(function () {
 	
-
+	if (!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))) {
+		// 判断不是手机端
+	  
 	// 菜单伸缩
 	$(".btn1").click(function () {
 		if ($(".zhezhao").hasClass('zopen')) {
@@ -430,7 +432,7 @@ $(document).ready(function () {
 		});
 
 
-	
+	}
 });
 
 
