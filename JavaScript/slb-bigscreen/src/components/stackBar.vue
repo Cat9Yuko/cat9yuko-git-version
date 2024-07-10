@@ -21,13 +21,11 @@
                     const mChart = echarts.init(target)
                     let months = []
                     let data1 = []
-                    let data2 = []
                     let legend = []
                     data.map(item => {
-                        data1 = item.value[0]
-                        data2 = item.value[1]
+                        data1 = item.value
                         legend = item.name
-                        item.month.map(item => {
+                        item.year.map(item => {
                             months.push(item)
                         })
                     })

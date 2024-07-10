@@ -19,14 +19,12 @@
                 const target = this.$refs.target
                 let name = []
                 let data1 = []
-                let data2 = []
                 let month = []
                 res.map((item)=> {
                     name.push(item.name[0]) 
                     name.push(item.name[1]) 
-                    data1 = item.value[0]
-                    data2 = item.value[1]
-                    month = item.month
+                    data1 = item.value
+                    month = item.year
                 })
                 
                 if(target) {

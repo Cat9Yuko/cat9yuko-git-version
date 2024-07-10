@@ -23,7 +23,7 @@
                 res.map((item)=> {
                     name.push(item.name)
                     data1 = item.value
-                    month = item.month
+                    month = item.year
                 })
                 
                 if(target) {
