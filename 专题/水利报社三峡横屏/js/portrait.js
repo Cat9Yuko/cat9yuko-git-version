@@ -223,32 +223,32 @@
 			}else{};
 			
 		if (scrollPosition > (screen*8)) {
-				if (scrollPosition > 15700) {
+				if (scrollPosition > (screen*8.1)) {
 					$('.bgmusic3')[0].pause();
 				}else{
 					$('.bgmusic3')[0].play();
 				};
-			}else if(scrollPosition < 15000) {
+			}else if(scrollPosition < (screen*7.8)) {
 				$('.bgmusic3')[0].pause();
 			}else{};
 
 		
 		// 控制视频播放
-		if (scrollPosition > 10900) {			
+		if (scrollPosition > (screen*5.7)) {			
 			$('#vid1')[0].pause();
-		}else if(scrollPosition < 8600) {
+		}else if(scrollPosition < (screen*4.5)) {
 			$('#vid1')[0].pause();
 		}else{};
 
-		if (scrollPosition > 14800) {
+		if (scrollPosition > (screen*7.8)) {
 			$('#vid2')[0].pause();
-		}else if(scrollPosition < 13300) {
+		}else if(scrollPosition < (screen*6.9)) {
 			$('#vid2')[0].pause();
 		}else{};
 
-		if (scrollPosition > 19200) {
+		if (scrollPosition > (screen*10)) {
 			$('#vid3')[0].pause();
-		}else if(scrollPosition < 18000) {
+		}else if(scrollPosition < (screen*9.3)) {
 			$('#vid3')[0].pause();
 		}else{};
 
@@ -274,7 +274,7 @@
 		
 			
 		// 笑脸视频播放
-		if (scrollPosition > 19000) {
+		if (scrollPosition > (screen*9.9)) {
 			$("#zuihouv")[0].play();
 			$('.bgmusic7')[0].pause();
 			$(".btn_yykg a").addClass("yydk");
@@ -283,7 +283,7 @@
 				$('.zimucon').addClass('moveman openmu')
 			}, 26000);
 		}
-		else if(scrollPosition < 18000) {
+		else if(scrollPosition < (screen*9.3)) {
 			$("#zuihouv")[0].pause();
 		}else{};
 

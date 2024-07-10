@@ -257,4 +257,24 @@
   .shijue8 {
     width: 21.875rem;
   }
+  .zimucon {
+    padding: 1.5625rem;
+    width: 11.25rem;
+    height: calc(100% - 3.125rem);
+  }
+  .zimu {
+    padding-top: 14.375rem;
+  }
+  .zimu h5 {
+    font-size: 1.125rem;
+    padding: .9375rem .625rem 0;;
+  }
+  .zimu p span {
+    font-size: 1rem;
+    padding: .3125rem .625rem;
+    width: calc(50% - 1.25rem);
+  }
+  .zimu p {
+    padding: .625rem 0px .9375rem;
+  }
 }

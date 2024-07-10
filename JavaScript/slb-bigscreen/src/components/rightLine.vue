@@ -22,7 +22,7 @@
                 let month = []
                 res.map((item)=> {
                     name.push(item.name)
-                    data1 = item.data
+                    data1 = item.value
                     month = item.year
                 })
                 
