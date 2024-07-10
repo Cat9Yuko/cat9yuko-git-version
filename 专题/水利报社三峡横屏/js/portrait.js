@@ -65,11 +65,11 @@
             var scrollPosition = $(".main").scrollLeft();
             var screen = $(window).width()
             // console.log($(window).width());
-            console.log($(this).scrollLeft());
+            // console.log($(this).scrollLeft());
 		// 给菜单加样式
-		if (scrollPosition > 3700) {
-			if (scrollPosition > 5750) {
-				if (scrollPosition > 19000) {
+		if (scrollPosition > (screen*1.9)) {
+			if (scrollPosition > (screen*3)) {
+				if (scrollPosition > (screen*9.9)) {
 					$(".menu2").removeClass("hov");
 					$(".menu1").removeClass("hov");
 					$(".menu3").addClass("hov");
@@ -91,7 +91,7 @@
 		
 		
 		// 菜单出现动画
-		if (scrollPosition > screen) {
+		if (scrollPosition > (screen*0.95)) {
 			$('.leftmenu').addClass('openmu movemu')
 			setTimeout(function() {
 				$('.menu1').addClass('openmu movemu')
@@ -138,7 +138,7 @@
 		
 
 		//车站闪烁
-		if (scrollPosition > (screen*2)) {
+		if (scrollPosition > (screen*1.8)) {
 			if (scrollPosition > (screen* 2.6)) {
 						$(".map a").removeClass("hov");
 					}else {
@@ -213,7 +213,7 @@
 		}else{};
 	
 		if (scrollPosition > (screen*5.8)) {
-				if (scrollPosition > (screen*6)) {
+				if (scrollPosition > (screen*6.8)) {
 					$('.bgmusic2')[0].pause();
 				}else{
 					$('.bgmusic2')[0].play();
