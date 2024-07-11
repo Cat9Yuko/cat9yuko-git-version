@@ -87,7 +87,7 @@
                         color:['#27babd','#27babd'],
                         // 图表配置
                         series: [{
-                            name: legend[0],
+                            name: legend,
                             type:'line',
                             label: {
                                 show: false

@@ -21,8 +21,7 @@
                 let data1 = []
                 let month = []
                 res.map((item)=> {
-                    name.push(item.name[0]) 
-                    name.push(item.name[1]) 
+                    name = item.name
                     data1 = item.value
                     month = item.year
                 })
@@ -85,7 +84,7 @@
                         color:['#27babd','#27babd'],
                         // 图表配置
                         series: [{
-                            name: name[0],
+                            name: name,
                             type:'line',
                             data: data1,
                             areaStyle: {

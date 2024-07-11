@@ -25,7 +25,7 @@
                     })
                     const option = {
                         tooltip: {
-                            trigger: "item",
+                            trigger: "axis",
                         },
                         // x 轴
                         xAxis: {
