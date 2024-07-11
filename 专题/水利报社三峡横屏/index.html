@@ -12,14 +12,13 @@
     <!-- css -->
 	<link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/custom.css">
-	<link rel="stylesheet" href="css/portrait.css">
   </head>
   <body>
 	
 	<style>
 		body{background:#000;}
 		.quanpingv{display:block;height:100%;width:100%;position:relative;margin:0;}
-		.quanpingv video{display:block;position:absolute;top:50%;left:0%;transform:translateY(-50%);}
+		.quanpingv video{display:block;height:;width:;position:absolute;top:50%;left:0%;transform:translateY(-50%);}
 		.quanpingv:hover .tiaoguo{opacity: 1;}
 		.tiaoguo{display:block;width:auto;height:auto;padding:6px 25px;text-align:center;font-size:16px; color:#fff; position:absolute;top:30px;right:30px;z-index:100;
 			border:1px solid #fff;opacity: 0;}
@@ -29,14 +28,12 @@
 		.quanpingv .zanting{background-size:9% 20%;}
 	</style>
 
-	<div id="print">
-		<div class="quanpingv">
-			<a class="tiaoguo chuxian" href="main.html"> 跳过视频 </a>
-			<!--<a class="btn_bf bofang" href="javascript:void(0)"></a>-->
-			<video controls="" autoplay id="myvideo" controlslist="nodownload" poster="images/v0.png" style="width:100%;height:100%">
-				<!-- <source src="http://cdn.dayuxiaoyu.com/water/v0.mp4" type="video/mp4"/> -->
-			</video>
-		</div>
+	<div class="quanpingv">
+		<a class="tiaoguo chuxian" href="main.html"> 跳过视频 </a>
+		<!--<a class="btn_bf bofang" href="javascript:void(0)"></a>-->
+		<video controls="" autoplay id="myvideo" controlslist="nodownload" poster="images/v0.png" style="width:100%;height:100%">
+			<source src="http://cdn.dayuxiaoyu.com/water/v0.mp4" type="video/mp4"/>
+		</video>
 	</div>
     
 	<!-- jQuery -->
@@ -44,7 +41,6 @@
 	<script src="js/jquery-1.7.min.js"></script>
 	<script src="js/spotlight.bundle.js"></script>
 	<script src="js/custom.js"></script>
-	<script src="js/portrait.js"></script>
 	<script>
 
         var video = document .getElementById("myvideo");
