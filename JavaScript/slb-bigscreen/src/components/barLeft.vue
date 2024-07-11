@@ -59,7 +59,7 @@
                         },
                         // y 轴
                         yAxis: {
-                            type: 'log',
+                            type: 'value',
                             axisLabel: {
                                 color: '#ffffff',
                                 // show: false,
