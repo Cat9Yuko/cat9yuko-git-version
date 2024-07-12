@@ -9,7 +9,7 @@
 }
 
 /* 横屏 orientation: landscape代表手机在横屏的状态下 */
-@media screen and (orientation: landscape) and (max-width: 768px) {
+@media screen and (orientation: landscape) and (max-width: 1024px) {
   :root {
     font-size: 6px;
   }
