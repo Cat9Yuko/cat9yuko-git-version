@@ -1,7 +1,7 @@
 /* 竖屏   orientation: portrait 代表竖屏的状态下*/
 @media screen and (orientation: portrait) {
-  .main {
-    display: none;
+  .main,.quanpingv {
+    display: none!important;
   }
   .maintel {
     display: block;
