@@ -1,49 +1,63 @@
 
     // 试试横屏
-    // let width = document.documentElement.clientWidth;
-    // let height = document.documentElement.clientHeight;
-    // if (width < height) {
-    //     console.log(width + "，" + height);
-    //     $print = $('#print');
-    //     $print.width(height);
-    //     $print.height(width);
-    //     $print.css('top', (height - width) / 2);
-    //     $print.css('left', 0 - (height - width) / 2);
-    //     $print.css('transform', 'rotate(90deg)');
-    //     $print.css('transform-origin', '50% 50%');
-    // }
-    // var evt = "onorientationchange" in window ? "orientationchange" : "resize";
-    // console.log(evt, 'evt')
-    // window.addEventListener(evt, function() {
-    //     setTimeout(function() {
-    //         var width = document.documentElement.clientWidth;
-    //         var height = document.documentElement.clientHeight;
+    let width = document.documentElement.clientWidth;
+    let height = document.documentElement.clientHeight;
+    if (width < height) {
+        console.log(width + "，" + height);
+        $print = $('#print');
+        $print.width(height);
+        $print.height(width);
+        $print.css('top', (height - width) / 2);
+        $print.css('left', 0 - (height - width) / 2);
+        $print.css('transform', 'rotate(90deg)');
+        $print.css('transform-origin', '50% 50%');
+    }
+    var evt = "onorientationchange" in window ? "orientationchange" : "resize";
+    console.log(evt, 'evt')
+    window.addEventListener(evt, function() {
+        setTimeout(function() {
+            var width = document.documentElement.clientWidth;
+            var height = document.documentElement.clientHeight;
 
-    //         $print = $('#print');
-    //         $videoIntroduce = $('#videoIntroduce')
-    //         $toVideoBack = $('#toVideoBack')
-    //         $backgroundImg = $('.backgroundImg')
-    //         if (width > height) {
-    //             $print.width(width);
-    //             $print.height(height);
-    //             $print.css('top', '0');
-    //             $print.css('left', 0);
-    //             $print.css('transform', 'none');
-    //             $print.css('transform-origin', '50% 50%');
-    //         } else {
-    //             $print.width(height);
-    //             $print.height(width);
-    //             $print.css('top', (height - width) / 2);
-    //             $print.css('left', 0 - (height - width) / 2);
-    //             $print.css('transform', 'rotate(90deg)');
-    //             $print.css('transform-origin', '50% 50%');
-    //         }
-    //     }, 500)
-    // }, false);
+            $print = $('#print');
+            $videoIntroduce = $('#videoIntroduce')
+            $toVideoBack = $('#toVideoBack')
+            $backgroundImg = $('.backgroundImg')
+            if (width > height) {
+                $print.width(width);
+                $print.height(height);
+                $print.css('top', '0');
+                $print.css('left', 0);
+                $print.css('transform', 'none');
+                $print.css('transform-origin', 'initial');
+            } else {
+                $print.width(height);
+                $print.height(width);
+                $print.css('top', (height - width) / 2);
+                $print.css('left', 0 - (height - width) / 2);
+                $print.css('transform', 'rotate(90deg)');
+                $print.css('transform-origin', '50% 50%');
+            }
+        }, 500)
+    }, false);
 
+	
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
         // 判断是手机版
 
+		$(".hands").addClass("act");
+		$(".hands").click(function(){
+			$(this).removeClass("act")
+			if ($(this).hasClass('yygb')) {
+                $(this).removeClass('yygb');	
+                $(this).addClass("yydk");
+                $('.bgmusic7')[0].pause();
+            } else {
+                $(this).removeClass('yydk');	
+                $(this).addClass("yygb");
+                $('.bgmusic7')[0].play();
+            }
+		})
         // 音乐按钮
         $(".btn_yykg a").click(function (){
             if ($(this).hasClass('yygb')) {
@@ -58,12 +72,32 @@
         });
 
         var scrollPosition2 = $(".main").scrollLeft();
-        var screen = $(window).width()
+        var screen = $(window).height()
+		function readDeviceOrientation() {
+			var wwidth = $(window).width()
+			var hheight = $(window).height()
+			console.log("wwidth: "+ wwidth);
+			console.log("hheight: "+ hheight);
+			if(wwidth>hheight) {
+				screen = wwidth
+			} else {
+				screen = hheight
+			}
+			// alert("wwidth: "+ wwidth)
+			// alert("hheight: "+ hheight)
+		}
+		$(function(){
+				readDeviceOrientation()
+			$(window).resize(function(){
+				readDeviceOrientation()
+			})
+		})
+
 
         // // 滚动事件开始
         $(".main").scroll(function () {
             var scrollPosition = $(".main").scrollLeft();
-            var screen = $(window).width()
+            var screen = $(window).height()
             // console.log($(window).width());
             // console.log($(this).scrollLeft());
 		// 给菜单加样式
@@ -274,7 +308,7 @@
 		
 			
 		// 笑脸视频播放
-		if (scrollPosition > (screen*9.9)) {
+		if (scrollPosition >= (screen*9.8)) {
 			$("#zuihouv")[0].play();
 			$('.bgmusic7')[0].pause();
 			$(".btn_yykg a").addClass("yydk");
@@ -283,9 +317,9 @@
 				$('.zimucon').addClass('moveman openmu')
 			}, 26000);
 		}
-		else if(scrollPosition < (screen*9.3)) {
-			$("#zuihouv")[0].pause();
-		}else{};
+		else {
+			// $("#zuihouv")[0].pause();
+		};
 
         
         })

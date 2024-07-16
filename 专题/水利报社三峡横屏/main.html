@@ -15,219 +15,214 @@
 	<link rel="stylesheet" href="css/portrait.css">
   </head>
   <body>
-
-	<div class="main">
-		<!--导航菜单信息-->
-		<div class="leftmenu ">
-			<ul>
-				<li><a class="menu1 " href="javascript:void(0)"></a></li>
-				<li><a class="menu2 " href="javascript:void(0)"></a></li>
-				<li><a class="menu3 " href="javascript:void(0)"></a></li>
-			</ul>
-		</div>
-		<!--背景音乐-->
-		<div class="btn_yykg">
-			<a class="yygb" href="javascript:void(0)"></a>
-			<audio class="bgmusic7" preload="" autoplay loop volume="0.2">
-				<source src="./images/music/55897.mp3" type="audio/mp3">
-			</audio>
-		</div>
-			
-		<div id="parallax" class="clearfix" style="transform: translate3d(-0px, 0px, 0px);">
-			
-			<!--第1屏内容data-type="screen"-->
-			<div class="box box1">  
-				<img class="textp1" id="hd-part1" src="./images/text01.png" atremote="1">
-				<img class="textp2" id="hd-part2" src="./images/text03.png" atremote="1">
-				<img class="textp3" id="hd-part3" src="./images/text02.png" atremote="1">       
-				<div class="tips bounce "></div>   
-				<img class="col1" src="./images/copy.png" >
+	<div class="hands"><img src="images/hand2.png" alt=""></div>
+	<div id="print">
+		<div class="main">
+			<!--导航菜单信息-->
+			<div class="leftmenu ">
+				<ul>
+					<li><a class="menu1 " href="javascript:void(0)"></a></li>
+					<li><a class="menu2 " href="javascript:void(0)"></a></li>
+					<li><a class="menu3 " href="javascript:void(0)"></a></li>
+				</ul>
 			</div>
-			<!--第2屏内容-->
-			<div class="box box2"> 
-				<img src="./images/text05.png" class="textPic1" atremote="1"  style="display: inline;">
-				<img src="./images/text04.png" class="textPic2" atremote="1"  style="display: inline;">
-		   </div>
-			<!--第3屏内容-->
-			<div class="box box3" id=“kan”>
-				<div>
-					<img src="images/icon-1.png" class="shijue1" alt="1.5" data-w="1840" atremote="1" id="parallax3">
-					<img src="images/icon-2.png" class="shijue2" alt="2.5" data-w="1840" atremote="1" id="parallax2">
-					<img src="images/icon-3.png" class="shijue3" alt="5.5" data-w="1840" atremote="1" id="parallax1">
-				</div>
-			    <div class="map">
-					<p>
-					<a class="gallery map1" onclick="showGallery(1)">丰都<i></i></a>
-					<a class="gallery map2" onclick="showGallery(2)">长寿<i></i></a>
-					<a class="gallery map3" onclick="showGallery(3)">涪陵<i></i></a>
-					<a class="gallery map4" onclick="showGallery(4)">兴山<i></i></a>
-					<a class="gallery map5" onclick="showGallery(5)">云阳<i></i></a>
-					<a class="gallery map6" onclick="showGallery(6)">忠县<i></i></a>
-					<a class="gallery map7" onclick="showGallery(7)">开州<i></i></a>
-					<a class="gallery map8" onclick="showGallery(8)">万州<i></i></a>
-					<a class="gallery map9" onclick="showGallery(9)">奉节<i></i></a>
-					<a class="gallery map10" onclick="showGallery(10)">巫山<i></i></a>
-					<a class="gallery map11" onclick="showGallery(11)">巴东<i></i></a>
-					<a class="gallery map12" onclick="showGallery(12)">秭归<i></i></a>
-					</p>
-				</div>
+			<!--背景音乐-->
+			<div class="btn_yykg">
+				<a class="yygb" href="javascript:void(0)"></a>
+				<audio class="bgmusic7" preload="" autoplay loop volume="0.2">
+					<source src="./images/music/55897.mp3" type="audio/mp3">
+				</audio>
 			</div>
-			<!--第4屏内容-->
-			<div class="box box4" id=“ting”>
-				<a class="tingbg1"></a> 
-				<a class="tingbg2"></a> 
-				<a class="tingbg3"></a> 				
-			</div>
-			<!--第5屏内容-->
-			<div class="box box5">   
-				<img src="./images/icon-6.png" class="shijue4" alt="1.1" data-w="2240" atremote="1" id="parallax-bg3">
-				<div class="bgMusic">
-					<audio class="bgmusic1" preload="" >
-						<source src="./images/music/m1.mp3" type="audio/mp3">
-					</audio>
+				
+			<div id="parallax" class="clearfix" style="transform: translate3d(-0px, 0px, 0px);">
+				
+				<!--第1屏内容data-type="screen"-->
+				<div class="box box1">  
+					<img class="textp1" id="hd-part1" src="./images/text01.png" atremote="1">
+					<img class="textp2" id="hd-part2" src="./images/text03.png" atremote="1">
+					<img class="textp3" id="hd-part3" src="./images/text02.png" atremote="1">       
+					<div class="tips bounce "></div>   
+					<img class="col1" src="./images/copy.png" >
 				</div>
-			</div>   
-			<!--第6屏内容-->
-			<div class="box box6">        	
-				<img src="./images/icon-5.png" class="shijue5" alt="1.3" data-w="3000" atremote="1">
-				<div class="vid">
-					<!--<a class="btn_bf bofang" href="javascript:void(0)"></a>-->
-					<video controls="" id="vid1" class="vid" controlslist="nodownload" poster="images/v1.png" width="1000px" height="562px">
-						<source src="http://cdn.dayuxiaoyu.com/water/v1.mp4" type="video/mp4"/>
-					</video>
-					<h5><A class="cs">看见・夷陵</a></h5>
-					<p><a href="http://www.chinawater.com.cn/vr/yiling/" target="_black"></a> </p>
-				</div>
-			</div>
-			<!--第7屏内容-->
-			<div class="box box7"> 
-				<img src="./images/icon-9.png" class="shijue6" alt="1.1"  data-w="1800" atremote="1">
-				<img src="./images/icon-10.png" class="shijue7" alt="1.5" data-w="1200" atremote="1">
-				<div class="bgMusic">
-					<audio class="bgmusic2" preload="">
-						<source src="./images/music/m2.mp3" type="audio/mp3">
-					</audio>
-				</div>
-			 </div>           
-			<!--第8屏内容-->
-			<div class="box box8">    
-				<div class="vid">
-					<!--<a class="btn_bf bofang" href="javascript:void(0)"></a>-->
-					<video controls="" id="vid2"  class="vid" controlslist="nodownload" poster="images/v2.png" width="1000px" height="562px">
-						<source src="http://cdn.dayuxiaoyu.com/water/v2.mp4" type="video/mp4"/>
-					</video>
-					<h5>遇见・巴东</h5>
-					<p><a href="http://www.chinawater.com.cn/vr/badong/" target="_black"></a> </p>
-				</div>
-			</div>
-			<!--第9屏内容-->
-			<div class="box box9">
-				<img src="./images/icon-11.png" class="shijue8" alt="1.3" data-w="1000" atremote="1">
-				<div class="bgMusic">
-					<audio class="bgmusic3" preload="">
-						<source src="./images/music/m3.mp3" type="audio/mp3">
-					</audio>
-					<audio class="bgmusic6" preload="">
-						<source src="./images/music/m3-2.mp3" type="audio/mp3">
-					</audio>
-				</div>
-			</div>
-			<!--第10屏内容-->
-			<div class="box box10">    
-				<div class="vid">
-					<!--<a class="btn_bf bofang" href="javascript:void(0)"></a>-->
-					<video controls="" id="vid3" class="vid" controlslist="nodownload" poster="images/v3.png" width="1000px" height="562px">
-						<source src="http://cdn.dayuxiaoyu.com/water/v3.mp4" type="video/mp4"/>
-					</video>
-					<h5>听见・万州</h5>
-					<p><a href="http://www.chinawater.com.cn/vr/wanzhou/" target="_black"></a> </p>
-				</div>
-			</div>
-			<!--第11屏内容-->
-			<div class="box box11" id=“xiao”>
-				<!-- <div class="erweima">
-					<p>
-						<img src="images/erweima.png" alt="">
-						<span>扫码的文字</span>
-					</p>
-				</div>
-				<div class="bgMusic">
-					<audio class="bgmusic4" preload="">
-						<source src="./images/music/m1-2.mp3" type="audio/mp3">
-					</audio>
-					<audio class="bgmusic5" preload="">
-						<source src="./images/music/m2-2.mp3" type="audio/mp3">
-					</audio>
-					
-				</div> -->
-				<div class="zimucon">
-					<div class="zimu">
-						<h5>审核：</h5>
-						<p><span>陈锐</span></p>
-						<h5>监制：</h5>
-						<p><span>樊弋滋</span></p>
-						<h5>统筹：</h5>
-						<p><span>罗景月</span></p>
-						<h5>视觉总监：</h5>
-						<p><span>杨桦</span></p>
-						<h5>技术支持：</h5>
-						<p><span>王瑜</span><span>张诗剑</span></p>
-						<h5>视频支持：</h5>
-						<p><span>燕乃一</span><span>张玉峰</span><span>周念晨</span><span>张诗剑</span><span>齐京泽</span></p>
+				<!--第2屏内容-->
+				<div class="box box2"> 
+					<img src="./images/text05.png" class="textPic1" atremote="1"  style="display: inline;">
+					<img src="./images/text04.png" class="textPic2" atremote="1"  style="display: inline;">
+			   </div>
+				<!--第3屏内容-->
+				<div class="box box3" id=“kan”>
+					<div>
+						<img src="images/icon-1.png" class="shijue1" alt="1.5" data-w="1840" atremote="1" id="parallax3">
+						<img src="images/icon-2.png" class="shijue2" alt="2.5" data-w="1840" atremote="1" id="parallax2">
+						<img src="images/icon-3.png" class="shijue3" alt="5.5" data-w="1840" atremote="1" id="parallax1">
+					</div>
+					<div class="map">
+						<p>
+						<a class="gallery map1" onclick="showGallery(1)">丰都<i></i></a>
+						<a class="gallery map2" onclick="showGallery(2)">长寿<i></i></a>
+						<a class="gallery map3" onclick="showGallery(3)">涪陵<i></i></a>
+						<a class="gallery map4" onclick="showGallery(4)">兴山<i></i></a>
+						<a class="gallery map5" onclick="showGallery(5)">云阳<i></i></a>
+						<a class="gallery map6" onclick="showGallery(6)">忠县<i></i></a>
+						<a class="gallery map7" onclick="showGallery(7)">开州<i></i></a>
+						<a class="gallery map8" onclick="showGallery(8)">万州<i></i></a>
+						<a class="gallery map9" onclick="showGallery(9)">奉节<i></i></a>
+						<a class="gallery map10" onclick="showGallery(10)">巫山<i></i></a>
+						<a class="gallery map11" onclick="showGallery(11)">巴东<i></i></a>
+						<a class="gallery map12" onclick="showGallery(12)">秭归<i></i></a>
+						</p>
 					</div>
 				</div>
-
-				<video id="zuihouv" class="vid videoblock " controlslist="nodownload" preload>
-					<source src="images/v4.mov" type="video/mp4">
-				</video>
-
-				<!-- <ul class="photocon">
-					<li class="photo" style=""><img src="images/photo/xiao1.jpg" alt=""></li>
-					<li class="photo" style=""><img src="images/photo/xiao2.jpg" alt=""></li>
-					<li class="photo" style=""><img src="images/photo/xiao3.jpg" alt=""></li>
-					<li class="photo" style=""><img src="images/photo/xiao4.jpg" alt=""></li>
-					<li class="photo" style=""><img src="images/photo/xiao5.jpg" alt=""></li>
-					<li class="photo" style=""><img src="images/photo/xiao6.jpg" alt=""></li>
-					<li class="photo" style=""><img src="images/photo/xiao7.jpg" alt=""></li>
-					<li class="photo" style=""><img src="images/photo/xiao8.jpg" alt=""></li>
-					<li class="photo" style=""><img src="images/photo/xiao9.jpg" alt=""></li>
-					<li class="photo" style=""><img src="images/photo/xiao10.jpg" alt=""></li>
-				
-					<li class="photo" style=""><img src="images/photo/xiao11.jpg" alt=""></li>
-					<li class="photo" style=""><img src="images/photo/xiao12.jpg" alt=""></li>
-					<li class="photo" style=""><img src="images/photo/xiao13.jpg" alt=""></li>
-					<li class="photo" style=""><img src="images/photo/xiao14.jpg" alt=""></li>
-					<li class="photo" style=""><img src="images/photo/xiao15.jpg" alt=""></li>
-					<li class="photo" style=""><img src="images/photo/xiao16.jpg" alt=""></li>
-					<li class="photo" style=""><img src="images/photo/xiao17.jpg" alt=""></li>
-					<li class="photo" style=""><img src="images/photo/xiao18.jpg" alt=""></li>
-					<li class="photo" style=""><img src="images/photo/xiao19.jpg" alt=""></li>
-					<li class="photo" style=""><img src="images/photo/xiao20.jpg" alt=""></li>
+				<!--第4屏内容-->
+				<div class="box box4" id=“ting”>
+					<a class="tingbg1"></a> 
+					<a class="tingbg2"></a> 
+					<a class="tingbg3"></a> 				
+				</div>
+				<!--第5屏内容-->
+				<div class="box box5">   
+					<img src="./images/icon-6.png" class="shijue4" alt="1.1" data-w="2240" atremote="1" id="parallax-bg3">
+					<div class="bgMusic">
+						<audio class="bgmusic1" preload="" >
+							<source src="./images/music/m1.mp3" type="audio/mp3">
+						</audio>
+					</div>
+				</div>   
+				<!--第6屏内容-->
+				<div class="box box6">        	
+					<img src="./images/icon-5.png" class="shijue5" alt="1.3" data-w="3000" atremote="1">
+					<div class="vid">
+						<!--<a class="btn_bf bofang" href="javascript:void(0)"></a>-->
+						<video controls="" id="vid1" class="vid" controlslist="nodownload" poster="images/v1.png" width="1000px" height="562px">
+							<source src="http://cdn.dayuxiaoyu.com/water/v1.mp4" type="video/mp4"/>
+						</video>
+						<h5><A class="cs">看见・夷陵</a></h5>
+						<p><a href="http://www.chinawater.com.cn/vr/yiling/" target="_black"></a> </p>
+					</div>
+				</div>
+				<!--第7屏内容-->
+				<div class="box box7"> 
+					<img src="./images/icon-9.png" class="shijue6" alt="1.1"  data-w="1800" atremote="1">
+					<img src="./images/icon-10.png" class="shijue7" alt="1.5" data-w="1200" atremote="1">
+					<div class="bgMusic">
+						<audio class="bgmusic2" preload="">
+							<source src="./images/music/m2.mp3" type="audio/mp3">
+						</audio>
+					</div>
+				 </div>           
+				<!--第8屏内容-->
+				<div class="box box8">    
+					<div class="vid">
+						<!--<a class="btn_bf bofang" href="javascript:void(0)"></a>-->
+						<video controls="" id="vid2"  class="vid" controlslist="nodownload" poster="images/v2.png" width="1000px" height="562px">
+							<source src="http://cdn.dayuxiaoyu.com/water/v2.mp4" type="video/mp4"/>
+						</video>
+						<h5>遇见・巴东</h5>
+						<p><a href="http://www.chinawater.com.cn/vr/badong/" target="_black"></a> </p>
+					</div>
+				</div>
+				<!--第9屏内容-->
+				<div class="box box9">
+					<img src="./images/icon-11.png" class="shijue8" alt="1.3" data-w="1000" atremote="1">
+					<div class="bgMusic">
+						<audio class="bgmusic3" preload="">
+							<source src="./images/music/m3.mp3" type="audio/mp3">
+						</audio>
+						<audio class="bgmusic6" preload="">
+							<source src="./images/music/m3-2.mp3" type="audio/mp3">
+						</audio>
+					</div>
+				</div>
+				<!--第10屏内容-->
+				<div class="box box10">    
+					<div class="vid">
+						<!--<a class="btn_bf bofang" href="javascript:void(0)"></a>-->
+						<video controls="" id="vid3" class="vid" controlslist="nodownload" poster="images/v3.png" width="1000px" height="562px">
+							<source src="http://cdn.dayuxiaoyu.com/water/v3.mp4" type="video/mp4"/>
+						</video>
+						<h5>听见・万州</h5>
+						<p><a href="http://www.chinawater.com.cn/vr/wanzhou/" target="_black"></a> </p>
+					</div>
+				</div>
+				<!--第11屏内容-->
+				<div class="box box11" id=“xiao”>
+					<!-- <div class="erweima">
+						<p>
+							<img src="images/erweima.png" alt="">
+							<span>扫码的文字</span>
+						</p>
+					</div>
+					<div class="bgMusic">
+						<audio class="bgmusic4" preload="">
+							<source src="./images/music/m1-2.mp3" type="audio/mp3">
+						</audio>
+						<audio class="bgmusic5" preload="">
+							<source src="./images/music/m2-2.mp3" type="audio/mp3">
+						</audio>
+						
+					</div> -->
+					<div class="zimucon">
+						<div class="zimu">
+							<h5>审核：</h5>
+							<p><span>陈锐</span></p>
+							<h5>监制：</h5>
+							<p><span>樊弋滋</span></p>
+							<h5>统筹：</h5>
+							<p><span>罗景月</span></p>
+							<h5>视觉总监：</h5>
+							<p><span>杨桦</span></p>
+							<h5>技术支持：</h5>
+							<p><span>王瑜</span><span>张诗剑</span></p>
+							<h5>视频支持：</h5>
+							<p><span>燕乃一</span><span>张玉峰</span><span>周念晨</span><span>张诗剑</span><span>齐京泽</span></p>
+						</div>
+					</div>
+	
+					<video id="zuihouv" controls src="images/v4.mov" class="vid videoblock " controlslist="nodownload" preload>
+						<!-- <source src="images/v4.mov" type="video/mp4"> -->
+					</video>
+	
+					<!-- <ul class="photocon">
+						<li class="photo" style=""><img src="images/photo/xiao1.jpg" alt=""></li>
+						<li class="photo" style=""><img src="images/photo/xiao2.jpg" alt=""></li>
+						<li class="photo" style=""><img src="images/photo/xiao3.jpg" alt=""></li>
+						<li class="photo" style=""><img src="images/photo/xiao4.jpg" alt=""></li>
+						<li class="photo" style=""><img src="images/photo/xiao5.jpg" alt=""></li>
+						<li class="photo" style=""><img src="images/photo/xiao6.jpg" alt=""></li>
+						<li class="photo" style=""><img src="images/photo/xiao7.jpg" alt=""></li>
+						<li class="photo" style=""><img src="images/photo/xiao8.jpg" alt=""></li>
+						<li class="photo" style=""><img src="images/photo/xiao9.jpg" alt=""></li>
+						<li class="photo" style=""><img src="images/photo/xiao10.jpg" alt=""></li>
 					
-					<li class="photo" style=""><img src="images/photo/xiao21.jpg" alt=""></li>
-					<li class="photo" style=""><img src="images/photo/xiao22.jpg" alt=""></li>
-					<li class="photo" style=""><img src="images/photo/xiao23.jpg" alt=""></li>
-					<li class="photo" style=""><img src="images/photo/xiao24.jpg" alt=""></li>
-					<li class="photo" style=""><img src="images/photo/xiao25.jpg" alt=""></li>
-					<li class="photo" style=""><img src="images/photo/xiao26.jpg" alt=""></li>
-					<li class="photo" style=""><img src="images/photo/xiao27.jpg" alt=""></li>
-					<li class="photo" style=""><img src="images/photo/xiao28.jpg" alt=""></li>
-					<li class="photo" style=""><img src="images/photo/xiao29.jpg" alt=""></li>
-				</ul> -->
+						<li class="photo" style=""><img src="images/photo/xiao11.jpg" alt=""></li>
+						<li class="photo" style=""><img src="images/photo/xiao12.jpg" alt=""></li>
+						<li class="photo" style=""><img src="images/photo/xiao13.jpg" alt=""></li>
+						<li class="photo" style=""><img src="images/photo/xiao14.jpg" alt=""></li>
+						<li class="photo" style=""><img src="images/photo/xiao15.jpg" alt=""></li>
+						<li class="photo" style=""><img src="images/photo/xiao16.jpg" alt=""></li>
+						<li class="photo" style=""><img src="images/photo/xiao17.jpg" alt=""></li>
+						<li class="photo" style=""><img src="images/photo/xiao18.jpg" alt=""></li>
+						<li class="photo" style=""><img src="images/photo/xiao19.jpg" alt=""></li>
+						<li class="photo" style=""><img src="images/photo/xiao20.jpg" alt=""></li>
+						
+						<li class="photo" style=""><img src="images/photo/xiao21.jpg" alt=""></li>
+						<li class="photo" style=""><img src="images/photo/xiao22.jpg" alt=""></li>
+						<li class="photo" style=""><img src="images/photo/xiao23.jpg" alt=""></li>
+						<li class="photo" style=""><img src="images/photo/xiao24.jpg" alt=""></li>
+						<li class="photo" style=""><img src="images/photo/xiao25.jpg" alt=""></li>
+						<li class="photo" style=""><img src="images/photo/xiao26.jpg" alt=""></li>
+						<li class="photo" style=""><img src="images/photo/xiao27.jpg" alt=""></li>
+						<li class="photo" style=""><img src="images/photo/xiao28.jpg" alt=""></li>
+						<li class="photo" style=""><img src="images/photo/xiao29.jpg" alt=""></li>
+					</ul> -->
+				</div>
+				
 			</div>
-			
-		</div>
-	
-	</div>
-	
-	<div class="maintel">
-		<img class="textp1" id="hd-part1" src="./images/text01.png" atremote="1">
-		<img class="textp2" id="hd-part2" src="./images/text03.png" atremote="1">
-		<img class="textp3" id="hd-part3" src="./images/text02.png" atremote="1">
-		<img class="col1" src="./images/copy.png" >
 		
-		<p>请使用横屏打开阅览</p>
+		</div>
 	</div>
+	
+	
     
 	
 	<script src="js/jquery-1.7.min.js"></script>
