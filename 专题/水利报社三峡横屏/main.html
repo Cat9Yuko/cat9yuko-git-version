@@ -15,7 +15,13 @@
 	<link rel="stylesheet" href="css/portrait.css">
   </head>
   <body>
-	<div class="hands"><img src="images/hand2.png" alt=""></div>
+	<div class="hands"><div><img src="images/hand2.png" alt=""></div></div>
+	<!-- <div class="scrolltext">
+		<span class="scrolltext1"></span><br>
+		<span class="scrolltext2"></span><br>
+		<span class="scrolltext3"></span><br>
+		<span class="scrolltext4"></span>
+	</div> -->
 	<div id="print">
 		<div class="main">
 			<!--导航菜单信息-->
@@ -178,8 +184,8 @@
 						</div>
 					</div>
 	
-					<video id="zuihouv" controls src="images/v4.mov" class="vid videoblock " controlslist="nodownload" preload>
-						<!-- <source src="images/v4.mov" type="video/mp4"> -->
+					<video id="zuihouv" class="vid videoblock " controlslist="nodownload" preload>
+						<source src="images/v4.mov" type="video/mp4">
 					</video>
 	
 					<!-- <ul class="photocon">
@@ -237,7 +243,7 @@
 		let div = document.querySelector(".main");
 			div.addEventListener("wheel", function (e) {
 			  let left = -e.wheelDelta || e.deltaY / 2;
-			  console.log('wheelDelta:',-e.wheelDelta,"deltaY :" , e.deltaY);
+			//   console.log('wheelDelta:',-e.wheelDelta,"deltaY :" , e.deltaY);
 			  div.scrollLeft = div.scrollLeft + left;
 		});
 		
@@ -249,8 +255,6 @@
 			// $(".maintel").addClass("mainopen");
 		  }
 		});
-
-		
 
 	</script>
 	

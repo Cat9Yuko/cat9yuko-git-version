@@ -1,5 +1,4 @@
-
-    // 试试横屏
+	// 试试横屏
     let width = document.documentElement.clientWidth;
     let height = document.documentElement.clientHeight;
     if (width < height) {
@@ -11,6 +10,11 @@
         $print.css('left', 0 - (height - width) / 2);
         $print.css('transform', 'rotate(90deg)');
         $print.css('transform-origin', '50% 50%');
+
+		// 竖屏
+		$(".box").css("width",document.documentElement.clientHeight)
+		$(".box").css("height",document.documentElement.clientWidth)
+		$("#parallax").css("width",document.documentElement.clientHeight*11)
     }
     var evt = "onorientationchange" in window ? "orientationchange" : "resize";
     console.log(evt, 'evt')
@@ -30,6 +34,11 @@
                 $print.css('left', 0);
                 $print.css('transform', 'none');
                 $print.css('transform-origin', 'initial');
+
+				// 横屏
+				$(".box").css("height",document.documentElement.clientHeight)
+				$(".box").css("width",document.documentElement.clientWidth)
+				$("#parallax").css("width",document.documentElement.clientWidth*11)
             } else {
                 $print.width(height);
                 $print.height(width);
@@ -37,6 +46,11 @@
                 $print.css('left', 0 - (height - width) / 2);
                 $print.css('transform', 'rotate(90deg)');
                 $print.css('transform-origin', '50% 50%');
+
+				// 竖屏
+				$(".box").css("width",document.documentElement.clientHeight)
+				$(".box").css("height",document.documentElement.clientWidth)
+				$("#parallax").css("width",document.documentElement.clientHeight*11)
             }
         }, 500)
     }, false);
@@ -44,7 +58,6 @@
 	
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
         // 判断是手机版
-
 		$(".hands").addClass("act");
 		$(".hands").click(function(){
 			$(this).removeClass("act")
@@ -57,6 +70,8 @@
                 $(this).addClass("yygb");
                 $('.bgmusic7')[0].play();
             }
+			$("#zuihouv")[0].play();
+			$("#zuihouv")[0].pause();
 		})
         // 音乐按钮
         $(".btn_yykg a").click(function (){
@@ -76,8 +91,8 @@
 		function readDeviceOrientation() {
 			var wwidth = $(window).width()
 			var hheight = $(window).height()
-			console.log("wwidth: "+ wwidth);
-			console.log("hheight: "+ hheight);
+			// console.log("wwidth: "+ wwidth);
+			// console.log("hheight: "+ hheight);
 			if(wwidth>hheight) {
 				screen = wwidth
 			} else {
@@ -100,6 +115,17 @@
             var screen = $(window).height()
             // console.log($(window).width());
             // console.log($(this).scrollLeft());
+			var left = $(".box1").offset().left
+			var top = $(".box1").offset().top
+			var wsw = document.documentElement.clientWidth
+			var wsh = document.documentElement.clientHeight
+			// console.log("scrollPosition:" + scrollPosition);
+			// console.log("left: "+ left);
+			// console.log("top: "+ top);
+			// $(".scrolltext1").html("scrollPosition:" + scrollPosition+ "<br>screen: "+ screen)
+			// $(".scrolltext2").html("left:" + left)
+			// $(".scrolltext3").html("top:" + top)
+			// $(".scrolltext4").html("wsh:" + wsh+"wsw:"+wsw)
 		// 给菜单加样式
 		if (scrollPosition > (screen*1.9)) {
 			if (scrollPosition > (screen*3)) {
