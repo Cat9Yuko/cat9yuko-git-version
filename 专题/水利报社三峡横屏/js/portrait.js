@@ -116,19 +116,19 @@
 				$('.main').animate({
 					scrollLeft: screen * 5
 				}, 'slow');
-				$(".hands").click()
+				// $(".hands").click()
 			}
 			if(maodian == "#box8") {
 				$('.main').animate({
 					scrollLeft: screen * 7
 				}, 'slow');
-				$(".hands").click()
+				// $(".hands").click()
 			}
 			if(maodian == "#box10") {
 				$('.main').animate({
 					scrollLeft: screen * 9
 				}, 'slow');
-				$(".hands").click()
+				// $(".hands").click()
 			}
 		})
 		$(".box6 p a").click(function(){
