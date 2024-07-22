@@ -107,6 +107,7 @@
     width: 12.5rem;
     height: 6.25rem;
     bottom: 1.875rem;
+    background: url('../images/mouse2.png') no-repeat;
     background-size: cover;
   }
   .box2 .textPic1 {
@@ -270,12 +271,13 @@
   .vid h5 {
     font-size: 2.5rem;
   }
-  .vid p a {
+  .vid p a,.vid p a:hover {
     width: 10.5rem;
     height: 10.5rem;
     right: -12.5rem;
     top: calc(40% - 5.25rem);
   }
+  
   .shijue4 {
     width: 19.1875rem;
   }
@@ -324,7 +326,9 @@
   .zimu p {
     padding: .625rem 0px .9375rem;
   }
-  
+  .zimucon {
+    right: -11px;
+  }
 }
 
 /* 横屏 orientation: landscape代表手机在横屏的状态下 */
@@ -385,6 +389,7 @@
     width: 12.5rem;
     height: 6.25rem;
     bottom: 1.875rem;
+    background: url('../images/mouse2.png') no-repeat;
     background-size: cover;
   }
   .box2 .textPic1 {
@@ -548,7 +553,7 @@
   .vid h5 {
     font-size: 2.5rem;
   }
-  .vid p a {
+  .vid p a,.vid p a:hover {
     width: 10.5rem;
     height: 10.5rem;
     right: -12.5rem;

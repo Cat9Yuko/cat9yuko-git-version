@@ -57,6 +57,7 @@
 
 	
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+
         // 判断是手机版
 		$(".hands").addClass("act");
 		$(".hands").click(function(){
@@ -108,24 +109,62 @@
 			})
 		})
 
-
+		// 解决返回微信页面刷新
+		$(document).ready(function(){
+			var maodian = window.location.hash
+			if(maodian == "#box6") {
+				$('.main').animate({
+					scrollLeft: screen * 5
+				}, 'slow');
+				$(".hands").click()
+			}
+			if(maodian == "#box8") {
+				$('.main').animate({
+					scrollLeft: screen * 7
+				}, 'slow');
+				$(".hands").click()
+			}
+			if(maodian == "#box10") {
+				$('.main').animate({
+					scrollLeft: screen * 9
+				}, 'slow');
+				$(".hands").click()
+			}
+		})
+		$(".box6 p a").click(function(){
+			location.href= 'http://www.chinawater.com.cn/vr/yiling/'
+		})
+		$(".box8 p a").click(function(){
+			location.href= 'http://www.chinawater.com.cn/vr/badong/'
+		})
+		$(".box10 p a").click(function(){
+			location.href= 'http://www.chinawater.com.cn/vr/wanzhou/'
+		})
         // // 滚动事件开始
         $(".main").scroll(function () {
             var scrollPosition = $(".main").scrollLeft();
             var screen = $(window).height()
-            // console.log($(window).width());
-            // console.log($(this).scrollLeft());
-			var left = $(".box1").offset().left
-			var top = $(".box1").offset().top
-			var wsw = document.documentElement.clientWidth
-			var wsh = document.documentElement.clientHeight
+			var orientation = window.orientation
+			// 判断是否是横屏
+			if(orientation == 90 || orientation == -90) {
+				screen = $(window).width()
+			}
+			// var left = $(".box1").offset().left
+			// var top = $(".box1").offset().top
+			// var wsw = document.documentElement.clientWidth
+			// var wsh = document.documentElement.clientHeight
+			
 			// console.log("scrollPosition:" + scrollPosition);
 			// console.log("left: "+ left);
 			// console.log("top: "+ top);
-			// $(".scrolltext1").html("scrollPosition:" + scrollPosition+ "<br>screen: "+ screen)
+			// $(".scrolltext1").html("scrollPosition:" + scrollPosition+
+			// 	 "<br>screen: "+ screen+
+			// 	 "<br>orientation:" + orientation)
 			// $(".scrolltext2").html("left:" + left)
 			// $(".scrolltext3").html("top:" + top)
 			// $(".scrolltext4").html("wsh:" + wsh+"wsw:"+wsw)
+
+			
 		// 给菜单加样式
 		if (scrollPosition > (screen*1.9)) {
 			if (scrollPosition > (screen*3)) {
