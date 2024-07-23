@@ -608,3 +608,13 @@
     padding: .625rem 0px .9375rem;
   }
 }
+@media screen and (max-width: 1024px) {
+  :root {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 768px) {
+  :root {
+    font-size: 12px;
+  }
+}
