@@ -41,13 +41,13 @@
   top: 0;
   z-index: 99;
 }
+.visable-md {
+  display: none;
+}
 /* 竖屏   orientation: portrait 代表竖屏的状态下*/
 @media screen and (orientation: portrait) {
   .scrolltext {
     display: block;
-  }
-  :root {
-    font-size: 6px;
   }
   html {
     width: 100%;
@@ -339,9 +339,6 @@
   .hands div {
     transform: rotate(-90deg);
   }
-  :root {
-    font-size: 6px;
-  }
   html {
     width: 100vw;
     height: 100vh;
@@ -608,13 +605,24 @@
     padding: .625rem 0px .9375rem;
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
   :root {
     font-size: 14px;
   }
+  .hidden-xs {
+    display: none;
+  }
+  .visable-md {
+    display: block;
+  }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   :root {
-    font-size: 12px;
+    font-size: 11px;
+  }
+}
+@media screen and (max-width: 767px) {
+  :root {
+    font-size: 6px;
   }
 }
