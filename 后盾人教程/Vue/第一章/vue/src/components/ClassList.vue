@@ -1,4 +1,6 @@
 <template>
+    <section :class="$attrs.class"></section>
+    <main></main>
     <div class="classList">
         <div v-for="(lession, index) in lessions" :key="index">
             <span :class="{ 'is-delete': lession.isDelete }">{{ lession.title }}</span>
