@@ -5,8 +5,9 @@ import StyleComponent from './components/StyleComponent.vue'
 import IfComponentVue from './components/IfComponent.vue'
 import VForComponent from './components/VForComponent.vue'
 import LessonForVue from './components/LessonForVue.vue'
+import ArrComponent from './components/ArrComponent.vue'
 export default {
-  components: {ClassComponent,ClassList,StyleComponent,IfComponentVue,VForComponent,LessonForVue},
+  components: {ClassComponent,ClassList,StyleComponent,IfComponentVue,VForComponent,LessonForVue,ArrComponent},
   data() {
     return {
       title: '后盾人',
@@ -25,7 +26,8 @@ export default {
   <!-- <if-component-vue /> -->
   <!-- <VForComponent v-for="n in 10" :key="n" /> -->
 
-  <LessonForVue />
+  <!-- <LessonForVue /> -->
+   <ArrComponent/>
 </template>
 
 <style>
