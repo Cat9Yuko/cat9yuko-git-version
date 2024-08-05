@@ -58,6 +58,11 @@
 	
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 
+
+		// if(/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+		// 	$("#zuihouv").attr("muted","true")
+		// }
+		console.log(navigator.userAgent);
         // 判断是手机版
 		$(".hands").addClass("act");
 		$(".hands").click(function(){
