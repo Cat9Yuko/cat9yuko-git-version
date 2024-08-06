@@ -60,7 +60,7 @@
 
 
 		// if(/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-		// 	$("#zuihouv").attr("muted","true")
+		// 	$("#zuihouv").attr("controls","true")
 		// }
 		console.log(navigator.userAgent);
         // 判断是手机版
@@ -388,7 +388,7 @@
 			}, 26000);
 		}
 		else {
-			// $("#zuihouv")[0].pause();
+			$("#zuihouv")[0].pause();
 		};
 
         

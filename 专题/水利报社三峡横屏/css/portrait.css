@@ -35,7 +35,7 @@
 .scrolltext {
   display: none;
   position: fixed;
-  color: #fff;
+  color: #000000;
   font-size: 16px;
   left: 0;
   top: 0;
@@ -73,7 +73,7 @@
   }
   #parallax {
     height: 100%;
-    width: 1100vh;
+    width: 1100vh!important;
   }
   .box {
     height: 100% !important;
@@ -333,6 +333,9 @@
 
 /* 横屏 orientation: landscape代表手机在横屏的状态下 */
 @media screen and (orientation: landscape) and (max-width: 1366px) {
+  #zuihouv {
+    width: 100vw;
+  }
   .scrolltext {
     display: block;
   }
@@ -635,6 +638,11 @@
 @media screen and (orientation: landscape) and (max-width: 1366px) {
   :root {
     font-size: 15px;
+  }
+}
+@media screen and (orientation: landscape) and (max-width: 1080px) {
+  :root {
+    font-size: 12px;
   }
 }
 @media screen and (orientation: landscape) and (max-width: 1024px) {
