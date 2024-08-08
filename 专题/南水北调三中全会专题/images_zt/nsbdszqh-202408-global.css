@@ -1,0 +1,64 @@
+:root {
+  box-sizing: border-box;
+  font-family: "微软雅黑", "Microsoft Yahei";
+  font-size: 16px;
+}
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+img {
+  border: none;
+  max-width: 100%;
+}
+li {
+  list-style: none;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.center-block-1200 {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/* user style */
+header {
+  background-image: url("nsbdszqh-202408-banner.jpg");
+  height: 534px;
+  background-position: center center;
+  background-size: cover;
+}
+nav {
+  background-color: #da1417;
+  border-top: 1px solid #ffffff;
+}
+.nav {
+  display: table;
+  
+}
+.nav-item {
+  display: table-cell;
+  table-layout: fixed;
+  width: 1%;
+  text-align: center;
+  font-size: 28px;
+  color: #ffffff;
+  font-weight: bold;
+  line-height: 63px;
+}

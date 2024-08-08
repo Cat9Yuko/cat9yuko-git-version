@@ -3,7 +3,7 @@
 
 $(document).ready(function () {
 	
-	if (!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))) {
+	if (!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Macintosh/i.test(navigator.userAgent))) {
 
 	// 菜单伸缩
 	$(".btn1").click(function () {
