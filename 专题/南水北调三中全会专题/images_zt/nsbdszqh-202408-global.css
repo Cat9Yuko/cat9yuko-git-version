@@ -21,6 +21,9 @@ img {
 li {
   list-style: none;
 }
+main {
+  padding-bottom: 40px;
+}
 .fl {
   float: left;
 }
@@ -39,6 +42,9 @@ li {
 .w600 {
   width: 600px;
 }
+.mt57 {
+  margin-top: 57px;
+}
 /* user style */
 header {
   background-image: url("nsbdszqh-202408-banner.jpg");
@@ -52,7 +58,6 @@ nav {
 }
 .nav {
   display: table;
-  
 }
 .nav-item {
   display: table-cell;
@@ -73,11 +78,20 @@ section {
   color: #ce0505;
   margin: 32px 0 44px;
 }
+.chnltitle {
+  margin-bottom: 32px;
+}
+.chnltitle img {
+  display: block;
+}
 /* carousel */
 .slick-mod,
 .slick-mod2 {
   width: 600px;
   height: 515px;
+}
+.slick-mod2 {
+  height: 400px;
 }
 .slick-item {
   position: relative;
@@ -168,4 +182,89 @@ section {
   vertical-align: middle;
   font-size: 20px;
   line-height: 23px;
+}
+.h-lsit2 {
+  margin-top: -10px;
+}
+.h-lsit2 .hlist-item a {
+  height: 70px;
+}
+.h-lsit2 .hlist-item {
+  margin-bottom: none;
+}
+.bgcolor {
+  background-color: #fcefef;
+  margin-top: -32px;
+  padding-bottom: 5px;
+}
+.list {
+  font-size: 20px;
+  padding-top: 20px;
+}
+.list li {
+  width: 585px;
+  line-height: 50px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.list li:nth-child(even) {
+  float: right;
+}
+.list li:nth-child(odd) {
+  float: left;
+}
+.list li::before {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #f8a2a2;
+  vertical-align: middle;
+  margin: 0 20px 0 7px;
+}
+.show3img .imgitem {
+  float: left;
+}
+.show3img .imgitem + .imgitem {
+  margin-left: 40px;
+}
+.show3img .imgitem img {
+  display: block;
+}
+footer {
+  text-align: center;
+  background-color: #ae0001;
+  color: #ffffff;
+  line-height: 35px;
+  padding: 15px 0;
+}
+.boxs {
+  box-shadow: 0px 0px 3px 1px #ccc;
+}
+.source-time {
+  margin: 0 auto;
+  height: 35px;
+  text-align: center;
+  position: relative;
+  line-height: 35px;
+}
+
+.time {
+  margin-right: 10px;
+}
+
+.wechat,
+.sina {
+  position: absolute;
+  margin-top: 5px;
+}
+
+.wechat {
+  margin-left: 10px;
+}
+
+.sina {
+  margin-left: 46px;
 }
