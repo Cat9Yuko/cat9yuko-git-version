@@ -55,7 +55,8 @@
         }, 500)
     }, false);
 
-    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Macintosh/i.test(navigator.userAgent)) {
+
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Macintosh|Linux/i.test(navigator.userAgent)) {
 
 		// if(/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
 		// 	$("#zuihouv").attr("controls","true")
