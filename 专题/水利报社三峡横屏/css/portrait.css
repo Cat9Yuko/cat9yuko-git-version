@@ -621,7 +621,12 @@
     display: block;
   }
 }
-
+/* 竖屏 */
+@media screen and (orientation: portrait) and (max-width: 1840px) {
+  :root {
+    font-size: 12px;
+  }
+}
 /* 竖屏 iPad Pro */
 @media screen and (orientation: portrait) and (max-width: 1024px) {
   :root {
