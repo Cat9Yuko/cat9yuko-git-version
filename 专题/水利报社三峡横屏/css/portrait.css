@@ -634,6 +634,12 @@
   }
 }
 /* 竖屏 iPad */
+@media screen and (orientation: portrait) and (max-width: 900px) {
+  :root {
+    font-size: 12px;
+  }
+}
+/* 竖屏 iPad */
 @media screen and (orientation: portrait) and (max-width: 768px) {
   :root {
     font-size: 11px;
@@ -644,6 +650,16 @@
 @media screen and (orientation: landscape) and (max-width: 1366px) {
   :root {
     font-size: 15px;
+  }
+}
+@media screen and (orientation: landscape) and (max-width: 1210px) {
+  :root {
+    font-size: 12px;
+  }
+}
+@media screen and (orientation: landscape) and (max-width: 1180px) {
+  :root {
+    font-size: 12px;
   }
 }
 @media screen and (orientation: landscape) and (max-width: 1080px) {
