@@ -630,7 +630,7 @@
 /* 竖屏 iPad Pro */
 @media screen and (orientation: portrait) and (max-width: 1024px) {
   :root {
-    font-size: 15px;
+    font-size: 12px;
   }
 }
 /* 竖屏 iPad */
@@ -649,7 +649,7 @@
 /* 横屏 iPad */
 @media screen and (orientation: landscape) and (max-width: 1366px) {
   :root {
-    font-size: 15px;
+    font-size: 12px;
   }
 }
 @media screen and (orientation: landscape) and (max-width: 1210px) {
