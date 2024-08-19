@@ -157,21 +157,21 @@
 				screen = $(window).width()
 			}
 
-			// var left = $(".box1").offset().left
-			// var top = $(".box1").offset().top
-			// var wsw = document.documentElement.clientWidth
-			// var wsh = document.documentElement.clientHeight
+			var left = $(".box1").offset().left
+			var top = $(".box1").offset().top
+			var wsw = document.documentElement.clientWidth
+			var wsh = document.documentElement.clientHeight
 			
 			// console.log("scrollPosition:" + scrollPosition);
 			// console.log("left: "+ left);
 			// console.log("top: "+ top);
-			// $(".scrolltext1").html("scrollPosition:" + scrollPosition+
-			// 	 "<br>screen: "+ screen+
-			// 	 "<br>orientation:" + orientation)
-			// $(".scrolltext2").html("left:" + left)
-			// $(".scrolltext3").html("top:" + top)
-			// $(".scrolltext4").html("wsh:" + wsh+"wsw:"+wsw)
-			// $(".scrolltext5").html("userAgent:" + navigator.userAgent)
+			$(".scrolltext1").html("scrollPosition:" + scrollPosition+
+				 "<br>screen: "+ screen+
+				 "<br>orientation:" + orientation)
+			$(".scrolltext2").html("left:" + left)
+			$(".scrolltext3").html("top:" + top)
+			$(".scrolltext4").html("wsh:" + wsh+"wsw:"+wsw)
+			$(".scrolltext5").html("userAgent:" + navigator.userAgent)
 			
 		// 给菜单加样式
 		if (scrollPosition > (screen*1.9)) {

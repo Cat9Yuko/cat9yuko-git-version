@@ -27,3 +27,6 @@ node_modules
 *.mp4
 *.mp3
 *.db
+*.mov
+*.psd
+*.gitignore
