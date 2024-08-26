@@ -136,17 +136,57 @@ toFixed()方法返回包含指定小数点位数的数值字符串，如： */
 
         /* 注意，即使字符串中包含双字节
 字符（而不是单字节的 ASCII 字符），也仍然会按单字符来计数。 */
-        console.log(stringValue.length);
-        console.log(stringObject.length);
+        // console.log(stringValue.length);
+        // console.log(stringObject.length);
 
         let message = "法师赵海柱"
-        let message2 = "1abcd"
+        let message2 = "abcde"
         // charAt()方法返回给定索引位置的字符，由传给方法的整数参数指定。
-        console.log(message.charAt(0));
+        // console.log(message.charAt(0));
 
         // 使用 charCodeAt()方法可以查看指定码元的字符编码。
-        console.log(message.charCodeAt(0));
-        console.log(message2.charCodeAt(0));
+        // console.log(message.charCodeAt(0));
+        // console.log(message2.charCodeAt(2));
+
+        // 十进制 99 等于十六进制 63
+        // console.log(99 === 0x63);
+
+        // fromCharCode()方法用于根据给定的 UTF-16 码元创建字符串中的字符。这个方法可以接受任意多个数值，并返回将所有数值对应的字符拼接起来的字符串
+        // console.log(String.fromCharCode(0x61,0x62,0x63,0x64,0x65));
+
+        // console.log(String.fromCharCode(97,98,99,100,101));
+
+        let message3 = "ab😊de"
+
+        // console.log(0x1F60A);
+
+        // console.log(message3.length);
+        // console.log(message3.charAt(1));
+        // console.log(message3.charAt(2));
+        // console.log(message3.charAt(3));
+        // console.log(message3.charAt(4));
+
+        // console.log(message3.charCodeAt(1));
+        // console.log(message3.charCodeAt(2));
+        // console.log(message3.charCodeAt(3));
+        // console.log(message3.charCodeAt(4));
+
+        // 为正确解析既包含单码元字符又包含代理对字符的字符串，可以使用 codePointAt()来代替charCodeAt()。
+        // 跟使用 charCodeAt()时类似， codePointAt()接收 16 位码元的索引并返回该索引位置上的码点。码点是 Unicode 中一个字符的完整标识。
+        // console.log(String.fromCodePoint(0x1F60A));
+        // console.log(String.fromCharCode(97,98,55357,56842,100,101));
+        // 码点可能是 16 位，也可能是 32 位，而 codePointAt()方法可以从指定码元位置识别完整的码点。
+
+        console.log(message3.codePointAt(1));
+        console.log(message3.codePointAt(2));
+        console.log(message3.codePointAt(3));
+        console.log(message3.codePointAt(4));
+        // 注意，如果传入的码元索引并非代理对的开头，就会返回错误的码点。这种错误只有检测单个字符的时候才会出现，可以通过从左到右按正确的码元数遍历字符串来规避。
+        console.log([..."ab😊d"]);
+
+        // 与 charCodeAt()有对应的 codePointAt()一样， fromCharCode()也有一个对应的 fromCodePoint()。这个方法接收任意数量的码点，返回对应字符拼接起来的字符串
+        console.log(String.fromCharCode(97,98,55357,56842,100,101));
+        console.log(String.fromCodePoint(97,98,128522,100,101));
     </script>
 </body>
 </html>
