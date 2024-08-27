@@ -8,9 +8,10 @@ import LessonForVue from './components/LessonForVue.vue'
 import ArrComponent from './components/ArrComponent.vue'
 import EventComponent from './components/EventComponent.vue'
 import EventFixComponent from './components/EventFixComponent.vue'
+import KeyComponent from './components/KeyComponent.vue'
 
 export default {
-  components: {ClassComponent,ClassList,StyleComponent,IfComponentVue,VForComponent,LessonForVue,ArrComponent,EventComponent,EventFixComponent},
+  components: {ClassComponent,ClassList,StyleComponent,IfComponentVue,VForComponent,LessonForVue,ArrComponent,EventComponent,EventFixComponent,KeyComponent},
   data() {
     return {
       title: '后盾人',
@@ -32,7 +33,8 @@ export default {
   <!-- <LessonForVue /> -->
    <!-- <ArrComponent/> -->
   <!-- <EventComponent/> -->
-   <EventFixComponent/>
+   <!-- <EventFixComponent/> -->
+    <KeyComponent/>
 </template>
 
 <style>
