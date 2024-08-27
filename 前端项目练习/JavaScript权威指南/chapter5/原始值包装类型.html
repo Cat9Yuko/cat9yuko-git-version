@@ -177,16 +177,77 @@ toFixed()方法返回包含指定小数点位数的数值字符串，如： */
         // console.log(String.fromCharCode(97,98,55357,56842,100,101));
         // 码点可能是 16 位，也可能是 32 位，而 codePointAt()方法可以从指定码元位置识别完整的码点。
 
-        console.log(message3.codePointAt(1));
-        console.log(message3.codePointAt(2));
-        console.log(message3.codePointAt(3));
-        console.log(message3.codePointAt(4));
+        // console.log(message3.codePointAt(1));
+        // console.log(message3.codePointAt(2));
+        // console.log(message3.codePointAt(3));
+        // console.log(message3.codePointAt(4));
         // 注意，如果传入的码元索引并非代理对的开头，就会返回错误的码点。这种错误只有检测单个字符的时候才会出现，可以通过从左到右按正确的码元数遍历字符串来规避。
-        console.log([..."ab😊d"]);
+        // console.log([..."ab😊d"]);
 
         // 与 charCodeAt()有对应的 codePointAt()一样， fromCharCode()也有一个对应的 fromCodePoint()。这个方法接收任意数量的码点，返回对应字符拼接起来的字符串
-        console.log(String.fromCharCode(97,98,55357,56842,100,101));
-        console.log(String.fromCodePoint(97,98,128522,100,101));
+        // console.log(String.fromCharCode(97,98,55357,56842,100,101));
+        // console.log(String.fromCodePoint(97,98,128522,100,101));
+
+
+        // normalize()方法
+        // 上面带圆圈的大写拉丁字母 A
+        // console.log(String.fromCharCode(0x00c5));
+        // 长度单位“埃”
+        // console.log(String.fromCharCode(0x212B));
+        // 大写拉丁字母 A
+        // 上面加个圆圈
+        // console.log(String.fromCharCode(0x0041,0x030A));
+        // 比较操作符不在乎字符看起来是什么样的，因此这 3 个字符互不相等。
+        let a1 = String.fromCharCode(0x00C5),
+        a2 = String.fromCharCode(0x212B),
+        a3 = String.fromCharCode(0x0041,0x030A)
+
+        // console.log(a1,a2,a3);
+        // console.log(a1 === a2);
+        // console.log(a1 === a3);
+        // console.log(a2 === a3);
+
+        // 为解决这个问题， Unicode 提供了 4 种规范化形式，可以将类似上面的字符规范化为一致的格式，无论底层字符的代码是什么。
+        // 这 4 种规范化形式是： NFD（ Normalization Form D）、 NFC（ Normalization Form C）、NFKD（ Normalization Form KD）和 NFKC（ Normalization Form KC）。
+
+        // console.log(a1 === a1.normalize("NFD"));
+        // console.log(a1 === a1.normalize("NFC"));
+        // console.log(a1 === a1.normalize("NFKD"));
+        // console.log(a1 === a1.normalize("NFKC"));
+
+        // 选择同一种规范化形式可以让比较操作符返回正确的结果
+        // console.log(a1.normalize("NFD") ===  a2.normalize("NFD"));
+        // console.log(a2.normalize("NFKC") === a3.normalize("NFKC"));
+        // console.log(a1.normalize("NFC") === a3.normalize("NFC"));
+
+        /* 字符串操作方法 */
+        // 首先是 concat()，用于将一个或多个字符串拼接成一个新字符串。
+        let StringValue = "hello ";
+        let result2 = StringValue.concat("world")
+        // console.log(result2);
+        // console.log(StringValue);
+
+        // concat()方法可以接收任意多个参数，因此可以一次性拼接多个字符串
+        let result3 = StringValue.concat("world","!")
+        // console.log(result3);
+
+        // ECMAScript 提供了 3 个从字符串中提取子字符串的方法： slice()、 substr()和 substring()。
+        // 这3 个方法都返回调用它们的字符串的一个子字符串，而且都接收一或两个参数。
+        // 第一个参数表示子字符串开始的位置，第二个参数表示子字符串结束的位置。对 slice()和 substring()而言，第二个参数是提取结束的位置（即该位置之前的字符会被提取出来）。
+        // 对 substr()而言，第二个参数表示返回的子字符串数量。
+
+        let StringValue3 = "hello world"
+        console.log(StringValue3);
+
+        // console.log(StringValue3.slice(3));
+        // console.log(StringValue3.substring(3));
+        // console.log(StringValue3.substr(3));
+
+        console.log(StringValue3.slice(3,7));
+        console.log(StringValue3.substring(3,7));
+        console.log(StringValue3.substr(3,7));
+
+        
     </script>
 </body>
 </html>
