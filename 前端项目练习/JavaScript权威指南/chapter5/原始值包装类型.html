@@ -237,7 +237,7 @@ toFixed()方法返回包含指定小数点位数的数值字符串，如： */
         // 对 substr()而言，第二个参数表示返回的子字符串数量。
 
         let StringValue3 = "hello world"
-        console.log(StringValue3);
+        // console.log(StringValue3);
 
         // console.log(StringValue3.slice(3));
         // console.log(StringValue3.substring(3));
@@ -251,14 +251,22 @@ toFixed()方法返回包含指定小数点位数的数值字符串，如： */
         // 而 substr()方法将第一个负参数值当成字符串长度加上该值，将第二个负参数值转换为 0。
         // substring()方法会将所有负参数值都转换为 0。
 
-        console.log(StringValue3.length);
+        // console.log(StringValue3.length);
         // console.log(StringValue3.slice(-3));
         // console.log(StringValue3.substring(-3));
         // console.log(StringValue3.substr(-3));
 
-        console.log(StringValue3.slice(3,-4));
-        console.log(StringValue3.substring(3,-4));
-        console.log(StringValue3.substr(3,-4));
+        // console.log(StringValue3.slice(3,-4));
+        // console.log(StringValue3.substring(3,-4));
+        // console.log(StringValue3.substr(3,-4));
+
+        /* 字符串位置方法 */
+        // 有两个方法用于在字符串中定位子字符串： indexOf()和 lastIndexOf()。
+        // 这两个方法从字符串中搜索传入的字符串，并返回位置（如果没找到，则返回-1）。
+        let StringValue4 = "hello world";
+        console.log(StringValue4);
+        console.log(StringValue4.indexOf("o"));
+        console.log(StringValue4.lastIndexOf("o"));
     </script>
 </body>
 </html>
