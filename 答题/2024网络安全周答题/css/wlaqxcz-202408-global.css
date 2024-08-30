@@ -1,0 +1,313 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "微软雅黑";
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+img {
+  border: none;
+}
+li {
+  list-style: none;
+}
+.center-block-1200 {
+  width: 1200px;
+  margin: 0 auto;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+.w506 {
+  width: 451px;
+}
+.w473 {
+  width: 430px;
+}
+/* user style */
+.index-bg {
+  width: 100%;
+  background: url("../img/wlaqxcz-202408-indexbg.jpg") top center no-repeat;
+  background-size: cover;
+  height: 2114px;
+  box-sizing: border-box;
+  padding-top: 1143px;
+}
+.register-bg {
+  width: 100%;
+  background: url("../img/wlaqxcz-202408-registerbg.jpg") top center no-repeat;
+  background-size: cover;
+  height: 1796px;
+  box-sizing: border-box;
+  padding-top: 659px;
+}
+.score-bg {
+  width: 100%;
+  background: url("../img/wlaqxcz-202408-scorebg.jpg") top center no-repeat;
+  background-size: cover;
+  height: 1607px;
+  box-sizing: border-box;
+  padding-top: 659px;
+}
+.login-bg {
+  width: 100%;
+  background: url("../img/zszyls-202403-loginbg.jpg") top center no-repeat;
+  background-size: cover;
+  height: 1591px;
+  box-sizing: border-box;
+  padding-top: 831px;
+}
+.whitebg-p {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+.whitebg-c {
+  background: rgba(255, 255, 255, 1);
+  /* min-height: 865px; */
+  padding: 52px 54px 60px;
+  min-height: 646px;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.index-top {
+  width: 653px;
+  margin: 0 auto;
+  border-top: 3px solid #10284b;
+  border-bottom: 3px solid #10284b;
+  margin-bottom: 40px;
+}
+.index-top p {
+  line-height: 36px;
+  font-size: 20.8px;
+  color: #16274b;
+  font-family: "黑体";
+}
+/* .index-bottom {
+  color: #183e91;
+  font-family: "黑体";
+} */
+.index-bottom h2 {
+  font-size: 25px;
+  margin: 20px 0 22px;
+  color: #0151bd;
+}
+.index-bottom p {
+  text-indent: 2rem;
+  font-size: 19.17px;
+  text-align: justify;
+  line-height: 33px;
+  margin-bottom: 15px;
+  color: #000103;
+  /* font-family: "黑体"; */
+}
+.index-bottom .mb p {
+  margin-bottom: 0px;
+}
+.index-bottom .fr p {
+  margin-bottom: 25px;
+}
+.my-btn {
+  width: 100%;
+  text-align: center;
+  margin-top: 58px;
+  /* margin-bottom: 10px; */
+  height: 76px;
+}
+.my-btn a {
+  font-size: 25px;
+  color: #ffffff;
+  background: #0e4186;
+  padding: 22px 49px;
+  border-radius: 5px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.my-btn a + a {
+  margin-left: 100px;
+}
+
+/*register*/
+.register {
+  width: 100%;
+  /* background: url(../img/sfg_2020_register.jpg) center center; */
+  background-size: cover;
+}
+
+/* .register .box{
+	height: 685px;
+} */
+.register .bt {
+  height: 520px;
+  width: 100%;
+}
+.register .welcom,
+.login .welcom {
+  font-size: 25px;
+  color: #183e91;
+  text-align: center;
+  font-weight: bold;
+}
+
+.register input,
+.register select,
+.login input {
+  border: 1px solid #5d8ab5;
+  border-radius: 5px;
+  outline: none;
+  font-size: 20px;
+  background-color: #eef7f9;
+}
+.register select {
+  float: left;
+  width: 400px;
+  height: 45px;
+}
+
+.register span,
+.login span {
+  display: block;
+  width: 225px;
+  height: 45px;
+  background: #7fc6e3;
+  color: #ffffff;
+  font-size: 24px;
+  text-align: center;
+  line-height: 45px;
+  border-radius: 5px;
+  margin-right: 10px;
+  text-shadow: -1px 0 #75b0c8, 0 1px #75b0c8, 1px 0 #75b0c8;
+}
+.zhuyi p {
+  font-size: 25px;
+  text-align: center;
+  line-height: 50px;
+  color: #6f7072;
+}
+.zhuyi p + p {
+  margin-bottom: 25px;
+}
+.zhuyi-center {
+  width: 840px;
+  height: 50px;
+  text-indent: 2rem;
+  margin: 0 auto;
+  color: #034c91;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+.sub-tij,
+.sub-tij button,
+.sub-dl button {
+  width: 218px;
+  height: 74px;
+  background: #0f4186;
+  border-radius: 5px;
+  font-size: 25px;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+.sub-tij {
+  margin: 0 auto;
+}
+
+/*answer*/
+.zindex-11 {
+  position: relative;
+  z-index: 11;
+}
+.answer-bg {
+  position: relative;
+  width: 100%;
+  background-image: url("../img/wlaqxcz-202408-answert.jpg"),url("../img/wlaqxcz-202408-answerb.jpg");
+  background-repeat: no-repeat;
+  background-position: center top,center bottom;
+  /* height: 1522px; */
+  box-sizing: border-box;
+  padding: 660px 0 0px 0;
+  background-color: #2c45c5;
+}
+
+.answer_t {
+  font-size: 25px;
+  color: #020202;
+  font-weight: bold;
+}
+.xuanxiang {
+  margin: 20px 0 45px 0;
+  font-size: 22px;
+  color: #020202;
+}
+.xx_ul li {
+  line-height: 35px;
+}
+
+.timu {
+    line-height: 38px;
+}
+.xx_ul input {
+    margin-right: 10px;
+}
+.xx_ul label {
+    cursor: pointer;
+}
+
+.score p {
+    color: #183e91;
+    font-size: 37.5px;
+    font-weight: bold;
+    text-align: center;
+    margin: 100px 0;
+}
+.score p span {
+    color: red;
+}
+
+
+.footer {
+  margin-top: 70px;
+  position: relative;
+  z-index: 99;
+}
+.register-bg .footer,.score-bg .footer {
+  margin-top: 100px;
+}
+.welcom2 {
+  font-size: 28px;
+  color: #505050;
+  margin-top: 25px;
+  padding-left: 15px;
+}
+.problem {
+  width: 786px;
+  height: 107px;
+  border: 1px solid #d4d4d4;
+  resize: none;
+  outline: none;
+  padding: 10px;
+  font-size: 19px;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+.problem::placeholder {
+  /* color: #00285d; */
+  line-height: 80px;
+}
