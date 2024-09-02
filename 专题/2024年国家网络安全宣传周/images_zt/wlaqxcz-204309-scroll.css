@@ -1,0 +1,67 @@
+.pic_bl {
+    width: 492px;
+    overflow: hidden;
+    position: relative;
+    height: 334px;
+    margin: 0 auto;
+}
+
+.pic_bl ul {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 334px;
+}
+
+.pic_bl ul li {
+    float: left;
+    border: 1px solid #c6c5c5;
+    height: 334px;
+    margin-right: 8px;
+    box-sizing: border-box;
+}
+
+.pic_bl ul li a {
+    display: block;
+}
+
+.section1 {
+    position: relative;
+}
+.button {
+    width: 1412px;
+    position: relative;
+    height: 60px;
+    margin: 0px auto;
+    /* margin-top: -23px; */
+  }
+.leftscroll .pic_l {
+    display: block;
+    position: absolute;
+    left: 7px;
+    top: 154px;
+    background: url("wlaqxcz-202409-arrowleft.png") no-repeat;
+    width: 15px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.leftscroll .pic_r {
+    display: block;
+    position: absolute;
+    right: 7px;
+    top: 154px;
+    background: url("wlaqxcz-202409-arrowright.png") no-repeat;
+    width: 15px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.pic_bg {
+    width: 10px;
+    height: 278px;
+    background: #cde7f3;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
