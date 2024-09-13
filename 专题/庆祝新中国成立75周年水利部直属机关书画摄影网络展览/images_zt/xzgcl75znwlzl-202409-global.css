@@ -26,6 +26,14 @@ main {
   background-size: cover;
   padding-top: 357px;
 }
+.detailbg {
+  background: url('xzgcl75znwlzl-202409-listbg.jpg') center top no-repeat;
+  padding-top: 357px;
+  height: auto;
+  background-repeat: no-repeat;
+  background-color: #a30911;
+  padding-bottom: 70px;
+}
 footer {
  color: #ffffff;
 }
