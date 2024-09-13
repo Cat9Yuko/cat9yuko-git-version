@@ -127,3 +127,79 @@ footer {
 .changetab + .changetab {
   margin-left: 10px;
 }
+
+/* carousel */
+.slick-mod,
+.slick-mod2 {
+  width: 1403px;
+  height: 890px;
+}
+.slick-item {
+  position: relative;
+}
+.slick-item img {
+  /* width: 100%; */
+  margin: 0 auto;
+  height: 100%;
+}
+.tit1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 16px;
+  color: #ffffff;
+  line-height: 40px;
+  text-indent: 2rem;
+  background: rgba(0, 0, 0, 0.5);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.slick-mod .slick-dots,
+.slick-mod2 .slick-dots {
+  position: absolute;
+  right: 10px;
+  bottom: 15px;
+}
+.slick-mod2 .slick-dots {
+  bottom: 36px;
+}
+
+.slick-mod .slick-arrow,
+.slick-mod2 .slick-arrow {
+  width: 66px;
+  height: 144px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 3;
+  cursor: pointer;
+}
+.slick-mod .slick-next {
+  right: 0;
+  background: url('xzgcl75znwlzl-202409-arrowright.png') no-repeat center;
+}
+.slick-mod .slick-prev {
+  left: 0;
+  background: url('xzgcl75znwlzl-202409-arrowleft.png') no-repeat center;
+}
+
+.slick-mod .slick-dots li,
+.slick-mod2 .slick-dots li {
+  width: 14px;
+  height: 14px;
+  background: #ffffff;
+  border-radius: 50%;
+  margin: 0 5px 0 0;
+}
+.slick-mod .slick-dots li.slick-active,
+.slick-mod2 .slick-dots li.slick-active {
+  width: 14px;
+  height: 14px;
+  background: #e50012;
+  border-radius: 50%;
+}
+/* --- */
