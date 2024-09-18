@@ -9,9 +9,10 @@ import ArrComponent from './components/ArrComponent.vue'
 import EventComponent from './components/EventComponent.vue'
 import EventFixComponent from './components/EventFixComponent.vue'
 import KeyComponent from './components/KeyComponent.vue'
+import InputComponent from './components/InputComponent.vue'
 
 export default {
-  components: {ClassComponent,ClassList,StyleComponent,IfComponentVue,VForComponent,LessonForVue,ArrComponent,EventComponent,EventFixComponent,KeyComponent},
+  components: {ClassComponent,ClassList,StyleComponent,IfComponentVue,VForComponent,LessonForVue,ArrComponent,EventComponent,EventFixComponent,KeyComponent,InputComponent},
   data() {
     return {
       title: '后盾人',
@@ -31,10 +32,11 @@ export default {
   <!-- <VForComponent v-for="n in 10" :key="n" /> -->
 
   <!-- <LessonForVue /> -->
-   <!-- <ArrComponent/> -->
+  <!-- <ArrComponent/> -->
   <!-- <EventComponent/> -->
-   <!-- <EventFixComponent/> -->
-    <KeyComponent/>
+  <!-- <EventFixComponent/> -->
+  <!-- <KeyComponent/> -->
+  <InputComponent/>
 </template>
 
 <style>
