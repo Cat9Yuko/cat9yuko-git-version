@@ -21,18 +21,28 @@
         </select>
         <hr>
         {{ form }}
+        <hr>
+        <input type="text" v-model.lazy="hd">
+        <hr>
+        {{ hd }}
     </div>
 </template>
 
 <script>
 const lessons = [{title:'php',value:'php'},{title: 'Linux',value:'Linux'},{"title":"JavaScript","value":"JavaScript"}]
 const form = { title: "houdunren.com", content: "后盾人", isPost: false,lessons: []
-,sex:1,cities: [] }
+,sex:1,cities: [{name: 'beijing'},{name: 'tianjin'}] }
 export default {
     data() {
         return {
             form,
-            lessons
+            lessons,
+            hd: 'houdunren.com'
+        }
+    },
+    watch: {
+        hd(n) {
+            console.log('网络请求');
         }
     }
 }
