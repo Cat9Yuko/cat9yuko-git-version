@@ -24,7 +24,10 @@
         <hr>
         <input type="text" v-model.lazy="hd">
         <hr>
-        {{ hd }}
+        <input type="text" v-model.number="num">
+        <hr>
+        <input type="text" v-model.trim="title">
+        {{ title }}
     </div>
 </template>
 
@@ -37,12 +40,17 @@ export default {
         return {
             form,
             lessons,
-            hd: 'houdunren.com'
+            hd: 'houdunren.com',
+            num: 1,
+            title: '后盾人'
         }
     },
     watch: {
         hd(n) {
             console.log('网络请求');
+        },
+        title(n,o) {
+            console.log(n.length);
         }
     }
 }
