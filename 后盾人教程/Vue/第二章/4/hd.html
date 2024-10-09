@@ -8,10 +8,13 @@
 </head>
 <body>
     <div id="app">
-        {{title}} - <todo/>
+        <!-- {{title}} - <todo/> -->
+         <ul>
+                <todo v-for="data in db" :data="data"/>
+         </ul>
     </div>
     <script type="module">
-        import App from './App.js'
+        import main from './main.js'
     </script>
 </body>
 </html>

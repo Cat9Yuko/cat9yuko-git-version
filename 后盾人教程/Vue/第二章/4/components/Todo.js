@@ -1,8 +1,4 @@
 export default {
-    data() {
-        return {
-            content: 'todo'
-        }
-    },
-    template: `<h2>{{content}}</h2>`
+    props: ['data'],
+    template: `<li><h2>{{data.title}}</h2></li>`
 }
