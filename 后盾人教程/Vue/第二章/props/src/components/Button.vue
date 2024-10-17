@@ -1,5 +1,9 @@
 <template>
-    <div :class="[type,{disabled}]">{{ content }}</div>
+    <div :class="[type,{disabled}]" @click="onClick">{{ text }}</div>
+  {{ content }}
+      <!-- <hr>
+    <button @click="content='后盾人'">子组件</button>
+    {{ content }} -->
 </template>
 
 <script>
@@ -7,7 +11,8 @@ export default {
   props: {
     content: {
       type: String,
-      default: '确定objk'
+      default: '确定'
+      // required: true
     },
     type: {
       type: String,
@@ -17,6 +22,7 @@ export default {
         return ['success','danger','info'].includes(v)
       }
     },
+    hdTip: String,
     disabled: {
       type: Boolean,
       default: false
@@ -27,6 +33,24 @@ export default {
     //     return ['1,2', 3]
     //   }
     // }
+  },
+  data() {
+    return {
+      text: this.content
+    }
+  },
+  watch: {
+    content(v) {
+      this.text = v
+    }
+  },
+  methods: {
+    onClick() {
+      this.text = 'loading...'
+      setTimeout(() => {
+        this.text = this.content
+      }, 3000);
+    }
   }
 }
 </script>

@@ -1,10 +1,14 @@
 <template>
   <div>
-    <hd-button content="保存提交" type="success" style="margin-right: 10px;" />
-    <hd-button conetnt="删除" type="danger" style="margin-right: 10px;" />
+    <hd-button :content="btContent" type="success" />
+    <hr>
+    <button @click="btContent='向军大叔'">父组件</button>
+    {{ btContent }}
+    <!-- <hd-button content="保存提交" hd-tip="@" type="success" style="margin-right: 10px;" />
+    <hd-button content="删除" type="danger" style="margin-right: 10px;" />
     <hd-button content="反馈" style="margin-right: 10px;" />
     <hd-button content="编辑" :disabled="true" style="margin-right: 10px;" />
-    <hd-button v-bind="{content:'保存',type:'success',style:'margin-top:20px;'}"/>
+    <hd-button v-bind="{content:'保存',type:'success',style:'margin-top:20px;'}"/> -->
   </div>
 </template>
 
@@ -14,7 +18,7 @@ import hdButton from './components/Button.vue'
     components: {hdButton},
     data() {
       return {
-        btContent:'保存提交'
+        btContent:'反馈'
       }
     }
   }
