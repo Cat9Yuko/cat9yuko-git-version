@@ -1,6 +1,9 @@
 <template>
-    <div :class="[type,{disabled}]" @click="onClick">{{ text }}</div>
-  {{ content }}
+    <section>
+      <div v-bind="$attrs" :class="[type,{disabled}]" @click="onClick">{{ text }}</div>
+      <div :id="$attrs.id" :class="[type,{disabled}]" @click="onClick">{{ text }}</div>
+    {{ content }}
+    </section>
       <!-- <hr>
     <button @click="content='后盾人'">子组件</button>
     {{ content }} -->
@@ -8,6 +11,8 @@
 
 <script>
 export default {
+  // 继承属性
+  // inheritAttrs: false,
   props: {
     content: {
       type: String,

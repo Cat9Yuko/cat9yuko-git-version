@@ -1,6 +1,6 @@
 <template>
   <div>
-    <hd-button :content="btContent" type="success" />
+    <hd-button :content="btContent" type="success" class="hd" id="xj" />
     <hr>
     <button @click="btContent='向军大叔'">父组件</button>
     {{ btContent }}
@@ -19,6 +19,11 @@ import hdButton from './components/Button.vue'
     data() {
       return {
         btContent:'反馈'
+      }
+    },
+    methods: {
+      show() {
+        alert('向军大叔')
       }
     }
   }
