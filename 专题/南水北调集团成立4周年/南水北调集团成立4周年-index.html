@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <title>中国南水北调集团有限公司成立4周年</title>
+    <link rel="stylesheet" href="images_zt/normalize.css">
+    <link rel="stylesheet" href="images_zt/slick.css">
+    <link rel="stylesheet" href="images_zt/cardslider.css">
+    <link rel="stylesheet" href="images_zt/nsbd4zn-202410-global.css">
+</head>
+<body>
+    <header></header>
+    <main class="main">
+        <div class="center-block-1280">
+            <section>
+                <div class="hnews clearfix">
+                    <div class="fl"><img src="images_zt/nsbd4zn-202410-ttnews.png" alt=""></div>
+                    <div class="fr w972">
+                        <div class="hnews">
+                            <h2><a href="" target="_blank" rel="noopener noreferrer">中国南水北调集团有限公司成立4周年新闻标题中国南水北调集团有限公司成立4周年新闻标题</a></h2>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="chnltitle"><a href="" target="_blank" rel="noopener noreferrer"><img src="images_zt/nsbd4zn-202410-chnltywsd.png" alt=""></a></div>
+                <div class="clearfix">
+                    <div class="fl w468">
+                        <div class="tablelist">
+                            <div class="tablist"><a href="" target="_blank" rel="noopener noreferrer">新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题......</a></div>
+                            <div class="tablist"><a href="" target="_blank" rel="noopener noreferrer">新闻标题新闻标题新闻标题新闻标题新......</a></div>
+                            <div class="tablist"><a href="" target="_blank" rel="noopener noreferrer">新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题......</a></div>
+                            <div class="tablist"><a href="" target="_blank" rel="noopener noreferrer">新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题......</a></div>
+                            <div class="tablist"><a href="" target="_blank" rel="noopener noreferrer">新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题......</a></div>
+                        </div>
+                    </div>
+                    <div class="fr w800" style="height: 525px;">
+                        <div class="my-slider">
+                            <ul>
+                              <li><a href="" target="_blank" rel="noopener noreferrer"><div class="garyfilter"></div><img src="images_zt/demo.jpg" alt=""></a></li>
+                              <li><a href="" target="_blank" rel="noopener noreferrer"><div class="garyfilter"></div><img src="images_zt/demo.jpg" alt=""></a></li>
+                              <li><a href="" target="_blank" rel="noopener noreferrer"><div class="garyfilter"></div><img src="images_zt/demo.jpg" alt=""></a></li>
+                              <li><a href="" target="_blank" rel="noopener noreferrer"><div class="garyfilter"></div><img src="images_zt/demo.jpg" alt=""></a></li>
+                              <li><a href="" target="_blank" rel="noopener noreferrer"><div class="garyfilter"></div><img src="images_zt/demo.jpg" alt=""></a></li>
+                            </ul>
+                          </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="chnltitle"><a href="" target="_blank" rel="noopener noreferrer"><img src="images_zt/nsbd4zn-202410-chnltmtgz.png" alt=""></a></div>
+                <div class="clearfix">
+                    <div class="fl">
+
+                    </div>
+                    <div class="fr"></div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer></footer>
+
+    <script src="images_zt/jquery-3.7.0.min.js"></script>
+    <script src="images_zt/slick.js"></script>
+    <script src="images_zt/jquery.cardslider.min.js"></script>
+    <script>
+        var cardslider = $('.my-slider').cardslider({
+				swipe: true,
+				dots: false,
+                direction: 'left',
+                loop: true,
+                nav: false
+		}).data('cardslider');
+    
+        var time = 5000
+        var timer =  setInterval(() => {
+            cardslider.nextCard()
+        }, time);
+        $(".my-slider").hover(function() {
+            clearInterval(timer)
+        },function(){
+            clearInterval(timer)
+            timer = setInterval(() => {
+            cardslider.nextCard()
+        }, time);
+        })
+        // $('.my-slider').cardslider({
+        //     // keyboard navigation
+        //     keys: {
+        //     next: 38,
+        //     prev: 40
+        //     },
+
+        //     // 'up', 'down', 'right', 'left'
+        //     direction: 'left',
+
+        //     // shows navigation
+        //     nav: true,
+
+        //     // allows swipe event on touch devices
+        //     swipe: false,
+
+        //     // shows bottom pagination dots
+        //     dots: false,
+
+        //     // infinite loop
+        //     loop: false,
+
+        //     // callbacks
+        //     beforeCardChange: null,
+        //     afterCardChange: null
+
+        //     })
+    </script>
+</body>
+</html>
