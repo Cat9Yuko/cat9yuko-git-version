@@ -1,8 +1,9 @@
 <template>
     <section>
-      <div v-bind="$attrs" :class="[type,{disabled}]" @click="onClick">{{ text }}</div>
-      <div :id="$attrs.id" :class="[type,{disabled}]" @click="onClick">{{ text }}</div>
-    {{ content }}
+      <div v-bind="$attrs" :class="[type,{disabled}]">{{ text }}</div>
+      <h2 v-bind="$attrs">向军</h2>
+      <!-- <div :id="$attrs.id" :class="[type,{disabled}]" @click="onClick">{{ text }}</div>
+    {{ content }} -->
     </section>
       <!-- <hr>
     <button @click="content='后盾人'">子组件</button>
@@ -19,6 +20,7 @@ export default {
       default: '确定'
       // required: true
     },
+    // click: {type: Function},
     type: {
       type: String,
       default: 'info',

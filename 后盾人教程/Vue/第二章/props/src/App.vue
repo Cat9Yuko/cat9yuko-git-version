@@ -1,9 +1,9 @@
 <template>
   <div>
-    <hd-button :content="btContent" type="success" class="hd" id="xj" />
-    <hr>
+    <hd-button :content="btContent" type="success" class="hd" id="xj" @click="show" />
+    <!-- <hr>
     <button @click="btContent='向军大叔'">父组件</button>
-    {{ btContent }}
+    {{ btContent }} -->
     <!-- <hd-button content="保存提交" hd-tip="@" type="success" style="margin-right: 10px;" />
     <hd-button content="删除" type="danger" style="margin-right: 10px;" />
     <hd-button content="反馈" style="margin-right: 10px;" />
