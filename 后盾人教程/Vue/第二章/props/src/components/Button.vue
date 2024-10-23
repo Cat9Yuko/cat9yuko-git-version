@@ -1,6 +1,6 @@
 <template>
     <section>
-      <div v-bind="$attrs" :class="[type,{disabled}]">{{ text }}</div>
+      <div :id="$attrs.id" :class="[type,{disabled}]">{{ text }}</div>
       <h2 v-bind="$attrs">向军</h2>
       <!-- <div :id="$attrs.id" :class="[type,{disabled}]" @click="onClick">{{ text }}</div>
     {{ content }} -->
@@ -13,8 +13,9 @@
 <script>
 export default {
   // 继承属性
-  // inheritAttrs: false,
+  inheritAttrs: false,
   props: {
+    click: {type: Function},
     content: {
       type: String,
       default: '确定'
