@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="renderer" content="webkit">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no,email=no,adress=no">
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> -->
+<title>规章库</title>
+
+<link rel="stylesheet" href="css/vendor.css">
+<!-- inject:css -->
+<link rel="stylesheet" href="css/main.css">
+<!-- endinject -->
+<script src="js/vendor.js"></script>
+<!-- inject:js -->
+<script src="js/main.js"></script>
+<!-- endinject -->
+<style>
+  @font-face {
+    font-family:impact;
+		src: url('font/impact.eot');
+    src: url("font/impact.eot?#iefix") format("embedded-opentype"), url("font/impact.woff") format("woff"), url("font/impact.ttf") format("truetype"), url("font/impact.svg#impact") format("svg");
+}
+@font-face{
+    font-family:icon;
+    src: url('font/iconfont.eot');
+    src: url('font/iconfont.eot?#iefix') format('embedded-opentype'),url('font/iconfont.woff') format('woff'),url('font/iconfont.ttf') format('truetype'),url('font/iconfont.svg#iconfont') format('svg');
+}
+  .gzkword{
+    font-size: 34px;
+    font-weight: bold;
+    margin-left: 30px;
+  }
+
+  /* list */
+  .notice1 {padding: 50px 0 160px;}
+.notice1 .title {padding-bottom: 55px;}
+.notice1 .list {}
+.notice1 .list .item {background: #fff;box-shadow: 0px 0px 15px 0px #e2e2e2;border-bottom: 2px solid #BB945C;transition: all 0.3s ease-out 0s;}
+.notice1 .list .item+.item {margin-top: 20px;}
+.notice1 .list .item a {display: block;line-height: 80px;padding: 0 40px;position: relative;}
+.notice1 .list .item a .fz16 {display: inline-block;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;vertical-align: middle;}
+.notice1 .list .item a .data {position: absolute;right: 40px;top: 0;}
+.notice1 .list .item:hover {color: #fff;background: #9B0A0B;}
+.notice1 .box {}
+.notice1 .box .tit {background: #142e50;color: #fff;padding: 0 40px;line-height: 80px;margin-bottom: 20px;box-shadow: 0px 0px 15px 0px #e2e2e2;}
+.notice1 .box .tit .fz24 {float: left;line-height: 80px;}
+.notice1 .box .tit .more1 {float: right;}
+.notice1 .box+.box {margin-top: 55px;}
+/*pages*/
+.pages{margin-top:100px;text-align:center;font-size: 0;}
+.pages .prev{font-family:icon;padding:0;width:33px;}
+.pages .next{font-family:icon;padding:0;width:33px;}
+.pages a{display:inline-block;font-size:16px;font-family:Arial;border:1px solid #ddd;padding:0 8px;min-width:18px;height:33px;border-radius:3px;line-height:34px;vertical-align: middle;margin: 0 7px;}
+.pages i{display:inline-block;font-size:16px;font-family:icon;padding:0 8px;margin:0 3px;height:33px;border-radius:2px;line-height:33px;vertical-align: middle;}
+.pages a.now{background:#9B0A0B;color:#fff;border-color:#9B0A0B;}
+.pages a:hover{background:#9B0A0B;color:#fff;border-color:#9B0A0B;}
+.pages .go{display:inline-block;font-family:Arial;border:1px solid #ddd;padding:0 7px;margin:0 5px;height:33px;border-radius:3px;line-height:34px;vertical-align: middle;}
+.pages .go input{border: none;width:30px;height:23px;line-height:23px;font-size: 16px;margin:5px 0;text-align: center;font-size:16px;float: left;}
+.pages .go em{height:23px;margin:5px;border-left: 1px solid #ddd;display: inline-block;line-height:24px;font-size:16px;padding-left:10px;cursor: pointer;}
+.pages .loadmore{display:none;}
+</style>
+</head>
+<body>
+  
+  <div class="topping-mod xfont icon-up"><div class="s">top</div></div>
+
+  <div class="x-layout">
+    <div class="x-header">
+      <div class="top">
+  <div class="menu-mod">
+    <div class="logo">
+      <div class="img1"><a href="home.html"><img src="image/logo1.png" alt="" class="i" width="515"></a></div>
+      <div class="gzkword">规章库</div>
+    </div>
+    
+  </div>
+  
+</div>
+
+    </div>
+
+    <div class="x-container" style="background-color: #fbf8f7;">
+      <div class="overview1">
+        <div class="x-block">
+          <div class="flexBox">
+            <div class="navBar">
+              <div class="navBox">
+                <div class="padd">
+                  <!-- <div class="tit1">规章库</div> -->
+                  <div class="clickBox">
+                    <div class="tracker-mod dir-ver">
+                      <div class="tracker-box">
+                        <div class="tracker-track">
+
+                          <div class="tracker-item cur">
+                            <div class="padd">
+                              <a href="#id1">
+                                <div class="flexBox">
+                                  <div class="icon">
+                                    <div class="ico1 ico"><img src="image/icon28a.png" class="i" alt=""></div>
+                                    <div class="ico2 ico"><img src="image/icon28b.png" class="i" alt=""></div>
+                                  </div>
+                                  <div class="txt">全部</div>
+                                </div>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="tracker-item">
+                            <div class="padd">
+                              <a href="#id2">
+                                <div class="flexBox">
+                                  <div class="icon">
+                                    <div class="ico1 ico"><img src="image/icon29a.png" class="i" alt=""></div>
+                                    <div class="ico2 ico"><img src="image/icon29b.png" class="i" alt=""></div>
+                                  </div>
+                                  <div class="txt">党政群团</div>
+                                </div>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="tracker-item">
+                            <div class="padd">
+                              <a href="#id3">
+                                <div class="flexBox">
+                                  <div class="icon">
+                                    <div class="ico1 ico"><img src="image/icon29a.png" class="i" alt=""></div>
+                                    <div class="ico2 ico"><img src="image/icon29b.png" class="i" alt=""></div>
+                                  </div>
+                                  <div class="txt">团干部教育培训</div>
+                                </div>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="tracker-item">
+                            <div class="padd">
+                              <a href="#id4">
+                                <div class="flexBox">
+                                  <div class="icon">
+                                    <div class="ico1 ico"><img src="image/icon29a.png" class="i" alt=""></div>
+                                    <div class="ico2 ico"><img src="image/icon29b.png" class="i" alt=""></div>
+                                  </div>
+                                  <div class="txt">人事师资</div>
+                                </div>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="tracker-item">
+                            <div class="padd">
+                              <a href="#id5">
+                                <div class="flexBox">
+                                  <div class="icon">
+                                    <div class="ico1 ico"><img src="image/icon29a.png" class="i" alt=""></div>
+                                    <div class="ico2 ico"><img src="image/icon29b.png" class="i" alt=""></div>
+                                  </div>
+                                  <div class="txt">科研与智库工作</div>
+                                </div>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="tracker-item">
+                            <div class="padd">
+                              <a href="#id5">
+                                <div class="flexBox">
+                                  <div class="icon">
+                                    <div class="ico1 ico"><img src="image/icon29a.png" class="i" alt=""></div>
+                                    <div class="ico2 ico"><img src="image/icon29b.png" class="i" alt=""></div>
+                                  </div>
+                                  <div class="txt">研究生教育</div>
+                                </div>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="tracker-item">
+                            <div class="padd">
+                              <a href="#id5">
+                                <div class="flexBox">
+                                  <div class="icon">
+                                    <div class="ico1 ico"><img src="image/icon29a.png" class="i" alt=""></div>
+                                    <div class="ico2 ico"><img src="image/icon29b.png" class="i" alt=""></div>
+                                  </div>
+                                  <div class="txt">外事工作</div>
+                                </div>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="tracker-item">
+                            <div class="padd">
+                              <a href="#id5">
+                                <div class="flexBox">
+                                  <div class="icon">
+                                    <div class="ico1 ico"><img src="image/icon29a.png" class="i" alt=""></div>
+                                    <div class="ico2 ico"><img src="image/icon29b.png" class="i" alt=""></div>
+                                  </div>
+                                  <div class="txt">校园保障</div>
+                                </div>
+                              </a>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cont notice1">
+              
+              <div class="list">
+                <div class="item">
+                  <a href="#">
+                    <div class="fz16">杰出青年成长历程的典型性研究</div>
+                    <div class="data">2018-07-09</div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="#">
+                    <div class="fz16">杰出青年成长历程的典型性研究</div>
+                    <div class="data">2018-07-09</div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="#">
+                    <div class="fz16">杰出青年成长历程的典型性研究</div>
+                    <div class="data">2018-07-09</div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="#">
+                    <div class="fz16">杰出青年成长历程的典型性研究</div>
+                    <div class="data">2018-07-09</div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="#">
+                    <div class="fz16">杰出青年成长历程的典型性研究</div>
+                    <div class="data">2018-07-09</div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="#">
+                    <div class="fz16">杰出青年成长历程的典型性研究</div>
+                    <div class="data">2018-07-09</div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="#">
+                    <div class="fz16">杰出青年成长历程的典型性研究</div>
+                    <div class="data">2018-07-09</div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="#">
+                    <div class="fz16">杰出青年成长历程的典型性研究</div>
+                    <div class="data">2018-07-09</div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="#">
+                    <div class="fz16">杰出青年成长历程的典型性研究</div>
+                    <div class="data">2018-07-09</div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="#">
+                    <div class="fz16">杰出青年成长历程的典型性研究</div>
+                    <div class="data">2018-07-09</div>
+                  </a>
+                </div>
+              </div>
+              <div class="pages"><a class="prev"></a><a class="now">1</a><a>2</a><a>3</a><a>4</a><a>5</a><a>6</a><a class="next"></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="x-footer">
+      <div class="p"><span class="s">版权所有©中央团校</span><span class="s">地址：北京市海淀区西三环北路25号</span><span class="s">邮编：100089</span></div>
+<!-- <div class="ftbj"><a href="http://www.fractal-technology.com" target="_blank">网站建设</a>：<a href="http://www.fractal-technology.com" target="_blank">北京分形科技</a></div>   -->
+
+    </div>
+  </div>
+  <!-- inject:private:js -->
+  <script>
+              "use strict";
+
+$(function () {
+  $(".overview1 .cont .list .item .ul .li .t1").on("click", function () {
+    $(this).parents(".li").toggleClass("on");
+    $(this).siblings(".t2").slideToggle();
+    $(this).parents(".li").siblings().find(".t2").slideUp();
+    $(this).parents(".li").siblings().removeClass("on");
+  });
+  
+
+  $(".overview1 .navBar .navBox .clickBox .tracker-mod.dir-ver .tracker-item.disable").unbind("click"); ///  
+});
+              </script>
+</body>
+</html>
