@@ -19,16 +19,7 @@
 <script src="js/main.js"></script>
 <!-- endinject -->
 <style>
-  @font-face {
-    font-family:impact;
-		src: url('font/impact.eot');
-    src: url("font/impact.eot?#iefix") format("embedded-opentype"), url("font/impact.woff") format("woff"), url("font/impact.ttf") format("truetype"), url("font/impact.svg#impact") format("svg");
-}
-@font-face{
-    font-family:icon;
-    src: url('font/iconfont.eot');
-    src: url('font/iconfont.eot?#iefix') format('embedded-opentype'),url('font/iconfont.woff') format('woff'),url('font/iconfont.ttf') format('truetype'),url('font/iconfont.svg#iconfont') format('svg');
-}
+ 
   .gzkword{
     font-size: 34px;
     font-weight: bold;
@@ -38,13 +29,13 @@
   /* list */
   .notice1 {padding: 50px 0 160px;}
 .notice1 .title {padding-bottom: 55px;}
-.notice1 .list {}
-.notice1 .list .item {background: #fff;box-shadow: 0px 0px 15px 0px #e2e2e2;border-bottom: 2px solid #BB945C;transition: all 0.3s ease-out 0s;}
+.notice1 .list {margin-top: 30px;}
+.notice1 .list .item {font-size: 18px;background: #fff;box-shadow: 0px 0px 15px 0px #e2e2e2;border-bottom: 2px solid #BB945C;transition: all 0.3s ease-out 0s;}
 .notice1 .list .item+.item {margin-top: 20px;}
 .notice1 .list .item a {display: block;line-height: 80px;padding: 0 40px;position: relative;}
 .notice1 .list .item a .fz16 {display: inline-block;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;vertical-align: middle;}
 .notice1 .list .item a .data {position: absolute;right: 40px;top: 0;}
-.notice1 .list .item:hover {color: #fff;background: #9B0A0B;}
+.notice1 .list .item:hover {color: #fff;background: #b00000;}
 .notice1 .box {}
 .notice1 .box .tit {background: #142e50;color: #fff;padding: 0 40px;line-height: 80px;margin-bottom: 20px;box-shadow: 0px 0px 15px 0px #e2e2e2;}
 .notice1 .box .tit .fz24 {float: left;line-height: 80px;}
@@ -63,42 +54,126 @@
 .pages .go em{height:23px;margin:5px;border-left: 1px solid #ddd;display: inline-block;line-height:24px;font-size:16px;padding-left:10px;cursor: pointer;}
 .pages .loadmore{display:none;}
 
-.search input {
-  background-color: #ffffff;
-  height: 30px;
-  width: 250px;
-  text-indent: 15px;
-  color: #000000;
-}
-.search button {
-  height: 30px;
-  width: 80px;
-  background-color: #900D13;
-  cursor: pointer;
-  font-size: 14px;
-}
-.curpage {
-  margin-bottom: 25px;
-}
+
 </style>
 </head>
 <body>
   
   <div class="topping-mod xfont icon-up"><div class="s">top</div></div>
 
+  <div class="pop-mod pop-search">
+    <div class="pop-panel">
+  <div class="pop-dialog">
+    <div class="pop-close xicon icon-close"></div>
+    <div class="pop-cont">
+      <div class="pop-tit">高级搜索</div>
+      <div class="scroll-mod">
+        <div class="list">
+          <div class="item">
+            <div class="flexBox">
+              <div class="lr">标题</div>
+              <div class="rl">
+                <div class="iptBox">
+                  <div class="flexBox">
+                    <input type="text" placeholder="请输入标题">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="flexBox">
+              <div class="lr">起始日</div>
+              <div class="rl">
+                <div class="iptBox">
+                  <div class="flexBox">
+                    <input type="text" data-type="date" placeholder="" readonly>
+                    <div class="iconfont icon-below-s"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="flexBox">
+              <div class="lr">结束日</div>
+              <div class="rl">
+                <div class="iptBox">
+                  <div class="flexBox">
+                    <input type="text" data-type="date" placeholder="" readonly>
+                    <div class="iconfont icon-below-s"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="btnBox">
+        <div class="btn1 sure">
+          <div class="flexBox">
+            <div class="iconfont"></div>
+            <div class="txt">确认</div>
+          </div>
+        </div>
+        <div class="btn1 cancel">
+          <div class="flexBox">
+          <div class="iconfont xicon icon-close pop-close"></div>
+          <div class="txt">取消</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+
   <div class="x-layout">
     <div class="x-header">
       <div class="top">
-  <div class="menu-mod">
-    <div class="logo">
-      <div class="img1"><a href="home.html"><img src="image/logo1.png" alt="" class="i" width="515"></a></div>
-      <div class="gzkword">规章库</div>
+      <div class="menu-mod">
+        <div class="logo">
+          <div class="img1"><a href="home.html"><img src="image/logo1.png" alt="" class="i" width="515"></a></div>
+          <div class="gzkword">规章库</div>
+        </div>
+      </div>
+      <div class="user">
+        <div class="user-item">
+          <div class="n">欢迎 用户名</div>
+          <div class="suds-mod">
+            <div class="suds-target"></div>
+            <div class="suds-pop at-b">
+              <div class="suds-item"><a href="#">操作1</a></div>
+              <div class="suds-item"><a href="#">操作2</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="user-item"><a href="#">邮箱</a></div>
+        <div class="user-item" style="margin-left: 15px;"><a href="#">旧版入口</a></div>
+      </div>
     </div>
-  </div>
-  <div class="search">
-    <input type="text" placeholder="请输入关键字"><button type="submit">搜索</button>
-  </div>
-</div>
+    <div class="nav-mod">
+      <div class="nav-box nav-lv1">
+        <div class="nav-item nav-lv1-item">
+          <div class="nav-tit nav-lv1-tit"><a class="nav-link nav-lv1-link" href="home.html">首页</a>
+          </div>
+        </div>
+        <div class="nav-item nav-lv1-item">
+          <div class="nav-tit nav-lv1-tit"><a class="nav-link nav-lv1-link" href="#">公文中心</a>
+          </div>
+        </div>
+        <div class="nav-item nav-lv1-item cur">
+          <div class="nav-tit nav-lv1-tit"><a class="nav-link nav-lv1-link" href="#">应用中心</a><div class="arr xicon icon-down"></div></div>
+        </div>
+        <div class="nav-item nav-lv1-item">
+          <div class="nav-tit nav-lv1-tit"><a class="nav-link nav-lv1-link" href="#">办公云盘</a><div class="arr xicon icon-down"></div></div>
+        </div>
+        <div class="nav-item nav-lv1-item">
+          <div class="nav-tit nav-lv1-tit"><a class="nav-link nav-lv1-link" href="#">数据团校</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
     </div>
 
@@ -228,70 +303,223 @@
               </div>
             </div>
             <div class="cont notice1">
-              <div class="curpage">当前位置：<a href="">规章库</a>&nbsp;&gt;&nbsp;<a href="">党政群团</a></div>
-              <div class="list">
-                <div class="item">
-                  <a href="#">
-                    <div class="fz16">杰出青年成长历程的典型性研究</div>
-                    <div class="data">2018-07-09</div>
-                  </a>
+              <div class="cont" style="padding: 0px 17px 35px 22px;">
+                <div class="top">
+                  <div class="flexBox" style="align-items: center;">
+                    <div class="n-tit"><div class="curpage">当前位置：<a href="">规章库</a> > <a href="">全部</a></div></div>
+                    <div class="n-condition">
+                      <div class="flexBox">
+                        <div class="btn1 n-orange m-show">
+                          <button class="padBtn" pop-show=".pop-search">高级搜索</button>
+                        </div>
+                        <div class="btn1 n-blue">
+                          <div class="flexBox">
+                            <div class="ser-ipt">
+                              <input type="text" placeholder="输入关键字">
+                            </div>
+                            <button class="padBtn">
+                              <div class="flexBox">
+                                <div class="xicon icon-search"></div>
+                                <div class="t">搜索</div>
+                              </div>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="btn1 n-orange p-show">
+                          <button class="padBtn" pop-show=".pop-search">高级搜索</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="item">
-                  <a href="#">
-                    <div class="fz16">杰出青年成长历程的典型性研究</div>
-                    <div class="data">2018-07-09</div>
-                  </a>
-                </div>
-                <div class="item">
-                  <a href="#">
-                    <div class="fz16">杰出青年成长历程的典型性研究</div>
-                    <div class="data">2018-07-09</div>
-                  </a>
-                </div>
-                <div class="item">
-                  <a href="#">
-                    <div class="fz16">杰出青年成长历程的典型性研究</div>
-                    <div class="data">2018-07-09</div>
-                  </a>
-                </div>
-                <div class="item">
-                  <a href="#">
-                    <div class="fz16">杰出青年成长历程的典型性研究</div>
-                    <div class="data">2018-07-09</div>
-                  </a>
-                </div>
-                <div class="item">
-                  <a href="#">
-                    <div class="fz16">杰出青年成长历程的典型性研究</div>
-                    <div class="data">2018-07-09</div>
-                  </a>
-                </div>
-                <div class="item">
-                  <a href="#">
-                    <div class="fz16">杰出青年成长历程的典型性研究</div>
-                    <div class="data">2018-07-09</div>
-                  </a>
-                </div>
-                <div class="item">
-                  <a href="#">
-                    <div class="fz16">杰出青年成长历程的典型性研究</div>
-                    <div class="data">2018-07-09</div>
-                  </a>
-                </div>
-                <div class="item">
-                  <a href="#">
-                    <div class="fz16">杰出青年成长历程的典型性研究</div>
-                    <div class="data">2018-07-09</div>
-                  </a>
-                </div>
-                <div class="item">
-                  <a href="#">
-                    <div class="fz16">杰出青年成长历程的典型性研究</div>
-                    <div class="data">2018-07-09</div>
-                  </a>
+                
+              </div>
+              
+              <div class="tab-cont">
+                <div class="cont">
+                  <div class="tab-table act">
+                    <div class="scroll-mod">
+                      <table class="table">
+                        <!-- 宽度修改 amend-fractal-->
+                        <colgroup>
+                          <col width="80%">
+                          <col width="20%">
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th><div class="txt">标题</div></th>
+                            <th><div class="txt">发布时间</div></th>
+                          </tr> 
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>
+                              <div class="txt">
+                                <div class="flexBox">
+                                  <div class="text"><a href="detail.html" target="_blank" rel="noopener noreferrer">国家发展和改革委员会规章</a></div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="txt">
+                                <div class="flexBox">
+                                  <div class="text">2024-10-15</div>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="txt">
+                                <div class="flexBox">
+                                  <div class="text">学校召开党委常委会（扩大）会议总结党纪学习教育成果 部署推动纪律教育常态化长效化</div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="txt">
+                                <div class="flexBox">
+                                  <div class="text">2024-10-11</div>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="txt">
+                                <div class="flexBox">
+                                  <div class="text">中央团校（中国青年政治学院）举行2024年秋季学期开学典礼</div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="txt">
+                                <div class="flexBox">
+                                  <div class="text">2024-09-03</div>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="txt">
+                                <div class="flexBox">
+                                  <div class="text">我校召开退休教师座谈会</div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="txt">
+                                <div class="flexBox">
+                                  <div class="text">2024-09-13</div>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="txt">
+                                <div class="flexBox">
+                                  <div class="text">2024级硕士研究生新生来校报到</div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="txt">
+                                <div class="flexBox">
+                                  <div class="text">2024-08-30</div>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="txt">
+                                <div class="flexBox">
+                                  <div class="text">学校党委理论学习中心组举行2024年第六次集体学习</div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="txt">
+                                <div class="flexBox">
+                                  <div class="text">2024-07-31</div>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="txt">
+                                <div class="flexBox">
+                                  <div class="text">学校召开党委常委会专题会议学习党的二十届三中全会精神部署学习宣传贯彻举措</div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="txt">
+                                <div class="flexBox">
+                                  <div class="text">2024-07-24</div>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="txt">
+                                <div class="flexBox">
+                                  <div class="text">2024年春季学期第五批主体班结业</div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="txt">
+                                <div class="flexBox">
+                                  <div class="text">2024-07-30</div>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="txt">
+                                <div class="flexBox">
+                                  <div class="text">我校举行党纪学习教育专题党课暨主题党日活动</div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="txt">
+                                <div class="flexBox">
+                                  <div class="text">2024-07-19</div>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          
+                          
+                          
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="paging-mod">
+                      <div class="paging-box">
+                        <a href="#" class="paging-item paging-arrow xfont icon-left"></a>
+                        <a href="#" class="paging-item paging-link cur">1</a>
+                        <a href="#" class="paging-item paging-link">2</a>
+                        <a href="#" class="paging-item paging-link">3</a>
+                        <a href="#" class="paging-item paging-link">4</a>
+                        <a href="#" class="paging-item paging-link">5</a>
+                        <a href="#" class="paging-item paging-link">6</a>
+                        <a href="#" class="paging-item paging-arrow xfont icon-right"></a>
+                      </div>
+                    
+                      <a href="#" class="paging-more">查看更多</a>
+                    </div>
+    
+                  </div>
                 </div>
               </div>
-              <div class="pages"><a class="prev"></a><a class="now">1</a><a>2</a><a>3</a><a>4</a><a>5</a><a>6</a><a class="next"></a></div>
             </div>
           </div>
         </div>

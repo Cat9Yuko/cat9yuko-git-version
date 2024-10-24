@@ -274,10 +274,10 @@ header {
 
 .ibox5 .slideBox .hd ul li {
   width: 274px;
-  height: 121px;
+  height: 97px;
   border: 1px #cacaca solid;
   border-bottom: 0;
-  line-height: 121px;
+  line-height: 97px;
   font-size: 22px;
   color: #323232;
   text-indent: 57px;
@@ -288,6 +288,7 @@ header {
 .ibox5 .slideBox .hd ul li.on {
   background: none;
   background-image: url("nsbd4zn-202410-tabact.png");
+  background-position: center;
   width: 286px;
   color: #fff;
   border: 0;
