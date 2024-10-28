@@ -21,3 +21,97 @@ img {
   max-width: 100%;
   border: none;
 }
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.center-block-1200 {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/* user style */
+header {
+  background-image: url('sdhskyxgljz-202410-banner.jpg');
+  height: 518px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+section + section {
+  margin-top: 30px;
+}
+.main {
+  padding: 30px 0;
+}
+.chnltitle {
+  background-color: #0e8ed8;
+  line-height: 50px;
+  padding: 0 17px;
+  color: #ffffff;
+  border-radius: 7px;
+}
+.chnltitle h3 {
+  font-size: 24px;
+  float: left;
+}
+.more {
+  float: right;
+}
+.list {
+  padding: 30px 30px 0;
+}
+.list li {
+  line-height: 37px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.list li::before {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background-color: #1572b9;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+footer {
+  background-color: #dddcdc;
+  border-top: 2px solid #156c9e;
+}
+.boxs {
+  box-shadow: 0px 0px 3px 1px #ccc;
+}
+.source-time {
+  margin: 0 auto;
+  height: 35px;
+  text-align: center;
+  position: relative;
+  line-height: 35px;
+}
+
+.time {
+  margin-right: 10px;
+}
+
+.wechat,
+.sina {
+  position: absolute;
+  margin-top: 5px;
+}
+
+.wechat {
+  margin-left: 10px;
+}
+
+.sina {
+  margin-left: 46px;
+}
