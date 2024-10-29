@@ -1,6 +1,8 @@
 <template>
-  <div>
-    <lesson v-for="item in db" :key="item.id" :lesson="item" />
+  <div class="lesson">
+    <lesson v-for="item in db" :key="item.id" :lesson="item" @del="show" />
+    <input type="text" :value="title" @input="title = $event.target.value">
+    {{ title }}
   </div>
 </template>
 
@@ -11,10 +13,26 @@ export default {
   components: { Lesson },
   data() {
     return {
-      db: db
+      db: db,
+      title: '后盾人'
+    }
+  },
+  methods: {
+    input(v) {
+      
+    },
+    show(id) {
+      const index = this.db.findIndex(l => l.id == id)
+      this.db.splice(index, 1)
     }
   }
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.lesson {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 10px;
+}
+</style>
