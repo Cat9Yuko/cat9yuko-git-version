@@ -63,7 +63,7 @@ div {
     h3 {
         margin: 0;
         padding: 0 0 20px;
-        font-size: 1px;
+        font-size: 12px;
     }
 
     img {
