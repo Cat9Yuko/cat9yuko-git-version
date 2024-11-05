@@ -165,7 +165,7 @@ function save(){
     var zhuti=$("#zhuti").val();
 	var biaoti=$("#biaoti").val();
 	var neirong=$("#neirong").val();
-	var nianling=$("#nianling").val();
+	//var nianling=$("#nianling").val();
 	var zhiye=$("#zhiye").val();
 	var diyu=$("#diyu").val();
 	var shuming=$("#shuming").val();
@@ -188,10 +188,10 @@ function save(){
 	   alert("请输入内容！");
 	   return;
 	}
-	 if(checknull(nianling)){
-	   alert("请选择年龄！");
-	   return;
-	}
+	// if(checknull(nianling)){
+	//   alert("请选择年龄！");
+	//   return;
+	//}
 	 if(checknull(zhiye)){
 	   alert("请选择职业！");
 	   return;
@@ -232,7 +232,7 @@ function save(){
 		classification1:"20yjjy",
 		classification2:zhuti,
 		address:diyu,
-		identitynumber:base64.encode(nianling),
+		//identitynumber:base64.encode(nianling),
 		informantname:base64.encode(shuming),
 		informantphone:base64.encode(phone),
 		appeal:zhiye,

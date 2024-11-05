@@ -78,10 +78,10 @@ header {
   line-height: 62px;
 }
 .form-container {
-  width: 1342px;
+  width: 1336px;
   height: 1329px;
   margin: 0 auto;
-  margin-left: -25px;
+  margin-left: -16px;
   position: relative;
   margin-top: 110px;
   background-image: url('../img/jyzjhd-202411-formbg.png');
@@ -143,7 +143,7 @@ input[type="text"] {
   margin: 0 auto;
 }
 .form-item + .form-item {
-  margin-top: 59px;
+  margin-top: 38px;
 }
 .f-title2 {
   width: 176px;

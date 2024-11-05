@@ -24,129 +24,141 @@
             </section>
             <section>
                 <div class="form-container">
-                        <div class="form-item clearfix whitebg">
-                            <div class="fl f-title">主题</div>
+                    <div class="form-item clearfix whitebg">
+                        <div class="fl f-title">主题</div>
+                        <div class="fl f-cont">
+                            <select  id="zhuti">
+                                <option value="" selected disabled>请选择</option>
+                                <option value="yjjyshzhfy">水旱灾害防御</option>  
+                                <option value="yjjysljcsstxjs">实施国家水网重大工程</option>
+                                <option value="yjjyfshhsthj">复苏河湖生态环境</option>
+                                <option value="yjjywsslkjcxtx">推进数字孪生水利建设</option>                                    
+                                <option value="yjjyjljqjszdzc">建立健全节水制度政策</option>
+                                <option value="yjjyqhtz">强化体制机制法治管理</option>
+                                <option value="20yjjyqt">其他</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-item clearfix whitebg">
+                        <div class="fl f-title">标题</div>
+                        <div class="fl f-cont">
+                            <input   id="biaoti" maxlength="20" type="text" placeholder="必填，不超过20字，请勿填写特殊字符">
+                        </div>
+                    </div>
+                    <div class="form-item clearfix whitebg">
+                        <div class="fl f-title2">内容</div>
+                        <div class="fl f-cont">
+                            <textarea name="" id="neirong" maxlength="500" cols="30" rows="10"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-item clearfix">
+                        <div class="w48p clearfix whitebg fl">
+                               <div class="fl f-title">年龄</div>
+                               <div class="fl f-cont">
+                                  <select name="" id="nianling">
+                                         <option value="" selected disabled>请选择</option>
+                                         <option value="18岁以下">18岁以下</option>
+                                         <option value="18-29岁">18-29岁</option>
+                                         <option value="30-39岁">30-39岁</option>
+                                         <option value="40-59岁">40-59岁</option>
+                                         <option value="60岁及以上">60岁及以上</option>
+                                    </select>
+                               </div>
+                        </div>
+                        <div class="w48p clearfix whitebg fr">
+                            <div class="fl f-title">职业</div>
                             <div class="fl f-cont">
-                                <select  id="zhuti">
+                                <select name="" id="zhiye">
                                     <option value="" selected disabled>请选择</option>
-                                    <option value="yjjyshzhfy">水旱灾害防御</option>  
-									<option value="yjjysljcsstxjs">实施国家水网重大工程</option>
-									<option value="yjjyfshhsthj">复苏河湖生态环境</option>
-									<option value="yjjywsslkjcxtx">推进数字孪生水利建设</option>                                    
-                                    <option value="yjjyjljqjszdzc">建立健全节水制度政策</option>
-									<option value="yjjyqhtz">强化体制机制法治管理</option>
-									<option value="20yjjyqt">其他</option>
+                                    <option value="部属系统机关、企事业单位">部属系统机关、企事业单位</option>
+                                    <option value="地方水利部门">地方水利部门</option>
+                                    <option value="其他">其他</option>
                                 </select>
                             </div>
                         </div>
-                        <div class="form-item clearfix whitebg">
-                            <div class="fl f-title">标题</div>
+                    </div>
+                    <div class="form-item clearfix">
+                        <div class="w48p clearfix whitebg fl">
+                            <div class="fl f-title">地域</div>
                             <div class="fl f-cont">
-                                <input   id="biaoti" maxlength="20" type="text" placeholder="必填，不超过20字，请勿填写特殊字符">
+                                <select name="" id="diyu">
+                                    <option value="" selected disabled>请选择</option>
+                                    <option value="北京">北京</option>
+                                    <option value="天津">天津</option>
+                                    <option value="河北">河北</option>
+                                    <option value="山西">山西</option>
+                                    <option value="内蒙古">内蒙古</option>
+                                    <option value="辽宁">辽宁</option>
+                                    <option value="吉林">吉林</option>
+                                    <option value="黑龙江">黑龙江</option>
+                                    <option value="上海">上海</option>
+                                    <option value="江苏">江苏</option>
+                                    <option value="浙江">浙江</option>
+                                    <option value="安徽">安徽</option>
+                                    <option value="福建">福建</option>
+                                    <option value="江西">江西</option>
+                                    <option value="山东">山东</option>
+                                    <option value="河南">河南</option>
+                                    <option value="湖北">湖北</option>
+                                    <option value="湖南">湖南</option>
+                                    <option value="广东">广东</option>
+                                    <option value="广西">广西</option>
+                                    <option value="海南">海南</option>
+                                    <option value="重庆">重庆</option>
+                                    <option value="四川">四川</option>
+                                    <option value="贵州">贵州</option>
+                                    <option value="云南">云南</option>
+                                    <option value="西藏">西藏</option>
+                                    <option value="陕西">陕西</option>
+                                    <option value="甘肃">甘肃</option>
+                                    <option value="青海">青海</option>
+                                    <option value="宁夏">宁夏</option>
+                                    <option value="新疆">新疆</option>
+                                    <option value="香港">香港</option>
+                                    <option value="澳门">澳门</option>
+                                    <option value="台湾">台湾</option>
+                                    <option value="其他">其他</option>
+                                </select>
                             </div>
                         </div>
-                        <div class="form-item clearfix whitebg">
-                            <div class="fl f-title2">内容</div>
+                        <div class="w48p clearfix whitebg fr">
+                            <div class="fl f-title">署名</div>
                             <div class="fl f-cont">
-                                <textarea name="" id="neirong" maxlength="500" cols="30" rows="10"></textarea>
+                                <input id="shuming" type="text" maxlength="20" placeholder="选填，姓名">
                             </div>
                         </div>
-                        <div class="form-item clearfix">
-                            
-                            <div class="w48p clearfix whitebg fl">
-                                <div class="fl f-title">职业</div>
-                                <div class="fl f-cont">
-                                    <select name="" id="zhiye">
-                                        <option value="" selected disabled>请选择</option>
-                                        <option value="部属系统机关、企事业单位">部属系统机关、企事业单位</option>
-                                        <option value="地方水利部门">地方水利部门</option>
-                                        <option value="其他">其他</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="w48p clearfix whitebg fr">
-                                <div class="fl f-title">地域</div>
-                                <div class="fl f-cont">
-                                    <select name="" id="diyu">
-                                        <option value="" selected disabled>请选择</option>
-                                        <option value="北京">北京</option>
-                                        <option value="天津">天津</option>
-                                        <option value="河北">河北</option>
-                                        <option value="山西">山西</option>
-                                        <option value="内蒙古">内蒙古</option>
-                                        <option value="辽宁">辽宁</option>
-                                        <option value="吉林">吉林</option>
-                                        <option value="黑龙江">黑龙江</option>
-                                        <option value="上海">上海</option>
-                                        <option value="江苏">江苏</option>
-                                        <option value="浙江">浙江</option>
-                                        <option value="安徽">安徽</option>
-                                        <option value="福建">福建</option>
-                                        <option value="江西">江西</option>
-                                        <option value="山东">山东</option>
-                                        <option value="河南">河南</option>
-                                        <option value="湖北">湖北</option>
-                                        <option value="湖南">湖南</option>
-                                        <option value="广东">广东</option>
-                                        <option value="广西">广西</option>
-                                        <option value="海南">海南</option>
-                                        <option value="重庆">重庆</option>
-                                        <option value="四川">四川</option>
-                                        <option value="贵州">贵州</option>
-                                        <option value="云南">云南</option>
-                                        <option value="西藏">西藏</option>
-                                        <option value="陕西">陕西</option>
-                                        <option value="甘肃">甘肃</option>
-                                        <option value="青海">青海</option>
-                                        <option value="宁夏">宁夏</option>
-                                        <option value="新疆">新疆</option>
-                                        <option value="香港">香港</option>
-                                        <option value="澳门">澳门</option>
-                                        <option value="台湾">台湾</option>
-                                        <option value="其他">其他</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="form-item clearfix">
-                            
-                            <div class="w48p clearfix whitebg fl">
-                                <div class="fl f-title">署名</div>
-                                <div class="fl f-cont">
-                                    <input id="shuming" type="text" maxlength="20" placeholder="选填，姓名">
-                                </div>
-                            </div>
-                            <div class="w48p clearfix whitebg fr tpyzm">
-                                <div class="fl f-title">图片验证码</div>
-                                <div class="fl f-cont">
-                                    <input maxlength="4"  id="picYzm" type="text" placeholder="必填">
-                                    <img    id="yzmpic"  src="" alt=""  onclick="getImage();">
-                                </div>
+                    </div>
+                    <div class="form-item clearfix">
+                        <div class="w48p clearfix whitebg fl tpyzm">
+                            <div class="fl f-title">图片验证码</div>
+                            <div class="fl f-cont">
+                                <input maxlength="4"  id="picYzm" type="text" placeholder="必填">
+                                <img    id="yzmpic"  src="" alt=""  onclick="getImage();">
                             </div>
                         </div>
-                        <div class="form-item clearfix whitebg">
-                            <div class="w48p clearfix fl phone">
-                                <div class="fl f-title">手机号码</div>
-                                <div class="fl f-cont">
-                                    <input   id="phone" type="text" placeholder="必填，个人信息严格保密">
-                                </div>
-                            </div>
-                            <div class="w48p clearfix fr tpyzm">
-                                <div class="fl f-title tp">
-                                    <div      id="phonebtn"  >获取验证码</div>
-                                    <!-- <div class="disabled">获取验证码</div> -->
-                                </div>
-                                <div class="fl f-cont">
-                                    <input maxlength="6"  id="phoneYzm" type="text" placeholder="验证码">
-                                </div>
+                    </div>
+                    <div class="form-item clearfix whitebg">
+                        <div class="w48p clearfix fl phone">
+                            <div class="fl f-title">手机号码</div>
+                            <div class="fl f-cont">
+                                <input   id="phone" type="text" placeholder="必填，个人信息严格保密">
                             </div>
                         </div>
-                        <div class="button-tj">
-                            <button onclick="save()"  id="tijiao" >提交留言</button>
+                        <div class="w48p clearfix fr tpyzm">
+                            <div class="fl f-title tp">
+                                <div      id="phonebtn"  >获取验证码</div>
+                                <!-- <div class="disabled">获取验证码</div> -->
+                            </div>
+                            <div class="fl f-cont">
+                                <input maxlength="6"  id="phoneYzm" type="text" placeholder="验证码">
+                            </div>
                         </div>
-                </div>
+                    </div>
+                    <div class="button-tj">
+                        <button onclick="save()"  id="tijiao" >提交留言</button>
+                    </div>
+            </div>
+                    
                 
             </section>
         </div>
