@@ -43,12 +43,17 @@ li {
 .w501 {
   width: 501px;
 }
+.w877 {
+  width: 877px;
+}
+.w600 {
+  width: 600px;
+}
 .bgwhite {
-  background-image: url('nsbddzxyqqmts10zn-202411-bg2.jpg');
-  /* background-position: center; */
+  background-image: url("nsbddzxyqqmts10zn-202411-bg2.jpg");
+  background-position: center;
   background-repeat: repeat-y;
-  min-height: 323px;
-  /* background-size: 100%; */
+  padding: 70px 0;
 }
 /* user style */
 header {
@@ -68,16 +73,19 @@ header {
   padding: 49px 0 57px;
 }
 .chnlt {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 .chnlt img {
   display: block;
 }
 /* carousel */
-.slick-mod,
-.slick-mod2 {
+.slick-mod {
   width: 678px;
   height: 432px;
+}
+.slick-mod2 {
+  width: 600px;
+  height: 399px;
 }
 .slick-item {
   position: relative;
@@ -177,4 +185,120 @@ header {
 }
 .section2 {
   padding-top: 54px;
+}
+.lsit-item2 h2 {
+  color: #056bc0;
+  font-size: 36px;
+  line-height: 46px;
+}
+.lsit-item2 p {
+  font-size: 20px;
+  color: #4c4948;
+  line-height: 32px;
+  margin-top: 8px;
+}
+.lsit-item2 p a {
+  font-weight: bold;
+}
+.lsit-item2 + .lsit-item2 {
+  margin-top: 30px;
+}
+.imgt img {
+  margin-left: 30px;
+}
+.bgwhite + .bgwhite {
+  margin-top: 14px;
+}
+.section3 {
+  margin-top: 28px;
+}
+.hnews h1 {
+  color: #056ac0;
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 60px;
+  margin-top: 57px;
+}
+.list li {
+  height: 66.5px;
+  border-bottom: 1px dashed #050504;
+  font-size: 18px;
+  line-height: 24px;
+  display: table;
+  width: 100%;
+  padding-left: 18px;
+  padding-right: 10px;
+  font-weight: bold;
+}
+.list li a {
+  display: table-cell;
+  vertical-align: middle;
+}
+.list li:hover {
+  background-color: #b7e3fd;
+}
+.section4 {
+  margin-top: 59px;
+}
+.section5 {
+  margin-top: 65px;
+  padding-bottom: 50px;
+}
+.lsit2 li {
+  width: 550px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 18px;
+  line-height: 49px;
+}
+.lsit2 li::before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  width: 4px;
+  height: 4px;
+  background-color: #056ac0;
+  margin-right: 17px;
+}
+.lsit2 li:nth-child(even) {
+  float: right;
+}
+.lsit2 li:nth-child(odd) {
+  float: left;
+}
+footer {
+  background-color: #0b4397;
+  color: #ffffff;
+  text-align: center;
+  line-height: 36px;
+  padding: 15px 0;
+}
+.boxs {
+  box-shadow: 0px 0px 3px 1px #ccc;
+}
+.source-time {
+  margin: 0 auto;
+  height: 35px;
+  text-align: center;
+  position: relative;
+  line-height: 35px;
+}
+
+.time {
+  margin-right: 10px;
+}
+
+.wechat,
+.sina {
+  position: absolute;
+  margin-top: 5px;
+}
+
+.wechat {
+  margin-left: 10px;
+}
+
+.sina {
+  margin-left: 46px;
 }
