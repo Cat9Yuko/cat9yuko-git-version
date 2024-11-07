@@ -111,11 +111,11 @@ header {
 .slick-mod .slick-dots,
 .slick-mod2 .slick-dots {
   position: absolute;
-  right: 10px;
-  bottom: 15px;
+  right: 24px;
+  bottom: 21px;
 }
 .slick-mod2 .slick-dots {
-  bottom: 36px;
+  bottom: 21px;
 }
 
 .slick-mod .slick-arrow,
@@ -148,11 +148,11 @@ header {
 } */
 .slick-mod .slick-dots li,
 .slick-mod2 .slick-dots li {
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
   background: #ffffff;
   border-radius: 50%;
-  margin: 0 5px 0 0;
+  margin: 0 18px 0 0;
 }
 .slick-mod .slick-dots li.slick-active,
 .slick-mod2 .slick-dots li.slick-active {
