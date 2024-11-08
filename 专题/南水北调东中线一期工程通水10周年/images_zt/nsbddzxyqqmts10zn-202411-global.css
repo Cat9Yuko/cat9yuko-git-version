@@ -196,6 +196,7 @@ header {
   color: #4c4948;
   line-height: 32px;
   margin-top: 8px;
+  text-indent: 2rem;
 }
 .lsit-item2 p a {
   font-weight: bold;
