@@ -1,0 +1,121 @@
+:root {
+  font-family: "微软雅黑", "Microsoft Yahei";
+  box-sizing: inherit;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.fr {
+  float: right;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.w286 {
+  width: 286px;
+}
+.center-block-1200 {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/* user style */
+.chnltitle {
+  line-height: 47px;
+  background-color: #0c559a;
+  color: #ffffff;
+  font-size: 22px;
+  text-indent: 18px;
+  border-radius: 7px;
+}
+.bgcolor {
+  background-color: #d1f2f3;
+  height: 521px;
+}
+/* carousel */
+.slick-vmod {
+  width: 271px;
+  margin: 0 auto;
+  padding: 22px 0;
+}
+.slick-item {
+  position: relative;
+  background-color: #ffffff;
+  padding: 12px 14px;
+  margin: 6px 0;
+}
+.slick-item img {
+  width: 100%;
+}
+.tit1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 16px;
+  color: #ffffff;
+  line-height: 40px;
+  text-indent: 2rem;
+  background: rgba(0, 0, 0, 0.5);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.slick-vmod .slick-dots {
+  position: absolute;
+  right: 10px;
+  bottom: 15px;
+}
+
+.slick-vmod .slick-arrow {
+  width: 36px;
+  height: 12px;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  cursor: pointer;
+}
+.slick-vmod .slick-next {
+  top: 6px;
+  background: url('yxgls-202411-arrowtop.png') no-repeat center;
+}
+.slick-vmod .slick-prev {
+  bottom: 6px;
+  background: url('yxgls-202411-arrowbottom.png') no-repeat center;
+}
+
+/* .slick-mod2 .slick-next {
+  right: 0;
+  background: url(../images/wlaq-202009-arrowrigh.png) no-repeat center;
+}
+.slick-mod2 .slick-prev {
+  left: 0;
+  background: url(../images/wlaq-202009-arrowlef.png) no-repeat center;
+} */
+.slick-mod .slick-dots li,
+.slick-mod2 .slick-dots li {
+  width: 14px;
+  height: 14px;
+  background: #ffffff;
+  border-radius: 50%;
+  margin: 0 5px 0 0;
+}
+.slick-mod .slick-dots li.slick-active,
+.slick-mod2 .slick-dots li.slick-active {
+  width: 14px;
+  height: 14px;
+  background: #e50012;
+  border-radius: 50%;
+}
+/* --- */
