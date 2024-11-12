@@ -53,6 +53,48 @@
                             @cancel="showInvolveLeaderPicker = false"
                     />
                 </van-popup>
+              <!--TODO-->
+              {{formData.publicTimeLimit}}
+                <van-field
+                        v-model="formData.publicYearName"
+                        required
+                        label="对外公开期限"
+                        placeholder="请选择"
+                        readonly
+                        clickable
+                        name="picker"
+                        :value="formData.publicYearValue"
+                        @click="showPublicYearPicker = true"
+                />
+                <van-popup v-model="showPublicYearPicker" position="bottom">
+                    <van-picker
+                            show-toolbar
+                            :columns="publicYear"
+                            @confirm="onPublicYearConfirm"
+                            @cancel="showPublicYearPicker = false"
+                    />
+                </van-popup>
+                <van-field
+                        v-model="formData.publicYearSelectTime"
+                        required
+                        readonly
+                        label="请选择对外公开期限"
+                        v-if="formData.publicYearName === '到期即撤'"
+                        placeholder="请选择"
+                        :value="formData.publicYearSelectTime"
+                        @click="showPublicYearSelectTime = true"
+                />
+                <van-calendar class="publicYearSelectTime" color="#3366cc" v-model="showPublicYearSelectTime"
+                 @confirm="publicYearSelectTimeConfirm"
+                 />
+                <van-field
+                        v-model="formData.publicYearInputTime"
+                        required
+                        label="请输入对外公开期限"
+                        v-if="formData.publicYearName === '其他'"
+                        placeholder="请输入"
+                />
+
                 <van-field
                         v-model="formData.submitDeptName"
                         required
@@ -338,12 +380,12 @@
 <script>
   import MixinAuthority from '../utils/MixinAuthority'
   import * as $t from '../utils/tools'
-  import { Toast } from 'vant'
+  import { Toast, Calendar  } from 'vant'
   import {trim, endsWith} from 'lodash'
   export default {
     name: 'NewTask',
     mixins: [MixinAuthority],
-    components: { Toast },
+    components: { Toast,Calendar },
     data() {
       return {
         zzStr: /(\d{3})\d{4}(\d{4})/,
@@ -385,7 +427,12 @@
           proposeColumnName: '',
           directlyDept: '', // 直属领导
           directlyDeptName: '',
-          notMainLeaderAuditDesc: ''
+          notMainLeaderAuditDesc: '',
+          publicTimeLimit:'', // 对外公开期限
+          publicYearValue: '',
+          publicYearName:'',
+          publicYearSelectTime:'',
+          publicYearInputTime:''
         },
         oldUrls: [],
         showDirectlyPicker: false,
@@ -397,6 +444,8 @@
         showSourcePicker: false, // 信息来源popup
         showSubmitDeptPicker: false,
         showDirectlyDeptPicker: false,
+        showPublicYearPicker: false,
+        showPublicYearSelectTime: false,
         isShowLoading: false,
         directlyDeptOpt: [],
         proposeColumnOpt: [],
@@ -421,6 +470,7 @@
           code: 3,
           text: '转载'
         }],
+        publicYear:['一年','三年','五年','到期即撤','其他'],
         sfOpt: [{ code: 1, text: '是' }, { code: 0, text: '否' }],
         showProposeColumnPicker: false,
         uploader: [],
@@ -644,7 +694,8 @@
           'status': -1,
           'attachments': this.formData.attachments,
           // 'mobile': this.userInfo.mobile,
-          'notMainLeaderAuditDesc': this.formData.notMainLeaderAuditDesc
+          'notMainLeaderAuditDesc': this.formData.notMainLeaderAuditDesc,
+          'publicTimeLimit': this.formData.publicTimeLimit
         }
 
         // console.log(saveData)
@@ -976,6 +1027,29 @@
           // console.log(e)
         })
       },
+      formatDate(date) {
+      return `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
+    },
+      onPublicYearConfirm(val) {
+        if(val ==='到期即撤' || val ==='其他') {
+          this.formData.publicYearName = val
+          this.formData.publicYearValue = val
+          this.formData.publicTimeLimit = ''
+          this.showPublicYearPicker = false
+        } else {
+          this.formData.publicYearName = val
+          this.formData.publicYearValue = val
+          this.formData.publicTimeLimit = val
+          this.showPublicYearPicker = false
+        }
+        
+      },
+      publicYearSelectTimeConfirm(val) {
+        val = this.formatDate(val)
+        this.formData.publicTimeLimit = '到期即撤'+val
+        this.formData.publicYearSelectTime = val
+        this.showPublicYearSelectTime = false
+      },
       onIsDirectlyLeader(val) {
         this.formData.isDirectlyLeader = val.code
         this.formData.isDirectlyLeaderName = val.text
@@ -1074,6 +1148,10 @@
           .van-cell{
             padding: 0 !important;
           }
+        }
+        .publicYearSelectTime .van-button {
+          margin-left: auto;
+          margin-right: auto;
         }
     }
 </style>

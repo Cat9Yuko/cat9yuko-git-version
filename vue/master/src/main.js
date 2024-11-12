@@ -45,7 +45,8 @@ import {
   Uploader,
   ActionSheet,
   PullRefresh,
-  Picker
+  Picker,
+  Calendar 
 } from 'vant'
 
 import * as API from './api'
@@ -91,6 +92,7 @@ Vue.use(Form)
 Vue.use(Step)
 Vue.use(Steps)
 Vue.use(PullRefresh)
+Vue.use(Calendar)
 
 Vue.prototype.$API = API
 Vue.prototype.$http = http
