@@ -53,8 +53,7 @@
                             @cancel="showInvolveLeaderPicker = false"
                     />
                 </van-popup>
-              <!--TODO-->
-              {{formData.publicTimeLimit}}
+
                 <van-field
                         v-model="formData.publicYearName"
                         required
@@ -81,7 +80,6 @@
                         label="请选择对外公开期限"
                         v-if="formData.publicYearName === '到期即撤'"
                         placeholder="请选择"
-                        :value="formData.publicYearSelectTime"
                         @click="showPublicYearSelectTime = true"
                 />
                 <van-calendar class="publicYearSelectTime" color="#3366cc" v-model="showPublicYearSelectTime"
@@ -93,6 +91,7 @@
                         label="请输入对外公开期限"
                         v-if="formData.publicYearName === '其他'"
                         placeholder="请输入"
+                        @input="publicYearInputTime"
                 />
 
                 <van-field
@@ -819,7 +818,8 @@
           'status': 0,
           'attachments': this.formData.attachments,
           // 'mobile': this.userInfo.mobile,
-          'notMainLeaderAuditDesc': this.formData.notMainLeaderAuditDesc
+          'notMainLeaderAuditDesc': this.formData.notMainLeaderAuditDesc,
+          'publicTimeLimit': this.formData.publicTimeLimit
         }
         if (this.formData.proposeColumn === '') {
           Toast.fail('请选择拟入栏目')
@@ -831,6 +831,10 @@
         }
         if (this.formData.involveLeader === '' && this.formData.proposeColumnName === '水利要闻') {
           Toast.fail('请选择' + this.formData.proposeColumnName + '涉及领导')
+          return false
+        }
+        if (this.formData.publicTimeLimit === '') {
+          Toast.fail('请选择对外公开期限')
           return false
         }
         if (this.formData.submitDept === '') {
@@ -1031,14 +1035,19 @@
       return `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
     },
       onPublicYearConfirm(val) {
-        if(val ==='到期即撤' || val ==='其他') {
-          this.formData.publicYearName = val
-          this.formData.publicYearValue = val
+        this.formData.publicYearName = val
+        this.formData.publicYearValue = val
+        this.formData.publicYearSelectTime = ''
+        this.formData.publicYearInputTime = ''
+        if(val ==='到期即撤') {
           this.formData.publicTimeLimit = ''
+          this.formData.publicYearValue = ''
+          this.showPublicYearPicker = false
+        } else if(val ==='其他') {
+          this.formData.publicTimeLimit = ''
+          this.formData.publicYearValue = ''
           this.showPublicYearPicker = false
         } else {
-          this.formData.publicYearName = val
-          this.formData.publicYearValue = val
           this.formData.publicTimeLimit = val
           this.showPublicYearPicker = false
         }
@@ -1048,7 +1057,12 @@
         val = this.formatDate(val)
         this.formData.publicTimeLimit = '到期即撤'+val
         this.formData.publicYearSelectTime = val
+        this.formData.publicYearValue = val
         this.showPublicYearSelectTime = false
+      },
+      publicYearInputTime(val) {
+        this.formData.publicTimeLimit = '其他' + val
+        this.formData.publicYearValue = val
       },
       onIsDirectlyLeader(val) {
         this.formData.isDirectlyLeader = val.code
