@@ -89,6 +89,10 @@ section + section {
   width: 1122px;
   margin: 0 auto;
 }
+.slick-mod3 {
+  width: 945px;
+  height: 455px;
+}
 .slider-for {
   width: 434px;
   height: 448px;
@@ -102,6 +106,14 @@ section + section {
 }
 .slick-item img {
   /* width: 100%; */
+  transition: all 0.5s;
+}
+.slick-mod3 .slick-item img:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
 }
 .tit1 {
   position: absolute;
@@ -147,7 +159,24 @@ section + section {
 .slick-mod2 .slick-dots {
   bottom: 36px;
 }
-
+.slick-mod3 .slick-arrow {
+  width: 34px;
+  height: 63px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 3;
+  cursor: pointer;
+}
+.slick-mod3 .slick-next {
+  right: 19px;
+  background: url("nsbdgzlfzlt-202411-arrowright3.png") no-repeat center;
+}
+.slick-mod3 .slick-prev {
+  left: 19px;
+  background: url("nsbdgzlfzlt-202411-arrowleft3.png") no-repeat center;
+}
 .slider-nav .slick-arrow {
   width: 45px;
   height: 27px;
@@ -203,17 +232,15 @@ section + section {
 }
 /* --- */
 .tab {
-  width: 233px;
   height: 44px;
   line-height: 44px;
   font-size: 26px;
   font-weight: bold;
   color: #545454;
-  text-align: center;
+  text-indent: 16px;
   background-color: #a8d3f1;
 }
 .tab.act {
-  width: 357px;
   height: 52px;
   margin-top: -4px;
   line-height: 52px;
@@ -389,4 +416,163 @@ footer {
   color: #000000;
   font-weight: normal;
   margin-right: 15px;
+}
+.ibox5 {
+  margin-top: 22px;
+  overflow: hidden;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.ibox5 > .ibox5in {
+  overflow: hidden;
+  height: 455px;
+  border-bottom: 1px #cacaca solid;
+}
+
+.ibox5 .slideBox {
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.ibox5 .slideBox .hd {
+  overflow: hidden;
+  position: absolute;
+  left: 0px;
+  top: 0;
+  z-index: 1;
+}
+
+.ibox5 .slideBox .hd ul {
+  overflow: hidden;
+  zoom: 1;
+  float: left;
+  
+}
+
+.ibox5 .slideBox .hd ul li {
+  width: 255px;
+  height: 91px;
+  border: 1px #cacaca solid;
+  border-bottom: 0;
+  line-height: 91px;
+  font-size: 25px;
+  color: #323232;
+  text-align: center;
+  background: #fff;
+  cursor: pointer;
+}
+
+.ibox5 .slideBox .hd ul li.on {
+  background: none;
+  background-image: url("nsbdgzlfzlt-202411-tabact.png");
+  background-position: center;
+  width: 269px;
+  color: #fff;
+  border: 0;
+  position: relative;
+}
+
+.ibox5 .slideBox .bd {
+  position: relative;
+  overflow: hidden;
+  float: right;
+  z-index: 0;
+}
+
+.ibox5 .slideBox .bd li {
+  zoom: 1;
+  vertical-align: middle;
+}
+
+.ibox5 .slideBox .bd li.PC_hide {
+  display: none;
+}
+
+.ibox5 .slideBox .bd img {
+  width: 1006px;
+  height: 486px;
+  display: block;
+}
+
+.ibox5 .slideBox .bd dl {
+  position: absolute;
+  z-index: 88;
+  bottom: 26px;
+  color: #fff;
+  left: 0;
+  right: 0;
+}
+
+.ibox5 .slideBox .bd dl b {
+  display: none;
+}
+
+.ibox5 .slideBox .bd dl table {
+  margin: 0 auto;
+  text-shadow: 0 0px 5px #000;
+}
+
+.ibox5 .slideBox .bd dl .td1 {
+  font-size: 46px;
+  font-weight: bold;
+  line-height: 56px;
+}
+
+.ibox5 .slideBox .bd dl .td2 p {
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 30px;
+  margin-top: 2px;
+}
+
+.ibox5 .slideBox .bd dl .td2 span {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 20px;
+}
+
+.ibox5 .slideBox .bd dl hr {
+  color: #fff;
+  height: 2px;
+  width: 46px;
+  background: #fff;
+  border: 0;
+  margin: 0 20px;
+}
+
+.ibox5 .slideBox .prev,
+.ibox5 .slideBox .next {
+  position: absolute;
+  top: 200px;
+  display: block;
+  width: 65px;
+  height: 65px;
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+}
+
+.ibox5 .slideBox .next {
+  right: 10px;
+  background: url(ibg2a.png) center center no-repeat;
+}
+
+.ibox5 .slideBox .prev {
+  left: 265px;
+  background: url(ibg2.png) center center no-repeat;
+}
+
+.ibox5 .slideBox .prev:hover,
+.ibox5 .slideBox .next:hover {
+  filter: alpha(opacity=100);
+  opacity: 1;
+}
+
+.ibox5 .slideBox .prevStop {
+  display: none;
+}
+
+.ibox5 .slideBox .nextStop {
+  display: none;
 }
