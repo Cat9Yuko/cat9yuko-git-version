@@ -437,7 +437,7 @@ footer {
 }
 
 .ibox5 .slideBox .hd {
-  overflow: hidden;
+  /* overflow: hidden; */
   position: absolute;
   left: 0px;
   top: 0;
@@ -445,7 +445,7 @@ footer {
 }
 
 .ibox5 .slideBox .hd ul {
-  overflow: hidden;
+  /* overflow: hidden; */
   zoom: 1;
   float: left;
   
@@ -465,15 +465,24 @@ footer {
 }
 
 .ibox5 .slideBox .hd ul li.on {
-  background: none;
-  background-image: url("nsbdgzlfzlt-202411-tabact.png");
+  background: #006db8;
+  /* background-image: url("nsbdgzlfzlt-202411-tabact.png"); */
   background-position: center;
-  width: 269px;
+  /* width: 269px; */
   color: #fff;
   border: 0;
   position: relative;
 }
-
+.ibox5 .slideBox .hd ul li.on::before {
+  content: '';
+  position: absolute;
+  background-image: url('nsbdgzlfzlt-202411-tabact3.png');
+  width: 14px;
+  height: 25px;
+  right: -14px;
+  top: 34px;
+  z-index: 25;
+}
 .ibox5 .slideBox .bd {
   position: relative;
   overflow: hidden;
