@@ -585,3 +585,21 @@ footer {
 .ibox5 .slideBox .nextStop {
   display: none;
 }
+.more2 {
+  width: 158px;
+  height: 37px;
+  line-height: 37px;
+  text-align: center;
+  background-color: #0c559a;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 15px;
+  border-radius: 7px;
+}
+.habs {
+  border: none;
+}
+.habs p {
+  line-height: 28px;
+}
