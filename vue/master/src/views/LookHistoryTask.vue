@@ -29,6 +29,13 @@
                 readonly
         />
         <van-field
+                        v-model="formData.publicYearName"
+                        readonly
+                        required
+                        label="对外公开期限"
+                        placeholder="请输入"
+                />
+        <van-field
                 v-model="formData.submitDeptName"
                 readonly
                 required
@@ -211,6 +218,7 @@
     data() {
       return {
         approvalComments: '',
+        publicYearName:'',
         isShowLoading: false,
         parentParams: {},
         formData: {},
@@ -282,6 +290,13 @@
           resData.isLegalAuthorizationName = resData.isLegalAuthorization * 1 === 1 ? '是' : '否'
           resData.isEncroachInfoName = resData.isEncroachInfo * 1 === 1 ? '是' : '否'
           resData.isDirectlyLeaderName = resData.isDirectlyLeader * 1 === 1 ? '是' : '否'
+          resData.publicYearName = resData.publicTimeLimit
+          if(resData.publicYearName.includes("到期即撤")) {
+            resData.publicYearName = resData.publicYearName.slice(4)
+          }
+          if(resData.publicYearName.includes("其他")) {
+            resData.publicYearName = resData.publicYearName.slice(2)
+          }
           this.formData = Object.assign({}, resData)
           this.uploader = resData.attachments.map(item => {
             return {

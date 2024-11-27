@@ -524,7 +524,8 @@
         proposeColumnName: '',
         directlyDept: '', // 直属领导
         directlyDeptName: '',
-        notMainLeaderAuditDesc: ''
+        notMainLeaderAuditDesc: '',
+        publicTimeLimit: '' // 对外公开期限
       }
       this.searchKey = ''
       this.showText = []
@@ -698,6 +699,10 @@
         }
 
         // console.log(saveData)
+        if (this.formData.publicTimeLimit === '') {
+          Toast.fail('请选择对外公开期限')
+          return false
+        }
         if (this.formData.proposeColumn === '') {
           Toast.fail('请选择拟入栏目')
           return false
@@ -706,6 +711,7 @@
           Toast.fail('请填写拟入栏目名称')
           return false
         }
+        
         if (this.formData.involveLeader === '' && this.formData.proposeColumnName === '水利要闻') {
           Toast.fail('请选择' + this.formData.proposeColumnName + '涉及领导')
           return false
@@ -821,6 +827,7 @@
           'notMainLeaderAuditDesc': this.formData.notMainLeaderAuditDesc,
           'publicTimeLimit': this.formData.publicTimeLimit
         }
+
         if (this.formData.proposeColumn === '') {
           Toast.fail('请选择拟入栏目')
           return false
@@ -829,12 +836,12 @@
           Toast.fail('请填写拟入栏目名称')
           return false
         }
-        if (this.formData.involveLeader === '' && this.formData.proposeColumnName === '水利要闻') {
-          Toast.fail('请选择' + this.formData.proposeColumnName + '涉及领导')
-          return false
-        }
         if (this.formData.publicTimeLimit === '') {
           Toast.fail('请选择对外公开期限')
+          return false
+        }
+        if (this.formData.involveLeader === '' && this.formData.proposeColumnName === '水利要闻') {
+          Toast.fail('请选择' + this.formData.proposeColumnName + '涉及领导')
           return false
         }
         if (this.formData.submitDept === '') {
