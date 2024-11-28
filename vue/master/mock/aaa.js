@@ -55,12 +55,36 @@ const Mock = require('mockjs')
 //     'message': 'ok',
 //     'result': [
 //       {
-//         'itemCode': '1',
-//         'itemName': '时政要闻'
+//         'itemCode': '4',
+//         'itemName': '司局直属'
 //       },
 //       {
-//         'itemCode': '2',
-//         'itemName': '水利要闻'
+//         'itemCode': '5',
+//         'itemName': '地方水事'
+//       },
+//       {
+//         'itemCode': '6',
+//         'itemName': '通知公告'
+//       }
+//       ,
+//       {
+//         'itemCode': '7',
+//         'itemName': '政策解读'
+//       }
+//       ,
+//       {
+//         'itemCode': '8',
+//         'itemName': '人事信息'
+//       }
+//       ,
+//       {
+//         'itemCode': '9',
+//         'itemName': '媒体之声'
+//       }
+//       ,
+//       {
+//         'itemCode': '10',
+//         'itemName': '其他'
 //       }
 //     ]
 //   }

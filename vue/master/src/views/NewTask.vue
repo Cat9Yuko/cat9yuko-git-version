@@ -53,17 +53,27 @@
                             @cancel="showInvolveLeaderPicker = false"
                     />
                 </van-popup>
-
+                <!-- 不可修改 -->
                 <van-field
                         v-model="formData.publicYearName"
                         required
+                        v-if="formData.noChangePublicYear"
+                        label="对外公开期限"
+                        readonly
+                        :value="formData.publicYearValue"
+                />
+                <!-- 可修改 -->
+                <van-field
+                        v-model="formData.publicYearName"
+                        required
+                        v-if="formData.changePublicYear"
                         label="对外公开期限"
                         placeholder="请选择"
                         readonly
                         clickable
                         name="picker"
                         :value="formData.publicYearValue"
-                        @click="showPublicYearPicker = true"
+                        @click="changePublicYearTip"
                 />
                 <van-popup v-model="showPublicYearPicker" position="bottom">
                     <van-picker
@@ -83,7 +93,7 @@
                         @click="showPublicYearSelectTime = true"
                 />
                 <van-calendar class="publicYearSelectTime" color="#3366cc" v-model="showPublicYearSelectTime"
-                 @confirm="publicYearSelectTimeConfirm"
+                 @confirm="publicYearSelectTimeConfirm" :max-date="new Date(2034,11,31)"
                  />
                 <van-field
                         v-model="formData.publicYearInputTime"
@@ -379,7 +389,7 @@
 <script>
   import MixinAuthority from '../utils/MixinAuthority'
   import * as $t from '../utils/tools'
-  import { Toast, Calendar  } from 'vant'
+  import { Toast, Calendar, Dialog  } from 'vant'
   import {trim, endsWith} from 'lodash'
   export default {
     name: 'NewTask',
@@ -431,7 +441,9 @@
           publicYearValue: '',
           publicYearName:'',
           publicYearSelectTime:'',
-          publicYearInputTime:''
+          publicYearInputTime:'',
+          changePublicYear:false,
+          noChangePublicYear:false,
         },
         oldUrls: [],
         showDirectlyPicker: false,
@@ -469,7 +481,7 @@
           code: 3,
           text: '转载'
         }],
-        publicYear:['一年','三年','五年','到期即撤','其他'],
+        publicYear:['长期','一年','三年','五年','到期即撤','其他'],
         sfOpt: [{ code: 1, text: '是' }, { code: 0, text: '否' }],
         showProposeColumnPicker: false,
         uploader: [],
@@ -993,6 +1005,65 @@
         this.formData.proposeColumn = val.itemCode
         this.formData.proposeColumnName = val.itemName
         this.showProposeColumnPicker = false
+
+        if(val.itemName === '司局直属' || val.itemName === '地方水事') {
+          // 不可修改
+          this.formData.publicTimeLimit = '一年'
+          this.formData.publicYearName = this.formData.publicTimeLimit
+          this.formData.publicYearValue = this.formData.publicTimeLimit
+          this.formData.noChangePublicYear = true
+          this.formData.changePublicYear = false
+        } else if(val.itemName === '政策解读') {
+          // 不可修改
+          this.formData.publicTimeLimit = '长期'
+          this.formData.publicYearName = this.formData.publicTimeLimit
+          this.formData.publicYearValue = this.formData.publicTimeLimit
+          this.formData.noChangePublicYear = true
+          this.formData.changePublicYear = false
+        } else if(val.itemName === '媒体之声') {
+          // 不可修改
+          this.formData.publicTimeLimit = '三年'
+          this.formData.publicYearName = this.formData.publicTimeLimit
+          this.formData.publicYearValue = this.formData.publicTimeLimit
+          this.formData.noChangePublicYear = true
+          this.formData.changePublicYear = false
+        } else if(val.itemName === '通知公告') {
+          // 可修改
+          this.formData.publicTimeLimit = '一年'
+          this.formData.publicYearName = this.formData.publicTimeLimit
+          this.formData.publicYearValue = this.formData.publicTimeLimit
+          this.formData.noChangePublicYear = false
+          this.formData.changePublicYear = true
+        } else if(val.itemName === '人事信息') {
+          // 可修改
+          this.formData.publicTimeLimit = '长期'
+          this.formData.publicYearName = this.formData.publicTimeLimit
+          this.formData.publicYearValue = this.formData.publicTimeLimit
+          this.formData.noChangePublicYear = false
+          this.formData.changePublicYear = true
+        } else {
+          // 其他 可修改
+          this.formData.publicTimeLimit = ''
+          this.formData.publicYearName = ''
+          this.formData.publicYearValue = ''
+          this.formData.noChangePublicYear = false
+          this.formData.changePublicYear = true
+        }
+      },
+      changePublicYearTip() {
+        Dialog.confirm({
+          title: '请确认',
+          message: '是否修改默认对外公开期限？',
+          // theme: 'round-button'
+        })
+          .then(() => {
+            // on confirm
+            this.showPublicYearPicker = true
+          })
+          .catch(() => {
+            // on cancel
+          });
+        
       },
       onDirectlyDeptConfirm(val) {
         this.formData.directlyDept = val.itemCode
