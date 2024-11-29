@@ -63,6 +63,7 @@
                         :value="formData.publicYearValue"
                 />
                 <!-- 可修改 -->
+                 <!-- TODO -->
                 <van-field
                         v-model="formData.publicYearName"
                         required
@@ -92,9 +93,15 @@
                         placeholder="请选择"
                         @click="showPublicYearSelectTime = true"
                 />
-                <van-calendar class="publicYearSelectTime" color="#3366cc" v-model="showPublicYearSelectTime"
+                <!-- <van-calendar :default-date="defcalendarValue"  
+                class="publicYearSelectTime" color="#3366cc" v-model="showPublicYearSelectTime"
                  @confirm="publicYearSelectTimeConfirm" :max-date="new Date(2034,11,31)"
-                 />
+                 /> -->
+                 <van-popup v-model="showPublicYearSelectTime" position="bottom">
+                 <van-datetime-picker v-model="currentDate" type="date" title="选择年月日" :min-date="minDate" :max-date="maxDate"
+                 @confirm="publicYearSelectTimeConfirm" @cancel="showPublicYearSelectTime = false" />
+                </van-popup>
+
                 <van-field
                         v-model="formData.publicYearInputTime"
                         required
@@ -389,12 +396,12 @@
 <script>
   import MixinAuthority from '../utils/MixinAuthority'
   import * as $t from '../utils/tools'
-  import { Toast, Calendar, Dialog  } from 'vant'
+  import { Toast, Calendar, Dialog,DatetimePicker   } from 'vant'
   import {trim, endsWith} from 'lodash'
   export default {
     name: 'NewTask',
     mixins: [MixinAuthority],
-    components: { Toast,Calendar },
+    components: { Toast,Calendar,DatetimePicker  },
     data() {
       return {
         zzStr: /(\d{3})\d{4}(\d{4})/,
@@ -457,6 +464,9 @@
         showDirectlyDeptPicker: false,
         showPublicYearPicker: false,
         showPublicYearSelectTime: false,
+        minDate: new Date(2020, 0, 1),
+        maxDate: new Date(2050, 10, 1),
+        currentDate: new Date(),
         isShowLoading: false,
         directlyDeptOpt: [],
         proposeColumnOpt: [],
@@ -579,6 +589,50 @@
           resData.isEncroachInfoName = resData.isEncroachInfo * 1 === 1 ? '是' : '否'
           resData.isDirectlyLeaderName = resData.isDirectlyLeader * 1 === 1 ? '是' : '否'
           this.formData = Object.assign({}, resData)
+
+          console.log(this.formData)
+          if(resData.publicTimeLimit !=''){
+
+            if(resData.publicTimeLimit.includes("到期即撤")) {
+            this.formData.publicYearSelectTime = resData.publicTimeLimit.slice(4)
+            this.formData.publicYearName = '到期即撤'
+            this.currentDate = new Date(this.formData.publicYearSelectTime)
+            } else if(resData.publicTimeLimit.includes("其他")) {
+              this.formData.publicYearInputTime = resData.publicTimeLimit.slice(2)
+              this.formData.publicYearName = '其他'
+              console.log('其他')
+            } else {
+              this.formData.publicYearName = this.formData.publicTimeLimit
+              this.formData.publicYearValue = this.formData.publicTimeLimit
+            }
+
+            if(resData.proposeColumnName === '司局直属' || resData.proposeColumnName === '地方水事') {
+            // 不可修改
+            this.formData.noChangePublicYear = true
+            this.formData.changePublicYear = false
+
+            } else if(resData.proposeColumnName === '政策解读') {
+              // 不可修改
+              this.formData.noChangePublicYear = true
+              this.formData.changePublicYear = false
+            } else if(resData.proposeColumnName === '媒体之声') {
+              // 不可修改
+              this.formData.noChangePublicYear = true
+              this.formData.changePublicYear = false
+            } else if(resData.proposeColumnName === '通知公告') {
+              // 可修改
+              this.formData.noChangePublicYear = false
+              this.formData.changePublicYear = true
+            } else if(resData.proposeColumnName === '人事信息') {
+              // 可修改
+              this.formData.noChangePublicYear = false
+              this.formData.changePublicYear = true
+            } else {
+              // 其他 可修改
+              this.formData.noChangePublicYear = false
+              this.formData.changePublicYear = true
+            }
+          }
           this.uploader = resData.attachments.map(item => {
             return {
               url: item.imageURL,
