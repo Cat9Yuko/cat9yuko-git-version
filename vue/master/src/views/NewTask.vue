@@ -63,7 +63,6 @@
                         :value="formData.publicYearValue"
                 />
                 <!-- 可修改 -->
-                 <!-- TODO -->
                 <van-field
                         v-model="formData.publicYearName"
                         required
