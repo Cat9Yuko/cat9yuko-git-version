@@ -57,6 +57,7 @@
                 <van-field
                         v-model="formData.publicYearName"
                         required
+                        placeholder="请选择"
                         v-if="formData.noChangePublicYear"
                         label="对外公开期限"
                         readonly
@@ -546,7 +547,8 @@
         directlyDept: '', // 直属领导
         directlyDeptName: '',
         notMainLeaderAuditDesc: '',
-        publicTimeLimit: '' // 对外公开期限
+        publicTimeLimit: '', // 对外公开期限
+        noChangePublicYear: true // 默认显示对外公开期限
       }
       this.searchKey = ''
       this.showText = []
@@ -589,7 +591,7 @@
           resData.isDirectlyLeaderName = resData.isDirectlyLeader * 1 === 1 ? '是' : '否'
           this.formData = Object.assign({}, resData)
 
-          console.log(this.formData)
+          // console.log(this.formData)
           if(resData.publicTimeLimit !=''){
 
             if(resData.publicTimeLimit.includes("到期即撤")) {
