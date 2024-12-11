@@ -83,7 +83,7 @@ window.onload = function () {
     var ali = aul.getElementsByTagName('li');
     var zuo = document.getElementsByClassName('pic_l')[0];
     var you = document.getElementsByClassName('pic_r')[0];
-    var speed = 2;
+    var speed = -2;
     aul.innerHTML = aul.innerHTML + aul.innerHTML;
     aul.style.width = ali[0].offsetWidth * ali.length + 'px';
     setInterval(function () {
