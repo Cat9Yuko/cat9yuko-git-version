@@ -1,14 +1,16 @@
 <template>
   <div class="lesson">
-    <lesson v-for="item in db" :key="item.id" :lesson="item" @del="show" />
+    <lesson v-for="item in db" :key="item.id" :lesson="item" @del="show" v-model="item.title"
+      v-model:price="item.price" />
+    {{ db[0].title }}
     <!-- <input type="text" :value="title" @input="title = $event.target.value">
     {{ title }} -->
     <!-- <HdInput :value="title" @update:value="title = $event"/> -->
     <!-- <HdInput v-model:value="title" /> -->
-    <HdInput v-model="title" />
+    <!-- <HdInput v-model="title" /> -->
   </div>
   <hr>
-  {{ title }}
+  <!-- {{ title }} -->
 </template>
 
 <script>

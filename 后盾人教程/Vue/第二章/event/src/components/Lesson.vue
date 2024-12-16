@@ -1,25 +1,42 @@
 <template>
     <div>
         <img :src="lesson.preview" :alt="lesson.title">
-        <h3>{{ lesson.title }}</h3>
+        <h3 @dblclick="inputShow = true">
+            <input v-if="inputShow" type="text" :value="lesson.title" @keyup.enter="inputShow = false"
+                @input="$emit('update:modelValue', $event.target.value)" @blur="inputShow = false">
+            <strong v-else>{{ lesson.title }}</strong>
+        </h3>
+        <h3 @dblclick="inputPriceShow = true">
+            <input v-if="inputPriceShow" type="text" :value="lesson.price" @keyup.enter="inputPriceShow = false"
+                @input="$emit('update:price', $event.target.value)" @blur="inputPriceShow = false">
+            <strong v-else>{{ lesson.price }}</strong>
+        </h3>
         <span @click="del">X</span>
     </div>
 </template>
 
 <script>
 export default {
-    props: ['lesson'],
+    props: ['lesson', 'modelValue', 'price'],
+    data() {
+        return {
+            inputShow: false,
+            inputPriceShow: false
+        }
+    },
     emits: {
+        'update:modelValue': null,
+        'update:price': null,
         del(e) {
-            if(/^\d+$/.test(e)) {
+            if (/^\d+$/.test(e)) {
                 return true;
             }
             throw new Error('del emit 需要数值参数')
         }
     },
     methods: {
-        del(){
-            if(confirm('确定删除嘛?')) {
+        del() {
+            if (confirm('确定删除嘛?')) {
                 this.$emit('del', this.lesson.id)
             }
         }
