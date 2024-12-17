@@ -1,7 +1,8 @@
 <template>
   <div class="lesson">
-    <lesson v-for="item in db" :key="item.id" :lesson="item" @del="show" v-model="item.title"
-      v-model:price="item.price" />
+    <lesson v-for="item in db" :key="item.id" :lesson="item" @del="show"
+    v-model:title.toupper.substr_3="item.title"
+    v-model:price="item.price" />
     {{ db[0].title }}
     <!-- <input type="text" :value="title" @input="title = $event.target.value">
     {{ title }} -->

@@ -3,7 +3,7 @@
         <img :src="lesson.preview" :alt="lesson.title">
         <h3 @dblclick="inputShow = true">
             <input v-if="inputShow" type="text" :value="lesson.title" @keyup.enter="inputShow = false"
-                @input="$emit('update:modelValue', $event.target.value)" @blur="inputShow = false">
+                @input="changeTitle" @blur="inputShow = false">
             <strong v-else>{{ lesson.title }}</strong>
         </h3>
         <h3 @dblclick="inputPriceShow = true">
@@ -17,15 +17,18 @@
 
 <script>
 export default {
-    props: ['lesson', 'modelValue', 'price'],
+    props: ['lesson', 'title', 'price', 'titleModifiers'],
     data() {
         return {
             inputShow: false,
             inputPriceShow: false
         }
     },
+    created() {
+        console.log(this.titleModifiers);
+    },
     emits: {
-        'update:modelValue': null,
+        'update:title': null,
         'update:price': null,
         del(e) {
             if (/^\d+$/.test(e)) {
@@ -35,6 +38,19 @@ export default {
         }
     },
     methods: {
+        changeTitle($event) {
+            let value = $event.target.value
+            if (this.titleModifiers.toupper) {
+                value = value.toUpperCase()
+            }
+            const substr = Object.keys(this.titleModifiers).find(m=> /^substr_/.test(m));
+            
+            if (substr) {
+                let info = substr.split('_');
+                value = value.substr(0, info[1])
+            }
+            this.$emit('update:title', value)
+        },
         del() {
             if (confirm('确定删除嘛?')) {
                 this.$emit('del', this.lesson.id)
