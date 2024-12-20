@@ -1,7 +1,10 @@
 <template>
     <div>
-        <card :content="content">
-            <hd-button>提交</hd-button>
+        <card>
+            <template #header>网站小贴</template>
+            <div>后盾人是一个主张友好、分享、自由的技术交流社区。
+                请记住我们的口号</div>
+            <template v-slot:footer>后盾人 人人做后盾</template>
         </card>
     </div>
 </template>
@@ -18,7 +21,7 @@ export default {
     },
     methods: {
         show(content) {
-            console.log('父组件',content);
+            console.log('父组件', content);
         }
     }
 }
