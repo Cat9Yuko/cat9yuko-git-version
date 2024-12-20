@@ -1,6 +1,8 @@
 <template>
     <div>
-        <card><hd-button></hd-button></card>
+        <card :content="content">
+            <hd-button>提交</hd-button>
+        </card>
     </div>
 </template>
 
@@ -8,7 +10,17 @@
 import Card from './components/Card.vue'
 import HdButton from './components/Button.vue'
 export default {
-    components: { Card, HdButton }
+    components: { Card, HdButton },
+    data() {
+        return {
+            content: '父组件content'
+        }
+    },
+    methods: {
+        show(content) {
+            console.log('父组件',content);
+        }
+    }
 }
 </script>
 
