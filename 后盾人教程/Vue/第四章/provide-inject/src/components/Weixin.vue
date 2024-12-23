@@ -2,7 +2,9 @@
     <div>
         <card>
             <template #header>微信</template>
-            <div>支付的表单。。、。。</div>
+            <div>
+                <x-input title="微信号"></x-input>
+            </div>
         </card>
     </div>
 </template>
