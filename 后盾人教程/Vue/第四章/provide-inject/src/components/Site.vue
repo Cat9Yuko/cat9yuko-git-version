@@ -1,7 +1,7 @@
 <template>
     <div>
         <card>
-            <template #header>微信</template>
+            <template #header>站点信息</template>
             <div>
                 <x-input title="微信号" v-model="appName" />
                 <x-input title="秘钥" v-model="key" />

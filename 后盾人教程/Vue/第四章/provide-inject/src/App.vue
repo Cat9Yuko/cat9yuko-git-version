@@ -6,15 +6,21 @@
     </div>
   </main>
   <component :is="currentComponent" />
+  <!-- <input v-model="teacher" />{{ teacher }} -->
 </template>
 
 <script>
 import Weixin from './components/Weixin.vue';
-import Pay from './components/Pay.vue';
+import Site from './components/Site.vue';
+import { computed } from 'vue'
 export default {
-  components: { Weixin, Pay },
+  components: { Weixin, Site },
+  provide() {
+    return { webname: computed(() => this.teacher) }
+  },
   data() {
     return {
+      teacher: '向军老师',
       currentComponent: 'weixin',
       components: [
         { title: '微信管理', name: 'weixin' },
@@ -35,6 +41,7 @@ main {
     margin-right: 20px;
     cursor: pointer;
     transition: 0.5s;
+
     &.active {
       background-color: #16a085;
       color: #ffffff;
