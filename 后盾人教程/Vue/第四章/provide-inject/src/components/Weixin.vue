@@ -3,22 +3,18 @@
         <card>
             <template #header>微信</template>
             <div>
-                <x-input title="微信号" v-model="appName" />
-                <x-input title="秘钥" v-model="key" />
-                <x-textarea :rows="5" v-model="key" title="秘钥" />
+                <x-input title="appid" v-model="config.weixin.appid" />
+                <x-input title="secret" v-model="config.weixin.secret" />
+                <x-input title="wecharName" v-model="config.weixin.wecharName" />
             </div>
+            {{ config.weixin }}
         </card>
     </div>
 </template>
 
 <script>
 export default {
-    data() {
-        return {
-            appName: '向军大叔',
-            key: 'asdashdjashdk1h23j1l2k3',
-        }
-    }
+    inject: ['config']
 }
 </script>
 

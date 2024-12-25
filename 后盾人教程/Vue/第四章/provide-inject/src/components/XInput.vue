@@ -1,7 +1,7 @@
 <template>
     <label>
         <div>{{ title }}</div>
-        <input type="text" v-model="content">{{ webname }}
+        <input type="text" v-model="content">
     </label>
 </template>
 

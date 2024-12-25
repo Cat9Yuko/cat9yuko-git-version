@@ -13,18 +13,20 @@
 import Weixin from './components/Weixin.vue';
 import Site from './components/Site.vue';
 import { computed } from 'vue'
+import config from './config'
 export default {
   components: { Weixin, Site },
   provide() {
-    return { webname: computed(() => this.teacher) }
+    return { webname: computed(() => this.teacher), config: this.config }
   },
   data() {
     return {
+      config,
       teacher: '向军老师',
       currentComponent: 'weixin',
       components: [
         { title: '微信管理', name: 'weixin' },
-        { title: '在线支付', name: 'pay' }
+        { title: '网站信息', name: 'site' }
       ]
     }
   }
