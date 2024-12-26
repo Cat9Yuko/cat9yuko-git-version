@@ -5,7 +5,11 @@
       {{ component.title }}
     </div>
   </main>
-  <component :is="currentComponent" />
+  <button @click="callComponent">调用组件</button>
+  <input ref="input" />
+  <keep-alive>
+    <component :is="currentComponent" ref="component" />
+  </keep-alive>
   <!-- <input v-model="teacher" />{{ teacher }} -->
 </template>
 
@@ -28,6 +32,12 @@ export default {
         { title: '微信管理', name: 'weixin' },
         { title: '网站信息', name: 'site' }
       ]
+    }
+  },
+  methods: {
+    callComponent() {
+      // console.log(this.$refs.input.value='向军大叔');
+      this.$refs.component.show()
     }
   }
 }
