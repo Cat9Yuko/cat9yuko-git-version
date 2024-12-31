@@ -59,7 +59,7 @@
                         required
                         placeholder="请选择"
                         v-if="formData.noChangePublicYear"
-                        label="对外公开期限"
+                        label="信息公开时限"
                         readonly
                         :value="formData.publicYearValue"
                 />
@@ -68,7 +68,7 @@
                         v-model="formData.publicYearName"
                         required
                         v-if="formData.changePublicYear"
-                        label="对外公开期限"
+                        label="信息公开时限"
                         placeholder="请选择"
                         readonly
                         clickable
@@ -88,7 +88,7 @@
                         v-model="formData.publicYearSelectTime"
                         required
                         readonly
-                        label="请选择对外公开期限"
+                        label="请选择信息公开时限"
                         v-if="formData.publicYearName === '到期即撤'"
                         placeholder="请选择"
                         @click="showPublicYearSelectTime = true"
@@ -105,7 +105,7 @@
                 <van-field
                         v-model="formData.publicYearInputTime"
                         required
-                        label="请输入对外公开期限"
+                        label="请输入信息公开时限"
                         v-if="formData.publicYearName === '其他'"
                         placeholder="请输入"
                         @input="publicYearInputTime"
@@ -444,7 +444,7 @@
           directlyDept: '', // 直属领导
           directlyDeptName: '',
           notMainLeaderAuditDesc: '',
-          publicTimeLimit:'', // 对外公开期限
+          publicTimeLimit:'', // 信息公开时限
           publicYearValue: '',
           publicYearName:'',
           publicYearSelectTime:'',
@@ -547,8 +547,8 @@
         directlyDept: '', // 直属领导
         directlyDeptName: '',
         notMainLeaderAuditDesc: '',
-        publicTimeLimit: '', // 对外公开期限
-        noChangePublicYear: true // 默认显示对外公开期限
+        publicTimeLimit: '', // 信息公开时限
+        noChangePublicYear: true // 默认显示信息公开时限
       }
       this.searchKey = ''
       this.showText = []
@@ -767,7 +767,7 @@
 
         // console.log(saveData)
         if (this.formData.publicTimeLimit === '') {
-          Toast.fail('请选择对外公开期限')
+          Toast.fail('请选择信息公开时限')
           return false
         }
         if (this.formData.proposeColumn === '') {
@@ -904,7 +904,7 @@
           return false
         }
         if (this.formData.publicTimeLimit === '') {
-          Toast.fail('请选择对外公开期限')
+          Toast.fail('请选择信息公开时限')
           return false
         }
         if (this.formData.involveLeader === '' && this.formData.proposeColumnName === '水利要闻') {
@@ -1108,7 +1108,7 @@
       changePublicYearTip() {
         Dialog.confirm({
           title: '请确认',
-          message: '是否修改默认对外公开期限？',
+          message: '是否修改默认信息公开时限？',
           // theme: 'round-button'
         })
           .then(() => {

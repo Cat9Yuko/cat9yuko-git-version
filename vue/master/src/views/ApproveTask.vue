@@ -32,7 +32,7 @@
                         v-model="formData.publicYearName"
                         readonly
                         required
-                        label="对外公开期限"
+                        label="信息公开时限"
                         placeholder="请输入"
                 />
                 <van-field
@@ -387,12 +387,14 @@
           resData.isEncroachInfoName = resData.isEncroachInfo * 1 === 1 ? '是' : '否'
           resData.isDirectlyLeaderName = resData.isDirectlyLeader * 1 === 1 ? '是' : '否'
           resData.publicYearName = resData.publicTimeLimit
-          // if(resData.publicYearName.includes("到期即撤")) {
-          //   resData.publicYearName = resData.publicYearName.slice(4)
-          // }
-          // if(resData.publicYearName.includes("其他")) {
-          //   resData.publicYearName = resData.publicYearName.slice(2)
-          // }
+          if(resData.publicYearName !=null) {
+            if(resData.publicYearName.includes("到期即撤")) {
+              resData.publicYearName = resData.publicYearName.slice(4)
+            }
+            if(resData.publicYearName.includes("其他")) {
+              resData.publicYearName = resData.publicYearName.slice(2)
+            }
+          }
           this.formData = Object.assign({}, resData)
           this.uploader = resData.attachments.map(item => {
             return {
