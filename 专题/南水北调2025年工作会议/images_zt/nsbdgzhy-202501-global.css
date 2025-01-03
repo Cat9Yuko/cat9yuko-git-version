@@ -49,6 +49,10 @@ header {
 }
 .main {
   padding-top: 91px;
+  padding-bottom: 68px;
+}
+.main.list {
+  padding: 30px 0;
 }
 .hnews {
   height: 200px;
@@ -71,12 +75,32 @@ header {
   line-height: 31px;
   text-indent: 2em;
 }
+.slick-text2 h2 {
+  font-size: 31.25px;
+  color: #ffffff;
+  margin-bottom: 34px;
+}
+.slick-text2 p {
+  font-size: 18.75px;
+  color: #ffffff;
+  line-height: 42px;
+  text-indent: 2em;
+}
 
 /* carousel */
-.slick-mod,
-.slick-mod2 {
+.slick-mod {
   width: 614px;
   height: 408px;
+}
+.slick-text2 {
+  width: 586px;
+  height: 407px;
+  margin-top: 30px;
+  padding: 47px 30px 0;
+}
+.slick-mod2 {
+  width: 100%;
+  height: 600px;
 }
 .slick-item {
   position: relative;
@@ -89,16 +113,29 @@ header {
   bottom: 0;
   left: 0;
   right: 0;
-  font-size: 16px;
+  font-size: 20.83px;
   color: #ffffff;
-  line-height: 40px;
+  line-height: 55px;
   text-indent: 2rem;
   background: rgba(0, 0, 0, 0.5);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
+.fixedbar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.slick-mod2 .slick-slide.slick-current.slick-active .fixedbar {
+  background: none;
+}
+.slick-mod2 .tit1 {
+  text-align: center;
+}
 .slick-mod .slick-dots,
 .slick-mod2 .slick-dots {
   position: absolute;
@@ -112,10 +149,17 @@ header {
   margin-top: 30px;
 }
 
-.slick-mod .slick-arrow,
+.slick-text2 .slick-arrow {
+  width: 72px;
+  height: 72px;
+  position: absolute;
+  z-index: 3;
+  cursor: pointer;
+  bottom: 30px;
+}
 .slick-mod2 .slick-arrow {
-  width: 33px;
-  height: 57px;
+  width: 18px;
+  height: 33px;
   margin: auto;
   position: absolute;
   top: 0;
@@ -123,23 +167,23 @@ header {
   z-index: 3;
   cursor: pointer;
 }
-/* .slick-mod .slick-next {
-  right: 0;
-  background: url(../images_zt/wlaq-202009-arrowrigh.png) no-repeat center;
+.slick-text2 .slick-next {
+  right: 30px;
+  background: url("nsbdgzhy-202501-arrowright.png") no-repeat center;
 }
-.slick-mod .slick-prev {
-  left: 0;
-  background: url(../images_zt/wlaq-202009-arrowlef.png) no-repeat center;
+.slick-text2 .slick-prev {
+  right: 132px;
+  background: url("nsbdgzhy-202501-arrowleft.png") no-repeat center;
 }
 
 .slick-mod2 .slick-next {
-  right: 0;
-  background: url(../images/wlaq-202009-arrowrigh.png) no-repeat center;
+  right: 23%;
+  background: url("nsbdgzhy-202501-arrowright2.png") no-repeat center;
 }
 .slick-mod2 .slick-prev {
-  left: 0;
-  background: url(../images/wlaq-202009-arrowlef.png) no-repeat center;
-} */
+  left: 23%;
+  background: url("nsbdgzhy-202501-arrowleft2.png") no-repeat center;
+}
 .slick-text .slick-dots li {
   width: 55px;
   height: 4px;
@@ -165,14 +209,93 @@ header {
   font-weight: bold;
   margin-bottom: 30px;
 }
-
+.chnltitle.bg2 {
+  background-image: url("nsbdgzhy-202501-chnlbg2.png");
+  height: 105px;
+  line-height: 105px;
+}
 .gzhybg {
-  background-image: url('nsbdgzhy-202501-bg1.png');
+  background-image: url("nsbdgzhy-202501-bg1.png");
   height: 437px;
 }
 .bghq {
-  background-image: url('nsbdgzhy-202501-bg2.jpg');
+  background-image: url("nsbdgzhy-202501-bg2.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
   background-position-y: 180px;
+}
+.mboxshadow {
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 0 7px rgba(120, 0, 0, 0.2);
+}
+.list {
+  padding: 34px;
+}
+.list li {
+  width: 540px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 18.75px;
+  line-height: 53px;
+}
+.list li::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: #000000;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.list li:nth-child(even) {
+  float: right;
+}
+.list li:nth-child(odd) {
+  float: left;
+}
+.bgwater {
+  height: 660px;
+  background-image: url("nsbdgzhy-202501-bg3.jpg");
+  background-repeat: no-repeat;
+  background-position: center bottom 0;
+  background-size: 100%;
+}
+footer {
+  text-align: center;
+  background-color: #c80202;
+  color: #ffffff;
+  font-size: 16.67px;
+  line-height: 30px;
+  padding: 30px 0;
+}
+.boxs {
+  box-shadow: 0px 0px 3px 1px #ccc;
+}
+.source-time {
+  margin: 0 auto;
+  height: 35px;
+  text-align: center;
+  position: relative;
+  line-height: 35px;
+}
+
+.time {
+  margin-right: 10px;
+}
+
+.wechat,
+.sina {
+  position: absolute;
+  margin-top: 5px;
+}
+
+.wechat {
+  margin-left: 10px;
+}
+
+.sina {
+  margin-left: 46px;
 }
