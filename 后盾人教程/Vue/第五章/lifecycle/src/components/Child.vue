@@ -8,7 +8,8 @@
 export default {
   data() {
     return {
-      hd: '向军大叔'
+      hd: '向军大叔',
+      timeId: null
     }
   },
   beforeCreate() {
@@ -17,6 +18,9 @@ export default {
   created() {
     // 可以获取网络请求
     console.log(`子组件 created: ` + this.hd);
+    this.timeId = setInterval(() => {
+      console.log('后盾人');
+    }, 1000);
   },
   beforeMount() {
     console.log(`子组件 beforeMount: ` + this.hd);
@@ -26,6 +30,13 @@ export default {
     // 挂载组件
     console.log(`子组件 mounted: ` + this.hd);
     console.log(`子组件 mounted: ` + this.$refs.el);
+  },
+  beforeUnmount() {
+    console.log(`子组件 beforeUnmount` + this.hd);
+  },
+  unmounted() {
+    console.log(`子组件 unmounted` + this.hd);
+    clearInterval(this.timeId)
   }
 }
 </script>
