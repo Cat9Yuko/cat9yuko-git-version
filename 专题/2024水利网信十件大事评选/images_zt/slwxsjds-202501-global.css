@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    border: none;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+}
+.main {
+    background-image: url('slwxsjds-202501-banner.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    padding-top: 806px;
+    background-color: #060079;
+}
+.bluebg {
+    /* background: url(slwxsjds-202201-detailb.jpg) bottom center no-repeat; */
+    background-color: #153a70;
+}
+.center-block-1421 {
+    width: 1409px;
+    margin: 0 auto;
+}
+
+.white-bg-p {
+    padding: 33px 30px;
+    background: rgba(255, 255, 255, 0.3);
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+.white-bg-c {
+    padding: 50px 76px;
+    background: #fdfefe;
+    box-sizing: border-box;
+    position: relative;
+    border-radius: 20px;
+}
+.white-bg-c h1 {
+    margin-bottom: 0;
+    margin-top: 30px;
+}
+.white-bg-c h1, .white-bg-c p {
+    font-size: 20px;
+    color: #2f3030;
+    font-weight: normal;
+}
+
+.white-bg-c p {
+    line-height: 45px;
+}
+
+.qrcode-a {
+    position: absolute;
+    right: 76px;
+    bottom: 40px;
+    text-align: center;
+}
+.bot-item {
+    position: relative;
+    width: 463px;
+    height: 347px;
+    background: #ffffff;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+.bot-item+.bot-item {
+    margin-left: 15px;
+}
+
+.bot-item p {
+    line-height: 50px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.icon-num {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    width: 22px;
+    height: 19px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    font-size: 10px;
+    text-align: center;
+    line-height: 19px;
+    border-bottom-right-radius: 10px;
+}
+
+.show-detail {
+    display: none;
+    position: absolute;
+    left: 5px;
+    right: 5px;
+    top: 5px;
+    bottom: 5px;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.show-detail h1 {
+    font-size: 16px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.show-detail p {
+    white-space: initial;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: left;
+}
+
+.more {
+    color: #0760e6;
+}
+
+.bot-item:hover .img-title {
+    display: none;
+}
+
+.bot-item:hover .show-detail {
+    display: block;
+}
+
+.bot-items+.bot-items {
+    margin-top: 35px;
+}
+.source-time {
+    margin: 0 auto;
+    height: 35px;
+    text-align: center;
+    position: relative;
+    line-height: 35px;
+}
+
+.time {
+    margin-right: 10px;
+}
+
+.wechat,
+.sina {
+    position: absolute;
+    margin-top: 5px;
+}
+
+.wechat {
+    margin-left: 10px;
+}
+
+.sina {
+    margin-left: 46px;
+}
+.more2 {
+    background: #096bb6;
+    height: 100%;
+    font-size: 51px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 337px;
+}
+.boxs {
+    box-shadow: 0px 0px 3px 1px #ccc;
+}
