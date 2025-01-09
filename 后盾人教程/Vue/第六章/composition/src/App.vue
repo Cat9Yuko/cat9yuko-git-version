@@ -1,6 +1,9 @@
 <template>
   <div>
-    <Count :init="5" @change="changeHandle" ref="countComponent" />
+    <Count :init="5" @change="changeHandle" ref="countComponent" style="color: red;">
+      <h1>向军大叔</h1>
+      <p>一生编程</p>
+    </Count>
     <br>
     {{ changeHandle() }}
   </div>
