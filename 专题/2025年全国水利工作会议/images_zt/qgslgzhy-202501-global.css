@@ -1,0 +1,261 @@
+:root {
+  font-size: 16px;
+  font-family: "微软雅黑", "Microsoft Yahei";
+  box-sizing: border-box;
+}
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+img {
+  border: none;
+  max-width: 100%;
+}
+li {
+  list-style: none;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.center-block-1200 {
+  width: 1200px;
+  margin: 0 auto;
+}
+.whitebg {
+  background-color: #ffffff;
+  padding: 28px 17px 0;
+}
+.w574 {
+  width: 574px;
+}
+.w560 {
+  width: 560px;
+}
+section + section {
+  margin-top: 43px;
+}
+/* user style */
+.main {
+  background-image: url("qgslgzhy-202501-banner.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100%;
+  background-color: #fee7e6;
+  padding-top: 794px;
+}
+nav {
+  background-image: url("qgslgzhy-202501-mainbgt.png");
+  height: 129px;
+  background-size: cover;
+  padding-top: 67px;
+}
+.nav {
+  width: 1059px;
+  margin: 0 auto;
+  text-align: center;
+}
+.nav-item {
+  display: inline-block;
+  font-size: 28px;
+  color: #d20c0c;
+  font-weight: bold;
+  text-align: center;
+}
+.nav-item + .nav-item {
+  margin-left: 20px;
+}
+/* carousel */
+.slick-mod,
+.slick-mod2 {
+  width: 571px;
+  height: 377px;
+}
+.slick-item {
+  position: relative;
+}
+.slick-item img {
+  width: 100%;
+}
+.tit1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 20px;
+  color: #fefefe;
+  line-height: 40px;
+  text-indent: 1rem;
+  background: rgba(210, 12, 12, 0.5);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.slick-mod .slick-dots,
+.slick-mod2 .slick-dots {
+  position: absolute;
+  right: 10px;
+  bottom: 15px;
+}
+.slick-mod2 .slick-dots {
+  bottom: 36px;
+}
+
+.slick-mod .slick-arrow,
+.slick-mod2 .slick-arrow {
+  width: 33px;
+  height: 57px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 3;
+  cursor: pointer;
+}
+/* .slick-mod .slick-next {
+  right: 0;
+  background: url(../images_zt/wlaq-202009-arrowrigh.png) no-repeat center;
+}
+.slick-mod .slick-prev {
+  left: 0;
+  background: url(../images_zt/wlaq-202009-arrowlef.png) no-repeat center;
+}
+
+.slick-mod2 .slick-next {
+  right: 0;
+  background: url(../images/wlaq-202009-arrowrigh.png) no-repeat center;
+}
+.slick-mod2 .slick-prev {
+  left: 0;
+  background: url(../images/wlaq-202009-arrowlef.png) no-repeat center;
+} */
+.slick-mod .slick-dots li,
+.slick-mod2 .slick-dots li {
+  width: 14px;
+  height: 14px;
+  background: #ffffff;
+  border-radius: 50%;
+  margin: 0 5px 0 0;
+}
+.slick-mod .slick-dots li.slick-active,
+.slick-mod2 .slick-dots li.slick-active {
+  width: 14px;
+  height: 14px;
+  background: #e50012;
+  border-radius: 50%;
+}
+/* --- */
+.hnews.red {
+  color: #d20c0c;
+}
+.hnews h2 {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.hnews.red h2 {
+  margin-bottom: 18px;
+  font-size: 35px;
+}
+.hnews p {
+  line-height: 48px;
+  font-size: 20px;
+  text-indent: 2em;
+}
+.chnltitle {
+  background-image: url("qgslgzhy-202501-chnlbg.png");
+  width: 549px;
+  height: 61px;
+  background-size: cover;
+  line-height: 61px;
+  text-indent: 55px;
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 30px;
+  margin-bottom: 33px;
+}
+.chnltitle.chnl2 {
+  background-image: url("qgslgzhy-202501-chnlbg2.png");
+  width: 1200px;
+  text-indent: 0;
+  text-align: center;
+}
+.chnltitle.chnl3 {
+  width: 1200px;
+  text-indent: 0;
+  text-align: center;
+  background-image: url('qgslgzhy-202501-chnlbg3.png');
+}
+.list li {
+  width: 533px;
+  line-height: 48px;
+  font-size: 20px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.list li:nth-child(even) {
+  float: right;
+}
+.list li:nth-child(odd) {
+  float: left;
+}
+.list li::before {
+  content: "";
+  display: inline-block;
+  background-image: url("qgslgzhy-202501-liicon.png");
+  width: 12px;
+  height: 12px;
+  vertical-align: middle;
+  margin-top: -2px;
+  margin-right: 15px;
+  margin-left: 4px;
+}
+.footer {
+  background-image: url('qgslgzhy-202501-mainbgb.png');
+  height: 66px;
+  background-size: cover;
+}
+footer {
+  background-color: #c00f0f;
+}
+.source-time {
+  margin: 0 auto;
+  height: 35px;
+  text-align: center;
+  position: relative;
+  line-height: 35px;
+}
+
+.time {
+  margin-right: 10px;
+}
+
+.wechat,
+.sina {
+  position: absolute;
+  margin-top: 5px;
+}
+
+.wechat {
+  margin-left: 10px;
+}
+
+.sina {
+  margin-left: 46px;
+}
