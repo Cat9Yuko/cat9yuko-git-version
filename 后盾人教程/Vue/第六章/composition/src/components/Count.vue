@@ -4,10 +4,15 @@
   <span :style="attrs.style">{{ num }}</span>
   <button @click="add">+</button>
   <component :is="defaults[1]" />
+  <br>
+  <button @click="updateUser('后盾人-向军老师')">{{ user }}</button>
 </template>
 
 <script>
-import { ref, watch, watchEffect } from 'vue';
+import {
+  ref, watch, watchEffect, computed, onBeforeMount,
+  onBeforeUpdate, onUpdated, onUnmounted, onBeforeUnmount, inject
+} from 'vue';
 export default {
   props: {
     init: {
@@ -15,13 +20,16 @@ export default {
       default: 3
     }
   },
-  inheritAttrs:false,
+  inheritAttrs: false,
   setup(props, context) {
     console.log(context);
     // 变成响应式数据
-    const { emit, expose, attrs,slots } = context
+    const user = inject('user', '后盾人--向军')
+    const updateUser = inject('updateUser')
+    const { emit, expose, attrs, slots } = context
     const defaults = slots.default()
     let num = ref(props.init)
+    let sum = computed(() => { num.value + 100 })
     let add = () => {
       num.value++
       emit('change', num.value)
@@ -38,7 +46,7 @@ export default {
       emit('change', num.value)
     })
     expose({ num })
-    return { num, add, sub, attrs,defaults }
+    return { num, add, sub, attrs, defaults, sum, user, updateUser }
   }
 }
 </script>

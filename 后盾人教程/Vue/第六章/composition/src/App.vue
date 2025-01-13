@@ -11,17 +11,21 @@
 
 <script>
 import Count from './components/Count.vue'
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, provide } from 'vue';
 export default {
   components: { Count },
   setup() {
     // let count = ref(0)
+    let user = ref('向军大叔')
+    provide('user', user)
+    provide('updateUser',(newValue)=> user.value = newValue)
+    setTimeout(() => user.value = 'sina.com',1000)
     const countComponent = ref()
-    onMounted(()=> {
+    onMounted(() => {
       console.log(countComponent.value.add);
     })
     const changeHandle = (v) => countComponent.value?.num
-    return { changeHandle,countComponent }
+    return { changeHandle, countComponent }
   }
 }
 </script>
