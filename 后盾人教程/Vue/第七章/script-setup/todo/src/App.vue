@@ -1,16 +1,16 @@
 <template>
-  <div>
-    {{ todos }}
-  </div>
+  <Suspense>
+    <template #default>
+      <div>
+        <Todo />
+      </div>
+    </template>
+    <template #fallback>loading...</template>
+  </Suspense>
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
-const todos = ref([])
-onMounted(async () => {
-  todos.value = await fetch(`http://127.0.0.1:3002/news`).
-    then(r => r.json())
-})
+import Todo from './views/Todo.vue';
 </script>
 
 <style lang="scss" scoped></style>
