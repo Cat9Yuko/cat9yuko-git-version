@@ -1,12 +1,11 @@
 local use_count = GetModConfigData("use_count")
-local select_2 = GetModConfigData("select_2")
 AddPrefabPostInit("tentaclespike", function(inst)
     if not GLOBAL.TheWorld.ismastersim then return end
     if inst.components.finiteuses then
-        if use_count == 0 or select_2 == 0 then
+        if use_count == 0 then
             inst:RemoveComponent("finiteuses")
         else
-            inst.components.finiteuses:SetMaxUses(use_count + select_2)
+            inst.components.finiteuses:SetMaxUses(use_count)
         end
     end
 end)
@@ -14,5 +13,5 @@ end)
 AddPrefabPostInit("wickerbottom", function(inst)
     if not GLOBAL.TheWorld.ismastersim then return end
     inst:RemoveTag("insomniac")
-
+    inst:AddTag("valkyrie")
 end)

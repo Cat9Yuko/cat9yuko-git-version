@@ -1,14 +1,14 @@
 -- 名称
-name = "Cat9 Yuko"
+name = "猫九的公益服自用mod"
 -- 描述
-description = "从零开始学习制作mod,触手尖刺的使用次数"
+description = "可以让老奶奶睡觉，调整触手尖刺的最大使用次数"
 -- 作者
 author = "Yuko"
 -- 版本
 version = "0.1"
 -- klei官方论坛地址，为空则默认是工坊的地址
 forumthread = ""
--- modicon 下一篇再介绍怎么创建的
+-- modicon
 icon_atlas = "modicon.xml"
 icon = "modicon.tex"
 -- dst兼容
@@ -23,7 +23,7 @@ api_version = 10
 -- mod的配置项
 configuration_options = {{
     name = "use_count",
-    label = "第一个选项",
+    label = "调整触手尖刺的最大使用次数",
     hover = "使用的最大次数",
     options = {{
         description = "默认",
@@ -39,22 +39,4 @@ configuration_options = {{
         data = 0
     }},
     default = 100
-},{
-    name = "select_2",
-    label = "第二个选项",
-    hover = "使用最大次数2",
-    options = {{
-        description = "默认",
-        hover = "默认为10次",
-        data = 10
-    },{
-        description = "50次",
-        hover = "耐久为50次",
-        data = 50
-    },{
-        description = "无限次",
-        hover = "无限耐久",
-        data = 0
-    }},
-    default = 10
 }}
