@@ -38,7 +38,7 @@ li {
 }
 .whitebg {
   background-color: #ffffff;
-  padding: 28px 17px 0;
+  padding: 28px 17px 60px;
 }
 .w574 {
   width: 574px;
@@ -48,6 +48,9 @@ li {
 }
 section + section {
   margin-top: 43px;
+}
+body {
+  background-color: #fee7e6;
 }
 /* user style */
 .main {
@@ -77,7 +80,7 @@ nav {
   text-align: center;
 }
 .nav-item + .nav-item {
-  margin-left: 20px;
+  margin-left: 72px;
 }
 /* carousel */
 .slick-mod,
@@ -190,7 +193,7 @@ nav {
   margin-bottom: 33px;
 }
 .chnltitle.chnl2 {
-  background-image: url("qgslgzhy-202501-chnlbg2.png");
+  background-image: url("qgslgzhy-202501-chnlbg3.png");
   width: 1200px;
   text-indent: 0;
   text-align: center;
@@ -227,12 +230,18 @@ nav {
   margin-left: 4px;
 }
 .footer {
-  background-image: url('qgslgzhy-202501-mainbgb.png');
+  background-color: #ffffff;
   height: 66px;
   background-size: cover;
 }
 footer {
-  background-color: #c00f0f;
+  background-image: url('qgslgzhy-202501-footer.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 231px;
+  margin-top: -120px;
+  padding-top: 90px;
 }
 .source-time {
   margin: 0 auto;
