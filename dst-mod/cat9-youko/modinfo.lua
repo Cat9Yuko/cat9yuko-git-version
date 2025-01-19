@@ -17,8 +17,9 @@ dst_compatible = true
 client_only_mod = false
 -- 是否是所有客户端都需要安装
 all_clients_require_mod = true
--- 饥荒api版本，固定填10
-api_version = 10
+-- 饥荒api版本，ds固定填6dst固定填10
+api_version = 6
+api_version_dst = 10
 
 -- mod的配置项
 configuration_options = {{

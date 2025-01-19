@@ -26,12 +26,44 @@ AddPrefabPostInit("wathgrithr", function(inst)
     if not GLOBAL.TheWorld.ismastersim then return end
     
 end)
+
+local _ACTION_LIGHT = GLOBAL.ACTIONS.LIGHT.fn
+local datetime = GLOBAL.os.date() -- 获取当前时间
+GLOBAL.ACTIONS.LIGHT.fn = function(act) 
+    if act.doer.userid then 
+        print("===============light===============")
+        print(act) -- 执行的动作
+        print(act.doer) -- 执行的人物
+        print(act.doer:GetDisplayName().."("..act.doer.userid..")".."light"..act.target:GetDisplayName()..datetime)
+        print("===============light===============")
+    end
+    return _ACTION_LIGHT(act)
+end
+
+--This is the function we'll call remotely to do it's thing, in this case make you giant!
+local function GrowGiant(player)
+    print(player)
+	player.Transform:SetScale(2,2,2)
+end
+--This adds the handler, which means that if the server gets told "GrowGiant",
+-- it will call our function, GrowGiant, above
+AddModRPCHandler(modname, "GrowGiant", GrowGiant)
+--This has it send the RPC to the server when you press "v"
+local function SendGrowGiantRPC()
+	SendModRPCToServer(MOD_RPC[modname]["GrowGiant"])
+end
+--This just uses keycodes, which you can look up online. This one is "v".
+GLOBAL.TheInput:AddKeyDownHandler(118, SendGrowGiantRPC)
+
 -- 打印日志
 print("=========================DEBUG=========================")
-for k,v in pairs(TUNING.GAMEMODE_STARTING_ITEMS.DEFAULT) do
-    print(k)
-    print(v)
-end
--- print(GLOBAL.TheNet:getUserID())
-print(GLOBAL.TheNet:Say("我是菜逼！"))
+-- for k,v in pairs(TUNING.GAMEMODE_STARTING_ITEMS.DEFAULT) do
+--     print(k)
+--     print(v)
+-- end
+    print("Is Server:", GLOBAL.TheNet:GetIsServer())
+    print("Is Client:", GLOBAL.TheNet:GetIsClient())
+    print("Is Dedicated", GLOBAL.TheNet:IsDedicated())
+    
+    GLOBAL.TheNet:Announce("触手尖刺")
 print("=========================DEBUG=========================")
