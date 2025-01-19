@@ -27,6 +27,7 @@ AddPrefabPostInit("wathgrithr", function(inst)
     
 end)
 
+-- 监听点燃
 local _ACTION_LIGHT = GLOBAL.ACTIONS.LIGHT.fn
 local datetime = GLOBAL.os.date() -- 获取当前时间
 GLOBAL.ACTIONS.LIGHT.fn = function(act) 
