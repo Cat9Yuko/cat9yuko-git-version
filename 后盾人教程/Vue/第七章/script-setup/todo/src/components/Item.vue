@@ -6,6 +6,10 @@
 </template>
 
 <script setup>
+import useRequest from '../composables/useRequest';
+
+
+const request = useRequest()
 const { todo } = defineProps({
   todo: {
     type: Object, required: true
@@ -13,9 +17,7 @@ const { todo } = defineProps({
 })
 const emit = defineEmits(['del'])
 const del = async () => {
-  await fetch(`http://127.0.0.1:3002/news/${todo.id}`, {
-    method: 'delete'
-  })
+  await request.delete(todo.id)
   emit('del')
 }
 </script>

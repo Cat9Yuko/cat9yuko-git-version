@@ -5,17 +5,19 @@
 </template>
 
 <script setup>
-    import { ref } from 'vue';
-    import Item from '../components/Item.vue'
-    
-    const todos = ref([])
-    todos.value = await fetch(`http://127.0.0.1:3002/news`).then(r => r.json())
 
-    const emit = defineEmits(['del'])
+import Item from "../components/Item.vue";
+import useTodo from '../composables/useTodo'
+import useRequest from '../composables/useRequest';
 
-    const del = async () => {
-        todos.value = await fetch(`http://127.0.0.1:3002/news`).then(r => r.json())
-    }
+const request = useRequest()
+const emit = defineEmits(["del"]);
+
+const { todos } = await useTodo()
+
+const del = async () => {
+    todos.value = await request.get()
+};
 </script>
 
 <style lang="scss">
