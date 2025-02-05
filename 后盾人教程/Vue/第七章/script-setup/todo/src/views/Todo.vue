@@ -1,6 +1,10 @@
 <template>
+    <div class="form">
+        <Add class="add" />
+        <Sort />
+    </div>
     <div class="todo">
-        <item :todo="todo" @del="del" class="item" v-for="todo of todos" :key="todo.id" />
+        <item :todo="todo" class="item" v-for="todo of todos" :key="todo.id" />
     </div>
 </template>
 
@@ -8,19 +12,25 @@
 
 import Item from "../components/Item.vue";
 import useTodo from '../composables/useTodo'
-import useRequest from '../composables/useRequest';
+import Add from "./Add.vue";
+import Sort from "../components/Sort.vue";
 
-const request = useRequest()
-const emit = defineEmits(["del"]);
-
-const { todos } = await useTodo()
-
-const del = async () => {
-    todos.value = await request.get()
-};
+const { todos, load } = useTodo()
+load()
+// const del = async () => {
+//     todos.value = await request.get()
+// };
 </script>
 
 <style lang="scss">
+.form {
+    display: flex;
+    margin-bottom: 20px;
+    .add {
+        flex: 1;
+    }
+}
+
 div.todo {
     display: flex;
     flex-direction: column;
