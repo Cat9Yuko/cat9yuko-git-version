@@ -1,16 +1,11 @@
 <template>
   <!-- <Hd v-if="show">保存提交</Hd> -->
-  <transition name="trans" 
-  enter-from-class="" 
-  enter-active-class=""
-  enter-to-class=""
-  leave-from-class=""
-  leave-active-class=""
-  leave-to-class="">
-    <Trans v-if="show">保存提交</Trans>
-  </transition>
+  <!-- <transition appear="" enter-from-class="" enter-active-class="animate__animated animate__wobble" enter-to-class=""
+    leave-from-class="" leave-active-class="animate__animated animate__flash" leave-to-class="">
+    <Trans>保存提交</Trans>
+  </transition> -->
 
-  <transition name="xj">
+  <transition @before-enter="beforeEnter" @enter="enter" @leave="leave">
     <Xj v-if="show">保存提交</Xj>
   </transition>
   <button @click="show = !show">切换</button>
@@ -21,7 +16,28 @@ import { ref } from 'vue';
 import Hd from './components/Hd.vue';
 import Xj from './components/Xj.vue'
 import Trans from './components/Trans.vue';
+
 const show = ref(false)
+
+const beforeEnter = (el) => {
+  gsap.set(el, {
+    opacity: 0
+  })
+}
+const enter = (el, done) => {
+  gsap.to(el, {
+    opacity: 1,
+    duration: 2,
+    onComplete: done
+  })
+}
+const leave = (el, done) => {
+  gsap.to(el, {
+    opacity: 0,
+    duration: 2,
+    onComplete: done
+  })
+}
 </script>
 
 <style lang="scss" scoped>

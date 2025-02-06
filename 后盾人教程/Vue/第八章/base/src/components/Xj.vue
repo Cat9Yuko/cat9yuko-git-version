@@ -15,7 +15,7 @@ section {
 div {
     background-color: aquamarine;
     padding: 20px;
-    transition: 0.5s;
+    // transition: 0.5s;
     border-radius: 0.5rem;
     display: inline-block;
     color: #ffffff;
