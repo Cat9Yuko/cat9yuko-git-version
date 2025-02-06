@@ -7,7 +7,7 @@ module.exports = () => {
     let data = { news: [] }
 
 		//添加20条包含中文的内容
-    for (let i = 1; i <= 5; i++) {
+    for (let i = 1; i <= 25; i++) {
         data.news.push({
             id: i,
             title: Random.cword(10, 20),

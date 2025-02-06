@@ -2,19 +2,20 @@ import useRequest from "../composables/useRequest";
 import { ref, watch } from "vue";
 
 const todos = ref([]);
-const orderBy = ref("asc");
+const orderBy = ref("desc");
 
 export default () => {
   const request = useRequest();
   const load = async () => {
     todos.value = await request.get();
-    sort()
+    sort();
   };
   const del = async (id) => {
     await request.delete(id);
     load();
   };
   const add = async (todo) => {
+    if (todo.title.trim() == "") return alert("输入不能为空");
     await request.post(todo);
     load();
   };
