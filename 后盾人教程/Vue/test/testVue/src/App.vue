@@ -1,6 +1,15 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+
 import TheWelcome from './components/TheWelcome.vue'
+const msg = '你好'
+const rawHtml = '<span style="color: red">This should be red.</span>'
+const hid = 'dynamicId'
+const isButtonDisabled = true
+const objectArrts = {
+id: 'container',
+class:'wrapper',
+style:'background-color: green;color:white;'
+}
 </script>
 
 <template>
@@ -9,6 +18,12 @@ import TheWelcome from './components/TheWelcome.vue'
 
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
+      <p>{{ msg }}</p>
+      <p>{{ rawHtml }}</p>
+      <p><span v-html="rawHtml"></span></p>
+      <p v-bind:id="hid">{{ hid }}</p>
+      <p><button :disabled="isButtonDisabled">button</button></p>
+      <p v-bind="objectArrts">Lorem ipsum dolor sit amet.</p>
     </div>
   </header>
 
