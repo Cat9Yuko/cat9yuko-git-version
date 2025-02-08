@@ -1,15 +1,35 @@
 <script setup>
-
+import { ref,reactive } from 'vue'
 import TheWelcome from './components/TheWelcome.vue'
 const msg = '你好'
 const rawHtml = '<span style="color: red">This should be red.</span>'
 const hid = 'dynamicId'
+const title = 'Lorem ipsum dolor sit amet.'
 const isButtonDisabled = true
+const attributeName = 'class'
+const eventName = 'dblclick'
 const objectArrts = {
-id: 'container',
-class:'wrapper',
-style:'background-color: green;color:white;'
+  id: 'container',
+  class: 'wrapper',
+  style: 'background-color: green;color:white;'
 }
+function doSomthing() {
+  alert('doSomthing')
+}
+function onSubmit() {
+
+}
+function callSomeFunction(param) {
+  console.log(param);
+}
+
+const count = ref(0)
+console.log(count);
+console.log(count.value);
+const state = reactive({ count2: 0 })
+let { count2 } = state
+count2++
+callSomeFunction(state.count2)
 </script>
 
 <template>
@@ -18,12 +38,23 @@ style:'background-color: green;color:white;'
 
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
-      <p>{{ msg }}</p>
-      <p>{{ rawHtml }}</p>
-      <p><span v-html="rawHtml"></span></p>
-      <p v-bind:id="hid">{{ hid }}</p>
-      <p><button :disabled="isButtonDisabled">button</button></p>
-      <p v-bind="objectArrts">Lorem ipsum dolor sit amet.</p>
+      <div>
+        <p>{{ msg.split('').reverse().join('') }}</p>
+        <p>{{ rawHtml }}</p>
+        <p><span v-html="rawHtml"></span></p>
+        <p v-bind:id="hid">{{ hid }}</p>
+        <p v-bind:id="`list-${hid}`">{{ hid }}</p>
+        <p><button :disabled="isButtonDisabled">button</button></p>
+        <p v-bind="objectArrts">Lorem ipsum dolor sit amet.</p>
+        <p v-if="isButtonDisabled">v-if=""</p>
+        <p :title="title">{{ title }}</p>
+        <a v-on:click="doSomthing">Click</a>
+        <p v-bind:[attributeName]="hid">动态参数</p>
+        <p v-on:[eventName]="doSomthing">动态事件</p>
+        <p>
+        <form @submit.prevent="onSubmit">修饰符</form>
+        </p>
+      </div>
     </div>
   </header>
 
@@ -57,6 +88,10 @@ header {
     display: flex;
     place-items: flex-start;
     flex-wrap: wrap;
+  }
+
+  header .wrapper p {
+    margin: 5px 0;
   }
 }
 </style>
