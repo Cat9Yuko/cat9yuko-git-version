@@ -3,6 +3,7 @@ import { ref, reactive } from 'vue'
 import TheWelcome from './components/TheWelcome.vue'
 import myComputed from './components/computed.vue'
 import ClassAndStyle from './components/ClassAndStyle.vue'
+import conditional from './components/conditional.vue'
 
 const msg = '你好'
 const rawHtml = '<span style="color: red">This should be red.</span>'
@@ -62,7 +63,8 @@ callSomeFunction(state.count2)
   </header>
 
   <main>
-    <ClassAndStyle />
+    <!-- <ClassAndStyle class="baz" /> -->
+    <conditional />
   </main>
 </template>
 
