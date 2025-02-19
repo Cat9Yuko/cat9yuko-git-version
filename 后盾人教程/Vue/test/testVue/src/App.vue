@@ -35,6 +35,8 @@ const state = reactive({ count2: 0 })
 let { count2 } = state
 count2++
 callSomeFunction(state.count2)
+
+const items = ref(['张三', '李四', '王五'])
 </script>
 
 <template>
@@ -66,7 +68,7 @@ callSomeFunction(state.count2)
   <main>
     <!-- <ClassAndStyle class="baz" /> -->
     <!-- <conditional /> -->
-    <list />
+    <list v-for="(item, index) in items" :item="item" :index="index" />
   </main>
 </template>
 

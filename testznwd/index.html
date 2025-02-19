@@ -1,0 +1,938 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=1200"/> 
+
+<meta name="SiteName" content="水利部网站" />
+<meta name="SiteDomain" content="www.mwr.gov.cn"  />
+<meta name="SiteIDCode" content="bm20000001" />
+
+<meta name="ColumnName" content="智能问答" />
+<meta name="ColumnDescription" content="" />
+<meta name="ColumnKeywords" content="智能问答" />
+<meta name="ColumnType" content="" />
+
+ 
+<title>AI智能助手</title>
+<base href="http://www.mwr.gov.cn/hd/znwd/index.html" />
+
+<!-- dialog -->
+ <!-- <link rel="stylesheet" href="../../images/modal202502.css"> -->
+  <style>
+     /*  */
+  @font-face {
+    font-family: "iconfont";
+    src: url('iconfont.eot?t=1578621765768');
+    /* IE9 */
+    src: url('iconfont.eot?t=1578621765768#iefix') format('embedded-opentype'),
+      /* IE6-IE8 */
+      url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAKQAAsAAAAABlAAAAJEAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCCcApcdgE2AiQDCAsGAAQgBYRtBy8bmwURBTzJfgy4G0zqdEmtvjWxID7fRc6gRcrMzB8P/6293jczu0FQiConEtglBWIjYqsAja5QbBTKsvD/aHOMhqVcSKxIRu07M+5gHz8cs9mypRg1RKvNaNOGR4DBixDBSC8tku3mE/dO/wT6IKsHlONeNNakSV1AXRxIAe6FUWQllMfWMHaBS7hPoNWIJbE72T+lWWEtC8Sj6u51zbmworBcs1DX7C3iqUpzepyeeBJ+Pv5ZjmaSKrMajtHeLZuf2i7Ihw245BMiBHS4QsYSCnGqNn3EyIJxWWu6mGBftcHPutHwXWKvf56oWdXtYAgq7knpqm41l+C2xhrC9KhfjhhSZ980xxZnXs+FL0+9xNtcn361vyO4fv7MoXiInx+Ryyb6Wk7pUCD4f6x8e2T11zwq4Mvafy+0Ff28NO/OE/wWZc+eoqstZyqqsnYwGTpdU6tWNGB/rx9jLQP3kA/NBkZ4mwynyJpNkYVdQqXNCmrNNtCKXDQ93KaPZIvSggU3gNDtjqTTO2TdXmRh36gM+qLWHTZanQk9s81MVE5JTDTmkB6gyrgnx62dqHaGxaZNZFYd8iuUqopB4PrF3BR7lHNsUNsi1JqAJHcwAY9h2zIMkmvMtFtqPUSeR3UvcjPuDMcOCSU0lAOpA1DJsB75wzWn9P4ZVNhoJWRLV01+BUlKNTkIuPwe5NTQ9+q6l2eUrUJI0wggEuuACZiFWi0GhvpZNZTRXOWI5CDi2f2or8Fd39R93RFoZVlT2FOy6mbLCg0DAAA=') format('woff2'),
+      url('iconfont.woff?t=1578621765768') format('woff'),
+      url('iconfont.ttf?t=1578621765768') format('truetype'),
+      /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+      url('iconfont.svg?t=1578621765768#iconfont') format('svg');
+    /* iOS 4.1- */
+  }
+  
+  .iconfont {
+    font-family: "iconfont" !important;
+    font-size: 20px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-close:before {
+    content: "\e606";
+  }
+  /* end */
+  
+  .modal-fade-enter-active {
+    animation: dialog-fade-in .3s;
+  }
+  
+  .modal-fade-leave-active {
+    animation: dialog-fade-out .3s;
+  }
+  
+  @keyframes dialog-fade-in {
+    0% {
+      transform: translate3d(0, -20px, 0);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes dialog-fade-out {
+    0% {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+    }
+  
+    100% {
+      transform: translate3d(0, -20px, 0);
+      opacity: 0;
+    }
+  }
+  
+  .m-modal__wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    margin: 0;
+    background: rgba(0, 0, 0, .5);
+    z-index: 9999999;
+  }
+  
+  .m-modal__container {
+    width: 25%;
+    position: relative;
+    margin: 0 auto 50px;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+    box-sizing: border-box;
+    margin-top: 15vh;
+    animation: dialog-fade-in .3s;
+  }
+  
+  .m-modal__header {
+    padding: 0px 20px 0px;
+    background-color: #1c64f2;
+    text-align: center;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+  }
+  
+  .m-modal__title {
+    line-height: 36px;
+    font-size: 16px;
+    color: #ffffff;
+  }
+  
+  .m-modal__wrapper button {
+    -webkit-appearance: button;
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    box-sizing: border-box;
+    margin: 0;
+  }
+  
+  .m-modal__headerbtn {
+    position: absolute;
+    top: 6px;
+    right: 20px;
+    padding: 0;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .m-modal__close {
+    color: #ffffff;
+  }
+  
+  .m-modal__headerbtn:hover .m-modal__close {
+    color: #409EFF;
+  }
+  
+  .m-modal__body {
+    padding: 30px 30px;
+    color: #606266;
+    font-size: 14px;
+    word-break: break-all;
+  }
+  .m-modal__body p {
+    color: #3f3f3f;
+    font-size: 15px;
+    line-height: 25px;
+  }
+  .m-modal__body p + p {
+    margin-top: 15px;
+  }
+  .m-modal__footer {
+    /* padding: 10px 20px 20px; */
+    text-align: right;
+    box-sizing: border-box;
+  }
+  
+  .m-modal__footer button:first-child {
+    margin-right: 10px;
+  }
+  
+  .m-modal-button {
+    display: inline-block;
+    line-height: 1;
+    white-space: nowrap;
+    cursor: pointer;
+    background: #fff;
+    border: 1px solid #dcdfe6;
+    color: #606266;
+    -webkit-appearance: none;
+    text-align: center;
+    box-sizing: border-box;
+    outline: none;
+    margin: 0;
+    transition: .1s;
+    font-weight: 500;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    padding: 12px 20px;
+    font-size: 14px;
+    border-radius: 4px;
+  }
+  
+  .m-modal-button+.m-modal-button {
+    margin-left: 10px;
+  }
+  
+  .m-modal-button:focus,
+  .m-modal-button:hover {
+    color: #409eff;
+    border-color: #c6e2ff;
+    background-color: #ecf5ff;
+  }
+  
+  .m-modal--primary {
+    color: #fff;
+    background-color: #409eff;
+    border-color: #409eff;
+  }
+  
+  .m-modal--primary:focus,
+  .m-modal--primary:hover {
+    background: #66b1ff;
+    border-color: #66b1ff;
+    color: #fff;
+  }
+  </style>
+
+<link href="../../images/style.css" rel="stylesheet" type="text/css">
+<link href="../../images/common.css" rel="stylesheet" type="text/css">
+<script src="../../images/jquery.min.js"></script> 
+
+<link href="../../images/custom.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<!--[if lt IE 9]>
+<style type="text/css">
+	.banner{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/organization.jpg", sizingMethod="scale");}
+</style>
+<![endif]-->
+
+<div class="banner">
+<div class="top">
+   	 <div class="topc">
+     	<div class="fl"><span id="welcome">欢迎您来到水利部网站！</span><span id="time"></span></div>
+        
+		<div class="fr">
+		
+		<span class="padding0204"><a target="_blank" href="/english/">EN</a></span>
+		<span>|</span>
+		
+		<span class="padding0204"><a href="javascript:;" target="_self" onClick-del="toggleToolBar();" id="toolbarSwitch">无障碍阅读</a></span>　
+		
+		　
+		
+		
+		<a href="/qt/sjbwz/" target="_self"><img style="padding-top: 4px;" src="/images/mob_20170512.jpg" /></a>
+		<a href="/?from=pc" target="_self"><img style="padding-top: 2px;" src="/images/pc_20170512.jpg" /></a>
+		
+		</div>
+		
+		
+		
+        <div class="fr">
+        	<form name="MailForm" method="post" action="http://mail.mwr.gov.cn/login.ahtml?for_web=1" target="_blank" autocomplete="off">
+					<input type="hidden" name="F_domain" value="mwr.gov.cn" />
+					<input type="hidden" name="F_tm" value="1216972901" />
+                    <input autocomplete="off" type="text" name="F_email" value placeholder="水利部邮箱用户名" />
+                    <input autocomplete="off" type="password" name="F_password" value placeholder="请输入密码" />
+               <button type="submit">登录</button>
+            </form>
+        </div>
+     </div>
+    </div>
+    	<div class="search" >
+    <form action="http://jsearch.mwr.gov.cn/irs-c-web/search.shtml" method="get" target="_blank" id="searchform" name="searchform">
+      <input name="code" type="hidden" value="18703928938" />
+      <input name="dataTypeId" type="hidden" value="26264" />
+      <input type="submit" value="确定" id="searchconfirm" />
+        <div class="searchconfirm1"><a href="http://jsearch.mwr.gov.cn/irs-c-web/search.shtml?code=18703928938&dataTypeId=26264"><img src="/images_index/search_03.png" width="112" height="36" /></a></div>
+      <div class="input" id="searchbox">
+        <div id="searctitle">欢迎使用水利部<font color="#F0981D">智能搜索</font></div>
+
+        <input type="text" value autocomplete="off" name="searchWord" id="searchword" />
+      </div>
+    </form>
+     </div>
+        <div class="guohuilogo"><img src="/images/guohui20190411.png" width="596" height="107" /></div>	
+</div>
+<div class="main" style="height:880px;margin-bottom:15px;">
+ <style>
+.nav ul .navmenu {width:48px; padding: 0 20px 0 28px;}
+.nav ul .navtext3{width:68px}
+.nav ul .navtext4{width:88px;}
+.nav ul .navtext4>a{background:none; }
+
+.nav ul .navindex { padding: 0 10px 0 20px;  }
+
+.sjtran1{left:188px; }
+.sjtran2{left:283px; }
+.sjtran3{left:380px; }
+.sjtran4{left:612px; }
+.sjtran5{left:706px; }
+.sjtran6{left:805px; }
+.sjtran7{left:910px; }
+
+#p1{margin-left:108px; }
+#p2{margin-left:126px; }
+#p3{margin-left:72px; }
+#p4{margin-left:238px; }
+#p5{margin-left:512px; }
+#p6{margin-left:725px; }
+#p7{margin-left:478px; }
+</style>
+
+<!--导航start-->
+<div class="nav" id="area_nav">
+      <ul>
+      <li class="navmenu navindex"><a href="/" class="navmenua1"><img src="/images_index/guowuyuan.png" width="57" height="28" /></a>
+      <li class="navmenu"><a href="/jg/" class="navmenua">机构</a>
+        <ul class="subnav">
+        <div class="sjtran sjtran1" ><img src="/images_index/sjbl.gif" width="20" height="20" /></div>
+        <p id="p1">
+          <a href="/jg/zzjg/">组织机构</a>
+          <a href="/jg/bzzc/">水利部领导</a>
+          <span><a href="/jg/bzzc/liguoying/">李国英</a></span>
+		  <span><a href="/jg/bzzc/wxz/">王新哲</a></span>
+		  <span><a href="/jg/bzzc/wdx/">王道席</a></span>
+          <span><a href="/jg/bzzc/zcq/">朱程清</a></span>
+		  <span><a href="/jg/bzzc/cm/">陈敏</a></span>
+		  <span><a href="/jg/bzzc/lls/">李良生</a></span>
+<span><a href="/jg/bzzc/wbe/">王宝恩</a></span>
+          </p>
+        </ul>
+      </li>
+      <li class="navmenu"><a href="/xw/" class="navmenua">新闻</a>
+        <ul class="subnav">
+        <div class="sjtran sjtran2"><img src="/images_index/sjbl.gif" width="20" height="20" /></div>
+          <p id="p2"><a href="/xw/szyw/">时政要闻</a>
+          <a href="/xw/slyw/">水利要闻</a>
+          <a href="/xw/xwfbh/">新闻发布会</a>
+          <a href="/xw/sjzs/">司局直属</a>
+          <a href="/xw/dfss/">地方水事</a>
+          <a href="/xw/mtzs/">媒体之声</a>
+          <a href="/xw/ztbd/">专题报道</a>
+          <a href="/xw/wszt/">网上展厅</a>
+          <a href="http://vod.mwr.gov.cn/" target="_blank">视频库</a>
+          </p>
+        </ul>
+      </li>
+      <li class="navmenu"><a href="/zw/" class="navmenua">政务</a>
+        <ul class="subnav">
+        <div class="sjtran sjtran3"><img src="/images_index/sjbl.gif" width="20" height="20" /></div>
+          <p id="p3"><a href="/zw/zgzygwywj/">中共中央国务院文件</a>
+           <a href="/zw/zwxxgkzl/">政府信息公开</a>
+          <a href="/zw/tzgg/">通知公告</a>
+          <a href="/zw/slbgb/">水利部公报</a>
+		  <a href="/zw/zdhyxx/">重大会议信息</a>
+          <a href="/zw/ghjh/">规划计划</a>
+          <a href="/zw/zcfg/">政策法规</a>
+		  <a href="/zw/zcjd/">政策解读</a>
+          <a href="/zw/rsxx/">人事信息</a>
+          <a href="/zw/cwxx/">财务信息</a>
+          <a href="http://gjkj.mwr.gov.cn/jsjd1/bzcx/" target="_blank">技术标准</a>
+          <a href="/zw/qzqd/">权责清单</a></p>
+        </ul>
+      </li>
+	  <li class="navmenu navtext4"><a href="http://dflz.mwr.gov.cn/" class="navmenua">党风廉政</a>  
+      <li class="navmenu"><a href="/fw/" class="navmenua">服务</a>
+        <ul class="subnav">
+        <div class="sjtran sjtran4"><img src="/images_index/sjbl.gif" width="20" height="20" /></div>
+          <p id="p4">
+      <a href="https://spjc.mwr.gov.cn/spjc/userlogin.do?ltype=nmLogin" target="_blank">审批服务大厅</a>
+      <a href="/fw/#xzspsx">行政审批事项</a>
+      <a href="/fw/spgg/">审批公告</a>
+      <a href="/fw/slgs/">受理公示</a>
+          <a href="/fw/slxf/">水利信访</a>
+          <a href="http://hfc.mwr.cn/" target="_blank">水情预警</a>
+          <a href="http://xxfb.mwr.cn/" target="_blank">实时水情</a>
+          <a href="/fw/fwxt/">服务系统</a>
+      <a href="http://jsearch.mwr.gov.cn/irs-c-web/search.shtml?code=18703928938&dataTypeId=26264" target="_blank">水利易sou</a>
+      <a href="/fw/cjwt/201807/t20180724_1043734.html" target="_blank">常见问题</a>
+          </p>
+        </ul>
+      </li>
+      <li class="navmenu"><a href="/hd/" class="navmenua">互动</a>
+        <ul class="subnav">
+        <div class="sjtran sjtran5" ><img src="/images_index/sjbl.gif" width="20" height="20" /></div>
+          <p id="p5">
+          <a href="/hd/zxft/">在线访谈</a>
+          <a href="/hd/gzzx/">公众咨询</a>
+          <a href="/hd/zqyj/">征求意见</a>
+          <a href="/hd/wsdt/">网上答题</a>
+          <a href="/hd/jjjb/">纪检举报</a>
+         </p>
+        </ul>
+      </li>
+      <li class="navmenu"><a href="/sj/" class="navmenua">数据</a> 
+         <ul class="subnav">
+        <div class="sjtran sjtran6"><img src="/images_index/sjbl.gif" width="20" height="20" /></div>
+         <p id="p6">
+        <a href="/sj/#tjgb">统计公报</a>
+          <a href="/sj/#jbjc">简报集萃</a></p>
+        </ul>
+      </li>
+      <li class="navmenu navtext3"><a href="/szs/" class="navmenua">水知识</a>
+        <ul class="subnav">
+        <div class="sjtran sjtran7"><img src="/images_index/sjbl.gif" width="20" height="20" /></div>
+          <p id="p7">
+          <a href="/szs/fxftzl/">水旱灾害防御</a>
+          <a href="/szs/sls/">水利史</a>
+          <a href="/szs/slgc/">水利工程</a>
+          <a href="/szs/slfjq/">水利风景</a>
+          <a href="/szs/sqjyjd/">水情教育基地</a>
+          <a href="/szs/slcs/">水利常识</a>
+          <a href="http://vod.mwr.gov.cn/jysp/">教育视频</a>
+          </p>
+        </ul>
+      </li>
+	  <li class="navmenu navtext4"><a href="http://supe.mwr.gov.cn/" class="navmenua">监督举报</a>  
+    </ul>
+</div>
+<!--导航end-->
+ 
+
+ 
+<div class="nav_layered"> 
+<span><a href="../../" class="CurrChnlCls">首页</a>&gt;<a href="../" class="CurrChnlCls">互动</a>&gt;<a href="./" class="CurrChnlCls">智能问答</a></span> 
+</div>
+
+  <div class="mainc">
+  <!--中间部分开始-->
+ <div class="subnavl" style="display:none">
+<h2>机构</h2>
+    <ul class="subnavlist">
+          <li class="act0"><a href="/jg/zzjg/">组织机构</a>
+          	<ul class="subnavlist2 subnavlist3" style="display:none;padding-left:8px;">
+			  <li><a href="/jg/zzjg/gyslb/">关于水利部</a></li>
+			  <li><a href="/jg/zzjg/jgsj/">机关司局</a></li>
+			  <li><a href="/jg/zzjg/zsdw/">直属单位</a></li>
+        	</ul>
+          </li>
+          <li class="act0"><a href="/jg/bzzc/" >水利部领导</a>
+          	<ul class="subnavlist2 subnavlist3" style="padding-left:8px;display:none;">
+				<li><a href="/jg/bzzc/liguoying/">李国英</a></li>
+				<li><a href="/jg/bzzc/wxz/">王新哲</a></li>
+				<li><a href="/jg/bzzc/wdx/">王道席</a></li>
+				<li><a href="/jg/bzzc/zcq/">朱程清</a></li>
+				<li><a href="/jg/bzzc/cm/">陈敏</a></li>
+				<li><a href="/jg/bzzc/lls/">李良生</a></li>
+				<li><a href="/jg/bzzc/wbe/">王宝恩</a></li>
+          </ul>
+          </li>
+    </ul>
+</div>
+
+<div class="subnavl" style="display:none">
+	<h2>新闻</h2>
+    <ul class="subnavlist">
+          <li class="act0"><a href="/xw/szyw/">时政要闻</a></li>
+          <li class="act0"><a href="/xw/slyw/">水利要闻</a></li>
+          <li class="act0"><a href="/xw/xwfbh/">新闻发布会</a></li>
+          <li class="act0"><a href="/xw/sjzs/">司局直属</a></li>
+          <li class="act0"><a href="/xw/dfss/">地方水事</a></li>
+          <li class="act0"><a href="/xw/mtzs/">媒体之声</a></li>
+          <li class="act0"><a href="/xw/ztbd/">专题报道</a></li>
+          <li class="act0"><a href="/xw/wszt/">网上展厅</a></li>
+		  <li class="act0"><a href="http://vod.mwr.gov.cn/" target="_blank">视频库</a></li>
+    </ul>
+</div>
+
+<div class="subnavl" style="display:none">
+<h2>政务</h2>
+    <ul class="subnavlist">
+          <li class="act0"><a href="/zw/zgzygwywj/">中共中央国务院文件</a></li>
+          <li class="act0"><a   href="/zw/zwxxgkzl/">政府信息公开</a></li>
+          <li class="act0"><a href="/zw/tzgg/">通知公告</a>
+			<ul class="subnavlist2 subnavlist3" style="display:none;padding-left:8px;">
+             <li><a href="/zw/tzgg/tzgs/">通知公示</a></li>
+             <li><a href="/zw/tzgg/zbgg/">招标公告</a></li>
+            </ul>
+          </li>
+          <li class="act0"><a href="/zw/slbgb/">水利部公报</a></li>
+		  <li class="act0"><a href="/zw/zdhyxx/">重大会议信息</a></li>
+          <li class="act0"><a href="/zw/ghjh/">规划计划</a></li>
+          <li class="act0"><a href="/zw/zcfg/">政策法规</a>
+		    <ul class="subnavlist2 subnavlist3" style="display:none;padding-left:8px;">
+              <li><a href="/zw/zcfg/fl/">法律</a></li>
+              <li><a href="/zw/zcfg/xzfghfgxwj/">行政法规和法规性文件</a></li>
+              <li><a href="/zw/zcfg/bmgz/">部门规章</a></li>
+			  <li><a href="/zw/zcfg/gfxwj/">规范性文件</a></li>
+            </ul>
+		  </li>
+          <li class="act0"><a href="/zw/zcjd/">政策解读</a></li>
+          <li class="act0"><a href="/zw/rsxx/">人事信息</a>
+          	<ul class="subnavlist2 subnavlist3" style="display:none;padding-left:8px;">
+              <li><a href="/zw/rsxx/gbrm/">干部任免</a></li>
+              <li><a href="/zw/rsxx/jypx/">教育培训</a></li>
+              <li><a href="/zw/rsxx/rszl/">人事招录</a></li>
+            </ul>
+          </li>
+          <li class="act0"><a href="/zw/cwxx/">财务信息</a></li>
+          <li class="act0"><a href="http://gjkj.mwr.gov.cn/jsjd1/bzcx/" target="_blank">技术标准</a></li>
+          <li class="act0"><a href="/zw/qzqd/">权责清单</a></li>
+    </ul>
+</div>
+
+
+<div class="subnavl" style="display:none">
+<h2>服务</h2>
+    <ul class="subnavlist">
+          <li class="act0"><a href="https://spjc.mwr.gov.cn/" target="_blank">审批服务大厅</a></li>
+		  <li class="act0"><a href="/fw/#xzspsx">行政审批事项</a></li>
+		  <li class="act0"><a href="/fw/spgg/">审批公告</a></li>
+          <li class="act0"><a href="/fw/slgs/">受理公示</a></li>
+          <li class="act0"><a href="/fw/slxf/">水利信访</a>
+		  	<ul class="subnavlist2 subnavlist3" style="display:none;padding-left:8px;">
+            	<li><a href="/fw/slxf/xffgjxgzd/">信访制度</a></li>
+            	<li><a href="/fw/slxf/wsxf/">网上信访</a></li>
+				<li><a href="/fw/slxf/xfzn/">信访指南</a></li>
+            	<li><a target="_blank" href="https://wsxf.mwr.gov.cn/#/xfj/cxmSearch">查询码查询</a></li>
+				<li><a href="/fw/slxf/xglj/">相关链接</a></li>
+          	</ul>
+		  </li>
+          <li class="act0"><a href="http://hfc.mwr.cn" target="_blank">水情预警</a></li>
+          <li class="act0"><a href="http://xxfb.mwr.cn/" target="_blank">实时水情</a></li>
+          <li class="act0"><a href="/fw/fwxt/">服务系统</a></li>
+          <li class="act0"><a href="http://jsearch.mwr.gov.cn/irs-c-web/search.shtml?code=18703928938&dataTypeId=26264">水利易sou</a></li>
+          <li class="act0"><a href="/fw/cjwt/201807/t20180724_1043734.html">常见问题</a></li>
+    </ul>
+</div>
+
+<div class="subnavl" style="display:none">
+<h2>互动</h2>
+    <ul class="subnavlist">
+          <li class="act0"><a href="/hd/zxft/">在线访谈</a></li>
+          <li class="act0"><a href="/hd/gzzx/">公众咨询</a></li>
+          <li class="act0"><a href="/hd/zqyj/">征求意见</a></li>
+          <li class="act0"><a href="/hd/wsdt/">网上答题</a></li>
+          <li class="act0"><a href="/hd/jjjb/">纪检举报</a></li>
+    </ul>
+</div>
+
+<div class="subnavl" style="display:none">
+<h2>数据</h2>
+    <ul class="subnavlist">
+          <li class="act0" style="padding-left:26px"><a href="/sj/tjgb/">统计公报</a>
+		    <ul class="subnavlist2 subnavlist3" style="display:none;padding-left:0px;">
+				<li style="width:190px"><a style="font-size:14px" href="/sj/tjgb/dycqgslpcgb/">第一次全国水利普查公报</a></li>
+				<li style="width:190px"><a style="font-size:14px" href="/sj/tjgb/slfztjgb/">水利发展统计公报</a></li>
+				<li style="width:190px"><a style="font-size:14px" href="/sj/tjgb/szygb/">水资源公报</a></li>
+				<li style="width:190px"><a style="font-size:14px" href="/sj/tjgb/zgswnb/">中国水文年报</a></li>
+				<li style="width:190px"><a style="font-size:14px" href="/sj/tjgb/zghlnsgb/">中国河流泥沙公报</a></li>
+				<li style="width:190px"><a style="font-size:14px" href="/sj/tjgb/slkjcggb/">水利科技成果公报</a></li>
+				<li style="width:190px"><a style="font-size:14px" href="/sj/tjgb/zgshzhgb/">中国水旱灾害公报</a></li>
+				<li style="width:190px"><a style="font-size:14px" href="/sj/tjgb/zgstbcgb/">中国水土保持公报</a></li>
+				<li style="width:190px"><a style="font-size:14px" href="/sj/tjgb/sxgcgb/">三峡工程公报</a></li>
+				<li style="width:190px"><a style="font-size:14px" href="/sj/tjgb/sqnb/">水情年报</a></li>
+				<li style="width:190px"><a style="font-size:14px" href="/sj/tjgb/dxsdtyb/">地下水动态月报</a></li>
+				<li style="width:190px"><a style="font-size:14px" href="/sj/tjgb/zysljstztjyb/">中央水利建设投资统计月报</a></li>
+				<li style="width:190px"><a style="font-size:14px" href="/sj/tjgb/wzndbg/">水利部政府网站工作年度报表</a></li>
+				
+            </ul>
+		  </li>
+          <li class="act0"><a href="/sj/jbjc/">简报集萃</a>
+		      	<ul class="subnavlist2 subnavlist3" style="display:none;padding-left:8px">
+					<li><a href="/sj/jbjc/slfpjb/">乡村振兴水利保障工作简报</a></li>
+					<li><a href="/sj/jbjc/ncysaqgzjb/">农村水利水电工作简报</a></li>
+                </ul>
+		  </li>
+    </ul>
+</div>
+
+<div class="subnavl" style="display:none">
+<h2>水知识</h2>
+    <ul class="subnavlist">
+          <li class="act0"><a href="/szs/fxftzl/">水旱灾害防御</a></li>
+          <li class="act0"><a href="/szs/sls/">水利史</a></li>
+          <li class="act0"><a href="/szs/slgc/">水利工程</a>
+		  <ul class="subnavlist2 subnavlist3" style="display:none;padding-left:8px;">
+            	<li><a href="/szs/slgc/gdzmslgc/">古代著名水利工程</a></li>
+            	<li><a href="/szs/slgc/zmfhgc/">著名防洪工程</a></li>
+          </ul>
+		  </li>
+          <li class="act0"><a href="/szs/slfjq/">水利风景</a></li>
+          <li class="act0"><a href="/szs/sqjyjd/">水情教育基地</a></li>
+          <li class="act0"><a href="/szs/slcs/">水利常识</a></li>
+          <li class="act0"><a href="http://vod.mwr.gov.cn/jysp/">教育视频</a></li>
+    </ul>
+</div>
+
+<div class="subnavl" style="display:none">
+<h2>特色专栏</h2>
+    <ul class="subnavlist">
+          <li class="act0"><a href="/tszl/mzyt/">每周一图</a></li>
+          <li class="act0"><a href="http://slfjq.mwr.gov.cn/" target="_blank">水利风景区</a></li>
+    </ul>
+</div>
+
+<div class="subnavl" style="display:none">
+<h2>其他</h2>
+    <ul class="subnavlist">
+          <li class="act0"><a href="/qt/fwltj/">访问量统计</a></li>
+          <li class="act0"><a href="/qt/phb/">排行榜</a></li>
+          <li class="act0"><a href="/qt/wzsm/">网站声明</a></li>
+          <li class="act0"><a href="/qt/wzdt/">网站地图</a></li>
+    </ul>
+</div>
+
+
+<script type="text/javascript">
+   
+   
+   
+   
+   var thischanel="首页,互动,智能问答".split(",")[1];
+   
+   
+   
+   $(".subnavl").each(function(i){
+	   var flag=$(this).children("h2").text()
+	   if(flag==thischanel){
+	   	   $(this).css("display","block");
+		   var pchnl="首页,互动,智能问答".split(",")[2];
+	       var channel="首页,互动,智能问答".split(",")[3];
+           $(this).children("ul").children("li").each(function(i){
+           if($(this).children("a").text()==pchnl){
+	        $(this).children("a").addClass("act");
+		    $(this).children("ul").show();
+		    $(this).children("ul").find("a").each(function(e){
+		       if($(this).text()==channel){
+		     	    $(this).addClass("act");
+		    	 }
+	    	   })
+	       }else if($(this).children("a").text()==channel){
+	     $(this).children("a").addClass("act");
+	  }
+   })
+	   }else{
+	    $(this).remove();
+	   }
+	})
+</script>
+  <div class="newscontain" style="height:850px;">
+    <div class="slnewscon autoHeight">
+ 
+	
+			
+
+	      	
+	<table cellspacing="0" cellpadding="0" style="margin-bottom:16px;">
+	  <tr>
+		<td><h2><a href="/hd/gzzx/index.html" style="color:#333333;">公众咨询</a></h2></td>
+		<td width="24"></td>
+		<td><img src="../../images/znwd20170814.jpg" /></td>
+		<td><h2><a href="/hd/znwd/index.html" style="color:#3582c4">AI智能助手</a></h2></td>
+    <td width="630" style="text-align: right;font-size: 16px;cursor: pointer;"><div class="mzbtn">免责声明</div></td>
+	  </tr>
+	</table>
+	<div class="list_zzzx">
+		<iframe src="https://shangshan.mwr.cn/appmatev2/chat/zB5OR3l6DOQ8nJz0" scrolling="no" frameborder="0" width="100%" height="650" ></iframe>
+	</div>
+	
+	
+			
+		
+        
+    </div>
+  </div>
+    <!--中间部分结束-->
+  </div>
+  <br class="clear">
+</div>
+
+<div class="foot">
+  <div class="footl">
+    <p class="footlp"><span><a target="_blank" href="/qt/fwltj/">访问量统计</a> | </span><span><a target="_blank" href="/qt/phb/">排行榜</a> | </span><span><a target="_blank" href="/qt/wzsm/">网站声明</a> | </span><span><a href="/qt/wzdt/"> 网站地图</a></span></p>
+    <div class="footcontact">
+    <div class="footcontact1 fl">
+    <p><a style="padding:0;" href="https://beian.miit.gov.cn">京ICP备14010557号</a> &copy;中华人民共和国水利部版权所有&nbsp;&nbsp;主办：水利部办公厅&nbsp;&nbsp;承办：水利部信息中心</p>
+    <p>水利部总机：010-63202114&nbsp;&nbsp;网站联系电话：010-63202558&nbsp;&nbsp;地址：北京市西城区白广路二条2号 </p>
+    <p>政府网站标识码：bm20000001&nbsp;&nbsp;<a style="padding: 0;" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11040102700040"><img src="/images/2018guohui03.png" style="vertical-align:text-top" />&nbsp;京公网安备11040102700040号</a>&nbsp;&nbsp;投稿信箱：webmaster@mwr.gov.cn</p>
+    </div>
+        <div class="footcontact2 fl"><a href="http://bszs.conac.cn/sitename?method=show&id=0726B189C5F03282E053012819ACDB52"><img src="/images/dzjg.jpg" width="44" height="56" /></a>　<a href="https://zfwzgl.www.gov.cn/exposure/jiucuo.html?site_code=bm20000001&url=http%3A%2F%2Fwww.mwr.gov.cn%2F" target="_blank"><img src="/images/jiucuo.png" width="119" height="56" /></a></div>
+    </div>
+  </div>
+  <div class="footr">
+    <div class="fl marginr10">　　　　　　</div>
+
+    <div class="fl  margin_top_10"> <img src="/images/news_37.jpg" width="90" height="90" /></div>
+      <p class="margin_top_10">水利部官网</p>
+  </div>
+</div>
+
+<script type="text/javascript" src="/wza/esdToolsInit.js" charset="utf-8"></script>
+<script type="text/javascript" src="/wza/crypto-js.min.js" charset="utf-8"></script>
+
+<!-- dialog -->
+ <!-- <script src="../../images/modal202502.js"></script> -->
+  <script>
+    ; (function (root, factory) {
+  'use strict';
+
+  if (typeof module === 'object' && typeof module.exports === 'object') {
+    factory(require('jquery'), root);
+  }
+  if (typeof define === "function") {
+    if (define.cmd) {
+      define(function (require, exports, module) {
+        var $ = require("jquery");
+        factory($, root);
+      });
+    } else {
+      define(["jquery"], function ($) {
+        factory($, root);
+      });
+    }
+  } else {
+    factory(root.jQuery, root);
+  }
+}
+  (typeof window !== "undefined" ? window : this, function ($, root, undefined) {
+    'use strict';
+    if (!$) {
+      $ = root.jQuery || null;
+    }
+    if (!$) {
+      throw new TypeError("必须引入jquery库方可正常使用！");
+    }
+
+    function mModal(options) {
+      options = options || {};
+      this.options = $.extend(true, {}, mModal.defaultOptions, options);
+      // this.renderDom();
+    }
+
+    mModal.defaultOptions = {
+      title: "提示", // 标题，默认：提示
+      width: "25%", // 弹出框宽度，默认 25%
+      top: "15vh", // 距离可视区域顶部距离 CSS中 margin-top 值
+      content: "正文内容什么", // 正文，默认：正文内容
+      cancelText: "取 消", // 取消按钮文本
+      confirmText: "确 定", // 确定按钮文本
+      showCancelButton: true, // 是否显示取消按钮
+      showConfirmButton: true, // 是否显示确定按钮
+      showClose: true, // 是否显示关闭按钮
+      modal: true, // 是否需要遮罩层
+      customClass: "", // 自定义类名confirm
+      confirm: null, // 确认后 回调函数
+      cancel: null, // 取消后 回调函数
+    }
+
+    mModal.prototype = {
+      constructor: mModal,
+      initElement: function () {
+        // 先创建modal框架
+        // 1. 创建 m-modal__wrapper
+        var mWrapper = document.createElement("div");
+        mWrapper.className = "m-modal__wrapper";
+        // 2. 创建 m-modal__container 并且 append m-modal__wrapper
+        var mContainer = document.createElement("div");
+        mContainer.className = "m-modal__container";
+        mWrapper.appendChild(mContainer);
+        // 3. 创建 m-modal__header
+        var mHeader = document.createElement("div");
+        mHeader.className = "m-modal__header";
+        // 4. 创建 title close 并且 append m-modal__header
+        var mTitle = document.createElement("span");
+        mTitle.className = "m-modal__title";
+        mHeader.appendChild(mTitle);
+        var mHeaderbtn = document.createElement("button");
+        mHeaderbtn.className = "m-modal__headerbtn";
+        var mClose = document.createElement("i");
+        mClose.className = "m-modal__close iconfont icon-close";
+        mHeaderbtn.appendChild(mClose);
+        mHeader.appendChild(mHeaderbtn);
+        // 5. 创建 m-modal__body
+        var mBody = document.createElement("div");
+        mBody.className = "m-modal__body";
+        var mBodySpan = document.createElement("div");
+        mBody.appendChild(mBodySpan);
+        // 6. 创建 m-modal__footer
+        var mFooter = document.createElement("div");
+        mFooter.className = "m-modal__footer";
+        // 7. 创建 操作按钮
+        var mButtonLeft = document.createElement("button");
+        mButtonLeft.className = "m-modal-button m-modal--primary";
+        var mButtonRight = document.createElement("button");
+        mButtonRight.className = "m-modal-button m-modal--default";
+        var mBtnSpanL = document.createElement("span");
+        var mBtnSpanR = document.createElement("span");
+        mFooter.appendChild(mButtonLeft).appendChild(mBtnSpanL);
+        mFooter.appendChild(mButtonRight).appendChild(mBtnSpanR);
+        // 8. header body footer append m-modal__container
+        mContainer.appendChild(mHeader);
+        mContainer.appendChild(mBody);
+        mContainer.appendChild(mFooter);
+        document.body.appendChild(mWrapper);
+        // 返回可能用到的dom
+        this.mWrapper = mWrapper;
+        this.mContainer = mContainer;
+        this.mHeader = mHeader;
+        this.mHeaderbtn = mHeaderbtn;
+        this.mBody = mBody;
+        this.mFooter = mFooter;
+        this.mButtonLeft = mButtonLeft;
+        this.mButtonRight = mButtonRight;
+        // return this;
+      },
+      renderDom: function () {
+        var options = this.options;
+        this.initElement();
+        // 宽度
+        if (options.width) {
+          document.querySelector(".m-modal__container").style.width = options.width;
+        }
+        // 标题
+        if (options.title) {
+          document.querySelector(".m-modal__title").innerHTML = options.title;
+        }
+        // 距离顶部距离
+        if (options.top) {
+          document.querySelector(".m-modal__container").style.marginTop = options.top;
+        }
+        // 正文
+        if (options.content) {
+          document.querySelector(".m-modal__body div").innerHTML = options.content;
+        }
+        // 是否显示确定按钮
+        if (options.showConfirmButton) {
+          if (options.confirmText) {
+            document.querySelector(".m-modal__footer button:first-child span").innerHTML = options.confirmText;
+          }
+        } else {
+          this.mFooter.removeChild(this.mButtonLeft);
+        }
+        // 是否显示取消按钮
+        if (options.showCancelButton) {
+          if (options.cancelText) {
+            document.querySelector(".m-modal__footer button:last-child span").innerHTML = options.cancelText;
+          }
+        } else {
+          this.mFooter.removeChild(this.mButtonRight);
+        }
+        // 是否显示关闭按钮
+        if (!options.showClose) {
+          this.mHeader.removeChild(this.mHeaderbtn);
+        }
+        // 是否需要遮罩层
+        if (!options.modal) {
+          document.querySelector(".m-modal__wrapper").style.background = "rgba(0, 0, 0, 0)";
+        }
+        // 自定义类名
+        if (options.customClass) {
+          document.querySelector(".m-modal__container").classList.add(options.customClass);
+        }
+        // 确定按钮方法回调
+        if (options.showConfirmButton && options.confirm) {
+          this.mButtonLeft.onclick = function () {
+            options.confirm();
+          }
+        }
+        // 取消按钮方法回调
+        if (options.showCancelButton) {
+          this.mButtonRight.onclick = function () {
+            if (options.cancel) {
+              options.cancel();
+              mModal.prototype.close();
+            } else {
+              mModal.prototype.close();
+            }
+          }
+        }
+        // 关闭按钮点击方法
+        if (options.showClose) {
+          this.mHeaderbtn.onclick = function () {
+            mModal.prototype.close();
+          }
+        }
+      },
+      show: function () {
+        document.querySelector(".m-modal__wrapper").style.display = "block";
+      },
+      close: function () {
+        document.querySelector(".m-modal__wrapper").style.display = "none";
+        var timer = null;
+        timer = setTimeout(function () {
+          clearTimeout(timer);
+          mModal.prototype.destroy();
+        }, 200);
+      },
+      destroy: function () {
+        var mWrapper = document.querySelector(".m-modal__wrapper");
+        var parentWrapper = mWrapper.parentNode;
+        parentWrapper.removeChild(mWrapper);
+      }
+    }
+
+    window.mModal = mModal
+
+  }));
+  </script>
+
+ <script src="../../images/common.js" type="text/javascript"></script>
+<script src="../../images/custom.js"></script>
+
+
+<script>
+  $(function () {
+    var mModal1 = new mModal({
+      title:'水利AI助手服务免责声明',
+      content: "<p>1.“水利AI助手”智能问答服务平台，旨在为广大社会公众提供公众咨询的自动快速答复服务，咨询结果仅供参考。</p><p>2.“水利AI助手”智能问答服务平台答复内容采用上善水利大模型生成，答复内容有歧义或不够准确的，请您访问来源链接中的原文，以原文内容为准。</p><p>3.“水利AI助手”智能问答服务平台未能理解您的问题或答复内容不够准确时，建议您点击“我要咨询”，请您耐心等待答复。</p><p>4.互联网用户对“水利AI助手”智能问答服务平台答复内容截图、转载等，若侵犯了第三方知识产权或其他合法权利责任由用户本人承担，“水利AI助手”智能问答服务平台不对此承担任何责任。</p>",
+      showCancelButton: false,
+      showConfirmButton:false,
+      width: "825px",
+      top: "20%"
+      // confirm: function () {
+      //   alert("确定弹框1");
+      //   mModal1.close();
+      // },
+      // cancel: function () {
+      //   alert("取消弹框1")
+      // }
+    });
+    $(".mzbtn").on("click", function () {
+      mModal1.renderDom();
+    })
+  })
+</script>
+
+
+
+</body>
+</html>
