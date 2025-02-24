@@ -37,6 +37,7 @@ count2++
 callSomeFunction(state.count2)
 
 const items = ref(['张三', '李四', '王五'])
+const items2 = ref([{ 'name': '张三', id: 1 },{ 'name': '李四', id: 2 },{ 'name': '王五', id: 3 }])
 </script>
 
 <template>
@@ -68,7 +69,9 @@ const items = ref(['张三', '李四', '王五'])
   <main>
     <!-- <ClassAndStyle class="baz" /> -->
     <!-- <conditional /> -->
-    <list v-for="(item, index) in items" :item="item" :index="index" />
+    <!-- <list v-for="(item, index) in items" :item="item" :index="index" /> -->
+    <!-- <list v-for="(item, index) in items2" :item="item" :index="index" :key="item.id" /> -->
+     <list />
   </main>
 </template>
 

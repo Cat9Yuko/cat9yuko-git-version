@@ -47,15 +47,37 @@
                 <li v-if="!todo.isComplete">{{ todo.name }}</li>
             </template>
         </ul>
+
+
     </div>
     <div>
-        {{ index }} - {{ item }}
+        <!-- {{ index }} - {{ item }} -->
+
+        <!-- 通过 key 管理状态 -->
+
+        <!-- Vue 默认按照“就地更新”的策略来更新通过 v-for 渲染的元素列表。当数据项的顺序改变时，Vue 不会随之移动 DOM 元素的顺序，而是就地更新每个元素，确保它们在原本指定的索引位置上渲染。 -->
+
+        <template v-for="todo in todos" :key="todo.name">
+            <li>{{ todo.name }}</li>
+        </template>
+
+        <!-- 数组变化侦测
+        push()
+        pop()
+        shift()
+        unshift()
+        splice()
+        sort()
+        reverse() 
+        -->
+
+        <li v-for="n in evenNumbers">{{ n }}</li>
     </div>
 </template>
 
 <script setup>
 defineProps(['item', 'index'])
-import { ref, reactive } from 'vue';
+import { ref, reactive, computed } from 'vue';
 
 // v-for
 const items = ref([{ message: 'Foo' }, { message: 'Bar' }, { children: ['Apple', 'Orange'] }])
@@ -75,6 +97,24 @@ const todods = reactive({
     isComplete: { name: '王二' },
     person1: { name: '张三' },
     person2: { name: '李四' }
+})
+const todos = reactive({
+    person1: { name: '田七' },
+    person2: { name: '郑八' }
+})
+
+const myArr = ref([{ message: 'Apple' }, { message: 'iPhone' }, { message: 'Foo' }, { message: 'iFoo' }])
+
+
+myArr.value = myArr.value.filter((item) => {
+    item.message.match(/Foo/)
+})
+
+const numbers = ref([1, 2, 3, 4, 5])
+const evenNumbers = computed(() => {
+    return numbers.value.filter((n) => {
+        n % 2 === 0
+    })
 })
 </script>
 
