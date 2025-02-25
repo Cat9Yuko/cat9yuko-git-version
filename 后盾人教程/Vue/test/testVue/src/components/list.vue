@@ -57,9 +57,9 @@
 
         <!-- Vue 默认按照“就地更新”的策略来更新通过 v-for 渲染的元素列表。当数据项的顺序改变时，Vue 不会随之移动 DOM 元素的顺序，而是就地更新每个元素，确保它们在原本指定的索引位置上渲染。 -->
 
-        <template v-for="todo in todos" :key="todo.name">
+        <!-- <template v-for="todo in todos" :key="todo.name">
             <li>{{ todo.name }}</li>
-        </template>
+        </template> -->
 
         <!-- 数组变化侦测
         push()
@@ -70,8 +70,14 @@
         sort()
         reverse() 
         -->
+        <!-- <ul>
+            <li v-for="n in evenNumbers">{{ n }}</li>
+        </ul> -->
 
-        <li v-for="n in evenNumbers">{{ n }}</li>
+        <ul v-for="numbers in sets">
+            <li v-for="n in even(numbers)">{{ n }}</li>
+        </ul>
+
     </div>
 </template>
 
@@ -106,16 +112,24 @@ const todos = reactive({
 const myArr = ref([{ message: 'Apple' }, { message: 'iPhone' }, { message: 'Foo' }, { message: 'iFoo' }])
 
 
-myArr.value = myArr.value.filter((item) => {
-    item.message.match(/Foo/)
-})
+myArr.value = myArr.value.filter((item) => { return item.message.match(/Foo/) })
 
 const numbers = ref([1, 2, 3, 4, 5])
 const evenNumbers = computed(() => {
-    return numbers.value.filter((n) => {
-        n % 2 === 0
-    })
+    return numbers.value.filter((n) =>
+        n % 2 === 0)
 })
+// 多层嵌套
+const sets = ref([
+    [1, 2, 3, 4, 5],
+    [6, 7, 8, 9, 10]
+])
+function even(numbers) {
+    return numbers.filter((number) => {
+        return number % 2 === 0
+    })
+}
+// 在计算属性中使用 reverse() 和 sort() 的时候务必小心！这两个方法将变更原始数组，计算函数中不应该这么做。
 </script>
 
 <style lang="scss" scoped></style>
