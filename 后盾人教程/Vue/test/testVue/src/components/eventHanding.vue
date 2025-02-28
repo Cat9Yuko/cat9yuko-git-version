@@ -19,6 +19,14 @@
         <!-- 事件修饰符 -->
          
         <p><a @click.stop="doThis">.stop 单击事件将停止传递</a></p>
+
+        <!-- 提交事件将不再重新加载页面 -->
+        <p><form @submit.prevent="onSubmit"><button type="submit">submit</button></form></p>
+        <p><a @click.stop.prevent="doThat">修饰语可以使用链式书写</a></p>
+
+        <!-- 也可以只有修饰符 -->
+        <p><form @submit.prevent><button type="submit">submit</button></form></p>
+        <p @click.self="doThat">仅当 event.target 是元素本身时才会触发事件处理器</p>
     </div>
 </template>
 
