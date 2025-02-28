@@ -448,3 +448,26 @@ li {
   left: 470px;
   top: 92px;
 }
+
+/* 图片链接修改 */
+.show3-items {
+  background-color: #ffffff;
+  height: 231px;
+}
+.show3-item {
+  float: left;
+  width: 33.33%;
+  height: 100%;
+  padding-top: 48px;
+  text-align: center;
+}
+.show3-item img {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+}
+.show3-item p {
+  font-size: 22px;
+  color: #303030;
+  margin-top: 5px;
+}
