@@ -5,6 +5,7 @@ import myComputed from './components/computed.vue'
 import ClassAndStyle from './components/ClassAndStyle.vue'
 import conditional from './components/conditional.vue'
 import list from './components/list.vue'
+import eventHanding from './components/eventHanding.vue'
 
 const msg = '你好'
 const rawHtml = '<span style="color: red">This should be red.</span>'
@@ -37,7 +38,7 @@ count2++
 callSomeFunction(state.count2)
 
 const items = ref(['张三', '李四', '王五'])
-const items2 = ref([{ 'name': '张三', id: 1 },{ 'name': '李四', id: 2 },{ 'name': '王五', id: 3 }])
+const items2 = ref([{ 'name': '张三', id: 1 }, { 'name': '李四', id: 2 }, { 'name': '王五', id: 3 }])
 </script>
 
 <template>
@@ -71,7 +72,8 @@ const items2 = ref([{ 'name': '张三', id: 1 },{ 'name': '李四', id: 2 },{ 'n
     <!-- <conditional /> -->
     <!-- <list v-for="(item, index) in items" :item="item" :index="index" /> -->
     <!-- <list v-for="(item, index) in items2" :item="item" :index="index" :key="item.id" /> -->
-     <list />
+    <!-- <list /> -->
+    <event-handing />
   </main>
 </template>
 
