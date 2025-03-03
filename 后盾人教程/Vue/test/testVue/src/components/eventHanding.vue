@@ -27,6 +27,9 @@
         <!-- 也可以只有修饰符 -->
         <p><form @submit.prevent><button type="submit">submit</button></form></p>
         <p @click.self="doThat">仅当 event.target 是元素本身时才会触发事件处理器</p>
+
+        <!-- 使用修饰符时需要注意调用顺序，因为相关代码是以相同的顺序生成的。因此使用 @click.prevent.self 会阻止元素及其子元素的所有点击事件的默认行为，而 @click.self.prevent 则只会阻止对元素本身的点击事件的默认行为。 -->
+         
     </div>
 </template>
 
