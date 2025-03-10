@@ -67,6 +67,7 @@ nav {
 .main {
   background-color: #fef3df;
   padding-top: 52px;
+  padding-bottom: 30px;
 }
 section + section {
   margin-top: 52px;
@@ -159,3 +160,71 @@ section + section {
   border-radius: 50%;
 }
 /* --- */
+.chnltitle {
+  margin-bottom: 9px;
+}
+.hnewsabs {
+  padding-right: 20px;
+}
+.hnewsabs p {
+  font-size: 24px;
+  color: #ffffff;
+  line-height: 49px;
+}
+.chnltitle2 {
+  margin-bottom: 30px;
+}
+.list li {
+  line-height: 47px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 572px;
+}
+.list li:nth-child(odd) {
+  float: left;
+}
+.list li:nth-child(even) {
+  float: right;
+}
+.list li::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 7px;
+  height: 7px;
+  background-color: #d60303;
+  margin-left: 7px;
+  margin-right: 27px;
+}
+footer {
+  background-color: #c20e0e;
+}
+.boxs {
+  box-shadow: 0px 0px 3px 1px #ccc;
+}
+.source-time {
+  margin: 0 auto;
+  height: 35px;
+  text-align: center;
+  position: relative;
+  line-height: 35px;
+}
+
+.time {
+  margin-right: 10px;
+}
+
+.wechat,
+.sina {
+  position: absolute;
+  margin-top: 5px;
+}
+
+.wechat {
+  margin-left: 10px;
+}
+
+.sina {
+  margin-left: 46px;
+}
