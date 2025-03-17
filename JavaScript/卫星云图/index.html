@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <img src="" alt="" width="100%">
+    <script src="https://upcdn.b0.upaiyun.com/libs/jquery/jquery-2.0.2.min.js"></script>
+    <script>
+        $.ajax({
+            type: "GET",  //默认get
+            url: "http://10.1.18.58:8000/SX_GetYTMerctData?proid=YT&star=JMA8&channel=13&dt=202503131700",  //默认当前页
+            data: "data",  //格式{key:value}
+            dataType: "text",
+            beforeSend: function () {}, //请求发送前回调,常用验证
+            success: function (response) {  //请求成功回调
+                console.log(response);
+                $("img").attr('scr',response)
+            },
+            error: function (e) {  //请求超时回调
+                if(e.statusText == "timeout"){
+                    alert("请求超时")
+                }
+            },
+            complete: function () {}, //无论请求是成功还是失败都会执行的回调，常用全局成员的释放，或者页面状态的重置
+        })
+    </script>
+</body>
+</html>
