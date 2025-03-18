@@ -308,7 +308,7 @@ nav {
   height: 340px;
   position: relative;
 }
-.show1img .img::before {
+.show1img .img::before,.show2img .img::before {
   content: "";
   display: block;
   position: absolute;
@@ -342,6 +342,9 @@ nav {
   height: 264px;
   background-color: #ffffff;
   float: left;
+}
+.show2img .img {
+  position: relative;
 }
 .show2img + .show2img {
   margin-left: 8px;
