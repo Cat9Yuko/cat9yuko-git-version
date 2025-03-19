@@ -670,6 +670,18 @@ footer {
   background-color: #ffffff;
   padding: 30px 45px;
 }
+.list-bg.pd20 {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.list-bg.pd80 {
+  padding-left: 80px;
+  padding-right: 80px;
+}
+.list-bg.pd65 {
+  padding-left: 65px;
+  padding-right: 65px;
+}
 .list-group {
   padding: 17px 0;
 }
@@ -685,6 +697,9 @@ footer {
   text-overflow: ellipsis;
   overflow: hidden;
   color: #2c2c2c;
+}
+.full-width .ltitle {
+  width: 670px;
 }
 .ltitle::before {
   content: '';
@@ -716,4 +731,33 @@ footer {
   background-color: #0167d5;
   color: #ffffff;
   border: 1px solid #0167d5;
+}
+.list-imgitem {
+  float: left;
+  width: 322px;
+}
+.list-imgitem img {
+  display: block;
+  width: 100%;
+  height: 212px;
+}
+.list-imgitem + .list-imgitem {
+  margin-left: 6px;
+}
+.list-imgitem p {
+  text-align: center;
+  padding-top: 24px;
+  color: #222222;
+}
+.list-imggroup + .list-imggroup {
+  margin-top: 34px;
+}
+.full-width .list-imgitem {
+  width: 350px;
+}
+.full-width .list-imgitem img {
+  height: 230px;
+}
+.full-width .list-imgitem + .list-imgitem {
+  margin-left: 50px;
 }
