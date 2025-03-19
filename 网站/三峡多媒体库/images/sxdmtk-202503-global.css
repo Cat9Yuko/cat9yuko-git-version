@@ -761,3 +761,69 @@ footer {
 .full-width .list-imgitem + .list-imgitem {
   margin-left: 50px;
 }
+.search .list-group {
+  border: none;
+}
+.search .ltitle::before {
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  border: 1px solid #0c63b0;
+}
+.list-page.search {
+  padding-top: 0;
+}
+.search .llist-item:nth-child(5n) {
+  margin-bottom: 26px;
+}
+.search-container2 {
+  background-color: #f9fcfd;
+  border: 1px solid #d5e4eb;
+  line-height: 68px;
+  padding-left: 31px;
+}
+.resultnum {
+  margin-right: 450px;
+}
+.resultnum span {
+  color: #005bac;
+  font-weight: bold;
+}
+.searchbox {
+  width: 178px;
+  height: 32px;
+  background-color: #ffffff;
+  border: 1px solid #005bac;
+  border-radius: 3px;
+  outline: none;
+  padding-left: 11px;
+  margin-left: 21px;
+}
+.mcheckbox label {
+  cursor: pointer;
+  user-select: none;
+}
+.mcheckbox input[type='checkbox'] {
+  /* -webkit-appearance: none; */
+  width: 22px;
+  height: 22px;
+  vertical-align: middle;
+  border: 1px solid #9ab4bf;
+  background-color: #ffffff;
+  margin-right: 10px;
+  margin-left: 25px;
+  margin-top: -2px;
+}
+.mcheckbox input[type='checkbox']:checked {
+  background-color: #005bac;
+}
+.searchsubmit2 button {
+  width: 138px;
+  height: 32px;
+  background-color: #055e92;
+  color: #ffffff;
+  border: none;
+  border-radius: 3px;
+  margin-left: 53px;
+  cursor: pointer;
+}
