@@ -23,18 +23,18 @@ if (getRequest('from') != 'pc') {
 </script>
 
 <!--访谈调用start-->
-<!-- <script>
+<script>
 var V_BOOKDATAURL='http://www.mwr.gov.cn/wcminterview/vip1477/booksdata_vip1477_{0}.js';
-</script> -->
-<!-- <script language="javascript" src="http://www.mwr.gov.cn/images/prototype.js" type="text/javascript"></script> -->
-<!-- <script language="javascript" src="http://www.mwr.gov.cn/images/jbft_published.js" type="text/javascript"></script> -->
+</script>
+<script language="javascript" src="http://www.mwr.gov.cn/images/prototype.js" type="text/javascript"></script>
+<script language="javascript" src="http://www.mwr.gov.cn/images/jbft_published.js" type="text/javascript"></script>
 <!--访谈调用end-->
 
 <!--访谈调用start-->
 <script>
-// var V_BOOKDATAURL='http://www.mwr.gov.cn/wcminterview/vip1477/booksdata_vip1477_1.js';
+var V_BOOKDATAURL='http://www.mwr.gov.cn/wcminterview/vip1477/booksdata_vip1477_1.js';
 </script>
-<script type="text/javascript" src="http://www.mwr.gov.cn/images/jquery.min.js" language="javascript"></script> 
+<!-- <script type="text/javascript" src="http://www.mwr.gov.cn/images/jquery.min.js" language="javascript"></script>  -->
 <!--访谈调用end-->
 
 <style>
@@ -523,24 +523,7 @@ $("#searchword").blur(function(){if($(this).val()==''){$('#searctitle').show();}
 </SCRIPT>
 
 <script>
-  var fhburl = './wcminterview/vip1477/booksdata_vip1477_1.js'
-  // 发布会
-  $.ajax({
-    type: "GET",  //默认get
-    url: fhburl,  //默认当前页
-    dataType: "json",
-    beforeSend: function () {}, //请求发送前回调,常用验证
-    success: function (response) {  //请求成功回调
-      console.log(response);
-      console.log('success');
-    },
-    error: function (e) {  //请求超时回调
-      if(e.statusText == "timeout"){
-        alert("请求超时")
-      }
-    },
-    complete: function () {}, //无论请求是成功还是失败都会执行的回调，常用全局成员的释放，或者页面状态的重置
-  })
+  
 </script>
 
 
