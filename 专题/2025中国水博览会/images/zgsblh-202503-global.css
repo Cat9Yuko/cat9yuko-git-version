@@ -18,6 +18,9 @@ img {
   border: none;
   max-width: 100%;
 }
+li {
+  list-style: none;
+}
 .fl {
   float: left;
 }
@@ -33,12 +36,227 @@ img {
   width: 1474px;
   margin: 0 auto;
 }
-
+.whitebg {
+  background-color: #ffffff;
+}
+.w650 {
+  width: 650px;
+}
 /* user style */
 header {
-    background-image: url('zgsblh-202503-topbg.jpg');
-    height: 1038px;
-    background-position: center top;
-    background-size: cover;
-    background-repeat: no-repeat;
+  background-image: url("zgsblh-202503-topbg.jpg");
+  height: 1038px;
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+header .pos {
+  position: relative;
+  height: 100%;
+}
+.ljbm {
+  position: absolute;
+  bottom: 222px;
+  left: 562px;
+}
+.main {
+  background-color: #f9f3ff;
+  /* background-image: url("zgsblh-202503-mainfooterbg.jpg");
+  background-position: bottom center;
+  background-repeat: no-repeat; */
+}
+.nav {
+  text-align: center;
+}
+.nav-item {
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  color: #5810c6;
+  font-size: 35px;
+}
+.nav-item + .nav-item {
+  margin-left: 48px;
+}
+.hnews {
+  padding: 0 40px;
+  font-size: 22px;
+  line-height: 41px;
+  margin-top: 81px;
+}
+.padding {
+  padding: 0 34px;
+}
+.chnltitle {
+  margin-top: 100px;
+  margin-bottom: 64px;
+}
+/* carousel */
+.slick-mod,
+.slick-mod2 {
+  width: 649px;
+  height: 366px;
+}
+.slick-item {
+  position: relative;
+}
+.slick-item img {
+  width: 100%;
+}
+.tit1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 18px;
+  color: #ffffff;
+  line-height: 51px;
+  text-indent: 1rem;
+  background: rgba(111, 47, 204, 0.5);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.slick-mod .slick-dots,
+.slick-mod2 .slick-dots {
+  position: absolute;
+  right: 10px;
+  bottom: 15px;
+}
+.slick-mod2 .slick-dots {
+  bottom: 36px;
+}
+
+.slick-mod .slick-arrow,
+.slick-mod2 .slick-arrow {
+  width: 33px;
+  height: 57px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 3;
+  cursor: pointer;
+}
+/* .slick-mod .slick-next {
+  right: 0;
+  background: url(../images_zt/wlaq-202009-arrowrigh.png) no-repeat center;
+}
+.slick-mod .slick-prev {
+  left: 0;
+  background: url(../images_zt/wlaq-202009-arrowlef.png) no-repeat center;
+}
+
+.slick-mod2 .slick-next {
+  right: 0;
+  background: url(../images/wlaq-202009-arrowrigh.png) no-repeat center;
+}
+.slick-mod2 .slick-prev {
+  left: 0;
+  background: url(../images/wlaq-202009-arrowlef.png) no-repeat center;
+} */
+.slick-mod .slick-dots li,
+.slick-mod2 .slick-dots li {
+  width: 14px;
+  height: 14px;
+  background: #ffffff;
+  border-radius: 50%;
+  margin: 0 5px 0 0;
+}
+.slick-mod .slick-dots li.slick-active,
+.slick-mod2 .slick-dots li.slick-active {
+  width: 14px;
+  height: 14px;
+  background: #e50012;
+  border-radius: 50%;
+}
+/* --- */
+.hnews2 {
+  font-size: 48px;
+  color: #712fcf;
+  margin-top: 20px;
+}
+.list {
+  font-size: 26px;
+  margin-top: 38px;
+}
+.list li {
+  padding: 18px 0;
+}
+.list li:nth-child(1) {
+  color: #712fcf;
+}
+.list li + li {
+  border-top: 1px solid #cacaca;
+}
+.list li .title {
+  width: 70%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.list li .time {
+  width: 20%;
+}
+.showimg {
+  display: inline-block;
+}
+.showimg + .showimg {
+  margin-left: 14px;
+}
+
+.list2 li {
+  background-image: url("zgsblh-202503-libg.jpg");
+  background-size: cover;
+  width: 643px;
+  height: 76px;
+  line-height: 60px;
+  font-size: 30px;
+  padding-top: 15px;
+  padding-right: 10px;
+  padding-left: 100px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.list2 li:nth-child(n + 3) {
+  margin-top: 30px;
+}
+.list2 li:nth-child(even) {
+  float: right;
+}
+.list2 li:nth-child(odd) {
+  float: left;
+}
+.user {
+  display: inline-block;
+  width: 202px;
+}
+.user .t img {
+  display: block;
+  height: 210px;
+}
+.user .b {
+  height: 105px;
+  background-color: #15a3eb;
+  color: #ffffff;
+  padding-left: 14px;
+  padding-top: 15px;
+}
+.user .name {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+.user .abs {
+  line-height: 24px;
+}
+.user + .user {
+  margin-left: 10px;
+}
+.user-list .row + .row {
+  margin-top: 16px;
+}
+.tab-header {
+  
 }
