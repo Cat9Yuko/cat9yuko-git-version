@@ -61,6 +61,7 @@ header .pos {
 }
 .main {
   background-color: #f9f3ff;
+  padding-bottom: 30px;
   /* background-image: url("zgsblh-202503-mainfooterbg.jpg");
   background-position: bottom center;
   background-repeat: no-repeat; */
@@ -92,10 +93,16 @@ header .pos {
   margin-bottom: 64px;
 }
 /* carousel */
-.slick-mod,
-.slick-mod2 {
+.slick-mod {
   width: 649px;
   height: 366px;
+}
+.slick-mod2 {
+  width: 100%;
+  height: 585px;
+}
+.slick-mod2 .slick-item {
+  padding: 7px;
 }
 .slick-item {
   position: relative;
@@ -117,7 +124,21 @@ header .pos {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
+.tit2 {
+  position: relative;
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 20px;
+  padding-left: 34px;
+  padding-bottom: 30px;
+}
+.tit2 h4 {
+  font-size: 24px;
+  margin: 30px 0;
+}
+.tit2 p {
+  line-height: 29px;
+}
 .slick-mod .slick-dots,
 .slick-mod2 .slick-dots {
   position: absolute;
@@ -128,10 +149,9 @@ header .pos {
   bottom: 36px;
 }
 
-.slick-mod .slick-arrow,
 .slick-mod2 .slick-arrow {
-  width: 33px;
-  height: 57px;
+  width: 46px;
+  height: 67px;
   margin: auto;
   position: absolute;
   top: 0;
@@ -146,16 +166,18 @@ header .pos {
 .slick-mod .slick-prev {
   left: 0;
   background: url(../images_zt/wlaq-202009-arrowlef.png) no-repeat center;
-}
+} */
 
 .slick-mod2 .slick-next {
-  right: 0;
-  background: url(../images/wlaq-202009-arrowrigh.png) no-repeat center;
+  top: -166px;
+  right: 26px;
+  background: url("zgsblh-202503-arrowright.png") no-repeat center;
 }
 .slick-mod2 .slick-prev {
-  left: 0;
-  background: url(../images/wlaq-202009-arrowlef.png) no-repeat center;
-} */
+  top: -166px;
+  left: 26px;
+  background: url("zgsblh-202503-arrowleft.png") no-repeat center;
+}
 .slick-mod .slick-dots li,
 .slick-mod2 .slick-dots li {
   width: 14px;
@@ -257,6 +279,154 @@ header .pos {
 .user-list .row + .row {
   margin-top: 16px;
 }
-.tab-header {
-  
+.tab-header .tab {
+  width: 33.33%;
+  text-align: center;
+  line-height: 88px;
+  float: left;
+  font-size: 28px;
+  color: #ffffff;
+}
+.tab-header .tab:nth-child(1) {
+  background-color: #13a1eb;
+}
+.tab-header .tab:nth-child(2) {
+  background-color: #6f2fcc;
+}
+.tab-header .tab:nth-child(3) {
+  background-color: #ffc702;
+}
+.tabt .t1 {
+  width: 33.33%;
+  line-height: 78px;
+  background-color: #405aa7;
+  font-size: 24px;
+  text-align: center;
+  color: #ffffff;
+}
+.tabt .t2 {
+  width: 66.66%;
+  line-height: 78px;
+  background-color: #405aa7;
+  font-size: 24px;
+  text-align: center;
+  color: #ffffff;
+}
+.tab-body .con {
+  display: none;
+}
+.tab-body .con.act {
+  display: block;
+}
+.tab-table {
+  width: 100%;
+  font-size: 24px;
+}
+.tab-table p {
+  line-height: 62px;
+}
+.tab-table td {
+  padding: 27px 0;
+}
+.tab-table td:nth-child(2) {
+  padding-left: 147px;
+}
+.tab-table tr:nth-child(even) {
+  background-color: #e4f0fc;
+}
+.tab-table tr:nth-child(odd) {
+  background-color: #f6f6f6;
+}
+.en-list .row + .row {
+  margin-top: 36px;
+}
+.en-li {
+  float: left;
+}
+.en-li img {
+  width: 136px;
+  height: 41px;
+}
+.en-li + .en-li {
+  margin-left: 30px;
+}
+.en-li:nth-child(5) {
+  margin-left: 120px;
+}
+.sshadow {
+  box-shadow: 0 0 7px #dddddd;
+  width: 647px;
+  margin: 0 auto;
+}
+.ljbm-footer {
+  padding: 135px;
+  text-align: center;
+}
+footer {
+  background-image: url("zgsblh-202503-footerbg.jpg");
+  height: 513px;
+  background-size: cover;
+  padding-top: 90px;
+}
+.fnav-item {
+  float: left;
+  font-size: 18px;
+  color: #ffffff;
+}
+.fnav-item + .fnav-item {
+  margin-left: 56px;
+}
+.swhz {
+  font-size: 20px;
+  margin-top: 88px;
+  color: #ffffff;
+}
+.swhz .t {
+  margin-bottom: 20px;
+}
+.contact {
+  line-height: 33px;
+  float: left;
+}
+.contact + .contact {
+  margin-left: 213px;
+}
+
+.posr {
+  position: relative;
+  height: 100%;
+}
+footer .word {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  line-height: 84px;
+  color: #ffffff;
+  border-top:  2px solid #ffffff;
+}
+.source-time {
+  margin: 0 auto;
+  height: 35px;
+  text-align: center;
+  position: relative;
+  line-height: 35px;
+}
+
+.time {
+  margin-right: 10px;
+}
+
+.wechat,
+.sina {
+  position: absolute;
+  margin-top: 5px;
+}
+
+.wechat {
+  margin-left: 10px;
+}
+
+.sina {
+  margin-left: 46px;
 }
