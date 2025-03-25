@@ -42,20 +42,24 @@ var V_BOOKDATAURL='http://www.mwr.gov.cn/wcminterview/vip1477/booksdata_vip1477_
 .con_xwfbh_img{height:600px}
 </style>	
 <style>
+
+  /* 关键CSS优化 */
   #scrollContainer {
-      width: 232px;
-      height: 580px;
-      overflow: hidden;
-      position: relative;
-  }
-  #scrollContent {
-      position: absolute;
-      width: 100%;
-  }
-  .scrollItem {
-      padding: 10px;
-      border-bottom: 1px dashed #eee;
-  }
+            overflow: hidden;
+            position: relative;
+            width: 232px;
+            height: 580px; /* 固定容器高度 */
+        }
+        #scrollContent {
+            position: absolute;
+            width: 100%;
+            will-change: transform; /* 提示浏览器优化动画 */
+            backface-visibility: hidden; /* 防止渲染抖动 */
+        }
+        #scrollContent p {
+            margin: 15px 0; /* 文字间距 */
+            line-height: 1.6;
+        }
 </style>
 
 </head>
@@ -528,20 +532,15 @@ $("#searchword").click(function(){if($(this).val()==''){$(this).val()=='';$('#se
 $("#searchword").blur(function(){if($(this).val()==''){$('#searctitle').show();}})
 </SCRIPT>
 
-<script>
-  // 发布会文字
-var fbhurl ='http://www.mwr.gov.cn/wcminterview/vip1477/booksdata_vip1477_1.js'
-var fhbhtml = ''
-  $.ajax({
-    type: "GET",  //默认get
-    url: fbhurl,  //默认当前页
-    dataType: "script",
-    success: function (response) {  //请求成功回调
-
-      $.each(json.reverse(), function (index, el) {
-        // console.log('index: '+index);
-        // console.log(el.sid);
-        // console.log(json.length);
+<SCRIPT LANGUAGE="JavaScript">
+  var fhbhtml='';
+  window.jbftObj = window.jbftObj || {};
+  window.jbftObj.renderList = function(json) {
+    $.each(json.reverse(), function (index, el) {
+        //console.log('index: '+index);
+        //console.log(el.sid);
+        //console.log(json.length);
+        //console.log(json);
         if(index % 2 === 0) {
           fhbhtml += "<div class=\"list_xwfbh odd\" id=\""+el.pt+"\">"+
           "<h6 class=\"speaker\">"+el.un+":</h6>"+
@@ -554,14 +553,17 @@ var fhbhtml = ''
           "<p class=\"content\">"+el.c+"</p></div>"
         }
         $("#listContentArea").html(fhbhtml)
-      })
-    },
-    error: function (e) {  //请求超时回调
-      if(e.statusText == "timeout"){
-        alert("请求超时")
-      }
-    }
-  })
+    })
+  };
+
+    (function() {
+        var jbftjs = document.createElement("script");
+        jbftjs.charset = "utf-8";
+        jbftjs.src = 'http://www.mwr.gov.cn/wcminterview/vip'+'1237'+'/booksdata_vip'+'1237'+'_1.js';
+        var jbftjs_t = document.getElementsByTagName("script")[0];
+        jbftjs_t.parentNode.insertBefore(jbftjs, jbftjs_t);
+    })();
+
   // $(function(){
   //   // 发布会现场图片
   //   jQuery(".picscroll").slide({mainCell:".bd ul",autoPlay:true,effect:"topMarquee",vis:4,interTime:20})
@@ -571,35 +573,30 @@ var fhbhtml = ''
             const $content = $("#scrollContent");
             const contentHeight = $content.height();
             let isScrolling = true;
-            console.log(contentHeight);
-            // 克隆内容实现无缝滚动
+            let scrollPosition = 0;
+
+            // 复制内容实现无缝循环
             $content.append($content.html());
 
             function startScrolling() {
                 if (!isScrolling) return;
-                
-                $content.animate({
-                    "top": "-=" + contentHeight + "px"
-                }, 40000, "linear", function() {
-                    $content.css("top", 0);
-                    startScrolling();
-                });
+
+                scrollPosition -= 0.5; // 调整此值可控制速度（越小越慢）
+                if (Math.abs(scrollPosition) >= contentHeight) {
+                    scrollPosition = 0;
+                }
+
+                $content.css("transform", `translateY(${scrollPosition}px)`);
+                requestAnimationFrame(startScrolling);
             }
 
-            // 鼠标悬停暂停
+            // 鼠标悬停控制
             $container.hover(
-                function() {
-                    isScrolling = false;
-                    $content.stop();
-                },
-                function() {
-                    isScrolling = true;
-                    startScrolling();
-                }
+                () => { isScrolling = false; },  // 悬停暂停
+                () => { isScrolling = true; startScrolling(); } // 离开继续
             );
 
-            // 启动滚动
-            startScrolling();
+            startScrolling(); // 启动动画
         });
 </script>
 

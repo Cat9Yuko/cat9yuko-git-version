@@ -251,13 +251,17 @@ header .pos {
 .list2 li:nth-child(odd) {
   float: left;
 }
+.user-list .user:nth-child(4) {
+ margin-left: 148px;
+}
 .user {
-  display: inline-block;
+  float: left;
   width: 202px;
 }
 .user .t img {
   display: block;
   height: 210px;
+  width: 100%;
 }
 .user .b {
   height: 105px;
@@ -269,6 +273,9 @@ header .pos {
 .user .name {
   font-size: 18px;
   margin-bottom: 5px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .user .abs {
   line-height: 24px;
@@ -429,4 +436,23 @@ footer .word {
 
 .sina {
   margin-left: 46px;
+}
+/*  */
+.indexbg {
+  background-image: url('zgsblh-202503-indexbg.jpg');
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+.indexbg header,.indexbg .main,.indexbg .whitebg {
+  background: none;
+}
+.indexbg .main {
+  padding-bottom: 0;
+}
+.indexbg .tit2 h4 {
+  padding-top: 30px;
+  margin-top: 0;
+}
+.indexbg .ljbm-footer {
+  height: 132px;
 }
