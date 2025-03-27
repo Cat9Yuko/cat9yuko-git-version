@@ -293,6 +293,21 @@ header .pos {
   float: left;
   font-size: 28px;
   color: #ffffff;
+  position: relative;
+}
+.tab-header .tab.act::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  margin-left: 5px;
+  background-image: url('zgsblh-202503-arrowdown.png');
+  width: 24px;
+  height: 24px;
+  background-size: cover;
+  background-position: center;
 }
 .tab-header .tab:nth-child(1) {
   background-color: #13a1eb;

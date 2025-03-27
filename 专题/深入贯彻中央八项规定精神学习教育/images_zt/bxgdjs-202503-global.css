@@ -238,3 +238,6 @@ footer {
 .sina {
   margin-left: 46px;
 }
+.imgchnl .row + .row {
+  margin-top: 68px;
+}
